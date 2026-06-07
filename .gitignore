@@ -35,3 +35,10 @@ coverage/
 **/generated_plugin_registrant.*
 **/*.g.dart
 **/*.freezed.dart
+
+# Release artifacts (built fresh per release, not source)
+*.dmg
+*.app
+*.apk
+*.ipa
+release/
