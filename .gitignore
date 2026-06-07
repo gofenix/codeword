@@ -1,0 +1,37 @@
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+pubspec.lock
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# macOS
+apps/*/macos/Pods/
+apps/*/macos/.symlinks/
+apps/*/macos/Flutter/ephemeral/
+apps/*/macos/Flutter/Generated.xcconfig
+
+# Android
+apps/*/android/.gradle/
+apps/*/android/local.properties
+apps/*/android/app/release/
+apps/*/android/.idea/
+apps/*/android/key.properties
+apps/*/*.jks
+
+# Coverage
+coverage/
+
+# Generated
+**/generated_plugin_registrant.*
+**/*.g.dart
+**/*.freezed.dart
