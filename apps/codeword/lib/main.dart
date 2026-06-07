@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_ui/lib_ui.dart';
 
+import 'screens/learning_session_screen.dart';
+import 'screens/library_screen.dart';
+import 'screens/me_screen.dart';
+import 'screens/review_screen.dart';
+import 'screens/stats_screen.dart';
+
 void main() {
-  runApp(const CodewordApp());
+  runApp(const ProviderScope(child: CodewordApp()));
 }
 
 class CodewordApp extends StatelessWidget {
@@ -19,10 +26,8 @@ class CodewordApp extends StatelessWidget {
   }
 }
 
-/// 5-tab shell scaffold — Today / Library / Review / Stats / Me.
 class HomeShell extends StatefulWidget {
   const HomeShell({super.key});
-
   @override
   State<HomeShell> createState() => _HomeShellState();
 }
@@ -32,30 +37,10 @@ class _HomeShellState extends State<HomeShell> {
 
   static const _pages = <Widget>[
     TodayPage(),
-    Scaffold(
-      backgroundColor: AppColors.background,
-      body: Center(
-        child: Text('词库 · W2', style: TextStyle(color: AppColors.inkMuted)),
-      ),
-    ),
-    Scaffold(
-      backgroundColor: AppColors.background,
-      body: Center(
-        child: Text('复习 · W2', style: TextStyle(color: AppColors.inkMuted)),
-      ),
-    ),
-    Scaffold(
-      backgroundColor: AppColors.background,
-      body: Center(
-        child: Text('统计 · W2', style: TextStyle(color: AppColors.inkMuted)),
-      ),
-    ),
-    Scaffold(
-      backgroundColor: AppColors.background,
-      body: Center(
-        child: Text('我的 · W2', style: TextStyle(color: AppColors.inkMuted)),
-      ),
-    ),
+    LibraryScreen(),
+    ReviewScreen(),
+    StatsScreen(),
+    MeScreen(),
   ];
 
   @override
@@ -103,19 +88,11 @@ class _HomeShellState extends State<HomeShell> {
   }
 }
 
-/// 今日 (Today) page — v5 design.
-///
-/// Layout (top to bottom):
-///   1. Greeting + streak chip
-///   2. "今日新词 12 · 待复习 8" summary
-///   3. Hero word card with quote mark, serif word, phonetic, translation
-///   4. "开始学习" pill button
-///   5. Heatmap-style 7-day streak preview
-class TodayPage extends StatelessWidget {
+class TodayPage extends ConsumerWidget {
   const TodayPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return SafeArea(
       child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(
@@ -153,16 +130,15 @@ class TodayPage extends StatelessWidget {
 
 class _Greeting extends StatelessWidget {
   const _Greeting();
-
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
+        const Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'Hi, 极客 👋',
                 style: TextStyle(
                   fontSize: 14,
@@ -170,7 +146,7 @@ class _Greeting extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              const SizedBox(height: 2),
+              SizedBox(height: 2),
               Text(
                 '今天学 12 个新词',
                 style: TextStyle(
@@ -183,54 +159,45 @@ class _Greeting extends StatelessWidget {
             ],
           ),
         ),
-        const _StreakChip(days: 7),
+        Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppSpacing.x3,
+            vertical: 6,
+          ),
+          decoration: BoxDecoration(
+            color: AppColors.warning.withValues(alpha: 0.12),
+            borderRadius: BorderRadius.circular(AppRadii.pill),
+          ),
+          child: const Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.local_fire_department,
+                  size: 16, color: AppColors.warning),
+              SizedBox(width: 4),
+              Text(
+                '连续 7 天',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.warning,
+                ),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
 }
 
-class _StreakChip extends StatelessWidget {
-  final int days;
-  const _StreakChip({required this.days});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.x3,
-        vertical: 6,
-      ),
-      decoration: BoxDecoration(
-        color: AppColors.warning.withValues(alpha: 0.12),
-        borderRadius: BorderRadius.circular(AppRadii.pill),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Icon(Icons.local_fire_department, size: 16, color: AppColors.warning),
-          const SizedBox(width: 4),
-          Text(
-            '连续 $days 天',
-            style: const TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w700,
-              color: AppColors.warning,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _TodaySummary extends StatelessWidget {
+class _TodaySummary extends ConsumerWidget {
   const _TodaySummary();
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    // Final cell is a derived stat from the in-memory review state.
     return AppCard(
       child: Row(
-        children: [
+        children: const [
           Expanded(
             child: _SummaryCell(
               label: '新词',
@@ -239,11 +206,7 @@ class _TodaySummary extends StatelessWidget {
               color: AppColors.primary,
             ),
           ),
-          Container(
-            width: 1,
-            height: 36,
-            color: AppColors.inkSubtle.withValues(alpha: 0.2),
-          ),
+          _Divider(),
           Expanded(
             child: _SummaryCell(
               label: '待复习',
@@ -252,11 +215,7 @@ class _TodaySummary extends StatelessWidget {
               color: AppColors.info,
             ),
           ),
-          Container(
-            width: 1,
-            height: 36,
-            color: AppColors.inkSubtle.withValues(alpha: 0.2),
-          ),
+          _Divider(),
           Expanded(
             child: _SummaryCell(
               label: '已掌握',
@@ -267,6 +226,18 @@ class _TodaySummary extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _Divider extends StatelessWidget {
+  const _Divider();
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 1,
+      height: 36,
+      color: AppColors.inkSubtle.withValues(alpha: 0.2),
     );
   }
 }
@@ -282,7 +253,6 @@ class _SummaryCell extends StatelessWidget {
     required this.icon,
     required this.color,
   });
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -325,19 +295,11 @@ class _HeroWordCard extends StatelessWidget {
     required this.domain,
     required this.level,
   });
-
   @override
   Widget build(BuildContext context) {
     return AppCard(
-      padding: const EdgeInsets.fromLTRB(
-        AppSpacing.x5,
-        AppSpacing.x5,
-        AppSpacing.x5,
-        AppSpacing.x5,
-      ),
       child: Stack(
         children: [
-          // Decorative quote mark, top-right
           const Positioned(
             top: -16,
             right: 0,
@@ -381,22 +343,20 @@ class _HeroWordCard extends StatelessWidget {
 
 class _StartLearningButton extends StatelessWidget {
   const _StartLearningButton();
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: FilledButton.icon(
         onPressed: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('学习流 W2 上线,先打基础 ✨'),
-              duration: Duration(seconds: 2),
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => const LearningSessionScreen(vocabId: 'ai_core'),
             ),
           );
         },
         icon: const Icon(Icons.play_arrow_rounded, size: 22),
-        label: const Text('开始今日学习  ·  12 词'),
+        label: const Text('开始今日学习  ·  AI 核心'),
         style: FilledButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
           textStyle: const TextStyle(
@@ -409,23 +369,19 @@ class _StartLearningButton extends StatelessWidget {
   }
 }
 
-/// GitHub-style 7-day heatmap preview row.
 class _StreakHeatmap extends StatelessWidget {
   const _StreakHeatmap();
-
-  static const _days = ['一', '二', '三', '四', '五', '六', '日'];
-  // Mock activity per day: 0..3
-  static const _activity = [3, 2, 1, 3, 3, 2, 0];
-
   @override
   Widget build(BuildContext context) {
+    const days = ['一', '二', '三', '四', '五', '六', '日'];
+    const activity = [3, 2, 1, 3, 3, 2, 0];
     return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            children: [
-              const Text(
+            children: const [
+              Text(
                 '本周学习',
                 style: TextStyle(
                   fontSize: 15,
@@ -433,10 +389,10 @@ class _StreakHeatmap extends StatelessWidget {
                   color: AppColors.ink,
                 ),
               ),
-              const Spacer(),
+              Spacer(),
               Text(
                 '已学 14 / 20 词',
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 12,
                   color: AppColors.inkMuted,
                   fontWeight: FontWeight.w500,
@@ -447,8 +403,13 @@ class _StreakHeatmap extends StatelessWidget {
           const SizedBox(height: AppSpacing.x4),
           Row(
             children: List.generate(7, (i) {
-              final level = _activity[i];
-              final color = _heatColor(level);
+              final level = activity[i];
+              final color = switch (level) {
+                0 => AppColors.surfaceMuted,
+                1 => AppColors.primary.withValues(alpha: 0.3),
+                2 => AppColors.primary.withValues(alpha: 0.6),
+                _ => AppColors.primary,
+              };
               return Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 3),
@@ -463,7 +424,7 @@ class _StreakHeatmap extends StatelessWidget {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        _days[i],
+                        days[i],
                         style: const TextStyle(
                           fontSize: 11,
                           color: AppColors.inkMuted,
@@ -478,20 +439,5 @@ class _StreakHeatmap extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  Color _heatColor(int level) {
-    switch (level) {
-      case 0:
-        return AppColors.surfaceMuted;
-      case 1:
-        return AppColors.primary.withValues(alpha: 0.3);
-      case 2:
-        return AppColors.primary.withValues(alpha: 0.6);
-      case 3:
-        return AppColors.primary;
-      default:
-        return AppColors.surfaceMuted;
-    }
   }
 }
