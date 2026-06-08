@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
+import '../services/tts_service.dart';
 import '../state/learning_session.dart';
 
 class LearningSessionScreen extends ConsumerStatefulWidget {
@@ -68,31 +69,62 @@ class _AskingView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final q = session.currentQuestion!;
+    final notifier = ref.read(learningSessionProvider.notifier);
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(AppSpacing.x5, AppSpacing.x3, AppSpacing.x5, AppSpacing.x6),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _ProgressBar(progress: session.progress),
-            const SizedBox(height: AppSpacing.x4),
-            _QuestionPrompt(type: q.type, prompt: q.prompt, word: q.word, questionCount: session.questions.length, currentIndex: session.currentIndex),
-            const SizedBox(height: AppSpacing.x3),
-            if (q.type == QuestionType.listenPickMeaning) _AudioButton(word: q.word),
-            const SizedBox(height: AppSpacing.x5),
-            Expanded(
-              child: ListView.separated(
-                itemCount: q.options.length,
-                separatorBuilder: (_, _) => const SizedBox(height: AppSpacing.x3),
-                itemBuilder: (_, i) => _OptionTile(
-                  label: String.fromCharCode(65 + i),
-                  text: q.options[i],
-                  onTap: () => ref.read(learningSessionProvider.notifier).answer(i),
-                ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.x5, AppSpacing.x3, AppSpacing.x5, AppSpacing.x4,
+            ),
+            child: _ProgressBar(progress: session.progress),
+          ),
+          // Scrollable top region: prompt card + audio button.
+          // The options below are NOT in this scroll area, so they stay
+          // anchored to the bottom regardless of prompt length.
+          Expanded(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x5),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _QuestionPrompt(
+                    type: q.type,
+                    prompt: q.prompt,
+                    word: q.word,
+                    questionCount: session.questions.length,
+                    currentIndex: session.currentIndex,
+                  ),
+                  if (q.type == QuestionType.listenPickMeaning) ...[
+                    const SizedBox(height: AppSpacing.x3),
+                    _AudioButton(word: q.word),
+                  ],
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+          // Fixed options anchored to the bottom of the screen.
+          // Their Y position never changes between questions, so the
+          // user's tap position stays consistent (good for muscle memory).
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.x5, AppSpacing.x3, AppSpacing.x5, AppSpacing.x5,
+            ),
+            child: Column(
+              children: [
+                for (var i = 0; i < q.options.length; i++) ...[
+                  if (i > 0) const SizedBox(height: AppSpacing.x2),
+                  _OptionTile(
+                    label: String.fromCharCode(65 + i),
+                    text: q.options[i],
+                    onTap: () => notifier.answer(i),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -235,17 +267,11 @@ class _AudioButton extends StatelessWidget {
         icon: const Icon(Icons.volume_up_rounded, size: 20, color: AppColors.primary),
         onPressed: () {
           HapticFeedback.lightImpact();
-          _speak(word.word);
+          TtsService.instance.speak(word.word);
         },
         padding: EdgeInsets.zero,
       ),
     );
-  }
-
-  void _speak(String text) {
-    // Use platform TTS via a simple service message.
-    // Falls back to text-to-speech via system channel.
-    const MethodChannel('com.codeword/tts').invokeMethod('speak', {'text': text});
   }
 }
 
@@ -378,30 +404,32 @@ class _OptionTile extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(AppRadii.md),
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x4, vertical: AppSpacing.x4),
-          decoration: BoxDecoration(
-            color: AppColors.surface,
-            borderRadius: BorderRadius.circular(AppRadii.md),
-            border: Border.all(color: AppColors.inkSubtle.withValues(alpha: 0.2), width: 1.5),
-          ),
-          child: Row(
-            children: [
-              Container(
-                width: 32, height: 32,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: AppColors.primary.withValues(alpha: 0.1),
-                  borderRadius: BorderRadius.circular(AppRadii.sm),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(minHeight: 56),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x4, vertical: AppSpacing.x3),
+            decoration: BoxDecoration(
+              color: AppColors.surface,
+              borderRadius: BorderRadius.circular(AppRadii.md),
+              border: Border.all(color: AppColors.inkSubtle.withValues(alpha: 0.2), width: 1.5),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 32, height: 32,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: AppColors.primary.withValues(alpha: 0.1),
+                    borderRadius: BorderRadius.circular(AppRadii.sm),
+                  ),
+                  child: Text(label, style: const TextStyle(fontWeight: FontWeight.w700, color: AppColors.primary, fontSize: 14)),
                 ),
-                child: Text(label, style: const TextStyle(fontWeight: FontWeight.w700, color: AppColors.primary, fontSize: 14)),
-              ),
-              const SizedBox(width: AppSpacing.x3),
-              Expanded(
-                child: Text(text, style: const TextStyle(fontSize: 15, color: AppColors.ink, fontWeight: FontWeight.w500, height: 1.4)),
-              ),
-              const Icon(Icons.chevron_right, color: AppColors.inkSubtle, size: 18),
-            ],
+                const SizedBox(width: AppSpacing.x3),
+                Expanded(
+                  child: Text(text, style: const TextStyle(fontSize: 15, color: AppColors.ink, fontWeight: FontWeight.w500, height: 1.4)),
+                ),
+              ],
+            ),
           ),
         ),
       ),
