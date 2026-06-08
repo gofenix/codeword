@@ -50,7 +50,6 @@ class _LearningSessionScreenState
       body: switch (session.phase) {
         SessionPhase.loading => const Center(child: CircularProgressIndicator()),
         SessionPhase.asking => _AskingView(session: session),
-        SessionPhase.feedback => _AutoAdvanceFeedback(session: session),
         SessionPhase.wrongDetail => _WrongDetailView(session: session),
         SessionPhase.finished => _FinishedView(
             total: session.questions.length,
@@ -81,24 +80,17 @@ class _AskingView extends ConsumerWidget {
             const SizedBox(height: AppSpacing.x3),
             if (q.type == QuestionType.listenPickMeaning) _AudioButton(word: q.word),
             const SizedBox(height: AppSpacing.x5),
-            if (q.type == QuestionType.spelling)
-              _SpellingInput(
-                correct: q.word.word,
-                onCorrect: () => ref.read(learningSessionProvider.notifier).answer(0),
-                onWrong: () => ref.read(learningSessionProvider.notifier).answer(-1),
-              )
-            else
-              Expanded(
-                child: ListView.separated(
-                  itemCount: q.options.length,
-                  separatorBuilder: (_, _) => const SizedBox(height: AppSpacing.x3),
-                  itemBuilder: (_, i) => _OptionTile(
-                    label: String.fromCharCode(65 + i),
-                    text: q.options[i],
-                    onTap: () => ref.read(learningSessionProvider.notifier).answer(i),
-                  ),
+            Expanded(
+              child: ListView.separated(
+                itemCount: q.options.length,
+                separatorBuilder: (_, _) => const SizedBox(height: AppSpacing.x3),
+                itemBuilder: (_, i) => _OptionTile(
+                  label: String.fromCharCode(65 + i),
+                  text: q.options[i],
+                  onTap: () => ref.read(learningSessionProvider.notifier).answer(i),
                 ),
               ),
+            ),
           ],
         ),
       ),
@@ -106,50 +98,6 @@ class _AskingView extends ConsumerWidget {
   }
 }
 
-class _AutoAdvanceFeedback extends ConsumerStatefulWidget {
-  final LearningSessionState session;
-  const _AutoAdvanceFeedback({required this.session});
-
-  @override
-  ConsumerState<_AutoAdvanceFeedback> createState() => _AutoAdvanceFeedbackState();
-}
-
-class _AutoAdvanceFeedbackState extends ConsumerState<_AutoAdvanceFeedback> {
-  bool _advanced = false;
-
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(milliseconds: 800), () {
-      if (mounted && !_advanced) {
-        _advanced = true;
-        ref.read(learningSessionProvider.notifier).next();
-      }
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            width: 80, height: 80,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: AppColors.success.withValues(alpha: 0.12),
-              borderRadius: BorderRadius.circular(AppRadii.xl),
-            ),
-            child: const Icon(Icons.check_circle_rounded, size: 48, color: AppColors.success),
-          ),
-          const SizedBox(height: AppSpacing.x4),
-          const Text('正确!', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: AppColors.success)),
-        ],
-      ),
-    );
-  }
-}
 
 class _WrongDetailView extends ConsumerWidget {
   final LearningSessionState session;
@@ -301,69 +249,6 @@ class _AudioButton extends StatelessWidget {
   }
 }
 
-class _SpellingInput extends StatefulWidget {
-  final String correct;
-  final VoidCallback onCorrect;
-  final VoidCallback onWrong;
-  const _SpellingInput({required this.correct, required this.onCorrect, required this.onWrong});
-
-  @override
-  State<_SpellingInput> createState() => _SpellingInputState();
-}
-
-class _SpellingInputState extends State<_SpellingInput> {
-  final _controller = TextEditingController();
-  bool _submitted = false;
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  void _check() {
-    if (_submitted) return;
-    _submitted = true;
-    if (_controller.text.trim().toLowerCase() == widget.correct.toLowerCase()) {
-      widget.onCorrect();
-    } else {
-      widget.onWrong();
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        TextField(
-          controller: _controller,
-          autofocus: true,
-          textInputAction: TextInputAction.done,
-          onSubmitted: (_) => _check(),
-          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600, letterSpacing: 2),
-          textAlign: TextAlign.center,
-          decoration: InputDecoration(
-            hintText: '输入单词拼写',
-            hintStyle: const TextStyle(color: AppColors.inkMuted, fontSize: 16),
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(AppRadii.md)),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(AppRadii.md),
-              borderSide: const BorderSide(color: AppColors.primary, width: 2),
-            ),
-          ),
-        ),
-        const SizedBox(height: AppSpacing.x4),
-        SizedBox(
-          width: double.infinity,
-          child: FilledButton(
-            onPressed: _submitted ? null : _check,
-            child: const Text('确认'),
-          ),
-        ),
-      ],
-    );
-  }
-}
 
 class _QuestionPrompt extends StatelessWidget {
   final QuestionType type;
@@ -387,7 +272,6 @@ class _QuestionPrompt extends StatelessWidget {
       QuestionType.seeMeaningPickWord => '看义选词',
       QuestionType.listenPickMeaning => '听音选义',
       QuestionType.seeContextPickWord => '语境选词',
-      QuestionType.spelling => '拼写',
     };
     return AppCard(
       padding: const EdgeInsets.fromLTRB(AppSpacing.x5, AppSpacing.x4, AppSpacing.x5, AppSpacing.x5),
@@ -418,15 +302,6 @@ class _QuestionPrompt extends StatelessWidget {
         return _WordPrompt(word: prompt, wordObj: word);
       case QuestionType.seeContextPickWord:
         return _ContextPrompt(sentence: prompt);
-      case QuestionType.spelling:
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(prompt, style: const TextStyle(fontSize: 20, color: AppColors.primary, fontWeight: FontWeight.w700)),
-            const SizedBox(height: 4),
-            Text(word.phonetic, style: AppTheme.phonetic()),
-          ],
-        );
     }
   }
 }

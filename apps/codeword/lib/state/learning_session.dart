@@ -68,7 +68,7 @@ final vocabMetaProvider = Provider<Map<String, VocabList>>((ref) {
   return {for (final l in kBuiltinLists) l.id: l};
 });
 
-enum QuestionType { seeWordPickMeaning, seeMeaningPickWord, listenPickMeaning, seeContextPickWord, spelling }
+enum QuestionType { seeWordPickMeaning, seeMeaningPickWord, listenPickMeaning, seeContextPickWord }
 
 /// One question in a learning session.
 class LearningQuestion {
@@ -88,7 +88,7 @@ class LearningQuestion {
 }
 
 /// State machine for a learning session.
-enum SessionPhase { loading, asking, feedback, wrongDetail, finished }
+enum SessionPhase { loading, asking, wrongDetail, finished }
 
 class LearningSessionState {
   final SessionPhase phase;
@@ -197,17 +197,10 @@ class LearningSessionNotifier
           correctIndex: options.indexOf(w.word),
           prompt: w.exampleEn,
         );
-      case QuestionType.spelling:
-        return LearningQuestion(
-          word: w, type: type,
-          options: [w.word],
-          correctIndex: 0,
-          prompt: w.translation,
-        );
     }
   }
 
-  /// User picks an option; correct → feedback (auto-advance), wrong → wrongDetail.
+  /// User picks an option; correct → immediately next, wrong → wrongDetail.
   void answer(int optionIndex) {
     if (state.phase != SessionPhase.asking) return;
     final q = state.currentQuestion!;
@@ -217,19 +210,29 @@ class LearningSessionNotifier
           wordId: q.word.id,
           quality: quality.toSm2Quality(),
         );
-    state = LearningSessionState(
-      phase: correct ? SessionPhase.feedback : SessionPhase.wrongDetail,
-      questions: state.questions,
-      currentIndex: state.currentIndex,
-      correctCount: state.correctCount + (correct ? 1 : 0),
-      lastAnswer: quality,
-      lastSelectedIndex: optionIndex,
-    );
+    if (correct) {
+      final nextIndex = state.currentIndex + 1;
+      state = LearningSessionState(
+        phase: nextIndex >= state.questions.length ? SessionPhase.finished : SessionPhase.asking,
+        questions: state.questions,
+        currentIndex: nextIndex,
+        correctCount: state.correctCount + 1,
+      );
+    } else {
+      state = LearningSessionState(
+        phase: SessionPhase.wrongDetail,
+        questions: state.questions,
+        currentIndex: state.currentIndex,
+        correctCount: state.correctCount,
+        lastAnswer: quality,
+        lastSelectedIndex: optionIndex,
+      );
+    }
   }
 
-  /// Advance to next question (or finish).
+  /// Advance from wrong-detail to next question (or finish).
   void next() {
-    if (state.phase != SessionPhase.feedback && state.phase != SessionPhase.wrongDetail) return;
+    if (state.phase != SessionPhase.wrongDetail) return;
     final nextIndex = state.currentIndex + 1;
     if (nextIndex >= state.questions.length) {
       state = LearningSessionState(
