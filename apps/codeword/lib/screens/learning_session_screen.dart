@@ -251,9 +251,50 @@ class _DetailRow extends StatelessWidget {
   }
 }
 
-class _AudioButton extends StatelessWidget {
+class _AudioButton extends StatefulWidget {
   final VocabWord word;
   const _AudioButton({required this.word});
+
+  @override
+  State<_AudioButton> createState() => _AudioButtonState();
+}
+
+class _AudioButtonState extends State<_AudioButton> {
+  bool _warned = false;
+
+  @override
+  void initState() {
+    super.initState();
+    // Listen for once-per-session TTS failure so we can tell the user
+    // *why* nothing happened, instead of leaving them confused.
+    TtsService.instance.availabilityStream.listen((ok) {
+      if (!ok && mounted && !_warned) {
+        _warned = true;
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              'TTS 不可用 · 请检查 系统设置 → 语言和输入 → 文字转语音 '
+              '是否装了 Google TTS 引擎 + 美音语音包',
+            ),
+            duration: Duration(seconds: 6),
+          ),
+        );
+      }
+    });
+  }
+
+  Future<void> _onTap() async {
+    HapticFeedback.lightImpact();
+    final ok = await TtsService.instance.speak(widget.word.word);
+    if (!ok && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('发音失败: ${widget.word.word}'),
+          duration: const Duration(seconds: 2),
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -265,10 +306,7 @@ class _AudioButton extends StatelessWidget {
       ),
       child: IconButton(
         icon: const Icon(Icons.volume_up_rounded, size: 20, color: AppColors.primary),
-        onPressed: () {
-          HapticFeedback.lightImpact();
-          TtsService.instance.speak(word.word);
-        },
+        onPressed: _onTap,
         padding: EdgeInsets.zero,
       ),
     );
