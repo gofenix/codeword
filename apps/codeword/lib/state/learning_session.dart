@@ -19,7 +19,8 @@ const List<String> kBuiltinVocabIds = [
 ];
 
 /// In-memory review state for every word the user has ever answered.
-/// Lost on app restart for v0.2.0 — drift-backed persistence is W3.
+/// Persisted to a local JSON file in the app documents directory; never
+/// leaves the device.
 final reviewStateProvider =
     StateNotifierProvider<ReviewStateNotifier, Map<String, ReviewState>>(
   (ref) => ReviewStateNotifier(),

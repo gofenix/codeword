@@ -77,12 +77,6 @@ class MeScreen extends ConsumerWidget {
             ),
             const SizedBox(height: AppSpacing.x4),
             _MenuItem(
-              icon: Icons.cloud_sync_outlined,
-              title: '同步码',
-              subtitle: 'W4 上线 · 6 位码 + E2E 加密',
-              color: AppColors.info,
-            ),
-            _MenuItem(
               icon: Icons.tune,
               title: '每日新词数',
               subtitle: '12 词',
@@ -91,13 +85,19 @@ class MeScreen extends ConsumerWidget {
             _MenuItem(
               icon: Icons.volume_up_outlined,
               title: '发音',
-              subtitle: '英音 · 系统默认',
+              subtitle: '美音 (en-US) · 系统默认',
               color: AppColors.domainCs,
+            ),
+            _MenuItem(
+              icon: Icons.lock_outline,
+              title: 'AI 助手 API Key',
+              subtitle: 'BYOK · 本地加密存储',
+              color: AppColors.primary,
             ),
             _MenuItem(
               icon: Icons.info_outline,
               title: '关于',
-              subtitle: 'v0.2.0-w2 · gofenix/codeword',
+              subtitle: 'v0.4.4 · gofenix/codeword',
               color: AppColors.inkMuted,
             ),
           ],

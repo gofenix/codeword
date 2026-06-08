@@ -42,20 +42,18 @@ dependencies:
     path: ../../packages/lib_ui
   lib_content:
     path: ../../packages/lib_content
-  lib_sync:
-    path: ../../packages/lib_sync
 
   # Routing & state
   go_router: ^14.6.2
   flutter_riverpod: ^2.5.1
   google_fonts: ^6.2.1
 
-  # Storage
+  # Local file storage (review state JSON in app docs dir)
   path_provider: ^2.1.4
   path: ^1.9.0
 
-  # E2E encryption
-  pointycastle: ^3.9.1
+  # Local encrypted storage for BYOK (Keychain / EncryptedSharedPreferences)
+  flutter_secure_storage: ^9.2.2
   flutter_tts: ^4.2.5
 
 dev_dependencies:
