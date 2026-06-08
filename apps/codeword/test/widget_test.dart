@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -22,7 +21,6 @@ void main() {
     await tester.pumpWidget(const ProviderScope(child: CodewordApp()));
     await tester.pump();
     await tester.tap(find.text('开始今日学习  ·  AI 核心'));
-    // Pump twice: once for navigation, once for session.load to resolve.
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 200));
     expect(find.text('看词选义'), findsOneWidget);
