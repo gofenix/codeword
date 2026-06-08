@@ -10,7 +10,12 @@ const List<String> kBuiltinVocabIds = [
   'cs_core',
   'python_core',
   'ai_core',
+  'llm_core',
   'web_core',
+  'devops_core',
+  'data_core',
+  'security_core',
+  'product_core',
 ];
 
 /// In-memory review state for every word the user has ever answered.
@@ -22,9 +27,9 @@ final reviewStateProvider =
 
 class ReviewStateNotifier
     extends StateNotifier<Map<String, ReviewState>> {
-  ReviewStateNotifier() : super(const {});
+  ReviewStateNotifier() : super(ReviewRepository.instance.all);
 
-  /// Apply a SM-2 schedule for an answer and persist into the map.
+  /// Apply a SM-2 schedule for an answer and persist to file + memory.
   ReviewState recordAnswer({
     required String wordId,
     required int quality,
@@ -37,16 +42,12 @@ class ReviewStateNotifier
       now: now ?? DateTime.now(),
     );
     state = {...state, wordId: next};
+    ReviewRepository.instance.put(wordId, next);
     return next;
   }
 
-  int get totalLearned => state.values.where((s) => s.repetitions >= 1).length;
-  int get totalDue {
-    final now = DateTime.now();
-    return state.values
-        .where((s) => s.dueAt != null && !s.dueAt!.isAfter(now))
-        .length;
-  }
+  int get totalLearned => ReviewRepository.instance.totalLearned;
+  int get totalDue => ReviewRepository.instance.totalDue(DateTime.now());
 }
 
 /// Lazy-loaded vocabulary content cache. Loads JSON on first request.
@@ -168,9 +169,16 @@ class LearningSessionNotifier
     );
   }
 
-  /// After 200ms feedback, advance to the next question (or finish).
+  /// After 200ms feedback, advance to the next question (or finish)
+  /// and persist SM-2 state.
   void next() {
     if (state.phase != SessionPhase.feedback) return;
+    final q = state.currentQuestion!;
+    final quality = (state.lastAnswer ?? AnswerQuality.again).toSm2Quality();
+    ref.read(reviewStateProvider.notifier).recordAnswer(
+          wordId: q.word.id,
+          quality: quality,
+        );
     final nextIndex = state.currentIndex + 1;
     if (nextIndex >= state.questions.length) {
       state = LearningSessionState(

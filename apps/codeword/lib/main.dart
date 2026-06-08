@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
 import 'screens/learning_session_screen.dart';
@@ -8,7 +9,9 @@ import 'screens/me_screen.dart';
 import 'screens/review_screen.dart';
 import 'screens/stats_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await ReviewRepository.init();
   runApp(const ProviderScope(child: CodewordApp()));
 }
 

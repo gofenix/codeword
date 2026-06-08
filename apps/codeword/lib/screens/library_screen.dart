@@ -35,7 +35,7 @@ class LibraryScreen extends ConsumerWidget {
             ),
             const SizedBox(height: 2),
             const Text(
-              '9 套程序员向词库 · 持续更新中',
+              '9 套程序员向词库 · 已全部上线',
               style: TextStyle(
                 fontSize: 13,
                 color: AppColors.inkMuted,

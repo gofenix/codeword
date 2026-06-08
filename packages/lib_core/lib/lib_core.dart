@@ -3,4 +3,5 @@ library lib_core;
 
 export 'src/models/vocab_word.dart';
 export 'src/models/vocab_list.dart';
+export 'src/review_repository.dart';
 export 'src/sm2.dart';

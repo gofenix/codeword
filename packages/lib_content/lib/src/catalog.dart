@@ -12,7 +12,7 @@ const List<VocabList> kBuiltinLists = [
     emoji: '💻',
     domainColor: '#6366F1',
     level: 1,
-    wordCount: 800,
+    wordCount: 50,
   ),
   VocabList(
     id: 'python_core',
@@ -21,7 +21,7 @@ const List<VocabList> kBuiltinLists = [
     emoji: '🐍',
     domainColor: '#3776AB',
     level: 1,
-    wordCount: 700,
+    wordCount: 50,
   ),
   VocabList(
     id: 'ai_core',
@@ -30,7 +30,7 @@ const List<VocabList> kBuiltinLists = [
     emoji: '🧠',
     domainColor: '#10B981',
     level: 1,
-    wordCount: 1500,
+    wordCount: 100,
   ),
   VocabList(
     id: 'llm_core',
@@ -39,7 +39,7 @@ const List<VocabList> kBuiltinLists = [
     emoji: '✨',
     domainColor: '#8B5CF6',
     level: 1,
-    wordCount: 600,
+    wordCount: 50,
   ),
   VocabList(
     id: 'web_core',
@@ -48,7 +48,7 @@ const List<VocabList> kBuiltinLists = [
     emoji: '🌐',
     domainColor: '#F59E0B',
     level: 1,
-    wordCount: 800,
+    wordCount: 50,
   ),
   VocabList(
     id: 'devops_core',
@@ -57,7 +57,7 @@ const List<VocabList> kBuiltinLists = [
     emoji: '☁️',
     domainColor: '#14B8A6',
     level: 1,
-    wordCount: 600,
+    wordCount: 50,
   ),
   VocabList(
     id: 'data_core',
@@ -66,7 +66,7 @@ const List<VocabList> kBuiltinLists = [
     emoji: '📊',
     domainColor: '#EC4899',
     level: 1,
-    wordCount: 700,
+    wordCount: 50,
   ),
   VocabList(
     id: 'security_core',
@@ -75,16 +75,16 @@ const List<VocabList> kBuiltinLists = [
     emoji: '🔐',
     domainColor: '#EF4444',
     level: 1,
-    wordCount: 500,
+    wordCount: 50,
   ),
   VocabList(
     id: 'product_core',
     name: '业务产品',
     description: '产品 / 增长 / 商业分析',
     emoji: '📈',
-    domainColor: '#8B5CF6',
+    domainColor: '#F97316',
     level: 1,
-    wordCount: 600,
+    wordCount: 50,
   ),
 ];
 

@@ -128,7 +128,7 @@ class StatsScreen extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'v0.2 · 当前版本',
+                    'v0.3 · V1',
                     style: TextStyle(
                       fontSize: 12,
                       color: AppColors.inkMuted,
@@ -138,7 +138,7 @@ class StatsScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: AppSpacing.x2),
                   const Text(
-                    '✅ A/B/C/D 看词选义\n✅ SM-2 间隔重复\n✅ 4 套词库 200 词\n🚧 6 位同步码 + E2E 加密\n🚧 Android APK',
+                    '✅ A/B/C/D 看词选义\n✅ SM-2 间隔重复 + 持久化\n✅ 9 套词库 450 词\n✅ macOS + Android 双端\n🚧 6 位同步码 + E2E 加密\n🚧 4 种新题型(听音/拼写...)',
                     style: TextStyle(
                       fontSize: 13,
                       color: AppColors.ink,
