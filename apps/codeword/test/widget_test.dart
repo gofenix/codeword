@@ -25,7 +25,7 @@ void main() {
     // Pump twice: once for navigation, once for session.load to resolve.
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 200));
-    expect(find.text('选义'), findsOneWidget);
+    expect(find.text('看词选义'), findsOneWidget);
     expect(find.text('A'), findsOneWidget);
     expect(find.text('B'), findsOneWidget);
     expect(find.text('C'), findsOneWidget);

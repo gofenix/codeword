@@ -68,21 +68,27 @@ final vocabMetaProvider = Provider<Map<String, VocabList>>((ref) {
   return {for (final l in kBuiltinLists) l.id: l};
 });
 
+enum QuestionType { seeWordPickMeaning, seeMeaningPickWord, listenPickMeaning, seeContextPickWord, spelling }
+
 /// One question in a learning session.
 class LearningQuestion {
   final VocabWord word;
-  final List<String> options; // 4 options: 1 correct + 3 distractors
+  final QuestionType type;
+  final List<String> options;
   final int correctIndex;
+  final String prompt;
 
   const LearningQuestion({
     required this.word,
+    required this.type,
     required this.options,
     required this.correctIndex,
+    this.prompt = '',
   });
 }
 
 /// State machine for a learning session.
-enum SessionPhase { loading, asking, feedback, finished }
+enum SessionPhase { loading, asking, feedback, wrongDetail, finished }
 
 class LearningSessionState {
   final SessionPhase phase;
@@ -124,8 +130,8 @@ class LearningSessionNotifier
 
   LearningSessionNotifier(this.ref) : super(LearningSessionState.loading());
 
-  /// Build a session: pick `count` words from `vocabId`, generate 4-option
-  /// A/B/C/D questions.
+  /// Build a session: pick `count` words from `vocabId`, generate mixed
+  /// question types (5 types rotated).
   Future<void> start({required String vocabId, int count = 10}) async {
     state = LearningSessionState.loading();
     final all = await ref.read(vocabCacheProvider(vocabId).future);
@@ -141,16 +147,11 @@ class LearningSessionNotifier
     final picked = [...all]..shuffle(_rng);
     final slice = picked.take(count.clamp(1, all.length)).toList();
 
-    final questions = slice.map((w) {
-      // Pick 3 distractors from the same vocabulary (not equal to the word's translation).
-      final pool = all.where((o) => o.id != w.id).toList()..shuffle(_rng);
-      final distractors = pool.take(3).map((o) => o.translation).toList();
-      final options = [...distractors, w.translation]..shuffle(_rng);
-      return LearningQuestion(
-        word: w,
-        options: options,
-        correctIndex: options.indexOf(w.translation),
-      );
+    final types = QuestionType.values;
+    final questions = slice.asMap().entries.map((entry) {
+      final w = entry.value;
+      final t = types[entry.key % types.length];
+      return _buildQuestion(w, t, all);
     }).toList();
 
     state = LearningSessionState(
@@ -161,31 +162,74 @@ class LearningSessionNotifier
     );
   }
 
-  /// User picks an option; we transition to feedback.
+  LearningQuestion _buildQuestion(VocabWord w, QuestionType type, List<VocabWord> all) {
+    final pool = all.where((o) => o.id != w.id).toList()..shuffle(_rng);
+    switch (type) {
+      case QuestionType.seeWordPickMeaning:
+        final distractors = pool.take(3).map((o) => o.translation).toList();
+        final options = [...distractors, w.translation]..shuffle(_rng);
+        return LearningQuestion(
+          word: w, type: type, options: options,
+          correctIndex: options.indexOf(w.translation),
+          prompt: w.word,
+        );
+      case QuestionType.seeMeaningPickWord:
+        final distractors = pool.take(3).map((o) => o.word).toList();
+        final options = [...distractors, w.word]..shuffle(_rng);
+        return LearningQuestion(
+          word: w, type: type, options: options,
+          correctIndex: options.indexOf(w.word),
+          prompt: w.translation,
+        );
+      case QuestionType.listenPickMeaning:
+        final distractors = pool.take(3).map((o) => o.translation).toList();
+        final options = [...distractors, w.translation]..shuffle(_rng);
+        return LearningQuestion(
+          word: w, type: type, options: options,
+          correctIndex: options.indexOf(w.translation),
+          prompt: w.word,
+        );
+      case QuestionType.seeContextPickWord:
+        final distractors = pool.take(3).map((o) => o.word).toList();
+        final options = [...distractors, w.word]..shuffle(_rng);
+        return LearningQuestion(
+          word: w, type: type, options: options,
+          correctIndex: options.indexOf(w.word),
+          prompt: w.exampleEn,
+        );
+      case QuestionType.spelling:
+        return LearningQuestion(
+          word: w, type: type,
+          options: [w.word],
+          correctIndex: 0,
+          prompt: w.translation,
+        );
+    }
+  }
+
+  /// User picks an option; correct → feedback (auto-advance), wrong → wrongDetail.
   void answer(int optionIndex) {
     if (state.phase != SessionPhase.asking) return;
     final q = state.currentQuestion!;
     final correct = optionIndex == q.correctIndex;
+    final quality = correct ? AnswerQuality.good : AnswerQuality.again;
+    ref.read(reviewStateProvider.notifier).recordAnswer(
+          wordId: q.word.id,
+          quality: quality.toSm2Quality(),
+        );
     state = LearningSessionState(
-      phase: SessionPhase.feedback,
+      phase: correct ? SessionPhase.feedback : SessionPhase.wrongDetail,
       questions: state.questions,
       currentIndex: state.currentIndex,
       correctCount: state.correctCount + (correct ? 1 : 0),
-      lastAnswer: correct ? AnswerQuality.good : AnswerQuality.again,
+      lastAnswer: quality,
       lastSelectedIndex: optionIndex,
     );
   }
 
-  /// After 200ms feedback, advance to the next question (or finish)
-  /// and persist SM-2 state.
+  /// Advance to next question (or finish).
   void next() {
-    if (state.phase != SessionPhase.feedback) return;
-    final q = state.currentQuestion!;
-    final quality = (state.lastAnswer ?? AnswerQuality.again).toSm2Quality();
-    ref.read(reviewStateProvider.notifier).recordAnswer(
-          wordId: q.word.id,
-          quality: quality,
-        );
+    if (state.phase != SessionPhase.feedback && state.phase != SessionPhase.wrongDetail) return;
     final nextIndex = state.currentIndex + 1;
     if (nextIndex >= state.questions.length) {
       state = LearningSessionState(
