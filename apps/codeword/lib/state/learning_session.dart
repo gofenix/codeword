@@ -27,7 +27,7 @@ final reviewStateProvider =
 
 class ReviewStateNotifier
     extends StateNotifier<Map<String, ReviewState>> {
-  ReviewStateNotifier() : super(ReviewRepository.instance.all);
+  ReviewStateNotifier() : super(const {});
 
   /// Apply a SM-2 schedule for an answer and persist to file + memory.
   ReviewState recordAnswer({
@@ -42,12 +42,19 @@ class ReviewStateNotifier
       now: now ?? DateTime.now(),
     );
     state = {...state, wordId: next};
-    ReviewRepository.instance.put(wordId, next);
+    try {
+      ReviewRepository.instance.put(wordId, next);
+    } catch (_) {}
     return next;
   }
 
-  int get totalLearned => ReviewRepository.instance.totalLearned;
-  int get totalDue => ReviewRepository.instance.totalDue(DateTime.now());
+  int get totalLearned => state.values.where((s) => s.repetitions >= 1).length;
+  int get totalDue {
+    final now = DateTime.now();
+    return state.values
+        .where((s) => s.dueAt != null && !s.dueAt!.isAfter(now))
+        .length;
+  }
 }
 
 /// Lazy-loaded vocabulary content cache. Loads JSON on first request.
