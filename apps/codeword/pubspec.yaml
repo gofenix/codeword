@@ -54,6 +54,9 @@ dependencies:
 
   # Local encrypted storage for BYOK (Keychain / EncryptedSharedPreferences)
   flutter_secure_storage: ^9.2.2
+
+  # Local audio playback for bundled word pronunciations
+  audioplayers: ^6.1.0
   flutter_tts: ^4.2.5
 
 dev_dependencies:
@@ -80,6 +83,7 @@ flutter:
 
   assets:
     - assets/vocab/
+    - assets/audio/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

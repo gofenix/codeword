@@ -273,8 +273,8 @@ class _AudioButtonState extends State<_AudioButton> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text(
-              'TTS 不可用 · 请检查 系统设置 → 语言和输入 → 文字转语音 '
-              '是否装了 Google TTS 引擎 + 美音语音包',
+              '本地音频包缺失 · 重新装一遍本版本 app 即可（v0.4.5 起发音 '
+              '音频直接打进 app，不再依赖系统 TTS）',
             ),
             duration: Duration(seconds: 6),
           ),
@@ -285,7 +285,10 @@ class _AudioButtonState extends State<_AudioButton> {
 
   Future<void> _onTap() async {
     HapticFeedback.lightImpact();
-    final ok = await TtsService.instance.speak(widget.word.word);
+    // Play by word ID (e.g. 'ai_001') — the asset is at
+    // assets/audio/<wordId>.ogg, generated at build time by
+    // tools/generate_audio.py.
+    final ok = await TtsService.instance.speak(widget.word.id);
     if (!ok && mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
