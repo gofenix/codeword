@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../tokens.dart';
+import 'pressable_scale.dart';
 
 /// Soft, elevated card with the v5 cream/shadow-md feel.
+///
+/// Tappable cards ([onTap] != null) wrap themselves in a [PressableScale]
+/// so the entire card breathes a little on press. The card's own color
+/// and shadow still animate via [AnimatedContainer] for cheap property
+/// transitions.
 class AppCard extends StatelessWidget {
   final Widget child;
   final EdgeInsets padding;
@@ -22,7 +28,8 @@ class AppCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final card = AnimatedContainer(
-      duration: const Duration(milliseconds: 120),
+      duration: const Duration(milliseconds: 180),
+      curve: Curves.easeOutCubic,
       padding: padding,
       decoration: BoxDecoration(
         color: color ?? AppColors.surface,
@@ -33,13 +40,10 @@ class AppCard extends StatelessWidget {
     );
 
     if (onTap == null) return card;
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(AppRadii.lg),
-        child: card,
-      ),
+    return PressableScale(
+      scaleFactor: 0.98,
+      onTap: onTap,
+      child: card,
     );
   }
 }

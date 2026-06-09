@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
@@ -57,7 +58,10 @@ class _HomeShellState extends State<HomeShell> {
       body: _pages[_index],
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
-        onDestinationSelected: (i) => setState(() => _index = i),
+        onDestinationSelected: (i) {
+          HapticFeedback.selectionClick();
+          setState(() => _index = i);
+        },
         backgroundColor: AppColors.surface,
         indicatorColor: AppColors.primarySoft,
         surfaceTintColor: Colors.transparent,
@@ -364,6 +368,7 @@ class _StartLearningButton extends StatelessWidget {
       width: double.infinity,
       child: FilledButton.icon(
         onPressed: () {
+          HapticFeedback.lightImpact();
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (_) => const LearningSessionScreen(vocabId: 'ai_core'),

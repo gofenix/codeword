@@ -67,16 +67,35 @@ class _LearningSessionScreenState
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: switch (session.phase) {
-        SessionPhase.loading => const Center(child: CircularProgressIndicator()),
-        SessionPhase.asking => _AskingView(session: session),
-        SessionPhase.wrongDetail => _WrongDetailView(session: session),
-        SessionPhase.finished => _FinishedView(
-            total: session.questions.length,
-            correct: session.correctCount,
-            onClose: () => Navigator.of(context).pop(),
-          ),
-      },
+      body: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 240),
+        switchInCurve: Curves.easeOutCubic,
+        switchOutCurve: Curves.easeInCubic,
+        transitionBuilder: (child, anim) {
+          final slide = Tween<Offset>(
+            begin: const Offset(0.06, 0),
+            end: Offset.zero,
+          ).animate(anim);
+          return FadeTransition(
+            opacity: anim,
+            child: SlideTransition(position: slide, child: child),
+          );
+        },
+        child: KeyedSubtree(
+          key: ValueKey(session.phase),
+          child: switch (session.phase) {
+            SessionPhase.loading =>
+              const Center(child: CircularProgressIndicator()),
+            SessionPhase.asking => _AskingView(session: session),
+            SessionPhase.wrongDetail => _WrongDetailView(session: session),
+            SessionPhase.finished => _FinishedView(
+                total: session.questions.length,
+                correct: session.correctCount,
+                onClose: () => Navigator.of(context).pop(),
+              ),
+          },
+        ),
+      ),
     );
   }
 }
@@ -130,14 +149,25 @@ class _AskingView extends ConsumerWidget {
             padding: const EdgeInsets.fromLTRB(
               AppSpacing.x5, AppSpacing.x3, AppSpacing.x5, AppSpacing.x5,
             ),
-            child: Column(
+              child: Column(
               children: [
                 for (var i = 0; i < q.options.length; i++) ...[
                   if (i > 0) const SizedBox(height: AppSpacing.x2),
                   _OptionTile(
                     label: String.fromCharCode(65 + i),
                     text: q.options[i],
-                    onTap: () => notifier.answer(i),
+                    onTap: () {
+                      // Stronger haptic on wrong, lighter on correct —
+                      // gives the user a tiny signal of their answer
+                      // even before the color change registers.
+                      final correct = i == q.correctIndex;
+                      HapticFeedback.mediumImpact();
+                      if (correct) {
+                        // Light feedback on correct (slight tap).
+                        HapticFeedback.lightImpact();
+                      }
+                      notifier.answer(i);
+                    },
                   ),
                 ],
               ],
@@ -217,10 +247,8 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
                 const SizedBox(width: 6),
                 const Text('答错了', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.danger)),
                 const Spacer(),
-                _SmallIconButton(
-                  icon: _isFavorite ? Icons.star_rounded : Icons.star_outline_rounded,
-                  label: _isFavorite ? '已收藏' : '收藏',
-                  color: _isFavorite ? AppColors.warning : AppColors.inkMuted,
+                _FavoriteChip(
+                  filled: _isFavorite,
                   onTap: _toggleFavorite,
                 ),
                 const SizedBox(width: 8),
@@ -266,32 +294,68 @@ class _SmallIconButton extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(AppRadii.pill),
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-          decoration: BoxDecoration(
-            color: color.withValues(alpha: 0.12),
-            borderRadius: BorderRadius.circular(AppRadii.pill),
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(icon, size: 14, color: color),
-              const SizedBox(width: 4),
-              Text(
-                label,
-                style: TextStyle(
-                  fontSize: 12,
-                  color: color,
-                  fontWeight: FontWeight.w600,
-                ),
+    return PressableScale(
+      scaleFactor: 0.94,
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: 0.12),
+          borderRadius: BorderRadius.circular(AppRadii.pill),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 14, color: color),
+            const SizedBox(width: 4),
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: 12,
+                color: color,
+                fontWeight: FontWeight.w600,
               ),
-            ],
-          ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Star-shaped chip: filled = gold star, outlined = grey.
+/// Uses [FavoriteStar] for a small rotate+scale transition on toggle.
+class _FavoriteChip extends StatelessWidget {
+  final bool filled;
+  final VoidCallback onTap;
+  const _FavoriteChip({required this.filled, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    final color = filled ? AppColors.warning : AppColors.inkMuted;
+    return PressableScale(
+      scaleFactor: 0.94,
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: 0.12),
+          borderRadius: BorderRadius.circular(AppRadii.pill),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            FavoriteStar(filled: filled, color: color, size: 14),
+            const SizedBox(width: 4),
+            Text(
+              filled ? '已收藏' : '收藏',
+              style: TextStyle(
+                fontSize: 12,
+                color: color,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -563,37 +627,55 @@ class _OptionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(AppRadii.md),
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(minHeight: 56),
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x4, vertical: AppSpacing.x3),
-            decoration: BoxDecoration(
-              color: AppColors.surface,
-              borderRadius: BorderRadius.circular(AppRadii.md),
-              border: Border.all(color: AppColors.inkSubtle.withValues(alpha: 0.2), width: 1.5),
+    return PressableScale(
+      scaleFactor: 0.97,
+      onTap: onTap,
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(minHeight: 56),
+        child: Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppSpacing.x4,
+            vertical: AppSpacing.x3,
+          ),
+          decoration: BoxDecoration(
+            color: AppColors.surface,
+            borderRadius: BorderRadius.circular(AppRadii.md),
+            border: Border.all(
+              color: AppColors.inkSubtle.withValues(alpha: 0.2),
+              width: 1.5,
             ),
-            child: Row(
-              children: [
-                Container(
-                  width: 32, height: 32,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: AppColors.primary.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(AppRadii.sm),
+          ),
+          child: Row(
+            children: [
+              Container(
+                width: 32, height: 32,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: AppColors.primary.withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(AppRadii.sm),
+                ),
+                child: Text(
+                  label,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.primary,
+                    fontSize: 14,
                   ),
-                  child: Text(label, style: const TextStyle(fontWeight: FontWeight.w700, color: AppColors.primary, fontSize: 14)),
                 ),
-                const SizedBox(width: AppSpacing.x3),
-                Expanded(
-                  child: Text(text, style: const TextStyle(fontSize: 15, color: AppColors.ink, fontWeight: FontWeight.w500, height: 1.4)),
+              ),
+              const SizedBox(width: AppSpacing.x3),
+              Expanded(
+                child: Text(
+                  text,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    color: AppColors.ink,
+                    fontWeight: FontWeight.w500,
+                    height: 1.4,
+                  ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
@@ -609,15 +691,29 @@ class _ProgressBar extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('${(progress * 100).round()}%', style: const TextStyle(fontSize: 12, color: AppColors.inkMuted, fontWeight: FontWeight.w600)),
+        Text(
+          '${(progress * 100).round()}%',
+          style: const TextStyle(
+            fontSize: 12,
+            color: AppColors.inkMuted,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         const SizedBox(height: 4),
+        // TweenAnimationBuilder smoothly tweens the bar from its previous
+        // value to the new one, so advancing a question feels fluid.
         ClipRRect(
           borderRadius: BorderRadius.circular(AppRadii.pill),
-          child: LinearProgressIndicator(
-            value: progress,
-            minHeight: 6,
-            backgroundColor: AppColors.surfaceMuted,
-            valueColor: const AlwaysStoppedAnimation(AppColors.primary),
+          child: TweenAnimationBuilder<double>(
+            tween: Tween(begin: 0, end: progress),
+            duration: const Duration(milliseconds: 320),
+            curve: Curves.easeOutCubic,
+            builder: (context, v, _) => LinearProgressIndicator(
+              value: v,
+              minHeight: 6,
+              backgroundColor: AppColors.surfaceMuted,
+              valueColor: const AlwaysStoppedAnimation(AppColors.primary),
+            ),
           ),
         ),
       ],
