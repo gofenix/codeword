@@ -58,6 +58,15 @@ class _LearningSessionScreenState
     final meta = ref.watch(vocabMetaProvider)[widget.vocabId];
     final name = meta?.name ?? widget.vocabId;
 
+    // Progress lives OUTSIDE the AnimatedSwitcher so it's always
+    // rendered once. Otherwise a cross-fade between asking and
+    // wrongDetail would briefly stack two progress bars at 50%.
+    final progress = session.phase == SessionPhase.finished
+        ? 1.0
+        : (session.phase == SessionPhase.wrongDetail
+            ? (session.currentIndex + 1) / session.questions.length
+            : session.progress);
+
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -67,52 +76,54 @@ class _LearningSessionScreenState
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: AnimatedSwitcher(
-        // 320ms is long enough to feel intentional, short enough to not
-        // feel slow. Both curves are easeOutCubic — the previous
-        // easeInCubic on the OUT side was a bug (it made the outgoing
-        // widget start slow and end fast, which reads as a glitch).
-        duration: const Duration(milliseconds: 320),
-        switchInCurve: Curves.easeOutCubic,
-        switchOutCurve: Curves.easeOutCubic,
-        // Stack both children with the larger one's size, so the
-        // layout doesn't snap when the wrong detail view is taller
-        // than the asking view (or vice versa).
-        layoutBuilder: (currentChild, previousChildren) {
-          return Stack(
-            alignment: Alignment.topCenter,
-            children: <Widget>[
-              ...previousChildren,
-              ?currentChild,
-            ],
-          );
-        },
-        transitionBuilder: (child, anim) {
-          // Cross-fade + a tiny upward scale lift (0.985 → 1.0). The
-          // previous horizontal slide felt like a UI bug; vertical
-          // intent reads as "drilling into the word".
-          return FadeTransition(
-            opacity: anim,
-            child: ScaleTransition(
-              scale: Tween<double>(begin: 0.985, end: 1.0).animate(anim),
-              child: child,
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.x5, AppSpacing.x3, AppSpacing.x5, AppSpacing.x4,
             ),
-          );
-        },
-        child: KeyedSubtree(
-          key: ValueKey(session.phase),
-          child: switch (session.phase) {
-            SessionPhase.loading =>
-              const Center(child: CircularProgressIndicator()),
-            SessionPhase.asking => _AskingView(session: session),
-            SessionPhase.wrongDetail => _WrongDetailView(session: session),
-            SessionPhase.finished => _FinishedView(
-                total: session.questions.length,
-                correct: session.correctCount,
-                onClose: () => Navigator.of(context).pop(),
+            child: _ProgressBar(progress: progress),
+          ),
+          Expanded(
+            child: AnimatedSwitcher(
+              // Push-from-right: old slides LEFT, new slides in from
+              // RIGHT. No cross-fade — keeps the body crisp and the
+              // shared progress bar never has a visual twin.
+              duration: const Duration(milliseconds: 240),
+              switchInCurve: Curves.easeOutCubic,
+              switchOutCurve: Curves.easeOutCubic,
+              transitionBuilder: (child, anim) {
+                return SlideTransition(
+                  position: Tween<Offset>(
+                    begin: const Offset(0.08, 0),
+                    end: Offset.zero,
+                  ).animate(anim),
+                  child: SlideTransition(
+                    position: Tween<Offset>(
+                      begin: Offset.zero,
+                      end: const Offset(-0.08, 0),
+                    ).animate(anim),
+                    child: child,
+                  ),
+                );
+              },
+              child: KeyedSubtree(
+                key: ValueKey(session.phase),
+                child: switch (session.phase) {
+                  SessionPhase.loading =>
+                    const Center(child: CircularProgressIndicator()),
+                  SessionPhase.asking => _AskingView(session: session),
+                  SessionPhase.wrongDetail => _WrongDetailView(session: session),
+                  SessionPhase.finished => _FinishedView(
+                      total: session.questions.length,
+                      correct: session.correctCount,
+                      onClose: () => Navigator.of(context).pop(),
+                    ),
+                },
               ),
-          },
-        ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -130,12 +141,8 @@ class _AskingView extends ConsumerWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x5, AppSpacing.x3, AppSpacing.x5, AppSpacing.x4,
-            ),
-            child: _ProgressBar(progress: session.progress),
-          ),
+          // Progress bar is hoisted to the Scaffold body so the
+          // AnimatedSwitcher doesn't render two of them at once.
           // Scrollable top region: prompt card + audio button.
           // The options below are NOT in this scroll area, so they stay
           // anchored to the bottom regardless of prompt length.
@@ -145,6 +152,7 @@ class _AskingView extends ConsumerWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(height: AppSpacing.x2),
                   _QuestionPrompt(
                     type: q.type,
                     prompt: q.prompt,
@@ -252,7 +260,6 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _ProgressBar(progress: (widget.session.currentIndex + 1) / widget.session.questions.length),
             const SizedBox(height: AppSpacing.x2),
             Row(
               children: [
