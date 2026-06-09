@@ -218,13 +218,8 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
       await ReviewRepository.instance.markRemoved(wordId);
     } catch (_) {}
     if (mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('已从词库移除（仅影响统计）'),
-          duration: Duration(seconds: 2),
-        ),
-      );
-      // Skip to the next question immediately.
+      // Quiet acknowledgment. The user just removed a word — no need
+      // to explain what 'removed' means in the toast.
       ref.read(learningSessionProvider.notifier).next();
     }
   }
@@ -452,18 +447,15 @@ class _AudioButtonState extends State<_AudioButton> {
   @override
   void initState() {
     super.initState();
-    // Listen for once-per-session TTS failure so we can tell the user
-    // *why* nothing happened, instead of leaving them confused.
+    // If the bundled audio asset is missing for this word, surface a
+    // single short toast per session. No dev-talk about v0.4.5 history.
     TtsService.instance.availabilityStream.listen((ok) {
       if (!ok && mounted && !_warned) {
         _warned = true;
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text(
-              '本地音频包缺失 · 重新装一遍本版本 app 即可（v0.4.5 起发音 '
-              '音频直接打进 app，不再依赖系统 TTS）',
-            ),
-            duration: Duration(seconds: 6),
+            content: Text('音频缺失 · 重新安装 app 可恢复'),
+            duration: Duration(seconds: 3),
           ),
         );
       }
@@ -472,17 +464,10 @@ class _AudioButtonState extends State<_AudioButton> {
 
   Future<void> _onTap() async {
     HapticFeedback.lightImpact();
-    // Play by word ID (e.g. 'ai_001') — the asset is at
-    // assets/audio/<wordId>.ogg, generated at build time by
-    // tools/generate_audio.py.
     final ok = await TtsService.instance.speak(widget.word.id);
     if (!ok && mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('发音失败: ${widget.word.word}'),
-          duration: const Duration(seconds: 2),
-        ),
-      );
+      // No toast for missing audio — the once-per-session toast above
+      // already covers it. This keeps the learning flow quiet.
     }
   }
 

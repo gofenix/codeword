@@ -119,7 +119,7 @@ class _VocabCard extends ConsumerWidget {
               ),
               if (!available)
                 PillTag(
-                  label: '敬请期待',
+                  label: '即将推出',
                   color: AppColors.inkSubtle,
                   variant: PillVariant.soft,
                 )
@@ -163,12 +163,10 @@ class _VocabCard extends ConsumerWidget {
               Text(
                 available
                     ? '${list.wordCount} 词'
-                    : 'W2 上线',
-                style: TextStyle(
+                    : '—',
+                style: const TextStyle(
                   fontSize: 11,
-                  color: available
-                      ? AppColors.inkSubtle
-                      : AppColors.inkSubtle,
+                  color: AppColors.inkSubtle,
                   fontWeight: FontWeight.w600,
                 ),
               ),

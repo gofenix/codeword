@@ -34,15 +34,6 @@ class StatsScreen extends ConsumerWidget {
                 height: 1.2,
               ),
             ),
-            const SizedBox(height: 2),
-            const Text(
-              '看你与单词的相处',
-              style: TextStyle(
-                fontSize: 13,
-                color: AppColors.inkMuted,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
             const SizedBox(height: AppSpacing.x5),
 
             // 1) Top-line overview (existing, but smaller now).
@@ -117,41 +108,17 @@ class StatsScreen extends ConsumerWidget {
 
             const SizedBox(height: AppSpacing.x4),
 
-            // 8) Cumulative / changelog
-            AppCard(
-              padding: const EdgeInsets.all(AppSpacing.x5),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            // 8) Cumulative — a single, quiet line at the very end.
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: AppSpacing.x3),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    children: [
-                      const Text(
-                        '累计',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: AppColors.inkMuted,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 1.2,
-                        ),
-                      ),
-                      const Spacer(),
-                      Text(
-                        '共 ${stats.totalStudyMinutes} 分钟',
-                        style: const TextStyle(
-                          fontSize: 12,
-                          color: AppColors.inkMuted,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: AppSpacing.x2),
-                  const Text(
-                    '✅ 真实统计 · 5 词库 500 词\n✅ 本地预生成 OGG 发音\n✅ 掌握分布 / 词库进度 / Daily Trends\n✅ 学习分钟 + 打开次数 (v0.4.7)\n✅ macOS + Android 双端\n✅ 本地-first 原则 (无云/无登录/无同步)',
-                    style: TextStyle(
-                      fontSize: 13,
-                      color: AppColors.ink,
-                      height: 1.7,
+                  Text(
+                    '累计 ${stats.totalStudyMinutes} 分钟',
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: AppColors.inkMuted,
                       fontWeight: FontWeight.w500,
                     ),
                   ),

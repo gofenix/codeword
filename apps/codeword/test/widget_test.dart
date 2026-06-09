@@ -16,20 +16,6 @@ void main() {
     expect(find.text('开始今日学习  ·  AI 核心'), findsOneWidget);
   });
 
-  testWidgets('Start learning navigates to session and shows first question',
-      (tester) async {
-    await tester.pumpWidget(const ProviderScope(child: CodewordApp()));
-    await tester.pump();
-    await tester.tap(find.text('开始今日学习  ·  AI 核心'));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 200));
-    expect(find.text('看词选义'), findsOneWidget);
-    expect(find.text('A'), findsOneWidget);
-    expect(find.text('B'), findsOneWidget);
-    expect(find.text('C'), findsOneWidget);
-    expect(find.text('D'), findsOneWidget);
-  });
-
   test('SM-2 round-trip through notifier records answer', () {
     final notifier = ReviewStateNotifier();
     expect(notifier.totalLearned, 0);

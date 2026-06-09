@@ -210,8 +210,6 @@ class ReviewStateNotifier
     final today = DateTime(at.year, at.month, at.day);
     final tomorrow = today.add(const Duration(days: 1));
 
-    // First pass over in-memory state: count today, due, sum EF, per-vocab
-    // tallies, mastery distribution.
     int reviewsToday = 0;
     int newToday = 0;
     int due = 0;
@@ -242,19 +240,12 @@ class ReviewStateNotifier
     }
 
     for (final entry in state.entries) {
-      // We don't know the vocabId here — but vocab is encoded in the
-      // wordId prefix (e.g. 'ai_001' → 'ai_core'). Split on the first
-      // underscore to recover the vocab.
       final vocabId = _vocabIdFromWordId(entry.key);
       accumulate(vocabId, entry.value);
     }
 
     final avg = state.isEmpty ? 0.0 : sumEf / state.length / 100.0;
 
-    // Activity / favorites / minutes / streak come from the persistence
-    // layer. In tests (and any pre-init code path) it isn't initialized,
-    // so we fall back to zeros for those fields while still reporting
-    // the live state.
     int streak = 0;
     List<int> last7 = const [0, 0, 0, 0, 0, 0, 0];
     List<int> last30 = const [];
@@ -281,19 +272,11 @@ class ReviewStateNotifier
       // Repository not initialized (test env). Use zeros / empty.
     }
 
-    // Unseen bucket = every bundled word that has no review state yet.
-    // We approximate by counting bundled words across all built-in vocabs
-    // and subtracting the seen count for each.
-    final meta = kBuiltinLists; // synchronous; no asset load needed
+    final meta = kBuiltinLists;
     final perVocabOut = <VocabProgress>[];
     for (final list in meta) {
       final total = list.wordCount;
-      // We don't know the actual bundled word count without loading
-      // the asset; wordCount from kBuiltinLists is the target count.
-      // Treat the in-memory `seen` as authoritative.
       final m = perVocabStats[list.id] ?? _MutableVocabStats();
-      // If we've never seen any word in this vocab, the in-memory
-      // stats don't exist; the user just hasn't started it.
       masteryCount[MasteryLevel.unseen] =
           (masteryCount[MasteryLevel.unseen] ?? 0) + (total - m.seen);
       perVocabOut.add(VocabProgress(
@@ -334,7 +317,6 @@ class ReviewStateNotifier
     );
   }
 
-  /// Classify a word's review state into a mastery bucket.
   static MasteryLevel _classify(double ef, int reps) {
     if (reps == 0) return MasteryLevel.unfamiliar;
     if (ef >= 2.5 && reps >= 3) return MasteryLevel.familiar;
@@ -343,13 +325,10 @@ class ReviewStateNotifier
     return MasteryLevel.unfamiliar;
   }
 
-  /// Recover the vocab id from a word id. The convention used in the
-  /// bundled JSONs is `<domain>_<index>` (e.g. `ai_001`, `cs_042`).
   static String _vocabIdFromWordId(String wid) {
     final idx = wid.lastIndexOf('_');
     if (idx <= 0) return wid;
     final prefix = wid.substring(0, idx);
-    // Map known prefixes to built-in vocab ids.
     switch (prefix) {
       case 'ai':
         return 'ai_core';
@@ -370,7 +349,6 @@ class ReviewStateNotifier
       case 'prod':
         return 'product_core';
       default:
-        // Fallback: use the prefix as the vocab id.
         return '${prefix}_core';
     }
   }

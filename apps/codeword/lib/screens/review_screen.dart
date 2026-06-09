@@ -37,15 +37,6 @@ class ReviewScreen extends ConsumerWidget {
                 height: 1.2,
               ),
             ),
-            const SizedBox(height: 2),
-            const Text(
-              '基于 SM-2 算法的间隔重复',
-              style: TextStyle(
-                fontSize: 13,
-                color: AppColors.inkMuted,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
             const SizedBox(height: AppSpacing.x5),
             AppCard(
               child: Row(
@@ -86,8 +77,10 @@ class ReviewScreen extends ConsumerWidget {
                         color: AppColors.primarySoft,
                         borderRadius: BorderRadius.circular(AppRadii.xl),
                       ),
-                      child: const Icon(
-                        Icons.refresh_rounded,
+                      child: Icon(
+                        totalLearned == 0
+                            ? Icons.menu_book_rounded
+                            : Icons.check_rounded,
                         size: 36,
                         color: AppColors.primary,
                       ),
@@ -95,27 +88,13 @@ class ReviewScreen extends ConsumerWidget {
                     const SizedBox(height: AppSpacing.x4),
                     Text(
                       totalLearned == 0
-                          ? '先从今日开始学'
-                          : (due == 0 ? '今天没有要复习的' : '点击下方开始复习'),
+                          ? '先去学点新词'
+                          : (due == 0 ? '今天复习完啦' : '$due 个词待复习'),
                       style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                         color: AppColors.ink,
                       ),
-                    ),
-                    const SizedBox(height: AppSpacing.x2),
-                    Text(
-                      totalLearned == 0
-                          ? '学完 10 个词,复习队列就会有内容了'
-                          : (due == 0
-                              ? '明天再来,或者去词库加新词'
-                              : '按 SM-2 间隔混合新旧词'),
-                      style: const TextStyle(
-                        fontSize: 12,
-                        color: AppColors.inkMuted,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.center,
                     ),
                   ],
                 ),

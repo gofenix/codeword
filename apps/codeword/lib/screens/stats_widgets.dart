@@ -30,7 +30,7 @@ class MasteryDistribution extends StatelessWidget {
           const SizedBox(height: AppSpacing.x2),
           Text(
             total == 0
-                ? '还没数据 · 学几个词看看'
+                ? '— · —'
                 : '已学 ${total - (buckets.last.count)} · 总量 $total',
             style: const TextStyle(
               fontSize: 12,
@@ -135,15 +135,6 @@ class VocabProgressList extends StatelessWidget {
               fontSize: 15,
               fontWeight: FontWeight.w700,
               color: AppColors.ink,
-            ),
-          ),
-          const SizedBox(height: AppSpacing.x2),
-          const Text(
-            '点词库 tab 开始新词库',
-            style: TextStyle(
-              fontSize: 12,
-              color: AppColors.inkMuted,
-              fontWeight: FontWeight.w500,
             ),
           ),
           const SizedBox(height: AppSpacing.x4),
@@ -514,7 +505,7 @@ class DailyStudyTimeChart extends StatelessWidget {
           if (maxV == 0) ...[
             const SizedBox(height: 4),
             const Text(
-              '还没数据 · 做完一组题就有了',
+              '—',
               style: TextStyle(
                 fontSize: 11,
                 color: AppColors.inkMuted,

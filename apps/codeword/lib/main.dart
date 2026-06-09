@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lib_content/lib_content.dart';
 import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
@@ -120,14 +121,7 @@ class TodayPage extends ConsumerWidget {
             const SizedBox(height: AppSpacing.x5),
             _TodaySummary(stats: stats),
             const SizedBox(height: AppSpacing.x6),
-            const _HeroWordCard(
-              word: 'overfitting',
-              phonetic: '/ˌəʊvəˈfɪtɪŋ/',
-              pos: 'n.',
-              translation: '过拟合;模型过度贴合训练数据,泛化能力下降',
-              domain: 'AI',
-              level: 'C1',
-            ),
+            const _HeroWordOfTheDay(),
             const SizedBox(height: AppSpacing.x5),
             const _StartLearningButton(),
             const SizedBox(height: AppSpacing.x6),
@@ -166,7 +160,7 @@ class _Greeting extends StatelessWidget {
               const SizedBox(height: 2),
               Text(
                 newToday == 0
-                    ? '今天还没学,开始吧'
+                    ? '今天还没开始'
                     : '今天学了 $newToday 个新词',
                 style: const TextStyle(
                   fontSize: 22,
@@ -178,15 +172,16 @@ class _Greeting extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.x3,
-            vertical: 6,
-          ),
-          decoration: BoxDecoration(
-            color: AppColors.warning.withValues(alpha: 0.12),
-            borderRadius: BorderRadius.circular(AppRadii.pill),
-          ),
+        if (streak > 0)
+          Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppSpacing.x3,
+              vertical: 6,
+            ),
+            decoration: BoxDecoration(
+              color: AppColors.warning.withValues(alpha: 0.12),
+              borderRadius: BorderRadius.circular(AppRadii.pill),
+            ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -297,6 +292,94 @@ class _SummaryCell extends StatelessWidget {
       ],
     );
   }
+}
+
+class _HeroWordOfTheDay extends StatefulWidget {
+  const _HeroWordOfTheDay();
+
+  @override
+  State<_HeroWordOfTheDay> createState() => _HeroWordOfTheDayState();
+}
+
+class _HeroWordOfTheDayState extends State<_HeroWordOfTheDay> {
+  late Future<_HeroEntry?> _future;
+
+  @override
+  void initState() {
+    super.initState();
+    _future = _pickHero();
+  }
+
+  /// Pick a stable-per-day entry: hash the date so the user sees the
+  /// same "word of the day" all day, but it changes every day.
+  Future<_HeroEntry?> _pickHero() async {
+    try {
+      final container = await ContentLoader.loadList('ai_core');
+      if (container.isEmpty) return null;
+      final day = DateTime.now();
+      final epoch = day.year * 10000 + day.month * 100 + day.day;
+      final idx = epoch % container.length;
+      final w = container[idx];
+      return _HeroEntry(
+        word: w.word,
+        phonetic: w.phonetic,
+        pos: w.pos,
+        translation: w.translation,
+        domain: w.domain.toUpperCase(),
+        level: w.level,
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<_HeroEntry?>(
+      future: _future,
+      builder: (context, snap) {
+        final h = snap.data;
+        if (h == null) {
+          // No bundled vocab — render a quiet placeholder. No explanation
+          // text; just a card with the same shape so layout doesn't shift.
+          return const AppCard(
+            child: SizedBox(
+              height: 96,
+              child: Center(
+                child: Icon(Icons.menu_book_outlined,
+                    color: AppColors.inkSubtle),
+              ),
+            ),
+          );
+        }
+        return _HeroWordCard(
+          word: h.word,
+          phonetic: h.phonetic,
+          pos: h.pos,
+          translation: h.translation,
+          domain: h.domain,
+          level: h.level,
+        );
+      },
+    );
+  }
+}
+
+class _HeroEntry {
+  final String word;
+  final String phonetic;
+  final String pos;
+  final String translation;
+  final String domain;
+  final String level;
+  const _HeroEntry({
+    required this.word,
+    required this.phonetic,
+    required this.pos,
+    required this.translation,
+    required this.domain,
+    required this.level,
+  });
 }
 
 class _HeroWordCard extends StatelessWidget {

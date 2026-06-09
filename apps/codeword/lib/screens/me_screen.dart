@@ -85,19 +85,13 @@ class MeScreen extends ConsumerWidget {
             _MenuItem(
               icon: Icons.volume_up_outlined,
               title: '发音',
-              subtitle: '美音 (en-US) · 系统默认',
+              subtitle: '美音',
               color: AppColors.domainCs,
-            ),
-            _MenuItem(
-              icon: Icons.lock_outline,
-              title: 'AI 助手 API Key',
-              subtitle: 'BYOK · 本地加密存储',
-              color: AppColors.primary,
             ),
             _MenuItem(
               icon: Icons.info_outline,
               title: '关于',
-              subtitle: 'v0.4.4 · gofenix/codeword',
+              subtitle: 'CodeWord',
               color: AppColors.inkMuted,
             ),
           ],
