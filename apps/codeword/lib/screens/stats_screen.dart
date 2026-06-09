@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_ui/lib_ui.dart';
@@ -11,15 +9,9 @@ class StatsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final review = ref.watch(reviewStateProvider);
-    final totalLearned = review.values
-        .where((s) => s.repetitions >= 1)
-        .length;
-    final totalSeen = review.length;
-    final avgEasiness = review.isEmpty
-        ? 0.0
-        : review.values.map((s) => s.easiness / 100.0).reduce((a, b) => a + b) /
-            review.length;
+    // Watch the review state map so this rebuilds on every answer.
+    ref.watch(reviewStateProvider);
+    final stats = ref.read(reviewStateProvider.notifier).stats();
 
     return SafeArea(
       child: SingleChildScrollView(
@@ -57,7 +49,7 @@ class StatsScreen extends ConsumerWidget {
                   Expanded(
                     child: _Stat(
                       label: '已学过',
-                      value: '$totalLearned',
+                      value: '${stats.totalLearned}',
                       color: AppColors.primary,
                     ),
                   ),
@@ -69,7 +61,7 @@ class StatsScreen extends ConsumerWidget {
                   Expanded(
                     child: _Stat(
                       label: '看过',
-                      value: '$totalSeen',
+                      value: '${stats.totalSeen}',
                       color: AppColors.info,
                     ),
                   ),
@@ -81,9 +73,9 @@ class StatsScreen extends ConsumerWidget {
                   Expanded(
                     child: _Stat(
                       label: '平均 EF',
-                      value: avgEasiness == 0
+                      value: stats.averageEasiness == 0
                           ? '—'
-                          : avgEasiness.toStringAsFixed(2),
+                          : stats.averageEasiness.toStringAsFixed(2),
                       color: AppColors.warning,
                     ),
                   ),
@@ -107,7 +99,9 @@ class StatsScreen extends ConsumerWidget {
                       ),
                       const Spacer(),
                       Text(
-                        totalSeen == 0 ? '还没数据' : '$totalSeen 次答题',
+                        stats.totalSeen == 0
+                            ? '还没数据'
+                            : '本周 ${_sum(stats.last7Days)} 次答题',
                         style: const TextStyle(
                           fontSize: 12,
                           color: AppColors.inkMuted,
@@ -117,7 +111,7 @@ class StatsScreen extends ConsumerWidget {
                     ],
                   ),
                   const SizedBox(height: AppSpacing.x4),
-                  _Heatmap(),
+                  _Heatmap(activity: stats.last7Days),
                 ],
               ),
             ),
@@ -128,7 +122,7 @@ class StatsScreen extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'v0.3 · V1',
+                    'v0.4.6 · 本期',
                     style: TextStyle(
                       fontSize: 12,
                       color: AppColors.inkMuted,
@@ -138,7 +132,7 @@ class StatsScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: AppSpacing.x2),
                   const Text(
-                    '✅ A/B/C/D 看词选义\n✅ SM-2 间隔重复 + 持久化\n✅ 9 套词库 450 词\n✅ macOS + Android 双端\n🚧 6 位同步码 + E2E 加密\n🚧 4 种新题型(听音/拼写...)',
+                    '✅ 真实统计 · 5 词库 500 词\n✅ 本地预生成 OGG 发音\n✅ SM-2 间隔重复 + JSON 持久化\n✅ macOS + Android 双端\n✅ 本地-first 原则(无云/无登录/无同步)',
                     style: TextStyle(
                       fontSize: 13,
                       color: AppColors.ink,
@@ -154,6 +148,8 @@ class StatsScreen extends ConsumerWidget {
       ),
     );
   }
+
+  int _sum(List<int> xs) => xs.fold(0, (a, b) => a + b);
 }
 
 class _Stat extends StatelessWidget {
@@ -191,14 +187,29 @@ class _Stat extends StatelessWidget {
 }
 
 class _Heatmap extends StatelessWidget {
+  final List<int> activity; // 7 days, oldest → today
+  const _Heatmap({required this.activity});
+
+  int _heatLevel(int n) {
+    if (n <= 0) return 0;
+    if (n <= 5) return 1;
+    if (n <= 15) return 2;
+    return 3;
+  }
+
   @override
   Widget build(BuildContext context) {
-    // Mock: deterministic per day to look real across renders.
-    final rng = Random(42);
-    final days = ['一', '二', '三', '四', '五', '六', '日'];
+    final now = DateTime.now();
+    final mondayBasedToday =
+        (now.weekday == DateTime.sunday) ? 6 : now.weekday - 1;
+    final dayLabels = List<String>.generate(7, (i) {
+      final idx = (i + mondayBasedToday) % 7;
+      return const ['一', '二', '三', '四', '五', '六', '日'][idx];
+    });
     return Row(
       children: List.generate(7, (i) {
-        final level = rng.nextInt(4);
+        final n = i < activity.length ? activity[i] : 0;
+        final level = _heatLevel(n);
         final color = switch (level) {
           0 => AppColors.surfaceMuted,
           1 => AppColors.primary.withValues(alpha: 0.3),
@@ -219,7 +230,7 @@ class _Heatmap extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  days[i],
+                  dayLabels[i],
                   style: const TextStyle(
                     fontSize: 11,
                     color: AppColors.inkMuted,

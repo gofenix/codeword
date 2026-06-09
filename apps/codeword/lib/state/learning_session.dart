@@ -18,6 +18,40 @@ const List<String> kBuiltinVocabIds = [
   'product_core',
 ];
 
+/// Computed stats derived from the review state + activity log.
+class ReviewStats {
+  final int totalSeen;
+  final int totalLearned;
+  final int totalDue;
+  final int newToday;
+  final int reviewsToday;
+  final int streakDays;
+  final List<int> last7Days; // length 7, index 6 = today
+  final double averageEasiness;
+
+  const ReviewStats({
+    required this.totalSeen,
+    required this.totalLearned,
+    required this.totalDue,
+    required this.newToday,
+    required this.reviewsToday,
+    required this.streakDays,
+    required this.last7Days,
+    required this.averageEasiness,
+  });
+
+  static const empty = ReviewStats(
+    totalSeen: 0,
+    totalLearned: 0,
+    totalDue: 0,
+    newToday: 0,
+    reviewsToday: 0,
+    streakDays: 0,
+    last7Days: [0, 0, 0, 0, 0, 0, 0],
+    averageEasiness: 0,
+  );
+}
+
 /// In-memory review state for every word the user has ever answered.
 /// Persisted to a local JSON file in the app documents directory; never
 /// leaves the device.
@@ -37,24 +71,94 @@ class ReviewStateNotifier
     DateTime? now,
   }) {
     final current = state[wordId] ?? ReviewState.fresh(wordId);
-    final next = Sm2.schedule(
-      current: current,
-      quality: quality,
-      now: now ?? DateTime.now(),
-    );
+    final at = now ?? DateTime.now();
+    final next = Sm2.schedule(current: current, quality: quality, now: at);
     state = {...state, wordId: next};
     try {
       ReviewRepository.instance.put(wordId, next);
+      ReviewRepository.instance.recordActivity(at);
     } catch (_) {}
     return next;
   }
 
-  int get totalLearned => state.values.where((s) => s.repetitions >= 1).length;
+  int get totalLearned =>
+      state.values.where((s) => s.repetitions >= 1).length;
   int get totalDue {
     final now = DateTime.now();
     return state.values
         .where((s) => s.dueAt != null && !s.dueAt!.isAfter(now))
         .length;
+  }
+
+  /// All stats for the home + stats pages. Pulls activity from the
+  /// persistence layer if initialized; otherwise returns zero stats.
+  ReviewStats stats({DateTime? now}) {
+    final at = now ?? DateTime.now();
+    if (state.isEmpty) {
+      // No review state yet. Still try to surface activity from disk
+      // (e.g. if the user had state, deleted the in-memory cache but
+      // the file persisted). In tests (no init), fall back to zeros.
+      int reviewsToday = 0;
+      int streak = 0;
+      List<int> last7 = const [0, 0, 0, 0, 0, 0, 0];
+      try {
+        final repo = ReviewRepository.instance;
+        reviewsToday = repo.activityOn(at);
+        streak = repo.streakDays(now: at);
+        last7 = repo.last7Days(now: at);
+      } catch (_) {}
+      return ReviewStats(
+        totalSeen: 0,
+        totalLearned: 0,
+        totalDue: 0,
+        newToday: 0,
+        reviewsToday: reviewsToday,
+        streakDays: streak,
+        last7Days: last7,
+        averageEasiness: 0,
+      );
+    }
+    final today = DateTime(at.year, at.month, at.day);
+    final tomorrow = today.add(const Duration(days: 1));
+    int reviewsToday = 0;
+    int newToday = 0;
+    int due = 0;
+    int sumEf = 0;
+    for (final s in state.values) {
+      sumEf += s.easiness;
+      if (s.dueAt != null && !s.dueAt!.isAfter(at)) due++;
+      if (s.lastReviewedAt != null &&
+          !s.lastReviewedAt!.isBefore(today) &&
+          s.lastReviewedAt!.isBefore(tomorrow)) {
+        reviewsToday++;
+        if (s.repetitions == 1) newToday++;
+      }
+    }
+    final avg = state.isEmpty ? 0.0 : sumEf / state.length / 100.0;
+
+    // Activity / streak comes from the persistence layer. In tests (and
+    // any pre-init code path) it isn't initialized, so we fall back to
+    // zeros for those fields while still reporting the live state.
+    int streak = 0;
+    List<int> last7 = const [0, 0, 0, 0, 0, 0, 0];
+    try {
+      final repo = ReviewRepository.instance;
+      streak = repo.streakDays(now: at);
+      last7 = repo.last7Days(now: at);
+    } catch (_) {
+      // Repository not initialized (test env, pre-init). Use zeros.
+    }
+
+    return ReviewStats(
+      totalSeen: state.length,
+      totalLearned: totalLearned,
+      totalDue: due,
+      newToday: newToday,
+      reviewsToday: reviewsToday,
+      streakDays: streak,
+      last7Days: last7,
+      averageEasiness: avg,
+    );
   }
 }
 

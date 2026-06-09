@@ -8,6 +8,7 @@ import 'screens/library_screen.dart';
 import 'screens/me_screen.dart';
 import 'screens/review_screen.dart';
 import 'screens/stats_screen.dart';
+import 'state/learning_session.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -96,6 +97,7 @@ class TodayPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final stats = ref.watch(reviewStateProvider.notifier).stats();
     return SafeArea(
       child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(
@@ -106,12 +108,12 @@ class TodayPage extends ConsumerWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            _Greeting(),
-            SizedBox(height: AppSpacing.x5),
-            _TodaySummary(),
-            SizedBox(height: AppSpacing.x6),
-            _HeroWordCard(
+          children: [
+            _Greeting(newToday: stats.newToday, streak: stats.streakDays),
+            const SizedBox(height: AppSpacing.x5),
+            _TodaySummary(stats: stats),
+            const SizedBox(height: AppSpacing.x6),
+            const _HeroWordCard(
               word: 'overfitting',
               phonetic: '/ˌəʊvəˈfɪtɪŋ/',
               pos: 'n.',
@@ -119,11 +121,14 @@ class TodayPage extends ConsumerWidget {
               domain: 'AI',
               level: 'C1',
             ),
-            SizedBox(height: AppSpacing.x5),
-            _StartLearningButton(),
-            SizedBox(height: AppSpacing.x6),
-            _StreakHeatmap(),
-            SizedBox(height: AppSpacing.x4),
+            const SizedBox(height: AppSpacing.x5),
+            const _StartLearningButton(),
+            const SizedBox(height: AppSpacing.x6),
+            _StreakHeatmap(
+              last7: stats.last7Days,
+              reviewsToday: stats.reviewsToday,
+            ),
+            const SizedBox(height: AppSpacing.x4),
           ],
         ),
       ),
@@ -132,16 +137,18 @@ class TodayPage extends ConsumerWidget {
 }
 
 class _Greeting extends StatelessWidget {
-  const _Greeting();
+  final int newToday;
+  final int streak;
+  const _Greeting({required this.newToday, required this.streak});
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Expanded(
+        Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'Hi, 极客 👋',
                 style: TextStyle(
                   fontSize: 14,
@@ -149,10 +156,12 @@ class _Greeting extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(height: 2),
+              const SizedBox(height: 2),
               Text(
-                '今天学 12 个新词',
-                style: TextStyle(
+                newToday == 0
+                    ? '今天还没学,开始吧'
+                    : '今天学了 $newToday 个新词',
+                style: const TextStyle(
                   fontSize: 22,
                   color: AppColors.ink,
                   fontWeight: FontWeight.w700,
@@ -171,15 +180,15 @@ class _Greeting extends StatelessWidget {
             color: AppColors.warning.withValues(alpha: 0.12),
             borderRadius: BorderRadius.circular(AppRadii.pill),
           ),
-          child: const Row(
+          child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.local_fire_department,
+              const Icon(Icons.local_fire_department,
                   size: 16, color: AppColors.warning),
-              SizedBox(width: 4),
+              const SizedBox(width: 4),
               Text(
-                '连续 7 天',
-                style: TextStyle(
+                streak == 0 ? '开始' : '连续 $streak 天',
+                style: const TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
                   color: AppColors.warning,
@@ -193,36 +202,36 @@ class _Greeting extends StatelessWidget {
   }
 }
 
-class _TodaySummary extends ConsumerWidget {
-  const _TodaySummary();
+class _TodaySummary extends StatelessWidget {
+  final ReviewStats stats;
+  const _TodaySummary({required this.stats});
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    // Final cell is a derived stat from the in-memory review state.
+  Widget build(BuildContext context) {
     return AppCard(
       child: Row(
-        children: const [
+        children: [
           Expanded(
             child: _SummaryCell(
               label: '新词',
-              value: '12',
+              value: '${stats.newToday}',
               icon: Icons.auto_awesome,
               color: AppColors.primary,
             ),
           ),
-          _Divider(),
+          const _Divider(),
           Expanded(
             child: _SummaryCell(
               label: '待复习',
-              value: '8',
+              value: '${stats.totalDue}',
               icon: Icons.refresh,
               color: AppColors.info,
             ),
           ),
-          _Divider(),
+          const _Divider(),
           Expanded(
             child: _SummaryCell(
               label: '已掌握',
-              value: '247',
+              value: '${stats.totalLearned}',
               icon: Icons.check_circle_outline,
               color: AppColors.success,
             ),
@@ -373,18 +382,39 @@ class _StartLearningButton extends StatelessWidget {
 }
 
 class _StreakHeatmap extends StatelessWidget {
-  const _StreakHeatmap();
+  final List<int> last7; // 7 days, oldest → today
+  final int reviewsToday;
+  const _StreakHeatmap({required this.last7, required this.reviewsToday});
+
+  /// Map a raw review count to a heat level (0..3).
+  /// 0: none, 1: 1-5, 2: 6-15, 3: 16+.
+  int _heatLevel(int n) {
+    if (n <= 0) return 0;
+    if (n <= 5) return 1;
+    if (n <= 15) return 2;
+    return 3;
+  }
+
   @override
   Widget build(BuildContext context) {
-    const days = ['一', '二', '三', '四', '五', '六', '日'];
-    const activity = [3, 2, 1, 3, 3, 2, 0];
+    // Translate "today" back into Mon..Sun for the day labels.
+    final now = DateTime.now();
+    final mondayBasedToday = (now.weekday == DateTime.sunday) ? 6 : now.weekday - 1;
+    final dayLabels = List<String>.generate(7, (i) {
+      // i=0 is 6 days ago. Shift forward by `mondayBasedToday` to land on today.
+      final idx = (i + mondayBasedToday) % 7;
+      return const ['一', '二', '三', '四', '五', '六', '日'][idx];
+    });
+
+    final totalThisWeek = last7.fold<int>(0, (a, b) => a + b);
+
     return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            children: const [
-              Text(
+            children: [
+              const Text(
                 '本周学习',
                 style: TextStyle(
                   fontSize: 15,
@@ -392,10 +422,12 @@ class _StreakHeatmap extends StatelessWidget {
                   color: AppColors.ink,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
-                '已学 14 / 20 词',
-                style: TextStyle(
+                totalThisWeek == 0
+                    ? '本周还没学'
+                    : '本周 $totalThisWeek 次答题 · 今日 $reviewsToday',
+                style: const TextStyle(
                   fontSize: 12,
                   color: AppColors.inkMuted,
                   fontWeight: FontWeight.w500,
@@ -406,7 +438,8 @@ class _StreakHeatmap extends StatelessWidget {
           const SizedBox(height: AppSpacing.x4),
           Row(
             children: List.generate(7, (i) {
-              final level = activity[i];
+              final n = i < last7.length ? last7[i] : 0;
+              final level = _heatLevel(n);
               final color = switch (level) {
                 0 => AppColors.surfaceMuted,
                 1 => AppColors.primary.withValues(alpha: 0.3),
@@ -427,7 +460,7 @@ class _StreakHeatmap extends StatelessWidget {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        days[i],
+                        dayLabels[i],
                         style: const TextStyle(
                           fontSize: 11,
                           color: AppColors.inkMuted,
