@@ -102,4 +102,13 @@ void main() {
       expect(row.coverage, 0);
     }
   });
+
+  test('Session phase has no feedback phase (asking → wrongDetail is a direct transition)', () {
+    // v0.4.0 had a 'feedback' phase that the user complained was redundant.
+    // v0.4.1+ removed it — correct answers go directly asking → asking
+    // (next question), wrong answers go asking → wrongDetail.
+    final names = SessionPhase.values.map((p) => p.name).toList();
+    expect(names, isNot(contains('feedback')),
+        reason: 'No standalone feedback phase — should be removed');
+  });
 }

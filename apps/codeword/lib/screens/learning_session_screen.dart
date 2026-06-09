@@ -68,17 +68,35 @@ class _LearningSessionScreenState
         ),
       ),
       body: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 240),
+        // 320ms is long enough to feel intentional, short enough to not
+        // feel slow. Both curves are easeOutCubic — the previous
+        // easeInCubic on the OUT side was a bug (it made the outgoing
+        // widget start slow and end fast, which reads as a glitch).
+        duration: const Duration(milliseconds: 320),
         switchInCurve: Curves.easeOutCubic,
-        switchOutCurve: Curves.easeInCubic,
+        switchOutCurve: Curves.easeOutCubic,
+        // Stack both children with the larger one's size, so the
+        // layout doesn't snap when the wrong detail view is taller
+        // than the asking view (or vice versa).
+        layoutBuilder: (currentChild, previousChildren) {
+          return Stack(
+            alignment: Alignment.topCenter,
+            children: <Widget>[
+              ...previousChildren,
+              ?currentChild,
+            ],
+          );
+        },
         transitionBuilder: (child, anim) {
-          final slide = Tween<Offset>(
-            begin: const Offset(0.06, 0),
-            end: Offset.zero,
-          ).animate(anim);
+          // Cross-fade + a tiny upward scale lift (0.985 → 1.0). The
+          // previous horizontal slide felt like a UI bug; vertical
+          // intent reads as "drilling into the word".
           return FadeTransition(
             opacity: anim,
-            child: SlideTransition(position: slide, child: child),
+            child: ScaleTransition(
+              scale: Tween<double>(begin: 0.985, end: 1.0).animate(anim),
+              child: child,
+            ),
           );
         },
         child: KeyedSubtree(
