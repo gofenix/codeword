@@ -371,45 +371,54 @@ class _HeroWordDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppCard(
-      padding: const EdgeInsets.all(AppSpacing.x5),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              PillTag.domain(word.domain.toUpperCase(), color: _domainColor(word.domain), icon: Icons.bolt),
-              const SizedBox(width: 6),
-              PillTag.level(word.level),
-            ],
-          ),
-          const SizedBox(height: AppSpacing.x4),
-          Row(
-            children: [
-              Expanded(
-                child: Text(word.word, style: AppTheme.wordDisplay(size: 28)),
-              ),
-              _AudioButton(word: word),
-            ],
-          ),
-          const SizedBox(height: 2),
-          Text('${word.phonetic}  ${word.pos}', style: AppTheme.phonetic()),
-          const SizedBox(height: AppSpacing.x4),
-          Text(word.translation, style: const TextStyle(fontSize: 16, color: AppColors.ink, fontWeight: FontWeight.w600, height: 1.5)),
-          if (word.exampleEn.isNotEmpty) ...[
+    return SizedBox(
+      // Force the card to stretch the full width of the parent.
+      // Without this, the card sizes to its content's intrinsic width
+      // (the Row with Expanded inside Column(crossAxis: start) can't
+      // resolve a width, so the whole card collapses to fit just the
+      // audio button + the non-Expanded text) — which made the wrong-
+      // detail card appear pinned to the left edge.
+      width: double.infinity,
+      child: AppCard(
+        padding: const EdgeInsets.all(AppSpacing.x5),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                PillTag.domain(word.domain.toUpperCase(), color: _domainColor(word.domain), icon: Icons.bolt),
+                const SizedBox(width: 6),
+                PillTag.level(word.level),
+              ],
+            ),
             const SizedBox(height: AppSpacing.x4),
-            _DetailRow(label: '例句', content: word.exampleEn),
-            Text(word.exampleCn, style: const TextStyle(fontSize: 13, color: AppColors.inkMuted, height: 1.5)),
+            Row(
+              children: [
+                Expanded(
+                  child: Text(word.word, style: AppTheme.wordDisplay(size: 28)),
+                ),
+                _AudioButton(word: word),
+              ],
+            ),
+            const SizedBox(height: 2),
+            Text('${word.phonetic}  ${word.pos}', style: AppTheme.phonetic()),
+            const SizedBox(height: AppSpacing.x4),
+            Text(word.translation, style: const TextStyle(fontSize: 16, color: AppColors.ink, fontWeight: FontWeight.w600, height: 1.5)),
+            if (word.exampleEn.isNotEmpty) ...[
+              const SizedBox(height: AppSpacing.x4),
+              _DetailRow(label: '例句', content: word.exampleEn),
+              Text(word.exampleCn, style: const TextStyle(fontSize: 13, color: AppColors.inkMuted, height: 1.5)),
+            ],
+            if (word.synonyms.isNotEmpty) ...[
+              const SizedBox(height: AppSpacing.x3),
+              _DetailRow(label: '同义', content: word.synonyms.join(' · ')),
+            ],
+            if (word.antonyms.isNotEmpty) ...[
+              const SizedBox(height: AppSpacing.x2),
+              _DetailRow(label: '反义', content: word.antonyms.join(' · ')),
+            ],
           ],
-          if (word.synonyms.isNotEmpty) ...[
-            const SizedBox(height: AppSpacing.x3),
-            _DetailRow(label: '同义', content: word.synonyms.join(' · ')),
-          ],
-          if (word.antonyms.isNotEmpty) ...[
-            const SizedBox(height: AppSpacing.x2),
-            _DetailRow(label: '反义', content: word.antonyms.join(' · ')),
-          ],
-        ],
+        ),
       ),
     );
   }
@@ -520,21 +529,24 @@ class _QuestionPrompt extends StatelessWidget {
       QuestionType.listenPickMeaning => '听音选义',
       QuestionType.seeContextPickWord => '语境选词',
     };
-    return AppCard(
-      padding: const EdgeInsets.fromLTRB(AppSpacing.x5, AppSpacing.x4, AppSpacing.x5, AppSpacing.x5),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.inkMuted, letterSpacing: 1.2)),
-              Text('${currentIndex + 1} / $questionCount', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.inkMuted)),
-            ],
-          ),
-          const SizedBox(height: AppSpacing.x4),
-          _promptContent(),
-        ],
+    return SizedBox(
+      width: double.infinity,
+      child: AppCard(
+        padding: const EdgeInsets.fromLTRB(AppSpacing.x5, AppSpacing.x4, AppSpacing.x5, AppSpacing.x5),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.inkMuted, letterSpacing: 1.2)),
+                Text('${currentIndex + 1} / $questionCount', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.inkMuted)),
+              ],
+            ),
+            const SizedBox(height: AppSpacing.x4),
+            _promptContent(),
+          ],
+        ),
       ),
     );
   }
