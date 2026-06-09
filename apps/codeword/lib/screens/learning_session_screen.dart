@@ -67,9 +67,6 @@ class _LearningSessionScreenState
     final meta = ref.watch(vocabMetaProvider)[widget.vocabId];
     final name = meta?.name ?? widget.vocabId;
 
-    // Progress lives OUTSIDE the AnimatedSwitcher so it's always
-    // rendered once. Otherwise a cross-fade between asking and
-    // wrongDetail would briefly stack two progress bars at 50%.
     final progress = session.phase == SessionPhase.finished
         ? 1.0
         : (session.phase == SessionPhase.wrongDetail
@@ -94,36 +91,17 @@ class _LearningSessionScreenState
             child: _ProgressBar(progress: progress),
           ),
           Expanded(
-            child: AnimatedSwitcher(
-              duration: const Duration(milliseconds: 220),
-              switchInCurve: Curves.easeOutCubic,
-              switchOutCurve: Curves.easeInCubic,
-              transitionBuilder: (child, animation) {
-                final offset = Tween<Offset>(
-                  begin: const Offset(0.08, 0),
-                  end: Offset.zero,
-                ).animate(animation);
-                return SlideTransition(position: offset, child: child);
-              },
-              child: switch (session.phase) {
-                SessionPhase.loading =>
-                  const Center(key: ValueKey('loading'), child: CircularProgressIndicator()),
-                SessionPhase.asking => _AskingView(
-                    key: ValueKey('asking_${session.currentIndex}'),
-                    session: session,
-                  ),
-                SessionPhase.wrongDetail => _WrongDetailView(
-                    key: ValueKey('wrong_${session.currentIndex}'),
-                    session: session,
-                  ),
-                SessionPhase.finished => _FinishedView(
-                    key: const ValueKey('finished'),
-                    total: session.questions.length,
-                    correct: session.correctCount,
-                    onClose: () => Navigator.of(context).pop(),
-                  ),
-              },
-            ),
+            child: switch (session.phase) {
+              SessionPhase.loading =>
+                const Center(child: CircularProgressIndicator()),
+              SessionPhase.asking => _AskingView(session: session),
+              SessionPhase.wrongDetail => _WrongDetailView(session: session),
+              SessionPhase.finished => _FinishedView(
+                  total: session.questions.length,
+                  correct: session.correctCount,
+                  onClose: () => Navigator.of(context).pop(),
+                ),
+            },
           ),
         ],
       ),
@@ -133,7 +111,7 @@ class _LearningSessionScreenState
 
 class _AskingView extends ConsumerWidget {
   final LearningSessionState session;
-  const _AskingView({super.key, required this.session});
+  const _AskingView({required this.session});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -207,7 +185,7 @@ class _AskingView extends ConsumerWidget {
 
 class _WrongDetailView extends ConsumerStatefulWidget {
   final LearningSessionState session;
-  const _WrongDetailView({super.key, required this.session});
+  const _WrongDetailView({required this.session});
 
   @override
   ConsumerState<_WrongDetailView> createState() => _WrongDetailViewState();
@@ -721,20 +699,13 @@ class _ProgressBar extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 4),
-        // TweenAnimationBuilder smoothly tweens the bar from its previous
-        // value to the new one, so advancing a question feels fluid.
         ClipRRect(
           borderRadius: BorderRadius.circular(AppRadii.pill),
-          child: TweenAnimationBuilder<double>(
-            tween: Tween(begin: 0, end: progress),
-            duration: const Duration(milliseconds: 320),
-            curve: Curves.easeOutCubic,
-            builder: (context, v, _) => LinearProgressIndicator(
-              value: v,
-              minHeight: 6,
-              backgroundColor: AppColors.surfaceMuted,
-              valueColor: const AlwaysStoppedAnimation(AppColors.primary),
-            ),
+          child: LinearProgressIndicator(
+            value: progress,
+            minHeight: 6,
+            backgroundColor: AppColors.surfaceMuted,
+            valueColor: const AlwaysStoppedAnimation(AppColors.primary),
           ),
         ),
       ],
@@ -746,7 +717,7 @@ class _FinishedView extends ConsumerWidget {
   final int total;
   final int correct;
   final VoidCallback onClose;
-  const _FinishedView({super.key, required this.total, required this.correct, required this.onClose});
+  const _FinishedView({required this.total, required this.correct, required this.onClose});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
