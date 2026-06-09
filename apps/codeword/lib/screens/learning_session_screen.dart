@@ -169,14 +169,11 @@ class _AskingView extends ConsumerWidget {
                     label: String.fromCharCode(65 + i),
                     text: q.options[i],
                     onTap: () {
-                      // Stronger haptic on wrong, lighter on correct —
-                      // gives the user a tiny signal of their answer
-                      // even before the color change registers.
                       final correct = i == q.correctIndex;
-                      HapticFeedback.mediumImpact();
                       if (correct) {
-                        // Light feedback on correct (slight tap).
                         HapticFeedback.lightImpact();
+                      } else {
+                        HapticFeedback.heavyImpact();
                       }
                       notifier.answer(i);
                     },
@@ -242,7 +239,7 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
     final w = q.word;
     return SafeArea(
       child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(AppSpacing.x5, AppSpacing.x3, AppSpacing.x5, AppSpacing.x6),
+        padding: const EdgeInsets.fromLTRB(AppSpacing.x6, AppSpacing.x3, AppSpacing.x6, AppSpacing.x6),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
