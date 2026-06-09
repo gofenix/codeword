@@ -23,14 +23,33 @@ class LearningSessionScreen extends ConsumerStatefulWidget {
 
 class _LearningSessionScreenState
     extends ConsumerState<LearningSessionScreen> {
+  late DateTime _sessionStart;
+  Duration _accumulated = Duration.zero;
+
   @override
   void initState() {
     super.initState();
+    _sessionStart = DateTime.now();
     Future.microtask(() {
       ref
           .read(learningSessionProvider.notifier)
           .start(vocabId: widget.vocabId, count: widget.count);
     });
+  }
+
+  @override
+  void dispose() {
+    // Persist the accumulated study time for today. Minimum 1 minute
+    // granularity — anything less rounds to 0.
+    _accumulated += DateTime.now().difference(_sessionStart);
+    final minutes = (_accumulated.inSeconds / 60).round();
+    if (minutes > 0) {
+      try {
+        ReviewRepository.instance
+            .addStudyMinutes(DateTime.now(), minutes);
+      } catch (_) {}
+    }
+    super.dispose();
   }
 
   @override
@@ -131,13 +150,58 @@ class _AskingView extends ConsumerWidget {
 }
 
 
-class _WrongDetailView extends ConsumerWidget {
+class _WrongDetailView extends ConsumerStatefulWidget {
   final LearningSessionState session;
   const _WrongDetailView({required this.session});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final q = session.currentQuestion!;
+  ConsumerState<_WrongDetailView> createState() => _WrongDetailViewState();
+}
+
+class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
+  bool _isFavorite = false;
+
+  @override
+  void initState() {
+    super.initState();
+    // Read the persisted favorite state for this word.
+    try {
+      _isFavorite =
+          ReviewRepository.instance.favorites.contains(widget.session.currentQuestion!.word.id);
+    } catch (_) {}
+  }
+
+  Future<void> _toggleFavorite() async {
+    final wordId = widget.session.currentQuestion!.word.id;
+    bool nowFav;
+    try {
+      nowFav = await ReviewRepository.instance.toggleFavorite(wordId);
+    } catch (_) {
+      nowFav = !_isFavorite;
+    }
+    if (mounted) setState(() => _isFavorite = nowFav);
+  }
+
+  Future<void> _markRemoved() async {
+    final wordId = widget.session.currentQuestion!.word.id;
+    try {
+      await ReviewRepository.instance.markRemoved(wordId);
+    } catch (_) {}
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('已从词库移除（仅影响统计）'),
+          duration: Duration(seconds: 2),
+        ),
+      );
+      // Skip to the next question immediately.
+      ref.read(learningSessionProvider.notifier).next();
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final q = widget.session.currentQuestion!;
     final w = q.word;
     return SafeArea(
       child: SingleChildScrollView(
@@ -145,13 +209,27 @@ class _WrongDetailView extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _ProgressBar(progress: (session.currentIndex + 1) / session.questions.length),
+            _ProgressBar(progress: (widget.session.currentIndex + 1) / widget.session.questions.length),
             const SizedBox(height: AppSpacing.x2),
             Row(
               children: [
                 const Icon(Icons.cancel_rounded, color: AppColors.danger, size: 20),
                 const SizedBox(width: 6),
                 const Text('答错了', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.danger)),
+                const Spacer(),
+                _SmallIconButton(
+                  icon: _isFavorite ? Icons.star_rounded : Icons.star_outline_rounded,
+                  label: _isFavorite ? '已收藏' : '收藏',
+                  color: _isFavorite ? AppColors.warning : AppColors.inkMuted,
+                  onTap: _toggleFavorite,
+                ),
+                const SizedBox(width: 8),
+                _SmallIconButton(
+                  icon: Icons.remove_circle_outline,
+                  label: '移除',
+                  color: AppColors.danger,
+                  onTap: _markRemoved,
+                ),
               ],
             ),
             const SizedBox(height: AppSpacing.x4),
@@ -169,6 +247,51 @@ class _WrongDetailView extends ConsumerWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _SmallIconButton extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final Color color;
+  final VoidCallback onTap;
+  const _SmallIconButton({
+    required this.icon,
+    required this.label,
+    required this.color,
+    required this.onTap,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(AppRadii.pill),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+          decoration: BoxDecoration(
+            color: color.withValues(alpha: 0.12),
+            borderRadius: BorderRadius.circular(AppRadii.pill),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icon, size: 14, color: color),
+              const SizedBox(width: 4),
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 12,
+                  color: color,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

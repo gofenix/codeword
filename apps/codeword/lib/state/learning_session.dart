@@ -18,6 +18,65 @@ const List<String> kBuiltinVocabIds = [
   'product_core',
 ];
 
+/// Mastery bucket for the distribution chart.
+///
+/// Thresholds (from SM-2 easiness + repetitions):
+///   熟悉  : EF ≥ 2.5 AND reps ≥ 3   — well-known
+///   认识  : EF ≥ 2.3 AND reps ≥ 2   — recognized
+///   模糊  : EF ≥ 1.8 AND reps ≥ 1   — seen, shaky
+///   陌生  : state exists, reps == 0 — failed at least once
+///   待学习: no state at all         — not yet seen
+enum MasteryLevel {
+  familiar,
+  recognized,
+  vague,
+  unfamiliar,
+  unseen,
+}
+
+extension MasteryLevelX on MasteryLevel {
+  String get label => switch (this) {
+        MasteryLevel.familiar => '熟悉',
+        MasteryLevel.recognized => '认识',
+        MasteryLevel.vague => '模糊',
+        MasteryLevel.unfamiliar => '陌生',
+        MasteryLevel.unseen => '待学习',
+      };
+
+  int get rank => index; // higher rank = better mastery
+}
+
+class MasteryBucket {
+  final MasteryLevel level;
+  final int count;
+  const MasteryBucket({required this.level, required this.count});
+}
+
+/// Per-vocabulary progress, used in the stats page list.
+class VocabProgress {
+  final String vocabId;
+  final String name;
+  final String emoji;
+  final int totalWords; // words in the bundled JSON
+  final int seen; // words with a review state
+  final int learned; // words with repetitions >= 1
+  final int due; // words due for review
+  final double averageEasiness;
+
+  const VocabProgress({
+    required this.vocabId,
+    required this.name,
+    required this.emoji,
+    required this.totalWords,
+    required this.seen,
+    required this.learned,
+    required this.due,
+    required this.averageEasiness,
+  });
+
+  double get coverage => totalWords == 0 ? 0 : learned / totalWords;
+}
+
 /// Computed stats derived from the review state + activity log.
 class ReviewStats {
   final int totalSeen;
@@ -29,6 +88,18 @@ class ReviewStats {
   final List<int> last7Days; // length 7, index 6 = today
   final double averageEasiness;
 
+  // v0.4.7 additions:
+  final List<MasteryBucket> mastery; // 5 buckets, total seen + unseen
+  final List<VocabProgress> perVocab;
+  final int favorites; // count
+  final int removed; // count
+  final int openCountToday;
+  final int studyMinutesToday;
+  final int totalStudyMinutes;
+  final List<int> last30Days; // daily activity counts
+  final List<int> last30DaysMinutes; // daily study minutes
+  final List<bool> last90DaysActivity; // streak schedule booleans
+
   const ReviewStats({
     required this.totalSeen,
     required this.totalLearned,
@@ -38,7 +109,25 @@ class ReviewStats {
     required this.streakDays,
     required this.last7Days,
     required this.averageEasiness,
+    required this.mastery,
+    required this.perVocab,
+    required this.favorites,
+    required this.removed,
+    required this.openCountToday,
+    required this.studyMinutesToday,
+    required this.totalStudyMinutes,
+    required this.last30Days,
+    required this.last30DaysMinutes,
+    required this.last90DaysActivity,
   });
+
+  static const _emptyMastery = <MasteryBucket>[
+    MasteryBucket(level: MasteryLevel.familiar, count: 0),
+    MasteryBucket(level: MasteryLevel.recognized, count: 0),
+    MasteryBucket(level: MasteryLevel.vague, count: 0),
+    MasteryBucket(level: MasteryLevel.unfamiliar, count: 0),
+    MasteryBucket(level: MasteryLevel.unseen, count: 0),
+  ];
 
   static const empty = ReviewStats(
     totalSeen: 0,
@@ -49,7 +138,31 @@ class ReviewStats {
     streakDays: 0,
     last7Days: [0, 0, 0, 0, 0, 0, 0],
     averageEasiness: 0,
+    mastery: _emptyMastery,
+    perVocab: [],
+    favorites: 0,
+    removed: 0,
+    openCountToday: 0,
+    studyMinutesToday: 0,
+    totalStudyMinutes: 0,
+    last30Days: _emptyInt30,
+    last30DaysMinutes: _emptyInt30,
+    last90DaysActivity: _emptyBool90,
   );
+
+  static const _emptyInt30 = <int>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+  static const _emptyBool90 = <bool>[
+    false,false,false,false,false,false,false,false,false,
+    false,false,false,false,false,false,false,false,false,
+    false,false,false,false,false,false,false,false,false,
+    false,false,false,false,false,false,false,false,false,
+    false,false,false,false,false,false,false,false,false,
+    false,false,false,false,false,false,false,false,false,
+    false,false,false,false,false,false,false,false,false,
+    false,false,false,false,false,false,false,false,false,
+    false,false,false,false,false,false,false,false,false,
+    false,false,false,false,false,false,false,false,false,
+  ];
 }
 
 /// In-memory review state for every word the user has ever answered.
@@ -94,37 +207,21 @@ class ReviewStateNotifier
   /// persistence layer if initialized; otherwise returns zero stats.
   ReviewStats stats({DateTime? now}) {
     final at = now ?? DateTime.now();
-    if (state.isEmpty) {
-      // No review state yet. Still try to surface activity from disk
-      // (e.g. if the user had state, deleted the in-memory cache but
-      // the file persisted). In tests (no init), fall back to zeros.
-      int reviewsToday = 0;
-      int streak = 0;
-      List<int> last7 = const [0, 0, 0, 0, 0, 0, 0];
-      try {
-        final repo = ReviewRepository.instance;
-        reviewsToday = repo.activityOn(at);
-        streak = repo.streakDays(now: at);
-        last7 = repo.last7Days(now: at);
-      } catch (_) {}
-      return ReviewStats(
-        totalSeen: 0,
-        totalLearned: 0,
-        totalDue: 0,
-        newToday: 0,
-        reviewsToday: reviewsToday,
-        streakDays: streak,
-        last7Days: last7,
-        averageEasiness: 0,
-      );
-    }
     final today = DateTime(at.year, at.month, at.day);
     final tomorrow = today.add(const Duration(days: 1));
+
+    // First pass over in-memory state: count today, due, sum EF, per-vocab
+    // tallies, mastery distribution.
     int reviewsToday = 0;
     int newToday = 0;
     int due = 0;
     int sumEf = 0;
-    for (final s in state.values) {
+    final masteryCount = <MasteryLevel, int>{
+      for (final l in MasteryLevel.values) l: 0,
+    };
+    final perVocabStats = <String, _MutableVocabStats>{};
+
+    void accumulate(String vocabId, ReviewState s) {
       sumEf += s.easiness;
       if (s.dueAt != null && !s.dueAt!.isAfter(at)) due++;
       if (s.lastReviewedAt != null &&
@@ -133,21 +230,87 @@ class ReviewStateNotifier
         reviewsToday++;
         if (s.repetitions == 1) newToday++;
       }
+      final ef = s.easiness / 100.0;
+      final bucket = _classify(ef, s.repetitions);
+      masteryCount[bucket] = (masteryCount[bucket] ?? 0) + 1;
+      final v = perVocabStats.putIfAbsent(
+          vocabId, () => _MutableVocabStats());
+      v.seen++;
+      v.sumEf += s.easiness;
+      if (s.repetitions >= 1) v.learned++;
+      if (s.dueAt != null && !s.dueAt!.isAfter(at)) v.due++;
     }
+
+    for (final entry in state.entries) {
+      // We don't know the vocabId here — but vocab is encoded in the
+      // wordId prefix (e.g. 'ai_001' → 'ai_core'). Split on the first
+      // underscore to recover the vocab.
+      final vocabId = _vocabIdFromWordId(entry.key);
+      accumulate(vocabId, entry.value);
+    }
+
     final avg = state.isEmpty ? 0.0 : sumEf / state.length / 100.0;
 
-    // Activity / streak comes from the persistence layer. In tests (and
-    // any pre-init code path) it isn't initialized, so we fall back to
-    // zeros for those fields while still reporting the live state.
+    // Activity / favorites / minutes / streak come from the persistence
+    // layer. In tests (and any pre-init code path) it isn't initialized,
+    // so we fall back to zeros for those fields while still reporting
+    // the live state.
     int streak = 0;
     List<int> last7 = const [0, 0, 0, 0, 0, 0, 0];
+    List<int> last30 = const [];
+    List<int> last30Min = const [];
+    List<bool> last90 = const [];
+    int favs = 0;
+    int removed = 0;
+    int opensToday = 0;
+    int minsToday = 0;
+    int totalMins = 0;
     try {
       final repo = ReviewRepository.instance;
       streak = repo.streakDays(now: at);
       last7 = repo.last7Days(now: at);
+      last30 = repo.last30Days(now: at);
+      last30Min = repo.last30DaysMinutes(now: at);
+      last90 = repo.last90DaysActivity(now: at);
+      favs = repo.favorites.length;
+      removed = repo.removed.length;
+      opensToday = repo.openCountOn(at);
+      minsToday = repo.studyMinutesOn(at);
+      totalMins = repo.totalStudyMinutes;
     } catch (_) {
-      // Repository not initialized (test env, pre-init). Use zeros.
+      // Repository not initialized (test env). Use zeros / empty.
     }
+
+    // Unseen bucket = every bundled word that has no review state yet.
+    // We approximate by counting bundled words across all built-in vocabs
+    // and subtracting the seen count for each.
+    final meta = kBuiltinLists; // synchronous; no asset load needed
+    final perVocabOut = <VocabProgress>[];
+    for (final list in meta) {
+      final total = list.wordCount;
+      // We don't know the actual bundled word count without loading
+      // the asset; wordCount from kBuiltinLists is the target count.
+      // Treat the in-memory `seen` as authoritative.
+      final m = perVocabStats[list.id] ?? _MutableVocabStats();
+      // If we've never seen any word in this vocab, the in-memory
+      // stats don't exist; the user just hasn't started it.
+      masteryCount[MasteryLevel.unseen] =
+          (masteryCount[MasteryLevel.unseen] ?? 0) + (total - m.seen);
+      perVocabOut.add(VocabProgress(
+        vocabId: list.id,
+        name: list.name,
+        emoji: list.emoji,
+        totalWords: total,
+        seen: m.seen,
+        learned: m.learned,
+        due: m.due,
+        averageEasiness: m.seen == 0 ? 0 : m.sumEf / m.seen / 100.0,
+      ));
+    }
+    final mastery = <MasteryBucket>[
+      for (final l in MasteryLevel.values)
+        MasteryBucket(level: l, count: masteryCount[l] ?? 0),
+    ];
 
     return ReviewStats(
       totalSeen: state.length,
@@ -158,8 +321,66 @@ class ReviewStateNotifier
       streakDays: streak,
       last7Days: last7,
       averageEasiness: avg,
+      mastery: mastery,
+      perVocab: perVocabOut,
+      favorites: favs,
+      removed: removed,
+      openCountToday: opensToday,
+      studyMinutesToday: minsToday,
+      totalStudyMinutes: totalMins,
+      last30Days: last30.isEmpty ? List<int>.filled(30, 0) : last30,
+      last30DaysMinutes: last30Min.isEmpty ? List<int>.filled(30, 0) : last30Min,
+      last90DaysActivity: last90.isEmpty ? List<bool>.filled(90, false) : last90,
     );
   }
+
+  /// Classify a word's review state into a mastery bucket.
+  static MasteryLevel _classify(double ef, int reps) {
+    if (reps == 0) return MasteryLevel.unfamiliar;
+    if (ef >= 2.5 && reps >= 3) return MasteryLevel.familiar;
+    if (ef >= 2.3 && reps >= 2) return MasteryLevel.recognized;
+    if (ef >= 1.8 && reps >= 1) return MasteryLevel.vague;
+    return MasteryLevel.unfamiliar;
+  }
+
+  /// Recover the vocab id from a word id. The convention used in the
+  /// bundled JSONs is `<domain>_<index>` (e.g. `ai_001`, `cs_042`).
+  static String _vocabIdFromWordId(String wid) {
+    final idx = wid.lastIndexOf('_');
+    if (idx <= 0) return wid;
+    final prefix = wid.substring(0, idx);
+    // Map known prefixes to built-in vocab ids.
+    switch (prefix) {
+      case 'ai':
+        return 'ai_core';
+      case 'cs':
+        return 'cs_core';
+      case 'py':
+        return 'python_core';
+      case 'web':
+        return 'web_core';
+      case 'llm':
+        return 'llm_core';
+      case 'devops':
+        return 'devops_core';
+      case 'data':
+        return 'data_core';
+      case 'sec':
+        return 'security_core';
+      case 'prod':
+        return 'product_core';
+      default:
+        // Fallback: use the prefix as the vocab id.
+        return '${prefix}_core';
+    }
+  }
+}
+
+class _MutableVocabStats {
+  int seen = 0;
+  int learned = 0;
+  int due = 0;
+  int sumEf = 0;
 }
 
 /// Lazy-loaded vocabulary content cache. Loads JSON on first request.

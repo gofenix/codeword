@@ -13,6 +13,9 @@ import 'state/learning_session.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ReviewRepository.init();
+  try {
+    await ReviewRepository.instance.recordOpen(DateTime.now());
+  } catch (_) {}
   runApp(const ProviderScope(child: CodewordApp()));
 }
 

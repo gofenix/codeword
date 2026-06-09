@@ -87,4 +87,33 @@ void main() {
     // it due immediately. We just verify totalDue is non-negative.
     expect(notifier.totalDue, greaterThanOrEqualTo(0));
   });
+
+  test('Mastery distribution places words in the right buckets', () {
+    final notifier = ReviewStateNotifier();
+    final now = DateTime(2026, 6, 8, 14);
+    // One word, 5 consecutive easy reps → reps=5, ef≈2.5 → familiar
+    for (var i = 0; i < 5; i++) {
+      notifier.recordAnswer(
+        wordId: 'a_001',
+        quality: 5,
+        now: now.add(Duration(days: i)),
+      );
+    }
+    final s = notifier.stats(now: now.add(const Duration(days: 5)));
+    final familiar = s.mastery.firstWhere((b) => b.level == MasteryLevel.familiar).count;
+    expect(familiar, 1,
+        reason: 'Word with 5 easy reps + ef~2.5 should land in familiar');
+  });
+
+  test('Per-vocab progress surfaces built-in vocabs even with 0 progress', () {
+    final notifier = ReviewStateNotifier();
+    final s = notifier.stats();
+    // We have 9 built-in vocabs, all empty for a fresh notifier.
+    expect(s.perVocab.length, greaterThanOrEqualTo(9));
+    for (final row in s.perVocab) {
+      expect(row.totalWords, greaterThan(0));
+      expect(row.learned, 0);
+      expect(row.coverage, 0);
+    }
+  });
 }

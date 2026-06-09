@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_ui/lib_ui.dart';
 
 import '../state/learning_session.dart';
+import 'stats_widgets.dart';
 
 class StatsScreen extends ConsumerWidget {
   const StatsScreen({super.key});
@@ -43,6 +44,8 @@ class StatsScreen extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: AppSpacing.x5),
+
+            // 1) Top-line overview (existing, but smaller now).
             AppCard(
               child: Row(
                 children: [
@@ -53,11 +56,7 @@ class StatsScreen extends ConsumerWidget {
                       color: AppColors.primary,
                     ),
                   ),
-                  Container(
-                    width: 1,
-                    height: 36,
-                    color: AppColors.inkSubtle.withValues(alpha: 0.2),
-                  ),
+                  _vDiv(),
                   Expanded(
                     child: _Stat(
                       label: '看过',
@@ -65,11 +64,7 @@ class StatsScreen extends ConsumerWidget {
                       color: AppColors.info,
                     ),
                   ),
-                  Container(
-                    width: 1,
-                    height: 36,
-                    color: AppColors.inkSubtle.withValues(alpha: 0.2),
-                  ),
+                  _vDiv(),
                   Expanded(
                     child: _Stat(
                       label: '平均 EF',
@@ -82,57 +77,77 @@ class StatsScreen extends ConsumerWidget {
                 ],
               ),
             ),
-            const SizedBox(height: AppSpacing.x5),
+
+            const SizedBox(height: AppSpacing.x4),
+
+            // 2) Mastery distribution
+            MasteryDistribution(buckets: stats.mastery),
+
+            const SizedBox(height: AppSpacing.x4),
+
+            // 3) Per-vocab progress
+            VocabProgressList(rows: stats.perVocab),
+
+            const SizedBox(height: AppSpacing.x4),
+
+            // 4) Today snapshot (6 cells)
+            TodayActivityGrid(
+              reviews: stats.reviewsToday,
+              newWords: stats.newToday,
+              favorites: stats.favorites,
+              removed: stats.removed,
+              minutes: stats.studyMinutesToday,
+              opens: stats.openCountToday,
+            ),
+
+            const SizedBox(height: AppSpacing.x4),
+
+            // 5) Streak schedule
+            StreakSchedule(activity: stats.last90DaysActivity),
+
+            const SizedBox(height: AppSpacing.x4),
+
+            // 6) Daily trends
+            DailyTrendsChart(daily: stats.last30Days),
+
+            const SizedBox(height: AppSpacing.x4),
+
+            // 7) Daily study time
+            DailyStudyTimeChart(minutes: stats.last30DaysMinutes),
+
+            const SizedBox(height: AppSpacing.x4),
+
+            // 8) Cumulative / changelog
             AppCard(
+              padding: const EdgeInsets.all(AppSpacing.x5),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
                       const Text(
-                        '本周热力',
+                        '累计',
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 12,
+                          color: AppColors.inkMuted,
                           fontWeight: FontWeight.w700,
-                          color: AppColors.ink,
+                          letterSpacing: 1.2,
                         ),
                       ),
                       const Spacer(),
                       Text(
-                        stats.totalSeen == 0
-                            ? '还没数据'
-                            : '本周 ${_sum(stats.last7Days)} 次答题',
+                        '共 ${stats.totalStudyMinutes} 分钟',
                         style: const TextStyle(
                           fontSize: 12,
                           color: AppColors.inkMuted,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: AppSpacing.x4),
-                  _Heatmap(activity: stats.last7Days),
-                ],
-              ),
-            ),
-            const SizedBox(height: AppSpacing.x5),
-            AppCard(
-              padding: const EdgeInsets.all(AppSpacing.x5),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'v0.4.6 · 本期',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: AppColors.inkMuted,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 1.2,
-                    ),
-                  ),
                   const SizedBox(height: AppSpacing.x2),
                   const Text(
-                    '✅ 真实统计 · 5 词库 500 词\n✅ 本地预生成 OGG 发音\n✅ SM-2 间隔重复 + JSON 持久化\n✅ macOS + Android 双端\n✅ 本地-first 原则(无云/无登录/无同步)',
+                    '✅ 真实统计 · 5 词库 500 词\n✅ 本地预生成 OGG 发音\n✅ 掌握分布 / 词库进度 / Daily Trends\n✅ 学习分钟 + 打开次数 (v0.4.7)\n✅ macOS + Android 双端\n✅ 本地-first 原则 (无云/无登录/无同步)',
                     style: TextStyle(
                       fontSize: 13,
                       color: AppColors.ink,
@@ -149,7 +164,11 @@ class StatsScreen extends ConsumerWidget {
     );
   }
 
-  int _sum(List<int> xs) => xs.fold(0, (a, b) => a + b);
+  Widget _vDiv() => Container(
+        width: 1,
+        height: 36,
+        color: AppColors.inkSubtle.withValues(alpha: 0.2),
+      );
 }
 
 class _Stat extends StatelessWidget {
@@ -182,65 +201,6 @@ class _Stat extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class _Heatmap extends StatelessWidget {
-  final List<int> activity; // 7 days, oldest → today
-  const _Heatmap({required this.activity});
-
-  int _heatLevel(int n) {
-    if (n <= 0) return 0;
-    if (n <= 5) return 1;
-    if (n <= 15) return 2;
-    return 3;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final now = DateTime.now();
-    final mondayBasedToday =
-        (now.weekday == DateTime.sunday) ? 6 : now.weekday - 1;
-    final dayLabels = List<String>.generate(7, (i) {
-      final idx = (i + mondayBasedToday) % 7;
-      return const ['一', '二', '三', '四', '五', '六', '日'][idx];
-    });
-    return Row(
-      children: List.generate(7, (i) {
-        final n = i < activity.length ? activity[i] : 0;
-        final level = _heatLevel(n);
-        final color = switch (level) {
-          0 => AppColors.surfaceMuted,
-          1 => AppColors.primary.withValues(alpha: 0.3),
-          2 => AppColors.primary.withValues(alpha: 0.6),
-          _ => AppColors.primary,
-        };
-        return Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 3),
-            child: Column(
-              children: [
-                Container(
-                  height: 36,
-                  decoration: BoxDecoration(
-                    color: color,
-                    borderRadius: BorderRadius.circular(AppRadii.sm),
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  dayLabels[i],
-                  style: const TextStyle(
-                    fontSize: 11,
-                    color: AppColors.inkMuted,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      }),
     );
   }
 }
