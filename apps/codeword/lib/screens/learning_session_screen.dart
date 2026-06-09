@@ -89,47 +89,24 @@ class _LearningSessionScreenState
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x5, AppSpacing.x3, AppSpacing.x5, AppSpacing.x4,
+              AppSpacing.x6, AppSpacing.x3, AppSpacing.x6, AppSpacing.x4,
             ),
             child: _ProgressBar(progress: progress),
           ),
           Expanded(
-            child: AnimatedSwitcher(
-              // Push-from-right: old slides LEFT, new slides in from
-              // RIGHT. No cross-fade — keeps the body crisp and the
-              // shared progress bar never has a visual twin.
-              duration: const Duration(milliseconds: 240),
-              switchInCurve: Curves.easeOutCubic,
-              switchOutCurve: Curves.easeOutCubic,
-              transitionBuilder: (child, anim) {
-                return SlideTransition(
-                  position: Tween<Offset>(
-                    begin: const Offset(0.08, 0),
-                    end: Offset.zero,
-                  ).animate(anim),
-                  child: SlideTransition(
-                    position: Tween<Offset>(
-                      begin: Offset.zero,
-                      end: const Offset(-0.08, 0),
-                    ).animate(anim),
-                    child: child,
+            child: _PushSwitcher(
+              phase: session.phase,
+              child: switch (session.phase) {
+                SessionPhase.loading =>
+                  const Center(child: CircularProgressIndicator()),
+                SessionPhase.asking => _AskingView(session: session),
+                SessionPhase.wrongDetail => _WrongDetailView(session: session),
+                SessionPhase.finished => _FinishedView(
+                    total: session.questions.length,
+                    correct: session.correctCount,
+                    onClose: () => Navigator.of(context).pop(),
                   ),
-                );
               },
-              child: KeyedSubtree(
-                key: ValueKey(session.phase),
-                child: switch (session.phase) {
-                  SessionPhase.loading =>
-                    const Center(child: CircularProgressIndicator()),
-                  SessionPhase.asking => _AskingView(session: session),
-                  SessionPhase.wrongDetail => _WrongDetailView(session: session),
-                  SessionPhase.finished => _FinishedView(
-                      total: session.questions.length,
-                      correct: session.correctCount,
-                      onClose: () => Navigator.of(context).pop(),
-                    ),
-                },
-              ),
             ),
           ),
         ],
@@ -157,7 +134,7 @@ class _AskingView extends ConsumerWidget {
           // anchored to the bottom regardless of prompt length.
           Expanded(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x5),
+              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -182,7 +159,7 @@ class _AskingView extends ConsumerWidget {
           // user's tap position stays consistent (good for muscle memory).
           Padding(
             padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x5, AppSpacing.x3, AppSpacing.x5, AppSpacing.x5,
+              AppSpacing.x6, AppSpacing.x3, AppSpacing.x6, AppSpacing.x5,
             ),
               child: Column(
               children: [
@@ -768,6 +745,106 @@ class _FinishedView extends ConsumerWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// Custom push transition. AnimatedSwitcher's default fades the outgoing
+/// widget (which is what was making the "wrong" → "detail" transition
+/// look like a fade). Here we do a clean push:
+///
+///   1. New child slides in from the right (+0.12 → 0)
+///   2. Old child slides out to the left    (0 → -0.12)
+///   3. No opacity change. No fade.
+///
+/// 200ms easeOutCubic — punchy but not rushed.
+class _PushSwitcher extends StatefulWidget {
+  final SessionPhase phase;
+  final Widget child;
+  const _PushSwitcher({required this.phase, required this.child});
+
+  @override
+  State<_PushSwitcher> createState() => _PushSwitcherState();
+}
+
+class _PushSwitcherState extends State<_PushSwitcher>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+  SessionPhase? _fromPhase;
+  Widget? _fromChild;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 200),
+    );
+  }
+
+  @override
+  void didUpdateWidget(covariant _PushSwitcher old) {
+    super.didUpdateWidget(old);
+    if (old.phase != widget.phase) {
+      // Capture the outgoing child + its phase, then animate.
+      setState(() {
+        _fromPhase = old.phase;
+        _fromChild = old.child;
+      });
+      _controller
+        ..reset()
+        ..forward();
+    }
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final showOutgoing = _fromChild != null &&
+        _controller.value < 1.0 &&
+        _controller.isAnimating;
+
+    return ClipRect(
+      child: Stack(
+        children: [
+          // Incoming: slides from +0.12 (right) to 0.
+          AnimatedBuilder(
+            animation: _controller,
+            builder: (context, child) {
+              final t = _controller.value;
+              return Transform.translate(
+                offset: Offset(0.12 * (1.0 - t) * MediaQuery.of(context).size.width, 0),
+                child: child,
+              );
+            },
+            child: KeyedSubtree(
+              key: ValueKey('in_${widget.phase}'),
+              child: widget.child,
+            ),
+          ),
+          // Outgoing: slides from 0 to -0.12 (left).
+          if (showOutgoing && _fromChild != null)
+            AnimatedBuilder(
+              animation: _controller,
+              builder: (context, child) {
+                final t = _controller.value;
+                return Transform.translate(
+                  offset: Offset(-0.12 * t * MediaQuery.of(context).size.width, 0),
+                  child: child,
+                );
+              },
+              child: KeyedSubtree(
+                key: ValueKey('out_$_fromPhase'),
+                child: _fromChild!,
+              ),
+            ),
+        ],
       ),
     );
   }
