@@ -11,6 +11,12 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Local encrypted storage for BYOK (Keychain / EncryptedSharedPreferences)
+  flutter_secure_storage: ^9.2.2
+
+  # OpenAI-compatible LLM transport
+  http: ^1.2.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

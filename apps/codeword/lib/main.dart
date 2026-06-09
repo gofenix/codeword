@@ -8,6 +8,7 @@ import 'package:lib_ui/lib_ui.dart';
 import 'screens/learning_session_screen.dart';
 import 'screens/me_screen.dart';
 import 'screens/pulse_screen.dart';
+import 'screens/reading_screen.dart';
 import 'screens/stats_screen.dart';
 import 'state/learning_session.dart';
 
@@ -43,16 +44,13 @@ class HomeShell extends StatefulWidget {
 class _HomeShellState extends State<HomeShell> {
   int _index = 0;
 
-  // 5 tabs: 单词 (today/learning) | 阅读 (placeholder) | Pulse (daily digest)
-  // | 统计 | 我的. The 词库 lives inside 我的 (Section_VocabSection), and
-  // 复习 is intentionally removed — due-for-review words are folded into
-  // the learning flow itself (see [LearningSessionNotifier.start]).
+  // 5 tabs: 单词 (today/learning) | 阅读 (AI articles, BYOK) |
+  // Pulse (daily digest) | 统计 | 我的. The 词库 lives inside 我的
+  // (Section_VocabSection), and 复习 is intentionally removed — due-for-
+  // review words are folded into the learning flow itself.
   static const _pages = <Widget>[
     TodayPage(),       // 单词
-    _ComingSoonPage(  // 阅读 — AI-generated articles (BYOK, coming soon)
-      title: '阅读',
-      icon: Icons.menu_book_rounded,
-    ),
+    ReadingScreen(),   // 阅读 — AI 生成短文 (BYOK)
     PulseScreen(),     // Pulse — daily digest
     StatsScreen(),     // 统计
     MeScreen(),        // 我的 (词库 在这里)
@@ -106,8 +104,10 @@ class _HomeShellState extends State<HomeShell> {
   }
 }
 
-/// Placeholder for tabs that aren't built yet. Quiet, single-card
-/// layout — no "敬请期待" copy, no CTA, just a center icon.
+/// Placeholder for tabs that aren't built yet. Kept for future use
+/// when we add a 6th tab and want to gate it before content lands.
+/// (Currently unused — 5 tabs all have real content.)
+// ignore: unused_element
 class _ComingSoonPage extends StatelessWidget {
   final String title;
   final IconData icon;

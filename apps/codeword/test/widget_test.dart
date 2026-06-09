@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:lib_core/lib_core.dart';
 
 import 'package:codeword/main.dart';
 import 'package:codeword/state/learning_session.dart';
@@ -111,4 +112,197 @@ void main() {
     expect(names, isNot(contains('feedback')),
         reason: 'No standalone feedback phase — should be removed');
   });
+
+  // ----- LlmConfig / LlmClient ------------------------------------------------
+
+  test('LlmConfig.isConfigured is true only when all three fields are set', () {
+    expect(LlmConfig.empty.isConfigured, isFalse);
+    const partial = LlmConfig(baseUrl: 'a', apiKey: 'b', model: '');
+    expect(partial.isConfigured, isFalse);
+    const full = LlmConfig(baseUrl: 'a', apiKey: 'b', model: 'c');
+    expect(full.isConfigured, isTrue);
+  });
+
+  test('LlmConfig.maskedKey hides the middle of a long key', () {
+    const cfg = LlmConfig(
+      baseUrl: '',
+      apiKey: 'sk-aabbccddeeff001122334455',
+      model: '',
+    );
+    expect(cfg.maskedKey, 'sk-a…4455');
+    const short = LlmConfig(baseUrl: '', apiKey: 'short', model: '');
+    expect(short.maskedKey, '••••');
+  });
+
+  test('LlmClient builds the right URL for various base URL shapes', () {
+    // Probe via the public surface: construct a client and trigger a
+    // request with a transport that records the URL.
+    String? captured;
+    final transport = _CapturingTransport((url, _, _) {
+      captured = url;
+      return '{"choices":[{"message":{"content":"ok"}}],"usage":{}}';
+    });
+    final c = LlmClient(
+      config: const LlmConfig(
+        baseUrl: 'https://api.openai.com/v1',
+        apiKey: 'k',
+        model: 'm',
+      ),
+      transport: transport,
+    );
+    c.chat(const LlmChatRequest(model: 'm', messages: []));
+    expect(captured, 'https://api.openai.com/v1/chat/completions');
+
+    final c2 = LlmClient(
+      config: const LlmConfig(
+        baseUrl: 'https://api.openai.com/v1/',
+        apiKey: 'k',
+        model: 'm',
+      ),
+      transport: transport,
+    );
+    c2.chat(const LlmChatRequest(model: 'm', messages: []));
+    expect(captured, 'https://api.openai.com/v1/chat/completions');
+
+    final c3 = LlmClient(
+      config: const LlmConfig(
+        baseUrl: 'http://localhost:11434',
+        apiKey: 'k',
+        model: 'm',
+      ),
+      transport: transport,
+    );
+    c3.chat(const LlmChatRequest(model: 'm', messages: []));
+    expect(captured, 'http://localhost:11434/v1/chat/completions');
+  });
+
+  test('LlmClient sends Authorization header and the configured model', () async {
+    Map<String, String>? capturedHeaders;
+    String? capturedBody;
+    final transport = _CapturingTransport((url, headers, body) {
+      capturedHeaders = headers;
+      capturedBody = body;
+      return '{"choices":[{"message":{"content":"hi"}}]}';
+    });
+    final c = LlmClient(
+      config: const LlmConfig(
+        baseUrl: 'https://api.openai.com/v1',
+        apiKey: 'sk-test',
+        model: 'gpt-4o-mini',
+      ),
+      transport: transport,
+    );
+    final resp = await c.chat(const LlmChatRequest(
+      model: 'gpt-4o-mini',
+      messages: [LlmMessage(role: 'user', content: 'hi')],
+    ));
+    expect(resp.content, 'hi');
+    expect(capturedHeaders?['Authorization'], 'Bearer sk-test');
+    expect(capturedHeaders?['Content-Type'], 'application/json');
+    expect(capturedBody, contains('"model":"gpt-4o-mini"'));
+    expect(capturedBody, contains('"role":"user"'));
+    expect(capturedBody, contains('"content":"hi"'));
+    expect(capturedBody, contains('"stream":false'));
+  });
+
+  test('LlmClient falls back to config.model when request.model is empty', () async {
+    String? capturedBody;
+    final transport = _CapturingTransport((url, headers, body) {
+      capturedBody = body;
+      return '{"choices":[{"message":{"content":"ok"}}]}';
+    });
+    final c = LlmClient(
+      config: const LlmConfig(
+        baseUrl: 'https://api.openai.com/v1',
+        apiKey: 'k',
+        model: 'fallback-model',
+      ),
+      transport: transport,
+    );
+    await c.chat(const LlmChatRequest(
+      model: '', // request omits model
+      messages: [LlmMessage(role: 'user', content: 'hi')],
+    ));
+    expect(capturedBody, contains('"model":"fallback-model"'));
+  });
+
+  test('LlmClient throws LlmException on 4xx', () async {
+    final transport = _CapturingTransport(
+      (url, headers, body) => throw LlmException('bad', statusCode: 401),
+    );
+    final c = LlmClient(
+      config: const LlmConfig(
+        baseUrl: 'https://api.openai.com/v1',
+        apiKey: 'k',
+        model: 'm',
+      ),
+      transport: transport,
+    );
+    expect(
+      () => c.chat(const LlmChatRequest(
+        model: 'm',
+        messages: [LlmMessage(role: 'user', content: 'x')],
+      )),
+      throwsA(isA<LlmException>()
+          .having((e) => e.statusCode, 'statusCode', 401)),
+    );
+  });
+
+  test('LlmClient throws LlmException on malformed JSON', () async {
+    final transport = _CapturingTransport(
+      (url, headers, body) => 'not json',
+    );
+    final c = LlmClient(
+      config: const LlmConfig(
+        baseUrl: 'https://api.openai.com/v1',
+        apiKey: 'k',
+        model: 'm',
+      ),
+      transport: transport,
+    );
+    expect(
+      () => c.chat(const LlmChatRequest(
+        model: 'm',
+        messages: [LlmMessage(role: 'user', content: 'x')],
+      )),
+      throwsA(isA<LlmException>()),
+    );
+  });
+
+  test('LlmConfigStore round-trips through an in-memory backend', () async {
+    final store = LlmConfigStore(InMemoryLlmConfigBackend());
+    final initial = await store.read();
+    expect(initial.model, LlmConfig.defaultModel);
+    await store.write(const LlmConfig(
+      baseUrl: 'https://example.com/v1',
+      apiKey: 'sk-test-12345678',
+      model: 'm',
+    ));
+    final after = await store.read();
+    expect(after.baseUrl, 'https://example.com/v1');
+    expect(after.apiKey, 'sk-test-12345678');
+    expect(after.model, 'm');
+    await store.clear();
+    final cleared = await store.read();
+    // After clear, read() returns defaults (defaultBaseUrl + defaultModel)
+    expect(cleared.baseUrl, LlmConfig.defaultBaseUrl);
+    expect(cleared.apiKey, '');
+    expect(cleared.model, LlmConfig.defaultModel);
+  });
+}
+
+/// Test transport that captures the request and returns a fixture body.
+class _CapturingTransport implements LlmTransport {
+  final String Function(String url, Map<String, String> headers, String body)
+      _handler;
+  _CapturingTransport(this._handler);
+
+  @override
+  Future<String> postJson({
+    required String url,
+    required Map<String, String> headers,
+    required String body,
+  }) async {
+    return _handler(url, headers, body);
+  }
 }

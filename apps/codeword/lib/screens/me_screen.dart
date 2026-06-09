@@ -7,8 +7,10 @@ import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'learning_session_screen.dart';
 import '../state/learning_session.dart';
+import '../state/llm_config.dart';
+import 'ai_settings_screen.dart';
+import 'learning_session_screen.dart';
 
 class MeScreen extends ConsumerWidget {
   const MeScreen({super.key});
@@ -46,6 +48,8 @@ class MeScreen extends ConsumerWidget {
             // Settings + storage info.
             _SectionLabel('设置'),
             SizedBox(height: AppSpacing.x3),
+            _AiSettingsRow(),
+            SizedBox(height: AppSpacing.x2),
             _DailyGoalRow(),
             SizedBox(height: AppSpacing.x2),
             _AccentRow(),
@@ -262,6 +266,95 @@ class _AccentRow extends StatelessWidget {
       title: '发音',
       subtitle: '美音',
       color: AppColors.domainCs,
+    );
+  }
+}
+
+/// AI 接入 — opens AiSettingsScreen. Subtitle reflects whether
+/// the user has configured a key.
+class _AiSettingsRow extends ConsumerWidget {
+  const _AiSettingsRow();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final cfg = ref.watch(llmConfigProvider);
+    final subtitle = cfg.isConfigured
+        ? '${cfg.model} · ${cfg.maskedKey}'
+        : 'OpenAI 兼容 · Base URL / Key / Model';
+    return AppCard(
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute(builder: (_) => const AiSettingsScreen()),
+      ),
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppSpacing.x4,
+        vertical: AppSpacing.x3,
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 32,
+            height: 32,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: cfg.isConfigured
+                  ? AppColors.primary.withValues(alpha: 0.12)
+                  : AppColors.inkSubtle.withValues(alpha: 0.12),
+              borderRadius: BorderRadius.circular(AppRadii.sm),
+            ),
+            child: Icon(
+              cfg.isConfigured ? Icons.bolt : Icons.bolt_outlined,
+              color: cfg.isConfigured
+                  ? AppColors.primary
+                  : AppColors.inkMuted,
+              size: 18,
+            ),
+          ),
+          const SizedBox(width: AppSpacing.x3),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    const Text(
+                      'AI 接入',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.ink,
+                      ),
+                    ),
+                    if (cfg.isConfigured) ...[
+                      const SizedBox(width: 6),
+                      const PillTag(
+                        label: '已配置',
+                        color: AppColors.success,
+                        icon: Icons.check,
+                      ),
+                    ],
+                  ],
+                ),
+                Text(
+                  subtitle,
+                  style: const TextStyle(
+                    fontSize: 11,
+                    color: AppColors.inkMuted,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'monospace',
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            ),
+          ),
+          const Icon(
+            Icons.chevron_right,
+            color: AppColors.inkSubtle,
+            size: 20,
+          ),
+        ],
+      ),
     );
   }
 }
