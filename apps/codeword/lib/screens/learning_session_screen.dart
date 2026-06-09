@@ -94,14 +94,30 @@ class _LearningSessionScreenState
             child: _ProgressBar(progress: progress),
           ),
           Expanded(
-            child: _PushSwitcher(
-              phase: session.phase,
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 220),
+              switchInCurve: Curves.easeOutCubic,
+              switchOutCurve: Curves.easeInCubic,
+              transitionBuilder: (child, animation) {
+                final offset = Tween<Offset>(
+                  begin: const Offset(0.08, 0),
+                  end: Offset.zero,
+                ).animate(animation);
+                return SlideTransition(position: offset, child: child);
+              },
               child: switch (session.phase) {
                 SessionPhase.loading =>
-                  const Center(child: CircularProgressIndicator()),
-                SessionPhase.asking => _AskingView(session: session),
-                SessionPhase.wrongDetail => _WrongDetailView(session: session),
+                  const Center(key: ValueKey('loading'), child: CircularProgressIndicator()),
+                SessionPhase.asking => _AskingView(
+                    key: ValueKey('asking_${session.currentIndex}'),
+                    session: session,
+                  ),
+                SessionPhase.wrongDetail => _WrongDetailView(
+                    key: ValueKey('wrong_${session.currentIndex}'),
+                    session: session,
+                  ),
                 SessionPhase.finished => _FinishedView(
+                    key: const ValueKey('finished'),
                     total: session.questions.length,
                     correct: session.correctCount,
                     onClose: () => Navigator.of(context).pop(),
@@ -117,7 +133,7 @@ class _LearningSessionScreenState
 
 class _AskingView extends ConsumerWidget {
   final LearningSessionState session;
-  const _AskingView({required this.session});
+  const _AskingView({super.key, required this.session});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -191,7 +207,7 @@ class _AskingView extends ConsumerWidget {
 
 class _WrongDetailView extends ConsumerStatefulWidget {
   final LearningSessionState session;
-  const _WrongDetailView({required this.session});
+  const _WrongDetailView({super.key, required this.session});
 
   @override
   ConsumerState<_WrongDetailView> createState() => _WrongDetailViewState();
@@ -730,7 +746,7 @@ class _FinishedView extends ConsumerWidget {
   final int total;
   final int correct;
   final VoidCallback onClose;
-  const _FinishedView({required this.total, required this.correct, required this.onClose});
+  const _FinishedView({super.key, required this.total, required this.correct, required this.onClose});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -759,102 +775,4 @@ class _FinishedView extends ConsumerWidget {
   }
 }
 
-/// Custom push transition. AnimatedSwitcher's default fades the outgoing
-/// widget (which is what was making the "wrong" → "detail" transition
-/// look like a fade). Here we do a clean push:
-///
-///   1. New child slides in from the right (+0.12 → 0)
-///   2. Old child slides out to the left    (0 → -0.12)
-///   3. No opacity change. No fade.
-///
-/// 200ms easeOutCubic — punchy but not rushed.
-class _PushSwitcher extends StatefulWidget {
-  final SessionPhase phase;
-  final Widget child;
-  const _PushSwitcher({required this.phase, required this.child});
 
-  @override
-  State<_PushSwitcher> createState() => _PushSwitcherState();
-}
-
-class _PushSwitcherState extends State<_PushSwitcher>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _controller;
-  SessionPhase? _fromPhase;
-  Widget? _fromChild;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 200),
-    );
-  }
-
-  @override
-  void didUpdateWidget(covariant _PushSwitcher old) {
-    super.didUpdateWidget(old);
-    if (old.phase != widget.phase) {
-      // Capture the outgoing child + its phase, then animate.
-      setState(() {
-        _fromPhase = old.phase;
-        _fromChild = old.child;
-      });
-      _controller
-        ..reset()
-        ..forward();
-    }
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final showOutgoing = _fromChild != null &&
-        _controller.value < 1.0 &&
-        _controller.isAnimating;
-
-    return ClipRect(
-      child: Stack(
-        children: [
-          // Incoming: slides from +0.12 (right) to 0.
-          AnimatedBuilder(
-            animation: _controller,
-            builder: (context, child) {
-              final t = _controller.value;
-              return Transform.translate(
-                offset: Offset(0.12 * (1.0 - t) * MediaQuery.of(context).size.width, 0),
-                child: child,
-              );
-            },
-            child: KeyedSubtree(
-              key: ValueKey('in_${widget.phase}'),
-              child: widget.child,
-            ),
-          ),
-          // Outgoing: slides from 0 to -0.12 (left).
-          if (showOutgoing && _fromChild != null)
-            AnimatedBuilder(
-              animation: _controller,
-              builder: (context, child) {
-                final t = _controller.value;
-                return Transform.translate(
-                  offset: Offset(-0.12 * t * MediaQuery.of(context).size.width, 0),
-                  child: child,
-                );
-              },
-              child: KeyedSubtree(
-                key: ValueKey('out_$_fromPhase'),
-                child: _fromChild!,
-              ),
-            ),
-        ],
-      ),
-    );
-  }
-}
