@@ -6,9 +6,7 @@ import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
 import 'screens/learning_session_screen.dart';
-import 'screens/library_screen.dart';
 import 'screens/me_screen.dart';
-import 'screens/review_screen.dart';
 import 'screens/stats_screen.dart';
 import 'state/learning_session.dart';
 
@@ -44,12 +42,22 @@ class HomeShell extends StatefulWidget {
 class _HomeShellState extends State<HomeShell> {
   int _index = 0;
 
+  // 5 tabs: 单词 (today/learning) | 阅读 (placeholder) | pulse (placeholder)
+  // | 统计 | 我的. The 词库 lives inside 我的 (Section_VocabSection), and
+  // 复习 is intentionally removed — due-for-review words are folded into
+  // the learning flow itself (see [LearningSessionNotifier.start]).
   static const _pages = <Widget>[
-    TodayPage(),
-    LibraryScreen(),
-    ReviewScreen(),
-    StatsScreen(),
-    MeScreen(),
+    TodayPage(),       // 单词
+    _ComingSoonPage(  // 阅读
+      title: '阅读',
+      icon: Icons.menu_book_rounded,
+    ),
+    _ComingSoonPage(  // pulse
+      title: 'Pulse',
+      icon: Icons.favorite_rounded,
+    ),
+    StatsScreen(),     // 统计
+    MeScreen(),        // 我的 (词库 在这里)
   ];
 
   @override
@@ -70,19 +78,19 @@ class _HomeShellState extends State<HomeShell> {
         labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         destinations: const [
           NavigationDestination(
-            icon: Icon(Icons.wb_sunny_outlined),
-            selectedIcon: Icon(Icons.wb_sunny, color: AppColors.primary),
-            label: '今日',
+            icon: Icon(Icons.style_outlined),
+            selectedIcon: Icon(Icons.style, color: AppColors.primary),
+            label: '单词',
           ),
           NavigationDestination(
             icon: Icon(Icons.menu_book_outlined),
             selectedIcon: Icon(Icons.menu_book, color: AppColors.primary),
-            label: '词库',
+            label: '阅读',
           ),
           NavigationDestination(
-            icon: Icon(Icons.refresh_outlined),
-            selectedIcon: Icon(Icons.refresh, color: AppColors.primary),
-            label: '复习',
+            icon: Icon(Icons.favorite_outline),
+            selectedIcon: Icon(Icons.favorite, color: AppColors.primary),
+            label: 'Pulse',
           ),
           NavigationDestination(
             icon: Icon(Icons.bar_chart_outlined),
@@ -95,6 +103,34 @@ class _HomeShellState extends State<HomeShell> {
             label: '我的',
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Placeholder for tabs that aren't built yet. Quiet, single-card
+/// layout — no "敬请期待" copy, no CTA, just a center icon.
+class _ComingSoonPage extends StatelessWidget {
+  final String title;
+  final IconData icon;
+  const _ComingSoonPage({required this.title, required this.icon});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      body: SafeArea(
+        child: Center(
+          child: AppCard(
+            child: SizedBox(
+              width: 240,
+              height: 180,
+              child: Center(
+                child: Icon(icon, size: 56, color: AppColors.inkSubtle),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -459,7 +495,7 @@ class _StartLearningButton extends StatelessWidget {
           );
         },
         icon: const Icon(Icons.play_arrow_rounded, size: 22),
-        label: const Text('开始今日学习  ·  AI 核心'),
+        label: const Text('开始学 ·  AI 核心'),
         style: FilledButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
           textStyle: const TextStyle(

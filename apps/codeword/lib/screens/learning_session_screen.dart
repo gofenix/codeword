@@ -9,6 +9,8 @@ import '../state/learning_session.dart';
 
 class LearningSessionScreen extends ConsumerStatefulWidget {
   final String vocabId;
+  /// Legacy alias for total session size. Kept so existing call sites
+  /// still compile. Split 70/30 between new and review slots.
   final int count;
   const LearningSessionScreen({
     super.key,
@@ -31,9 +33,16 @@ class _LearningSessionScreenState
     super.initState();
     _sessionStart = DateTime.now();
     Future.microtask(() {
-      ref
-          .read(learningSessionProvider.notifier)
-          .start(vocabId: widget.vocabId, count: widget.count);
+      // 70% new / 30% review split. The total is `count` so the
+      // session feels the same size as before the split.
+      final total = widget.count;
+      final review = (total * 0.3).round().clamp(1, total - 1);
+      final newC = total - review;
+      ref.read(learningSessionProvider.notifier).start(
+            vocabId: widget.vocabId,
+            newCount: newC,
+            reviewCount: review,
+          );
     });
   }
 

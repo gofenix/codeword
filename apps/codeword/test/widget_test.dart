@@ -5,15 +5,15 @@ import 'package:codeword/main.dart';
 import 'package:codeword/state/learning_session.dart';
 
 void main() {
-  testWidgets('App boots into 5-tab home with Today selected', (tester) async {
+  testWidgets('App boots into 5-tab home with Words selected', (tester) async {
     await tester.pumpWidget(const ProviderScope(child: CodewordApp()));
     await tester.pump();
-    expect(find.text('今日'), findsWidgets);
-    expect(find.text('词库'), findsOneWidget);
-    expect(find.text('复习'), findsOneWidget);
+    expect(find.text('单词'), findsWidgets);
+    expect(find.text('阅读'), findsOneWidget);
+    expect(find.text('Pulse'), findsOneWidget);
     expect(find.text('统计'), findsOneWidget);
     expect(find.text('我的'), findsOneWidget);
-    expect(find.text('开始今日学习  ·  AI 核心'), findsOneWidget);
+    expect(find.text('开始学 ·  AI 核心'), findsOneWidget);
   });
 
   test('SM-2 round-trip through notifier records answer', () {

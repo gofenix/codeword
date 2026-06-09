@@ -435,8 +435,19 @@ class LearningSessionNotifier
   LearningSessionNotifier(this.ref) : super(LearningSessionState.loading());
 
   /// Build a session: pick `count` words from `vocabId`, generate mixed
-  /// question types (5 types rotated).
-  Future<void> start({required String vocabId, int count = 10}) async {
+  /// Build a session that respects the SM-2 memory curve:
+  ///   - [newCount] words the user has never seen (or has reps == 0)
+  ///   - [reviewCount] words that are due for review right now
+  ///   - interleaved, with due words prioritized (so the user keeps
+  ///     their streak of answered reviews).
+  ///
+  /// If there aren't enough due words, the remainder is filled with
+  /// new words (or any seen-but-not-mastered words).
+  Future<void> start({
+    required String vocabId,
+    int newCount = 7,
+    int reviewCount = 3,
+  }) async {
     state = LearningSessionState.loading();
     final all = await ref.read(vocabCacheProvider(vocabId).future);
     if (all.isEmpty) {
@@ -448,11 +459,59 @@ class LearningSessionNotifier
       );
       return;
     }
-    final picked = [...all]..shuffle(_rng);
-    final slice = picked.take(count.clamp(1, all.length)).toList();
+
+    final now = DateTime.now();
+    // Pull the user's persisted review state from the global provider
+    // (the LearningSessionNotifier's own `state` is the session
+    // machine state, not the per-word review map).
+    final reviewMap = ref.read(reviewStateProvider);
+    final allWordIds = all.map((w) => w.id).toSet();
+
+    // Words in this vocab that have a review state.
+    final seenIds = reviewMap.keys.where(allWordIds.contains).toSet();
+
+    // Due = has dueAt <= now. Exclude words never seen (those are
+    // "new", not "due").
+    final dueWords = all
+        .where((w) =>
+            seenIds.contains(w.id) &&
+            reviewMap[w.id]!.dueAt != null &&
+            !reviewMap[w.id]!.dueAt!.isAfter(now))
+        .toList()
+      ..shuffle(_rng);
+
+    // New = never seen. From the *current vocab only* so each vocab
+    // teaches itself.
+    final newWords = all
+        .where((w) => !seenIds.contains(w.id))
+        .toList()
+      ..shuffle(_rng);
+
+    // Take what we need, in priority order:
+    // 1. due (overdue reviews are the highest priority for memory
+    //    curve)
+    // 2. new
+    final pickedDue = dueWords.take(reviewCount).toList();
+    final pickedNew = newWords.take(newCount - pickedDue.length).toList();
+
+    // If we couldn't fill newCount slots with truly-new words, backfill
+    // with already-seen words (those with reps > 0) so the session
+    // always has [newCount] items.
+    final pickedNewList = [...pickedNew];
+    if (pickedNewList.length < newCount) {
+      final remaining = all
+          .where((w) =>
+              !pickedNewList.contains(w) && !pickedDue.contains(w))
+          .toList()
+        ..shuffle(_rng);
+      pickedNewList.addAll(
+          remaining.take(newCount - pickedNewList.length));
+    }
+
+    final picked = [...pickedDue, ...pickedNewList]..shuffle(_rng);
 
     final types = QuestionType.values;
-    final questions = slice.asMap().entries.map((entry) {
+    final questions = picked.asMap().entries.map((entry) {
       final w = entry.value;
       final t = types[entry.key % types.length];
       return _buildQuestion(w, t, all);
