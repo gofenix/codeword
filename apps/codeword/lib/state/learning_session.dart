@@ -203,6 +203,107 @@ class ReviewStateNotifier
         .length;
   }
 
+  /// Top-N words most overdue for review. Loads each owning vocab on
+  /// demand (cached) to surface the human-readable word, phonetic,
+  /// translation. Used by the Pulse tab.
+  ///
+  /// Returns entries sorted by most-overdue first. If [now] is omitted
+  /// we use the wall clock.
+  Future<List<PulseWordEntry>> dueWords({
+    int limit = 3,
+    DateTime? now,
+  }) async {
+    final at = now ?? DateTime.now();
+    final dueEntries = state.entries
+        .where((e) =>
+            e.value.dueAt != null && !e.value.dueAt!.isAfter(at))
+        .toList()
+      ..sort((a, b) => a.value.dueAt!.compareTo(b.value.dueAt!));
+    if (dueEntries.isEmpty) return const [];
+    return _hydrate(
+      entries: dueEntries.take(limit).toList(),
+      at: at,
+    );
+  }
+
+  /// Top-N recommended new words. Picks the vocab with the lowest
+  /// coverage that still has unseen words, then returns the first few
+  /// of those.
+  ///
+  /// Falls back to `ai_core` if every vocab is fully learned.
+  Future<List<PulseWordEntry>> recommendedNewWords({
+    int limit = 3,
+  }) async {
+    final stats = this.stats();
+    String? targetId;
+    for (final v in stats.perVocab) {
+      final unseen = v.totalWords - v.seen;
+      if (unseen > 0) {
+        targetId ??= v.vocabId;
+        // Prefer the least-covered vocab so we expose breadth.
+        if (v.coverage < (targetId == v.vocabId ? 1.0 : 1.0)) {
+          if (v.coverage < 0.4) {
+            targetId = v.vocabId;
+            break;
+          }
+        }
+      }
+    }
+    targetId ??= 'ai_core';
+    final list = await ContentLoader.loadList(targetId);
+    final seenIds = state.keys.toSet();
+    final newOnes =
+        list.where((w) => !seenIds.contains(w.id)).take(limit).toList();
+    return [
+      for (final w in newOnes)
+        PulseWordEntry(
+          word: w.word,
+          translation: w.translation,
+          phonetic: w.phonetic,
+          level: w.level,
+          vocabId: targetId,
+        ),
+    ];
+  }
+
+  Future<List<PulseWordEntry>> _hydrate({
+    required List<MapEntry<String, ReviewState>> entries,
+    required DateTime at,
+  }) async {
+    final byVocab = <String, List<String>>{};
+    for (final e in entries) {
+      final vid = _vocabIdFromWordId(e.key);
+      byVocab.putIfAbsent(vid, () => []).add(e.key);
+    }
+    final out = <PulseWordEntry>[];
+    for (final vid in byVocab.keys) {
+      try {
+        final list = await ContentLoader.loadList(vid);
+        final byId = {for (final w in list) w.id: w};
+        for (final wid in byVocab[vid]!) {
+          final w = byId[wid];
+          if (w == null) continue;
+          final s = state[wid]!;
+          final overdue = s.dueAt == null
+              ? 0
+              : at.difference(s.dueAt!).inDays;
+          out.add(PulseWordEntry(
+            word: w.word,
+            translation: w.translation,
+            phonetic: w.phonetic,
+            level: w.level,
+            vocabId: vid,
+            overdueDays: overdue < 0 ? 0 : overdue,
+          ));
+        }
+      } catch (_) {
+        // Vocab not bundled — skip.
+      }
+    }
+    out.sort((a, b) => (b.overdueDays ?? 0).compareTo(a.overdueDays ?? 0));
+    return out;
+  }
+
   /// All stats for the home + stats pages. Pulls activity from the
   /// persistence layer if initialized; otherwise returns zero stats.
   ReviewStats stats({DateTime? now}) {
@@ -359,6 +460,25 @@ class _MutableVocabStats {
   int learned = 0;
   int due = 0;
   int sumEf = 0;
+}
+
+/// Lightweight DTO used by the Pulse tab. The full [VocabWord] is in
+/// `lib_content`; this is a trimmed projection for the daily digest.
+class PulseWordEntry {
+  final String word;
+  final String translation;
+  final String phonetic;
+  final String level;
+  final String vocabId;
+  final int? overdueDays; // null for new-word recommendations
+  const PulseWordEntry({
+    required this.word,
+    required this.translation,
+    required this.phonetic,
+    required this.level,
+    required this.vocabId,
+    this.overdueDays,
+  });
 }
 
 /// Lazy-loaded vocabulary content cache. Loads JSON on first request.

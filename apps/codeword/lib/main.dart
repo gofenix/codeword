@@ -7,6 +7,7 @@ import 'package:lib_ui/lib_ui.dart';
 
 import 'screens/learning_session_screen.dart';
 import 'screens/me_screen.dart';
+import 'screens/pulse_screen.dart';
 import 'screens/stats_screen.dart';
 import 'state/learning_session.dart';
 
@@ -42,20 +43,17 @@ class HomeShell extends StatefulWidget {
 class _HomeShellState extends State<HomeShell> {
   int _index = 0;
 
-  // 5 tabs: 单词 (today/learning) | 阅读 (placeholder) | pulse (placeholder)
+  // 5 tabs: 单词 (today/learning) | 阅读 (placeholder) | Pulse (daily digest)
   // | 统计 | 我的. The 词库 lives inside 我的 (Section_VocabSection), and
   // 复习 is intentionally removed — due-for-review words are folded into
   // the learning flow itself (see [LearningSessionNotifier.start]).
   static const _pages = <Widget>[
     TodayPage(),       // 单词
-    _ComingSoonPage(  // 阅读
+    _ComingSoonPage(  // 阅读 — AI-generated articles (BYOK, coming soon)
       title: '阅读',
       icon: Icons.menu_book_rounded,
     ),
-    _ComingSoonPage(  // pulse
-      title: 'Pulse',
-      icon: Icons.favorite_rounded,
-    ),
+    PulseScreen(),     // Pulse — daily digest
     StatsScreen(),     // 统计
     MeScreen(),        // 我的 (词库 在这里)
   ];
