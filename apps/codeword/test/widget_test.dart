@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:lib_core/lib_core.dart';
@@ -15,6 +16,27 @@ void main() {
     expect(find.text('统计'), findsOneWidget);
     expect(find.text('我的'), findsOneWidget);
     expect(find.text('开始学 ·  AI 核心'), findsOneWidget);
+  });
+
+  testWidgets('HomeShell keeps tab state mounted while switching tabs', (
+    tester,
+  ) async {
+    await tester.pumpWidget(const ProviderScope(child: CodewordApp()));
+    await tester.pump();
+
+    final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
+    expect(stack.children.length, 5);
+    expect(stack.index, 0);
+
+    await tester.tap(find.text('阅读'));
+    await tester.pump();
+    final readingStack = tester.widget<IndexedStack>(find.byType(IndexedStack));
+    expect(readingStack.index, 1);
+
+    await tester.tap(find.text('Pulse'));
+    await tester.pump();
+    final pulseStack = tester.widget<IndexedStack>(find.byType(IndexedStack));
+    expect(pulseStack.index, 2);
   });
 
   test('SM-2 round-trip through notifier records answer', () {
