@@ -252,9 +252,11 @@ class LlmClient {
   /// Throws [LlmException] on any non-2xx response or malformed JSON.
   Future<LlmChatResponse> chat(LlmChatRequest request) async {
     final url = _chatCompletionsUrl(config.baseUrl);
+    final model = request.model.isEmpty ? config.model : request.model;
     final body = jsonEncode({
       ...request.toJson(),
-      if (request.model.isEmpty) 'model': config.model,
+      'model': model,
+      ..._providerOptions(model),
     });
     final headers = {
       'Content-Type': 'application/json',
@@ -280,7 +282,7 @@ class LlmClient {
     }
     final first = choices.first as Map<String, dynamic>;
     final message = first['message'] as Map<String, dynamic>?;
-    final content = (message?['content'] as String?) ?? '';
+    final content = _visibleContent(message);
     final usage = decoded['usage'] as Map<String, dynamic>?;
     return LlmChatResponse(
       content: content,
@@ -305,5 +307,20 @@ class LlmClient {
     // don't append /v1 — the user has already specified the API version.
     if (!RegExp(r'/v\d+$').hasMatch(b)) b = '$b/v1';
     return '$b/chat/completions';
+  }
+
+  static Map<String, dynamic> _providerOptions(String model) {
+    if (model.trim().toLowerCase() != 'minimax-m3') return const {};
+    return const {
+      'thinking': {'type': 'disabled'},
+    };
+  }
+
+  static String _visibleContent(Map<String, dynamic>? message) {
+    final raw = message?['content'];
+    if (raw is! String) return '';
+    return raw
+        .replaceAll(RegExp(r'<think>.*?</think>', dotAll: true), '')
+        .trim();
   }
 }

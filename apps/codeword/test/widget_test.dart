@@ -346,6 +346,56 @@ void main() {
     },
   );
 
+  test('LlmClient disables MiniMax-M3 thinking and hides think blocks', () async {
+    String? capturedBody;
+    final transport = _CapturingTransport((url, headers, body) {
+      capturedBody = body;
+      return '{"choices":[{"message":{"content":"<think>reasoning only</think>Final article."}}]}';
+    });
+    final c = LlmClient(
+      config: const LlmConfig(
+        baseUrl: 'https://api.minimax.io/v1',
+        apiKey: 'k',
+        model: 'MiniMax-M3',
+      ),
+      transport: transport,
+    );
+    final resp = await c.chat(
+      const LlmChatRequest(
+        model: 'MiniMax-M3',
+        messages: [LlmMessage(role: 'user', content: 'hi')],
+      ),
+    );
+    expect(capturedBody, contains('"thinking":{"type":"disabled"}'));
+    expect(resp.content, 'Final article.');
+  });
+
+  test(
+    'LlmClient does not send MiniMax thinking options to other models',
+    () async {
+      String? capturedBody;
+      final transport = _CapturingTransport((url, headers, body) {
+        capturedBody = body;
+        return '{"choices":[{"message":{"content":"ok"}}]}';
+      });
+      final c = LlmClient(
+        config: const LlmConfig(
+          baseUrl: 'https://api.openai.com/v1',
+          apiKey: 'k',
+          model: 'gpt-4o-mini',
+        ),
+        transport: transport,
+      );
+      await c.chat(
+        const LlmChatRequest(
+          model: 'gpt-4o-mini',
+          messages: [LlmMessage(role: 'user', content: 'hi')],
+        ),
+      );
+      expect(capturedBody, isNot(contains('"thinking"')));
+    },
+  );
+
   test(
     'LlmClient falls back to config.model when request.model is empty',
     () async {
