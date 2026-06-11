@@ -22,11 +22,7 @@ class LlmConfig {
     required this.model,
   });
 
-  static const empty = LlmConfig(
-    baseUrl: '',
-    apiKey: '',
-    model: '',
-  );
+  static const empty = LlmConfig(baseUrl: '', apiKey: '', model: '');
 
   /// Returns true if the user has supplied all three required fields.
   bool get isConfigured =>
@@ -52,11 +48,8 @@ class LlmConfig {
   static const defaultModel = 'gpt-4o-mini';
 
   /// Convenience factory for a "first time" config (no key yet).
-  static LlmConfig defaults() => const LlmConfig(
-        baseUrl: defaultBaseUrl,
-        apiKey: '',
-        model: defaultModel,
-      );
+  static LlmConfig defaults() =>
+      const LlmConfig(baseUrl: defaultBaseUrl, apiKey: '', model: defaultModel);
 }
 
 /// Pluggable backing store for [LlmConfig]. Production uses
@@ -71,10 +64,11 @@ abstract class LlmConfigBackend {
 class _FlutterSecureStorageBackend implements LlmConfigBackend {
   final FlutterSecureStorage _storage;
   _FlutterSecureStorageBackend([FlutterSecureStorage? storage])
-      : _storage = storage ??
-            const FlutterSecureStorage(
-              aOptions: AndroidOptions(encryptedSharedPreferences: true),
-            );
+    : _storage =
+          storage ??
+          const FlutterSecureStorage(
+            aOptions: AndroidOptions(encryptedSharedPreferences: true),
+          );
 
   @override
   Future<String?> read(String key) => _storage.read(key: key);
@@ -108,7 +102,7 @@ class LlmConfigStore {
 
   final LlmConfigBackend _backend;
   LlmConfigStore([LlmConfigBackend? backend])
-      : _backend = backend ?? _FlutterSecureStorageBackend();
+    : _backend = backend ?? _FlutterSecureStorageBackend();
 
   Future<LlmConfig> read() async {
     try {
@@ -179,12 +173,12 @@ class LlmChatRequest {
   });
 
   Map<String, dynamic> toJson() => {
-        'model': model,
-        'messages': [for (final m in messages) m.toJson()],
-        'temperature': temperature,
-        if (maxTokens != null) 'max_tokens': maxTokens,
-        'stream': false,
-      };
+    'model': model,
+    'messages': [for (final m in messages) m.toJson()],
+    'temperature': temperature,
+    if (maxTokens != null) 'max_tokens': maxTokens,
+    'stream': false,
+  };
 }
 
 class LlmChatResponse {
@@ -252,7 +246,7 @@ class LlmClient {
   final LlmTransport transport;
 
   LlmClient({required this.config, LlmTransport? transport})
-      : transport = transport ?? HttpLlmTransport();
+    : transport = transport ?? HttpLlmTransport();
 
   /// Sends a chat completion request and returns the assistant text.
   /// Throws [LlmException] on any non-2xx response or malformed JSON.
@@ -266,7 +260,11 @@ class LlmClient {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ${config.apiKey}',
     };
-    final raw = await transport.postJson(url: url, headers: headers, body: body);
+    final raw = await transport.postJson(
+      url: url,
+      headers: headers,
+      body: body,
+    );
     final dynamic decoded;
     try {
       decoded = jsonDecode(raw);
@@ -302,6 +300,7 @@ class LlmClient {
   static String _chatCompletionsUrl(String baseUrl) {
     var b = baseUrl.trim();
     while (b.endsWith('/')) b = b.substring(0, b.length - 1);
+    if (b.toLowerCase().endsWith('/chat/completions')) return b;
     // If URL already ends with a /vN style path segment (v1, v2, v4, etc.),
     // don't append /v1 — the user has already specified the API version.
     if (!RegExp(r'/v\d+$').hasMatch(b)) b = '$b/v1';

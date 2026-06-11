@@ -70,17 +70,14 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
         _saving = false;
       });
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('已保存'),
-          duration: Duration(seconds: 2),
-        ),
+        const SnackBar(content: Text('已保存'), duration: Duration(seconds: 2)),
       );
     } catch (e) {
       if (!mounted) return;
       setState(() => _saving = false);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('保存失败: $e')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('保存失败: $e')));
     }
   }
 
@@ -108,9 +105,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
         LlmChatRequest(
           model: cfg.model,
           maxTokens: 4,
-          messages: const [
-            LlmMessage(role: 'user', content: 'hi'),
-          ],
+          messages: const [LlmMessage(role: 'user', content: 'hi')],
         ),
       );
       if (!mounted) return;
@@ -127,8 +122,8 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
         _testResult = e.statusCode == 401
             ? '鉴权失败 (401) · 检查 API Key'
             : e.statusCode == 404
-                ? '路径错误 (404) · 检查 Base URL'
-                : '失败 (${e.statusCode ?? '-'}): ${e.message}';
+            ? '路径错误 (404) · 检查 Base URL'
+            : '失败 (${e.statusCode ?? '-'}): ${e.message}';
         _testOk = false;
       });
     } catch (e) {
@@ -230,8 +225,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
                     color: AppColors.inkMuted,
                     size: 20,
                   ),
-                  onPressed: () =>
-                      setState(() => _obscureKey = !_obscureKey),
+                  onPressed: () => setState(() => _obscureKey = !_obscureKey),
                 ),
               ),
               const SizedBox(height: AppSpacing.x4),
@@ -262,7 +256,8 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
                       label: const Text('测试连接'),
                       style: FilledButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
-                            vertical: AppSpacing.x3),
+                          vertical: AppSpacing.x3,
+                        ),
                       ),
                     ),
                   ),
@@ -276,7 +271,9 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
                         horizontal: AppSpacing.x4,
                         vertical: AppSpacing.x3,
                       ),
-                      side: BorderSide(color: AppColors.danger.withValues(alpha: 0.4)),
+                      side: BorderSide(
+                        color: AppColors.danger.withValues(alpha: 0.4),
+                      ),
                       foregroundColor: AppColors.danger,
                     ),
                   ),
@@ -305,8 +302,7 @@ class _IntroCard extends StatelessWidget {
       padding: const EdgeInsets.all(AppSpacing.x4),
       child: Row(
         children: [
-          const Icon(Icons.shield_outlined,
-              color: AppColors.primary, size: 20),
+          const Icon(Icons.shield_outlined, color: AppColors.primary, size: 20),
           const SizedBox(width: AppSpacing.x3),
           const Expanded(
             child: Text(
@@ -347,10 +343,7 @@ class _Label extends StatelessWidget {
           const SizedBox(height: 2),
           Text(
             hint!,
-            style: const TextStyle(
-              fontSize: 11,
-              color: AppColors.inkMuted,
-            ),
+            style: const TextStyle(fontSize: 11, color: AppColors.inkMuted),
           ),
         ],
       ],
@@ -405,11 +398,15 @@ class _Field extends StatelessWidget {
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppRadii.md),
-          borderSide: BorderSide(color: AppColors.inkSubtle.withValues(alpha: 0.2)),
+          borderSide: BorderSide(
+            color: AppColors.inkSubtle.withValues(alpha: 0.2),
+          ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppRadii.md),
-          borderSide: BorderSide(color: AppColors.inkSubtle.withValues(alpha: 0.2)),
+          borderSide: BorderSide(
+            color: AppColors.inkSubtle.withValues(alpha: 0.2),
+          ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppRadii.md),
@@ -483,6 +480,7 @@ class _CompatList extends StatelessWidget {
     ('OpenAI', 'https://api.openai.com/v1'),
     ('OpenRouter', 'https://openrouter.ai/api/v1'),
     ('DeepSeek', 'https://api.deepseek.com/v1'),
+    ('MiniMax', 'https://api.minimax.io/v1'),
     ('智谱 BigModel', 'https://open.bigmodel.cn/api/paas/v4'),
     ('月之暗面 Moonshot', 'https://api.moonshot.cn/v1'),
     ('Ollama (本地)', 'http://localhost:11434/v1'),

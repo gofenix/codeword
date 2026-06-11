@@ -266,6 +266,28 @@ void main() {
     );
     c3.chat(const LlmChatRequest(model: 'm', messages: []));
     expect(captured, 'http://localhost:11434/v1/chat/completions');
+
+    final c4 = LlmClient(
+      config: const LlmConfig(
+        baseUrl: 'https://api.minimax.io/v1',
+        apiKey: 'k',
+        model: 'MiniMax-M3',
+      ),
+      transport: transport,
+    );
+    c4.chat(const LlmChatRequest(model: 'MiniMax-M3', messages: []));
+    expect(captured, 'https://api.minimax.io/v1/chat/completions');
+
+    final c5 = LlmClient(
+      config: const LlmConfig(
+        baseUrl: 'https://api.minimax.io/v1/chat/completions',
+        apiKey: 'k',
+        model: 'MiniMax-M3',
+      ),
+      transport: transport,
+    );
+    c5.chat(const LlmChatRequest(model: 'MiniMax-M3', messages: []));
+    expect(captured, 'https://api.minimax.io/v1/chat/completions');
   });
 
   test(
