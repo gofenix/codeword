@@ -36,8 +36,8 @@ class VocabWord {
         exampleCn: (json['exampleCn'] as String?) ?? '',
         domain: json['domain'] as String,
         level: (json['level'] as String?) ?? 'B2',
-        synonyms: ((json['synonyms'] as List?) ?? const []).cast<String>(),
-        antonyms: ((json['antonyms'] as List?) ?? const []).cast<String>(),
+        synonyms: ((json['synonyms'] as List?) ?? const []).map((e) => e.toString()).toList(),
+        antonyms: ((json['antonyms'] as List?) ?? const []).map((e) => e.toString()).toList(),
       );
 
   Map<String, dynamic> toJson() => {

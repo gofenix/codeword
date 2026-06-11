@@ -167,9 +167,9 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(
-            AppSpacing.x6,
+            AppSpacing.x5,
             AppSpacing.x4,
-            AppSpacing.x6,
+            AppSpacing.x5,
             AppSpacing.x8,
           ),
           child: Column(
@@ -304,15 +304,9 @@ class _PoolCard extends StatelessWidget {
           ),
           const SizedBox(height: AppSpacing.x3),
           if (pool.isEmpty)
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: AppSpacing.x2),
-              child: Text(
-                '没有可用的词。先去学几轮再回来。',
-                style: TextStyle(
-                  fontSize: 13,
-                  color: AppColors.inkMuted,
-                ),
-              ),
+            const EmptyHint(
+              icon: Icons.local_library_outlined,
+              message: '没有可用的词。先去学几轮再回来。',
             )
           else
             Wrap(
@@ -492,25 +486,29 @@ class _ArticleCard extends StatelessWidget {
     final words = pool.map((e) => e.word.toLowerCase()).toList();
     final lemmas = <String, String>{}; // lemma -> original
     for (final w in words) {
+      // Only stem words longer than the suffix to avoid over-stemming
+      // short words like "loss" → "los" which would match "lose", "lost".
       if (w.endsWith('ies') && w.length > 4) {
-        lemmas[w.substring(0, w.length - 3)] = w;
-      } else if (w.endsWith('es') && w.length > 3) {
+        lemmas['${w.substring(0, w.length - 3)}y'] = w;
+      } else if (w.endsWith('es') && w.length > 4) {
         lemmas[w.substring(0, w.length - 2)] = w;
-      } else if (w.endsWith('s') && w.length > 2) {
+      } else if (w.endsWith('s') && !w.endsWith('ss') && w.length > 3) {
         lemmas[w.substring(0, w.length - 1)] = w;
-      } else if (w.endsWith('ed') && w.length > 3) {
+      } else if (w.endsWith('ed') && w.length > 4) {
         lemmas[w.substring(0, w.length - 2)] = w;
         lemmas[w.substring(0, w.length - 1)] = w; // doubled-consonant
-      } else if (w.endsWith('ing') && w.length > 4) {
+      } else if (w.endsWith('ing') && w.length > 5) {
         lemmas[w.substring(0, w.length - 3)] = w;
         lemmas['${w.substring(0, w.length - 3)}e'] = w;
       }
       lemmas[w] = w;
     }
 
-    // Build a single regex that matches any of the (lemma) forms.
-    // We use a permissive set so partial matches also work.
-    final pattern = lemmas.keys.map(RegExp.escape).join('|');
+    // Sort lemmas by length descending so the longest match wins in the
+    // regex alternation (prevents shorter lemmas from shadowing longer ones).
+    final sortedLemmas = lemmas.keys.toList()
+      ..sort((a, b) => b.length.compareTo(a.length));
+    final pattern = sortedLemmas.map(RegExp.escape).join('|');
     if (pattern.isEmpty) {
       return TextSpan(text: text);
     }
@@ -523,10 +521,10 @@ class _ArticleCard extends StatelessWidget {
       }
       spans.add(TextSpan(
         text: text.substring(m.start, m.end),
-        style: const TextStyle(
+        style: TextStyle(
           color: AppColors.primaryDark,
           fontWeight: FontWeight.w700,
-          backgroundColor: Color(0x33D1FAE5),
+          backgroundColor: AppColors.primarySoft.withValues(alpha: 0.2),
         ),
       ));
       idx = m.end;

@@ -8,3 +8,4 @@ export 'src/widgets/app_card.dart';
 export 'src/widgets/quote_mark.dart';
 export 'src/widgets/pressable_scale.dart';
 export 'src/widgets/favorite_star.dart';
+export 'src/widgets/empty_hint.dart';

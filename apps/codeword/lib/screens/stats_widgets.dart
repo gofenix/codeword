@@ -78,11 +78,11 @@ class MasteryDistribution extends StatelessWidget {
   }
 
   static Color _colorFor(MasteryLevel l) => switch (l) {
-        MasteryLevel.familiar => const Color(0xFF10B981),
-        MasteryLevel.recognized => const Color(0xFF34D399),
-        MasteryLevel.vague => const Color(0xFFF59E0B),
-        MasteryLevel.unfamiliar => const Color(0xFFFB923C),
-        MasteryLevel.unseen => const Color(0xFFE5E7EB),
+        MasteryLevel.familiar => AppColors.masteryFamiliar,
+        MasteryLevel.recognized => AppColors.masteryRecognized,
+        MasteryLevel.vague => AppColors.masteryVague,
+        MasteryLevel.unfamiliar => AppColors.masteryUnfamiliar,
+        MasteryLevel.unseen => AppColors.masteryUnseen,
       };
 }
 
@@ -352,7 +352,7 @@ class StreakSchedule extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            'Streak Schedule',
+            '连续记录',
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w700,
@@ -388,7 +388,7 @@ class StreakSchedule extends StatelessWidget {
                                 : (v
                                     ? AppColors.primary
                                     : AppColors.surfaceMuted),
-                            borderRadius: BorderRadius.circular(2.5),
+                            borderRadius: BorderRadius.circular(AppRadii.xs),
                           ),
                         ),
                       ),
@@ -423,7 +423,7 @@ class DailyTrendsChart extends StatelessWidget {
           Row(
             children: [
               const Text(
-                'Daily Trends',
+                '每日趋势',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
@@ -475,7 +475,7 @@ class DailyStudyTimeChart extends StatelessWidget {
           Row(
             children: [
               const Text(
-                'Daily Study Time',
+                '每日学习时长',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w700,

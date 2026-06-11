@@ -77,7 +77,7 @@ class AppTheme {
             vertical: AppSpacing.x4,
           ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.pill),
+            borderRadius: BorderRadius.circular(AppRadii.md),
           ),
           textStyle: GoogleFonts.notoSansSc(
             fontSize: 15,
@@ -93,19 +93,46 @@ class AppTheme {
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
+          minimumSize: const Size.fromHeight(48),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.pill),
+            borderRadius: BorderRadius.circular(AppRadii.md),
           ),
         ),
       ),
-      dividerTheme: const DividerThemeData(
-        color: Color(0x14000000),
+      dividerTheme: DividerThemeData(
+        color: AppColors.inkSubtle.withValues(alpha: 0.08),
         thickness: 1,
         space: 1,
       ),
       bottomSheetTheme: const BottomSheetThemeData(
         backgroundColor: AppColors.surface,
         elevation: 0,
+      ),
+      snackBarTheme: SnackBarThemeData(
+        backgroundColor: AppColors.ink,
+        contentTextStyle: const TextStyle(
+          color: AppColors.surface,
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppRadii.md),
+        ),
+        behavior: SnackBarBehavior.floating,
+      ),
+      dialogTheme: DialogThemeData(
+        backgroundColor: AppColors.surface,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppRadii.lg),
+        ),
+        titleTextStyle: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.w700,
+          color: AppColors.ink,
+        ).copyWith(
+          fontFamily: GoogleFonts.notoSansSc().fontFamily,
+        ),
       ),
     );
   }

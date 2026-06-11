@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -9,6 +11,7 @@ import '../state/learning_session.dart';
 
 class LearningSessionScreen extends ConsumerStatefulWidget {
   final String vocabId;
+
   /// Legacy alias for total session size. Kept so existing call sites
   /// still compile. Split 70/30 between new and review slots.
   final int count;
@@ -23,8 +26,7 @@ class LearningSessionScreen extends ConsumerStatefulWidget {
       _LearningSessionScreenState();
 }
 
-class _LearningSessionScreenState
-    extends ConsumerState<LearningSessionScreen> {
+class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
   late DateTime _sessionStart;
   Duration _accumulated = Duration.zero;
 
@@ -33,16 +35,7 @@ class _LearningSessionScreenState
     super.initState();
     _sessionStart = DateTime.now();
     Future.microtask(() {
-      // 70% new / 30% review split. The total is `count` so the
-      // session feels the same size as before the split.
-      final total = widget.count;
-      final review = (total * 0.3).round().clamp(1, total - 1);
-      final newC = total - review;
-      ref.read(learningSessionProvider.notifier).start(
-            vocabId: widget.vocabId,
-            newCount: newC,
-            reviewCount: review,
-          );
+      ref.read(learningSessionProvider.notifier).start(vocabId: widget.vocabId);
     });
   }
 
@@ -54,10 +47,14 @@ class _LearningSessionScreenState
     final minutes = (_accumulated.inSeconds / 60).round();
     if (minutes > 0) {
       try {
-        ReviewRepository.instance
-            .addStudyMinutes(DateTime.now(), minutes);
+        ReviewRepository.instance.addStudyMinutes(DateTime.now(), minutes);
       } catch (_) {}
     }
+    // Flush any pending debounced writes (review state, activity) so
+    // data isn't lost if the user kills the app right after answering.
+    try {
+      ReviewRepository.instance.flush();
+    } catch (_) {}
     super.dispose();
   }
 
@@ -70,8 +67,8 @@ class _LearningSessionScreenState
     final progress = session.phase == SessionPhase.finished
         ? 1.0
         : (session.phase == SessionPhase.wrongDetail
-            ? (session.currentIndex + 1) / session.questions.length
-            : session.progress);
+              ? (session.currentIndex + 1) / session.questions.length
+              : session.progress);
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -86,22 +83,40 @@ class _LearningSessionScreenState
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x6, AppSpacing.x3, AppSpacing.x6, AppSpacing.x4,
+              AppSpacing.x6,
+              AppSpacing.x3,
+              AppSpacing.x6,
+              AppSpacing.x4,
             ),
             child: _ProgressBar(progress: progress),
           ),
           Expanded(
-            child: switch (session.phase) {
-              SessionPhase.loading =>
-                const Center(child: CircularProgressIndicator()),
-              SessionPhase.asking => _AskingView(session: session),
-              SessionPhase.wrongDetail => _WrongDetailView(session: session),
-              SessionPhase.finished => _FinishedView(
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 250),
+              switchInCurve: Curves.easeOutCubic,
+              switchOutCurve: Curves.easeIn,
+              transitionBuilder: (child, anim) =>
+                  FadeTransition(opacity: anim, child: child),
+              child: switch (session.phase) {
+                SessionPhase.loading => const Center(
+                  child: CircularProgressIndicator(),
+                ),
+                SessionPhase.asking => _AskingView(
+                  session: session,
+                  key: const ValueKey('asking'),
+                ),
+                SessionPhase.wrongDetail => _WrongDetailView(
+                  session: session,
+                  key: const ValueKey('wrong'),
+                ),
+                SessionPhase.finished => _FinishedView(
+                  key: const ValueKey('finished'),
                   total: session.questions.length,
                   correct: session.correctCount,
                   onClose: () => Navigator.of(context).pop(),
                 ),
-            },
+              },
+            ),
           ),
         ],
       ),
@@ -111,7 +126,7 @@ class _LearningSessionScreenState
 
 class _AskingView extends ConsumerWidget {
   final LearningSessionState session;
-  const _AskingView({required this.session});
+  const _AskingView({required this.session, super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -152,10 +167,13 @@ class _AskingView extends ConsumerWidget {
           // Their Y position never changes between questions, so the
           // user's tap position stays consistent (good for muscle memory).
           Padding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x6, AppSpacing.x3, AppSpacing.x6, AppSpacing.x5,
+            padding: EdgeInsets.fromLTRB(
+              AppSpacing.x6,
+              AppSpacing.x3,
+              AppSpacing.x6,
+              AppSpacing.x5 + MediaQuery.of(context).padding.bottom,
             ),
-              child: Column(
+            child: Column(
               children: [
                 for (var i = 0; i < q.options.length; i++) ...[
                   if (i > 0) const SizedBox(height: AppSpacing.x2),
@@ -182,10 +200,9 @@ class _AskingView extends ConsumerWidget {
   }
 }
 
-
 class _WrongDetailView extends ConsumerStatefulWidget {
   final LearningSessionState session;
-  const _WrongDetailView({required this.session});
+  const _WrongDetailView({required this.session, super.key});
 
   @override
   ConsumerState<_WrongDetailView> createState() => _WrongDetailViewState();
@@ -199,8 +216,9 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
     super.initState();
     // Read the persisted favorite state for this word.
     try {
-      _isFavorite =
-          ReviewRepository.instance.favorites.contains(widget.session.currentQuestion!.word.id);
+      _isFavorite = ReviewRepository.instance.favorites.contains(
+        widget.session.currentQuestion!.word.id,
+      );
     } catch (_) {}
   }
 
@@ -223,7 +241,7 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
     if (mounted) {
       // Quiet acknowledgment. The user just removed a word — no need
       // to explain what 'removed' means in the toast.
-      ref.read(learningSessionProvider.notifier).next();
+      ref.read(learningSessionProvider.notifier).next(skipRetry: true);
     }
   }
 
@@ -233,21 +251,34 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
     final w = q.word;
     return SafeArea(
       child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(AppSpacing.x6, AppSpacing.x3, AppSpacing.x6, AppSpacing.x6),
+        padding: const EdgeInsets.fromLTRB(
+          AppSpacing.x6,
+          AppSpacing.x3,
+          AppSpacing.x6,
+          AppSpacing.x6,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: AppSpacing.x2),
             Row(
               children: [
-                const Icon(Icons.cancel_rounded, color: AppColors.danger, size: 20),
-                const SizedBox(width: 6),
-                const Text('答错了', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.danger)),
-                const Spacer(),
-                _FavoriteChip(
-                  filled: _isFavorite,
-                  onTap: _toggleFavorite,
+                const Icon(
+                  Icons.cancel_rounded,
+                  color: AppColors.danger,
+                  size: 20,
                 ),
+                const SizedBox(width: 6),
+                const Text(
+                  '答错了',
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.danger,
+                  ),
+                ),
+                const Spacer(),
+                _FavoriteChip(filled: _isFavorite, onTap: _toggleFavorite),
                 const SizedBox(width: 8),
                 _SmallIconButton(
                   icon: Icons.remove_circle_outline,
@@ -263,12 +294,16 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
             SizedBox(
               width: double.infinity,
               child: FilledButton(
-                onPressed: () => ref.read(learningSessionProvider.notifier).next(),
+                onPressed: () =>
+                    ref.read(learningSessionProvider.notifier).next(),
                 style: FilledButton.styleFrom(
                   backgroundColor: AppColors.danger,
                   minimumSize: const Size.fromHeight(48),
                 ),
-                child: const Text('记住了,下一题 →', style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+                child: const Text(
+                  '继续，稍后再测 →',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+                ),
               ),
             ),
           ],
@@ -380,7 +415,11 @@ class _HeroWordDetail extends StatelessWidget {
           children: [
             Row(
               children: [
-                PillTag.domain(word.domain.toUpperCase(), color: _domainColor(word.domain), icon: Icons.bolt),
+                PillTag.domain(
+                  word.domain.toUpperCase(),
+                  color: _domainColor(word.domain),
+                  icon: Icons.bolt,
+                ),
                 const SizedBox(width: 6),
                 PillTag.level(word.level),
               ],
@@ -397,11 +436,26 @@ class _HeroWordDetail extends StatelessWidget {
             const SizedBox(height: 2),
             Text('${word.phonetic}  ${word.pos}', style: AppTheme.phonetic()),
             const SizedBox(height: AppSpacing.x4),
-            Text(word.translation, style: const TextStyle(fontSize: 16, color: AppColors.ink, fontWeight: FontWeight.w600, height: 1.5)),
+            Text(
+              word.translation,
+              style: const TextStyle(
+                fontSize: 16,
+                color: AppColors.ink,
+                fontWeight: FontWeight.w600,
+                height: 1.5,
+              ),
+            ),
             if (word.exampleEn.isNotEmpty) ...[
               const SizedBox(height: AppSpacing.x4),
               _DetailRow(label: '例句', content: word.exampleEn),
-              Text(word.exampleCn, style: const TextStyle(fontSize: 13, color: AppColors.inkMuted, height: 1.5)),
+              Text(
+                word.exampleCn,
+                style: const TextStyle(
+                  fontSize: 13,
+                  color: AppColors.inkMuted,
+                  height: 1.5,
+                ),
+              ),
             ],
             if (word.synonyms.isNotEmpty) ...[
               const SizedBox(height: AppSpacing.x3),
@@ -419,11 +473,16 @@ class _HeroWordDetail extends StatelessWidget {
 
   Color _domainColor(String domain) {
     switch (domain) {
-      case 'cs': return AppColors.domainCs;
-      case 'python': return AppColors.domainPython;
-      case 'ai': return AppColors.domainAi;
-      case 'web': return AppColors.domainWeb;
-      default: return AppColors.primary;
+      case 'cs':
+        return AppColors.domainCs;
+      case 'python':
+        return AppColors.domainPython;
+      case 'ai':
+        return AppColors.domainAi;
+      case 'web':
+        return AppColors.domainWeb;
+      default:
+        return AppColors.primary;
     }
   }
 }
@@ -437,8 +496,24 @@ class _DetailRow extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('$label  ', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: AppColors.inkSubtle)),
-        Expanded(child: Text(content, style: const TextStyle(fontSize: 13, color: AppColors.ink, height: 1.5))),
+        Text(
+          '$label  ',
+          style: const TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w700,
+            color: AppColors.inkSubtle,
+          ),
+        ),
+        Expanded(
+          child: Text(
+            content,
+            style: const TextStyle(
+              fontSize: 13,
+              color: AppColors.ink,
+              height: 1.5,
+            ),
+          ),
+        ),
       ],
     );
   }
@@ -454,13 +529,14 @@ class _AudioButton extends StatefulWidget {
 
 class _AudioButtonState extends State<_AudioButton> {
   bool _warned = false;
+  StreamSubscription<bool>? _availabilitySub;
 
   @override
   void initState() {
     super.initState();
     // If the bundled audio asset is missing for this word, surface a
     // single short toast per session. No dev-talk about v0.4.5 history.
-    TtsService.instance.availabilityStream.listen((ok) {
+    _availabilitySub = TtsService.instance.availabilityStream.listen((ok) {
       if (!ok && mounted && !_warned) {
         _warned = true;
         ScaffoldMessenger.of(context).showSnackBar(
@@ -471,6 +547,12 @@ class _AudioButtonState extends State<_AudioButton> {
         );
       }
     });
+  }
+
+  @override
+  void dispose() {
+    _availabilitySub?.cancel();
+    super.dispose();
   }
 
   Future<void> _onTap() async {
@@ -485,20 +567,24 @@ class _AudioButtonState extends State<_AudioButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 40, height: 40,
+      width: 40,
+      height: 40,
       decoration: BoxDecoration(
         color: AppColors.primary.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(AppRadii.sm),
       ),
       child: IconButton(
-        icon: const Icon(Icons.volume_up_rounded, size: 20, color: AppColors.primary),
+        icon: const Icon(
+          Icons.volume_up_rounded,
+          size: 20,
+          color: AppColors.primary,
+        ),
         onPressed: _onTap,
         padding: EdgeInsets.zero,
       ),
     );
   }
 }
-
 
 class _QuestionPrompt extends StatelessWidget {
   final QuestionType type;
@@ -526,15 +612,35 @@ class _QuestionPrompt extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: AppCard(
-        padding: const EdgeInsets.fromLTRB(AppSpacing.x5, AppSpacing.x4, AppSpacing.x5, AppSpacing.x5),
+        padding: const EdgeInsets.fromLTRB(
+          AppSpacing.x5,
+          AppSpacing.x4,
+          AppSpacing.x5,
+          AppSpacing.x5,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.inkMuted, letterSpacing: 1.2)),
-                Text('${currentIndex + 1} / $questionCount', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.inkMuted)),
+                Text(
+                  label,
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.inkMuted,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+                Text(
+                  '${currentIndex + 1} / $questionCount',
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.inkMuted,
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: AppSpacing.x4),
@@ -550,7 +656,15 @@ class _QuestionPrompt extends StatelessWidget {
       case QuestionType.seeWordPickMeaning:
         return _WordPrompt(word: prompt, wordObj: word);
       case QuestionType.seeMeaningPickWord:
-        return Text(prompt, style: const TextStyle(fontSize: 18, color: AppColors.ink, fontWeight: FontWeight.w600, height: 1.5));
+        return Text(
+          prompt,
+          style: const TextStyle(
+            fontSize: 18,
+            color: AppColors.ink,
+            fontWeight: FontWeight.w600,
+            height: 1.5,
+          ),
+        );
       case QuestionType.listenPickMeaning:
         return _WordPrompt(word: prompt, wordObj: word);
       case QuestionType.seeContextPickWord:
@@ -587,16 +701,34 @@ class _ContextPrompt extends StatelessWidget {
   final String sentence;
   const _ContextPrompt({required this.sentence});
 
+  /// Returns the substring after the first space, or the full sentence
+  /// if there is no space (defensive: avoids indexOf -1 bug).
+  static String _afterFirstSpace(String s) {
+    final idx = s.indexOf(' ');
+    return idx >= 0 ? s.substring(idx + 1) : s;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('选择划线词的正确意思:', style: TextStyle(fontSize: 12, color: AppColors.inkMuted, fontWeight: FontWeight.w600)),
+        const Text(
+          '选择划线词的正确意思:',
+          style: TextStyle(
+            fontSize: 12,
+            color: AppColors.inkMuted,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         const SizedBox(height: AppSpacing.x3),
         RichText(
           text: TextSpan(
-            style: const TextStyle(fontSize: 16, color: AppColors.ink, height: 1.6),
+            style: const TextStyle(
+              fontSize: 16,
+              color: AppColors.ink,
+              height: 1.6,
+            ),
             children: [
               const TextSpan(text: '...'),
               TextSpan(
@@ -608,7 +740,7 @@ class _ContextPrompt extends StatelessWidget {
                   backgroundColor: AppColors.primary.withValues(alpha: 0.1),
                 ),
               ),
-              TextSpan(text: sentence.substring(sentence.indexOf(' ') + 1)),
+              TextSpan(text: _afterFirstSpace(sentence)),
             ],
           ),
         ),
@@ -647,7 +779,8 @@ class _OptionTile extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                width: 32, height: 32,
+                width: 32,
+                height: 32,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: AppColors.primary.withValues(alpha: 0.1),
@@ -687,28 +820,33 @@ class _ProgressBar extends StatelessWidget {
   const _ProgressBar({required this.progress});
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          '${(progress * 100).round()}%',
-          style: const TextStyle(
-            fontSize: 12,
-            color: AppColors.inkMuted,
-            fontWeight: FontWeight.w600,
+    return TweenAnimationBuilder<double>(
+      tween: Tween<double>(begin: 0.0, end: progress),
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeOutCubic,
+      builder: (context, value, _) => Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            '${(value * 100).round()}%',
+            style: const TextStyle(
+              fontSize: 12,
+              color: AppColors.inkMuted,
+              fontWeight: FontWeight.w600,
+            ),
           ),
-        ),
-        const SizedBox(height: 4),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(AppRadii.pill),
-          child: LinearProgressIndicator(
-            value: progress,
-            minHeight: 6,
-            backgroundColor: AppColors.surfaceMuted,
-            valueColor: const AlwaysStoppedAnimation(AppColors.primary),
+          const SizedBox(height: 4),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(AppRadii.pill),
+            child: LinearProgressIndicator(
+              value: value,
+              minHeight: 6,
+              backgroundColor: AppColors.surfaceMuted,
+              valueColor: const AlwaysStoppedAnimation(AppColors.primary),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
@@ -717,7 +855,12 @@ class _FinishedView extends ConsumerWidget {
   final int total;
   final int correct;
   final VoidCallback onClose;
-  const _FinishedView({required this.total, required this.correct, required this.onClose});
+  const _FinishedView({
+    required this.total,
+    required this.correct,
+    required this.onClose,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -733,11 +876,25 @@ class _FinishedView extends ConsumerWidget {
             children: [
               Text(passed ? '🎉' : '💪', style: const TextStyle(fontSize: 48)),
               const SizedBox(height: AppSpacing.x4),
-              Text(passed ? '本组完成' : '继续加油', style: AppTheme.wordDisplay(size: 24, color: AppColors.ink)),
+              Text(
+                passed ? '本组完成' : '继续加油',
+                style: AppTheme.wordDisplay(size: 24, color: AppColors.ink),
+              ),
               const SizedBox(height: AppSpacing.x2),
-              Text('$correct / $total  ·  正确率 $pct%', style: const TextStyle(fontSize: 14, color: AppColors.inkMuted, fontWeight: FontWeight.w500)),
+              Text(
+                '$correct / $total  ·  正确率 $pct%',
+                style: const TextStyle(
+                  fontSize: 14,
+                  color: AppColors.inkMuted,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
               const SizedBox(height: AppSpacing.x6),
-              FilledButton(onPressed: onClose, style: FilledButton.styleFrom(minimumSize: const Size(180, 48)), child: const Text('完成')),
+              FilledButton(
+                onPressed: onClose,
+                style: FilledButton.styleFrom(minimumSize: const Size(180, 48)),
+                child: const Text('完成'),
+              ),
             ],
           ),
         ),
@@ -745,5 +902,3 @@ class _FinishedView extends ConsumerWidget {
     );
   }
 }
-
-

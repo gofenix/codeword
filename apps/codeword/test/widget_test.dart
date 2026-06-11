@@ -24,6 +24,11 @@ void main() {
     expect(notifier.totalLearned, 1);
   });
 
+  test('ReviewStateNotifier can hydrate from an existing state map', () {
+    final notifier = ReviewStateNotifier({'w1': ReviewState.fresh('w1')});
+    expect(notifier.state.keys, contains('w1'));
+  });
+
   test('Empty stats are zero across the board', () {
     final notifier = ReviewStateNotifier();
     final s = notifier.stats();
@@ -55,12 +60,19 @@ void main() {
 
     final s = notifier.stats(now: now);
     expect(s.totalSeen, 5);
-    expect(s.totalLearned, 4,
-        reason: 'a/b/c/e have repetitions=1 (good/easy), '
-            "d's quality=0 reset repetitions to 0");
+    expect(
+      s.totalLearned,
+      4,
+      reason:
+          'a/b/c/e have repetitions=1 (good/easy), '
+          "d's quality=0 reset repetitions to 0",
+    );
     expect(s.newToday, 3, reason: 'a, b, c first-seen today with reps=1');
-    expect(s.reviewsToday, 4,
-        reason: 'a, b, c, d all reviewed today (e was yesterday)');
+    expect(
+      s.reviewsToday,
+      4,
+      reason: 'a, b, c, d all reviewed today (e was yesterday)',
+    );
     expect(s.last7Days.length, 7);
   });
 
@@ -87,9 +99,14 @@ void main() {
       );
     }
     final s = notifier.stats(now: now.add(const Duration(days: 5)));
-    final familiar = s.mastery.firstWhere((b) => b.level == MasteryLevel.familiar).count;
-    expect(familiar, 1,
-        reason: 'Word with 5 easy reps + ef~2.5 should land in familiar');
+    final familiar = s.mastery
+        .firstWhere((b) => b.level == MasteryLevel.familiar)
+        .count;
+    expect(
+      familiar,
+      1,
+      reason: 'Word with 5 easy reps + ef~2.5 should land in familiar',
+    );
   });
 
   test('Per-vocab progress surfaces built-in vocabs even with 0 progress', () {
@@ -104,13 +121,88 @@ void main() {
     }
   });
 
-  test('Session phase has no feedback phase (asking → wrongDetail is a direct transition)', () {
-    // v0.4.0 had a 'feedback' phase that the user complained was redundant.
-    // v0.4.1+ removed it — correct answers go directly asking → asking
-    // (next question), wrong answers go asking → wrongDetail.
-    final names = SessionPhase.values.map((p) => p.name).toList();
-    expect(names, isNot(contains('feedback')),
-        reason: 'No standalone feedback phase — should be removed');
+  test(
+    'Session phase has no feedback phase (asking → wrongDetail is a direct transition)',
+    () {
+      // v0.4.0 had a 'feedback' phase that the user complained was redundant.
+      // v0.4.1+ removed it — correct answers go directly asking → asking
+      // (next question), wrong answers go asking → wrongDetail.
+      final names = SessionPhase.values.map((p) => p.name).toList();
+      expect(
+        names,
+        isNot(contains('feedback')),
+        reason: 'No standalone feedback phase — should be removed',
+      );
+    },
+  );
+
+  test(
+    'Wrong answer queues the same word for retry later in the session',
+    () async {
+      final words = [
+        _word('test_001', 'latency', '延迟'),
+        _word('test_002', 'throughput', '吞吐量'),
+      ];
+      final container = ProviderContainer(
+        overrides: [
+          vocabCacheProvider('test').overrideWith((ref) async => words),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      final notifier = container.read(learningSessionProvider.notifier);
+      await notifier.start(
+        vocabId: 'test',
+        minSessionSize: 2,
+        maxSessionSize: 2,
+      );
+      final first = container.read(learningSessionProvider).currentQuestion!;
+      final wrongIndex = first.correctIndex == 0 ? 1 : 0;
+
+      notifier.answer(wrongIndex);
+      expect(
+        container.read(learningSessionProvider).phase,
+        SessionPhase.wrongDetail,
+      );
+      expect(container.read(learningSessionProvider).questions.length, 2);
+
+      notifier.next();
+      final after = container.read(learningSessionProvider);
+      expect(after.phase, SessionPhase.asking);
+      expect(after.questions.length, 3);
+      expect(after.questions.last.word.id, first.word.id);
+      expect(after.questions.last.source, SessionQuestionSource.retry);
+      expect(after.questions.last.attemptNo, first.attemptNo + 1);
+    },
+  );
+
+  test('Session finishes when there are no due or new words', () async {
+    final word = _word('test_001', 'latency', '延迟');
+    final container = ProviderContainer(
+      overrides: [
+        reviewStateProvider.overrideWith(
+          (ref) => ReviewStateNotifier({
+            word.id: ReviewState(
+              wordId: word.id,
+              easiness: 250,
+              interval: 1,
+              repetitions: 1,
+              dueAt: DateTime.now().add(const Duration(days: 1)),
+              lastReviewedAt: DateTime.now(),
+            ),
+          }),
+        ),
+        vocabCacheProvider('test').overrideWith((ref) async => [word]),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    final notifier = container.read(learningSessionProvider.notifier);
+    await notifier.start(vocabId: 'test');
+    final state = container.read(learningSessionProvider);
+    expect(state.phase, SessionPhase.finished);
+    expect(state.questions, isEmpty);
+    expect(state.currentQuestion, isNull);
   });
 
   // ----- LlmConfig / LlmClient ------------------------------------------------
@@ -176,55 +268,65 @@ void main() {
     expect(captured, 'http://localhost:11434/v1/chat/completions');
   });
 
-  test('LlmClient sends Authorization header and the configured model', () async {
-    Map<String, String>? capturedHeaders;
-    String? capturedBody;
-    final transport = _CapturingTransport((url, headers, body) {
-      capturedHeaders = headers;
-      capturedBody = body;
-      return '{"choices":[{"message":{"content":"hi"}}]}';
-    });
-    final c = LlmClient(
-      config: const LlmConfig(
-        baseUrl: 'https://api.openai.com/v1',
-        apiKey: 'sk-test',
-        model: 'gpt-4o-mini',
-      ),
-      transport: transport,
-    );
-    final resp = await c.chat(const LlmChatRequest(
-      model: 'gpt-4o-mini',
-      messages: [LlmMessage(role: 'user', content: 'hi')],
-    ));
-    expect(resp.content, 'hi');
-    expect(capturedHeaders?['Authorization'], 'Bearer sk-test');
-    expect(capturedHeaders?['Content-Type'], 'application/json');
-    expect(capturedBody, contains('"model":"gpt-4o-mini"'));
-    expect(capturedBody, contains('"role":"user"'));
-    expect(capturedBody, contains('"content":"hi"'));
-    expect(capturedBody, contains('"stream":false'));
-  });
+  test(
+    'LlmClient sends Authorization header and the configured model',
+    () async {
+      Map<String, String>? capturedHeaders;
+      String? capturedBody;
+      final transport = _CapturingTransport((url, headers, body) {
+        capturedHeaders = headers;
+        capturedBody = body;
+        return '{"choices":[{"message":{"content":"hi"}}]}';
+      });
+      final c = LlmClient(
+        config: const LlmConfig(
+          baseUrl: 'https://api.openai.com/v1',
+          apiKey: 'sk-test',
+          model: 'gpt-4o-mini',
+        ),
+        transport: transport,
+      );
+      final resp = await c.chat(
+        const LlmChatRequest(
+          model: 'gpt-4o-mini',
+          messages: [LlmMessage(role: 'user', content: 'hi')],
+        ),
+      );
+      expect(resp.content, 'hi');
+      expect(capturedHeaders?['Authorization'], 'Bearer sk-test');
+      expect(capturedHeaders?['Content-Type'], 'application/json');
+      expect(capturedBody, contains('"model":"gpt-4o-mini"'));
+      expect(capturedBody, contains('"role":"user"'));
+      expect(capturedBody, contains('"content":"hi"'));
+      expect(capturedBody, contains('"stream":false'));
+    },
+  );
 
-  test('LlmClient falls back to config.model when request.model is empty', () async {
-    String? capturedBody;
-    final transport = _CapturingTransport((url, headers, body) {
-      capturedBody = body;
-      return '{"choices":[{"message":{"content":"ok"}}]}';
-    });
-    final c = LlmClient(
-      config: const LlmConfig(
-        baseUrl: 'https://api.openai.com/v1',
-        apiKey: 'k',
-        model: 'fallback-model',
-      ),
-      transport: transport,
-    );
-    await c.chat(const LlmChatRequest(
-      model: '', // request omits model
-      messages: [LlmMessage(role: 'user', content: 'hi')],
-    ));
-    expect(capturedBody, contains('"model":"fallback-model"'));
-  });
+  test(
+    'LlmClient falls back to config.model when request.model is empty',
+    () async {
+      String? capturedBody;
+      final transport = _CapturingTransport((url, headers, body) {
+        capturedBody = body;
+        return '{"choices":[{"message":{"content":"ok"}}]}';
+      });
+      final c = LlmClient(
+        config: const LlmConfig(
+          baseUrl: 'https://api.openai.com/v1',
+          apiKey: 'k',
+          model: 'fallback-model',
+        ),
+        transport: transport,
+      );
+      await c.chat(
+        const LlmChatRequest(
+          model: '', // request omits model
+          messages: [LlmMessage(role: 'user', content: 'hi')],
+        ),
+      );
+      expect(capturedBody, contains('"model":"fallback-model"'));
+    },
+  );
 
   test('LlmClient throws LlmException on 4xx', () async {
     final transport = _CapturingTransport(
@@ -239,19 +341,20 @@ void main() {
       transport: transport,
     );
     expect(
-      () => c.chat(const LlmChatRequest(
-        model: 'm',
-        messages: [LlmMessage(role: 'user', content: 'x')],
-      )),
-      throwsA(isA<LlmException>()
-          .having((e) => e.statusCode, 'statusCode', 401)),
+      () => c.chat(
+        const LlmChatRequest(
+          model: 'm',
+          messages: [LlmMessage(role: 'user', content: 'x')],
+        ),
+      ),
+      throwsA(
+        isA<LlmException>().having((e) => e.statusCode, 'statusCode', 401),
+      ),
     );
   });
 
   test('LlmClient throws LlmException on malformed JSON', () async {
-    final transport = _CapturingTransport(
-      (url, headers, body) => 'not json',
-    );
+    final transport = _CapturingTransport((url, headers, body) => 'not json');
     final c = LlmClient(
       config: const LlmConfig(
         baseUrl: 'https://api.openai.com/v1',
@@ -261,10 +364,12 @@ void main() {
       transport: transport,
     );
     expect(
-      () => c.chat(const LlmChatRequest(
-        model: 'm',
-        messages: [LlmMessage(role: 'user', content: 'x')],
-      )),
+      () => c.chat(
+        const LlmChatRequest(
+          model: 'm',
+          messages: [LlmMessage(role: 'user', content: 'x')],
+        ),
+      ),
       throwsA(isA<LlmException>()),
     );
   });
@@ -273,11 +378,13 @@ void main() {
     final store = LlmConfigStore(InMemoryLlmConfigBackend());
     final initial = await store.read();
     expect(initial.model, LlmConfig.defaultModel);
-    await store.write(const LlmConfig(
-      baseUrl: 'https://example.com/v1',
-      apiKey: 'sk-test-12345678',
-      model: 'm',
-    ));
+    await store.write(
+      const LlmConfig(
+        baseUrl: 'https://example.com/v1',
+        apiKey: 'sk-test-12345678',
+        model: 'm',
+      ),
+    );
     final after = await store.read();
     expect(after.baseUrl, 'https://example.com/v1');
     expect(after.apiKey, 'sk-test-12345678');
@@ -291,10 +398,22 @@ void main() {
   });
 }
 
+VocabWord _word(String id, String word, String translation) => VocabWord(
+  id: id,
+  word: word,
+  phonetic: '',
+  pos: 'n.',
+  translation: translation,
+  exampleEn: 'The $word matters in system design.',
+  exampleCn: '',
+  domain: 'cs',
+  level: 'B2',
+);
+
 /// Test transport that captures the request and returns a fixture body.
 class _CapturingTransport implements LlmTransport {
   final String Function(String url, Map<String, String> headers, String body)
-      _handler;
+  _handler;
   _CapturingTransport(this._handler);
 
   @override

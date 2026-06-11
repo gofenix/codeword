@@ -20,7 +20,7 @@ class StatsScreen extends ConsumerWidget {
           AppSpacing.x5,
           AppSpacing.x4,
           AppSpacing.x5,
-          AppSpacing.x6,
+          AppSpacing.x8,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +28,7 @@ class StatsScreen extends ConsumerWidget {
             const Text(
               '统计',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 28,
                 fontWeight: FontWeight.w700,
                 color: AppColors.ink,
                 height: 1.2,

@@ -179,6 +179,7 @@ class LlmChatRequest {
   });
 
   Map<String, dynamic> toJson() => {
+        'model': model,
         'messages': [for (final m in messages) m.toJson()],
         'temperature': temperature,
         if (maxTokens != null) 'max_tokens': maxTokens,
@@ -259,7 +260,7 @@ class LlmClient {
     final url = _chatCompletionsUrl(config.baseUrl);
     final body = jsonEncode({
       ...request.toJson(),
-      'model': request.model.isNotEmpty ? request.model : config.model,
+      if (request.model.isEmpty) 'model': config.model,
     });
     final headers = {
       'Content-Type': 'application/json',
@@ -296,11 +297,14 @@ class LlmClient {
   ///   - https://api.openai.com/v1            → /chat/completions
   ///   - https://api.openai.com/v1/           → /chat/completions
   ///   - http://localhost:11434/v1            → /chat/completions
+  ///   - https://open.bigmodel.cn/api/paas/v4 → /chat/completions (no /v1)
   ///   - https://example.com                  → /v1/chat/completions
   static String _chatCompletionsUrl(String baseUrl) {
     var b = baseUrl.trim();
-    if (b.endsWith('/')) b = b.substring(0, b.length - 1);
-    if (!b.endsWith('/v1')) b = '$b/v1';
+    while (b.endsWith('/')) b = b.substring(0, b.length - 1);
+    // If URL already ends with a /vN style path segment (v1, v2, v4, etc.),
+    // don't append /v1 — the user has already specified the API version.
+    if (!RegExp(r'/v\d+$').hasMatch(b)) b = '$b/v1';
     return '$b/chat/completions';
   }
 }

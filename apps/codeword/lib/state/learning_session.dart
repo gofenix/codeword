@@ -26,22 +26,16 @@ const List<String> kBuiltinVocabIds = [
 ///   模糊  : EF ≥ 1.8 AND reps ≥ 1   — seen, shaky
 ///   陌生  : state exists, reps == 0 — failed at least once
 ///   待学习: no state at all         — not yet seen
-enum MasteryLevel {
-  familiar,
-  recognized,
-  vague,
-  unfamiliar,
-  unseen,
-}
+enum MasteryLevel { familiar, recognized, vague, unfamiliar, unseen }
 
 extension MasteryLevelX on MasteryLevel {
   String get label => switch (this) {
-        MasteryLevel.familiar => '熟悉',
-        MasteryLevel.recognized => '认识',
-        MasteryLevel.vague => '模糊',
-        MasteryLevel.unfamiliar => '陌生',
-        MasteryLevel.unseen => '待学习',
-      };
+    MasteryLevel.familiar => '熟悉',
+    MasteryLevel.recognized => '认识',
+    MasteryLevel.vague => '模糊',
+    MasteryLevel.unfamiliar => '陌生',
+    MasteryLevel.unseen => '待学习',
+  };
 
   int get rank => index; // higher rank = better mastery
 }
@@ -150,18 +144,129 @@ class ReviewStats {
     last90DaysActivity: _emptyBool90,
   );
 
-  static const _emptyInt30 = <int>[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+  static const _emptyInt30 = <int>[
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+  ];
   static const _emptyBool90 = <bool>[
-    false,false,false,false,false,false,false,false,false,
-    false,false,false,false,false,false,false,false,false,
-    false,false,false,false,false,false,false,false,false,
-    false,false,false,false,false,false,false,false,false,
-    false,false,false,false,false,false,false,false,false,
-    false,false,false,false,false,false,false,false,false,
-    false,false,false,false,false,false,false,false,false,
-    false,false,false,false,false,false,false,false,false,
-    false,false,false,false,false,false,false,false,false,
-    false,false,false,false,false,false,false,false,false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
   ];
 }
 
@@ -170,12 +275,28 @@ class ReviewStats {
 /// leaves the device.
 final reviewStateProvider =
     StateNotifierProvider<ReviewStateNotifier, Map<String, ReviewState>>(
-  (ref) => ReviewStateNotifier(),
-);
+      (ref) => ReviewStateNotifier(),
+    );
 
-class ReviewStateNotifier
-    extends StateNotifier<Map<String, ReviewState>> {
-  ReviewStateNotifier() : super(const {});
+class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
+  ReviewStateNotifier([Map<String, ReviewState>? initialState])
+    : super(initialState ?? _loadInitialState());
+
+  static Map<String, ReviewState> _loadInitialState() {
+    try {
+      return ReviewRepository.instance.all;
+    } catch (_) {
+      return const {};
+    }
+  }
+
+  Set<String> _removedWordIds() {
+    try {
+      return ReviewRepository.instance.removed;
+    } catch (_) {
+      return const {};
+    }
+  }
 
   /// Apply a SM-2 schedule for an answer and persist to file + memory.
   ReviewState recordAnswer({
@@ -194,8 +315,7 @@ class ReviewStateNotifier
     return next;
   }
 
-  int get totalLearned =>
-      state.values.where((s) => s.repetitions >= 1).length;
+  int get totalLearned => state.values.where((s) => s.repetitions >= 1).length;
   int get totalDue {
     final now = DateTime.now();
     return state.values
@@ -209,21 +329,21 @@ class ReviewStateNotifier
   ///
   /// Returns entries sorted by most-overdue first. If [now] is omitted
   /// we use the wall clock.
-  Future<List<PulseWordEntry>> dueWords({
-    int limit = 3,
-    DateTime? now,
-  }) async {
+  Future<List<PulseWordEntry>> dueWords({int limit = 3, DateTime? now}) async {
     final at = now ?? DateTime.now();
-    final dueEntries = state.entries
-        .where((e) =>
-            e.value.dueAt != null && !e.value.dueAt!.isAfter(at))
-        .toList()
-      ..sort((a, b) => a.value.dueAt!.compareTo(b.value.dueAt!));
+    final removed = _removedWordIds();
+    final dueEntries =
+        state.entries
+            .where(
+              (e) =>
+                  !removed.contains(e.key) &&
+                  e.value.dueAt != null &&
+                  !e.value.dueAt!.isAfter(at),
+            )
+            .toList()
+          ..sort((a, b) => a.value.dueAt!.compareTo(b.value.dueAt!));
     if (dueEntries.isEmpty) return const [];
-    return _hydrate(
-      entries: dueEntries.take(limit).toList(),
-      at: at,
-    );
+    return _hydrate(entries: dueEntries.take(limit).toList(), at: at);
   }
 
   /// Top-N recommended new words. Picks the vocab with the lowest
@@ -231,29 +351,25 @@ class ReviewStateNotifier
   /// of those.
   ///
   /// Falls back to `ai_core` if every vocab is fully learned.
-  Future<List<PulseWordEntry>> recommendedNewWords({
-    int limit = 3,
-  }) async {
+  Future<List<PulseWordEntry>> recommendedNewWords({int limit = 3}) async {
     final stats = this.stats();
     String? targetId;
+    double lowestCoverage = double.infinity;
     for (final v in stats.perVocab) {
       final unseen = v.totalWords - v.seen;
-      if (unseen > 0) {
-        targetId ??= v.vocabId;
-        // Prefer the least-covered vocab so we expose breadth.
-        if (v.coverage < (targetId == v.vocabId ? 1.0 : 1.0)) {
-          if (v.coverage < 0.4) {
-            targetId = v.vocabId;
-            break;
-          }
-        }
+      if (unseen > 0 && v.coverage < lowestCoverage) {
+        lowestCoverage = v.coverage;
+        targetId = v.vocabId;
       }
     }
     targetId ??= 'ai_core';
     final list = await ContentLoader.loadList(targetId);
     final seenIds = state.keys.toSet();
-    final newOnes =
-        list.where((w) => !seenIds.contains(w.id)).take(limit).toList();
+    final removed = _removedWordIds();
+    final newOnes = list
+        .where((w) => !seenIds.contains(w.id) && !removed.contains(w.id))
+        .take(limit)
+        .toList();
     return [
       for (final w in newOnes)
         PulseWordEntry(
@@ -284,17 +400,17 @@ class ReviewStateNotifier
           final w = byId[wid];
           if (w == null) continue;
           final s = state[wid]!;
-          final overdue = s.dueAt == null
-              ? 0
-              : at.difference(s.dueAt!).inDays;
-          out.add(PulseWordEntry(
-            word: w.word,
-            translation: w.translation,
-            phonetic: w.phonetic,
-            level: w.level,
-            vocabId: vid,
-            overdueDays: overdue < 0 ? 0 : overdue,
-          ));
+          final overdue = s.dueAt == null ? 0 : at.difference(s.dueAt!).inDays;
+          out.add(
+            PulseWordEntry(
+              word: w.word,
+              translation: w.translation,
+              phonetic: w.phonetic,
+              level: w.level,
+              vocabId: vid,
+              overdueDays: overdue < 0 ? 0 : overdue,
+            ),
+          );
         }
       } catch (_) {
         // Vocab not bundled — skip.
@@ -332,8 +448,7 @@ class ReviewStateNotifier
       final ef = s.easiness / 100.0;
       final bucket = _classify(ef, s.repetitions);
       masteryCount[bucket] = (masteryCount[bucket] ?? 0) + 1;
-      final v = perVocabStats.putIfAbsent(
-          vocabId, () => _MutableVocabStats());
+      final v = perVocabStats.putIfAbsent(vocabId, () => _MutableVocabStats());
       v.seen++;
       v.sumEf += s.easiness;
       if (s.repetitions >= 1) v.learned++;
@@ -380,16 +495,18 @@ class ReviewStateNotifier
       final m = perVocabStats[list.id] ?? _MutableVocabStats();
       masteryCount[MasteryLevel.unseen] =
           (masteryCount[MasteryLevel.unseen] ?? 0) + (total - m.seen);
-      perVocabOut.add(VocabProgress(
-        vocabId: list.id,
-        name: list.name,
-        emoji: list.emoji,
-        totalWords: total,
-        seen: m.seen,
-        learned: m.learned,
-        due: m.due,
-        averageEasiness: m.seen == 0 ? 0 : m.sumEf / m.seen / 100.0,
-      ));
+      perVocabOut.add(
+        VocabProgress(
+          vocabId: list.id,
+          name: list.name,
+          emoji: list.emoji,
+          totalWords: total,
+          seen: m.seen,
+          learned: m.learned,
+          due: m.due,
+          averageEasiness: m.seen == 0 ? 0 : m.sumEf / m.seen / 100.0,
+        ),
+      );
     }
     final mastery = <MasteryBucket>[
       for (final l in MasteryLevel.values)
@@ -413,8 +530,12 @@ class ReviewStateNotifier
       studyMinutesToday: minsToday,
       totalStudyMinutes: totalMins,
       last30Days: last30.isEmpty ? List<int>.filled(30, 0) : last30,
-      last30DaysMinutes: last30Min.isEmpty ? List<int>.filled(30, 0) : last30Min,
-      last90DaysActivity: last90.isEmpty ? List<bool>.filled(90, false) : last90,
+      last30DaysMinutes: last30Min.isEmpty
+          ? List<int>.filled(30, 0)
+          : last30Min,
+      last90DaysActivity: last90.isEmpty
+          ? List<bool>.filled(90, false)
+          : last90,
     );
   }
 
@@ -422,8 +543,10 @@ class ReviewStateNotifier
     if (reps == 0) return MasteryLevel.unfamiliar;
     if (ef >= 2.5 && reps >= 3) return MasteryLevel.familiar;
     if (ef >= 2.3 && reps >= 2) return MasteryLevel.recognized;
-    if (ef >= 1.8 && reps >= 1) return MasteryLevel.vague;
-    return MasteryLevel.unfamiliar;
+    // Any word with reps >= 1 and ef < 2.3 is "vague" — the user has
+    // answered correctly at least once but retention is shaky. Don't
+    // fall through to "unfamiliar" which is reserved for reps == 0.
+    return MasteryLevel.vague;
   }
 
   static String _vocabIdFromWordId(String wid) {
@@ -482,8 +605,10 @@ class PulseWordEntry {
 }
 
 /// Lazy-loaded vocabulary content cache. Loads JSON on first request.
-final vocabCacheProvider =
-    FutureProvider.family<List<VocabWord>, String>((ref, listId) async {
+final vocabCacheProvider = FutureProvider.family<List<VocabWord>, String>((
+  ref,
+  listId,
+) async {
   return ContentLoader.loadList(listId);
 });
 
@@ -492,7 +617,14 @@ final vocabMetaProvider = Provider<Map<String, VocabList>>((ref) {
   return {for (final l in kBuiltinLists) l.id: l};
 });
 
-enum QuestionType { seeWordPickMeaning, seeMeaningPickWord, listenPickMeaning, seeContextPickWord }
+enum QuestionType {
+  seeWordPickMeaning,
+  seeMeaningPickWord,
+  listenPickMeaning,
+  seeContextPickWord,
+}
+
+enum SessionQuestionSource { due, newWord, retry }
 
 /// One question in a learning session.
 class LearningQuestion {
@@ -501,6 +633,8 @@ class LearningQuestion {
   final List<String> options;
   final int correctIndex;
   final String prompt;
+  final SessionQuestionSource source;
+  final int attemptNo;
 
   const LearningQuestion({
     required this.word,
@@ -508,6 +642,8 @@ class LearningQuestion {
     required this.options,
     required this.correctIndex,
     this.prompt = '',
+    this.source = SessionQuestionSource.newWord,
+    this.attemptNo = 0,
   });
 }
 
@@ -521,6 +657,7 @@ class LearningSessionState {
   final int correctCount;
   final AnswerQuality? lastAnswer;
   final int? lastSelectedIndex;
+  final bool lastQuestionQueuedForRetry;
 
   const LearningSessionState({
     required this.phase,
@@ -529,14 +666,15 @@ class LearningSessionState {
     required this.correctCount,
     this.lastAnswer,
     this.lastSelectedIndex,
+    this.lastQuestionQueuedForRetry = false,
   });
 
   factory LearningSessionState.loading() => const LearningSessionState(
-        phase: SessionPhase.loading,
-        questions: [],
-        currentIndex: 0,
-        correctCount: 0,
-      );
+    phase: SessionPhase.loading,
+    questions: [],
+    currentIndex: 0,
+    correctCount: 0,
+  );
 
   LearningQuestion? get currentQuestion =>
       (currentIndex < questions.length) ? questions[currentIndex] : null;
@@ -547,29 +685,33 @@ class LearningSessionState {
   bool get isCorrect => lastAnswer != null && lastAnswer != AnswerQuality.again;
 }
 
-class LearningSessionNotifier
-    extends StateNotifier<LearningSessionState> {
+class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   final Ref ref;
   final Random _rng = Random();
 
   LearningSessionNotifier(this.ref) : super(LearningSessionState.loading());
 
   /// Build a session: pick `count` words from `vocabId`, generate mixed
-  /// Build a session that respects the SM-2 memory curve:
-  ///   - [newCount] words the user has never seen (or has reps == 0)
-  ///   - [reviewCount] words that are due for review right now
-  ///   - interleaved, with due words prioritized (so the user keeps
-  ///     their streak of answered reviews).
+  /// Build a session that respects the SM-2 memory curve.
   ///
-  /// If there aren't enough due words, the remainder is filled with
-  /// new words (or any seen-but-not-mastered words).
+  /// Adaptive sizing: the session size is driven by how many words are
+  /// actually due for review right now, not a fixed batch size.
+  ///
+  ///   - All due words (dueAt <= now) are included first.
+  ///   - If due words are fewer than [minSessionSize], pad with new
+  ///     words up to [minSessionSize].
+  ///   - If due words exceed [maxSessionSize], cap at [maxSessionSize]
+  ///     (user can start another session after).
+  ///   - New words are only added when there is room after due words.
   Future<void> start({
     required String vocabId,
-    int newCount = 7,
-    int reviewCount = 3,
+    int minSessionSize = 5,
+    int maxSessionSize = 20,
   }) async {
     state = LearningSessionState.loading();
-    final all = await ref.read(vocabCacheProvider(vocabId).future);
+    final raw = await ref.read(vocabCacheProvider(vocabId).future);
+    final removed = _removedWordIds();
+    final all = raw.where((w) => !removed.contains(w.id)).toList();
     if (all.isEmpty) {
       state = const LearningSessionState(
         phase: SessionPhase.finished,
@@ -581,60 +723,59 @@ class LearningSessionNotifier
     }
 
     final now = DateTime.now();
-    // Pull the user's persisted review state from the global provider
-    // (the LearningSessionNotifier's own `state` is the session
-    // machine state, not the per-word review map).
     final reviewMap = ref.read(reviewStateProvider);
     final allWordIds = all.map((w) => w.id).toSet();
-
-    // Words in this vocab that have a review state.
     final seenIds = reviewMap.keys.where(allWordIds.contains).toSet();
 
-    // Due = has dueAt <= now. Exclude words never seen (those are
-    // "new", not "due").
-    final dueWords = all
-        .where((w) =>
-            seenIds.contains(w.id) &&
-            reviewMap[w.id]!.dueAt != null &&
-            !reviewMap[w.id]!.dueAt!.isAfter(now))
-        .toList()
+    // Due = has dueAt <= now. These are the highest priority.
+    final dueWords =
+        all
+            .where(
+              (w) =>
+                  seenIds.contains(w.id) &&
+                  reviewMap[w.id]!.dueAt != null &&
+                  !reviewMap[w.id]!.dueAt!.isAfter(now),
+            )
+            .toList()
+          ..shuffle(_rng);
+
+    // New = never seen.
+    final newWords = all.where((w) => !seenIds.contains(w.id)).toList()
       ..shuffle(_rng);
 
-    // New = never seen. From the *current vocab only* so each vocab
-    // teaches itself.
-    final newWords = all
-        .where((w) => !seenIds.contains(w.id))
-        .toList()
-      ..shuffle(_rng);
+    // Adaptive sizing:
+    // 1. Take ALL due words (capped at maxSessionSize).
+    // 2. Pad with new words up to minSessionSize, or up to maxSessionSize
+    //    if there is still room.
+    final pickedDue = dueWords.take(maxSessionSize).toList();
+    final remainingSlots = (pickedDue.length >= minSessionSize)
+        ? (maxSessionSize - pickedDue.length)
+        : (minSessionSize - pickedDue.length);
+    final pickedNew = newWords
+        .take(remainingSlots.clamp(0, maxSessionSize))
+        .toList();
 
-    // Take what we need, in priority order:
-    // 1. due (overdue reviews are the highest priority for memory
-    //    curve)
-    // 2. new
-    final pickedDue = dueWords.take(reviewCount).toList();
-    final pickedNew = newWords.take(newCount - pickedDue.length).toList();
+    final picked = [
+      for (final w in pickedDue) _PickedWord(w, SessionQuestionSource.due),
+      for (final w in pickedNew) _PickedWord(w, SessionQuestionSource.newWord),
+    ]..shuffle(_rng);
 
-    // If we couldn't fill newCount slots with truly-new words, backfill
-    // with already-seen words (those with reps > 0) so the session
-    // always has [newCount] items.
-    final pickedNewList = [...pickedNew];
-    if (pickedNewList.length < newCount) {
-      final remaining = all
-          .where((w) =>
-              !pickedNewList.contains(w) && !pickedDue.contains(w))
-          .toList()
-        ..shuffle(_rng);
-      pickedNewList.addAll(
-          remaining.take(newCount - pickedNewList.length));
+    if (picked.isEmpty) {
+      state = const LearningSessionState(
+        phase: SessionPhase.finished,
+        questions: [],
+        currentIndex: 0,
+        correctCount: 0,
+      );
+      return;
     }
-
-    final picked = [...pickedDue, ...pickedNewList]..shuffle(_rng);
 
     final types = QuestionType.values;
     final questions = picked.asMap().entries.map((entry) {
-      final w = entry.value;
+      final picked = entry.value;
+      final w = picked.word;
       final t = types[entry.key % types.length];
-      return _buildQuestion(w, t, all);
+      return _buildQuestion(w, t, all, source: picked.source);
     }).toList();
 
     state = LearningSessionState(
@@ -645,42 +786,128 @@ class LearningSessionNotifier
     );
   }
 
-  LearningQuestion _buildQuestion(VocabWord w, QuestionType type, List<VocabWord> all) {
+  Set<String> _removedWordIds() {
+    try {
+      return ReviewRepository.instance.removed;
+    } catch (_) {
+      return const {};
+    }
+  }
+
+  LearningQuestion _buildQuestion(
+    VocabWord w,
+    QuestionType type,
+    List<VocabWord> all, {
+    SessionQuestionSource source = SessionQuestionSource.newWord,
+    int attemptNo = 0,
+  }) {
     final pool = all.where((o) => o.id != w.id).toList()..shuffle(_rng);
     switch (type) {
       case QuestionType.seeWordPickMeaning:
-        final distractors = pool.take(3).map((o) => o.translation).toList();
+        // Deduplicate distractors by translation so two options never
+        // share the same correct answer text.
+        final seen = <String>{w.translation};
+        final distractors = <String>[];
+        for (final o in pool) {
+          if (!seen.contains(o.translation) && distractors.length < 3) {
+            distractors.add(o.translation);
+            seen.add(o.translation);
+          }
+        }
+        // If we couldn't fill 3 distractors, pad with placeholder text.
+        while (distractors.length < 3) {
+          distractors.add('—');
+        }
         final options = [...distractors, w.translation]..shuffle(_rng);
         return LearningQuestion(
-          word: w, type: type, options: options,
+          word: w,
+          type: type,
+          options: options,
           correctIndex: options.indexOf(w.translation),
           prompt: w.word,
+          source: source,
+          attemptNo: attemptNo,
         );
       case QuestionType.seeMeaningPickWord:
-        final distractors = pool.take(3).map((o) => o.word).toList();
+        final seen = <String>{w.word};
+        final distractors = <String>[];
+        for (final o in pool) {
+          if (!seen.contains(o.word) && distractors.length < 3) {
+            distractors.add(o.word);
+            seen.add(o.word);
+          }
+        }
+        while (distractors.length < 3) {
+          distractors.add('—');
+        }
         final options = [...distractors, w.word]..shuffle(_rng);
         return LearningQuestion(
-          word: w, type: type, options: options,
+          word: w,
+          type: type,
+          options: options,
           correctIndex: options.indexOf(w.word),
           prompt: w.translation,
+          source: source,
+          attemptNo: attemptNo,
         );
       case QuestionType.listenPickMeaning:
-        final distractors = pool.take(3).map((o) => o.translation).toList();
+        final seen = <String>{w.translation};
+        final distractors = <String>[];
+        for (final o in pool) {
+          if (!seen.contains(o.translation) && distractors.length < 3) {
+            distractors.add(o.translation);
+            seen.add(o.translation);
+          }
+        }
+        while (distractors.length < 3) {
+          distractors.add('—');
+        }
         final options = [...distractors, w.translation]..shuffle(_rng);
         return LearningQuestion(
-          word: w, type: type, options: options,
+          word: w,
+          type: type,
+          options: options,
           correctIndex: options.indexOf(w.translation),
           prompt: w.word,
+          source: source,
+          attemptNo: attemptNo,
         );
       case QuestionType.seeContextPickWord:
-        final distractors = pool.take(3).map((o) => o.word).toList();
+        final seen = <String>{w.word};
+        final distractors = <String>[];
+        for (final o in pool) {
+          if (!seen.contains(o.word) && distractors.length < 3) {
+            distractors.add(o.word);
+            seen.add(o.word);
+          }
+        }
+        while (distractors.length < 3) {
+          distractors.add('—');
+        }
         final options = [...distractors, w.word]..shuffle(_rng);
         return LearningQuestion(
-          word: w, type: type, options: options,
+          word: w,
+          type: type,
+          options: options,
           correctIndex: options.indexOf(w.word),
           prompt: w.exampleEn,
+          source: source,
+          attemptNo: attemptNo,
         );
     }
+  }
+
+  LearningQuestion _buildRetryQuestion(LearningQuestion q) {
+    final types = QuestionType.values;
+    final nextType = types[(types.indexOf(q.type) + 1) % types.length];
+    final pool = state.questions.map((item) => item.word).toList();
+    return _buildQuestion(
+      q.word,
+      nextType,
+      pool,
+      source: SessionQuestionSource.retry,
+      attemptNo: q.attemptNo + 1,
+    );
   }
 
   /// User picks an option; correct → immediately next, wrong → wrongDetail.
@@ -688,15 +915,20 @@ class LearningSessionNotifier
     if (state.phase != SessionPhase.asking) return;
     final q = state.currentQuestion!;
     final correct = optionIndex == q.correctIndex;
-    final quality = correct ? AnswerQuality.good : AnswerQuality.again;
-    ref.read(reviewStateProvider.notifier).recordAnswer(
-          wordId: q.word.id,
-          quality: quality.toSm2Quality(),
-        );
+    final quality = correct
+        ? (q.source == SessionQuestionSource.retry
+              ? AnswerQuality.hard
+              : AnswerQuality.good)
+        : AnswerQuality.again;
+    ref
+        .read(reviewStateProvider.notifier)
+        .recordAnswer(wordId: q.word.id, quality: quality.toSm2Quality());
     if (correct) {
       final nextIndex = state.currentIndex + 1;
       state = LearningSessionState(
-        phase: nextIndex >= state.questions.length ? SessionPhase.finished : SessionPhase.asking,
+        phase: nextIndex >= state.questions.length
+            ? SessionPhase.finished
+            : SessionPhase.asking,
         questions: state.questions,
         currentIndex: nextIndex,
         correctCount: state.correctCount + 1,
@@ -709,18 +941,23 @@ class LearningSessionNotifier
         correctCount: state.correctCount,
         lastAnswer: quality,
         lastSelectedIndex: optionIndex,
+        lastQuestionQueuedForRetry: true,
       );
     }
   }
 
   /// Advance from wrong-detail to next question (or finish).
-  void next() {
+  void next({bool skipRetry = false}) {
     if (state.phase != SessionPhase.wrongDetail) return;
+    final current = state.currentQuestion!;
+    final questions = skipRetry
+        ? state.questions
+        : [...state.questions, _buildRetryQuestion(current)];
     final nextIndex = state.currentIndex + 1;
-    if (nextIndex >= state.questions.length) {
+    if (nextIndex >= questions.length) {
       state = LearningSessionState(
         phase: SessionPhase.finished,
-        questions: state.questions,
+        questions: questions,
         currentIndex: nextIndex,
         correctCount: state.correctCount,
       );
@@ -728,14 +965,22 @@ class LearningSessionNotifier
     }
     state = LearningSessionState(
       phase: SessionPhase.asking,
-      questions: state.questions,
+      questions: questions,
       currentIndex: nextIndex,
       correctCount: state.correctCount,
     );
   }
 }
 
-final learningSessionProvider = StateNotifierProvider.autoDispose<
-    LearningSessionNotifier, LearningSessionState>(
-  (ref) => LearningSessionNotifier(ref),
-);
+class _PickedWord {
+  final VocabWord word;
+  final SessionQuestionSource source;
+
+  const _PickedWord(this.word, this.source);
+}
+
+final learningSessionProvider =
+    StateNotifierProvider.autoDispose<
+      LearningSessionNotifier,
+      LearningSessionState
+    >((ref) => LearningSessionNotifier(ref));

@@ -65,7 +65,7 @@ extension AnswerQualityX on AnswerQuality {
   int toSm2Quality() {
     switch (this) {
       case AnswerQuality.again:
-        return 1;
+        return 0; // SM-2 quality 0 = complete blackout (no recall at all)
       case AnswerQuality.hard:
         return 3;
       case AnswerQuality.good:

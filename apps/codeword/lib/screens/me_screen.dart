@@ -23,7 +23,7 @@ class MeScreen extends ConsumerWidget {
           AppSpacing.x5,
           AppSpacing.x4,
           AppSpacing.x5,
-          AppSpacing.x4,
+          AppSpacing.x8,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +31,7 @@ class MeScreen extends ConsumerWidget {
             Text(
               '我的',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 28,
                 fontWeight: FontWeight.w700,
                 color: AppColors.ink,
                 height: 1.2,
@@ -429,7 +429,6 @@ class _SettingRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppCard(
-      onTap: () {},
       padding: const EdgeInsets.symmetric(
         horizontal: AppSpacing.x4,
         vertical: AppSpacing.x3,
@@ -471,11 +470,6 @@ class _SettingRow extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          const Icon(
-            Icons.chevron_right,
-            color: AppColors.inkSubtle,
-            size: 20,
           ),
         ],
       ),

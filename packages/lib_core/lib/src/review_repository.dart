@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -15,6 +16,7 @@ import 'models/vocab_list.dart';
 /// Everything stays on disk; nothing is synced anywhere.
 class ReviewRepository {
   static ReviewRepository? _instance;
+  static Completer<ReviewRepository>? _initCompleter;
 
   final Map<String, ReviewState> _cache;
   final Map<String, int> _activity;
@@ -26,7 +28,16 @@ class ReviewRepository {
   late final String _filePath;
   late final String _activityFilePath;
   late final String _userDataFilePath;
-  bool _loaded = false;
+
+  /// Debounce timer for batched disk writes. Cancels and reschedules on
+  /// each mutation so rapid-fire calls (e.g. fast answering) coalesce
+  /// into a single disk write.
+  Timer? _saveDebounce;
+
+  /// Which files need to be flushed on the next debounce tick.
+  bool _dirtyReview = false;
+  bool _dirtyActivity = false;
+  bool _dirtyUserData = false;
 
   ReviewRepository._(
     this._cache,
@@ -39,30 +50,40 @@ class ReviewRepository {
 
   static Future<ReviewRepository> init() async {
     if (_instance != null) return _instance!;
-    final dir = await getApplicationDocumentsDirectory();
-    final filePath = p.join(dir.path, 'codeword_review_state.json');
-    final activityPath = p.join(dir.path, 'codeword_activity.json');
-    final userDataPath = p.join(dir.path, 'codeword_user_data.json');
-    final cache = await _loadFromFile(filePath);
-    final activity = await _loadActivityFromFile(activityPath);
-    final userData = await _loadUserDataFromFile(userDataPath);
-    _instance = ReviewRepository._(
-      cache,
-      activity,
-      (userData['favorites'] as List?)?.cast<String>().toSet() ?? <String>{},
-      (userData['removed'] as List?)?.cast<String>().toSet() ?? <String>{},
-      ((userData['openCounts'] as Map?) ?? {}).map(
-        (k, v) => MapEntry(k.toString(), (v as num).toInt()),
-      ),
-      ((userData['studyMinutes'] as Map?) ?? {}).map(
-        (k, v) => MapEntry(k.toString(), (v as num).toInt()),
-      ),
-    );
-    _instance!._filePath = filePath;
-    _instance!._activityFilePath = activityPath;
-    _instance!._userDataFilePath = userDataPath;
-    _instance!._loaded = true;
-    return _instance!;
+    // If init is already in progress, await the same completer.
+    if (_initCompleter != null) return _initCompleter!.future;
+    _initCompleter = Completer<ReviewRepository>();
+    try {
+      final dir = await getApplicationDocumentsDirectory();
+      final filePath = p.join(dir.path, 'codeword_review_state.json');
+      final activityPath = p.join(dir.path, 'codeword_activity.json');
+      final userDataPath = p.join(dir.path, 'codeword_user_data.json');
+      final cache = await _loadFromFile(filePath);
+      final activity = await _loadActivityFromFile(activityPath);
+      final userData = await _loadUserDataFromFile(userDataPath);
+      _instance = ReviewRepository._(
+        cache,
+        activity,
+        (userData['favorites'] as List?)?.cast<String>().toSet() ?? <String>{},
+        (userData['removed'] as List?)?.cast<String>().toSet() ?? <String>{},
+        ((userData['openCounts'] as Map?) ?? {}).map(
+          (k, v) => MapEntry(k.toString(), (v as num).toInt()),
+        ),
+        ((userData['studyMinutes'] as Map?) ?? {}).map(
+          (k, v) => MapEntry(k.toString(), (v as num).toInt()),
+        ),
+      );
+      _instance!._filePath = filePath;
+      _instance!._activityFilePath = activityPath;
+      _instance!._userDataFilePath = userDataPath;
+      _initCompleter!.complete(_instance!);
+      _initCompleter = null;
+      return _instance!;
+    } catch (e) {
+      _initCompleter!.completeError(e);
+      _initCompleter = null;
+      rethrow;
+    }
   }
 
   static ReviewRepository get instance {
@@ -141,7 +162,8 @@ class ReviewRepository {
 
   Future<void> put(String wordId, ReviewState state) async {
     _cache[wordId] = state;
-    await _save();
+    _dirtyReview = true;
+    _scheduleSave();
   }
 
   Map<String, ReviewState> get all => Map.unmodifiable(_cache);
@@ -159,7 +181,8 @@ class ReviewRepository {
   Future<void> recordActivity(DateTime when) async {
     final key = _dateKey(when);
     _activity[key] = (_activity[key] ?? 0) + 1;
-    await _saveActivity();
+    _dirtyActivity = true;
+    _scheduleSave();
   }
 
   int activityOn(DateTime when) => _activity[_dateKey(when)] ?? 0;
@@ -234,14 +257,16 @@ class ReviewRepository {
   Future<void> recordOpen(DateTime when) async {
     final key = _dateKey(when);
     _openCounts[key] = (_openCounts[key] ?? 0) + 1;
-    await _saveUserData();
+    _dirtyUserData = true;
+    _scheduleSave();
   }
 
   Future<void> addStudyMinutes(DateTime when, int minutes) async {
     if (minutes <= 0) return;
     final key = _dateKey(when);
     _studyMinutes[key] = (_studyMinutes[key] ?? 0) + minutes;
-    await _saveUserData();
+    _dirtyUserData = true;
+    _scheduleSave();
   }
 
   Future<bool> toggleFavorite(String wordId) async {
@@ -250,13 +275,48 @@ class ReviewRepository {
     } else {
       _favorites.add(wordId);
     }
-    await _saveUserData();
+    _dirtyUserData = true;
+    _scheduleSave();
     return _favorites.contains(wordId);
   }
 
   Future<void> markRemoved(String wordId) async {
     _removed.add(wordId);
-    await _saveUserData();
+    _dirtyUserData = true;
+    _scheduleSave();
+  }
+
+  // --- Debounced save -----------------------------------------------
+
+  /// Schedule a batched save. Multiple mutations within 300ms coalesce
+  /// into a single disk write. Call [flush] to force immediate write.
+  void _scheduleSave() {
+    _saveDebounce?.cancel();
+    _saveDebounce = Timer(const Duration(milliseconds: 300), _flushInternal);
+  }
+
+  /// Force-write any pending dirty state to disk immediately.
+  Future<void> flush() async {
+    _saveDebounce?.cancel();
+    _saveDebounce = null;
+    await _flushInternal();
+  }
+
+  Future<void> _flushInternal() async {
+    // Capture and clear flags atomically before any await, so
+    // mutations that happen *during* our I/O (e.g. a put() call
+    // between _save() and _saveActivity()) set the flag again and
+    // re-schedule their own flush instead of being silently wiped.
+    final doReview = _dirtyReview;
+    _dirtyReview = false;
+    final doActivity = _dirtyActivity;
+    _dirtyActivity = false;
+    final doUserData = _dirtyUserData;
+    _dirtyUserData = false;
+
+    if (doReview) await _save();
+    if (doActivity) await _saveActivity();
+    if (doUserData) await _saveUserData();
   }
 
   // --- date helpers ----------------------------------------------

@@ -31,13 +31,13 @@ class AppColors {
   // Domain tag colors (one per built-in vocabulary)
   static const Color domainCs = Color(0xFF6366F1); // CS
   static const Color domainPython = Color(0xFF3776AB); // Python
-  static const Color domainAi = Color(0xFF10B981); // AI
+  static const Color domainAi = Color(0xFF059669); // AI (darker green, distinct from primary)
   static const Color domainLlm = Color(0xFF8B5CF6); // LLM
   static const Color domainWeb = Color(0xFFF59E0B); // Web
   static const Color domainDevops = Color(0xFF14B8A6); // DevOps
   static const Color domainData = Color(0xFFEC4899); // Data
   static const Color domainSecurity = Color(0xFFEF4444); // Security
-  static const Color domainProduct = Color(0xFF8B5CF6); // Product
+  static const Color domainProduct = Color(0xFFF97316); // Product (orange, matches catalog)
 
   // Level pills (CEFR-style)
   static const Color levelA1 = Color(0xFF86EFAC);
@@ -46,6 +46,13 @@ class AppColors {
   static const Color levelB2 = Color(0xFFFCA5A5);
   static const Color levelC1 = Color(0xFFC4B5FD);
   static const Color levelC2 = Color(0xFFF9A8D4);
+
+  // Mastery distribution
+  static const Color masteryFamiliar = Color(0xFF10B981);
+  static const Color masteryRecognized = Color(0xFF34D399);
+  static const Color masteryVague = Color(0xFFF59E0B);
+  static const Color masteryUnfamiliar = Color(0xFFFB923C);
+  static const Color masteryUnseen = Color(0xFFE5E7EB);
 }
 
 class AppRadii {

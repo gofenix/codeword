@@ -70,8 +70,9 @@ class _HomeShellState extends State<HomeShell> {
         backgroundColor: AppColors.surface,
         indicatorColor: AppColors.primarySoft,
         surfaceTintColor: Colors.transparent,
+        elevation: 1,
         height: 64,
-        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.style_outlined),
@@ -197,17 +198,16 @@ class _Greeting extends StatelessWidget {
                     ? '今天还没开始'
                     : '今天学了 $newToday 个新词',
                 style: const TextStyle(
-                  fontSize: 22,
+                  fontSize: 28,
                   color: AppColors.ink,
                   fontWeight: FontWeight.w700,
-                  height: 1.3,
+                  height: 1.2,
                 ),
               ),
             ],
           ),
         ),
-        if (streak > 0)
-          Container(
+        Container(
             padding: const EdgeInsets.symmetric(
               horizontal: AppSpacing.x3,
               vertical: 6,
@@ -219,15 +219,18 @@ class _Greeting extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.local_fire_department,
-                  size: 16, color: AppColors.warning),
+              Icon(
+                streak > 0 ? Icons.local_fire_department : Icons.local_fire_department_outlined,
+                size: 16,
+                color: streak > 0 ? AppColors.warning : AppColors.inkSubtle,
+              ),
               const SizedBox(width: 4),
               Text(
-                streak == 0 ? '开始' : '连续 $streak 天',
-                style: const TextStyle(
+                streak == 0 ? '开始连续' : '连续 $streak 天',
+                style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
-                  color: AppColors.warning,
+                  color: streak > 0 ? AppColors.warning : AppColors.inkSubtle,
                 ),
               ),
             ],
@@ -522,13 +525,12 @@ class _StreakHeatmap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Translate "today" back into Mon..Sun for the day labels.
     final now = DateTime.now();
-    final mondayBasedToday = (now.weekday == DateTime.sunday) ? 6 : now.weekday - 1;
+    // Translate each of the 7 days to its correct weekday label.
     final dayLabels = List<String>.generate(7, (i) {
-      // i=0 is 6 days ago. Shift forward by `mondayBasedToday` to land on today.
-      final idx = (i + mondayBasedToday) % 7;
-      return const ['一', '二', '三', '四', '五', '六', '日'][idx];
+      final day = now.subtract(Duration(days: 6 - i));
+      final weekday = day.weekday == DateTime.sunday ? 6 : day.weekday - 1;
+      return const ['一', '二', '三', '四', '五', '六', '日'][weekday];
     });
 
     final totalThisWeek = last7.fold<int>(0, (a, b) => a + b);

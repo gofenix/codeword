@@ -194,9 +194,9 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(
-            AppSpacing.x6,
+            AppSpacing.x5,
             AppSpacing.x4,
-            AppSpacing.x6,
+            AppSpacing.x5,
             AppSpacing.x8,
           ),
           child: Column(

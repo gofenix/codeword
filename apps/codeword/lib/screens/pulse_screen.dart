@@ -27,9 +27,9 @@ class PulseScreen extends ConsumerWidget {
     return SafeArea(
       child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(
-          AppSpacing.x6,
+          AppSpacing.x5,
           AppSpacing.x4,
-          AppSpacing.x6,
+          AppSpacing.x5,
           AppSpacing.x8,
         ),
         child: Column(
@@ -70,7 +70,7 @@ class _PulseHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final now = DateTime.now();
     const weekdayNames = ['一', '二', '三', '四', '五', '六', '日'];
-    final weekday = weekdayNames[now.weekday - 1];
+    final weekday = weekdayNames[now.weekday - 1]; // Mon=1..Sun=7, maps to 0..6
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -121,7 +121,7 @@ class _FocusCard extends StatelessWidget {
           Text(
             _greeting(),
             style: const TextStyle(
-              fontSize: 18,
+              fontSize: 15,
               fontWeight: FontWeight.w700,
               color: AppColors.ink,
               height: 1.3,
@@ -306,15 +306,9 @@ class _PulseListCard extends ConsumerWidget {
           ),
           const SizedBox(height: AppSpacing.x4),
           if (!hasEntries)
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: AppSpacing.x2),
-              child: Text(
-                emptyHint,
-                style: const TextStyle(
-                  fontSize: 14,
-                  color: AppColors.inkMuted,
-                ),
-              ),
+            EmptyHint(
+              icon: icon,
+              message: emptyHint,
             )
           else
             for (var i = 0; i < entries.length; i++) ...[
@@ -338,9 +332,6 @@ class _PulseListCard extends ConsumerWidget {
                 style: FilledButton.styleFrom(
                   padding: const EdgeInsets.symmetric(vertical: AppSpacing.x3),
                   backgroundColor: accent,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(AppRadii.md),
-                  ),
                 ),
                 child: const Text(
                   '开始',
