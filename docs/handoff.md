@@ -57,9 +57,9 @@ codeword/
 │       │   └── qwerty_tts_resolver.dart  # Youdao URL builder
 │       ├── screens/
 │       │   ├── learning_session_screen.dart   # stateful AskingView/WrongDetailView; auto-play on listen
-│       │   ├── me_screen.dart                  # 371-list grid grouped by category
+│       │   ├── discovery_screen.dart           # search + category-filtered catalog grid
 │       │   ├── reading_screen.dart             # _vocabNameFor() function removed
-│       │   ├── pulse_screen.dart               # primaryVocabId nullable fallback
+│       │   ├── settings_screen.dart            # profile, AI config, storage
 │       │   └── stats_widgets.dart              # qwertyPalette
 │       └── state/learning_session.dart        # many changes
 └── packages/
@@ -212,9 +212,9 @@ All downstream code reads it synchronously. Tests must override too — see
    properly. The `QuestionType` enum and `_buildQuestion` switch are the
    entry points.
 
-2. **Search/filter for the 371 lists.** Currently a flat scroll of 6
-   category buckets. May want a search bar in `me_screen.dart` that filters
-   by name.
+2. **~~Search/filter for the 371 lists.~~** Done: `discovery_screen.dart`
+   now has a search bar and category chips that filter by name, description,
+   and category.
 
 3. **Asset bundle size.** 121 MB JSON in debug; release compresses to
    ~40-50 MB. Could trim `domain` field from each word (it's redundant
