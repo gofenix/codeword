@@ -204,8 +204,9 @@ class _AskingViewState extends ConsumerState<_AskingView> {
 
   _OptionState _optionState(int i, int correctIndex) {
     if (_selectedIndex == null) return _OptionState.normal;
-    if (i == correctIndex) return _OptionState.correct;
-    if (i == _selectedIndex) return _OptionState.wrong;
+    if (i == _selectedIndex) {
+      return i == correctIndex ? _OptionState.correct : _OptionState.wrong;
+    }
     return _OptionState.dimmed;
   }
 
