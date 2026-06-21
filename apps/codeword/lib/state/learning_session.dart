@@ -4,19 +4,21 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_core/lib_core.dart';
 import 'package:lib_content/lib_content.dart';
 
-/// All built-in vocabulary ids in stable order — used for the library tab
-/// and to know which JSON assets are bundled.
-const List<String> kBuiltinVocabIds = [
-  'cs_core',
-  'python_core',
-  'ai_core',
-  'llm_core',
-  'web_core',
-  'devops_core',
-  'data_core',
-  'security_core',
-  'product_core',
-];
+/// First qwerty list to use as a default entry point when stats() has no
+/// per-vocab data yet. Mirrors the manifest's first item by (category, name).
+const String kDefaultVocabId = 'qwerty_biomedical_terms';
+
+/// Extract the full vocab id (matching `VocabList.id` in the manifest)
+/// from a qwerty word id.
+///
+/// `qwerty_<slug>_<5digit>` → `qwerty_<slug>`. Old `cs_001` / `ai_022` ids
+/// from the pre-qwerty era are wiped by ReviewRepository's schemaVersion
+/// gate, so we don't need to handle them here.
+String _extractVocabIdFromWordId(String wid) {
+  final parts = wid.split('_');
+  if (parts.length < 3 || parts[0] != 'qwerty') return wid;
+  return 'qwerty_${parts.sublist(1, parts.length - 1).join('_')}';
+}
 
 /// Mastery bucket for the distribution chart.
 ///
@@ -350,9 +352,12 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
   /// coverage that still has unseen words, then returns the first few
   /// of those.
   ///
-  /// Falls back to `ai_core` if every vocab is fully learned.
-  Future<List<PulseWordEntry>> recommendedNewWords({int limit = 3}) async {
-    final stats = this.stats();
+    /// Falls back to `qwerty_biomedical_terms` if every vocab is fully learned.
+  Future<List<PulseWordEntry>> recommendedNewWords({
+    int limit = 3,
+    required List<VocabList> catalog,
+  }) async {
+    final stats = this.stats(catalog: catalog);
     String? targetId;
     double lowestCoverage = double.infinity;
     for (final v in stats.perVocab) {
@@ -362,7 +367,7 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
         targetId = v.vocabId;
       }
     }
-    targetId ??= 'ai_core';
+    targetId ??= kDefaultVocabId;
     final list = await ContentLoader.loadList(targetId);
     final seenIds = state.keys.toSet();
     final removed = _removedWordIds();
@@ -388,7 +393,7 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
   }) async {
     final byVocab = <String, List<String>>{};
     for (final e in entries) {
-      final vid = _vocabIdFromWordId(e.key);
+      final vid = _extractVocabIdFromWordId(e.key);
       byVocab.putIfAbsent(vid, () => []).add(e.key);
     }
     final out = <PulseWordEntry>[];
@@ -422,7 +427,9 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
 
   /// All stats for the home + stats pages. Pulls activity from the
   /// persistence layer if initialized; otherwise returns zero stats.
-  ReviewStats stats({DateTime? now}) {
+  /// [catalog] is the qwerty vocab list manifest — passed in because
+  /// StateNotifier doesn't have access to a Riverpod `ref`.
+  ReviewStats stats({DateTime? now, required List<VocabList> catalog}) {
     final at = now ?? DateTime.now();
     final today = DateTime(at.year, at.month, at.day);
     final tomorrow = today.add(const Duration(days: 1));
@@ -456,7 +463,7 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
     }
 
     for (final entry in state.entries) {
-      final vocabId = _vocabIdFromWordId(entry.key);
+      final vocabId = _extractVocabIdFromWordId(entry.key);
       accumulate(vocabId, entry.value);
     }
 
@@ -488,7 +495,7 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
       // Repository not initialized (test env). Use zeros / empty.
     }
 
-    final meta = kBuiltinLists;
+    final meta = catalog;
     final perVocabOut = <VocabProgress>[];
     for (final list in meta) {
       final total = list.wordCount;
@@ -548,34 +555,6 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
     // fall through to "unfamiliar" which is reserved for reps == 0.
     return MasteryLevel.vague;
   }
-
-  static String _vocabIdFromWordId(String wid) {
-    final idx = wid.lastIndexOf('_');
-    if (idx <= 0) return wid;
-    final prefix = wid.substring(0, idx);
-    switch (prefix) {
-      case 'ai':
-        return 'ai_core';
-      case 'cs':
-        return 'cs_core';
-      case 'py':
-        return 'python_core';
-      case 'web':
-        return 'web_core';
-      case 'llm':
-        return 'llm_core';
-      case 'devops':
-        return 'devops_core';
-      case 'data':
-        return 'data_core';
-      case 'sec':
-        return 'security_core';
-      case 'prod':
-        return 'product_core';
-      default:
-        return '${prefix}_core';
-    }
-  }
 }
 
 class _MutableVocabStats {
@@ -612,16 +591,30 @@ final vocabCacheProvider = FutureProvider.family<List<VocabWord>, String>((
   return ContentLoader.loadList(listId);
 });
 
+/// qwerty-learner derived catalog. Loaded once from
+/// `assets/vocab/_qwerty_index.json`. The `main()` bootstrap awaits this
+/// and injects the resolved list via [ProviderScope.overrides] so that
+/// downstream providers can read it synchronously.
+final qwertyCatalogProvider = Provider<List<VocabList>>((ref) {
+  throw UnimplementedError(
+    'qwertyCatalogProvider must be overridden in main() after awaiting '
+    'loadQwertyCatalog().',
+  );
+});
+
 /// Metadata for a vocabulary (synchronous, no asset load needed).
 final vocabMetaProvider = Provider<Map<String, VocabList>>((ref) {
-  return {for (final l in kBuiltinLists) l.id: l};
+  return {for (final l in ref.watch(qwertyCatalogProvider)) l.id: l};
 });
 
 enum QuestionType {
   seeWordPickMeaning,
   seeMeaningPickWord,
   listenPickMeaning,
-  seeContextPickWord,
+  // seeContextPickWord removed — it relied on per-word example sentences
+  // (exampleEn), but qwerty-learner data ships with empty examples for
+  // the vast majority of words, which rendered as "...". Re-enable when
+  // we have a corpus of real example sentences.
 }
 
 enum SessionQuestionSource { due, newWord, retry }
@@ -869,28 +862,6 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
           options: options,
           correctIndex: options.indexOf(w.translation),
           prompt: w.word,
-          source: source,
-          attemptNo: attemptNo,
-        );
-      case QuestionType.seeContextPickWord:
-        final seen = <String>{w.word};
-        final distractors = <String>[];
-        for (final o in pool) {
-          if (!seen.contains(o.word) && distractors.length < 3) {
-            distractors.add(o.word);
-            seen.add(o.word);
-          }
-        }
-        while (distractors.length < 3) {
-          distractors.add('—');
-        }
-        final options = [...distractors, w.word]..shuffle(_rng);
-        return LearningQuestion(
-          word: w,
-          type: type,
-          options: options,
-          correctIndex: options.indexOf(w.word),
-          prompt: w.exampleEn,
           source: source,
           attemptNo: attemptNo,
         );

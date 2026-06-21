@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "qwerty_liu2_00001",
+    "word": "younger",
+    "phonetic": "'jʌŋɡɚ",
+    "translation": "更年轻的",
+    "translations": [
+      "更年轻的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00002",
+    "word": "older",
+    "phonetic": "oldə",
+    "translation": "更年长的",
+    "translations": [
+      "更年长的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00003",
+    "word": "taller",
+    "phonetic": "'tɔlɚ",
+    "translation": "更高的",
+    "translations": [
+      "更高的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00004",
+    "word": "shorter",
+    "phonetic": "",
+    "translation": "更矮的",
+    "translations": [
+      "更矮的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00005",
+    "word": "longer",
+    "phonetic": "'lɔŋɡɚ",
+    "translation": "更长的",
+    "translations": [
+      "更长的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00006",
+    "word": "thinner",
+    "phonetic": "'θɪnɚ",
+    "translation": "更瘦的",
+    "translations": [
+      "更瘦的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00007",
+    "word": "heavier",
+    "phonetic": "'hɛvɪɚðən'ɛr",
+    "translation": "更重的",
+    "translations": [
+      "更重的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00008",
+    "word": "bigger",
+    "phonetic": "bɪgə(r)",
+    "translation": "更大的",
+    "translations": [
+      "更大的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00009",
+    "word": "smaller",
+    "phonetic": "smɔlər",
+    "translation": "更小的",
+    "translations": [
+      "更小的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00010",
+    "word": "stronger",
+    "phonetic": "strɔ:ŋɡər",
+    "translation": "更强壮的",
+    "translations": [
+      "更强壮的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00011",
+    "word": "dinosaur",
+    "phonetic": "ˈdaɪnəˌsɔr",
+    "translation": "恐龙",
+    "translations": [
+      "恐龙"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00012",
+    "word": "hall",
+    "phonetic": "hɔl",
+    "translation": "大厅",
+    "translations": [
+      "大厅"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00013",
+    "word": "metre",
+    "phonetic": "ˈmitɚ",
+    "translation": "米",
+    "translations": [
+      "米"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00014",
+    "word": "meter",
+    "phonetic": "mitɚ",
+    "translation": "米",
+    "translations": [
+      "米"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00015",
+    "word": "than",
+    "phonetic": "ðæn",
+    "translation": "比",
+    "translations": [
+      "比"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00016",
+    "word": "both",
+    "phonetic": "boθ",
+    "translation": "两个都",
+    "translations": [
+      "两个都"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00017",
+    "word": "kilogram",
+    "phonetic": "'kɪləɡræm",
+    "translation": "千克",
+    "translations": [
+      "千克"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00018",
+    "word": "countryside",
+    "phonetic": "'kʌntrɪsaɪd",
+    "translation": "乡村",
+    "translations": [
+      "乡村"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00019",
+    "word": "lower",
+    "phonetic": "'loɚ",
+    "translation": "更低地",
+    "translations": [
+      "更低地"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00020",
+    "word": "shadow",
+    "phonetic": "'ʃædo",
+    "translation": "影子",
+    "translations": [
+      "影子"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00021",
+    "word": "smarter",
+    "phonetic": "'smɑ:tə",
+    "translation": "更聪明的",
+    "translations": [
+      "更聪明的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00022",
+    "word": "become",
+    "phonetic": "bɪ'kʌm",
+    "translation": "变成",
+    "translations": [
+      "变成"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00023",
+    "word": "cleaned",
+    "phonetic": "klind",
+    "translation": "打扫",
+    "translations": [
+      "打扫"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00024",
+    "word": "stayed",
+    "phonetic": "",
+    "translation": "待",
+    "translations": [
+      "待"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00025",
+    "word": "washed",
+    "phonetic": "wɔʃt",
+    "translation": "洗",
+    "translations": [
+      "洗"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00026",
+    "word": "watched",
+    "phonetic": "wɑtʃ",
+    "translation": "看",
+    "translations": [
+      "看"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00027",
+    "word": "had",
+    "phonetic": "hæd",
+    "translation": "得病（例如 had a cold 得了感冒）",
+    "translations": [
+      "得病（例如 had a cold 得了感冒）"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00028",
+    "word": "had a cold",
+    "phonetic": "",
+    "translation": "感冒",
+    "translations": [
+      "感冒"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00029",
+    "word": "slept",
+    "phonetic": "slɛpt",
+    "translation": "睡觉",
+    "translations": [
+      "睡觉"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00030",
+    "word": "read",
+    "phonetic": "rid; rɛd",
+    "translation": "读",
+    "translations": [
+      "读"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00031",
+    "word": "saw",
+    "phonetic": "sɔ",
+    "translation": "看",
+    "translations": [
+      "看"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00032",
+    "word": "last",
+    "phonetic": "læst",
+    "translation": "最近",
+    "translations": [
+      "最近"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00033",
+    "word": "yesterday",
+    "phonetic": "ˈjɛstɚdɪ;-de",
+    "translation": "昨天",
+    "translations": [
+      "昨天"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00034",
+    "word": "before",
+    "phonetic": "bɪ'fɔr",
+    "translation": "在⋯⋯之前",
+    "translations": [
+      "在⋯⋯之前"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00035",
+    "word": "drank",
+    "phonetic": "dræŋk",
+    "translation": "喝",
+    "translations": [
+      "喝"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00036",
+    "word": "show",
+    "phonetic": "ʃo",
+    "translation": "演出",
+    "translations": [
+      "演出"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00037",
+    "word": "magazine",
+    "phonetic": "'mæɡəzin",
+    "translation": "杂志",
+    "translations": [
+      "杂志"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00038",
+    "word": "better",
+    "phonetic": "'bɛtɚ",
+    "translation": "更好的",
+    "translations": [
+      "更好的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00039",
+    "word": "faster",
+    "phonetic": "'fastə",
+    "translation": "更快的",
+    "translations": [
+      "更快的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00040",
+    "word": "hotel",
+    "phonetic": "ho'tɛl",
+    "translation": "旅馆",
+    "translations": [
+      "旅馆"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00041",
+    "word": "fixed",
+    "phonetic": "fɪkst",
+    "translation": "修理",
+    "translations": [
+      "修理"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00042",
+    "word": "broken",
+    "phonetic": "'brokən",
+    "translation": "破损的",
+    "translations": [
+      "破损的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00043",
+    "word": "lamp",
+    "phonetic": "læmp",
+    "translation": "台灯",
+    "translations": [
+      "台灯"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00044",
+    "word": "loud",
+    "phonetic": "laʊd",
+    "translation": "大声的",
+    "translations": [
+      "大声的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00045",
+    "word": "enjoy",
+    "phonetic": "ɪn'dʒɔɪ",
+    "translation": "享受⋯⋯的乐趣",
+    "translations": [
+      "享受⋯⋯的乐趣"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00046",
+    "word": "stay",
+    "phonetic": "ste",
+    "translation": "暂住",
+    "translations": [
+      "暂住"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00047",
+    "word": "went",
+    "phonetic": "wɛnt",
+    "translation": "去",
+    "translations": [
+      "去"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00048",
+    "word": "camp",
+    "phonetic": "kæmp",
+    "translation": "野营",
+    "translations": [
+      "野营"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00049",
+    "word": "went camping",
+    "phonetic": "",
+    "translation": "去野营",
+    "translations": [
+      "去野营"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00050",
+    "word": "fish",
+    "phonetic": "fɪʃ",
+    "translation": "钓鱼",
+    "translations": [
+      "钓鱼"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00051",
+    "word": "went fishing",
+    "phonetic": "",
+    "translation": "去钓鱼",
+    "translations": [
+      "去钓鱼"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00052",
+    "word": "rode",
+    "phonetic": "rod",
+    "translation": "骑",
+    "translations": [
+      "骑"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00053",
+    "word": "hurt",
+    "phonetic": "hɝ​t",
+    "translation": "受伤",
+    "translations": [
+      "受伤"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00054",
+    "word": "ate",
+    "phonetic": "ɛt; et",
+    "translation": "吃",
+    "translations": [
+      "吃"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00055",
+    "word": "took",
+    "phonetic": "tʊk",
+    "translation": "拍照",
+    "translations": [
+      "拍照"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00056",
+    "word": "took pictures",
+    "phonetic": "",
+    "translation": "照相",
+    "translations": [
+      "照相"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00057",
+    "word": "bought",
+    "phonetic": "bɔt",
+    "translation": "买",
+    "translations": [
+      "买"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00058",
+    "word": "gift",
+    "phonetic": "ɡɪft",
+    "translation": "礼物",
+    "translations": [
+      "礼物"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00059",
+    "word": "fell",
+    "phonetic": "fɛl",
+    "translation": "摔倒",
+    "translations": [
+      "摔倒"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00060",
+    "word": "off",
+    "phonetic": "ɔf",
+    "translation": "落下",
+    "translations": [
+      "落下"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00061",
+    "word": "Labour Day",
+    "phonetic": "",
+    "translation": "劳动节",
+    "translations": [
+      "劳动节"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00062",
+    "word": "mule",
+    "phonetic": "mjul",
+    "translation": "骡子",
+    "translations": [
+      "骡子"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00063",
+    "word": "Turpan",
+    "phonetic": "",
+    "translation": "吐鲁番",
+    "translations": [
+      "吐鲁番"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00064",
+    "word": "could",
+    "phonetic": "kəd; kʊd",
+    "translation": "能",
+    "translations": [
+      "能"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00065",
+    "word": "till",
+    "phonetic": "tɪl",
+    "translation": "直到",
+    "translations": [
+      "直到"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00066",
+    "word": "beach",
+    "phonetic": "bitʃ",
+    "translation": "沙滩",
+    "translations": [
+      "沙滩"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00067",
+    "word": "basket",
+    "phonetic": "'bæskɪt",
+    "translation": "篮子",
+    "translations": [
+      "篮子"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00068",
+    "word": "part",
+    "phonetic": "pɑrt",
+    "translation": "角色",
+    "translations": [
+      "角色"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00069",
+    "word": "licked",
+    "phonetic": "lɪk",
+    "translation": "舔",
+    "translations": [
+      "舔"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00070",
+    "word": "laughed",
+    "phonetic": "",
+    "translation": "笑",
+    "translations": [
+      "笑"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00071",
+    "word": "dining hall",
+    "phonetic": "",
+    "translation": "饭厅",
+    "translations": [
+      "饭厅"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00072",
+    "word": "grass",
+    "phonetic": "ɡræs",
+    "translation": "草坪",
+    "translations": [
+      "草坪"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00073",
+    "word": "gym",
+    "phonetic": "dʒɪm",
+    "translation": "体育馆",
+    "translations": [
+      "体育馆"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00074",
+    "word": "ago",
+    "phonetic": "ə'ɡo",
+    "translation": "以前",
+    "translations": [
+      "以前"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00075",
+    "word": "cycling",
+    "phonetic": "'saɪklɪŋ",
+    "translation": "骑自行车运动",
+    "translations": [
+      "骑自行车运动"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00076",
+    "word": "go cycling",
+    "phonetic": "",
+    "translation": "去骑自行车",
+    "translations": [
+      "去骑自行车"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00077",
+    "word": "ice-skate",
+    "phonetic": "'aisskeit",
+    "translation": "滑冰",
+    "translations": [
+      "滑冰"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00078",
+    "word": "badminton",
+    "phonetic": "'bædmɪntən",
+    "translation": "羽毛球运动",
+    "translations": [
+      "羽毛球运动"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00079",
+    "word": "star",
+    "phonetic": "stɑr",
+    "translation": "星",
+    "translations": [
+      "星"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00080",
+    "word": "easy",
+    "phonetic": "'izi",
+    "translation": "容易的",
+    "translations": [
+      "容易的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00081",
+    "word": "look up",
+    "phonetic": "",
+    "translation": "查阅",
+    "translations": [
+      "查阅"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00082",
+    "word": "Internet",
+    "phonetic": "'ɪntɚnɛt",
+    "translation": "互联网",
+    "translations": [
+      "互联网"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00083",
+    "word": "different",
+    "phonetic": "'dɪfrənt",
+    "translation": "不同的",
+    "translations": [
+      "不同的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00084",
+    "word": "active",
+    "phonetic": "'æktɪv",
+    "translation": "活跃的",
+    "translations": [
+      "活跃的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00085",
+    "word": "race",
+    "phonetic": "res",
+    "translation": "赛跑",
+    "translations": [
+      "赛跑"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00086",
+    "word": "nothing",
+    "phonetic": "'nʌθɪŋ",
+    "translation": "没有什么",
+    "translations": [
+      "没有什么"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00087",
+    "word": "thought",
+    "phonetic": "θɔt",
+    "translation": "想",
+    "translations": [
+      "想"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00088",
+    "word": "felt",
+    "phonetic": "fɛlt",
+    "translation": "感觉",
+    "translations": [
+      "感觉"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00089",
+    "word": "cheetah",
+    "phonetic": "'tʃitə",
+    "translation": "猎豹",
+    "translations": [
+      "猎豹"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00090",
+    "word": "trip",
+    "phonetic": "trɪp",
+    "translation": "绊倒",
+    "translations": [
+      "绊倒"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00091",
+    "word": "woke",
+    "phonetic": "wok",
+    "translation": "醒",
+    "translations": [
+      "醒"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00092",
+    "word": "dream",
+    "phonetic": "drim",
+    "translation": "梦",
+    "translations": [
+      "梦"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00093",
+    "word": "straight",
+    "phonetic": "stret",
+    "translation": "笔直的",
+    "translations": [
+      "笔直的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00094",
+    "word": "right",
+    "phonetic": "raɪt",
+    "translation": "右",
+    "translations": [
+      "右"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00095",
+    "word": "ask",
+    "phonetic": "æsk",
+    "translation": "问",
+    "translations": [
+      "问"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00096",
+    "word": "sir",
+    "phonetic": "sɝ",
+    "translation": "先生",
+    "translations": [
+      "先生"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00097",
+    "word": "interesting",
+    "phonetic": "'ɪntrəstɪŋ",
+    "translation": "有趣的",
+    "translations": [
+      "有趣的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00098",
+    "word": "Italian",
+    "phonetic": "ɪˈtæljən",
+    "translation": "意大利的",
+    "translations": [
+      "意大利的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00099",
+    "word": "restaurant",
+    "phonetic": "ˈrestərənt; rɛstərənt",
+    "translation": "餐馆",
+    "translations": [
+      "餐馆"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00100",
+    "word": "pizza",
+    "phonetic": "'pitsə",
+    "translation": "比萨饼",
+    "translations": [
+      "比萨饼"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00101",
+    "word": "street",
+    "phonetic": "strit",
+    "translation": "大街",
+    "translations": [
+      "大街"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00102",
+    "word": "get",
+    "phonetic": "ɡɛt",
+    "translation": "到达",
+    "translations": [
+      "到达"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00103",
+    "word": "GPS",
+    "phonetic": "",
+    "translation": "全球（卫星）",
+    "translations": [
+      "全球（卫星）"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00104",
+    "word": "gave",
+    "phonetic": "ɡev",
+    "translation": "提供",
+    "translations": [
+      "提供"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00105",
+    "word": "feature",
+    "phonetic": "'fitʃɚ",
+    "translation": "特点",
+    "translations": [
+      "特点"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00106",
+    "word": "follow",
+    "phonetic": "'fɑlo",
+    "translation": "跟着",
+    "translations": [
+      "跟着"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00107",
+    "word": "far",
+    "phonetic": "fɑr",
+    "translation": "较远的",
+    "translations": [
+      "较远的"
+    ],
+    "domain": "qwerty_liu2"
+  },
+  {
+    "id": "qwerty_liu2_00108",
+    "word": "tell",
+    "phonetic": "tel",
+    "translation": "告诉",
+    "translations": [
+      "告诉"
+    ],
+    "domain": "qwerty_liu2"
+  }
+]

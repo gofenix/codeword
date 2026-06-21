@@ -154,19 +154,8 @@ class _VocabRow extends StatelessWidget {
 
   Color _color() {
     // Deterministic color from the vocab id.
-    final palette = [
-      AppColors.domainCs,
-      AppColors.domainPython,
-      AppColors.domainAi,
-      AppColors.domainLlm,
-      AppColors.domainWeb,
-      AppColors.domainDevops,
-      AppColors.domainData,
-      AppColors.domainSecurity,
-      AppColors.domainProduct,
-    ];
     final h = row.vocabId.hashCode.abs();
-    return palette[h % palette.length];
+    return AppColors.qwertyPalette[h % AppColors.qwertyPalette.length];
   }
 
   @override
@@ -274,8 +263,8 @@ class TodayActivityGrid extends StatelessWidget {
               _Cell(label: '新学', value: '$newWords', color: AppColors.info, icon: Icons.auto_awesome),
               _Cell(label: '收藏', value: '$favorites', color: AppColors.warning, icon: Icons.star_rounded),
               _Cell(label: '移除', value: '$removed', color: AppColors.danger, icon: Icons.remove_circle_outline),
-              _Cell(label: '分钟', value: '$minutes', color: AppColors.domainLlm, icon: Icons.schedule),
-              _Cell(label: '打开', value: '$opens', color: AppColors.domainDevops, icon: Icons.bolt),
+              _Cell(label: '分钟', value: '$minutes', color: AppColors.qwertyPalette[1], icon: Icons.schedule),
+              _Cell(label: '打开', value: '$opens', color: AppColors.qwertyPalette[5], icon: Icons.bolt),
             ],
           ),
         ],
@@ -498,7 +487,7 @@ class DailyStudyTimeChart extends StatelessWidget {
             height: 96,
             child: _Bars(
               values: xs,
-              color: AppColors.domainLlm,
+              color: AppColors.qwertyPalette[1],
               emphasizeLast: true,
             ),
           ),

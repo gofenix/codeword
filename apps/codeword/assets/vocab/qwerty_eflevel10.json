@@ -1,0 +1,1742 @@
+[
+  {
+    "id": "qwerty_eflevel10_00001",
+    "word": "merger",
+    "phonetic": "ˈmɜːrdʒər",
+    "translation": "合并,兼并",
+    "translations": [
+      "合并,兼并"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00002",
+    "word": "morale",
+    "phonetic": "məˈræl",
+    "translation": "士气, 精神状态",
+    "translations": [
+      "士气, 精神状态"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00003",
+    "word": "pressure",
+    "phonetic": "ˈpreʃər",
+    "translation": "迫使, 施压",
+    "translations": [
+      "迫使, 施压"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00004",
+    "word": "propose",
+    "phonetic": "prəˈpoʊz",
+    "translation": "建议, 提议",
+    "translations": [
+      "建议, 提议"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00005",
+    "word": "resign",
+    "phonetic": "rɪˈzaɪn",
+    "translation": "辞职",
+    "translations": [
+      "辞职"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00006",
+    "word": "rumor",
+    "phonetic": "ˈruːmər",
+    "translation": "谣言",
+    "translations": [
+      "谣言"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00007",
+    "word": "smoothly",
+    "phonetic": "ˈsmuːðli",
+    "translation": "平滑地, 平稳地, 流畅地, 顺利地",
+    "translations": [
+      "平滑地, 平稳地, 流畅地, 顺利地"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00008",
+    "word": "task",
+    "phonetic": "tæsk",
+    "translation": "任务",
+    "translations": [
+      "任务"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00009",
+    "word": "CEO",
+    "phonetic": "ˈoʊ",
+    "translation": "(缩写)首席执行官",
+    "translations": [
+      "(缩写)首席执行官"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00010",
+    "word": "discuss",
+    "phonetic": "dɪˈskʌs",
+    "translation": "讨论, 探讨",
+    "translations": [
+      "讨论, 探讨"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00011",
+    "word": "attention",
+    "phonetic": "əˈtenʃn",
+    "translation": "关心, 关注",
+    "translations": [
+      "关心, 关注"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00012",
+    "word": "purpose",
+    "phonetic": "ˈpɜːrpəs",
+    "translation": "目的",
+    "translations": [
+      "目的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00013",
+    "word": "item",
+    "phonetic": "ˈaɪtəm",
+    "translation": "条, 条款, 项, 项目, 条目",
+    "translations": [
+      "条, 条款, 项, 项目, 条目"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00014",
+    "word": "negotiate",
+    "phonetic": "nɪˈɡoʊʃieɪt",
+    "translation": "商议; 谈判; 协商",
+    "translations": [
+      "商议; 谈判; 协商"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00015",
+    "word": "solve",
+    "phonetic": "sɑːlv",
+    "translation": "解决, 解答",
+    "translations": [
+      "解决, 解答"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00016",
+    "word": "regret",
+    "phonetic": "rɪˈɡret",
+    "translation": "后悔",
+    "translations": [
+      "后悔"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00017",
+    "word": "congratulate",
+    "phonetic": "kənˈɡrætʃuleɪt",
+    "translation": "向(某人)祝贺;道贺",
+    "translations": [
+      "向(某人)祝贺;道贺"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00018",
+    "word": "replace",
+    "phonetic": "rɪˈpleɪs",
+    "translation": "取代, 替代",
+    "translations": [
+      "取代, 替代"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00019",
+    "word": "accurate",
+    "phonetic": "ˈækjərət",
+    "translation": "精确的, 准确的",
+    "translations": [
+      "精确的, 准确的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00020",
+    "word": "agenda",
+    "phonetic": "əˈdʒendə",
+    "translation": "议程,讨论事项",
+    "translations": [
+      "议程,讨论事项"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00021",
+    "word": "aware",
+    "phonetic": "əˈwer",
+    "translation": "知道的, 意识到的",
+    "translations": [
+      "知道的, 意识到的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00022",
+    "word": "budget",
+    "phonetic": "ˈbʌdʒɪt",
+    "translation": "预算",
+    "translations": [
+      "预算"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00023",
+    "word": "budget",
+    "phonetic": "ˈbʌdʒɪt",
+    "translation": "做预算, 规划, 按预算来计划",
+    "translations": [
+      "做预算, 规划, 按预算来计划"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00024",
+    "word": "challenge",
+    "phonetic": "ˈtʃælɪndʒ",
+    "translation": "挑战",
+    "translations": [
+      "挑战"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00025",
+    "word": "conclude",
+    "phonetic": "kənˈkluːd",
+    "translation": "下结论, 总结",
+    "translations": [
+      "下结论, 总结"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00026",
+    "word": "evaluate",
+    "phonetic": "ɪˈvæljueɪt",
+    "translation": "评价",
+    "translations": [
+      "评价"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00027",
+    "word": "executive",
+    "phonetic": "ɪɡˈzekjətɪv",
+    "translation": "管理者, 经理, 社长, 董事",
+    "translations": [
+      "管理者, 经理, 社长, 董事"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00028",
+    "word": "fire",
+    "phonetic": "ˈfaɪər",
+    "translation": "解雇",
+    "translations": [
+      "解雇"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00029",
+    "word": "further",
+    "phonetic": "ˈfɜːrðər",
+    "translation": "更远地",
+    "translations": [
+      "更远地"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00030",
+    "word": "integrate",
+    "phonetic": "ˈɪntɪɡreɪt",
+    "translation": "使)成为一体,(使)合并",
+    "translations": [
+      "使)成为一体,(使)合并"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00031",
+    "word": "involve",
+    "phonetic": "ɪnˈvɑːlv",
+    "translation": "包含, 涉及",
+    "translations": [
+      "包含, 涉及"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00032",
+    "word": "old-fashioned",
+    "phonetic": "",
+    "translation": "旧式的, 过时的",
+    "translations": [
+      "旧式的, 过时的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00033",
+    "word": "courteous",
+    "phonetic": "ˈkɜːrtiəs",
+    "translation": "彬彬有礼的, 谦恭的",
+    "translations": [
+      "彬彬有礼的, 谦恭的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00034",
+    "word": "generational",
+    "phonetic": "ˌdʒenəˈreɪʃənl",
+    "translation": "代",
+    "translations": [
+      "代"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00035",
+    "word": "gender",
+    "phonetic": "ˈdʒendər",
+    "translation": "性别",
+    "translations": [
+      "性别"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00036",
+    "word": "equality",
+    "phonetic": "iˈkwɑːləti",
+    "translation": "平等",
+    "translations": [
+      "平等"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00037",
+    "word": "sympathize",
+    "phonetic": "ˈsɪmpəθaɪz",
+    "translation": "同情;",
+    "translations": [
+      "同情;"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00038",
+    "word": "implement",
+    "phonetic": "ˈɪmplɪment",
+    "translation": "使(某事物)生效; 履行; 实施; 贯彻",
+    "translations": [
+      "使(某事物)生效; 履行; 实施; 贯彻"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00039",
+    "word": "structure",
+    "phonetic": "ˈstrʌktʃər",
+    "translation": "结构",
+    "translations": [
+      "结构"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00040",
+    "word": "process",
+    "phonetic": "ˈprɑːses",
+    "translation": "过程, 程序, 步骤, 工序",
+    "translations": [
+      "过程, 程序, 步骤, 工序"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00041",
+    "word": "system",
+    "phonetic": "ˈsɪstəm",
+    "translation": "系统, 体系",
+    "translations": [
+      "系统, 体系"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00042",
+    "word": "mission",
+    "phonetic": "ˈmɪʃn",
+    "translation": "艰巨的任务,艰辛的历程",
+    "translations": [
+      "艰巨的任务,艰辛的历程"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00043",
+    "word": "statement",
+    "phonetic": "ˈsteɪtmənt",
+    "translation": "陈述, 声明, 说法",
+    "translations": [
+      "陈述, 声明, 说法"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00044",
+    "word": "review",
+    "phonetic": "rɪˈvjuː",
+    "translation": "检查, 评审",
+    "translations": [
+      "检查, 评审"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00045",
+    "word": "revise",
+    "phonetic": "rɪˈvaɪz",
+    "translation": "修订, 修改, 修正, 校订",
+    "translations": [
+      "修订, 修改, 修正, 校订"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00046",
+    "word": "restructure",
+    "phonetic": "ˌriːˈstrʌktʃər",
+    "translation": "重组, 改组",
+    "translations": [
+      "重组, 改组"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00047",
+    "word": "revamp",
+    "phonetic": "ˌriːˈvæmp",
+    "translation": "将(某物)更新(尤指外观); 翻新",
+    "translations": [
+      "将(某物)更新(尤指外观); 翻新"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00048",
+    "word": "transform",
+    "phonetic": "trænsˈfɔːrm",
+    "translation": "转换, 改造, 改变, 改变, 变换, 转化",
+    "translations": [
+      "转换, 改造, 改变, 改变, 变换, 转化"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00049",
+    "word": "change",
+    "phonetic": "tʃeɪndʒ",
+    "translation": "改变, 变化",
+    "translations": [
+      "改变, 变化"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00050",
+    "word": "storage",
+    "phonetic": "ˈstɔːrɪdʒ",
+    "translation": "贮存, 贮藏",
+    "translations": [
+      "贮存, 贮藏"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00051",
+    "word": "parking",
+    "phonetic": "ˈpɑːrkɪŋ",
+    "translation": "停车,泊车",
+    "translations": [
+      "停车,泊车"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00052",
+    "word": "yoga",
+    "phonetic": "ˈjoʊɡə",
+    "translation": "瑜伽",
+    "translations": [
+      "瑜伽"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00053",
+    "word": "recreation",
+    "phonetic": "ˌrekriˈeɪʃn",
+    "translation": "消遣;",
+    "translations": [
+      "消遣;"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00054",
+    "word": "space",
+    "phonetic": "speɪs",
+    "translation": "空地, 空地方, 空处",
+    "translations": [
+      "空地, 空地方, 空处"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00055",
+    "word": "staff",
+    "phonetic": "stæf",
+    "translation": "员工, 雇员",
+    "translations": [
+      "员工, 雇员"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00056",
+    "word": "uncertainty",
+    "phonetic": "ʌnˈsɜːrtnti",
+    "translation": "不确定,不确实",
+    "translations": [
+      "不确定,不确实"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00057",
+    "word": "attitude",
+    "phonetic": "ˈætɪtuːd",
+    "translation": "态度, 看法",
+    "translations": [
+      "态度, 看法"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00058",
+    "word": "resistant",
+    "phonetic": "rɪˈzɪstənt",
+    "translation": "抵抗的; 对抗的; 抗拒的; 有阻力的",
+    "translations": [
+      "抵抗的; 对抗的; 抗拒的; 有阻力的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00059",
+    "word": "positive",
+    "phonetic": "ˈpɑːzətɪv",
+    "translation": "积极的, 有助益的, 建设性的",
+    "translations": [
+      "积极的, 有助益的, 建设性的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00060",
+    "word": "traditional",
+    "phonetic": "trəˈdɪʃənl",
+    "translation": "传统的, 因袭的, 惯例的",
+    "translations": [
+      "传统的, 因袭的, 惯例的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00061",
+    "word": "benefit",
+    "phonetic": "ˈbenɪfɪt",
+    "translation": "利益, 好处, 有利的影响",
+    "translations": [
+      "利益, 好处, 有利的影响"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00062",
+    "word": "borrow",
+    "phonetic": "ˈbɑːroʊ",
+    "translation": "借",
+    "translations": [
+      "借"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00063",
+    "word": "debt",
+    "phonetic": "det",
+    "translation": "债务",
+    "translations": [
+      "债务"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00064",
+    "word": "deduction",
+    "phonetic": "dɪˈdʌkʃn",
+    "translation": "扣除",
+    "translations": [
+      "扣除"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00065",
+    "word": "income",
+    "phonetic": "ˈɪnkʌm",
+    "translation": "进款, 收入",
+    "translations": [
+      "进款, 收入"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00066",
+    "word": "gradually",
+    "phonetic": "ˈɡrædʒuəli",
+    "translation": "渐渐地",
+    "translations": [
+      "渐渐地"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00067",
+    "word": "owe",
+    "phonetic": "oʊ",
+    "translation": "欠(人情), 欠钱",
+    "translations": [
+      "欠(人情), 欠钱"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00068",
+    "word": "stable",
+    "phonetic": "ˈsteɪbl",
+    "translation": "固定的, 稳定的",
+    "translations": [
+      "固定的, 稳定的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00069",
+    "word": "expense",
+    "phonetic": "ɪkˈspens",
+    "translation": "费用, 支出",
+    "translations": [
+      "费用, 支出"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00070",
+    "word": "saving",
+    "phonetic": "ˈseɪvɪŋ",
+    "translation": "存款",
+    "translations": [
+      "存款"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00071",
+    "word": "loan",
+    "phonetic": "loʊn",
+    "translation": "借出, 贷与",
+    "translations": [
+      "借出, 贷与"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00072",
+    "word": "average",
+    "phonetic": "ˈævərɪdʒ",
+    "translation": "平均数",
+    "translations": [
+      "平均数"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00073",
+    "word": "bill",
+    "phonetic": "bɪl",
+    "translation": "账单",
+    "translations": [
+      "账单"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00074",
+    "word": "reasonably",
+    "phonetic": "ˈriːznəbli",
+    "translation": "适度地, 尚可, 过得去",
+    "translations": [
+      "适度地, 尚可, 过得去"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00075",
+    "word": "drop",
+    "phonetic": "drɑːp",
+    "translation": "下降",
+    "translations": [
+      "下降"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00076",
+    "word": "run",
+    "phonetic": "rʌn",
+    "translation": "变得",
+    "translations": [
+      "变得"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00077",
+    "word": "generally",
+    "phonetic": "ˈdʒenrəli",
+    "translation": "总体地, 总的来说",
+    "translations": [
+      "总体地, 总的来说"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00078",
+    "word": "significantly",
+    "phonetic": "sɪɡˈnɪfɪkəntli",
+    "translation": "意味深长地, 意义深远地, 重要地, 较大地",
+    "translations": [
+      "意味深长地, 意义深远地, 重要地, 较大地"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00079",
+    "word": "housing",
+    "phonetic": "ˈhaʊzɪŋ",
+    "translation": "房屋",
+    "translations": [
+      "房屋"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00080",
+    "word": "option",
+    "phonetic": "ˈɑːpʃn",
+    "translation": "选择, 选择权, 选择自由",
+    "translations": [
+      "选择, 选择权, 选择自由"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00081",
+    "word": "alternative",
+    "phonetic": "ɔːlˈtɜːrnətɪv",
+    "translation": "可供选择的事物, 替换物, 替代品",
+    "translations": [
+      "可供选择的事物, 替换物, 替代品"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00082",
+    "word": "possibility",
+    "phonetic": "ˌpɑːsəˈbɪləti",
+    "translation": "可能性, 可能的事",
+    "translations": [
+      "可能性, 可能的事"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00083",
+    "word": "drastic",
+    "phonetic": "ˈdræstɪk",
+    "translation": "激烈",
+    "translations": [
+      "激烈"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00084",
+    "word": "priority",
+    "phonetic": "praɪˈɔːrəti",
+    "translation": "优先权, 优先, 优先顺序",
+    "translations": [
+      "优先权, 优先, 优先顺序"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00085",
+    "word": "push",
+    "phonetic": "pʊʃ",
+    "translation": "劝说",
+    "translations": [
+      "劝说"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00086",
+    "word": "compensation",
+    "phonetic": "ˌkɑːmpenˈseɪʃn",
+    "translation": "补偿金,赔偿金,弥补",
+    "translations": [
+      "补偿金,赔偿金,弥补"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00087",
+    "word": "contribute",
+    "phonetic": "kənˈtrɪbjuːt",
+    "translation": "贡献, 捐献, 捐助",
+    "translations": [
+      "贡献, 捐献, 捐助"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00088",
+    "word": "package",
+    "phonetic": "ˈpækɪdʒ",
+    "translation": "包裹",
+    "translations": [
+      "包裹"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00089",
+    "word": "include",
+    "phonetic": "ɪnˈkluːd",
+    "translation": "包括, 包含",
+    "translations": [
+      "包括, 包含"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00090",
+    "word": "subsidiary",
+    "phonetic": "səbˈsɪdieri",
+    "translation": "辅助的,附属的",
+    "translations": [
+      "辅助的,附属的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00091",
+    "word": "vision",
+    "phonetic": "ˈvɪʒn",
+    "translation": "视力, 视觉",
+    "translations": [
+      "视力, 视觉"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00092",
+    "word": "update",
+    "phonetic": "ˌʌpˈdeɪt",
+    "translation": "更新(某事物), 升级",
+    "translations": [
+      "更新(某事物), 升级"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00093",
+    "word": "merge",
+    "phonetic": "mɜːrdʒ",
+    "translation": "合并,使融合",
+    "translations": [
+      "合并,使融合"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00094",
+    "word": "hire",
+    "phonetic": "ˈhaɪər",
+    "translation": "出租",
+    "translations": [
+      "出租"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00095",
+    "word": "market",
+    "phonetic": "ˈmɑːrkɪt",
+    "translation": "市场, 集市",
+    "translations": [
+      "市场, 集市"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00096",
+    "word": "parent",
+    "phonetic": "ˈperənt",
+    "translation": "父母",
+    "translations": [
+      "父母"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00097",
+    "word": "controller",
+    "phonetic": "kənˈtroʊlər",
+    "translation": "(尤指大型机构或部门的)控制者,管理者,指挥者",
+    "translations": [
+      "(尤指大型机构或部门的)控制者,管理者,指挥者"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00098",
+    "word": "candidate",
+    "phonetic": "ˈkændɪdət",
+    "translation": "候选人",
+    "translations": [
+      "候选人"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00099",
+    "word": "increase",
+    "phonetic": "ɪnˈkriːs",
+    "translation": "增加, 增多",
+    "translations": [
+      "增加, 增多"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00100",
+    "word": "news",
+    "phonetic": "nuːz",
+    "translation": "新闻, 消息, 报导",
+    "translations": [
+      "新闻, 消息, 报导"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00101",
+    "word": "hold",
+    "phonetic": "hoʊld",
+    "translation": "吸引(注意力)",
+    "translations": [
+      "吸引(注意力)"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00102",
+    "word": "free",
+    "phonetic": "friː",
+    "translation": "自由的, 无拘束的",
+    "translations": [
+      "自由的, 无拘束的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00103",
+    "word": "decrease",
+    "phonetic": "dɪˈkriːs",
+    "translation": "减少, 下降",
+    "translations": [
+      "减少, 下降"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00104",
+    "word": "fall",
+    "phonetic": "fɔːl",
+    "translation": "减少",
+    "translations": [
+      "减少"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00105",
+    "word": "remain",
+    "phonetic": "rɪˈmeɪn",
+    "translation": "剩下, 余留, 留下",
+    "translations": [
+      "剩下, 余留, 留下"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00106",
+    "word": "step",
+    "phonetic": "step",
+    "translation": "步",
+    "translations": [
+      "步"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00107",
+    "word": "remind",
+    "phonetic": "rɪˈmaɪnd",
+    "translation": "提醒",
+    "translations": [
+      "提醒"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00108",
+    "word": "outline",
+    "phonetic": "ˈaʊtlaɪn",
+    "translation": "大纲, 轮廓",
+    "translations": [
+      "大纲, 轮廓"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00109",
+    "word": "summary",
+    "phonetic": "ˈsʌməri",
+    "translation": "概括, 概要, 摘要",
+    "translations": [
+      "概括, 概要, 摘要"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00110",
+    "word": "point",
+    "phonetic": "pɔɪnt",
+    "translation": "细节",
+    "translations": [
+      "细节"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00111",
+    "word": "main",
+    "phonetic": "meɪn",
+    "translation": "最重要的, 主要的",
+    "translations": [
+      "最重要的, 主要的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00112",
+    "word": "however",
+    "phonetic": "haʊˈevər",
+    "translation": "无论怎样",
+    "translations": [
+      "无论怎样"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00113",
+    "word": "acquisition",
+    "phonetic": "ˌækwɪˈzɪʃn",
+    "translation": "(知识、技能的)习得",
+    "translations": [
+      "(知识、技能的)习得"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00114",
+    "word": "conclusion",
+    "phonetic": "kənˈkluːʒn",
+    "translation": "结论",
+    "translations": [
+      "结论"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00115",
+    "word": "continent",
+    "phonetic": "ˈkɑːntɪnənt",
+    "translation": "洲, 大陆",
+    "translations": [
+      "洲, 大陆"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00116",
+    "word": "headquarters",
+    "phonetic": "ˈhedkwɔːrtərz",
+    "translation": "司令部",
+    "translations": [
+      "司令部"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00117",
+    "word": "particularly",
+    "phonetic": "pərˈtɪkjələrli",
+    "translation": "特别地, 尤其",
+    "translations": [
+      "特别地, 尤其"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00118",
+    "word": "steady",
+    "phonetic": "ˈstedi",
+    "translation": "稳固的, 稳定的, 平稳的, 持续的",
+    "translations": [
+      "稳固的, 稳定的, 平稳的, 持续的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00119",
+    "word": "setback",
+    "phonetic": "ˈsetbæk",
+    "translation": "顿挫, 挫折, 退步, 逆流",
+    "translations": [
+      "顿挫, 挫折, 退步, 逆流"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00120",
+    "word": "dilemma",
+    "phonetic": "dɪˈlemə",
+    "translation": "困境",
+    "translations": [
+      "困境"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00121",
+    "word": "challenge",
+    "phonetic": "ˈtʃælɪndʒ",
+    "translation": "挑战",
+    "translations": [
+      "挑战"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00122",
+    "word": "predicament",
+    "phonetic": "prɪˈdɪkəmənt",
+    "translation": "处境,窘况,困局",
+    "translations": [
+      "处境,窘况,困局"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00123",
+    "word": "obstacle",
+    "phonetic": "ˈɑːbstəkl",
+    "translation": "障碍, 阻碍",
+    "translations": [
+      "障碍, 阻碍"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00124",
+    "word": "cause",
+    "phonetic": "kɔːz",
+    "translation": "原因, 起因",
+    "translations": [
+      "原因, 起因"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00125",
+    "word": "result",
+    "phonetic": "rɪˈzʌlt",
+    "translation": "结果, 后果",
+    "translations": [
+      "结果, 后果"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00126",
+    "word": "effect",
+    "phonetic": "ɪˈfekt",
+    "translation": "结果",
+    "translations": [
+      "结果"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00127",
+    "word": "affect",
+    "phonetic": "əˈfekt",
+    "translation": "影响",
+    "translations": [
+      "影响"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00128",
+    "word": "evaluate",
+    "phonetic": "ɪˈvæljueɪt",
+    "translation": "评估",
+    "translations": [
+      "评估"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00129",
+    "word": "solution",
+    "phonetic": "səˈluːʃn",
+    "translation": "解决办法",
+    "translations": [
+      "解决办法"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00130",
+    "word": "generate",
+    "phonetic": "ˈdʒenəreɪt",
+    "translation": "产生, 形成",
+    "translations": [
+      "产生, 形成"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00131",
+    "word": "analysis",
+    "phonetic": "əˈnæləsɪs",
+    "translation": "分析, 分析报告, 分析结果",
+    "translations": [
+      "分析, 分析报告, 分析结果"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00132",
+    "word": "plus",
+    "phonetic": "plʌs",
+    "translation": "优势",
+    "translations": [
+      "优势"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00133",
+    "word": "downside",
+    "phonetic": "ˈdaʊnsaɪd",
+    "translation": "缺点",
+    "translations": [
+      "缺点"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00134",
+    "word": "benefit",
+    "phonetic": "ˈbenɪfɪt",
+    "translation": "效益",
+    "translations": [
+      "效益"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00135",
+    "word": "minus",
+    "phonetic": "ˈmaɪnəs",
+    "translation": "减号",
+    "translations": [
+      "减号"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00136",
+    "word": "upside",
+    "phonetic": "ˈʌpsaɪd",
+    "translation": "优点",
+    "translations": [
+      "优点"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00137",
+    "word": "advantage",
+    "phonetic": "ədˈvæntɪdʒ",
+    "translation": "优点",
+    "translations": [
+      "优点"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00138",
+    "word": "drawback",
+    "phonetic": "ˈdrɔːbæk",
+    "translation": "缺陷",
+    "translations": [
+      "缺陷"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00139",
+    "word": "unacceptable",
+    "phonetic": "ˌʌnəkˈseptəbl",
+    "translation": "难以接受的, 不受欢迎的",
+    "translations": [
+      "难以接受的, 不受欢迎的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00140",
+    "word": "miss",
+    "phonetic": "mɪs",
+    "translation": "未出席, 错过, 未赶上",
+    "translations": [
+      "未出席, 错过, 未赶上"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00141",
+    "word": "sympathetic",
+    "phonetic": "ˌsɪmpəˈθetɪk",
+    "translation": "同情的, 共鸣的",
+    "translations": [
+      "同情的, 共鸣的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00142",
+    "word": "strength",
+    "phonetic": "streŋθ",
+    "translation": "优势, 长处",
+    "translations": [
+      "优势, 长处"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00143",
+    "word": "weakness",
+    "phonetic": "ˈwiːknəs",
+    "translation": "虚弱, 弱点, 薄弱, 软弱",
+    "translations": [
+      "虚弱, 弱点, 薄弱, 软弱"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00144",
+    "word": "threat",
+    "phonetic": "θret",
+    "translation": "威胁, 恐吓",
+    "translations": [
+      "威胁, 恐吓"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00145",
+    "word": "opportunity",
+    "phonetic": "ˌɑːpərˈtuːnəti",
+    "translation": "机会, 良机",
+    "translations": [
+      "机会, 良机"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00146",
+    "word": "supportive",
+    "phonetic": "səˈpɔːrtɪv",
+    "translation": "支持性的",
+    "translations": [
+      "支持性的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00147",
+    "word": "satisfaction",
+    "phonetic": "ˌsætɪsˈfækʃn",
+    "translation": "满意",
+    "translations": [
+      "满意"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00148",
+    "word": "wonder",
+    "phonetic": "ˈwʌndər",
+    "translation": "惊讶, 怀疑, 惊奇, 想知道",
+    "translations": [
+      "惊讶, 怀疑, 惊奇, 想知道"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00149",
+    "word": "decision",
+    "phonetic": "dɪˈsɪʒn",
+    "translation": "决定",
+    "translations": [
+      "决定"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00150",
+    "word": "against",
+    "phonetic": "əˈɡenst",
+    "translation": "反对",
+    "translations": [
+      "反对"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00151",
+    "word": "realize",
+    "phonetic": "ˈriːəlaɪz",
+    "translation": "意识到",
+    "translations": [
+      "意识到"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00152",
+    "word": "atmosphere",
+    "phonetic": "ˈætməsfɪr",
+    "translation": "大气, 大气层",
+    "translations": [
+      "大气, 大气层"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00153",
+    "word": "survey",
+    "phonetic": "ˈsɜːrveɪ",
+    "translation": "问卷, 测量, 调查, 纵览, 视察",
+    "translations": [
+      "问卷, 测量, 调查, 纵览, 视察"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00154",
+    "word": "proactive",
+    "phonetic": "ˌproʊˈæktɪv",
+    "translation": "积极主动的, 主动出击的, 先发制人的",
+    "translations": [
+      "积极主动的, 主动出击的, 先发制人的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00155",
+    "word": "role",
+    "phonetic": "roʊl",
+    "translation": "角色, 职责",
+    "translations": [
+      "角色, 职责"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00156",
+    "word": "submit",
+    "phonetic": "səbˈmɪt",
+    "translation": "提交, 递交",
+    "translations": [
+      "提交, 递交"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00157",
+    "word": "annual",
+    "phonetic": "ˈænjuəl",
+    "translation": "年度的",
+    "translations": [
+      "年度的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00158",
+    "word": "objective",
+    "phonetic": "əbˈdʒektɪv",
+    "translation": "目的, 目标",
+    "translations": [
+      "目的, 目标"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00159",
+    "word": "lead",
+    "phonetic": "liːd",
+    "translation": "指挥, 领导, 率领",
+    "translations": [
+      "指挥, 领导, 率领"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00160",
+    "word": "development",
+    "phonetic": "dɪˈveləpmənt",
+    "translation": "研制, 开发",
+    "translations": [
+      "研制, 开发"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00161",
+    "word": "play",
+    "phonetic": "pleɪ",
+    "translation": "扮演 角色",
+    "translations": [
+      "扮演 角色"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00162",
+    "word": "involved",
+    "phonetic": "ɪnˈvɑːlvd",
+    "translation": "卷入的, 有关的",
+    "translations": [
+      "卷入的, 有关的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00163",
+    "word": "become",
+    "phonetic": "bɪˈkʌm",
+    "translation": "成为, 变成",
+    "translations": [
+      "成为, 变成"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00164",
+    "word": "responsibility",
+    "phonetic": "rɪˌspɑːnsəˈbɪləti",
+    "translation": "责任, 负担, 职责",
+    "translations": [
+      "责任, 负担, 职责"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00165",
+    "word": "specific",
+    "phonetic": "spəˈsɪfɪk",
+    "translation": "具体的",
+    "translations": [
+      "具体的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00166",
+    "word": "realistic",
+    "phonetic": "ˌriːəˈlɪstɪk",
+    "translation": "现实的, 实际可行的",
+    "translations": [
+      "现实的, 实际可行的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00167",
+    "word": "attainable",
+    "phonetic": "əˈteɪnəbl",
+    "translation": "可得到的",
+    "translations": [
+      "可得到的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00168",
+    "word": "consistent",
+    "phonetic": "kənˈsɪstənt",
+    "translation": "一致的;始终如一的",
+    "translations": [
+      "一致的;始终如一的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00169",
+    "word": "ambitious",
+    "phonetic": "æmˈbɪʃəs",
+    "translation": "有野心的,有雄心的",
+    "translations": [
+      "有野心的,有雄心的"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00170",
+    "word": "intend",
+    "phonetic": "ɪnˈtend",
+    "translation": "打算, 意图",
+    "translations": [
+      "打算, 意图"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00171",
+    "word": "achieve",
+    "phonetic": "əˈtʃiːv",
+    "translation": "获得, 完成",
+    "translations": [
+      "获得, 完成"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00172",
+    "word": "career",
+    "phonetic": "kəˈrɪr",
+    "translation": "职业生涯",
+    "translations": [
+      "职业生涯"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00173",
+    "word": "goal",
+    "phonetic": "ɡoʊl",
+    "translation": "球门",
+    "translations": [
+      "球门"
+    ],
+    "domain": "qwerty_eflevel10"
+  },
+  {
+    "id": "qwerty_eflevel10_00174",
+    "word": "set",
+    "phonetic": "set",
+    "translation": "安排",
+    "translations": [
+      "安排"
+    ],
+    "domain": "qwerty_eflevel10"
+  }
+]

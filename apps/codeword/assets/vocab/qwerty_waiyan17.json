@@ -1,0 +1,908 @@
+[
+  {
+    "id": "qwerty_waiyan17_00001",
+    "word": "for",
+    "phonetic": "[fər; fɔːr]",
+    "translation": "prep. 为，为了；因为；给；对于；至于；适合于；conj. 因为",
+    "translations": [
+      "prep. 为，为了；因为；给；对于；至于；适合于",
+      "conj. 因为"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00002",
+    "word": "different",
+    "phonetic": "[ˈdɪfrənt]",
+    "translation": "adj. 不同的；个别的，与众不同的",
+    "translations": [
+      "adj. 不同的；个别的，与众不同的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00003",
+    "word": "bench",
+    "phonetic": "[bentʃ]",
+    "translation": "n. 长凳；工作台；替补队员；vt. 给…以席位；为…设置条凳",
+    "translations": [
+      "n. 长凳；工作台；替补队员",
+      "vt. 给…以席位；为…设置条凳"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00004",
+    "word": "then",
+    "phonetic": "[ðen]",
+    "translation": "conj. 然后，当时；n. 那时；adv. 然后；那么；于是；当时；此外",
+    "translations": [
+      "conj. 然后，当时",
+      "n. 那时",
+      "adv. 然后；那么；于是；当时；此外"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00005",
+    "word": "playground",
+    "phonetic": "[ˈpleɪɡraʊnd]",
+    "translation": "n. 运动场，操场；游乐场",
+    "translations": [
+      "n. 运动场，操场；游乐场"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00006",
+    "word": "heavy",
+    "phonetic": "[ˈhevi]",
+    "translation": "n. 重物；严肃角色；adj. 沉重的；繁重的，巨大的；拥挤的；阴沉的；adv. 大量地；笨重地",
+    "translations": [
+      "n. 重物；严肃角色",
+      "adj. 沉重的；繁重的，巨大的；拥挤的；阴沉的",
+      "adv. 大量地；笨重地"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00007",
+    "word": "let",
+    "phonetic": "[let]",
+    "translation": "vt. 允许，让；出租；假设；妨碍；vi. 出租；被承包；n. 障碍；出租屋",
+    "translations": [
+      "vt. 允许，让；出租；假设；妨碍",
+      "vi. 出租；被承包",
+      "n. 障碍；出租屋"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00008",
+    "word": "sell",
+    "phonetic": "[sel]",
+    "translation": "n. 销售；失望；推销术；vt. 销售；推销；出卖；欺骗；vi. 卖；出售；受欢迎；有销路",
+    "translations": [
+      "n. 销售；失望；推销术",
+      "vt. 销售；推销；出卖；欺骗",
+      "vi. 卖；出售；受欢迎；有销路"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00009",
+    "word": "sometimes",
+    "phonetic": "[ˈsʌmtaɪmz]",
+    "translation": "adv. 有时，间或",
+    "translations": [
+      "adv. 有时，间或"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00010",
+    "word": "Halloween",
+    "phonetic": "[ˌhæloʊˈiːn]",
+    "translation": "n. 万圣节前夕（指十月三十一日夜晚）",
+    "translations": [
+      "n. 万圣节前夕（指十月三十一日夜晚）"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00011",
+    "word": "trick or treat",
+    "phonetic": "",
+    "translation": "int. 不给糖就捣蛋；n. 不给糖就捣蛋",
+    "translations": [
+      "int. 不给糖就捣蛋",
+      "n. 不给糖就捣蛋"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00012",
+    "word": "give",
+    "phonetic": "[ɡɪv]",
+    "translation": "n. 弹性；弯曲；伸展性；vi. 捐赠；面向；有弹性；气候转暖；vt. 给；产生；让步；举办；授予",
+    "translations": [
+      "n. 弹性；弯曲；伸展性",
+      "vi. 捐赠；面向；有弹性；气候转暖",
+      "vt. 给；产生；让步；举办；授予"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00013",
+    "word": "festival",
+    "phonetic": "[ˈfestɪvl]",
+    "translation": "n. 节日；庆祝，纪念活动；欢乐；adj. 节日的，喜庆的；快乐的",
+    "translations": [
+      "n. 节日；庆祝，纪念活动；欢乐",
+      "adj. 节日的，喜庆的；快乐的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00014",
+    "word": "scary",
+    "phonetic": "[ˈskeri]",
+    "translation": "adj. （事物）可怕的；恐怖的；吓人的；（人）提心吊胆的；引起惊慌的；胆小的",
+    "translations": [
+      "adj. （事物）可怕的；恐怖的；吓人的；（人）提心吊胆的；引起惊慌的；胆小的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00015",
+    "word": "mask",
+    "phonetic": "[mæsk]",
+    "translation": "n. 面具；口罩；掩饰；vi. 掩饰；戴面具；化装；vt. 掩饰；戴面具；使模糊",
+    "translations": [
+      "n. 面具；口罩；掩饰",
+      "vi. 掩饰；戴面具；化装",
+      "vt. 掩饰；戴面具；使模糊"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00016",
+    "word": "neighbour",
+    "phonetic": "[ˈneɪbər]",
+    "translation": "n. n. 邻居;同胞；仁慈的人；vt. 邻接；vi. 住在邻近；毗邻；友善，和睦；adj. 邻居的；邻近的",
+    "translations": [
+      "n. n. 邻居;同胞；仁慈的人",
+      "vt. 邻接",
+      "vi. 住在邻近；毗邻；友善，和睦",
+      "adj. 邻居的；邻近的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00017",
+    "word": "night",
+    "phonetic": "[naɪt]",
+    "translation": "n. 夜晚，晚上；黑暗，黑夜；adj. 夜晚的，夜间的",
+    "translations": [
+      "n. 夜晚，晚上；黑暗，黑夜",
+      "adj. 夜晚的，夜间的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00018",
+    "word": "Easter",
+    "phonetic": "[ˈiːstər]",
+    "translation": "n. 复活节",
+    "translations": [
+      "n. 复活节"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00019",
+    "word": "chick",
+    "phonetic": "[tʃɪk]",
+    "translation": "n. 小鸡；小鸟；少妇；adj. 胆小的；懦弱的",
+    "translations": [
+      "n. 小鸡；小鸟；少妇",
+      "adj. 胆小的；懦弱的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00020",
+    "word": "chocolate",
+    "phonetic": "[ˈtʃɔːklət]",
+    "translation": "n. 巧克力，巧克力糖；巧克力色；adj. 巧克力色的；巧克力口味的",
+    "translations": [
+      "n. 巧克力，巧克力糖；巧克力色",
+      "adj. 巧克力色的；巧克力口味的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00021",
+    "word": "stories",
+    "phonetic": "[ˈstɔːriz]",
+    "translation": "n. 故事（story的复数）",
+    "translations": [
+      "n. 故事（story的复数）"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00022",
+    "word": "invitation",
+    "phonetic": "[ˌɪnvɪˈteɪʃn]",
+    "translation": "n. 邀请；引诱；请帖；邀请函",
+    "translations": [
+      "n. 邀请；引诱；请帖；邀请函"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00023",
+    "word": "tidy up",
+    "phonetic": "",
+    "translation": "v. 整理干净",
+    "translations": [
+      "v. 整理干净"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00024",
+    "word": "November",
+    "phonetic": "[noʊˈvembər]",
+    "translation": "n. 十一月",
+    "translations": [
+      "n. 十一月"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00025",
+    "word": "from",
+    "phonetic": "[frəm; frʌm; frɑːm]",
+    "translation": "prep. 来自，从；由于；今后",
+    "translations": [
+      "prep. 来自，从；由于；今后"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00026",
+    "word": "to",
+    "phonetic": "[tə; tu; tuː]",
+    "translation": "prep. 到；向；（表示时间、方向）朝…方向；adv. 向前；（门等）关上",
+    "translations": [
+      "prep. 到；向；（表示时间、方向）朝…方向",
+      "adv. 向前；（门等）关上"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00027",
+    "word": "reply",
+    "phonetic": "[rɪˈplaɪ]",
+    "translation": "n. 回答；[法] 答辩；vt. 回答；答复；vi. 回答；[法] 答辩；回击",
+    "translations": [
+      "n. 回答；[法] 答辩",
+      "vt. 回答；答复",
+      "vi. 回答；[法] 答辩；回击"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00028",
+    "word": "mine",
+    "phonetic": "[maɪn]",
+    "translation": "n. 矿，矿藏；矿山，矿井；地雷，水雷；vt. 开采，采掘；在…布雷；vi. 开矿，采矿；埋设地雷；pron. 我的",
+    "translations": [
+      "n. 矿，矿藏；矿山，矿井；地雷，水雷",
+      "vt. 开采，采掘；在…布雷",
+      "vi. 开矿，采矿；埋设地雷",
+      "pron. 我的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00029",
+    "word": "whose",
+    "phonetic": "[huːz]",
+    "translation": "pron. 谁的（疑问代词）",
+    "translations": [
+      "pron. 谁的（疑问代词）"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00030",
+    "word": "yours",
+    "phonetic": "[jərz; jɔːrz; jʊrz]",
+    "translation": "pron. 你（们）的东西；你的责任[义务]；你的家属；来信，尊函；adj. 你（们）的（东西）；信末署名前用语",
+    "translations": [
+      "pron. 你（们）的东西；你的责任[义务]；你的家属；来信，尊函",
+      "adj. 你（们）的（东西）；信末署名前用语"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00031",
+    "word": "hers",
+    "phonetic": "[hɜːrz; ɜːrz]",
+    "translation": "pron. 她的（所有格）",
+    "translations": [
+      "pron. 她的（所有格）"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00032",
+    "word": "both",
+    "phonetic": "[boʊθ]",
+    "translation": "conj. 既…且…；adj. 两个的；两者的；pron. 双方都；两者都；adv. 并；又；两者皆",
+    "translations": [
+      "conj. 既…且…",
+      "adj. 两个的；两者的",
+      "pron. 双方都；两者都",
+      "adv. 并；又；两者皆"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00033",
+    "word": "wet",
+    "phonetic": "[wet]",
+    "translation": "n. 雨天；湿气；adj. [气象][物] 潮湿的；有雨的；vt. 弄湿；vi. 变湿",
+    "translations": [
+      "n. 雨天；湿气",
+      "adj. [气象][物] 潮湿的；有雨的",
+      "vt. 弄湿",
+      "vi. 变湿"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00034",
+    "word": "That's OK.",
+    "phonetic": "",
+    "translation": "不用了；可以；没有关系",
+    "translations": [
+      "不用了；可以；没有关系"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00035",
+    "word": "take away",
+    "phonetic": "",
+    "translation": "adj. 买回去的",
+    "translations": [
+      "adj. 买回去的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00036",
+    "word": "worker",
+    "phonetic": "[ˈwɜːrkər]",
+    "translation": "n. 工人；劳动者；职蚁",
+    "translations": [
+      "n. 工人；劳动者；职蚁"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00037",
+    "word": "still",
+    "phonetic": "[stɪl]",
+    "translation": "conj. 仍然；但是；尽管如此；n. 寂静；剧照；蒸馏室；adj. 静止的，不动的；寂静的，平静的；不起泡的；adv. 仍然；更；静止地；vt. 蒸馏；使…静止；使…平静下来；vi. 静止；平静；蒸馏",
+    "translations": [
+      "conj. 仍然；但是；尽管如此",
+      "n. 寂静；剧照；蒸馏室",
+      "adj. 静止的，不动的；寂静的，平静的；不起泡的",
+      "adv. 仍然；更；静止地",
+      "vt. 蒸馏；使…静止；使…平静下来",
+      "vi. 静止；平静；蒸馏"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00038",
+    "word": "well",
+    "phonetic": "[wel]",
+    "translation": "n. 井；源泉；adj. 良好的；健康的；适宜的；adv. 很好地；充分地；满意地；适当地；v. 涌出",
+    "translations": [
+      "n. 井；源泉",
+      "adj. 良好的；健康的；适宜的",
+      "adv. 很好地；充分地；满意地；适当地",
+      "v. 涌出"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00039",
+    "word": "high",
+    "phonetic": "[haɪ]",
+    "translation": "n. 高水平；天空；由麻醉品引起的快感；高压地带；adj. 高的；高级的；崇高的；高音调的；adv. 高；奢侈地",
+    "translations": [
+      "n. 高水平；天空；由麻醉品引起的快感；高压地带",
+      "adj. 高的；高级的；崇高的；高音调的",
+      "adv. 高；奢侈地"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00040",
+    "word": "true",
+    "phonetic": "[truː]",
+    "translation": "n. 真实；准确；adj. 真实的；正确的；vt. 装准；adv. 真实地；准确地",
+    "translations": [
+      "n. 真实；准确",
+      "adj. 真实的；正确的",
+      "vt. 装准",
+      "adv. 真实地；准确地"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00041",
+    "word": "got",
+    "phonetic": "[ɡɑːt]",
+    "translation": "v. 得到，明白（get的过去式和过去分词）",
+    "translations": [
+      "v. 得到，明白（get的过去式和过去分词）"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00042",
+    "word": "eighty",
+    "phonetic": "[ˈeɪti]",
+    "translation": "num. 八十；n. 八十；八十岁；八十年代；adj. 八十的，八十个的；八十岁的",
+    "translations": [
+      "num. 八十",
+      "n. 八十；八十岁；八十年代",
+      "adj. 八十的，八十个的；八十岁的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00043",
+    "word": "point",
+    "phonetic": "[pɔɪnt]",
+    "translation": "n. 要点；得分；标点；[机] 尖端；vt. 指向；弄尖；加标点于；vi. 表明；指向",
+    "translations": [
+      "n. 要点；得分；标点；[机] 尖端",
+      "vt. 指向；弄尖；加标点于",
+      "vi. 表明；指向"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00044",
+    "word": "fan",
+    "phonetic": "[fæn]",
+    "translation": "n. 迷；风扇；爱好者；vt. 煽动；刺激；吹拂；vi. 成扇形散开；飘动",
+    "translations": [
+      "n. 迷；风扇；爱好者",
+      "vt. 煽动；刺激；吹拂",
+      "vi. 成扇形散开；飘动"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00045",
+    "word": "seventy",
+    "phonetic": "[ˈsev(ə)nti]",
+    "translation": "n. 七十；七十个；七十岁；七十年代；num. 七十；adj. 七十的；七十个的；七十岁的",
+    "translations": [
+      "n. 七十；七十个；七十岁；七十年代",
+      "num. 七十",
+      "adj. 七十的；七十个的；七十岁的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00046",
+    "word": "sixty",
+    "phonetic": "[ˈsɪksti]",
+    "translation": "num. 六十；六十个",
+    "translations": [
+      "num. 六十；六十个"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00047",
+    "word": "useful",
+    "phonetic": "[ˈjuːsfl]",
+    "translation": "adj. 有用的，有益的；有帮助的",
+    "translations": [
+      "adj. 有用的，有益的；有帮助的"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00048",
+    "word": "show",
+    "phonetic": "[ʃoʊ]",
+    "translation": "n. 显示；表演；炫耀；vt. 显示；说明；演出；展出；vi. 显示；说明；指示",
+    "translations": [
+      "n. 显示；表演；炫耀",
+      "vt. 显示；说明；演出；展出",
+      "vi. 显示；说明；指示"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00049",
+    "word": "presenter",
+    "phonetic": "[prɪˈzentər]",
+    "translation": "n. 提出者；推荐者；赠送者；任命者；主持人",
+    "translations": [
+      "n. 提出者；推荐者；赠送者；任命者；主持人"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00050",
+    "word": "blind",
+    "phonetic": "[blaɪnd]",
+    "translation": "n. 掩饰，借口；百叶窗；adj. 盲目的；瞎的；vt. 使失明；使失去理智；adv. 盲目地；看不见地",
+    "translations": [
+      "n. 掩饰，借口；百叶窗",
+      "adj. 盲目的；瞎的",
+      "vt. 使失明；使失去理智",
+      "adv. 盲目地；看不见地"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00051",
+    "word": "could",
+    "phonetic": "[kəd; kʊd]",
+    "translation": "aux. 能够；v. 能（can的过去式）",
+    "translations": [
+      "aux. 能够",
+      "v. 能（can的过去式）"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00052",
+    "word": "speak",
+    "phonetic": "[spiːk]",
+    "translation": "vi. 说话；演讲；表明；陈述；vt. 讲话；发言；讲演",
+    "translations": [
+      "vi. 说话；演讲；表明；陈述",
+      "vt. 讲话；发言；讲演"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00053",
+    "word": "fire",
+    "phonetic": "[ˈfaɪər]",
+    "translation": "n. 火；火灾；炮火；炉火；热情；激情；磨难；vt. 点燃；解雇；开除；使发光；烧制；激动；放枪；vi. 着火；射击；开枪；激动；烧火",
+    "translations": [
+      "n. 火；火灾；炮火；炉火；热情；激情；磨难",
+      "vt. 点燃；解雇；开除；使发光；烧制；激动；放枪",
+      "vi. 着火；射击；开枪；激动；烧火"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00054",
+    "word": "inside",
+    "phonetic": "[ˌɪnˈsaɪd]",
+    "translation": "prep. 少于；在…之内；n. 里面；内部；内情；内脏；adj. 里面的；内部的；秘密的；adv. 在里面",
+    "translations": [
+      "prep. 少于；在…之内",
+      "n. 里面；内部；内情；内脏",
+      "adj. 里面的；内部的；秘密的",
+      "adv. 在里面"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00055",
+    "word": "firefighter",
+    "phonetic": "[ˈfaɪərfaɪtər]",
+    "translation": "n. 消防队员",
+    "translations": [
+      "n. 消防队员"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00056",
+    "word": "couldn't",
+    "phonetic": "",
+    "translation": "v. 不能（等于could not）",
+    "translations": [
+      "v. 不能（等于could not）"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00057",
+    "word": "could not",
+    "phonetic": "",
+    "translation": "auxv. 能；行；难道会；(可)能；modalv. 会；得；难道会；（表示知道如何做）懂得；n. （盛食品或饮料的）金属罐；一罐（的量）；塑料容器；喷雾罐；v. 把（食品）装罐保存；解雇；让…卷铺盖走人；炒…的鱿鱼",
+    "translations": [
+      "auxv. 能；行；难道会；(可)能",
+      "modalv. 会；得；难道会；（表示知道如何做）懂得",
+      "n. （盛食品或饮料的）金属罐；一罐（的量）；塑料容器；喷雾罐",
+      "v. 把（食品）装罐保存；解雇；让…卷铺盖走人；炒…的鱿鱼"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00058",
+    "word": "often",
+    "phonetic": "[ˈɔːf(ə)n]",
+    "translation": "adv. 常常，时常",
+    "translations": [
+      "adv. 常常，时常"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00059",
+    "word": "around",
+    "phonetic": "[əˈraʊnd]",
+    "translation": "prep. 四处；在…周围；adv. 大约；到处；在附近",
+    "translations": [
+      "prep. 四处；在…周围",
+      "adv. 大约；到处；在附近"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00060",
+    "word": "start",
+    "phonetic": "[stɑːrt]",
+    "translation": "n. 开始；起点；vt. 开始；启动；vi. 出发",
+    "translations": [
+      "n. 开始；起点",
+      "vt. 开始；启动",
+      "vi. 出发"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00061",
+    "word": "line",
+    "phonetic": "[laɪn]",
+    "translation": "n. 路线，航线；排；绳；vt. 排成一行；划线于；以线条标示；使…起皱纹；vi. 排队；站成一排",
+    "translations": [
+      "n. 路线，航线；排；绳",
+      "vt. 排成一行；划线于；以线条标示；使…起皱纹",
+      "vi. 排队；站成一排"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00062",
+    "word": "half",
+    "phonetic": "[hæf]",
+    "translation": "n. 一半；半场；半学年；adj. 一半的；不完全的；半途的；adv. 一半地；部分地",
+    "translations": [
+      "n. 一半；半场；半学年",
+      "adj. 一半的；不完全的；半途的",
+      "adv. 一半地；部分地"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00063",
+    "word": "past",
+    "phonetic": "[pæst]",
+    "translation": "n. 过去；往事；prep. 越过；晚于；adj. 过去的；结束的；adv. 过；经过",
+    "translations": [
+      "n. 过去；往事",
+      "prep. 越过；晚于",
+      "adj. 过去的；结束的",
+      "adv. 过；经过"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00064",
+    "word": "miss",
+    "phonetic": "[mɪs]",
+    "translation": "n. 女士，小姐，年轻未婚女子；vt. 错过，想念，缺（勤）",
+    "translations": [
+      "n. 女士，小姐，年轻未婚女子",
+      "vt. 错过，想念，缺（勤）"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00065",
+    "word": "study",
+    "phonetic": "[ˈstʌdi]",
+    "translation": "n. 学习，研究；课题；书房；学问；vt. 学习；考虑；攻读；细察；vi. 研究；用功",
+    "translations": [
+      "n. 学习，研究；课题；书房；学问",
+      "vt. 学习；考虑；攻读；细察",
+      "vi. 研究；用功"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00066",
+    "word": "open",
+    "phonetic": "[ˈoʊpən]",
+    "translation": "adj. 公开的；敞开的；空旷的；坦率的；营业着的；vi. 开始；展现；vt. 公开；打开；n. 公开；空旷；户外",
+    "translations": [
+      "adj. 公开的；敞开的；空旷的；坦率的；营业着的",
+      "vi. 开始；展现",
+      "vt. 公开；打开",
+      "n. 公开；空旷；户外"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00067",
+    "word": "wall",
+    "phonetic": "[wɔːl]",
+    "translation": "n. 墙壁，围墙；似墙之物；adj. 墙壁的；vt. 用墙围住，围以墙",
+    "translations": [
+      "n. 墙壁，围墙；似墙之物",
+      "adj. 墙壁的",
+      "vt. 用墙围住，围以墙"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00068",
+    "word": "have fun",
+    "phonetic": "[hæv fʌn]",
+    "translation": "na. 作乐",
+    "translations": [
+      "na. 作乐"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00069",
+    "word": "break",
+    "phonetic": "[breɪk]",
+    "translation": "vi. 打破；折断；弄坏；削弱；vt. （使）破；打破（纪录）；（常指好天气）突变；开始；vi. （嗓音）突变；突破；破晓；（价格）突然下跌；n. 破裂；间断；（持续一段时间的状况的）改变；间歇",
+    "translations": [
+      "vi. 打破；折断；弄坏；削弱",
+      "vt. （使）破；打破（纪录）；（常指好天气）突变；开始",
+      "vi. （嗓音）突变；突破；破晓；（价格）突然下跌",
+      "n. 破裂；间断；（持续一段时间的状况的）改变；间歇"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00070",
+    "word": "nothing",
+    "phonetic": "[ˈnʌθɪŋ]",
+    "translation": "neg. 没什么；毫不；n. 无；零；不关紧要之事；adv. 毫不；决不；pron. 无事；无物；int. 什么也没有",
+    "translations": [
+      "neg. 没什么；毫不",
+      "n. 无；零；不关紧要之事",
+      "adv. 毫不；决不",
+      "pron. 无事；无物",
+      "int. 什么也没有"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00071",
+    "word": "think",
+    "phonetic": "[θɪŋk]",
+    "translation": "n. 想；想法；adj. 思想的；vi. 想；认为；vt. 想；认为；想起；想像；打算",
+    "translations": [
+      "n. 想；想法",
+      "adj. 思想的",
+      "vi. 想；认为",
+      "vt. 想；认为；想起；想像；打算"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00072",
+    "word": "drank",
+    "phonetic": "[dræŋk]",
+    "translation": "v. 喝；喝酒（drink的过去式）",
+    "translations": [
+      "v. 喝；喝酒（drink的过去式）"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00073",
+    "word": "should",
+    "phonetic": "[ʃəd; ʃʊd]",
+    "translation": "aux. 应该；就；可能；将要",
+    "translations": [
+      "aux. 应该；就；可能；将要"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00074",
+    "word": "go to bed",
+    "phonetic": "",
+    "translation": "na. 睡；同床；【印】付印",
+    "translations": [
+      "na. 睡；同床；【印】付印"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00075",
+    "word": "shouldn't",
+    "phonetic": "",
+    "translation": "不应该，不应（等于should not）",
+    "translations": [
+      "不应该，不应（等于should not）"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00076",
+    "word": "should not",
+    "phonetic": "",
+    "translation": "不应该；不应当；不宜",
+    "translations": [
+      "不应该；不应当；不宜"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00077",
+    "word": "take down",
+    "phonetic": "[teɪk daʊn]",
+    "translation": "na. 扯下；卷起；记下；卸下",
+    "translations": [
+      "na. 扯下；卷起；记下；卸下"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00078",
+    "word": "clean",
+    "phonetic": "[kliːn]",
+    "translation": "n. 打扫；adj. 清洁的，干净的；清白的；vt. 使干净；vi. 打扫，清扫；adv. 完全地",
+    "translations": [
+      "n. 打扫",
+      "adj. 清洁的，干净的；清白的",
+      "vt. 使干净",
+      "vi. 打扫，清扫",
+      "adv. 完全地"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00079",
+    "word": "rule",
+    "phonetic": "[ruːl]",
+    "translation": "n. 统治；规则；vt. 统治；规定；管理；裁决；支配；vi. 统治；管辖；裁定",
+    "translations": [
+      "n. 统治；规则",
+      "vt. 统治；规定；管理；裁决；支配",
+      "vi. 统治；管辖；裁定"
+    ],
+    "domain": "qwerty_waiyan17"
+  },
+  {
+    "id": "qwerty_waiyan17_00080",
+    "word": "kind",
+    "phonetic": "[kaɪnd]",
+    "translation": "n. 种类；性质；adj. 和蔼的；宽容的；令人感激的",
+    "translations": [
+      "n. 种类；性质",
+      "adj. 和蔼的；宽容的；令人感激的"
+    ],
+    "domain": "qwerty_waiyan17"
+  }
+]

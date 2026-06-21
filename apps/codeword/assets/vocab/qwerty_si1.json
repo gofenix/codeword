@@ -1,0 +1,842 @@
+[
+  {
+    "id": "qwerty_si1_00001",
+    "word": "classroom",
+    "phonetic": "'klæsrʊm",
+    "translation": "教室",
+    "translations": [
+      "教室"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00002",
+    "word": "window",
+    "phonetic": "'wɪndo",
+    "translation": "窗户",
+    "translations": [
+      "窗户"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00003",
+    "word": "blackboard",
+    "phonetic": "'blækbɔrd",
+    "translation": "黑板",
+    "translations": [
+      "黑板"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00004",
+    "word": "light",
+    "phonetic": "laɪt",
+    "translation": "电灯",
+    "translations": [
+      "电灯"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00005",
+    "word": "picture",
+    "phonetic": "'pɪktʃɚ",
+    "translation": "图画",
+    "translations": [
+      "图画"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00006",
+    "word": "door",
+    "phonetic": "dɔr",
+    "translation": "门",
+    "translations": [
+      "门"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00007",
+    "word": "teacher's desk",
+    "phonetic": "",
+    "translation": "讲台",
+    "translations": [
+      "讲台"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00008",
+    "word": "computer",
+    "phonetic": "kəm'pjutɚ",
+    "translation": "计算机",
+    "translations": [
+      "计算机"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00009",
+    "word": "fan",
+    "phonetic": "fæn",
+    "translation": "风扇",
+    "translations": [
+      "风扇"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00010",
+    "word": "wall",
+    "phonetic": "wɔl",
+    "translation": "墙壁",
+    "translations": [
+      "墙壁"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00011",
+    "word": "floor",
+    "phonetic": "flɔr",
+    "translation": "地板",
+    "translations": [
+      "地板"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00012",
+    "word": "really",
+    "phonetic": "ˈriəˌli, ˈrili",
+    "translation": "真的",
+    "translations": [
+      "真的"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00013",
+    "word": "near",
+    "phonetic": "nɪr",
+    "translation": "距离近",
+    "translations": [
+      "距离近"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00014",
+    "word": "TV",
+    "phonetic": "ˌti vi",
+    "translation": "电视",
+    "translations": [
+      "电视"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00015",
+    "word": "clean",
+    "phonetic": "klin",
+    "translation": "打扫",
+    "translations": [
+      "打扫"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00016",
+    "word": "help",
+    "phonetic": "hɛlp",
+    "translation": "帮助",
+    "translations": [
+      "帮助"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00017",
+    "word": "schoolbag",
+    "phonetic": "ˈskulˌbæɡ",
+    "translation": "书包",
+    "translations": [
+      "书包"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00018",
+    "word": "maths book",
+    "phonetic": "",
+    "translation": "数学书",
+    "translations": [
+      "数学书"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00019",
+    "word": "English book",
+    "phonetic": "",
+    "translation": "英语书",
+    "translations": [
+      "英语书"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00020",
+    "word": "Chinese book",
+    "phonetic": "",
+    "translation": "语文书",
+    "translations": [
+      "语文书"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00021",
+    "word": "storybook",
+    "phonetic": "'stɔrɪ'bʊk",
+    "translation": "故事书",
+    "translations": [
+      "故事书"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00022",
+    "word": "candy",
+    "phonetic": "ˈkændɪ",
+    "translation": "糖果",
+    "translations": [
+      "糖果"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00023",
+    "word": "notebook",
+    "phonetic": "'notbʊk",
+    "translation": "笔记本",
+    "translations": [
+      "笔记本"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00024",
+    "word": "toy",
+    "phonetic": "tɔɪ",
+    "translation": "玩具",
+    "translations": [
+      "玩具"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00025",
+    "word": "key",
+    "phonetic": "kiː",
+    "translation": "钥匙",
+    "translations": [
+      "钥匙"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00026",
+    "word": "wow",
+    "phonetic": "wou",
+    "translation": "呀",
+    "translations": [
+      "呀"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00027",
+    "word": "lost",
+    "phonetic": "lɔst",
+    "translation": "丢失",
+    "translations": [
+      "丢失"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00028",
+    "word": "so much",
+    "phonetic": "",
+    "translation": "非常地",
+    "translations": [
+      "非常地"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00029",
+    "word": "cute",
+    "phonetic": "kjʊt",
+    "translation": "可爱的",
+    "translations": [
+      "可爱的"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00030",
+    "word": "strong",
+    "phonetic": "strɔŋ",
+    "translation": "强壮的",
+    "translations": [
+      "强壮的"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00031",
+    "word": "friendly",
+    "phonetic": "ˈfrɛndlɪ",
+    "translation": "友好的",
+    "translations": [
+      "友好的"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00032",
+    "word": "quiet",
+    "phonetic": "'kwaɪət",
+    "translation": "安静的",
+    "translations": [
+      "安静的"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00033",
+    "word": "hair",
+    "phonetic": "hɛr",
+    "translation": "头发",
+    "translations": [
+      "头发"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00034",
+    "word": "shoe",
+    "phonetic": "ʃu",
+    "translation": "鞋",
+    "translations": [
+      "鞋"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00035",
+    "word": "glasses",
+    "phonetic": "'glæsɪz",
+    "translation": "眼镜",
+    "translations": [
+      "眼镜"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00036",
+    "word": "his",
+    "phonetic": "hɪz",
+    "translation": "他的",
+    "translations": [
+      "他的"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00037",
+    "word": "or",
+    "phonetic": "ɔr",
+    "translation": "或者",
+    "translations": [
+      "或者"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00038",
+    "word": "right",
+    "phonetic": "raɪt",
+    "translation": "对的",
+    "translations": [
+      "对的"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00039",
+    "word": "hat",
+    "phonetic": "hæt",
+    "translation": "帽子",
+    "translations": [
+      "帽子"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00040",
+    "word": "her",
+    "phonetic": "hɚ",
+    "translation": "她的",
+    "translations": [
+      "她的"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00041",
+    "word": "bedroom",
+    "phonetic": "'bɛdrum",
+    "translation": "卧室",
+    "translations": [
+      "卧室"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00042",
+    "word": "living room",
+    "phonetic": "'lɪvɪŋ rum",
+    "translation": "客厅",
+    "translations": [
+      "客厅"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00043",
+    "word": "study",
+    "phonetic": "'stʌdi",
+    "translation": "书房",
+    "translations": [
+      "书房"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00044",
+    "word": "kitchen",
+    "phonetic": "'kɪtʃɪn",
+    "translation": "厨房",
+    "translations": [
+      "厨房"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00045",
+    "word": "bathroom",
+    "phonetic": "'bæθrum",
+    "translation": "浴室",
+    "translations": [
+      "浴室"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00046",
+    "word": "bed",
+    "phonetic": "bɛd",
+    "translation": "床",
+    "translations": [
+      "床"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00047",
+    "word": "phone",
+    "phonetic": "fon",
+    "translation": "电话",
+    "translations": [
+      "电话"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00048",
+    "word": "table",
+    "phonetic": "'tebl",
+    "translation": "桌子",
+    "translations": [
+      "桌子"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00049",
+    "word": "sofa",
+    "phonetic": "'sofə",
+    "translation": "长沙发",
+    "translations": [
+      "长沙发"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00050",
+    "word": "fridge",
+    "phonetic": "frɪdʒ",
+    "translation": "冰箱",
+    "translations": [
+      "冰箱"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00051",
+    "word": "find",
+    "phonetic": "faɪnd",
+    "translation": "找到",
+    "translations": [
+      "找到"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00052",
+    "word": "them",
+    "phonetic": "ðɛm; ðəm",
+    "translation": "他们",
+    "translations": [
+      "他们"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00053",
+    "word": "beef",
+    "phonetic": "bif",
+    "translation": "牛肉",
+    "translations": [
+      "牛肉"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00054",
+    "word": "chicken",
+    "phonetic": "ˈtʃɪkɪn",
+    "translation": "鸡肉",
+    "translations": [
+      "鸡肉"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00055",
+    "word": "noodles",
+    "phonetic": "ˈnudlz",
+    "translation": "面条",
+    "translations": [
+      "面条"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00056",
+    "word": "soup",
+    "phonetic": "sup",
+    "translation": "汤",
+    "translations": [
+      "汤"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00057",
+    "word": "vegetable",
+    "phonetic": "ˈvɛdʒtəbl",
+    "translation": "蔬菜",
+    "translations": [
+      "蔬菜"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00058",
+    "word": "chopsticks",
+    "phonetic": "'tʃɑp,stɪks",
+    "translation": "筷子",
+    "translations": [
+      "筷子"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00059",
+    "word": "bowl",
+    "phonetic": "bol",
+    "translation": "碗",
+    "translations": [
+      "碗"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00060",
+    "word": "fork",
+    "phonetic": "fɔrk",
+    "translation": "餐叉",
+    "translations": [
+      "餐叉"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00061",
+    "word": "knife",
+    "phonetic": "naɪf",
+    "translation": "刀",
+    "translations": [
+      "刀"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00062",
+    "word": "spoon",
+    "phonetic": "spun",
+    "translation": "匙,勺子",
+    "translations": [
+      "匙,勺子"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00063",
+    "word": "dinner",
+    "phonetic": "'dɪnɚ",
+    "translation": "正餐",
+    "translations": [
+      "正餐"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00064",
+    "word": "ready",
+    "phonetic": "'rɛdi",
+    "translation": "准备好",
+    "translations": [
+      "准备好"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00065",
+    "word": "help yourself",
+    "phonetic": "",
+    "translation": "为（自己）取用",
+    "translations": [
+      "为（自己）取用"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00066",
+    "word": "pass",
+    "phonetic": "pæs",
+    "translation": "给",
+    "translations": [
+      "给"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00067",
+    "word": "try",
+    "phonetic": "traɪ",
+    "translation": "试",
+    "translations": [
+      "试"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00068",
+    "word": "parents",
+    "phonetic": "'pɛrənts",
+    "translation": "父母",
+    "translations": [
+      "父母"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00069",
+    "word": "cousin",
+    "phonetic": "'kʌzn",
+    "translation": "同辈表亲",
+    "translations": [
+      "同辈表亲"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00070",
+    "word": "uncle",
+    "phonetic": "'ʌŋkl",
+    "translation": "叔叔",
+    "translations": [
+      "叔叔"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00071",
+    "word": "aunt",
+    "phonetic": "ænt",
+    "translation": "阿姨",
+    "translations": [
+      "阿姨"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00072",
+    "word": "baby brother",
+    "phonetic": "",
+    "translation": "小弟弟",
+    "translations": [
+      "小弟弟"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00073",
+    "word": "doctor",
+    "phonetic": "'dɑktɚ",
+    "translation": "医生",
+    "translations": [
+      "医生"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00074",
+    "word": "cook",
+    "phonetic": "kʊk",
+    "translation": "厨师",
+    "translations": [
+      "厨师"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00075",
+    "word": "driver",
+    "phonetic": "'draɪvɚ",
+    "translation": "司机",
+    "translations": [
+      "司机"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00076",
+    "word": "farmer",
+    "phonetic": "'fɑmɚ",
+    "translation": "农民",
+    "translations": [
+      "农民"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00077",
+    "word": "nurse",
+    "phonetic": "nɝs",
+    "translation": "护士",
+    "translations": [
+      "护士"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00078",
+    "word": "people",
+    "phonetic": "'pipl",
+    "translation": "人们",
+    "translations": [
+      "人们"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00079",
+    "word": "but",
+    "phonetic": "bʌt",
+    "translation": "但是",
+    "translations": [
+      "但是"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00080",
+    "word": "little",
+    "phonetic": "'lɪtl",
+    "translation": "小的",
+    "translations": [
+      "小的"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00081",
+    "word": "puppy",
+    "phonetic": "'pʌpi",
+    "translation": "小狗",
+    "translations": [
+      "小狗"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00082",
+    "word": "football player",
+    "phonetic": "",
+    "translation": "足球运动员",
+    "translations": [
+      "足球运动员"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00083",
+    "word": "job",
+    "phonetic": "dʒɒb",
+    "translation": "工作",
+    "translations": [
+      "工作"
+    ],
+    "domain": "qwerty_si1"
+  },
+  {
+    "id": "qwerty_si1_00084",
+    "word": "basketball",
+    "phonetic": "'bæskɪtbɔl",
+    "translation": "篮球",
+    "translations": [
+      "篮球"
+    ],
+    "domain": "qwerty_si1"
+  }
+]

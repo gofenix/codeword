@@ -7,21 +7,27 @@ import 'package:codeword/main.dart';
 import 'package:codeword/state/learning_session.dart';
 
 void main() {
+  /// Build a ProviderScope with an empty qwerty catalog override so the
+  /// home shell boots without throwing.
+  Widget testApp() => ProviderScope(
+        overrides: [qwertyCatalogProvider.overrideWithValue(const [])],
+        child: const CodewordApp(),
+      );
+
   testWidgets('App boots into 5-tab home with Words selected', (tester) async {
-    await tester.pumpWidget(const ProviderScope(child: CodewordApp()));
+    await tester.pumpWidget(testApp());
     await tester.pump();
     expect(find.text('单词'), findsWidgets);
     expect(find.text('阅读'), findsOneWidget);
     expect(find.text('Pulse'), findsOneWidget);
     expect(find.text('统计'), findsOneWidget);
     expect(find.text('我的'), findsOneWidget);
-    expect(find.text('开始学 ·  AI 核心'), findsOneWidget);
   });
 
   testWidgets('HomeShell keeps tab state mounted while switching tabs', (
     tester,
   ) async {
-    await tester.pumpWidget(const ProviderScope(child: CodewordApp()));
+    await tester.pumpWidget(testApp());
     await tester.pump();
 
     final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
@@ -53,7 +59,7 @@ void main() {
 
   test('Empty stats are zero across the board', () {
     final notifier = ReviewStateNotifier();
-    final s = notifier.stats();
+    final s = notifier.stats(catalog: const []);
     expect(s.totalSeen, 0);
     expect(s.totalLearned, 0);
     expect(s.totalDue, 0);
@@ -80,7 +86,7 @@ void main() {
       now: now.subtract(const Duration(days: 1)),
     );
 
-    final s = notifier.stats(now: now);
+    final s = notifier.stats(now: now, catalog: const []);
     expect(s.totalSeen, 5);
     expect(
       s.totalLearned,
@@ -120,7 +126,10 @@ void main() {
         now: now.add(Duration(days: i)),
       );
     }
-    final s = notifier.stats(now: now.add(const Duration(days: 5)));
+    final s = notifier.stats(
+      now: now.add(const Duration(days: 5)),
+      catalog: const [],
+    );
     final familiar = s.mastery
         .firstWhere((b) => b.level == MasteryLevel.familiar)
         .count;
@@ -131,11 +140,20 @@ void main() {
     );
   });
 
-  test('Per-vocab progress surfaces built-in vocabs even with 0 progress', () {
+  test('Per-vocab progress surfaces catalog vocabs even with 0 progress', () {
     final notifier = ReviewStateNotifier();
-    final s = notifier.stats();
-    // We have 9 built-in vocabs, all empty for a fresh notifier.
-    expect(s.perVocab.length, greaterThanOrEqualTo(9));
+    final catalog = <VocabList>[
+      const VocabList(
+        id: 'v1', name: 'V1', description: '', emoji: '📘',
+        domainColor: '#000', level: 1, wordCount: 10,
+      ),
+      const VocabList(
+        id: 'v2', name: 'V2', description: '', emoji: '📗',
+        domainColor: '#000', level: 1, wordCount: 20,
+      ),
+    ];
+    final s = notifier.stats(catalog: catalog);
+    expect(s.perVocab.length, 2);
     for (final row in s.perVocab) {
       expect(row.totalWords, greaterThan(0));
       expect(row.learned, 0);

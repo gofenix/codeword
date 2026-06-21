@@ -1,0 +1,2755 @@
+[
+  {
+    "id": "qwerty_shanghai_6_2word_00001",
+    "word": "different",
+    "phonetic": "",
+    "translation": "adj. 不平常；与众不同的；有区别的",
+    "translations": [
+      "adj. 不平常；与众不同的；有区别的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00002",
+    "word": "notice",
+    "phonetic": "",
+    "translation": "v. 注意；n. 通知；注意",
+    "translations": [
+      "v. 注意",
+      "n. 通知；注意"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00003",
+    "word": "swan",
+    "phonetic": "",
+    "translation": "n. 天鹅",
+    "translations": [
+      "n. 天鹅"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00004",
+    "word": "partner",
+    "phonetic": "",
+    "translation": "n. 搭配；同伴",
+    "translations": [
+      "n. 搭配；同伴"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00005",
+    "word": "slim",
+    "phonetic": "",
+    "translation": "adj. 苗条的；纤细的",
+    "translations": [
+      "adj. 苗条的；纤细的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00006",
+    "word": "fat",
+    "phonetic": "",
+    "translation": "adj. 肥的；胖的",
+    "translations": [
+      "adj. 肥的；胖的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00007",
+    "word": "curly",
+    "phonetic": "",
+    "translation": "adj. 卷曲状的",
+    "translations": [
+      "adj. 卷曲状的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00008",
+    "word": "straight",
+    "phonetic": "",
+    "translation": "adj. 直的",
+    "translations": [
+      "adj. 直的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00009",
+    "word": "T-shirt",
+    "phonetic": "",
+    "translation": "n. T恤衫；短袖汗衫",
+    "translations": [
+      "n. T恤衫；短袖汗衫"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00010",
+    "word": "jeans",
+    "phonetic": "",
+    "translation": "n. (pl.) 牛仔裤",
+    "translations": [
+      "n. (pl.) 牛仔裤"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00011",
+    "word": "size",
+    "phonetic": "",
+    "translation": "n. 大小；尺码",
+    "translations": [
+      "n. 大小；尺码"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00012",
+    "word": "shape",
+    "phonetic": "",
+    "translation": "n. 形状；外形",
+    "translations": [
+      "n. 形状；外形"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00013",
+    "word": "skin",
+    "phonetic": "",
+    "translation": "n. 皮肤",
+    "translations": [
+      "n. 皮肤"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00014",
+    "word": "special",
+    "phonetic": "",
+    "translation": "adj. 特殊的；特别的",
+    "translations": [
+      "adj. 特殊的；特别的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00015",
+    "word": "number",
+    "phonetic": "",
+    "translation": "n. 编号；数字；数量",
+    "translations": [
+      "n. 编号；数字；数量"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00016",
+    "word": "than",
+    "phonetic": "",
+    "translation": "prep. 比",
+    "translations": [
+      "prep. 比"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00017",
+    "word": "fair",
+    "phonetic": "",
+    "translation": "adj. （头发或皮肤）浅色的；白皙的",
+    "translations": [
+      "adj. （头发或皮肤）浅色的；白皙的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00018",
+    "word": "talent",
+    "phonetic": "",
+    "translation": "n. 天才；天赋",
+    "translations": [
+      "n. 天才；天赋"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00019",
+    "word": "programme",
+    "phonetic": "",
+    "translation": "n. 节目单；计划；方案；活动安排",
+    "translations": [
+      "n. 节目单；计划；方案；活动安排"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00020",
+    "word": "hall",
+    "phonetic": "",
+    "translation": "n. 礼堂；大厅",
+    "translations": [
+      "n. 礼堂；大厅"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00021",
+    "word": "butterfly",
+    "phonetic": "",
+    "translation": "n. 蝴蝶",
+    "translations": [
+      "n. 蝴蝶"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00022",
+    "word": "violin",
+    "phonetic": "",
+    "translation": "n. 小提琴",
+    "translations": [
+      "n. 小提琴"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00023",
+    "word": "host",
+    "phonetic": "",
+    "translation": "n. 节目主持人",
+    "translations": [
+      "n. 节目主持人"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00024",
+    "word": "sound",
+    "phonetic": "",
+    "translation": "v. 听起来；n. 声音",
+    "translations": [
+      "v. 听起来",
+      "n. 声音"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00025",
+    "word": "excite",
+    "phonetic": "",
+    "translation": "v. 使激动；使兴奋",
+    "translations": [
+      "v. 使激动；使兴奋"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00026",
+    "word": "exciting",
+    "phonetic": "",
+    "translation": "adj. 令人兴奋的；令人激动的",
+    "translations": [
+      "adj. 令人兴奋的；令人激动的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00027",
+    "word": "anything",
+    "phonetic": "",
+    "translation": "pron. 任何东西；任何事物",
+    "translations": [
+      "pron. 任何东西；任何事物"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00028",
+    "word": "someone",
+    "phonetic": "",
+    "translation": "pron. 某人",
+    "translations": [
+      "pron. 某人"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00029",
+    "word": "drum",
+    "phonetic": "",
+    "translation": "v. 打鼓；n. 鼓",
+    "translations": [
+      "v. 打鼓",
+      "n. 鼓"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00030",
+    "word": "voice",
+    "phonetic": "",
+    "translation": "n. 嗓音；说话声；歌唱声",
+    "translations": [
+      "n. 嗓音；说话声；歌唱声"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00031",
+    "word": "person",
+    "phonetic": "",
+    "translation": "n. 人；个人",
+    "translations": [
+      "n. 人；个人"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00032",
+    "word": "hobby",
+    "phonetic": "",
+    "translation": "n. 业余爱好",
+    "translations": [
+      "n. 业余爱好"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00033",
+    "word": "personality",
+    "phonetic": "",
+    "translation": "n. 性格；个性",
+    "translations": [
+      "n. 性格；个性"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00034",
+    "word": "ability",
+    "phonetic": "",
+    "translation": "n. 才能；本领；能力",
+    "translations": [
+      "n. 才能；本领；能力"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00035",
+    "word": "easy-going",
+    "phonetic": "",
+    "translation": "adj. 随和的",
+    "translations": [
+      "adj. 随和的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00036",
+    "word": "accept",
+    "phonetic": "",
+    "translation": "v. 接受；同意",
+    "translations": [
+      "v. 接受；同意"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00037",
+    "word": "peacock",
+    "phonetic": "",
+    "translation": "n. 孔雀",
+    "translations": [
+      "n. 孔雀"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00038",
+    "word": "wise",
+    "phonetic": "",
+    "translation": "adj. 充满智慧的；明智的",
+    "translations": [
+      "adj. 充满智慧的；明智的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00039",
+    "word": "nightingale",
+    "phonetic": "",
+    "translation": "n. 夜莺",
+    "translations": [
+      "n. 夜莺"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00040",
+    "word": "without",
+    "phonetic": "",
+    "translation": "prep. 没有；缺乏",
+    "translations": [
+      "prep. 没有；缺乏"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00041",
+    "word": "doubt",
+    "phonetic": "",
+    "translation": "n. 疑惑；疑问",
+    "translations": [
+      "n. 疑惑；疑问"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00042",
+    "word": "laugh",
+    "phonetic": "",
+    "translation": "v. 笑；发笑",
+    "translations": [
+      "v. 笑；发笑"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00043",
+    "word": "laugh at",
+    "phonetic": "",
+    "translation": "嘲笑",
+    "translations": [
+      "嘲笑"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00044",
+    "word": "smile",
+    "phonetic": "",
+    "translation": "v. 微笑；笑",
+    "translations": [
+      "v. 微笑；笑"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00045",
+    "word": "feather",
+    "phonetic": "",
+    "translation": "n. 羽毛",
+    "translations": [
+      "n. 羽毛"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00046",
+    "word": "colourful",
+    "phonetic": "",
+    "translation": "adj. 颜色鲜艳的；五彩缤纷的",
+    "translations": [
+      "adj. 颜色鲜艳的；五彩缤纷的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00047",
+    "word": "future",
+    "phonetic": "",
+    "translation": "n. 将来；未来",
+    "translations": [
+      "n. 将来；未来"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00048",
+    "word": "pat",
+    "phonetic": "",
+    "translation": "v. 轻拍",
+    "translations": [
+      "v. 轻拍"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00049",
+    "word": "skill",
+    "phonetic": "",
+    "translation": "n. 技巧；技艺",
+    "translations": [
+      "n. 技巧；技艺"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00050",
+    "word": "unique",
+    "phonetic": "",
+    "translation": "adj. 唯一的；独一无二的",
+    "translations": [
+      "adj. 唯一的；独一无二的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00051",
+    "word": "mean",
+    "phonetic": "",
+    "translation": "v. 意思是",
+    "translations": [
+      "v. 意思是"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00052",
+    "word": "noticeboard",
+    "phonetic": "",
+    "translation": "n. 布告栏；布告板",
+    "translations": [
+      "n. 布告栏；布告板"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00053",
+    "word": "would",
+    "phonetic": "",
+    "translation": "v. （客气地建议或邀请）将；将会",
+    "translations": [
+      "v. （客气地建议或邀请）将；将会"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00054",
+    "word": "rule",
+    "phonetic": "",
+    "translation": "n. 规则；规章",
+    "translations": [
+      "n. 规则；规章"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00055",
+    "word": "underground",
+    "phonetic": "",
+    "translation": "n. 地铁；地下铁路系统",
+    "translations": [
+      "n. 地铁；地下铁路系统"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00056",
+    "word": "lean",
+    "phonetic": "",
+    "translation": "v. 倚靠；倾斜",
+    "translations": [
+      "v. 倚靠；倾斜"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00057",
+    "word": "litter",
+    "phonetic": "",
+    "translation": "v. 乱扔；n. 垃圾；废弃物",
+    "translations": [
+      "v. 乱扔",
+      "n. 垃圾；废弃物"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00058",
+    "word": "gap",
+    "phonetic": "",
+    "translation": "n. 缺口；间隙",
+    "translations": [
+      "n. 缺口；间隙"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00059",
+    "word": "else",
+    "phonetic": "",
+    "translation": "adv. 其他的；别的",
+    "translations": [
+      "adv. 其他的；别的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00060",
+    "word": "escalator",
+    "phonetic": "",
+    "translation": "n. 自动扶梯",
+    "translations": [
+      "n. 自动扶梯"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00061",
+    "word": "station",
+    "phonetic": "",
+    "translation": "n. 车站；（服务）台",
+    "translations": [
+      "n. 车站；（服务）台"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00062",
+    "word": "announcement",
+    "phonetic": "",
+    "translation": "n. 公告；通告",
+    "translations": [
+      "n. 公告；通告"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00063",
+    "word": "passenger",
+    "phonetic": "",
+    "translation": "n. 乘客；旅客",
+    "translations": [
+      "n. 乘客；旅客"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00064",
+    "word": "lift",
+    "phonetic": "",
+    "translation": "n. 电梯；升降机",
+    "translations": [
+      "n. 电梯；升降机"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00065",
+    "word": "platform",
+    "phonetic": "",
+    "translation": "n. 站台",
+    "translations": [
+      "n. 站台"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00066",
+    "word": "line",
+    "phonetic": "",
+    "translation": "n. 线；线条",
+    "translations": [
+      "n. 线；线条"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00067",
+    "word": "rush",
+    "phonetic": "",
+    "translation": "v. 迅速移动；急促",
+    "translations": [
+      "v. 迅速移动；急促"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00068",
+    "word": "smoke",
+    "phonetic": "",
+    "translation": "v. 吸烟；抽烟",
+    "translations": [
+      "v. 吸烟；抽烟"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00069",
+    "word": "seat",
+    "phonetic": "",
+    "translation": "n. 座位",
+    "translations": [
+      "n. 座位"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00070",
+    "word": "anyone",
+    "phonetic": "",
+    "translation": "pron. 任何人",
+    "translations": [
+      "pron. 任何人"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00071",
+    "word": "leave",
+    "phonetic": "",
+    "translation": "v. 留下；离开",
+    "translations": [
+      "v. 留下；离开"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00072",
+    "word": "rubbish",
+    "phonetic": "",
+    "translation": "n. 垃圾；废弃物",
+    "translations": [
+      "n. 垃圾；废弃物"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00073",
+    "word": "glove",
+    "phonetic": "",
+    "translation": "n. 手套",
+    "translations": [
+      "n. 手套"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00074",
+    "word": "broken",
+    "phonetic": "",
+    "translation": "adj. 破损的；伤残的",
+    "translations": [
+      "adj. 破损的；伤残的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00075",
+    "word": "container",
+    "phonetic": "",
+    "translation": "n. 容器",
+    "translations": [
+      "n. 容器"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00076",
+    "word": "ready",
+    "phonetic": "",
+    "translation": "adj. 准备好；准备完毕",
+    "translations": [
+      "adj. 准备好；准备完毕"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00077",
+    "word": "follow",
+    "phonetic": "",
+    "translation": "v. 遵循；跟随",
+    "translations": [
+      "v. 遵循；跟随"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00078",
+    "word": "stay",
+    "phonetic": "",
+    "translation": "v. 保持；继续是",
+    "translations": [
+      "v. 保持；继续是"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00079",
+    "word": "grow",
+    "phonetic": "",
+    "translation": "v. 逐渐变得；逐渐成为",
+    "translations": [
+      "v. 逐渐变得；逐渐成为"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00080",
+    "word": "important",
+    "phonetic": "",
+    "translation": "adj. 重要的；有重大影响的",
+    "translations": [
+      "adj. 重要的；有重大影响的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00081",
+    "word": "take turns",
+    "phonetic": "",
+    "translation": "轮流；依次",
+    "translations": [
+      "轮流；依次"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00082",
+    "word": "hurrah",
+    "phonetic": "",
+    "translation": "excl. 万岁；好哇",
+    "translations": [
+      "excl. 万岁；好哇"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00083",
+    "word": "model",
+    "phonetic": "",
+    "translation": "n. 模型",
+    "translations": [
+      "n. 模型"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00084",
+    "word": "pay",
+    "phonetic": "",
+    "translation": "v. （与某些名词结合使用，表示将要做或将付出某事物）",
+    "translations": [
+      "v. （与某些名词结合使用，表示将要做或将付出某事物）"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00085",
+    "word": "attention",
+    "phonetic": "",
+    "translation": "n. 注意；关注",
+    "translations": [
+      "n. 注意；关注"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00086",
+    "word": "pay attention to",
+    "phonetic": "",
+    "translation": "（对某人或某事）注意",
+    "translations": [
+      "（对某人或某事）注意"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00087",
+    "word": "dream",
+    "phonetic": "",
+    "translation": "n. 梦；梦想",
+    "translations": [
+      "n. 梦；梦想"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00088",
+    "word": "outing",
+    "phonetic": "",
+    "translation": "n. （集体）出外游玩（或学习）；远足",
+    "translations": [
+      "n. （集体）出外游玩（或学习）；远足"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00089",
+    "word": "gate",
+    "phonetic": "",
+    "translation": "n. 大门",
+    "translations": [
+      "n. 大门"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00090",
+    "word": "festival",
+    "phonetic": "",
+    "translation": "n. 节日",
+    "translations": [
+      "n. 节日"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00091",
+    "word": "across",
+    "phonetic": "",
+    "translation": "prep.&adv. 横过；穿过",
+    "translations": [
+      "prep.&adv. 横过；穿过"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00092",
+    "word": "culture",
+    "phonetic": "",
+    "translation": "n. 文化",
+    "translations": [
+      "n. 文化"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00093",
+    "word": "luck",
+    "phonetic": "",
+    "translation": "n. 机遇；命运；运气",
+    "translations": [
+      "n. 机遇；命运；运气"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00094",
+    "word": "spring roll",
+    "phonetic": "",
+    "translation": "n. 春卷",
+    "translations": [
+      "n. 春卷"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00095",
+    "word": "porridge",
+    "phonetic": "",
+    "translation": "n. 粥",
+    "translations": [
+      "n. 粥"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00096",
+    "word": "lucky",
+    "phonetic": "",
+    "translation": "adj. 有好运的；运气好的；幸运的",
+    "translations": [
+      "adj. 有好运的；运气好的；幸运的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00097",
+    "word": "click",
+    "phonetic": "",
+    "translation": "v. (在计算机屏幕上用鼠标)点击，单击",
+    "translations": [
+      "v. (在计算机屏幕上用鼠标)点击，单击"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00098",
+    "word": "eve",
+    "phonetic": "",
+    "translation": "n. 前夜；前夕",
+    "translations": [
+      "n. 前夜；前夕"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00099",
+    "word": "tradition",
+    "phonetic": "",
+    "translation": "n. 传统",
+    "translations": [
+      "n. 传统"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00100",
+    "word": "country",
+    "phonetic": "",
+    "translation": "n. 国家",
+    "translations": [
+      "n. 国家"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00101",
+    "word": "wealth",
+    "phonetic": "",
+    "translation": "n. 钱财；财富",
+    "translations": [
+      "n. 钱财；财富"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00102",
+    "word": "hope",
+    "phonetic": "",
+    "translation": "v. 希望；期望(某事发生)",
+    "translations": [
+      "v. 希望；期望(某事发生)"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00103",
+    "word": "pass",
+    "phonetic": "",
+    "translation": "v. 给；递；传递",
+    "translations": [
+      "v. 给；递；传递"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00104",
+    "word": "pass on",
+    "phonetic": "",
+    "translation": "传递；转交；(用后)递给，传给",
+    "translations": [
+      "传递；转交；(用后)递给，传给"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00105",
+    "word": "midnight",
+    "phonetic": "",
+    "translation": "n. 午夜",
+    "translations": [
+      "n. 午夜"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00106",
+    "word": "international",
+    "phonetic": "",
+    "translation": "adj. 国际的",
+    "translations": [
+      "adj. 国际的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00107",
+    "word": "event",
+    "phonetic": "",
+    "translation": "n. 公开活动；发生的事情",
+    "translations": [
+      "n. 公开活动；发生的事情"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00108",
+    "word": "square",
+    "phonetic": "",
+    "translation": "n. 广场",
+    "translations": [
+      "n. 广场"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00109",
+    "word": "symphony",
+    "phonetic": "",
+    "translation": "n. 交响乐；交响曲",
+    "translations": [
+      "n. 交响乐；交响曲"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00110",
+    "word": "theatre",
+    "phonetic": "",
+    "translation": "n. 戏院；剧场；露天剧场 (AmE theater)",
+    "translations": [
+      "n. 戏院；剧场；露天剧场 (AmE theater)"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00111",
+    "word": "firework",
+    "phonetic": "",
+    "translation": "n. 烟火；烟花",
+    "translations": [
+      "n. 烟火；烟花"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00112",
+    "word": "concert",
+    "phonetic": "",
+    "translation": "n. 音乐会；演奏会",
+    "translations": [
+      "n. 音乐会；演奏会"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00113",
+    "word": "prince",
+    "phonetic": "",
+    "translation": "n. 王子",
+    "translations": [
+      "n. 王子"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00114",
+    "word": "check",
+    "phonetic": "",
+    "translation": "v. 查明；查看；核实；弄确实",
+    "translations": [
+      "v. 查明；查看；核实；弄确实"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00115",
+    "word": "check out",
+    "phonetic": "",
+    "translation": "察看，观察(有趣或有吸引力的人或事物)",
+    "translations": [
+      "察看，观察(有趣或有吸引力的人或事物)"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00116",
+    "word": "information",
+    "phonetic": "",
+    "translation": "n. 信息；消息；情报；资料；资讯",
+    "translations": [
+      "n. 信息；消息；情报；资料；资讯"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00117",
+    "word": "since",
+    "phonetic": "",
+    "translation": "prep. 自......以来；自......以后",
+    "translations": [
+      "prep. 自......以来；自......以后"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00118",
+    "word": "performance",
+    "phonetic": "",
+    "translation": "n. 表演",
+    "translations": [
+      "n. 表演"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00119",
+    "word": "really",
+    "phonetic": "",
+    "translation": "adv. 事实上；真正地",
+    "translations": [
+      "adv. 事实上；真正地"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00120",
+    "word": "musical",
+    "phonetic": "",
+    "translation": "adj. 音乐的；n. 音乐剧",
+    "translations": [
+      "adj. 音乐的",
+      "n. 音乐剧"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00121",
+    "word": "perform",
+    "phonetic": "",
+    "translation": "v. 表演；演出",
+    "translations": [
+      "v. 表演；演出"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00122",
+    "word": "invite",
+    "phonetic": "",
+    "translation": "v. 邀请",
+    "translations": [
+      "v. 邀请"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00123",
+    "word": "celebrate",
+    "phonetic": "",
+    "translation": "v. 庆祝；庆贺",
+    "translations": [
+      "v. 庆祝；庆贺"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00124",
+    "word": "calendar",
+    "phonetic": "",
+    "translation": "n. 日历；历法",
+    "translations": [
+      "n. 日历；历法"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00125",
+    "word": "lunar calendar",
+    "phonetic": "",
+    "translation": "农历",
+    "translations": [
+      "农历"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00126",
+    "word": "reunion",
+    "phonetic": "",
+    "translation": "n. 重逢；团聚",
+    "translations": [
+      "n. 重逢；团聚"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00127",
+    "word": "full",
+    "phonetic": "",
+    "translation": "adj. 满的",
+    "translations": [
+      "adj. 满的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00128",
+    "word": "post",
+    "phonetic": "",
+    "translation": "v. 发帖；寄；邮寄",
+    "translations": [
+      "v. 发帖；寄；邮寄"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00129",
+    "word": "mostly",
+    "phonetic": "",
+    "translation": "adv. 主要地；一般地；通常",
+    "translations": [
+      "adv. 主要地；一般地；通常"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00130",
+    "word": "tonight",
+    "phonetic": "",
+    "translation": "adv. 今晚",
+    "translations": [
+      "adv. 今晚"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00131",
+    "word": "harvest",
+    "phonetic": "",
+    "translation": "n. 收获；收获季节",
+    "translations": [
+      "n. 收获；收获季节"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00132",
+    "word": "traditional",
+    "phonetic": "",
+    "translation": "adj. 传统的；习俗的",
+    "translations": [
+      "adj. 传统的；习俗的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00133",
+    "word": "nut",
+    "phonetic": "",
+    "translation": "n. 坚果",
+    "translations": [
+      "n. 坚果"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00134",
+    "word": "sugar",
+    "phonetic": "",
+    "translation": "n. 食糖",
+    "translations": [
+      "n. 食糖"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00135",
+    "word": "experience",
+    "phonetic": "",
+    "translation": "n. 经历；经验",
+    "translations": [
+      "n. 经历；经验"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00136",
+    "word": "meal",
+    "phonetic": "",
+    "translation": "n. 早(或午、晚)餐；一顿饭",
+    "translations": [
+      "n. 早(或午、晚)餐；一顿饭"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00137",
+    "word": "count",
+    "phonetic": "",
+    "translation": "v. 数数；计算",
+    "translations": [
+      "v. 数数；计算"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00138",
+    "word": "search",
+    "phonetic": "",
+    "translation": "v. 搜索；搜寻；搜查；查找",
+    "translations": [
+      "v. 搜索；搜寻；搜查；查找"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00139",
+    "word": "airport",
+    "phonetic": "",
+    "translation": "n. 机场",
+    "translations": [
+      "n. 机场"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00140",
+    "word": "location",
+    "phonetic": "",
+    "translation": "n. 地方；地点；位置",
+    "translations": [
+      "n. 地方；地点；位置"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00141",
+    "word": "capital",
+    "phonetic": "",
+    "translation": "n. 首都；国都",
+    "translations": [
+      "n. 首都；国都"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00142",
+    "word": "wet",
+    "phonetic": "",
+    "translation": "adj. 湿的；潮湿的",
+    "translations": [
+      "adj. 湿的；潮湿的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00143",
+    "word": "foggy",
+    "phonetic": "",
+    "translation": "adj. 有雾的",
+    "translations": [
+      "adj. 有雾的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00144",
+    "word": "north",
+    "phonetic": "",
+    "translation": "adv. 向北；朝北；n. 北；北方",
+    "translations": [
+      "adv. 向北；朝北",
+      "n. 北；北方"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00145",
+    "word": "quite",
+    "phonetic": "",
+    "translation": "adv. 相当；非常",
+    "translations": [
+      "adv. 相当；非常"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00146",
+    "word": "temperature",
+    "phonetic": "",
+    "translation": "n. 温度；气温",
+    "translations": [
+      "n. 温度；气温"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00147",
+    "word": "drop",
+    "phonetic": "",
+    "translation": "v. 降低；减少",
+    "translations": [
+      "v. 降低；减少"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00148",
+    "word": "degree",
+    "phonetic": "",
+    "translation": "n. 度；度数",
+    "translations": [
+      "n. 度；度数"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00149",
+    "word": "Celsius",
+    "phonetic": "",
+    "translation": "adj. 摄氏的",
+    "translations": [
+      "adj. 摄氏的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00150",
+    "word": "dry",
+    "phonetic": "",
+    "translation": "adj. 干的；干燥的",
+    "translations": [
+      "adj. 干的；干燥的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00151",
+    "word": "south",
+    "phonetic": "",
+    "translation": "n. 南部；南方；adv. 向南；朝南",
+    "translations": [
+      "n. 南部；南方",
+      "adv. 向南；朝南"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00152",
+    "word": "still",
+    "phonetic": "",
+    "translation": "adv. 还；仍然",
+    "translations": [
+      "adv. 还；仍然"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00153",
+    "word": "wind",
+    "phonetic": "",
+    "translation": "n. 风",
+    "translations": [
+      "n. 风"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00154",
+    "word": "cloud",
+    "phonetic": "",
+    "translation": "n. 云；云朵",
+    "translations": [
+      "n. 云；云朵"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00155",
+    "word": "fog",
+    "phonetic": "",
+    "translation": "n. 雾",
+    "translations": [
+      "n. 雾"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00156",
+    "word": "skate",
+    "phonetic": "",
+    "translation": "v. 滑冰；溜冰",
+    "translations": [
+      "v. 滑冰；溜冰"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00157",
+    "word": "picnic",
+    "phonetic": "",
+    "translation": "n. 野餐",
+    "translations": [
+      "n. 野餐"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00158",
+    "word": "sunshine",
+    "phonetic": "",
+    "translation": "n. 阳光；日光",
+    "translations": [
+      "n. 阳光；日光"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00159",
+    "word": "hate",
+    "phonetic": "",
+    "translation": "v. 讨厌；憎恶",
+    "translations": [
+      "v. 讨厌；憎恶"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00160",
+    "word": "extreme",
+    "phonetic": "",
+    "translation": "adj. 极度的；极大的",
+    "translations": [
+      "adj. 极度的；极大的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00161",
+    "word": "news",
+    "phonetic": "",
+    "translation": "n. 媒体对重要事情的报道；新闻",
+    "translations": [
+      "n. 媒体对重要事情的报道；新闻"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00162",
+    "word": "heat",
+    "phonetic": "",
+    "translation": "n. 热；高温",
+    "translations": [
+      "n. 热；高温"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00163",
+    "word": "wave",
+    "phonetic": "",
+    "translation": "n. 海浪；波浪",
+    "translations": [
+      "n. 海浪；波浪"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00164",
+    "word": "heatwave",
+    "phonetic": "",
+    "translation": "n. 酷热期；热浪",
+    "translations": [
+      "n. 酷热期；热浪"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00165",
+    "word": "hit",
+    "phonetic": "",
+    "translation": "v. 达到(某水平)",
+    "translations": [
+      "v. 达到(某水平)"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00166",
+    "word": "several",
+    "phonetic": "",
+    "translation": "det.&pron. 几个；数个",
+    "translations": [
+      "det.&pron. 几个；数个"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00167",
+    "word": "break",
+    "phonetic": "",
+    "translation": "v. 打破；破；裂；碎",
+    "translations": [
+      "v. 打破；破；裂；碎"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00168",
+    "word": "record",
+    "phonetic": "",
+    "translation": "n. 纪录；记录；v. 记录",
+    "translations": [
+      "n. 纪录；记录",
+      "v. 记录"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00169",
+    "word": "reach",
+    "phonetic": "",
+    "translation": "v. 增加到；达到",
+    "translations": [
+      "v. 增加到；达到"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00170",
+    "word": "break out",
+    "phonetic": "",
+    "translation": "突然开始；爆发",
+    "translations": [
+      "突然开始；爆发"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00171",
+    "word": "area",
+    "phonetic": "",
+    "translation": "n. (地方、城市、国家、世界的)地区，地域",
+    "translations": [
+      "n. (地方、城市、国家、世界的)地区，地域"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00172",
+    "word": "runway",
+    "phonetic": "",
+    "translation": "n. 飞机跑道",
+    "translations": [
+      "n. 飞机跑道"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00173",
+    "word": "action",
+    "phonetic": "",
+    "translation": "n. 行动；行为过程",
+    "translations": [
+      "n. 行动；行为过程"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00174",
+    "word": "pupil",
+    "phonetic": "",
+    "translation": "n. 学生；小学生",
+    "translations": [
+      "n. 学生；小学生"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00175",
+    "word": "uniform",
+    "phonetic": "",
+    "translation": "n. 制服；校服",
+    "translations": [
+      "n. 制服；校服"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00176",
+    "word": "indoors",
+    "phonetic": "",
+    "translation": "adv. 在室内",
+    "translations": [
+      "adv. 在室内"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00177",
+    "word": "leaf",
+    "phonetic": "",
+    "translation": "n. 叶子 (pl.leaves)",
+    "translations": [
+      "n. 叶子 (pl.leaves)"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00178",
+    "word": "fact",
+    "phonetic": "",
+    "translation": "n. 现实；实际情况",
+    "translations": [
+      "n. 现实；实际情况"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00179",
+    "word": "in fact",
+    "phonetic": "",
+    "translation": "事实上",
+    "translations": [
+      "事实上"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00180",
+    "word": "average",
+    "phonetic": "",
+    "translation": "adj. 平均的",
+    "translations": [
+      "adj. 平均的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00181",
+    "word": "increase",
+    "phonetic": "",
+    "translation": "v. 增长；增加",
+    "translations": [
+      "v. 增长；增加"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00182",
+    "word": "coal",
+    "phonetic": "",
+    "translation": "n. 煤",
+    "translations": [
+      "n. 煤"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00183",
+    "word": "cause",
+    "phonetic": "",
+    "translation": "v. 引起；使发生；n. 原因；事业",
+    "translations": [
+      "v. 引起；使发生",
+      "n. 原因；事业"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00184",
+    "word": "worse",
+    "phonetic": "",
+    "translation": "adj. (bad的比较级)更差的；更糟的",
+    "translations": [
+      "adj. (bad的比较级)更差的；更糟的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00185",
+    "word": "soon",
+    "phonetic": "",
+    "translation": "adv. 很快；马上；不久",
+    "translations": [
+      "adv. 很快；马上；不久"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00186",
+    "word": "regards",
+    "phonetic": "",
+    "translation": "n. (pl.)致意；问候",
+    "translations": [
+      "n. (pl.)致意；问候"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00187",
+    "word": "neighbourhood",
+    "phonetic": "",
+    "translation": "n. 街区；邻近的地方 (AmE neighborhood)",
+    "translations": [
+      "n. 街区；邻近的地方 (AmE neighborhood)"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00188",
+    "word": "build",
+    "phonetic": "",
+    "translation": "v. 创建；建造",
+    "translations": [
+      "v. 创建；建造"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00189",
+    "word": "reduce",
+    "phonetic": "",
+    "translation": "v. 减少；缩小",
+    "translations": [
+      "v. 减少；缩小"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00190",
+    "word": "reuse",
+    "phonetic": "",
+    "translation": "v. 重复使用",
+    "translations": [
+      "v. 重复使用"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00191",
+    "word": "recycle",
+    "phonetic": "",
+    "translation": "v. 回收利用",
+    "translations": [
+      "v. 回收利用"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00192",
+    "word": "bottle",
+    "phonetic": "",
+    "translation": "n. 瓶子",
+    "translations": [
+      "n. 瓶子"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00193",
+    "word": "repair",
+    "phonetic": "",
+    "translation": "v. 修理；修补",
+    "translations": [
+      "v. 修理；修补"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00194",
+    "word": "item",
+    "phonetic": "",
+    "translation": "n. 一件物品",
+    "translations": [
+      "n. 一件物品"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00195",
+    "word": "sort",
+    "phonetic": "",
+    "translation": "v. 整理；把......分类",
+    "translations": [
+      "v. 整理；把......分类"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00196",
+    "word": "cloth",
+    "phonetic": "",
+    "translation": "n. 织物；布料",
+    "translations": [
+      "n. 织物；布料"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00197",
+    "word": "pick",
+    "phonetic": "",
+    "translation": "v. 拿起；挑选；选择",
+    "translations": [
+      "v. 拿起；挑选；选择"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00198",
+    "word": "pick up",
+    "phonetic": "",
+    "translation": "捡起；拾起",
+    "translations": [
+      "捡起；拾起"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00199",
+    "word": "plastic",
+    "phonetic": "",
+    "translation": "adj. 塑料的；n. 塑料",
+    "translations": [
+      "adj. 塑料的",
+      "n. 塑料"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00200",
+    "word": "waste",
+    "phonetic": "",
+    "translation": "n. 废物；垃圾；v. 浪费；滥用",
+    "translations": [
+      "n. 废物；垃圾",
+      "v. 浪费；滥用"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00201",
+    "word": "electricity",
+    "phonetic": "",
+    "translation": "n. 电；电能",
+    "translations": [
+      "n. 电；电能"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00202",
+    "word": "tap",
+    "phonetic": "",
+    "translation": "n. 水龙头",
+    "translations": [
+      "n. 水龙头"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00203",
+    "word": "brush",
+    "phonetic": "",
+    "translation": "v. (用刷子)刷净，刷亮，刷平顺",
+    "translations": [
+      "v. (用刷子)刷净，刷亮，刷平顺"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00204",
+    "word": "tooth",
+    "phonetic": "",
+    "translation": "n. 牙；齿 (pl. teeth)",
+    "translations": [
+      "n. 牙；齿 (pl. teeth)"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00205",
+    "word": "bin",
+    "phonetic": "",
+    "translation": "n. 垃圾箱",
+    "translations": [
+      "n. 垃圾箱"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00206",
+    "word": "save",
+    "phonetic": "",
+    "translation": "v. 节省；节约；救",
+    "translations": [
+      "v. 节省；节约；救"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00207",
+    "word": "mix",
+    "phonetic": "",
+    "translation": "v. 混合；融合",
+    "translations": [
+      "v. 混合；融合"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00208",
+    "word": "reusable",
+    "phonetic": "",
+    "translation": "adj. 可重复使用的；可再次使用的",
+    "translations": [
+      "adj. 可重复使用的；可再次使用的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00209",
+    "word": "store",
+    "phonetic": "",
+    "translation": "n. 商店；店铺",
+    "translations": [
+      "n. 商店；店铺"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00210",
+    "word": "even",
+    "phonetic": "",
+    "translation": "adv. (强调出乎意料)甚至，连，即使",
+    "translations": [
+      "adv. (强调出乎意料)甚至，连，即使"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00211",
+    "word": "huge",
+    "phonetic": "",
+    "translation": "adj. 巨大的；极多的；程度高的",
+    "translations": [
+      "adj. 巨大的；极多的；程度高的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00212",
+    "word": "government",
+    "phonetic": "",
+    "translation": "n. 政府；内阁",
+    "translations": [
+      "n. 政府；内阁"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00213",
+    "word": "encourage",
+    "phonetic": "",
+    "translation": "v. 支持；鼓励；激励",
+    "translations": [
+      "v. 支持；鼓励；激励"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00214",
+    "word": "public",
+    "phonetic": "",
+    "translation": "adj. 公共的；公立的",
+    "translations": [
+      "adj. 公共的；公立的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00215",
+    "word": "transport",
+    "phonetic": "",
+    "translation": "n. 交通车辆；旅行方式",
+    "translations": [
+      "n. 交通车辆；旅行方式"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00216",
+    "word": "environmental",
+    "phonetic": "",
+    "translation": "adj. 环境的",
+    "translations": [
+      "adj. 环境的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00217",
+    "word": "electric",
+    "phonetic": "",
+    "translation": "adj. 电的；电动的",
+    "translations": [
+      "adj. 电的；电动的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00218",
+    "word": "building",
+    "phonetic": "",
+    "translation": "n. 建筑物；房子；楼房",
+    "translations": [
+      "n. 建筑物；房子；楼房"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00219",
+    "word": "low",
+    "phonetic": "",
+    "translation": "adj. 低于平均水平的；低的；矮的",
+    "translations": [
+      "adj. 低于平均水平的；低的；矮的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00220",
+    "word": "energy",
+    "phonetic": "",
+    "translation": "n. 能源",
+    "translations": [
+      "n. 能源"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00221",
+    "word": "low-energy",
+    "phonetic": "",
+    "translation": "adj. 低能耗的",
+    "translations": [
+      "adj. 低能耗的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00222",
+    "word": "however",
+    "phonetic": "",
+    "translation": "adv. 然而",
+    "translations": [
+      "adv. 然而"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00223",
+    "word": "alone",
+    "phonetic": "",
+    "translation": "adv. 独自",
+    "translations": [
+      "adv. 独自"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00224",
+    "word": "planet",
+    "phonetic": "",
+    "translation": "n. 行星",
+    "translations": [
+      "n. 行星"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00225",
+    "word": "mankind",
+    "phonetic": "",
+    "translation": "n. 人类",
+    "translations": [
+      "n. 人类"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00226",
+    "word": "daily",
+    "phonetic": "",
+    "translation": "adj. 每日的；日常的",
+    "translations": [
+      "adj. 每日的；日常的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00227",
+    "word": "changer",
+    "phonetic": "",
+    "translation": "n. 改变者；改进者",
+    "translations": [
+      "n. 改变者；改进者"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00228",
+    "word": "scientist",
+    "phonetic": "",
+    "translation": "n. 科学家",
+    "translations": [
+      "n. 科学家"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00229",
+    "word": "change",
+    "phonetic": "",
+    "translation": "v.&n. 改变；变化",
+    "translations": [
+      "v.&n. 改变；变化"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00230",
+    "word": "publish",
+    "phonetic": "",
+    "translation": "v. 出版；发行",
+    "translations": [
+      "v. 出版；发行"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00231",
+    "word": "theory",
+    "phonetic": "",
+    "translation": "n. 学说；理论",
+    "translations": [
+      "n. 学说；理论"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00232",
+    "word": "invent",
+    "phonetic": "",
+    "translation": "v. 发明；创造",
+    "translations": [
+      "v. 发明；创造"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00233",
+    "word": "inexpensive",
+    "phonetic": "",
+    "translation": "adj. 廉价的；不昂贵的",
+    "translations": [
+      "adj. 廉价的；不昂贵的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00234",
+    "word": "bulb",
+    "phonetic": "",
+    "translation": "n. 电灯泡",
+    "translations": [
+      "n. 电灯泡"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00235",
+    "word": "discover",
+    "phonetic": "",
+    "translation": "v. 发现",
+    "translations": [
+      "v. 发现"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00236",
+    "word": "general",
+    "phonetic": "",
+    "translation": "adj. 全体的；普遍的；总的",
+    "translations": [
+      "adj. 全体的；普遍的；总的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00237",
+    "word": "smart",
+    "phonetic": "",
+    "translation": "adj. 聪明的；机敏的",
+    "translations": [
+      "adj. 聪明的；机敏的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00238",
+    "word": "inventor",
+    "phonetic": "",
+    "translation": "n. 发明者；发明家",
+    "translations": [
+      "n. 发明者；发明家"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00239",
+    "word": "real",
+    "phonetic": "",
+    "translation": "adj. 真正的",
+    "translations": [
+      "adj. 真正的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00240",
+    "word": "power",
+    "phonetic": "",
+    "translation": "n. 电；电力供应",
+    "translations": [
+      "n. 电；电力供应"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00241",
+    "word": "power station",
+    "phonetic": "",
+    "translation": "发电站；发电厂",
+    "translations": [
+      "发电站；发电厂"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00242",
+    "word": "die",
+    "phonetic": "",
+    "translation": "v. 死亡",
+    "translations": [
+      "v. 死亡"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00243",
+    "word": "successful",
+    "phonetic": "",
+    "translation": "adj. 达到目的的；有成效的；获得成功的",
+    "translations": [
+      "adj. 达到目的的；有成效的；获得成功的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00244",
+    "word": "invention",
+    "phonetic": "",
+    "translation": "n. 发明；创造",
+    "translations": [
+      "n. 发明；创造"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00245",
+    "word": "saver",
+    "phonetic": "",
+    "translation": "n. 救助者；救星",
+    "translations": [
+      "n. 救助者；救星"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00246",
+    "word": "medicine",
+    "phonetic": "",
+    "translation": "n. 医学；药",
+    "translations": [
+      "n. 医学；药"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00247",
+    "word": "Traditional Chinese Medicine (TCM)",
+    "phonetic": "",
+    "translation": "中药",
+    "translations": [
+      "中药"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00248",
+    "word": "spend",
+    "phonetic": "",
+    "translation": "v. 花(时间);度过",
+    "translations": [
+      "v. 花(时间);度过"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00249",
+    "word": "sick",
+    "phonetic": "",
+    "translation": "adj. 生病的；有病的",
+    "translations": [
+      "adj. 生病的；有病的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00250",
+    "word": "penicillin",
+    "phonetic": "",
+    "translation": "n. 青霉素；盘尼西林",
+    "translations": [
+      "n. 青霉素；盘尼西林"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00251",
+    "word": "soldier",
+    "phonetic": "",
+    "translation": "n. 军人；士兵",
+    "translations": [
+      "n. 军人；士兵"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00252",
+    "word": "lose",
+    "phonetic": "",
+    "translation": "v. 遗失；丢失",
+    "translations": [
+      "v. 遗失；丢失"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00253",
+    "word": "admire",
+    "phonetic": "",
+    "translation": "v. 钦佩；赞赏；仰慕",
+    "translations": [
+      "v. 钦佩；赞赏；仰慕"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00254",
+    "word": "herb",
+    "phonetic": "",
+    "translation": "n. 药草；香草",
+    "translations": [
+      "n. 药草；香草"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00255",
+    "word": "pardon",
+    "phonetic": "",
+    "translation": "excl. 请再说一遍",
+    "translations": [
+      "excl. 请再说一遍"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00256",
+    "word": "pain",
+    "phonetic": "",
+    "translation": "n. 疼痛",
+    "translations": [
+      "n. 疼痛"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00257",
+    "word": "beg",
+    "phonetic": "",
+    "translation": "v. 乞讨；乞求",
+    "translations": [
+      "v. 乞讨；乞求"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00258",
+    "word": "beg your pardon",
+    "phonetic": "",
+    "translation": "请原谅；请再说一遍",
+    "translations": [
+      "请原谅；请再说一遍"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00259",
+    "word": "storyteller",
+    "phonetic": "",
+    "translation": "n. 讲故事的人",
+    "translations": [
+      "n. 讲故事的人"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00260",
+    "word": "poem",
+    "phonetic": "",
+    "translation": "n. 诗",
+    "translations": [
+      "n. 诗"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00261",
+    "word": "act",
+    "phonetic": "",
+    "translation": "v. 表演；n. 行为",
+    "translations": [
+      "v. 表演",
+      "n. 行为"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00262",
+    "word": "poor",
+    "phonetic": "",
+    "translation": "adj. 贫穷的",
+    "translations": [
+      "adj. 贫穷的"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00263",
+    "word": "tragedy",
+    "phonetic": "",
+    "translation": "n. 悲剧；悲剧作品",
+    "translations": [
+      "n. 悲剧；悲剧作品"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00264",
+    "word": "create",
+    "phonetic": "",
+    "translation": "v. 创造；创作",
+    "translations": [
+      "v. 创造；创作"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00265",
+    "word": "character",
+    "phonetic": "",
+    "translation": "n. 角色",
+    "translations": [
+      "n. 角色"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00266",
+    "word": "stage",
+    "phonetic": "",
+    "translation": "n. 舞台",
+    "translations": [
+      "n. 舞台"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00267",
+    "word": "million",
+    "phonetic": "",
+    "translation": "num. 一百万",
+    "translations": [
+      "num. 一百万"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00268",
+    "word": "millions of",
+    "phonetic": "",
+    "translation": "数以百万计的；很多",
+    "translations": [
+      "数以百万计的；很多"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00269",
+    "word": "mark",
+    "phonetic": "",
+    "translation": "v. 做记号；做标记；n. 标记；记号",
+    "translations": [
+      "v. 做记号；做标记",
+      "n. 标记；记号"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00270",
+    "word": "level",
+    "phonetic": "",
+    "translation": "n. 水平；标准",
+    "translations": [
+      "n. 水平；标准"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00271",
+    "word": "until",
+    "phonetic": "",
+    "translation": "conj. 直到......为止 (=till)",
+    "translations": [
+      "conj. 直到......为止 (=till)"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00272",
+    "word": "weigh",
+    "phonetic": "",
+    "translation": "v. 称重量；权衡",
+    "translations": [
+      "v. 称重量；权衡"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00273",
+    "word": "weight",
+    "phonetic": "",
+    "translation": "n. 重量；分量",
+    "translations": [
+      "n. 重量；分量"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  },
+  {
+    "id": "qwerty_shanghai_6_2word_00274",
+    "word": "stamp",
+    "phonetic": "",
+    "translation": "n. 邮票",
+    "translations": [
+      "n. 邮票"
+    ],
+    "domain": "qwerty_shanghai_6_2word"
+  }
+]

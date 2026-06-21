@@ -1,0 +1,5572 @@
+[
+  {
+    "id": "qwerty_tingshuokaoshi_00001",
+    "word": "go out for dinner/dine out",
+    "phonetic": "",
+    "translation": "出去吃饭",
+    "translations": [
+      "出去吃饭"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00002",
+    "word": "go Dutch/Let's go fifty fifty",
+    "phonetic": "",
+    "translation": "AA制",
+    "translations": [
+      "AA制"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00003",
+    "word": "buffet",
+    "phonetic": "",
+    "translation": "自助餐，小卖部",
+    "translations": [
+      "自助餐，小卖部"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00004",
+    "word": "dining hall",
+    "phonetic": "",
+    "translation": "餐厅",
+    "translations": [
+      "餐厅"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00005",
+    "word": "coffee shop/cafe",
+    "phonetic": "",
+    "translation": "咖啡店/厅",
+    "translations": [
+      "咖啡店/厅"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00006",
+    "word": "cafeteria",
+    "phonetic": "",
+    "translation": "自助餐厅",
+    "translations": [
+      "自助餐厅"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00007",
+    "word": "restaurant",
+    "phonetic": "",
+    "translation": "餐馆",
+    "translations": [
+      "餐馆"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00008",
+    "word": "canteen",
+    "phonetic": "",
+    "translation": "食堂，小卖部",
+    "translations": [
+      "食堂，小卖部"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00009",
+    "word": "snack bar",
+    "phonetic": "",
+    "translation": "小吃街；大排挡",
+    "translations": [
+      "小吃街；大排挡"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00010",
+    "word": "appetizer",
+    "phonetic": "",
+    "translation": "开胃品",
+    "translations": [
+      "开胃品"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00011",
+    "word": "steak",
+    "phonetic": "",
+    "translation": "牛排",
+    "translations": [
+      "牛排"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00012",
+    "word": "cheese",
+    "phonetic": "",
+    "translation": "奶酪",
+    "translations": [
+      "奶酪"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00013",
+    "word": "sandwich",
+    "phonetic": "",
+    "translation": "三明治",
+    "translations": [
+      "三明治"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00014",
+    "word": "bacon",
+    "phonetic": "",
+    "translation": "腌肉",
+    "translations": [
+      "腌肉"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00015",
+    "word": "soup",
+    "phonetic": "",
+    "translation": "汤",
+    "translations": [
+      "汤"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00016",
+    "word": "plain water",
+    "phonetic": "",
+    "translation": "自来水(西餐中洗手用的)",
+    "translations": [
+      "自来水(西餐中洗手用的)"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00017",
+    "word": "hamburger",
+    "phonetic": "",
+    "translation": "汉堡包",
+    "translations": [
+      "汉堡包"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00018",
+    "word": "doughnut",
+    "phonetic": "",
+    "translation": "油炸圈饼",
+    "translations": [
+      "油炸圈饼"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00019",
+    "word": "dessert",
+    "phonetic": "",
+    "translation": "甜品，水果(作为正餐的最后一道)",
+    "translations": [
+      "甜品，水果(作为正餐的最后一道)"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00020",
+    "word": "coke",
+    "phonetic": "",
+    "translation": "可口可乐",
+    "translations": [
+      "可口可乐"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00021",
+    "word": "French fries",
+    "phonetic": "",
+    "translation": "炸薯条",
+    "translations": [
+      "炸薯条"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00022",
+    "word": "order",
+    "phonetic": "",
+    "translation": "点菜",
+    "translations": [
+      "点菜"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00023",
+    "word": "serve",
+    "phonetic": "",
+    "translation": "上菜",
+    "translations": [
+      "上菜"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00024",
+    "word": "change",
+    "phonetic": "",
+    "translation": "零钱",
+    "translations": [
+      "零钱"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00025",
+    "word": "tip",
+    "phonetic": "",
+    "translation": "小费",
+    "translations": [
+      "小费"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00026",
+    "word": "treat/This is my treat",
+    "phonetic": "",
+    "translation": "请客(我请客!)",
+    "translations": [
+      "请客(我请客!)"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00027",
+    "word": "Keep the change",
+    "phonetic": "",
+    "translation": "不用找零钱了!",
+    "translations": [
+      "不用找零钱了!"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00028",
+    "word": "waiter/waitress",
+    "phonetic": "",
+    "translation": "男/女侍者",
+    "translations": [
+      "男/女侍者"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00029",
+    "word": "menu",
+    "phonetic": "",
+    "translation": "菜单",
+    "translations": [
+      "菜单"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00030",
+    "word": "knife",
+    "phonetic": "",
+    "translation": "小刀",
+    "translations": [
+      "小刀"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00031",
+    "word": "fork",
+    "phonetic": "",
+    "translation": "叉子",
+    "translations": [
+      "叉子"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00032",
+    "word": "spoon",
+    "phonetic": "",
+    "translation": "调羹",
+    "translations": [
+      "调羹"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00033",
+    "word": "chopsticks",
+    "phonetic": "",
+    "translation": "筷子",
+    "translations": [
+      "筷子"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00034",
+    "word": "plate",
+    "phonetic": "",
+    "translation": "碟子",
+    "translations": [
+      "碟子"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00035",
+    "word": "tray",
+    "phonetic": "",
+    "translation": "托盘",
+    "translations": [
+      "托盘"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00036",
+    "word": "French fries",
+    "phonetic": "",
+    "translation": "炸薯条",
+    "translations": [
+      "炸薯条"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00037",
+    "word": "pizza",
+    "phonetic": "",
+    "translation": "比萨饼",
+    "translations": [
+      "比萨饼"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00038",
+    "word": "ressing",
+    "phonetic": "",
+    "translation": "调味酱",
+    "translations": [
+      "调味酱"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00039",
+    "word": "rare",
+    "phonetic": "",
+    "translation": "半熟的",
+    "translations": [
+      "半熟的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00040",
+    "word": "drink",
+    "phonetic": "",
+    "translation": "饮料",
+    "translations": [
+      "饮料"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00041",
+    "word": "wine",
+    "phonetic": "",
+    "translation": "葡萄酒",
+    "translations": [
+      "葡萄酒"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00042",
+    "word": "Coca-Cola",
+    "phonetic": "",
+    "translation": "可口可乐",
+    "translations": [
+      "可口可乐"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00043",
+    "word": "pay the bill",
+    "phonetic": "",
+    "translation": "付账",
+    "translations": [
+      "付账"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00044",
+    "word": "stamp",
+    "phonetic": "",
+    "translation": "邮票",
+    "translations": [
+      "邮票"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00045",
+    "word": "envelope",
+    "phonetic": "",
+    "translation": "信封",
+    "translations": [
+      "信封"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00046",
+    "word": "package/parcel",
+    "phonetic": "",
+    "translation": "包裹",
+    "translations": [
+      "包裹"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00047",
+    "word": "parcel form",
+    "phonetic": "",
+    "translation": "包裹单",
+    "translations": [
+      "包裹单"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00048",
+    "word": "overweight",
+    "phonetic": "",
+    "translation": "超重",
+    "translations": [
+      "超重"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00049",
+    "word": "postage",
+    "phonetic": "",
+    "translation": "邮资",
+    "translations": [
+      "邮资"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00050",
+    "word": "extra postage",
+    "phonetic": "",
+    "translation": "额外邮资",
+    "translations": [
+      "额外邮资"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00051",
+    "word": "send/post/deliver a letter/mail",
+    "phonetic": "",
+    "translation": "寄/发信",
+    "translations": [
+      "寄/发信"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00052",
+    "word": "express mail",
+    "phonetic": "",
+    "translation": "快件",
+    "translations": [
+      "快件"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00053",
+    "word": "airmail",
+    "phonetic": "",
+    "translation": "航空信件",
+    "translations": [
+      "航空信件"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00054",
+    "word": "surface mail",
+    "phonetic": "",
+    "translation": "平邮，陆地邮寄",
+    "translations": [
+      "平邮，陆地邮寄"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00055",
+    "word": "registered letter",
+    "phonetic": "",
+    "translation": "挂号信",
+    "translations": [
+      "挂号信"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00056",
+    "word": "ordinary letter",
+    "phonetic": "",
+    "translation": "平信",
+    "translations": [
+      "平信"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00057",
+    "word": "open an account",
+    "phonetic": "",
+    "translation": "开一个帐户",
+    "translations": [
+      "开一个帐户"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00058",
+    "word": "insurance",
+    "phonetic": "",
+    "translation": "保险",
+    "translations": [
+      "保险"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00059",
+    "word": "claim",
+    "phonetic": "",
+    "translation": "领取",
+    "translations": [
+      "领取"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00060",
+    "word": "weight",
+    "phonetic": "",
+    "translation": "重量",
+    "translations": [
+      "重量"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00061",
+    "word": "zip/post code",
+    "phonetic": "",
+    "translation": "邮编",
+    "translations": [
+      "邮编"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00062",
+    "word": "international airmail",
+    "phonetic": "",
+    "translation": "国际航空邮件",
+    "translations": [
+      "国际航空邮件"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00063",
+    "word": "open an account",
+    "phonetic": "",
+    "translation": "开一个帐户",
+    "translations": [
+      "开一个帐户"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00064",
+    "word": "library card",
+    "phonetic": "",
+    "translation": "借书证",
+    "translations": [
+      "借书证"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00065",
+    "word": "borrow",
+    "phonetic": "",
+    "translation": "借进",
+    "translations": [
+      "借进"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00066",
+    "word": "lend",
+    "phonetic": "",
+    "translation": "借出",
+    "translations": [
+      "借出"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00067",
+    "word": "keep",
+    "phonetic": "",
+    "translation": "保管",
+    "translations": [
+      "保管"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00068",
+    "word": "renew",
+    "phonetic": "",
+    "translation": "续借",
+    "translations": [
+      "续借"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00069",
+    "word": "overdue",
+    "phonetic": "",
+    "translation": "借书逾期",
+    "translations": [
+      "借书逾期"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00070",
+    "word": "bookshelf",
+    "phonetic": "",
+    "translation": "书架",
+    "translations": [
+      "书架"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00071",
+    "word": "novel",
+    "phonetic": "",
+    "translation": "小说/新颖的",
+    "translations": [
+      "小说/新颖的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00072",
+    "word": "science fiction",
+    "phonetic": "",
+    "translation": "科幻小说",
+    "translations": [
+      "科幻小说"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00073",
+    "word": "magazine/newspaper",
+    "phonetic": "",
+    "translation": "杂志",
+    "translations": [
+      "杂志"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00074",
+    "word": "periodical",
+    "phonetic": "",
+    "translation": "期刊",
+    "translations": [
+      "期刊"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00075",
+    "word": "reference book",
+    "phonetic": "",
+    "translation": "参考书",
+    "translations": [
+      "参考书"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00076",
+    "word": "librarian",
+    "phonetic": "",
+    "translation": "图书管理员",
+    "translations": [
+      "图书管理员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00077",
+    "word": "pay a fine",
+    "phonetic": "",
+    "translation": "交罚款",
+    "translations": [
+      "交罚款"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00078",
+    "word": "tuition",
+    "phonetic": "",
+    "translation": "学费",
+    "translations": [
+      "学费"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00079",
+    "word": "scholarship",
+    "phonetic": "",
+    "translation": "奖学金",
+    "translations": [
+      "奖学金"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00080",
+    "word": "term/semester",
+    "phonetic": "",
+    "translation": "学期",
+    "translations": [
+      "学期"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00081",
+    "word": "register",
+    "phonetic": "",
+    "translation": "注册",
+    "translations": [
+      "注册"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00082",
+    "word": "be absent",
+    "phonetic": "",
+    "translation": "缺课",
+    "translations": [
+      "缺课"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00083",
+    "word": "seminar",
+    "phonetic": "",
+    "translation": "讨论班，研讨会",
+    "translations": [
+      "讨论班，研讨会"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00084",
+    "word": "assignment",
+    "phonetic": "",
+    "translation": "作业",
+    "translations": [
+      "作业"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00085",
+    "word": "presentation",
+    "phonetic": "",
+    "translation": "课堂发言",
+    "translations": [
+      "课堂发言"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00086",
+    "word": "final exam",
+    "phonetic": "",
+    "translation": "期末考试",
+    "translations": [
+      "期末考试"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00087",
+    "word": "go over",
+    "phonetic": "",
+    "translation": "复习",
+    "translations": [
+      "复习"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00088",
+    "word": "fail",
+    "phonetic": "",
+    "translation": "不及格",
+    "translations": [
+      "不及格"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00089",
+    "word": "cut a class",
+    "phonetic": "",
+    "translation": "逃课",
+    "translations": [
+      "逃课"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00090",
+    "word": "graduate",
+    "phonetic": "",
+    "translation": "毕业",
+    "translations": [
+      "毕业"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00091",
+    "word": "stationery",
+    "phonetic": "",
+    "translation": "文具用品",
+    "translations": [
+      "文具用品"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00092",
+    "word": "skip class",
+    "phonetic": "",
+    "translation": "翘课，旷课",
+    "translations": [
+      "翘课，旷课"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00093",
+    "word": "pay a fine",
+    "phonetic": "",
+    "translation": "交罚款",
+    "translations": [
+      "交罚款"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00094",
+    "word": "hospital",
+    "phonetic": "",
+    "translation": "医院",
+    "translations": [
+      "医院"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00095",
+    "word": "emergence department/room",
+    "phonetic": "",
+    "translation": "急诊室",
+    "translations": [
+      "急诊室"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00096",
+    "word": "clinic",
+    "phonetic": "",
+    "translation": "诊所",
+    "translations": [
+      "诊所"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00097",
+    "word": "ICU /intensive care unit",
+    "phonetic": "",
+    "translation": "特护病房",
+    "translations": [
+      "特护病房"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00098",
+    "word": "treatment",
+    "phonetic": "",
+    "translation": "治疗手段",
+    "translations": [
+      "治疗手段"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00099",
+    "word": "take one's temperature/blood pressure",
+    "phonetic": "",
+    "translation": "测量体温/血压",
+    "translations": [
+      "测量体温/血压"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00100",
+    "word": "medicine:pills/tablets",
+    "phonetic": "",
+    "translation": "药丸/药片",
+    "translations": [
+      "药丸/药片"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00101",
+    "word": "aspirin",
+    "phonetic": "",
+    "translation": "阿司匹林",
+    "translations": [
+      "阿司匹林"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00102",
+    "word": "heart attack",
+    "phonetic": "",
+    "translation": "心脏病",
+    "translations": [
+      "心脏病"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00103",
+    "word": "cold/flu",
+    "phonetic": "",
+    "translation": "流感",
+    "translations": [
+      "流感"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00104",
+    "word": "have/catch a cold",
+    "phonetic": "",
+    "translation": "感冒",
+    "translations": [
+      "感冒"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00105",
+    "word": "pain",
+    "phonetic": "",
+    "translation": "疼痛",
+    "translations": [
+      "疼痛"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00106",
+    "word": "headache",
+    "phonetic": "",
+    "translation": "头痛",
+    "translations": [
+      "头痛"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00107",
+    "word": "stomachache",
+    "phonetic": "",
+    "translation": "腹痛",
+    "translations": [
+      "腹痛"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00108",
+    "word": "backache",
+    "phonetic": "",
+    "translation": "背痛",
+    "translations": [
+      "背痛"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00109",
+    "word": "have a sore throat",
+    "phonetic": "",
+    "translation": "喉咙痛",
+    "translations": [
+      "喉咙痛"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00110",
+    "word": "cough",
+    "phonetic": "",
+    "translation": "咳嗽",
+    "translations": [
+      "咳嗽"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00111",
+    "word": "fever",
+    "phonetic": "",
+    "translation": "发烧",
+    "translations": [
+      "发烧"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00112",
+    "word": "doctor",
+    "phonetic": "",
+    "translation": "医生",
+    "translations": [
+      "医生"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00113",
+    "word": "regular doctor",
+    "phonetic": "",
+    "translation": "私人医生",
+    "translations": [
+      "私人医生"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00114",
+    "word": "dentist",
+    "phonetic": "",
+    "translation": "牙医",
+    "translations": [
+      "牙医"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00115",
+    "word": "surgeon",
+    "phonetic": "",
+    "translation": "外科医生",
+    "translations": [
+      "外科医生"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00116",
+    "word": "physician",
+    "phonetic": "",
+    "translation": "内科医生",
+    "translations": [
+      "内科医生"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00117",
+    "word": "nurse",
+    "phonetic": "",
+    "translation": "护士",
+    "translations": [
+      "护士"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00118",
+    "word": "show one's tongue",
+    "phonetic": "",
+    "translation": "伸出舌头",
+    "translations": [
+      "伸出舌头"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00119",
+    "word": "write a prescription",
+    "phonetic": "",
+    "translation": "开处方",
+    "translations": [
+      "开处方"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00120",
+    "word": "give an injection",
+    "phonetic": "",
+    "translation": "打针",
+    "translations": [
+      "打针"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00121",
+    "word": "Health Center",
+    "phonetic": "",
+    "translation": "医疗中心",
+    "translations": [
+      "医疗中心"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00122",
+    "word": "check-up",
+    "phonetic": "",
+    "translation": "检查",
+    "translations": [
+      "检查"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00123",
+    "word": "physical examination",
+    "phonetic": "",
+    "translation": "体检",
+    "translations": [
+      "体检"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00124",
+    "word": "treatment",
+    "phonetic": "",
+    "translation": "治疗手段",
+    "translations": [
+      "治疗手段"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00125",
+    "word": "treat",
+    "phonetic": "",
+    "translation": "治疗",
+    "translations": [
+      "治疗"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00126",
+    "word": "cure",
+    "phonetic": "",
+    "translation": "治愈",
+    "translations": [
+      "治愈"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00127",
+    "word": "dizzy",
+    "phonetic": "",
+    "translation": "晕眩的",
+    "translations": [
+      "晕眩的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00128",
+    "word": "operator",
+    "phonetic": "",
+    "translation": "接线员",
+    "translations": [
+      "接线员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00129",
+    "word": "call/telephone/ring/phone sb",
+    "phonetic": "",
+    "translation": "给某人打电话",
+    "translations": [
+      "给某人打电话"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00130",
+    "word": "a call/ring",
+    "phonetic": "",
+    "translation": "给某人打电话",
+    "translations": [
+      "给某人打电话"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00131",
+    "word": "long-distance call",
+    "phonetic": "",
+    "translation": "长途电话",
+    "translations": [
+      "长途电话"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00132",
+    "word": "collect call",
+    "phonetic": "",
+    "translation": "对方付费电话",
+    "translations": [
+      "对方付费电话"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00133",
+    "word": "personal phone call",
+    "phonetic": "",
+    "translation": "私人电话",
+    "translations": [
+      "私人电话"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00134",
+    "word": "busy line",
+    "phonetic": "",
+    "translation": "电话占线",
+    "translations": [
+      "电话占线"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00135",
+    "word": "put through",
+    "phonetic": "",
+    "translation": "接通电话",
+    "translations": [
+      "接通电话"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00136",
+    "word": "leave a message",
+    "phonetic": "",
+    "translation": "留口信",
+    "translations": [
+      "留口信"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00137",
+    "word": "dial the wrong number",
+    "phonetic": "",
+    "translation": "拨错号码",
+    "translations": [
+      "拨错号码"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00138",
+    "word": " ",
+    "phonetic": "",
+    "translation": "电话占线。",
+    "translations": [
+      "电话占线。"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00139",
+    "word": "It kept a busy line",
+    "phonetic": "",
+    "translation": "电话占线。",
+    "translations": [
+      "电话占线。"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00140",
+    "word": "Hold on",
+    "phonetic": "",
+    "translation": "请稍候。",
+    "translations": [
+      "请稍候。"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00141",
+    "word": "I couldn't get through",
+    "phonetic": "",
+    "translation": "我打不通。",
+    "translations": [
+      "我打不通。"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00142",
+    "word": "make a reservation",
+    "phonetic": "",
+    "translation": "预定房间",
+    "translations": [
+      "预定房间"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00143",
+    "word": "reception/front desk",
+    "phonetic": "",
+    "translation": "接待处，前台",
+    "translations": [
+      "接待处，前台"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00144",
+    "word": "front clerk/reception clerk",
+    "phonetic": "",
+    "translation": "总台接待员",
+    "translations": [
+      "总台接待员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00145",
+    "word": "check in",
+    "phonetic": "",
+    "translation": "登记入住",
+    "translations": [
+      "登记入住"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00146",
+    "word": "check out",
+    "phonetic": "",
+    "translation": "结账退房",
+    "translations": [
+      "结账退房"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00147",
+    "word": "fill out/in a form",
+    "phonetic": "",
+    "translation": "填表",
+    "translations": [
+      "填表"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00148",
+    "word": "single room",
+    "phonetic": "",
+    "translation": "单人间",
+    "translations": [
+      "单人间"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00149",
+    "word": "double room",
+    "phonetic": "",
+    "translation": "双人间",
+    "translations": [
+      "双人间"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00150",
+    "word": "standard room",
+    "phonetic": "",
+    "translation": "标准房",
+    "translations": [
+      "标准房"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00151",
+    "word": "twin room",
+    "phonetic": "",
+    "translation": "双床房",
+    "translations": [
+      "双床房"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00152",
+    "word": "superior room",
+    "phonetic": "",
+    "translation": "高级房",
+    "translations": [
+      "高级房"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00153",
+    "word": "executive room",
+    "phonetic": "",
+    "translation": "商务房",
+    "translations": [
+      "商务房"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00154",
+    "word": "suite",
+    "phonetic": "",
+    "translation": "套间",
+    "translations": [
+      "套间"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00155",
+    "word": "room service",
+    "phonetic": "",
+    "translation": "客户服务",
+    "translations": [
+      "客户服务"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00156",
+    "word": "wake-up call",
+    "phonetic": "",
+    "translation": "叫醒电话",
+    "translations": [
+      "叫醒电话"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00157",
+    "word": "accommodation",
+    "phonetic": "",
+    "translation": "住宿",
+    "translations": [
+      "住宿"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00158",
+    "word": "registration",
+    "phonetic": "",
+    "translation": "登记",
+    "translations": [
+      "登记"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00159",
+    "word": "receptionist",
+    "phonetic": "",
+    "translation": "前台接待员",
+    "translations": [
+      "前台接待员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00160",
+    "word": "housekeeping staff",
+    "phonetic": "",
+    "translation": "客房清洁人员",
+    "translations": [
+      "客房清洁人员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00161",
+    "word": "tip",
+    "phonetic": "",
+    "translation": "小费",
+    "translations": [
+      "小费"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00162",
+    "word": "service charge",
+    "phonetic": "",
+    "translation": "服务费",
+    "translations": [
+      "服务费"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00163",
+    "word": "lobby",
+    "phonetic": "",
+    "translation": "大堂",
+    "translations": [
+      "大堂"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00164",
+    "word": "cook/chef",
+    "phonetic": "",
+    "translation": "厨师",
+    "translations": [
+      "厨师"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00165",
+    "word": "head chef",
+    "phonetic": "",
+    "translation": "厨师长",
+    "translations": [
+      "厨师长"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00166",
+    "word": "cook",
+    "phonetic": "",
+    "translation": "炊事员",
+    "translations": [
+      "炊事员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00167",
+    "word": "assistant manager",
+    "phonetic": "",
+    "translation": "大堂副理",
+    "translations": [
+      "大堂副理"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00168",
+    "word": "lobby manager",
+    "phonetic": "",
+    "translation": "大堂经理",
+    "translations": [
+      "大堂经理"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00169",
+    "word": "tourist guide",
+    "phonetic": "",
+    "translation": "导游",
+    "translations": [
+      "导游"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00170",
+    "word": "restaurant manager",
+    "phonetic": "",
+    "translation": "饭店经理",
+    "translations": [
+      "饭店经理"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00171",
+    "word": "rooms division manager",
+    "phonetic": "",
+    "translation": "房务部经理",
+    "translations": [
+      "房务部经理"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00172",
+    "word": "book/reserve",
+    "phonetic": "",
+    "translation": "预定",
+    "translations": [
+      "预定"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00173",
+    "word": "fully booked",
+    "phonetic": "",
+    "translation": "客满",
+    "translations": [
+      "客满"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00174",
+    "word": "extra charge",
+    "phonetic": "",
+    "translation": "额外费用",
+    "translations": [
+      "额外费用"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00175",
+    "word": "shuttle bus",
+    "phonetic": "",
+    "translation": "班车",
+    "translations": [
+      "班车"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00176",
+    "word": "full price",
+    "phonetic": "",
+    "translation": "全价",
+    "translations": [
+      "全价"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00177",
+    "word": "discounted price",
+    "phonetic": "",
+    "translation": "折扣价",
+    "translations": [
+      "折扣价"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00178",
+    "word": "special price",
+    "phonetic": "",
+    "translation": "优惠价",
+    "translations": [
+      "优惠价"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00179",
+    "word": "All the room are occupied",
+    "phonetic": "",
+    "translation": "房间已满。",
+    "translations": [
+      "房间已满。"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00180",
+    "word": "Meals included",
+    "phonetic": "",
+    "translation": "包括饮食。",
+    "translations": [
+      "包括饮食。"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00181",
+    "word": "speeding",
+    "phonetic": "",
+    "translation": "超速行驶",
+    "translations": [
+      "超速行驶"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00182",
+    "word": "booking office/ticket office",
+    "phonetic": "",
+    "translation": "售票处",
+    "translations": [
+      "售票处"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00183",
+    "word": "waiting room",
+    "phonetic": "",
+    "translation": "候车室",
+    "translations": [
+      "候车室"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00184",
+    "word": "platform",
+    "phonetic": "",
+    "translation": "月台",
+    "translations": [
+      "月台"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00185",
+    "word": "coach/carriage",
+    "phonetic": "",
+    "translation": "车厢",
+    "translations": [
+      "车厢"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00186",
+    "word": "sidewalk/pavement",
+    "phonetic": "",
+    "translation": "人行道",
+    "translations": [
+      "人行道"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00187",
+    "word": "one-way street",
+    "phonetic": "",
+    "translation": "单行道",
+    "translations": [
+      "单行道"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00188",
+    "word": "rush hour",
+    "phonetic": "",
+    "translation": "交通高峰时间",
+    "translations": [
+      "交通高峰时间"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00189",
+    "word": "heavy traffic",
+    "phonetic": "",
+    "translation": "拥挤的交通",
+    "translations": [
+      "拥挤的交通"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00190",
+    "word": "traffic jam",
+    "phonetic": "",
+    "translation": "交通阻塞",
+    "translations": [
+      "交通阻塞"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00191",
+    "word": "traffic lights",
+    "phonetic": "",
+    "translation": "交通灯",
+    "translations": [
+      "交通灯"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00192",
+    "word": "traffic rules",
+    "phonetic": "",
+    "translation": "交通规则",
+    "translations": [
+      "交通规则"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00193",
+    "word": "driving license",
+    "phonetic": "",
+    "translation": "驾照",
+    "translations": [
+      "驾照"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00194",
+    "word": "crowded",
+    "phonetic": "",
+    "translation": "拥挤的",
+    "translations": [
+      "拥挤的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00195",
+    "word": "by air/plane/airplane/aeroplane",
+    "phonetic": "",
+    "translation": "乘飞机",
+    "translations": [
+      "乘飞机"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00196",
+    "word": "by bus",
+    "phonetic": "",
+    "translation": "坐公交",
+    "translations": [
+      "坐公交"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00197",
+    "word": "by coach",
+    "phonetic": "",
+    "translation": "乘长途汽车",
+    "translations": [
+      "乘长途汽车"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00198",
+    "word": "by boat",
+    "phonetic": "",
+    "translation": "坐船",
+    "translations": [
+      "坐船"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00199",
+    "word": "by land",
+    "phonetic": "",
+    "translation": "由陆路",
+    "translations": [
+      "由陆路"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00200",
+    "word": "by sea",
+    "phonetic": "",
+    "translation": "由海路",
+    "translations": [
+      "由海路"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00201",
+    "word": "transfer",
+    "phonetic": "",
+    "translation": "换乘/转机",
+    "translations": [
+      "换乘/转机"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00202",
+    "word": "express train",
+    "phonetic": "",
+    "translation": "特快列车",
+    "translations": [
+      "特快列车"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00203",
+    "word": "dining car",
+    "phonetic": "",
+    "translation": "餐车",
+    "translations": [
+      "餐车"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00204",
+    "word": "garage",
+    "phonetic": "",
+    "translation": "修车场/车库",
+    "translations": [
+      "修车场/车库"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00205",
+    "word": "driver",
+    "phonetic": "",
+    "translation": "司机",
+    "translations": [
+      "司机"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00206",
+    "word": "conductor",
+    "phonetic": "",
+    "translation": "售票员",
+    "translations": [
+      "售票员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00207",
+    "word": "car/traffic accident",
+    "phonetic": "",
+    "translation": "交通事故",
+    "translations": [
+      "交通事故"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00208",
+    "word": "run the red lights",
+    "phonetic": "",
+    "translation": "闯红灯",
+    "translations": [
+      "闯红灯"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00209",
+    "word": "flat tire/tyre",
+    "phonetic": "",
+    "translation": "爆胎",
+    "translations": [
+      "爆胎"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00210",
+    "word": "scratches",
+    "phonetic": "",
+    "translation": "刮蹭",
+    "translations": [
+      "刮蹭"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00211",
+    "word": "fix/repair",
+    "phonetic": "",
+    "translation": "修理",
+    "translations": [
+      "修理"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00212",
+    "word": "survive",
+    "phonetic": "",
+    "translation": "活下来",
+    "translations": [
+      "活下来"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00213",
+    "word": "flight",
+    "phonetic": "",
+    "translation": "航班",
+    "translations": [
+      "航班"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00214",
+    "word": "Welcome on board",
+    "phonetic": "",
+    "translation": "欢迎登机!",
+    "translations": [
+      "欢迎登机!"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00215",
+    "word": "bound for",
+    "phonetic": "",
+    "translation": "飞往…方向去的",
+    "translations": [
+      "飞往…方向去的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00216",
+    "word": "check in",
+    "phonetic": "",
+    "translation": "办理登机手续",
+    "translations": [
+      "办理登机手续"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00217",
+    "word": "airway",
+    "phonetic": "",
+    "translation": "航线",
+    "translations": [
+      "航线"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00218",
+    "word": "flight",
+    "phonetic": "",
+    "translation": "航班",
+    "translations": [
+      "航班"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00219",
+    "word": "(Flight Number)",
+    "phonetic": "",
+    "translation": "航班号",
+    "translations": [
+      "航班号"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00220",
+    "word": "non-stop/direct flight",
+    "phonetic": "",
+    "translation": "直航",
+    "translations": [
+      "直航"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00221",
+    "word": "confirm the flight",
+    "phonetic": "",
+    "translation": "确认航班",
+    "translations": [
+      "确认航班"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00222",
+    "word": "departure time",
+    "phonetic": "",
+    "translation": "起飞时间",
+    "translations": [
+      "起飞时间"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00223",
+    "word": "cancel",
+    "phonetic": "",
+    "translation": "取消",
+    "translations": [
+      "取消"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00224",
+    "word": "one-way ticket",
+    "phonetic": "",
+    "translation": "单程票",
+    "translations": [
+      "单程票"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00225",
+    "word": "round-trip ticket",
+    "phonetic": "",
+    "translation": "往返票",
+    "translations": [
+      "往返票"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00226",
+    "word": "departure lounge",
+    "phonetic": "",
+    "translation": "候机室",
+    "translations": [
+      "候机室"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00227",
+    "word": "book/reserve",
+    "phonetic": "",
+    "translation": "预订",
+    "translations": [
+      "预订"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00228",
+    "word": "first/business/economy cabin",
+    "phonetic": "",
+    "translation": "头等/商务/经济舱",
+    "translations": [
+      "头等/商务/经济舱"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00229",
+    "word": "a window seat",
+    "phonetic": "",
+    "translation": "靠窗的座位",
+    "translations": [
+      "靠窗的座位"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00230",
+    "word": "an aisle seat",
+    "phonetic": "",
+    "translation": "靠走廊的座位",
+    "translations": [
+      "靠走廊的座位"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00231",
+    "word": "safety/safe belt",
+    "phonetic": "",
+    "translation": "安全带",
+    "translations": [
+      "安全带"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00232",
+    "word": "fasten",
+    "phonetic": "",
+    "translation": "系紧",
+    "translations": [
+      "系紧"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00233",
+    "word": "airsick",
+    "phonetic": "",
+    "translation": "晕机的",
+    "translations": [
+      "晕机的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00234",
+    "word": "jet lag",
+    "phonetic": "",
+    "translation": "飞行时差反应",
+    "translations": [
+      "飞行时差反应"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00235",
+    "word": "captain",
+    "phonetic": "",
+    "translation": "机长",
+    "translations": [
+      "机长"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00236",
+    "word": "pilot",
+    "phonetic": "",
+    "translation": "飞行员",
+    "translations": [
+      "飞行员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00237",
+    "word": "airhostess/stewardess",
+    "phonetic": "",
+    "translation": "空姐",
+    "translations": [
+      "空姐"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00238",
+    "word": "customs",
+    "phonetic": "",
+    "translation": "海关",
+    "translations": [
+      "海关"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00239",
+    "word": "security check",
+    "phonetic": "",
+    "translation": "安检",
+    "translations": [
+      "安检"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00240",
+    "word": "departure to",
+    "phonetic": "",
+    "translation": "前往……",
+    "translations": [
+      "前往……"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00241",
+    "word": "destination",
+    "phonetic": "",
+    "translation": "目的地",
+    "translations": [
+      "目的地"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00242",
+    "word": "boarding pass/card",
+    "phonetic": "",
+    "translation": "登机牌",
+    "translations": [
+      "登机牌"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00243",
+    "word": "passport",
+    "phonetic": "",
+    "translation": "护照",
+    "translations": [
+      "护照"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00244",
+    "word": "board",
+    "phonetic": "",
+    "translation": "登机",
+    "translations": [
+      "登机"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00245",
+    "word": "departure gate",
+    "phonetic": "",
+    "translation": "登机口",
+    "translations": [
+      "登机口"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00246",
+    "word": "luggage/baggage",
+    "phonetic": "",
+    "translation": "行李",
+    "translations": [
+      "行李"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00247",
+    "word": "suitcase",
+    "phonetic": "",
+    "translation": "行李箱",
+    "translations": [
+      "行李箱"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00248",
+    "word": "land",
+    "phonetic": "",
+    "translation": "着陆",
+    "translations": [
+      "着陆"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00249",
+    "word": "safe landing",
+    "phonetic": "",
+    "translation": "安全着陆",
+    "translations": [
+      "安全着陆"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00250",
+    "word": "off",
+    "phonetic": "",
+    "translation": "为某人送行",
+    "translations": [
+      "为某人送行"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00251",
+    "word": "pick up",
+    "phonetic": "",
+    "translation": "接机",
+    "translations": [
+      "接机"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00252",
+    "word": "behind schedule",
+    "phonetic": "",
+    "translation": "晚点",
+    "translations": [
+      "晚点"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00253",
+    "word": "take off",
+    "phonetic": "",
+    "translation": "起飞",
+    "translations": [
+      "起飞"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00254",
+    "word": "land",
+    "phonetic": "",
+    "translation": "降落",
+    "translations": [
+      "降落"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00255",
+    "word": "You will be fined",
+    "phonetic": "",
+    "translation": "你将被罚款20美元。",
+    "translations": [
+      "你将被罚款20美元。"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00256",
+    "word": "store/shop",
+    "phonetic": "",
+    "translation": "商店，杂货店",
+    "translations": [
+      "商店，杂货店"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00257",
+    "word": "department store",
+    "phonetic": "",
+    "translation": "百货商场",
+    "translations": [
+      "百货商场"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00258",
+    "word": "drugstore",
+    "phonetic": "",
+    "translation": "药店，杂货店",
+    "translations": [
+      "药店，杂货店"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00259",
+    "word": "grocery store",
+    "phonetic": "",
+    "translation": "杂货店，食杂店，食品杂货店",
+    "translations": [
+      "杂货店，食杂店，食品杂货店"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00260",
+    "word": "grocer",
+    "phonetic": "",
+    "translation": "食品杂货店，食品杂货商",
+    "translations": [
+      "食品杂货店，食品杂货商"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00261",
+    "word": "green grocer",
+    "phonetic": "",
+    "translation": "蔬菜店",
+    "translations": [
+      "蔬菜店"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00262",
+    "word": "convenience store",
+    "phonetic": "",
+    "translation": "便利店",
+    "translations": [
+      "便利店"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00263",
+    "word": "shopping center",
+    "phonetic": "",
+    "translation": "购物中心",
+    "translations": [
+      "购物中心"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00264",
+    "word": "supermarket",
+    "phonetic": "",
+    "translation": "超市",
+    "translations": [
+      "超市"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00265",
+    "word": "mall",
+    "phonetic": "",
+    "translation": "商场",
+    "translations": [
+      "商场"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00266",
+    "word": "shop assistant",
+    "phonetic": "",
+    "translation": "店员",
+    "translations": [
+      "店员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00267",
+    "word": "counter",
+    "phonetic": "",
+    "translation": "柜台",
+    "translations": [
+      "柜台"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00268",
+    "word": "receipt",
+    "phonetic": "",
+    "translation": "收据",
+    "translations": [
+      "收据"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00269",
+    "word": "invoice",
+    "phonetic": "",
+    "translation": "发票",
+    "translations": [
+      "发票"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00270",
+    "word": "catalogue",
+    "phonetic": "",
+    "translation": "产品目录",
+    "translations": [
+      "产品目录"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00271",
+    "word": "deliver",
+    "phonetic": "",
+    "translation": "送货",
+    "translations": [
+      "送货"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00272",
+    "word": "refund",
+    "phonetic": "",
+    "translation": "退款",
+    "translations": [
+      "退款"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00273",
+    "word": "brand",
+    "phonetic": "",
+    "translation": "品牌",
+    "translations": [
+      "品牌"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00274",
+    "word": "bargain",
+    "phonetic": "",
+    "translation": "便宜货",
+    "translations": [
+      "便宜货"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00275",
+    "word": "size",
+    "phonetic": "",
+    "translation": "尺寸大小",
+    "translations": [
+      "尺寸大小"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00276",
+    "word": "color",
+    "phonetic": "",
+    "translation": "颜色",
+    "translations": [
+      "颜色"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00277",
+    "word": "style",
+    "phonetic": "",
+    "translation": "式样",
+    "translations": [
+      "式样"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00278",
+    "word": "price",
+    "phonetic": "",
+    "translation": "价格",
+    "translations": [
+      "价格"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00279",
+    "word": "expensive/dear",
+    "phonetic": "",
+    "translation": "昂贵的",
+    "translations": [
+      "昂贵的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00280",
+    "word": "cheap",
+    "phonetic": "",
+    "translation": "便宜的",
+    "translations": [
+      "便宜的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00281",
+    "word": "popular/fashionable",
+    "phonetic": "",
+    "translation": "流行的，时尚的",
+    "translations": [
+      "流行的，时尚的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00282",
+    "word": "in fashion",
+    "phonetic": "",
+    "translation": "流行的，时尚的",
+    "translations": [
+      "流行的，时尚的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00283",
+    "word": "high",
+    "phonetic": "",
+    "translation": "价格高的",
+    "translations": [
+      "价格高的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00284",
+    "word": "low",
+    "phonetic": "",
+    "translation": "价格低的",
+    "translations": [
+      "价格低的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00285",
+    "word": "second-hand/used",
+    "phonetic": "",
+    "translation": "二手的，旧的",
+    "translations": [
+      "二手的，旧的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00286",
+    "word": "out of fashion",
+    "phonetic": "",
+    "translation": "过时的",
+    "translations": [
+      "过时的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00287",
+    "word": "fair",
+    "phonetic": "",
+    "translation": "公平的，集市，交易会",
+    "translations": [
+      "公平的，集市，交易会"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00288",
+    "word": "cashier",
+    "phonetic": "",
+    "translation": "收银员，出纳员",
+    "translations": [
+      "收银员，出纳员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00289",
+    "word": "window-shopping",
+    "phonetic": "",
+    "translation": "逛商店",
+    "translations": [
+      "逛商店"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00290",
+    "word": "price tag",
+    "phonetic": "",
+    "translation": "价格标签",
+    "translations": [
+      "价格标签"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00291",
+    "word": "purchase",
+    "phonetic": "",
+    "translation": "购买",
+    "translations": [
+      "购买"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00292",
+    "word": "customer",
+    "phonetic": "",
+    "translation": "顾客",
+    "translations": [
+      "顾客"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00293",
+    "word": "annual fee",
+    "phonetic": "",
+    "translation": "年费",
+    "translations": [
+      "年费"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00294",
+    "word": "budget",
+    "phonetic": "",
+    "translation": "预算",
+    "translations": [
+      "预算"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00295",
+    "word": "retail",
+    "phonetic": "",
+    "translation": "零售",
+    "translations": [
+      "零售"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00296",
+    "word": "wholesale",
+    "phonetic": "",
+    "translation": "批发",
+    "translations": [
+      "批发"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00297",
+    "word": "bargain vi",
+    "phonetic": "",
+    "translation": "讨价还价",
+    "translations": [
+      "讨价还价"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00298",
+    "word": "pay in cash",
+    "phonetic": "",
+    "translation": "用现金支付",
+    "translations": [
+      "用现金支付"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00299",
+    "word": "pay in check",
+    "phonetic": "",
+    "translation": "用支票支付",
+    "translations": [
+      "用支票支付"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00300",
+    "word": "credit card",
+    "phonetic": "",
+    "translation": "信用卡",
+    "translations": [
+      "信用卡"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00301",
+    "word": "out of stock",
+    "phonetic": "",
+    "translation": "脱销/缺货",
+    "translations": [
+      "脱销/缺货"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00302",
+    "word": "in stock",
+    "phonetic": "",
+    "translation": "有货",
+    "translations": [
+      "有货"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00303",
+    "word": "pay by installment",
+    "phonetic": "",
+    "translation": "分期付款",
+    "translations": [
+      "分期付款"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00304",
+    "word": "selling season",
+    "phonetic": "",
+    "translation": "销售旺季",
+    "translations": [
+      "销售旺季"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00305",
+    "word": "on sale",
+    "phonetic": "",
+    "translation": "廉价出售",
+    "translations": [
+      "廉价出售"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00306",
+    "word": "50%off",
+    "phonetic": "",
+    "translation": "打五折",
+    "translations": [
+      "打五折"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00307",
+    "word": "a 30%discount",
+    "phonetic": "",
+    "translation": "打七折",
+    "translations": [
+      "打七折"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00308",
+    "word": "a real bargain",
+    "phonetic": "",
+    "translation": "真正的便宜货",
+    "translations": [
+      "真正的便宜货"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00309",
+    "word": "cloudy",
+    "phonetic": "",
+    "translation": "阴天的",
+    "translations": [
+      "阴天的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00310",
+    "word": "overcast",
+    "phonetic": "",
+    "translation": "多云的",
+    "translations": [
+      "多云的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00311",
+    "word": "fine",
+    "phonetic": "",
+    "translation": "晴朗的",
+    "translations": [
+      "晴朗的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00312",
+    "word": "sunny/bright/clear",
+    "phonetic": "",
+    "translation": "阳光充足的",
+    "translations": [
+      "阳光充足的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00313",
+    "word": "rainy",
+    "phonetic": "",
+    "translation": "有雨的",
+    "translations": [
+      "有雨的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00314",
+    "word": "wet",
+    "phonetic": "",
+    "translation": "潮湿的",
+    "translations": [
+      "潮湿的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00315",
+    "word": "humid",
+    "phonetic": "",
+    "translation": "湿润的",
+    "translations": [
+      "湿润的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00316",
+    "word": "damp",
+    "phonetic": "",
+    "translation": "潮湿的",
+    "translations": [
+      "潮湿的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00317",
+    "word": "freezing-cold",
+    "phonetic": "",
+    "translation": "冰冷的",
+    "translations": [
+      "冰冷的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00318",
+    "word": "cool",
+    "phonetic": "",
+    "translation": "凉爽的",
+    "translations": [
+      "凉爽的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00319",
+    "word": "mild/agreeable",
+    "phonetic": "",
+    "translation": "温和的",
+    "translations": [
+      "温和的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00320",
+    "word": "warm",
+    "phonetic": "",
+    "translation": "暖和的",
+    "translations": [
+      "暖和的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00321",
+    "word": "hot",
+    "phonetic": "",
+    "translation": "炎热的",
+    "translations": [
+      "炎热的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00322",
+    "word": "windy",
+    "phonetic": "",
+    "translation": "有风的",
+    "translations": [
+      "有风的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00323",
+    "word": "calm",
+    "phonetic": "",
+    "translation": "无风的",
+    "translations": [
+      "无风的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00324",
+    "word": "moderate",
+    "phonetic": "",
+    "translation": "风力不大的",
+    "translations": [
+      "风力不大的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00325",
+    "word": "thunder",
+    "phonetic": "",
+    "translation": "打雷",
+    "translations": [
+      "打雷"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00326",
+    "word": "lightening",
+    "phonetic": "",
+    "translation": "闪电",
+    "translations": [
+      "闪电"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00327",
+    "word": "strong/high wind",
+    "phonetic": "",
+    "translation": "大风",
+    "translations": [
+      "大风"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00328",
+    "word": "breeze /light wind",
+    "phonetic": "",
+    "translation": "微风",
+    "translations": [
+      "微风"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00329",
+    "word": "tornado",
+    "phonetic": "",
+    "translation": "龙卷风",
+    "translations": [
+      "龙卷风"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00330",
+    "word": "typhoon",
+    "phonetic": "",
+    "translation": "台风",
+    "translations": [
+      "台风"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00331",
+    "word": "snow",
+    "phonetic": "",
+    "translation": "雪",
+    "translations": [
+      "雪"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00332",
+    "word": "blizzard",
+    "phonetic": "",
+    "translation": "暴风雪",
+    "translations": [
+      "暴风雪"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00333",
+    "word": "snowstorm",
+    "phonetic": "",
+    "translation": "暴风雪",
+    "translations": [
+      "暴风雪"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00334",
+    "word": "drizzle",
+    "phonetic": "",
+    "translation": "毛毛雨",
+    "translations": [
+      "毛毛雨"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00335",
+    "word": "light rain",
+    "phonetic": "",
+    "translation": "小雨",
+    "translations": [
+      "小雨"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00336",
+    "word": "downpour",
+    "phonetic": "",
+    "translation": "倾盆大雨",
+    "translations": [
+      "倾盆大雨"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00337",
+    "word": "storm",
+    "phonetic": "",
+    "translation": "暴风雨",
+    "translations": [
+      "暴风雨"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00338",
+    "word": "shower",
+    "phonetic": "",
+    "translation": "阵雨",
+    "translations": [
+      "阵雨"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00339",
+    "word": "fog",
+    "phonetic": "",
+    "translation": "雾",
+    "translations": [
+      "雾"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00340",
+    "word": "mist",
+    "phonetic": "",
+    "translation": "薄雾",
+    "translations": [
+      "薄雾"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00341",
+    "word": "smog",
+    "phonetic": "",
+    "translation": "烟雾",
+    "translations": [
+      "烟雾"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00342",
+    "word": "foggy",
+    "phonetic": "",
+    "translation": "有雾的",
+    "translations": [
+      "有雾的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00343",
+    "word": "misty",
+    "phonetic": "",
+    "translation": "有薄雾的",
+    "translations": [
+      "有薄雾的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00344",
+    "word": "lift vi",
+    "phonetic": "",
+    "translation": "云、雾等的)消散；(雨等)暂停",
+    "translations": [
+      "云、雾等的)消散；(雨等)暂停"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00345",
+    "word": "climate",
+    "phonetic": "",
+    "translation": "气候",
+    "translations": [
+      "气候"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00346",
+    "word": "weather forecast",
+    "phonetic": "",
+    "translation": "天气预报",
+    "translations": [
+      "天气预报"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00347",
+    "word": "warm up",
+    "phonetic": "",
+    "translation": "转暖",
+    "translations": [
+      "转暖"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00348",
+    "word": "By afternoon the smog had lifted",
+    "phonetic": "",
+    "translation": "到下午雾气散尽。",
+    "translations": [
+      "到下午雾气散尽。"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00349",
+    "word": "The rain lifted by morning",
+    "phonetic": "",
+    "translation": "到清晨大雨暂停。",
+    "translations": [
+      "到清晨大雨暂停。"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00350",
+    "word": "It rains cats and dogs/The rain is pouring",
+    "phonetic": "",
+    "translation": "下着倾盆大雨。",
+    "translations": [
+      "下着倾盆大雨。"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00351",
+    "word": "clear up",
+    "phonetic": "",
+    "translation": "天空放晴",
+    "translations": [
+      "天空放晴"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00352",
+    "word": "put away clothes",
+    "phonetic": "",
+    "translation": "下雨收衣服",
+    "translations": [
+      "下雨收衣服"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00353",
+    "word": "weather in London/Seattle",
+    "phonetic": "",
+    "translation": "意指不好的天气",
+    "translations": [
+      "意指不好的天气"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00354",
+    "word": "weather in California",
+    "phonetic": "",
+    "translation": "意指好天气",
+    "translations": [
+      "意指好天气"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00355",
+    "word": "vacation",
+    "phonetic": "",
+    "translation": "经常和天气相联系的情况：(度假)和(航班)",
+    "translations": [
+      "经常和天气相联系的情况：(度假)和(航班)"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00356",
+    "word": "vacation/holiday",
+    "phonetic": "",
+    "translation": "假日",
+    "translations": [
+      "假日"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00357",
+    "word": "historic spot",
+    "phonetic": "",
+    "translation": "古迹",
+    "translations": [
+      "古迹"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00358",
+    "word": "scenery",
+    "phonetic": "",
+    "translation": "风景",
+    "translations": [
+      "风景"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00359",
+    "word": "museum",
+    "phonetic": "",
+    "translation": "博物馆",
+    "translations": [
+      "博物馆"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00360",
+    "word": "mountain",
+    "phonetic": "",
+    "translation": "山脉",
+    "translations": [
+      "山脉"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00361",
+    "word": "river",
+    "phonetic": "",
+    "translation": "河流",
+    "translations": [
+      "河流"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00362",
+    "word": "lake",
+    "phonetic": "",
+    "translation": "湖泊",
+    "translations": [
+      "湖泊"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00363",
+    "word": "waterfall",
+    "phonetic": "",
+    "translation": "瀑布",
+    "translations": [
+      "瀑布"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00364",
+    "word": "beach",
+    "phonetic": "",
+    "translation": "沙滩",
+    "translations": [
+      "沙滩"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00365",
+    "word": "island",
+    "phonetic": "",
+    "translation": "岛屿",
+    "translations": [
+      "岛屿"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00366",
+    "word": "lawn",
+    "phonetic": "",
+    "translation": "草地",
+    "translations": [
+      "草地"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00367",
+    "word": "temple",
+    "phonetic": "",
+    "translation": "寺庙",
+    "translations": [
+      "寺庙"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00368",
+    "word": "zoo",
+    "phonetic": "",
+    "translation": "动物园",
+    "translations": [
+      "动物园"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00369",
+    "word": "a guided tour",
+    "phonetic": "",
+    "translation": "有导游的旅行",
+    "translations": [
+      "有导游的旅行"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00370",
+    "word": "travel agency",
+    "phonetic": "",
+    "translation": "旅行社",
+    "translations": [
+      "旅行社"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00371",
+    "word": "go sightseeing",
+    "phonetic": "",
+    "translation": "观光",
+    "translations": [
+      "观光"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00372",
+    "word": "hotel",
+    "phonetic": "",
+    "translation": "宾馆",
+    "translations": [
+      "宾馆"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00373",
+    "word": "souvenir",
+    "phonetic": "",
+    "translation": "纪念品",
+    "translations": [
+      "纪念品"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00374",
+    "word": "ticket",
+    "phonetic": "",
+    "translation": "票",
+    "translations": [
+      "票"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00375",
+    "word": "travel/trip/tour/voyage",
+    "phonetic": "",
+    "translation": "旅行",
+    "translations": [
+      "旅行"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00376",
+    "word": "plane/airplane/aeroplane",
+    "phonetic": "",
+    "translation": "飞机",
+    "translations": [
+      "飞机"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00377",
+    "word": "ship",
+    "phonetic": "",
+    "translation": "轮船",
+    "translations": [
+      "轮船"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00378",
+    "word": "taxi",
+    "phonetic": "",
+    "translation": "出租车",
+    "translations": [
+      "出租车"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00379",
+    "word": "subway/underground",
+    "phonetic": "",
+    "translation": "地铁",
+    "translations": [
+      "地铁"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00380",
+    "word": "railway",
+    "phonetic": "",
+    "translation": "铁路",
+    "translations": [
+      "铁路"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00381",
+    "word": "highway",
+    "phonetic": "",
+    "translation": "公路",
+    "translations": [
+      "公路"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00382",
+    "word": "freeway/expressway",
+    "phonetic": "",
+    "translation": "高速公路",
+    "translations": [
+      "高速公路"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00383",
+    "word": "fascinating",
+    "phonetic": "",
+    "translation": "迷人的",
+    "translations": [
+      "迷人的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00384",
+    "word": "thrilling",
+    "phonetic": "",
+    "translation": "刺激的",
+    "translations": [
+      "刺激的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00385",
+    "word": "unforgettable",
+    "phonetic": "",
+    "translation": "难忘的",
+    "translations": [
+      "难忘的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00386",
+    "word": "terrific",
+    "phonetic": "",
+    "translation": "好极了",
+    "translations": [
+      "好极了"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00387",
+    "word": "fantastic",
+    "phonetic": "",
+    "translation": "难忘的",
+    "translations": [
+      "难忘的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00388",
+    "word": "part-time job",
+    "phonetic": "",
+    "translation": "兼职工作",
+    "translations": [
+      "兼职工作"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00389",
+    "word": "full-time job",
+    "phonetic": "",
+    "translation": "全职工作",
+    "translations": [
+      "全职工作"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00390",
+    "word": "psychologist",
+    "phonetic": "",
+    "translation": "心理学家",
+    "translations": [
+      "心理学家"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00391",
+    "word": "principal",
+    "phonetic": "",
+    "translation": "校长",
+    "translations": [
+      "校长"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00392",
+    "word": "professor",
+    "phonetic": "",
+    "translation": "教授",
+    "translations": [
+      "教授"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00393",
+    "word": "teacher",
+    "phonetic": "",
+    "translation": "教师",
+    "translations": [
+      "教师"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00394",
+    "word": "policeman",
+    "phonetic": "",
+    "translation": "警率",
+    "translations": [
+      "警率"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00395",
+    "word": "firefighter",
+    "phonetic": "",
+    "translation": "消防员",
+    "translations": [
+      "消防员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00396",
+    "word": "secretary",
+    "phonetic": "",
+    "translation": "秘书",
+    "translations": [
+      "秘书"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00397",
+    "word": "assistant",
+    "phonetic": "",
+    "translation": "助理",
+    "translations": [
+      "助理"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00398",
+    "word": "receptionist",
+    "phonetic": "",
+    "translation": "接待员",
+    "translations": [
+      "接待员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00399",
+    "word": "typist",
+    "phonetic": "",
+    "translation": "打字员",
+    "translations": [
+      "打字员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00400",
+    "word": "clerk",
+    "phonetic": "",
+    "translation": "职员",
+    "translations": [
+      "职员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00401",
+    "word": "cashier",
+    "phonetic": "",
+    "translation": "出纳员",
+    "translations": [
+      "出纳员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00402",
+    "word": "lawyer",
+    "phonetic": "",
+    "translation": "律炕",
+    "translations": [
+      "律炕"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00403",
+    "word": "editor",
+    "phonetic": "",
+    "translation": "编辑",
+    "translations": [
+      "编辑"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00404",
+    "word": "reporter/journalist",
+    "phonetic": "",
+    "translation": "记者",
+    "translations": [
+      "记者"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00405",
+    "word": "author",
+    "phonetic": "",
+    "translation": "作家",
+    "translations": [
+      "作家"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00406",
+    "word": "writer",
+    "phonetic": "",
+    "translation": "作者",
+    "translations": [
+      "作者"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00407",
+    "word": "artist",
+    "phonetic": "",
+    "translation": "艺术家",
+    "translations": [
+      "艺术家"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00408",
+    "word": "pianist",
+    "phonetic": "",
+    "translation": "钢琴家",
+    "translations": [
+      "钢琴家"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00409",
+    "word": "photographer",
+    "phonetic": "",
+    "translation": "摄影师",
+    "translations": [
+      "摄影师"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00410",
+    "word": "painter",
+    "phonetic": "",
+    "translation": "画家",
+    "translations": [
+      "画家"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00411",
+    "word": "musician",
+    "phonetic": "",
+    "translation": "音乐家",
+    "translations": [
+      "音乐家"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00412",
+    "word": "singer",
+    "phonetic": "",
+    "translation": "歌唱家",
+    "translations": [
+      "歌唱家"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00413",
+    "word": "designer",
+    "phonetic": "",
+    "translation": "设计师",
+    "translations": [
+      "设计师"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00414",
+    "word": "scientist",
+    "phonetic": "",
+    "translation": "科学家",
+    "translations": [
+      "科学家"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00415",
+    "word": "actor/actress",
+    "phonetic": "",
+    "translation": "男/女演员",
+    "translations": [
+      "男/女演员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00416",
+    "word": "architect",
+    "phonetic": "",
+    "translation": "建筑师",
+    "translations": [
+      "建筑师"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00417",
+    "word": "engineer",
+    "phonetic": "",
+    "translation": "工程师",
+    "translations": [
+      "工程师"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00418",
+    "word": "chef/cook",
+    "phonetic": "",
+    "translation": "厨师",
+    "translations": [
+      "厨师"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00419",
+    "word": "mailman",
+    "phonetic": "",
+    "translation": "邮差",
+    "translations": [
+      "邮差"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00420",
+    "word": "guide",
+    "phonetic": "",
+    "translation": "导游",
+    "translations": [
+      "导游"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00421",
+    "word": "competition",
+    "phonetic": "",
+    "translation": "竞赛",
+    "translations": [
+      "竞赛"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00422",
+    "word": "the sports field",
+    "phonetic": "",
+    "translation": "运动场",
+    "translations": [
+      "运动场"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00423",
+    "word": "club",
+    "phonetic": "",
+    "translation": "俱乐部",
+    "translations": [
+      "俱乐部"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00424",
+    "word": "sportsman/athlete/player",
+    "phonetic": "",
+    "translation": "运动员",
+    "translations": [
+      "运动员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00425",
+    "word": "coach",
+    "phonetic": "",
+    "translation": "教练",
+    "translations": [
+      "教练"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00426",
+    "word": "champion",
+    "phonetic": "",
+    "translation": "冠军",
+    "translations": [
+      "冠军"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00427",
+    "word": "gold medal",
+    "phonetic": "",
+    "translation": "金牌",
+    "translations": [
+      "金牌"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00428",
+    "word": "silver medal",
+    "phonetic": "",
+    "translation": "银牌",
+    "translations": [
+      "银牌"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00429",
+    "word": "bronze medal",
+    "phonetic": "",
+    "translation": "铜牌",
+    "translations": [
+      "铜牌"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00430",
+    "word": "basketball",
+    "phonetic": "",
+    "translation": "篮球",
+    "translations": [
+      "篮球"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00431",
+    "word": "football",
+    "phonetic": "",
+    "translation": "美式足球",
+    "translations": [
+      "美式足球"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00432",
+    "word": "soccer",
+    "phonetic": "",
+    "translation": "英式足球",
+    "translations": [
+      "英式足球"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00433",
+    "word": "volleyball",
+    "phonetic": "",
+    "translation": "排球",
+    "translations": [
+      "排球"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00434",
+    "word": "baseball",
+    "phonetic": "",
+    "translation": "棒球",
+    "translations": [
+      "棒球"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00435",
+    "word": "tennis",
+    "phonetic": "",
+    "translation": "网球",
+    "translations": [
+      "网球"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00436",
+    "word": "table tennis/ping-pong",
+    "phonetic": "",
+    "translation": "乒乓球",
+    "translations": [
+      "乒乓球"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00437",
+    "word": "golf",
+    "phonetic": "",
+    "translation": "高尔夫球",
+    "translations": [
+      "高尔夫球"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00438",
+    "word": "jogging",
+    "phonetic": "",
+    "translation": "慢跑",
+    "translations": [
+      "慢跑"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00439",
+    "word": "swimming",
+    "phonetic": "",
+    "translation": "游泳",
+    "translations": [
+      "游泳"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00440",
+    "word": "wrestling",
+    "phonetic": "",
+    "translation": "摔跤",
+    "translations": [
+      "摔跤"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00441",
+    "word": "shooting",
+    "phonetic": "",
+    "translation": "射击",
+    "translations": [
+      "射击"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00442",
+    "word": "boxing",
+    "phonetic": "",
+    "translation": "拳击",
+    "translations": [
+      "拳击"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00443",
+    "word": "weightlifting",
+    "phonetic": "",
+    "translation": "举重",
+    "translations": [
+      "举重"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00444",
+    "word": "relay race",
+    "phonetic": "",
+    "translation": "接力赛",
+    "translations": [
+      "接力赛"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00445",
+    "word": "break the world record",
+    "phonetic": "",
+    "translation": "打破世界纪录",
+    "translations": [
+      "打破世界纪录"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00446",
+    "word": "hold the world record",
+    "phonetic": "",
+    "translation": "保持世界纪录",
+    "translations": [
+      "保持世界纪录"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00447",
+    "word": "job opportunity",
+    "phonetic": "",
+    "translation": "求职机会",
+    "translations": [
+      "求职机会"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00448",
+    "word": "interview",
+    "phonetic": "",
+    "translation": "面试",
+    "translations": [
+      "面试"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00449",
+    "word": "resume",
+    "phonetic": "",
+    "translation": "简历",
+    "translations": [
+      "简历"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00450",
+    "word": "educational background",
+    "phonetic": "",
+    "translation": "教育背景",
+    "translations": [
+      "教育背景"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00451",
+    "word": "application letter",
+    "phonetic": "",
+    "translation": "求职信",
+    "translations": [
+      "求职信"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00452",
+    "word": "recommendation",
+    "phonetic": "",
+    "translation": "推荐信",
+    "translations": [
+      "推荐信"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00453",
+    "word": "certificate",
+    "phonetic": "",
+    "translation": "证书",
+    "translations": [
+      "证书"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00454",
+    "word": "qualification",
+    "phonetic": "",
+    "translation": "资历",
+    "translations": [
+      "资历"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00455",
+    "word": "experience",
+    "phonetic": "",
+    "translation": "经验/经历",
+    "translations": [
+      "经验/经历"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00456",
+    "word": "position/post",
+    "phonetic": "",
+    "translation": "职位",
+    "translations": [
+      "职位"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00457",
+    "word": "salary",
+    "phonetic": "",
+    "translation": "薪水",
+    "translations": [
+      "薪水"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00458",
+    "word": "allowance",
+    "phonetic": "",
+    "translation": "津贴",
+    "translations": [
+      "津贴"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00459",
+    "word": "promotion",
+    "phonetic": "",
+    "translation": "晋升",
+    "translations": [
+      "晋升"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00460",
+    "word": "vacation",
+    "phonetic": "",
+    "translation": "休假",
+    "translations": [
+      "休假"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00461",
+    "word": "break",
+    "phonetic": "",
+    "translation": "喝杯茶或咖啡的)休息",
+    "translations": [
+      "喝杯茶或咖啡的)休息"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00462",
+    "word": "retire",
+    "phonetic": "",
+    "translation": "退休",
+    "translations": [
+      "退休"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00463",
+    "word": "shift work",
+    "phonetic": "",
+    "translation": "换班工作",
+    "translations": [
+      "换班工作"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00464",
+    "word": "work overtime",
+    "phonetic": "",
+    "translation": "加班",
+    "translations": [
+      "加班"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00465",
+    "word": "pay raise",
+    "phonetic": "",
+    "translation": "加薪",
+    "translations": [
+      "加薪"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00466",
+    "word": "ask for leave",
+    "phonetic": "",
+    "translation": "请假",
+    "translations": [
+      "请假"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00467",
+    "word": "sick leave",
+    "phonetic": "",
+    "translation": "病假",
+    "translations": [
+      "病假"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00468",
+    "word": "employee",
+    "phonetic": "",
+    "translation": "雇员",
+    "translations": [
+      "雇员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00469",
+    "word": "employer",
+    "phonetic": "",
+    "translation": "雇主",
+    "translations": [
+      "雇主"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00470",
+    "word": "clerk",
+    "phonetic": "",
+    "translation": "职员",
+    "translations": [
+      "职员"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00471",
+    "word": "secretary",
+    "phonetic": "",
+    "translation": "秘书",
+    "translations": [
+      "秘书"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00472",
+    "word": "manager",
+    "phonetic": "",
+    "translation": "经理",
+    "translations": [
+      "经理"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00473",
+    "word": "HR manager",
+    "phonetic": "",
+    "translation": "人事经理",
+    "translations": [
+      "人事经理"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00474",
+    "word": "general manager",
+    "phonetic": "",
+    "translation": "总经理",
+    "translations": [
+      "总经理"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00475",
+    "word": "client",
+    "phonetic": "",
+    "translation": "客户",
+    "translations": [
+      "客户"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00476",
+    "word": "hobby",
+    "phonetic": "",
+    "translation": "兴趣",
+    "translations": [
+      "兴趣"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00477",
+    "word": "entertainment",
+    "phonetic": "",
+    "translation": "娱乐",
+    "translations": [
+      "娱乐"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00478",
+    "word": "go to the theater/movies/cinema",
+    "phonetic": "",
+    "translation": "去看电影",
+    "translations": [
+      "去看电影"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00479",
+    "word": "documentary/film",
+    "phonetic": "",
+    "translation": "记录片/文献片",
+    "translations": [
+      "记录片/文献片"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00480",
+    "word": "detective film",
+    "phonetic": "",
+    "translation": "侦探片",
+    "translations": [
+      "侦探片"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00481",
+    "word": "action movie",
+    "phonetic": "",
+    "translation": "动作片",
+    "translations": [
+      "动作片"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00482",
+    "word": "cartoon",
+    "phonetic": "",
+    "translation": "漫画/动画片",
+    "translations": [
+      "漫画/动画片"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00483",
+    "word": "comedy",
+    "phonetic": "",
+    "translation": "喜剧",
+    "translations": [
+      "喜剧"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00484",
+    "word": "horror film",
+    "phonetic": "",
+    "translation": "恐怖片",
+    "translations": [
+      "恐怖片"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00485",
+    "word": "western film",
+    "phonetic": "",
+    "translation": "西部片",
+    "translations": [
+      "西部片"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00486",
+    "word": "hiking",
+    "phonetic": "",
+    "translation": "徒步旅行",
+    "translations": [
+      "徒步旅行"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00487",
+    "word": "camping",
+    "phonetic": "",
+    "translation": "野营",
+    "translations": [
+      "野营"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00488",
+    "word": "diving",
+    "phonetic": "",
+    "translation": "潜水",
+    "translations": [
+      "潜水"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00489",
+    "word": "surfing",
+    "phonetic": "",
+    "translation": "冲浪",
+    "translations": [
+      "冲浪"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00490",
+    "word": "skiing",
+    "phonetic": "",
+    "translation": "滑雪",
+    "translations": [
+      "滑雪"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00491",
+    "word": "seashore",
+    "phonetic": "",
+    "translation": "海岸",
+    "translations": [
+      "海岸"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00492",
+    "word": "beach",
+    "phonetic": "",
+    "translation": "海滩",
+    "translations": [
+      "海滩"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00493",
+    "word": "sunburned",
+    "phonetic": "",
+    "translation": "晒黑的",
+    "translations": [
+      "晒黑的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00494",
+    "word": "palace",
+    "phonetic": "",
+    "translation": "宫殿",
+    "translations": [
+      "宫殿"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00495",
+    "word": "castle",
+    "phonetic": "",
+    "translation": "城堡",
+    "translations": [
+      "城堡"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00496",
+    "word": "spare time",
+    "phonetic": "",
+    "translation": "业余时间",
+    "translations": [
+      "业余时间"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00497",
+    "word": "favorite",
+    "phonetic": "",
+    "translation": "最喜欢的",
+    "translations": [
+      "最喜欢的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00498",
+    "word": "interest",
+    "phonetic": "",
+    "translation": "兴趣",
+    "translations": [
+      "兴趣"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00499",
+    "word": "hobby",
+    "phonetic": "",
+    "translation": "爱好",
+    "translations": [
+      "爱好"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00500",
+    "word": "appetite",
+    "phonetic": "",
+    "translation": "嗜好",
+    "translations": [
+      "嗜好"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00501",
+    "word": "taste",
+    "phonetic": "",
+    "translation": "口味",
+    "translations": [
+      "口味"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00502",
+    "word": "read novels",
+    "phonetic": "",
+    "translation": "读小说",
+    "translations": [
+      "读小说"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00503",
+    "word": "play football/basketball",
+    "phonetic": "",
+    "translation": "打足球/篮球",
+    "translations": [
+      "打足球/篮球"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00504",
+    "word": "surf the Internet",
+    "phonetic": "",
+    "translation": "上网",
+    "translations": [
+      "上网"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00505",
+    "word": "chat online",
+    "phonetic": "",
+    "translation": "在线聊天",
+    "translations": [
+      "在线聊天"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00506",
+    "word": "play games",
+    "phonetic": "",
+    "translation": "玩游戏",
+    "translations": [
+      "玩游戏"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00507",
+    "word": "collect stamps",
+    "phonetic": "",
+    "translation": "集邮",
+    "translations": [
+      "集邮"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00508",
+    "word": "make e-friends",
+    "phonetic": "",
+    "translation": "交网友",
+    "translations": [
+      "交网友"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00509",
+    "word": "climb mountains",
+    "phonetic": "",
+    "translation": "爬山",
+    "translations": [
+      "爬山"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00510",
+    "word": "watch TV",
+    "phonetic": "",
+    "translation": "看电视",
+    "translations": [
+      "看电视"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00511",
+    "word": "be keen on",
+    "phonetic": "",
+    "translation": "喜欢…",
+    "translations": [
+      "喜欢…"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00512",
+    "word": "enjoy popular music",
+    "phonetic": "",
+    "translation": "喜欢流行音乐",
+    "translations": [
+      "喜欢流行音乐"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00513",
+    "word": "be interested in",
+    "phonetic": "",
+    "translation": "对……感兴趣",
+    "translations": [
+      "对……感兴趣"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00514",
+    "word": "develop an interest in",
+    "phonetic": "",
+    "translation": "在……方面发展兴趣",
+    "translations": [
+      "在……方面发展兴趣"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00515",
+    "word": "be fond of",
+    "phonetic": "",
+    "translation": "喜欢……",
+    "translations": [
+      "喜欢……"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00516",
+    "word": "have love for",
+    "phonetic": "",
+    "translation": "喜爱……",
+    "translations": [
+      "喜爱……"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00517",
+    "word": "have a taste in",
+    "phonetic": "",
+    "translation": "对……有兴趣",
+    "translations": [
+      "对……有兴趣"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00518",
+    "word": "landlady",
+    "phonetic": "",
+    "translation": "女房东",
+    "translations": [
+      "女房东"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00519",
+    "word": "landlord",
+    "phonetic": "",
+    "translation": "房东",
+    "translations": [
+      "房东"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00520",
+    "word": "rent",
+    "phonetic": "",
+    "translation": "租，租金",
+    "translations": [
+      "租，租金"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00521",
+    "word": "deposit",
+    "phonetic": "",
+    "translation": "押金",
+    "translations": [
+      "押金"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00522",
+    "word": "contract",
+    "phonetic": "",
+    "translation": "合同",
+    "translations": [
+      "合同"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00523",
+    "word": "furnished",
+    "phonetic": "",
+    "translation": "有家具电器的",
+    "translations": [
+      "有家具电器的"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00524",
+    "word": "heat",
+    "phonetic": "",
+    "translation": "暖气",
+    "translations": [
+      "暖气"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00525",
+    "word": "gas",
+    "phonetic": "",
+    "translation": "煤气",
+    "translations": [
+      "煤气"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00526",
+    "word": "electricity",
+    "phonetic": "",
+    "translation": "电",
+    "translations": [
+      "电"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00527",
+    "word": "lift/elevator",
+    "phonetic": "",
+    "translation": "电梯",
+    "translations": [
+      "电梯"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00528",
+    "word": "stairs",
+    "phonetic": "",
+    "translation": "楼梯",
+    "translations": [
+      "楼梯"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00529",
+    "word": "balcony",
+    "phonetic": "",
+    "translation": "阳台",
+    "translations": [
+      "阳台"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00530",
+    "word": "living room",
+    "phonetic": "",
+    "translation": "起居室",
+    "translations": [
+      "起居室"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00531",
+    "word": "guest room",
+    "phonetic": "",
+    "translation": "客厅",
+    "translations": [
+      "客厅"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00532",
+    "word": "dining room",
+    "phonetic": "",
+    "translation": "餐厅",
+    "translations": [
+      "餐厅"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00533",
+    "word": "kitchen",
+    "phonetic": "",
+    "translation": "厨房",
+    "translations": [
+      "厨房"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00534",
+    "word": "bathroom",
+    "phonetic": "",
+    "translation": "浴室",
+    "translations": [
+      "浴室"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00535",
+    "word": "toilet",
+    "phonetic": "",
+    "translation": "卫生间",
+    "translations": [
+      "卫生间"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00536",
+    "word": "basement",
+    "phonetic": "",
+    "translation": "地下室",
+    "translations": [
+      "地下室"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00537",
+    "word": "housework",
+    "phonetic": "",
+    "translation": "家务",
+    "translations": [
+      "家务"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00538",
+    "word": "channel",
+    "phonetic": "",
+    "translation": "频道",
+    "translations": [
+      "频道"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00539",
+    "word": "cook",
+    "phonetic": "",
+    "translation": "烹饪",
+    "translations": [
+      "烹饪"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00540",
+    "word": "furniture",
+    "phonetic": "",
+    "translation": "家具",
+    "translations": [
+      "家具"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00541",
+    "word": "dining table",
+    "phonetic": "",
+    "translation": "餐桌",
+    "translations": [
+      "餐桌"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00542",
+    "word": "fridge",
+    "phonetic": "",
+    "translation": "冰箱",
+    "translations": [
+      "冰箱"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00543",
+    "word": "television",
+    "phonetic": "",
+    "translation": "电视",
+    "translations": [
+      "电视"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00544",
+    "word": "oven",
+    "phonetic": "",
+    "translation": "烤箱",
+    "translations": [
+      "烤箱"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00545",
+    "word": "cabinet",
+    "phonetic": "",
+    "translation": "橱柜",
+    "translations": [
+      "橱柜"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00546",
+    "word": "dishwasher",
+    "phonetic": "",
+    "translation": "洗碗机",
+    "translations": [
+      "洗碗机"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00547",
+    "word": "sheet",
+    "phonetic": "",
+    "translation": "床单",
+    "translations": [
+      "床单"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00548",
+    "word": "blanket",
+    "phonetic": "",
+    "translation": "毯子",
+    "translations": [
+      "毯子"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00549",
+    "word": "carpet",
+    "phonetic": "",
+    "translation": "地毯",
+    "translations": [
+      "地毯"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00550",
+    "word": "curtain",
+    "phonetic": "",
+    "translation": "窗帘",
+    "translations": [
+      "窗帘"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00551",
+    "word": "towel",
+    "phonetic": "",
+    "translation": "毛巾",
+    "translations": [
+      "毛巾"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00552",
+    "word": "shampoo",
+    "phonetic": "",
+    "translation": "洗发水",
+    "translations": [
+      "洗发水"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00553",
+    "word": "soap",
+    "phonetic": "",
+    "translation": "香皂",
+    "translations": [
+      "香皂"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00554",
+    "word": "haircut",
+    "phonetic": "",
+    "translation": "理发",
+    "translations": [
+      "理发"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00555",
+    "word": "barber",
+    "phonetic": "",
+    "translation": "理发师",
+    "translations": [
+      "理发师"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00556",
+    "word": "shaver",
+    "phonetic": "",
+    "translation": "剃须刀",
+    "translations": [
+      "剃须刀"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  },
+  {
+    "id": "qwerty_tingshuokaoshi_00557",
+    "word": "shave",
+    "phonetic": "",
+    "translation": "剃须",
+    "translations": [
+      "剃须"
+    ],
+    "domain": "qwerty_tingshuokaoshi"
+  }
+]

@@ -1,0 +1,9365 @@
+[
+  {
+    "id": "qwerty_926_00001",
+    "word": "abdicate",
+    "phonetic": "",
+    "translation": "v. 退位，放弃",
+    "translations": [
+      "v. 退位，放弃"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00002",
+    "word": "abide",
+    "phonetic": "",
+    "translation": "v. 遵守，忍受",
+    "translations": [
+      "v. 遵守，忍受"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00003",
+    "word": "abolish",
+    "phonetic": "",
+    "translation": "v. 废除，取消",
+    "translations": [
+      "v. 废除，取消"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00004",
+    "word": "abound",
+    "phonetic": "",
+    "translation": "v. 充满，到处都是",
+    "translations": [
+      "v. 充满，到处都是"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00005",
+    "word": "absolute",
+    "phonetic": "",
+    "translation": "adj. 绝对的，专制的",
+    "translations": [
+      "adj. 绝对的，专制的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00006",
+    "word": "absorb",
+    "phonetic": "",
+    "translation": "v. 吸收，承受",
+    "translations": [
+      "v. 吸收，承受"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00007",
+    "word": "abstract",
+    "phonetic": "",
+    "translation": "adj. 抽象的",
+    "translations": [
+      "adj. 抽象的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00008",
+    "word": "abundantly",
+    "phonetic": "",
+    "translation": "adv. 大量地，非常地",
+    "translations": [
+      "adv. 大量地，非常地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00009",
+    "word": "abuse",
+    "phonetic": "",
+    "translation": "v/n. 虐待，滥用",
+    "translations": [
+      "v/n. 虐待，滥用"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00010",
+    "word": "academic",
+    "phonetic": "",
+    "translation": "adj. 学术的",
+    "translations": [
+      "adj. 学术的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00011",
+    "word": "accelerate",
+    "phonetic": "",
+    "translation": "v. 加速，促进",
+    "translations": [
+      "v. 加速，促进"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00012",
+    "word": "access",
+    "phonetic": "",
+    "translation": "v/n. 进入，使用",
+    "translations": [
+      "v/n. 进入，使用"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00013",
+    "word": "acclaim",
+    "phonetic": "",
+    "translation": "v/n. 称赞，喝彩",
+    "translations": [
+      "v/n. 称赞，喝彩"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00014",
+    "word": "accommodate",
+    "phonetic": "",
+    "translation": "v. 容纳，（使）适应",
+    "translations": [
+      "v. 容纳，（使）适应"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00015",
+    "word": "accompany",
+    "phonetic": "",
+    "translation": "v. 陪伴，伴随",
+    "translations": [
+      "v. 陪伴，伴随"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00016",
+    "word": "account",
+    "phonetic": "",
+    "translation": "v. 占比，解释；n. 账户，资料",
+    "translations": [
+      "v. 占比，解释",
+      "n. 账户，资料"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00017",
+    "word": "accuracy",
+    "phonetic": "",
+    "translation": "n. 精确（性），准确（性）",
+    "translations": [
+      "n. 精确（性），准确（性）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00018",
+    "word": "achieve",
+    "phonetic": "",
+    "translation": "v. 获得，实现",
+    "translations": [
+      "v. 获得，实现"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00019",
+    "word": "acknowledge",
+    "phonetic": "",
+    "translation": "v. 承认，认可",
+    "translations": [
+      "v. 承认，认可"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00020",
+    "word": "acquire",
+    "phonetic": "",
+    "translation": "v. 获得，习得",
+    "translations": [
+      "v. 获得，习得"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00021",
+    "word": "activate",
+    "phonetic": "",
+    "translation": "v. 刺激，激发",
+    "translations": [
+      "v. 刺激，激发"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00022",
+    "word": "acute",
+    "phonetic": "",
+    "translation": "adj. 严重的，急性的",
+    "translations": [
+      "adj. 严重的，急性的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00023",
+    "word": "adaptable",
+    "phonetic": "",
+    "translation": "adj. 适合的，能适应的",
+    "translations": [
+      "adj. 适合的，能适应的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00024",
+    "word": "adequate",
+    "phonetic": "",
+    "translation": "adj. 充足的，充分的",
+    "translations": [
+      "adj. 充足的，充分的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00025",
+    "word": "adhere",
+    "phonetic": "",
+    "translation": "v. 坚持，遵守",
+    "translations": [
+      "v. 坚持，遵守"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00026",
+    "word": "adjoining",
+    "phonetic": "",
+    "translation": "adj. 邻接的，相邻的",
+    "translations": [
+      "adj. 邻接的，相邻的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00027",
+    "word": "adjust",
+    "phonetic": "",
+    "translation": "v. 调整，适应",
+    "translations": [
+      "v. 调整，适应"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00028",
+    "word": "administration",
+    "phonetic": "",
+    "translation": "n. 管理，（美国）政府",
+    "translations": [
+      "n. 管理，（美国）政府"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00029",
+    "word": "admire",
+    "phonetic": "",
+    "translation": "v. 钦佩，欣赏",
+    "translations": [
+      "v. 钦佩，欣赏"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00030",
+    "word": "admit",
+    "phonetic": "",
+    "translation": "v. 承认",
+    "translations": [
+      "v. 承认"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00031",
+    "word": "adopt",
+    "phonetic": "",
+    "translation": "v. 收养、采纳",
+    "translations": [
+      "v. 收养、采纳"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00032",
+    "word": "adornment",
+    "phonetic": "",
+    "translation": "n. 装饰（品）",
+    "translations": [
+      "n. 装饰（品）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00033",
+    "word": "advocate",
+    "phonetic": "",
+    "translation": "v. 提倡、拥护；n. 支持者、拥护者",
+    "translations": [
+      "v. 提倡、拥护",
+      "n. 支持者、拥护者"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00034",
+    "word": "affect",
+    "phonetic": "",
+    "translation": "v. 影响、感动；n. 情感",
+    "translations": [
+      "v. 影响、感动",
+      "n. 情感"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00035",
+    "word": "affiliation",
+    "phonetic": "",
+    "translation": "n. 联系、有关联的事物",
+    "translations": [
+      "n. 联系、有关联的事物"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00036",
+    "word": "affirm",
+    "phonetic": "",
+    "translation": "v. 肯定、证实",
+    "translations": [
+      "v. 肯定、证实"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00037",
+    "word": "agency",
+    "phonetic": "",
+    "translation": "n. 代理、机构",
+    "translations": [
+      "n. 代理、机构"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00038",
+    "word": "aggravate",
+    "phonetic": "",
+    "translation": "v. 加重、恶化",
+    "translations": [
+      "v. 加重、恶化"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00039",
+    "word": "aggregation",
+    "phonetic": "",
+    "translation": "n. 聚合、形成",
+    "translations": [
+      "n. 聚合、形成"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00040",
+    "word": "aggressive",
+    "phonetic": "",
+    "translation": "adj. 激进的、过激的、有进取心的",
+    "translations": [
+      "adj. 激进的、过激的、有进取心的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00041",
+    "word": "agitated",
+    "phonetic": "",
+    "translation": "adj. 激动的、焦虑的",
+    "translations": [
+      "adj. 激动的、焦虑的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00042",
+    "word": "agony",
+    "phonetic": "",
+    "translation": "n. 痛苦",
+    "translations": [
+      "n. 痛苦"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00043",
+    "word": "alien",
+    "phonetic": "",
+    "translation": "adj. 外国的；n. 外国人",
+    "translations": [
+      "adj. 外国的",
+      "n. 外国人"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00044",
+    "word": "allay",
+    "phonetic": "",
+    "translation": "v. 减轻、使缓和",
+    "translations": [
+      "v. 减轻、使缓和"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00045",
+    "word": "allegation",
+    "phonetic": "",
+    "translation": "n. 指控、陈述",
+    "translations": [
+      "n. 指控、陈述"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00046",
+    "word": "alleviate",
+    "phonetic": "",
+    "translation": "v. 减轻、（使）缓和",
+    "translations": [
+      "v. 减轻、（使）缓和"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00047",
+    "word": "alliance",
+    "phonetic": "",
+    "translation": "n. 联合、联盟",
+    "translations": [
+      "n. 联合、联盟"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00048",
+    "word": "allocation",
+    "phonetic": "",
+    "translation": "n. 分配、配置",
+    "translations": [
+      "n. 分配、配置"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00049",
+    "word": "alter",
+    "phonetic": "",
+    "translation": "v. 改变、更改",
+    "translations": [
+      "v. 改变、更改"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00050",
+    "word": "amateur",
+    "phonetic": "",
+    "translation": "adj. 业余的；n. 业余爱好者",
+    "translations": [
+      "adj. 业余的",
+      "n. 业余爱好者"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00051",
+    "word": "amazing",
+    "phonetic": "",
+    "translation": "adj. 令人惊讶的",
+    "translations": [
+      "adj. 令人惊讶的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00052",
+    "word": "ambiguous",
+    "phonetic": "",
+    "translation": "adj. 模糊不清的，模棱两可的",
+    "translations": [
+      "adj. 模糊不清的，模棱两可的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00053",
+    "word": "ambition",
+    "phonetic": "",
+    "translation": "n. 雄心、志向",
+    "translations": [
+      "n. 雄心、志向"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00054",
+    "word": "amplify",
+    "phonetic": "",
+    "translation": "v. 扩大、加强",
+    "translations": [
+      "v. 扩大、加强"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00055",
+    "word": "analogy",
+    "phonetic": "",
+    "translation": "n. 类比",
+    "translations": [
+      "n. 类比"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00056",
+    "word": "ancestor",
+    "phonetic": "",
+    "translation": "n. 先驱者，祖先",
+    "translations": [
+      "n. 先驱者，祖先"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00057",
+    "word": "announce",
+    "phonetic": "",
+    "translation": "v. 宣布、声明",
+    "translations": [
+      "v. 宣布、声明"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00058",
+    "word": "annoy",
+    "phonetic": "",
+    "translation": "v/n. 困扰、烦扰",
+    "translations": [
+      "v/n. 困扰、烦扰"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00059",
+    "word": "annual",
+    "phonetic": "",
+    "translation": "adj. 年度的、每年的、四季常青的",
+    "translations": [
+      "adj. 年度的、每年的、四季常青的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00060",
+    "word": "anonymity",
+    "phonetic": "",
+    "translation": "n. 匿名",
+    "translations": [
+      "n. 匿名"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00061",
+    "word": "anticipate",
+    "phonetic": "",
+    "translation": "v. 预测、预料",
+    "translations": [
+      "v. 预测、预料"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00062",
+    "word": "apparent",
+    "phonetic": "",
+    "translation": "adj. 明显的",
+    "translations": [
+      "adj. 明显的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00063",
+    "word": "appeal",
+    "phonetic": "",
+    "translation": "v/n. 吸引、请求、上诉",
+    "translations": [
+      "v/n. 吸引、请求、上诉"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00064",
+    "word": "appease",
+    "phonetic": "",
+    "translation": "v. 安抚、抚慰",
+    "translations": [
+      "v. 安抚、抚慰"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00065",
+    "word": "apply",
+    "phonetic": "",
+    "translation": "v. 运用、适用、申请",
+    "translations": [
+      "v. 运用、适用、申请"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00066",
+    "word": "appoint",
+    "phonetic": "",
+    "translation": "v. 指定、任命",
+    "translations": [
+      "v. 指定、任命"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00067",
+    "word": "appreciate",
+    "phonetic": "",
+    "translation": "v. 感激、欣赏、理解",
+    "translations": [
+      "v. 感激、欣赏、理解"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00068",
+    "word": "apprehensive",
+    "phonetic": "",
+    "translation": "adj. 忧虑的、不安的",
+    "translations": [
+      "adj. 忧虑的、不安的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00069",
+    "word": "approach",
+    "phonetic": "",
+    "translation": "v. 接近、处理；n. 接近、方法",
+    "translations": [
+      "v. 接近、处理",
+      "n. 接近、方法"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00070",
+    "word": "appropriate",
+    "phonetic": "",
+    "translation": "adj. 适当的、合适的",
+    "translations": [
+      "adj. 适当的、合适的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00071",
+    "word": "arbiter",
+    "phonetic": "",
+    "translation": "n. 仲裁者、主宰者",
+    "translations": [
+      "n. 仲裁者、主宰者"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00072",
+    "word": "arouse",
+    "phonetic": "",
+    "translation": "v. 引起、激发",
+    "translations": [
+      "v. 引起、激发"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00073",
+    "word": "array",
+    "phonetic": "",
+    "translation": "v/n. 排列",
+    "translations": [
+      "v/n. 排列"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00074",
+    "word": "artificial",
+    "phonetic": "",
+    "translation": "adj. 人造的、人工的",
+    "translations": [
+      "adj. 人造的、人工的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00075",
+    "word": "aspect",
+    "phonetic": "",
+    "translation": "n. 方面",
+    "translations": [
+      "n. 方面"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00076",
+    "word": "aspire",
+    "phonetic": "",
+    "translation": "v. 渴望、追求",
+    "translations": [
+      "v. 渴望、追求"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00077",
+    "word": "assembly",
+    "phonetic": "",
+    "translation": "n. 集合、组装",
+    "translations": [
+      "n. 集合、组装"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00078",
+    "word": "assert",
+    "phonetic": "",
+    "translation": "v. 宣称、断言",
+    "translations": [
+      "v. 宣称、断言"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00079",
+    "word": "assess",
+    "phonetic": "",
+    "translation": "v. 评估、估算",
+    "translations": [
+      "v. 评估、估算"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00080",
+    "word": "asset",
+    "phonetic": "",
+    "translation": "n. 资产",
+    "translations": [
+      "n. 资产"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00081",
+    "word": "assign",
+    "phonetic": "",
+    "translation": "v. 分配、布置",
+    "translations": [
+      "v. 分配、布置"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00082",
+    "word": "assimilation",
+    "phonetic": "",
+    "translation": "n. 同化",
+    "translations": [
+      "n. 同化"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00083",
+    "word": "assist",
+    "phonetic": "",
+    "translation": "v. 帮助、协助",
+    "translations": [
+      "v. 帮助、协助"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00084",
+    "word": "associate",
+    "phonetic": "",
+    "translation": "v. 联合、使有联系",
+    "translations": [
+      "v. 联合、使有联系"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00085",
+    "word": "assume",
+    "phonetic": "",
+    "translation": "v. 假设",
+    "translations": [
+      "v. 假设"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00086",
+    "word": "astrological",
+    "phonetic": "",
+    "translation": "adj. 占星的",
+    "translations": [
+      "adj. 占星的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00087",
+    "word": "astronomy",
+    "phonetic": "",
+    "translation": "n. 天文学",
+    "translations": [
+      "n. 天文学"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00088",
+    "word": "atmosphere",
+    "phonetic": "",
+    "translation": "n. 大气（层）、空气、气氛",
+    "translations": [
+      "n. 大气（层）、空气、气氛"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00089",
+    "word": "attract",
+    "phonetic": "",
+    "translation": "v. 吸引",
+    "translations": [
+      "v. 吸引"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00090",
+    "word": "auction",
+    "phonetic": "",
+    "translation": "v/n. 拍卖",
+    "translations": [
+      "v/n. 拍卖"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00091",
+    "word": "authority",
+    "phonetic": "",
+    "translation": "n. 权力、权威、官方",
+    "translations": [
+      "n. 权力、权威、官方"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00092",
+    "word": "automated",
+    "phonetic": "",
+    "translation": "adj. 自动（化）的",
+    "translations": [
+      "adj. 自动（化）的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00093",
+    "word": "available",
+    "phonetic": "",
+    "translation": "adj. 可得到的、存在的",
+    "translations": [
+      "adj. 可得到的、存在的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00094",
+    "word": "awkward",
+    "phonetic": "",
+    "translation": "adj. 尴尬的",
+    "translations": [
+      "adj. 尴尬的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00095",
+    "word": "bankruptcy",
+    "phonetic": "",
+    "translation": "n. 破产",
+    "translations": [
+      "n. 破产"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00096",
+    "word": "barely",
+    "phonetic": "",
+    "translation": "adv. 仅仅、几乎没有",
+    "translations": [
+      "adv. 仅仅、几乎没有"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00097",
+    "word": "barrier",
+    "phonetic": "",
+    "translation": "n. 障碍",
+    "translations": [
+      "n. 障碍"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00098",
+    "word": "behavior",
+    "phonetic": "",
+    "translation": "n. 行为、举止",
+    "translations": [
+      "n. 行为、举止"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00099",
+    "word": "bellyful",
+    "phonetic": "",
+    "translation": "n. 满腹",
+    "translations": [
+      "n. 满腹"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00100",
+    "word": "benefactor",
+    "phonetic": "",
+    "translation": "n. 捐助者",
+    "translations": [
+      "n. 捐助者"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00101",
+    "word": "benign",
+    "phonetic": "",
+    "translation": "adj. 良性的、无害的",
+    "translations": [
+      "adj. 良性的、无害的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00102",
+    "word": "betray",
+    "phonetic": "",
+    "translation": "v. 背叛、揭露",
+    "translations": [
+      "v. 背叛、揭露"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00103",
+    "word": "bias",
+    "phonetic": "",
+    "translation": "n. 偏见",
+    "translations": [
+      "n. 偏见"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00104",
+    "word": "bid",
+    "phonetic": "",
+    "translation": "v/n. 投标、出价",
+    "translations": [
+      "v/n. 投标、出价"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00105",
+    "word": "bilingual",
+    "phonetic": "",
+    "translation": "adj. 双语的",
+    "translations": [
+      "adj. 双语的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00106",
+    "word": "binary",
+    "phonetic": "",
+    "translation": "adj. 非黑即白的、二元的",
+    "translations": [
+      "adj. 非黑即白的、二元的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00107",
+    "word": "binding",
+    "phonetic": "",
+    "translation": "adj. 有约束力的",
+    "translations": [
+      "adj. 有约束力的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00108",
+    "word": "biographical",
+    "phonetic": "",
+    "translation": "adj. 传记的",
+    "translations": [
+      "adj. 传记的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00109",
+    "word": "board",
+    "phonetic": "",
+    "translation": "n. 委员会、董事会",
+    "translations": [
+      "n. 委员会、董事会"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00110",
+    "word": "boom",
+    "phonetic": "",
+    "translation": "v. 迅速发展；n. 繁荣",
+    "translations": [
+      "v. 迅速发展",
+      "n. 繁荣"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00111",
+    "word": "bother",
+    "phonetic": "",
+    "translation": "v/n. 操心、麻烦",
+    "translations": [
+      "v/n. 操心、麻烦"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00112",
+    "word": "boundary",
+    "phonetic": "",
+    "translation": "n. 界限、范围",
+    "translations": [
+      "n. 界限、范围"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00113",
+    "word": "bribery",
+    "phonetic": "",
+    "translation": "n. 行贿、受贿",
+    "translations": [
+      "n. 行贿、受贿"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00114",
+    "word": "brief",
+    "phonetic": "",
+    "translation": "adj. 简短的、简洁的；n. 摘要、简报",
+    "translations": [
+      "adj. 简短的、简洁的",
+      "n. 摘要、简报"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00115",
+    "word": "broaden",
+    "phonetic": "",
+    "translation": "v. 扩大、加宽",
+    "translations": [
+      "v. 扩大、加宽"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00116",
+    "word": "broker",
+    "phonetic": "",
+    "translation": "n. 经纪人",
+    "translations": [
+      "n. 经纪人"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00117",
+    "word": "bubble",
+    "phonetic": "",
+    "translation": "v. 冒泡；n. 气泡、泡沫",
+    "translations": [
+      "v. 冒泡",
+      "n. 气泡、泡沫"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00118",
+    "word": "budget",
+    "phonetic": "",
+    "translation": "v/n. 预算",
+    "translations": [
+      "v/n. 预算"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00119",
+    "word": "bureaucratic",
+    "phonetic": "",
+    "translation": "adj. 官僚主义的",
+    "translations": [
+      "adj. 官僚主义的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00120",
+    "word": "burst",
+    "phonetic": "",
+    "translation": "v/n. 爆炸、爆发",
+    "translations": [
+      "v/n. 爆炸、爆发"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00121",
+    "word": "campaign",
+    "phonetic": "",
+    "translation": "n. 战役、运动、活动",
+    "translations": [
+      "n. 战役、运动、活动"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00122",
+    "word": "candidate",
+    "phonetic": "",
+    "translation": "n. 候选人",
+    "translations": [
+      "n. 候选人"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00123",
+    "word": "capable",
+    "phonetic": "",
+    "translation": "adj. 有能力的",
+    "translations": [
+      "adj. 有能力的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00124",
+    "word": "capture",
+    "phonetic": "",
+    "translation": "v. 捕捉、吸引；n. 俘虏、战利品",
+    "translations": [
+      "v. 捕捉、吸引",
+      "n. 俘虏、战利品"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00125",
+    "word": "carve",
+    "phonetic": "",
+    "translation": "v. 分割、雕刻",
+    "translations": [
+      "v. 分割、雕刻"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00126",
+    "word": "category",
+    "phonetic": "",
+    "translation": "n. 种类、范畴",
+    "translations": [
+      "n. 种类、范畴"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00127",
+    "word": "cater",
+    "phonetic": "",
+    "translation": "v. 迎合、为……服务",
+    "translations": [
+      "v. 迎合、为……服务"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00128",
+    "word": "caution",
+    "phonetic": "",
+    "translation": "v. 警告；n. 小心、谨慎、警告",
+    "translations": [
+      "v. 警告",
+      "n. 小心、谨慎、警告"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00129",
+    "word": "cavity",
+    "phonetic": "",
+    "translation": "n. 腔、(牙齿的) 龋洞",
+    "translations": [
+      "n. 腔、(牙齿的) 龋洞"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00130",
+    "word": "celebrate",
+    "phonetic": "",
+    "translation": "v. 庆祝",
+    "translations": [
+      "v. 庆祝"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00131",
+    "word": "challenge",
+    "phonetic": "",
+    "translation": "v/n. 挑战、质疑",
+    "translations": [
+      "v/n. 挑战、质疑"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00132",
+    "word": "character",
+    "phonetic": "",
+    "translation": "n. 特征、性质、性格、字符",
+    "translations": [
+      "n. 特征、性质、性格、字符"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00133",
+    "word": "charge",
+    "phonetic": "",
+    "translation": "v. 收费、指控；n. 费用、控告",
+    "translations": [
+      "v. 收费、指控",
+      "n. 费用、控告"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00134",
+    "word": "charity",
+    "phonetic": "",
+    "translation": "n. 慈善（机构）",
+    "translations": [
+      "n. 慈善（机构）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00135",
+    "word": "chronic",
+    "phonetic": "",
+    "translation": "adj. 长期的、慢性的",
+    "translations": [
+      "adj. 长期的、慢性的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00136",
+    "word": "circuit",
+    "phonetic": "",
+    "translation": "v. 环行；n. 环行、电路",
+    "translations": [
+      "v. 环行",
+      "n. 环行、电路"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00137",
+    "word": "civil",
+    "phonetic": "",
+    "translation": "adj. 公民的、文明的",
+    "translations": [
+      "adj. 公民的、文明的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00138",
+    "word": "claim",
+    "phonetic": "",
+    "translation": "v/n. 声称、要求、索赔",
+    "translations": [
+      "v/n. 声称、要求、索赔"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00139",
+    "word": "clarity",
+    "phonetic": "",
+    "translation": "n. 清晰",
+    "translations": [
+      "n. 清晰"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00140",
+    "word": "client",
+    "phonetic": "",
+    "translation": "n. 客户、顾客",
+    "translations": [
+      "n. 客户、顾客"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00141",
+    "word": "cloak",
+    "phonetic": "",
+    "translation": "v. 遮盖、掩饰；n. 斗篷",
+    "translations": [
+      "v. 遮盖、掩饰",
+      "n. 斗篷"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00142",
+    "word": "clue",
+    "phonetic": "",
+    "translation": "n. 提示、线索",
+    "translations": [
+      "n. 提示、线索"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00143",
+    "word": "clumsy",
+    "phonetic": "",
+    "translation": "adj. 笨拙的、不灵活的",
+    "translations": [
+      "adj. 笨拙的、不灵活的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00144",
+    "word": "coalition",
+    "phonetic": "",
+    "translation": "n. 联合、联盟",
+    "translations": [
+      "n. 联合、联盟"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00145",
+    "word": "cognitive",
+    "phonetic": "",
+    "translation": "adj. 认知的",
+    "translations": [
+      "adj. 认知的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00146",
+    "word": "coherent",
+    "phonetic": "",
+    "translation": "adj. 连贯的、一致的、粘在一起的",
+    "translations": [
+      "adj. 连贯的、一致的、粘在一起的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00147",
+    "word": "coincidence",
+    "phonetic": "",
+    "translation": "n. 巧合",
+    "translations": [
+      "n. 巧合"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00148",
+    "word": "collaborative",
+    "phonetic": "",
+    "translation": "adj. 合作的、协作的",
+    "translations": [
+      "adj. 合作的、协作的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00149",
+    "word": "collapse",
+    "phonetic": "",
+    "translation": "v/n. 倒塌、瓦解",
+    "translations": [
+      "v/n. 倒塌、瓦解"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00150",
+    "word": "collect",
+    "phonetic": "",
+    "translation": "v. 收集、采集",
+    "translations": [
+      "v. 收集、采集"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00151",
+    "word": "combat",
+    "phonetic": "",
+    "translation": "adj. 战斗的、斗争的；v/n. 战斗、斗争",
+    "translations": [
+      "adj. 战斗的、斗争的",
+      "v/n. 战斗、斗争"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00152",
+    "word": "command",
+    "phonetic": "",
+    "translation": "v/n. 命令、控制、掌握",
+    "translations": [
+      "v/n. 命令、控制、掌握"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00153",
+    "word": "commemorate",
+    "phonetic": "",
+    "translation": "v. 纪念",
+    "translations": [
+      "v. 纪念"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00154",
+    "word": "commercial",
+    "phonetic": "",
+    "translation": "adj. 商业的、商务的",
+    "translations": [
+      "adj. 商业的、商务的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00155",
+    "word": "commit",
+    "phonetic": "",
+    "translation": "v. 进行、实施",
+    "translations": [
+      "v. 进行、实施"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00156",
+    "word": "commodity",
+    "phonetic": "",
+    "translation": "n. 商品",
+    "translations": [
+      "n. 商品"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00157",
+    "word": "community",
+    "phonetic": "",
+    "translation": "n. 社群、（学术）界",
+    "translations": [
+      "n. 社群、（学术）界"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00158",
+    "word": "compact",
+    "phonetic": "",
+    "translation": "n. 合同、契约",
+    "translations": [
+      "n. 合同、契约"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00159",
+    "word": "compare",
+    "phonetic": "",
+    "translation": "v. 比较、相比",
+    "translations": [
+      "v. 比较、相比"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00160",
+    "word": "compelling",
+    "phonetic": "",
+    "translation": "adj. 强制的、令人信服的",
+    "translations": [
+      "adj. 强制的、令人信服的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00161",
+    "word": "compensate",
+    "phonetic": "",
+    "translation": "v. 补偿、赔偿、弥补、抵消",
+    "translations": [
+      "v. 补偿、赔偿、弥补、抵消"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00162",
+    "word": "competent",
+    "phonetic": "",
+    "translation": "adj. 有能力的、能胜任的",
+    "translations": [
+      "adj. 有能力的、能胜任的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00163",
+    "word": "competitive",
+    "phonetic": "",
+    "translation": "adj. 竞争的",
+    "translations": [
+      "adj. 竞争的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00164",
+    "word": "compile",
+    "phonetic": "",
+    "translation": "v. 汇编；收集",
+    "translations": [
+      "v. 汇编；收集"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00165",
+    "word": "complex",
+    "phonetic": "",
+    "translation": "adj. 复杂的",
+    "translations": [
+      "adj. 复杂的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00166",
+    "word": "complicated",
+    "phonetic": "",
+    "translation": "adj. 复杂的",
+    "translations": [
+      "adj. 复杂的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00167",
+    "word": "comply",
+    "phonetic": "",
+    "translation": "v. 遵守、遵从",
+    "translations": [
+      "v. 遵守、遵从"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00168",
+    "word": "component",
+    "phonetic": "",
+    "translation": "n. 组成部分",
+    "translations": [
+      "n. 组成部分"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00169",
+    "word": "composition",
+    "phonetic": "",
+    "translation": "n. （文学、音乐、美术等）作品",
+    "translations": [
+      "n. （文学、音乐、美术等）作品"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00170",
+    "word": "compound",
+    "phonetic": "",
+    "translation": "v. 加剧、混合；n. 化合物",
+    "translations": [
+      "v. 加剧、混合",
+      "n. 化合物"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00171",
+    "word": "comprehensive",
+    "phonetic": "",
+    "translation": "adj. 综合的、全面的",
+    "translations": [
+      "adj. 综合的、全面的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00172",
+    "word": "compromise",
+    "phonetic": "",
+    "translation": "v/n. 妥协、破坏",
+    "translations": [
+      "v/n. 妥协、破坏"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00173",
+    "word": "conceive",
+    "phonetic": "",
+    "translation": "v. 怀孕、构想、认为",
+    "translations": [
+      "v. 怀孕、构想、认为"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00174",
+    "word": "concentrate",
+    "phonetic": "",
+    "translation": "v. 集中、浓缩、专心",
+    "translations": [
+      "v. 集中、浓缩、专心"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00175",
+    "word": "concept",
+    "phonetic": "",
+    "translation": "n. 概念、观念",
+    "translations": [
+      "n. 概念、观念"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00176",
+    "word": "concession",
+    "phonetic": "",
+    "translation": "n. 妥协、让步",
+    "translations": [
+      "n. 妥协、让步"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00177",
+    "word": "conclude",
+    "phonetic": "",
+    "translation": "v. 结束、推断、做出结论",
+    "translations": [
+      "v. 结束、推断、做出结论"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00178",
+    "word": "concrete",
+    "phonetic": "",
+    "translation": "n. 混凝土；adj. 具体的、明确的",
+    "translations": [
+      "n. 混凝土",
+      "adj. 具体的、明确的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00179",
+    "word": "condemn",
+    "phonetic": "",
+    "translation": "v. 谴责、责备",
+    "translations": [
+      "v. 谴责、责备"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00180",
+    "word": "conduct",
+    "phonetic": "",
+    "translation": "v. 实施、管理、指挥、引导；n. 行为",
+    "translations": [
+      "v. 实施、管理、指挥、引导",
+      "n. 行为"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00181",
+    "word": "confer",
+    "phonetic": "",
+    "translation": "v. 赋予、协商",
+    "translations": [
+      "v. 赋予、协商"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00182",
+    "word": "confident",
+    "phonetic": "",
+    "translation": "adj. 自信的、有信心的",
+    "translations": [
+      "adj. 自信的、有信心的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00183",
+    "word": "confine",
+    "phonetic": "",
+    "translation": "v. 限制、约束；n. 限制、界限",
+    "translations": [
+      "v. 限制、约束",
+      "n. 限制、界限"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00184",
+    "word": "confirm",
+    "phonetic": "",
+    "translation": "v. 确认、确定",
+    "translations": [
+      "v. 确认、确定"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00185",
+    "word": "conflict",
+    "phonetic": "",
+    "translation": "v. 与……相冲突；n. 冲突、矛盾",
+    "translations": [
+      "v. 与……相冲突",
+      "n. 冲突、矛盾"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00186",
+    "word": "confront",
+    "phonetic": "",
+    "translation": "v. 遭遇、面对",
+    "translations": [
+      "v. 遭遇、面对"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00187",
+    "word": "confuse",
+    "phonetic": "",
+    "translation": "v. 迷惑、使困惑",
+    "translations": [
+      "v. 迷惑、使困惑"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00188",
+    "word": "conjunction",
+    "phonetic": "",
+    "translation": "n. 结合、同时发生",
+    "translations": [
+      "n. 结合、同时发生"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00189",
+    "word": "conquer",
+    "phonetic": "",
+    "translation": "v. 征服、克服",
+    "translations": [
+      "v. 征服、克服"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00190",
+    "word": "conscience",
+    "phonetic": "",
+    "translation": "n. 良心",
+    "translations": [
+      "n. 良心"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00191",
+    "word": "conscious",
+    "phonetic": "",
+    "translation": "adj. 有意识的",
+    "translations": [
+      "adj. 有意识的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00192",
+    "word": "consent",
+    "phonetic": "",
+    "translation": "v/n. 赞同、同意",
+    "translations": [
+      "v/n. 赞同、同意"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00193",
+    "word": "consequence",
+    "phonetic": "",
+    "translation": "n. 后果",
+    "translations": [
+      "n. 后果"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00194",
+    "word": "conservative",
+    "phonetic": "",
+    "translation": "adj. 保守的；n. 保守派、保守党",
+    "translations": [
+      "adj. 保守的",
+      "n. 保守派、保守党"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00195",
+    "word": "consistent",
+    "phonetic": "",
+    "translation": "adj. 一致的、相符的",
+    "translations": [
+      "adj. 一致的、相符的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00196",
+    "word": "consolidation",
+    "phonetic": "",
+    "translation": "n. 合并",
+    "translations": [
+      "n. 合并"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00197",
+    "word": "constant",
+    "phonetic": "",
+    "translation": "adj. 不变的、经常的；n. 常数、不变的事物",
+    "translations": [
+      "adj. 不变的、经常的",
+      "n. 常数、不变的事物"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00198",
+    "word": "constitute",
+    "phonetic": "",
+    "translation": "v. 组成、构成",
+    "translations": [
+      "v. 组成、构成"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00199",
+    "word": "constrain",
+    "phonetic": "",
+    "translation": "v. 限制、约束",
+    "translations": [
+      "v. 限制、约束"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00200",
+    "word": "construction",
+    "phonetic": "",
+    "translation": "n. 建立、建造、建筑（物）",
+    "translations": [
+      "n. 建立、建造、建筑（物）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00201",
+    "word": "consume",
+    "phonetic": "",
+    "translation": "v. 消费、消耗",
+    "translations": [
+      "v. 消费、消耗"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00202",
+    "word": "contempt",
+    "phonetic": "",
+    "translation": "n. 轻蔑、蔑视",
+    "translations": [
+      "n. 轻蔑、蔑视"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00203",
+    "word": "content",
+    "phonetic": "",
+    "translation": "adj. 满意的；n. 满意、内容",
+    "translations": [
+      "adj. 满意的",
+      "n. 满意、内容"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00204",
+    "word": "contest",
+    "phonetic": "",
+    "translation": "v/n. 竞争、争论",
+    "translations": [
+      "v/n. 竞争、争论"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00205",
+    "word": "contract",
+    "phonetic": "",
+    "translation": "n. 合约、合同",
+    "translations": [
+      "n. 合约、合同"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00206",
+    "word": "contradictory",
+    "phonetic": "",
+    "translation": "adj. 矛盾的",
+    "translations": [
+      "adj. 矛盾的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00207",
+    "word": "contrary",
+    "phonetic": "",
+    "translation": "adj/adv. 相反的/地；n. 相反",
+    "translations": [
+      "adj/adv. 相反的/地",
+      "n. 相反"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00208",
+    "word": "contrast",
+    "phonetic": "",
+    "translation": "v/n. 对比、对照",
+    "translations": [
+      "v/n. 对比、对照"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00209",
+    "word": "contribute",
+    "phonetic": "",
+    "translation": "v. 贡献、导致",
+    "translations": [
+      "v. 贡献、导致"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00210",
+    "word": "controversial",
+    "phonetic": "",
+    "translation": "adj. 有争议的",
+    "translations": [
+      "adj. 有争议的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00211",
+    "word": "conventional",
+    "phonetic": "",
+    "translation": "adj. 传统的、常规的",
+    "translations": [
+      "adj. 传统的、常规的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00212",
+    "word": "converge",
+    "phonetic": "",
+    "translation": "v. 集中、达成一致",
+    "translations": [
+      "v. 集中、达成一致"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00213",
+    "word": "convert",
+    "phonetic": "",
+    "translation": "v. 转变、转化",
+    "translations": [
+      "v. 转变、转化"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00214",
+    "word": "convey",
+    "phonetic": "",
+    "translation": "v. 运输、表达",
+    "translations": [
+      "v. 运输、表达"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00215",
+    "word": "conviction",
+    "phonetic": "",
+    "translation": "n. 判决、定罪",
+    "translations": [
+      "n. 判决、定罪"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00216",
+    "word": "convincing",
+    "phonetic": "",
+    "translation": "adj. 有说服力的、令人信服的",
+    "translations": [
+      "adj. 有说服力的、令人信服的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00217",
+    "word": "cooperate",
+    "phonetic": "",
+    "translation": "v. 配合、合作",
+    "translations": [
+      "v. 配合、合作"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00218",
+    "word": "coordination",
+    "phonetic": "",
+    "translation": "n. 协调、协作",
+    "translations": [
+      "n. 协调、协作"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00219",
+    "word": "core",
+    "phonetic": "",
+    "translation": "n. 核心、要点",
+    "translations": [
+      "n. 核心、要点"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00220",
+    "word": "corporate",
+    "phonetic": "",
+    "translation": "adj. 公司的、企业的",
+    "translations": [
+      "adj. 公司的、企业的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00221",
+    "word": "correct",
+    "phonetic": "",
+    "translation": "adj. 正确的",
+    "translations": [
+      "adj. 正确的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00222",
+    "word": "correlate",
+    "phonetic": "",
+    "translation": "v. 使相互关联、和……相关",
+    "translations": [
+      "v. 使相互关联、和……相关"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00223",
+    "word": "correspond",
+    "phonetic": "",
+    "translation": "v. 符合、与……一致、与……通信",
+    "translations": [
+      "v. 符合、与……一致、与……通信"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00224",
+    "word": "corruption",
+    "phonetic": "",
+    "translation": "n. 贪污、腐败",
+    "translations": [
+      "n. 贪污、腐败"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00225",
+    "word": "counterbalance",
+    "phonetic": "",
+    "translation": "v. 抵消、使平衡；n. 平衡力",
+    "translations": [
+      "v. 抵消、使平衡",
+      "n. 平衡力"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00226",
+    "word": "counterpart",
+    "phonetic": "",
+    "translation": "n. 极其相似的人或物、对比物",
+    "translations": [
+      "n. 极其相似的人或物、对比物"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00227",
+    "word": "courageous",
+    "phonetic": "",
+    "translation": "adj. 勇敢的、大胆的",
+    "translations": [
+      "adj. 勇敢的、大胆的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00228",
+    "word": "craft",
+    "phonetic": "",
+    "translation": "v. 精心制作；n. 手艺、工艺",
+    "translations": [
+      "v. 精心制作",
+      "n. 手艺、工艺"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00229",
+    "word": "crash",
+    "phonetic": "",
+    "translation": "v/n. 撞击、坠落、崩溃",
+    "translations": [
+      "v/n. 撞击、坠落、崩溃"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00230",
+    "word": "credit",
+    "phonetic": "",
+    "translation": "v. 信任、认可；n. 信用、认可、学分",
+    "translations": [
+      "v. 信任、认可",
+      "n. 信用、认可、学分"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00231",
+    "word": "creep",
+    "phonetic": "",
+    "translation": "v. 爬行、悄然而至",
+    "translations": [
+      "v. 爬行、悄然而至"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00232",
+    "word": "crisis",
+    "phonetic": "",
+    "translation": "n. 危机、关键时刻",
+    "translations": [
+      "n. 危机、关键时刻"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00233",
+    "word": "critical",
+    "phonetic": "",
+    "translation": "adj. 批判（性）的、关键的、临界的",
+    "translations": [
+      "adj. 批判（性）的、关键的、临界的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00234",
+    "word": "crucial",
+    "phonetic": "",
+    "translation": "adj. 至关重要的",
+    "translations": [
+      "adj. 至关重要的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00235",
+    "word": "cue",
+    "phonetic": "",
+    "translation": "n. 线索、提示",
+    "translations": [
+      "n. 线索、提示"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00236",
+    "word": "cultivate",
+    "phonetic": "",
+    "translation": "v. 种植、培养",
+    "translations": [
+      "v. 种植、培养"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00237",
+    "word": "cunning",
+    "phonetic": "",
+    "translation": "adj. 巧妙的、可爱的、狡猾的",
+    "translations": [
+      "adj. 巧妙的、可爱的、狡猾的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00238",
+    "word": "curb",
+    "phonetic": "",
+    "translation": "v/n. 控制、限制",
+    "translations": [
+      "v/n. 控制、限制"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00239",
+    "word": "cure",
+    "phonetic": "",
+    "translation": "v. 治疗、治愈；n. 治疗、疗法",
+    "translations": [
+      "v. 治疗、治愈",
+      "n. 治疗、疗法"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00240",
+    "word": "curiosity",
+    "phonetic": "",
+    "translation": "n. 好奇心",
+    "translations": [
+      "n. 好奇心"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00241",
+    "word": "current",
+    "phonetic": "",
+    "translation": "adj. 当前的、流行的",
+    "translations": [
+      "adj. 当前的、流行的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00242",
+    "word": "curriculum",
+    "phonetic": "",
+    "translation": "n. （学校等的）全部课程",
+    "translations": [
+      "n. （学校等的）全部课程"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00243",
+    "word": "cursory",
+    "phonetic": "",
+    "translation": "adj. 粗略的、草率的、匆忙的",
+    "translations": [
+      "adj. 粗略的、草率的、匆忙的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00244",
+    "word": "dampen",
+    "phonetic": "",
+    "translation": "v. 使沮丧",
+    "translations": [
+      "v. 使沮丧"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00245",
+    "word": "dawn",
+    "phonetic": "",
+    "translation": "v. 破晓、出现；n. 黎明、开端",
+    "translations": [
+      "v. 破晓、出现",
+      "n. 黎明、开端"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00246",
+    "word": "dearth",
+    "phonetic": "",
+    "translation": "n. 缺乏、不足",
+    "translations": [
+      "n. 缺乏、不足"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00247",
+    "word": "debate",
+    "phonetic": "",
+    "translation": "v/n. 争论、辩论",
+    "translations": [
+      "v/n. 争论、辩论"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00248",
+    "word": "deceptive",
+    "phonetic": "",
+    "translation": "adj.骗人的、虚伪的",
+    "translations": [
+      "adj.骗人的、虚伪的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00249",
+    "word": "declaration",
+    "phonetic": "",
+    "translation": "n. 申明、宣称",
+    "translations": [
+      "n. 申明、宣称"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00250",
+    "word": "decline",
+    "phonetic": "",
+    "translation": "v/n. 下降、衰退",
+    "translations": [
+      "v/n. 下降、衰退"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00251",
+    "word": "decoration",
+    "phonetic": "",
+    "translation": "n. 装饰（品）",
+    "translations": [
+      "n. 装饰（品）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00252",
+    "word": "dedicate",
+    "phonetic": "",
+    "translation": "v. 献身、致力于",
+    "translations": [
+      "v. 献身、致力于"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00253",
+    "word": "deduce",
+    "phonetic": "",
+    "translation": "v. 推理、推断",
+    "translations": [
+      "v. 推理、推断"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00254",
+    "word": "deem",
+    "phonetic": "",
+    "translation": "v. 认为、视作",
+    "translations": [
+      "v. 认为、视作"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00255",
+    "word": "defend",
+    "phonetic": "",
+    "translation": "v. 保护、为……辩护",
+    "translations": [
+      "v. 保护、为……辩护"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00256",
+    "word": "defer",
+    "phonetic": "",
+    "translation": "v. 延期、延迟",
+    "translations": [
+      "v. 延期、延迟"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00257",
+    "word": "deficiency",
+    "phonetic": "",
+    "translation": "n. 缺点、缺乏",
+    "translations": [
+      "n. 缺点、缺乏"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00258",
+    "word": "define",
+    "phonetic": "",
+    "translation": "v. 定义、（使）明确",
+    "translations": [
+      "v. 定义、（使）明确"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00259",
+    "word": "deliberate",
+    "phonetic": "",
+    "translation": "v. 仔细考虑；adj. 刻意的、故意的",
+    "translations": [
+      "v. 仔细考虑",
+      "adj. 刻意的、故意的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00260",
+    "word": "delicate",
+    "phonetic": "",
+    "translation": "adj. 精致的、微妙的",
+    "translations": [
+      "adj. 精致的、微妙的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00261",
+    "word": "deliver",
+    "phonetic": "",
+    "translation": "v. 发表（演讲/讲话）、递送",
+    "translations": [
+      "v. 发表（演讲/讲话）、递送"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00262",
+    "word": "delusion",
+    "phonetic": "",
+    "translation": "n. 错觉、妄想",
+    "translations": [
+      "n. 错觉、妄想"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00263",
+    "word": "democratic",
+    "phonetic": "",
+    "translation": "adj. 民主的",
+    "translations": [
+      "adj. 民主的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00264",
+    "word": "demographic",
+    "phonetic": "",
+    "translation": "adj. 人口学的；n. 人口统计数据",
+    "translations": [
+      "adj. 人口学的",
+      "n. 人口统计数据"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00265",
+    "word": "dense",
+    "phonetic": "",
+    "translation": "adj. 浓密的、稠密的",
+    "translations": [
+      "adj. 浓密的、稠密的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00266",
+    "word": "deny",
+    "phonetic": "",
+    "translation": "v. 拒绝、否认",
+    "translations": [
+      "v. 拒绝、否认"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00267",
+    "word": "depart",
+    "phonetic": "",
+    "translation": "v. 离开、出发",
+    "translations": [
+      "v. 离开、出发"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00268",
+    "word": "depict",
+    "phonetic": "",
+    "translation": "v. 描述、描绘",
+    "translations": [
+      "v. 描述、描绘"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00269",
+    "word": "depression",
+    "phonetic": "",
+    "translation": "n. 沮丧、抑郁、（经济）萧条",
+    "translations": [
+      "n. 沮丧、抑郁、（经济）萧条"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00270",
+    "word": "deprive",
+    "phonetic": "",
+    "translation": "v. 剥夺、使丧失",
+    "translations": [
+      "v. 剥夺、使丧失"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00271",
+    "word": "derive",
+    "phonetic": "",
+    "translation": "v. 来自、源于",
+    "translations": [
+      "v. 来自、源于"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00272",
+    "word": "descend",
+    "phonetic": "",
+    "translation": "v. 下降、遗传",
+    "translations": [
+      "v. 下降、遗传"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00273",
+    "word": "describe",
+    "phonetic": "",
+    "translation": "v. 描述、形容",
+    "translations": [
+      "v. 描述、形容"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00274",
+    "word": "deserve",
+    "phonetic": "",
+    "translation": "v. 值得、应得",
+    "translations": [
+      "v. 值得、应得"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00275",
+    "word": "designate",
+    "phonetic": "",
+    "translation": "v. 把……命名为；把……定义为",
+    "translations": [
+      "v. 把……命名为；把……定义为"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00276",
+    "word": "desire",
+    "phonetic": "",
+    "translation": "v. 渴望、想要；n. 欲望、心愿",
+    "translations": [
+      "v. 渴望、想要",
+      "n. 欲望、心愿"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00277",
+    "word": "desperate",
+    "phonetic": "",
+    "translation": "adj. 令人绝望的、不顾一切的",
+    "translations": [
+      "adj. 令人绝望的、不顾一切的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00278",
+    "word": "deteriorate",
+    "phonetic": "",
+    "translation": "v. 恶化",
+    "translations": [
+      "v. 恶化"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00279",
+    "word": "determine",
+    "phonetic": "",
+    "translation": "v. 决定、下定决心",
+    "translations": [
+      "v. 决定、下定决心"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00280",
+    "word": "detrimental",
+    "phonetic": "",
+    "translation": "adj. 有害的、不利的",
+    "translations": [
+      "adj. 有害的、不利的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00281",
+    "word": "devastating",
+    "phonetic": "",
+    "translation": "adj. 毁灭性的、破坏性极强的",
+    "translations": [
+      "adj. 毁灭性的、破坏性极强的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00282",
+    "word": "devise",
+    "phonetic": "",
+    "translation": "v. 设计、发明",
+    "translations": [
+      "v. 设计、发明"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00283",
+    "word": "devoted",
+    "phonetic": "",
+    "translation": "adj. 忠实的、忠诚的、热衷于……的",
+    "translations": [
+      "adj. 忠实的、忠诚的、热衷于……的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00284",
+    "word": "differentiate",
+    "phonetic": "",
+    "translation": "v. 区分、区别",
+    "translations": [
+      "v. 区分、区别"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00285",
+    "word": "diffuse",
+    "phonetic": "",
+    "translation": "v. 传播、缓解",
+    "translations": [
+      "v. 传播、缓解"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00286",
+    "word": "disaster",
+    "phonetic": "",
+    "translation": "n. 灾难",
+    "translations": [
+      "n. 灾难"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00287",
+    "word": "discipline",
+    "phonetic": "",
+    "translation": "n. 纪律、原则",
+    "translations": [
+      "n. 纪律、原则"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00288",
+    "word": "disclose",
+    "phonetic": "",
+    "translation": "v. 揭露、公开",
+    "translations": [
+      "v. 揭露、公开"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00289",
+    "word": "disconcerting",
+    "phonetic": "",
+    "translation": "adj. 焦虑的、不安的",
+    "translations": [
+      "adj. 焦虑的、不安的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00290",
+    "word": "discover",
+    "phonetic": "",
+    "translation": "v. 发现、发觉",
+    "translations": [
+      "v. 发现、发觉"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00291",
+    "word": "discrimination",
+    "phonetic": "",
+    "translation": "n. 歧视、区别对待",
+    "translations": [
+      "n. 歧视、区别对待"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00292",
+    "word": "disgrace",
+    "phonetic": "",
+    "translation": "v. 使丢脸、使蒙羞；n. 耻辱、不光彩的事",
+    "translations": [
+      "v. 使丢脸、使蒙羞",
+      "n. 耻辱、不光彩的事"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00293",
+    "word": "disguise",
+    "phonetic": "",
+    "translation": "v/n. 掩饰、伪装",
+    "translations": [
+      "v/n. 掩饰、伪装"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00294",
+    "word": "disintegrate",
+    "phonetic": "",
+    "translation": "v. 分解、衰退",
+    "translations": [
+      "v. 分解、衰退"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00295",
+    "word": "dismiss",
+    "phonetic": "",
+    "translation": "v. 解散、解雇、排除",
+    "translations": [
+      "v. 解散、解雇、排除"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00296",
+    "word": "disorder",
+    "phonetic": "",
+    "translation": "v. 扰乱、使失调；n. 混乱、病症（心理学）",
+    "translations": [
+      "v. 扰乱、使失调",
+      "n. 混乱、病症（心理学）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00297",
+    "word": "display",
+    "phonetic": "",
+    "translation": "v/n. 展示、显示、表现",
+    "translations": [
+      "v/n. 展示、显示、表现"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00298",
+    "word": "disposable",
+    "phonetic": "",
+    "translation": "adj. 一次性的、可任意处理的",
+    "translations": [
+      "adj. 一次性的、可任意处理的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00299",
+    "word": "disproportionately",
+    "phonetic": "",
+    "translation": "adv. 不成比例地",
+    "translations": [
+      "adv. 不成比例地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00300",
+    "word": "dispute",
+    "phonetic": "",
+    "translation": "v/n. 反对、争论",
+    "translations": [
+      "v/n. 反对、争论"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00301",
+    "word": "disruptive",
+    "phonetic": "",
+    "translation": "adj. 破坏（性）的、颠覆（性）的",
+    "translations": [
+      "adj. 破坏（性）的、颠覆（性）的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00302",
+    "word": "distort",
+    "phonetic": "",
+    "translation": "v. 歪曲、扭曲",
+    "translations": [
+      "v. 歪曲、扭曲"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00303",
+    "word": "distraction",
+    "phonetic": "",
+    "translation": "n. 分心、分神",
+    "translations": [
+      "n. 分心、分神"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00304",
+    "word": "distressed",
+    "phonetic": "",
+    "translation": "adj. 烦恼的、难过的",
+    "translations": [
+      "adj. 烦恼的、难过的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00305",
+    "word": "distribute",
+    "phonetic": "",
+    "translation": "v. 分发、分配",
+    "translations": [
+      "v. 分发、分配"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00306",
+    "word": "district",
+    "phonetic": "",
+    "translation": "n. 区域、地区",
+    "translations": [
+      "n. 区域、地区"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00307",
+    "word": "disturb",
+    "phonetic": "",
+    "translation": "v. 打搅、使混乱",
+    "translations": [
+      "v. 打搅、使混乱"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00308",
+    "word": "diverse",
+    "phonetic": "",
+    "translation": "adj. 不同的、多样的",
+    "translations": [
+      "adj. 不同的、多样的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00309",
+    "word": "divisive",
+    "phonetic": "",
+    "translation": "adj. 分裂的、有分歧的",
+    "translations": [
+      "adj. 分裂的、有分歧的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00310",
+    "word": "domestic",
+    "phonetic": "",
+    "translation": "adj. 家庭的、国内的",
+    "translations": [
+      "adj. 家庭的、国内的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00311",
+    "word": "dominate",
+    "phonetic": "",
+    "translation": "v. 统治、主导",
+    "translations": [
+      "v. 统治、主导"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00312",
+    "word": "donate",
+    "phonetic": "",
+    "translation": "v. 捐献、捐赠",
+    "translations": [
+      "v. 捐献、捐赠"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00313",
+    "word": "doom",
+    "phonetic": "",
+    "translation": "n. 厄运、灾难",
+    "translations": [
+      "n. 厄运、灾难"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00314",
+    "word": "dormant",
+    "phonetic": "",
+    "translation": "adj. 休眠的、静止的",
+    "translations": [
+      "adj. 休眠的、静止的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00315",
+    "word": "dramatic",
+    "phonetic": "",
+    "translation": "adj. 戏剧（性）的、剧烈的",
+    "translations": [
+      "adj. 戏剧（性）的、剧烈的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00316",
+    "word": "drastic",
+    "phonetic": "",
+    "translation": "adj. 激烈的、剧烈的",
+    "translations": [
+      "adj. 激烈的、剧烈的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00317",
+    "word": "dreadful",
+    "phonetic": "",
+    "translation": "adj. 可怕的、糟糕的",
+    "translations": [
+      "adj. 可怕的、糟糕的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00318",
+    "word": "drought",
+    "phonetic": "",
+    "translation": "n. 干旱、旱灾",
+    "translations": [
+      "n. 干旱、旱灾"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00319",
+    "word": "duplication",
+    "phonetic": "",
+    "translation": "n. 重复、复制、副本",
+    "translations": [
+      "n. 重复、复制、副本"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00320",
+    "word": "durable",
+    "phonetic": "",
+    "translation": "adj. 持续的、持久的、耐用的",
+    "translations": [
+      "adj. 持续的、持久的、耐用的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00321",
+    "word": "dynamic",
+    "phonetic": "",
+    "translation": "adj. 动力（学）的、动态的；n. 动力、动态",
+    "translations": [
+      "adj. 动力（学）的、动态的",
+      "n. 动力、动态"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00322",
+    "word": "economic",
+    "phonetic": "",
+    "translation": "adj. 经济（学）的",
+    "translations": [
+      "adj. 经济（学）的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00323",
+    "word": "effective",
+    "phonetic": "",
+    "translation": "adj. 有效的",
+    "translations": [
+      "adj. 有效的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00324",
+    "word": "efficient",
+    "phonetic": "",
+    "translation": "adj. 有效率的",
+    "translations": [
+      "adj. 有效率的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00325",
+    "word": "effort",
+    "phonetic": "",
+    "translation": "n. 努力、尝试",
+    "translations": [
+      "n. 努力、尝试"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00326",
+    "word": "elaborate",
+    "phonetic": "",
+    "translation": "v. 精心准备、详细阐述；adj. 精心的、详尽的",
+    "translations": [
+      "v. 精心准备、详细阐述",
+      "adj. 精心的、详尽的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00327",
+    "word": "elect",
+    "phonetic": "",
+    "translation": "v. 推选、选举",
+    "translations": [
+      "v. 推选、选举"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00328",
+    "word": "elegant",
+    "phonetic": "",
+    "translation": "adj. 优美的、优雅的",
+    "translations": [
+      "adj. 优美的、优雅的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00329",
+    "word": "element",
+    "phonetic": "",
+    "translation": "n. 元素、要素、成分",
+    "translations": [
+      "n. 元素、要素、成分"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00330",
+    "word": "elevate",
+    "phonetic": "",
+    "translation": "v. 提高、提升",
+    "translations": [
+      "v. 提高、提升"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00331",
+    "word": "eligible",
+    "phonetic": "",
+    "translation": "adj. 合格的、有资格的",
+    "translations": [
+      "adj. 合格的、有资格的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00332",
+    "word": "eliminate",
+    "phonetic": "",
+    "translation": "v. 消除、排除",
+    "translations": [
+      "v. 消除、排除"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00333",
+    "word": "elite",
+    "phonetic": "",
+    "translation": "n. 精英",
+    "translations": [
+      "n. 精英"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00334",
+    "word": "embarrassing",
+    "phonetic": "",
+    "translation": "adj. 令人尴尬的",
+    "translations": [
+      "adj. 令人尴尬的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00335",
+    "word": "embrace",
+    "phonetic": "",
+    "translation": "v/n. 拥抱、接受",
+    "translations": [
+      "v/n. 拥抱、接受"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00336",
+    "word": "emerge",
+    "phonetic": "",
+    "translation": "v. 出现、显现",
+    "translations": [
+      "v. 出现、显现"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00337",
+    "word": "emigrate",
+    "phonetic": "",
+    "translation": "v. 移民（出），离开",
+    "translations": [
+      "v. 移民（出），离开"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00338",
+    "word": "emission",
+    "phonetic": "",
+    "translation": "n. 排放（量）",
+    "translations": [
+      "n. 排放（量）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00339",
+    "word": "emotional",
+    "phonetic": "",
+    "translation": "adj. 情绪的、情感的",
+    "translations": [
+      "adj. 情绪的、情感的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00340",
+    "word": "emphasize",
+    "phonetic": "",
+    "translation": "v. 强调、重视",
+    "translations": [
+      "v. 强调、重视"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00341",
+    "word": "empower",
+    "phonetic": "",
+    "translation": "v. 授权、允许",
+    "translations": [
+      "v. 授权、允许"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00342",
+    "word": "encode",
+    "phonetic": "",
+    "translation": "v. 编码",
+    "translations": [
+      "v. 编码"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00343",
+    "word": "encounter",
+    "phonetic": "",
+    "translation": "v/n. 遭遇、对抗",
+    "translations": [
+      "v/n. 遭遇、对抗"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00344",
+    "word": "endeavor",
+    "phonetic": "",
+    "translation": "v/n. 努力、尝试",
+    "translations": [
+      "v/n. 努力、尝试"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00345",
+    "word": "endure",
+    "phonetic": "",
+    "translation": "v. 忍受、延续",
+    "translations": [
+      "v. 忍受、延续"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00346",
+    "word": "engage",
+    "phonetic": "",
+    "translation": "v. 从事、参与",
+    "translations": [
+      "v. 从事、参与"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00347",
+    "word": "enhance",
+    "phonetic": "",
+    "translation": "v. 提高、增加、加强",
+    "translations": [
+      "v. 提高、增加、加强"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00348",
+    "word": "enlarge",
+    "phonetic": "",
+    "translation": "v. 扩大、放大",
+    "translations": [
+      "v. 扩大、放大"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00349",
+    "word": "enormous",
+    "phonetic": "",
+    "translation": "adj. 巨大的",
+    "translations": [
+      "adj. 巨大的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00350",
+    "word": "enrage",
+    "phonetic": "",
+    "translation": "v. 激怒",
+    "translations": [
+      "v. 激怒"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00351",
+    "word": "ensure",
+    "phonetic": "",
+    "translation": "v. 确保、保证",
+    "translations": [
+      "v. 确保、保证"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00352",
+    "word": "entail",
+    "phonetic": "",
+    "translation": "v. 需要",
+    "translations": [
+      "v. 需要"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00353",
+    "word": "entertainment",
+    "phonetic": "",
+    "translation": "n. 娱乐，消遣",
+    "translations": [
+      "n. 娱乐，消遣"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00354",
+    "word": "enthusiasm",
+    "phonetic": "",
+    "translation": "n. 热情",
+    "translations": [
+      "n. 热情"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00355",
+    "word": "entirely",
+    "phonetic": "",
+    "translation": "adv. 完全地、彻底地",
+    "translations": [
+      "adv. 完全地、彻底地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00356",
+    "word": "entitle",
+    "phonetic": "",
+    "translation": "v. 给……命名、授予……称号、使有权利/资格",
+    "translations": [
+      "v. 给……命名、授予……称号、使有权利/资格"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00357",
+    "word": "envision",
+    "phonetic": "",
+    "translation": "v. 想象、构想",
+    "translations": [
+      "v. 想象、构想"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00358",
+    "word": "epidemic",
+    "phonetic": "",
+    "translation": "adj. 传染性的、流行的；n. 传染病、流行病、流行、风行",
+    "translations": [
+      "adj. 传染性的、流行的",
+      "n. 传染病、流行病、流行、风行"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00359",
+    "word": "equality",
+    "phonetic": "",
+    "translation": "n. 公平、平等",
+    "translations": [
+      "n. 公平、平等"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00360",
+    "word": "equivalent",
+    "phonetic": "",
+    "translation": "adj. 等价的、相当于；n. 等价物",
+    "translations": [
+      "adj. 等价的、相当于",
+      "n. 等价物"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00361",
+    "word": "essential",
+    "phonetic": "",
+    "translation": "adj. 本质的、必要的；n. 要素、必需品",
+    "translations": [
+      "adj. 本质的、必要的",
+      "n. 要素、必需品"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00362",
+    "word": "establish",
+    "phonetic": "",
+    "translation": "v. 创立、建立",
+    "translations": [
+      "v. 创立、建立"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00363",
+    "word": "esteem",
+    "phonetic": "",
+    "translation": "v/n. 尊敬、尊重",
+    "translations": [
+      "v/n. 尊敬、尊重"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00364",
+    "word": "estimate",
+    "phonetic": "",
+    "translation": "v/n. 评估、估价",
+    "translations": [
+      "v/n. 评估、估价"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00365",
+    "word": "ethical",
+    "phonetic": "",
+    "translation": "adj. 伦理的、道德的",
+    "translations": [
+      "adj. 伦理的、道德的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00366",
+    "word": "evade",
+    "phonetic": "",
+    "translation": "v. 使感到困难、逃避",
+    "translations": [
+      "v. 使感到困难、逃避"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00367",
+    "word": "evaluate",
+    "phonetic": "",
+    "translation": "v. 评价、评估",
+    "translations": [
+      "v. 评价、评估"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00368",
+    "word": "evaporate",
+    "phonetic": "",
+    "translation": "v. 蒸发、消失",
+    "translations": [
+      "v. 蒸发、消失"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00369",
+    "word": "eventually",
+    "phonetic": "",
+    "translation": "adv. 最终、终于",
+    "translations": [
+      "adv. 最终、终于"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00370",
+    "word": "evidence",
+    "phonetic": "",
+    "translation": "n. 证据、证明",
+    "translations": [
+      "n. 证据、证明"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00371",
+    "word": "evolve",
+    "phonetic": "",
+    "translation": "v. 发展、进化",
+    "translations": [
+      "v. 发展、进化"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00372",
+    "word": "exaggerate",
+    "phonetic": "",
+    "translation": "v. 夸大、夸张",
+    "translations": [
+      "v. 夸大、夸张"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00373",
+    "word": "excellent",
+    "phonetic": "",
+    "translation": "adj. 优秀的、很好的",
+    "translations": [
+      "adj. 优秀的、很好的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00374",
+    "word": "exception",
+    "phonetic": "",
+    "translation": "n. 例外",
+    "translations": [
+      "n. 例外"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00375",
+    "word": "excessive",
+    "phonetic": "",
+    "translation": "adj. 过度的、过量的",
+    "translations": [
+      "adj. 过度的、过量的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00376",
+    "word": "exclusive",
+    "phonetic": "",
+    "translation": "adj. 排他的、专有的",
+    "translations": [
+      "adj. 排他的、专有的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00377",
+    "word": "executive",
+    "phonetic": "",
+    "translation": "adj. 执行的、行政的；n. 执行者、经理",
+    "translations": [
+      "adj. 执行的、行政的",
+      "n. 执行者、经理"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00378",
+    "word": "exert",
+    "phonetic": "",
+    "translation": "v. 施加、发挥",
+    "translations": [
+      "v. 施加、发挥"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00379",
+    "word": "exhaust",
+    "phonetic": "",
+    "translation": "v. 排出、耗尽、使精疲力尽",
+    "translations": [
+      "v. 排出、耗尽、使精疲力尽"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00380",
+    "word": "exhibit",
+    "phonetic": "",
+    "translation": "v. 显示、表现出、展览",
+    "translations": [
+      "v. 显示、表现出、展览"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00381",
+    "word": "expand",
+    "phonetic": "",
+    "translation": "v. 扩大、扩展",
+    "translations": [
+      "v. 扩大、扩展"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00382",
+    "word": "expensive",
+    "phonetic": "",
+    "translation": "adj. 昂贵的、奢侈的",
+    "translations": [
+      "adj. 昂贵的、奢侈的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00383",
+    "word": "expire",
+    "phonetic": "",
+    "translation": "v. 到期、终止",
+    "translations": [
+      "v. 到期、终止"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00384",
+    "word": "explicit",
+    "phonetic": "",
+    "translation": "adj. 清楚的、明确的",
+    "translations": [
+      "adj. 清楚的、明确的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00385",
+    "word": "exploit",
+    "phonetic": "",
+    "translation": "v. 开发、利用",
+    "translations": [
+      "v. 开发、利用"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00386",
+    "word": "explore",
+    "phonetic": "",
+    "translation": "v. 探索、探测、探险",
+    "translations": [
+      "v. 探索、探测、探险"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00387",
+    "word": "explosion",
+    "phonetic": "",
+    "translation": "n. 爆炸、爆发、激增",
+    "translations": [
+      "n. 爆炸、爆发、激增"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00388",
+    "word": "export",
+    "phonetic": "",
+    "translation": "v/n. 输出、出口",
+    "translations": [
+      "v/n. 输出、出口"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00389",
+    "word": "expose",
+    "phonetic": "",
+    "translation": "v. 面临、遭受、（使）暴露、（使）曝光",
+    "translations": [
+      "v. 面临、遭受、（使）暴露、（使）曝光"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00390",
+    "word": "express",
+    "phonetic": "",
+    "translation": "v. 表露、表达",
+    "translations": [
+      "v. 表露、表达"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00391",
+    "word": "extend",
+    "phonetic": "",
+    "translation": "v. 延长、延期",
+    "translations": [
+      "v. 延长、延期"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00392",
+    "word": "external",
+    "phonetic": "",
+    "translation": "adj. 外部的、表面的",
+    "translations": [
+      "adj. 外部的、表面的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00393",
+    "word": "extinguish",
+    "phonetic": "",
+    "translation": "v. 使熄灭、使破灭",
+    "translations": [
+      "v. 使熄灭、使破灭"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00394",
+    "word": "extract",
+    "phonetic": "",
+    "translation": "v. 提炼、提取、取出、拔出",
+    "translations": [
+      "v. 提炼、提取、取出、拔出"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00395",
+    "word": "extraordinarily",
+    "phonetic": "",
+    "translation": "adv. 极度地",
+    "translations": [
+      "adv. 极度地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00396",
+    "word": "fabric",
+    "phonetic": "",
+    "translation": "n. 织物、结构",
+    "translations": [
+      "n. 织物、结构"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00397",
+    "word": "facilitate",
+    "phonetic": "",
+    "translation": "v. 促进、有助于",
+    "translations": [
+      "v. 促进、有助于"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00398",
+    "word": "fade",
+    "phonetic": "",
+    "translation": "v. 褪色、变弱、逐渐消失",
+    "translations": [
+      "v. 褪色、变弱、逐渐消失"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00399",
+    "word": "faint",
+    "phonetic": "",
+    "translation": "adj. 模糊的、微弱的、勉强的",
+    "translations": [
+      "adj. 模糊的、微弱的、勉强的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00400",
+    "word": "fake",
+    "phonetic": "",
+    "translation": "adj. 假的、伪造的；n. 假货、赝品",
+    "translations": [
+      "adj. 假的、伪造的",
+      "n. 假货、赝品"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00401",
+    "word": "familiar",
+    "phonetic": "",
+    "translation": "adj. 熟悉的、常见的",
+    "translations": [
+      "adj. 熟悉的、常见的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00402",
+    "word": "fantastic",
+    "phonetic": "",
+    "translation": "adj. 异想天开的、不切实际的、极好的",
+    "translations": [
+      "adj. 异想天开的、不切实际的、极好的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00403",
+    "word": "fascinate",
+    "phonetic": "",
+    "translation": "v. 入迷、使着迷",
+    "translations": [
+      "v. 入迷、使着迷"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00404",
+    "word": "fatal",
+    "phonetic": "",
+    "translation": "adj. 致命的、重大的",
+    "translations": [
+      "adj. 致命的、重大的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00405",
+    "word": "favor",
+    "phonetic": "",
+    "translation": "v/n. 喜爱、帮助",
+    "translations": [
+      "v/n. 喜爱、帮助"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00406",
+    "word": "feverish",
+    "phonetic": "",
+    "translation": "adj. 发烧的、发热的、狂热的",
+    "translations": [
+      "adj. 发烧的、发热的、狂热的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00407",
+    "word": "fiction",
+    "phonetic": "",
+    "translation": "n. 小说",
+    "translations": [
+      "n. 小说"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00408",
+    "word": "fierce",
+    "phonetic": "",
+    "translation": "adj. 凶猛的、激烈的",
+    "translations": [
+      "adj. 凶猛的、激烈的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00409",
+    "word": "figure",
+    "phonetic": "",
+    "translation": "v. 计算；n. 数字、图表、人物",
+    "translations": [
+      "v. 计算",
+      "n. 数字、图表、人物"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00410",
+    "word": "financial",
+    "phonetic": "",
+    "translation": "adj. 金融的、财务的",
+    "translations": [
+      "adj. 金融的、财务的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00411",
+    "word": "finite",
+    "phonetic": "",
+    "translation": "adj. 有限的",
+    "translations": [
+      "adj. 有限的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00412",
+    "word": "flaw",
+    "phonetic": "",
+    "translation": "n. 缺陷、瑕疵、裂缝",
+    "translations": [
+      "n. 缺陷、瑕疵、裂缝"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00413",
+    "word": "flexibility",
+    "phonetic": "",
+    "translation": "n. 弹性、灵活性",
+    "translations": [
+      "n. 弹性、灵活性"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00414",
+    "word": "flourish",
+    "phonetic": "",
+    "translation": "v/n. 繁荣、兴旺",
+    "translations": [
+      "v/n. 繁荣、兴旺"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00415",
+    "word": "folk",
+    "phonetic": "",
+    "translation": "adj. 民间的；n. 人们（多用复数）",
+    "translations": [
+      "adj. 民间的",
+      "n. 人们（多用复数）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00416",
+    "word": "foresee",
+    "phonetic": "",
+    "translation": "v. 预见、预知",
+    "translations": [
+      "v. 预见、预知"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00417",
+    "word": "foreshadow",
+    "phonetic": "",
+    "translation": "v. 预示、是…的预兆",
+    "translations": [
+      "v. 预示、是…的预兆"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00418",
+    "word": "formal",
+    "phonetic": "",
+    "translation": "adj. 正式的、正规的",
+    "translations": [
+      "adj. 正式的、正规的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00419",
+    "word": "foster",
+    "phonetic": "",
+    "translation": "v. 促进、助长",
+    "translations": [
+      "v. 促进、助长"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00420",
+    "word": "foundation",
+    "phonetic": "",
+    "translation": "n. 创立、根据、基础、基金（会）",
+    "translations": [
+      "n. 创立、根据、基础、基金（会）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00421",
+    "word": "fraction",
+    "phonetic": "",
+    "translation": "n. （小）部分、少量",
+    "translations": [
+      "n. （小）部分、少量"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00422",
+    "word": "fragile",
+    "phonetic": "",
+    "translation": "adj. 脆弱的、易碎的",
+    "translations": [
+      "adj. 脆弱的、易碎的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00423",
+    "word": "frame",
+    "phonetic": "",
+    "translation": "n. 框架、体系、（人或动物的）躯体",
+    "translations": [
+      "n. 框架、体系、（人或动物的）躯体"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00424",
+    "word": "freeze",
+    "phonetic": "",
+    "translation": "v. 冻结",
+    "translations": [
+      "v. 冻结"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00425",
+    "word": "frugal",
+    "phonetic": "",
+    "translation": "adj. 朴素的、节俭的",
+    "translations": [
+      "adj. 朴素的、节俭的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00426",
+    "word": "frustrate",
+    "phonetic": "",
+    "translation": "v. 挫败、（使）受挫",
+    "translations": [
+      "v. 挫败、（使）受挫"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00427",
+    "word": "fulfill",
+    "phonetic": "",
+    "translation": "v. 完成、实现",
+    "translations": [
+      "v. 完成、实现"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00428",
+    "word": "function",
+    "phonetic": "",
+    "translation": "v. 运行、起作用；n. 功能",
+    "translations": [
+      "v. 运行、起作用",
+      "n. 功能"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00429",
+    "word": "fund",
+    "phonetic": "",
+    "translation": "v. 投资、资助；n. 资金、基金",
+    "translations": [
+      "v. 投资、资助",
+      "n. 资金、基金"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00430",
+    "word": "fuse",
+    "phonetic": "",
+    "translation": "v. 融入、融合",
+    "translations": [
+      "v. 融入、融合"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00431",
+    "word": "garment",
+    "phonetic": "",
+    "translation": "n. 衣服、服装",
+    "translations": [
+      "n. 衣服、服装"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00432",
+    "word": "generate",
+    "phonetic": "",
+    "translation": "v. 产生、引起",
+    "translations": [
+      "v. 产生、引起"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00433",
+    "word": "generous",
+    "phonetic": "",
+    "translation": "adj. 慷慨的、大方的、大量的",
+    "translations": [
+      "adj. 慷慨的、大方的、大量的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00434",
+    "word": "genetic",
+    "phonetic": "",
+    "translation": "adj. 基因的、遗传的",
+    "translations": [
+      "adj. 基因的、遗传的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00435",
+    "word": "genius",
+    "phonetic": "",
+    "translation": "n. 天才、天赋",
+    "translations": [
+      "n. 天才、天赋"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00436",
+    "word": "genuinely",
+    "phonetic": "",
+    "translation": "adv. 真诚地、诚实地",
+    "translations": [
+      "adv. 真诚地、诚实地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00437",
+    "word": "giant",
+    "phonetic": "",
+    "translation": "adj. 巨大的",
+    "translations": [
+      "adj. 巨大的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00438",
+    "word": "glamorous",
+    "phonetic": "",
+    "translation": "adj. 迷人的、富有魅力的",
+    "translations": [
+      "adj. 迷人的、富有魅力的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00439",
+    "word": "gloom",
+    "phonetic": "",
+    "translation": "n. 阴暗、忧郁",
+    "translations": [
+      "n. 阴暗、忧郁"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00440",
+    "word": "glory",
+    "phonetic": "",
+    "translation": "n. 荣耀、辉煌",
+    "translations": [
+      "n. 荣耀、辉煌"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00441",
+    "word": "grant",
+    "phonetic": "",
+    "translation": "v. 授予、允许",
+    "translations": [
+      "v. 授予、允许"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00442",
+    "word": "grasp",
+    "phonetic": "",
+    "translation": "v/n. 抓住、理解",
+    "translations": [
+      "v/n. 抓住、理解"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00443",
+    "word": "gratification",
+    "phonetic": "",
+    "translation": "n. 喜悦、满足（感）",
+    "translations": [
+      "n. 喜悦、满足（感）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00444",
+    "word": "gratitude",
+    "phonetic": "",
+    "translation": "n. 感激、感谢",
+    "translations": [
+      "n. 感激、感谢"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00445",
+    "word": "greed",
+    "phonetic": "",
+    "translation": "n. 贪婪",
+    "translations": [
+      "n. 贪婪"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00446",
+    "word": "grievance",
+    "phonetic": "",
+    "translation": "n. 委屈、不满",
+    "translations": [
+      "n. 委屈、不满"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00447",
+    "word": "grip",
+    "phonetic": "",
+    "translation": "v/n. 抓住、握紧、控制",
+    "translations": [
+      "v/n. 抓住、握紧、控制"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00448",
+    "word": "guarantee",
+    "phonetic": "",
+    "translation": "v/n. 保证、确保",
+    "translations": [
+      "v/n. 保证、确保"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00449",
+    "word": "habitat",
+    "phonetic": "",
+    "translation": "n. 栖息地、生长环境",
+    "translations": [
+      "n. 栖息地、生长环境"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00450",
+    "word": "hasten",
+    "phonetic": "",
+    "translation": "v. 加速",
+    "translations": [
+      "v. 加速"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00451",
+    "word": "hemisphere",
+    "phonetic": "",
+    "translation": "n. 半球",
+    "translations": [
+      "n. 半球"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00452",
+    "word": "heritage",
+    "phonetic": "",
+    "translation": "n. 遗产、传统",
+    "translations": [
+      "n. 遗产、传统"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00453",
+    "word": "hierarchical",
+    "phonetic": "",
+    "translation": "adj. 分层的、分级的、等级森严的",
+    "translations": [
+      "adj. 分层的、分级的、等级森严的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00454",
+    "word": "hijack",
+    "phonetic": "",
+    "translation": "v/n. 劫持、强行控制",
+    "translations": [
+      "v/n. 劫持、强行控制"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00455",
+    "word": "hinder",
+    "phonetic": "",
+    "translation": "v. 阻碍、妨碍",
+    "translations": [
+      "v. 阻碍、妨碍"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00456",
+    "word": "horizon",
+    "phonetic": "",
+    "translation": "n. 地平线",
+    "translations": [
+      "n. 地平线"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00457",
+    "word": "hostile",
+    "phonetic": "",
+    "translation": "adj. 敌对的",
+    "translations": [
+      "adj. 敌对的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00458",
+    "word": "humane",
+    "phonetic": "",
+    "translation": "adj. 人道的、仁慈的",
+    "translations": [
+      "adj. 人道的、仁慈的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00459",
+    "word": "humble",
+    "phonetic": "",
+    "translation": "adj. 谦逊的、普通的",
+    "translations": [
+      "adj. 谦逊的、普通的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00460",
+    "word": "hybrid",
+    "phonetic": "",
+    "translation": "adj. 混合的；n. 混合物、结合物",
+    "translations": [
+      "adj. 混合的",
+      "n. 混合物、结合物"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00461",
+    "word": "identify",
+    "phonetic": "",
+    "translation": "v. 确定、辨认",
+    "translations": [
+      "v. 确定、辨认"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00462",
+    "word": "ignore",
+    "phonetic": "",
+    "translation": "v. 忽视、对……置之不理",
+    "translations": [
+      "v. 忽视、对……置之不理"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00463",
+    "word": "illuminate",
+    "phonetic": "",
+    "translation": "v. 阐明、说明",
+    "translations": [
+      "v. 阐明、说明"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00464",
+    "word": "illusory",
+    "phonetic": "",
+    "translation": "adj. 虚假的、虚幻的",
+    "translations": [
+      "adj. 虚假的、虚幻的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00465",
+    "word": "illustrate",
+    "phonetic": "",
+    "translation": "v. 阐明、说明",
+    "translations": [
+      "v. 阐明、说明"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00466",
+    "word": "imitate",
+    "phonetic": "",
+    "translation": "v. 模仿",
+    "translations": [
+      "v. 模仿"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00467",
+    "word": "immediate",
+    "phonetic": "",
+    "translation": "adj. 直接的、立即的",
+    "translations": [
+      "adj. 直接的、立即的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00468",
+    "word": "immense",
+    "phonetic": "",
+    "translation": "adj. 巨大的、大量的",
+    "translations": [
+      "adj. 巨大的、大量的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00469",
+    "word": "immigrate",
+    "phonetic": "",
+    "translation": "v. 移民（入）、迁徙",
+    "translations": [
+      "v. 移民（入）、迁徙"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00470",
+    "word": "immune",
+    "phonetic": "",
+    "translation": "adj. 免疫的、免除的、不受影响的",
+    "translations": [
+      "adj. 免疫的、免除的、不受影响的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00471",
+    "word": "impact",
+    "phonetic": "",
+    "translation": "v/n. 影响",
+    "translations": [
+      "v/n. 影响"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00472",
+    "word": "impel",
+    "phonetic": "",
+    "translation": "v. 推动、促使",
+    "translations": [
+      "v. 推动、促使"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00473",
+    "word": "implement",
+    "phonetic": "",
+    "translation": "v. 实施、执行",
+    "translations": [
+      "v. 实施、执行"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00474",
+    "word": "implication",
+    "phonetic": "",
+    "translation": "n. 含义、暗示",
+    "translations": [
+      "n. 含义、暗示"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00475",
+    "word": "impose",
+    "phonetic": "",
+    "translation": "v. 把……强加于、使承受",
+    "translations": [
+      "v. 把……强加于、使承受"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00476",
+    "word": "impoverished",
+    "phonetic": "",
+    "translation": "adj. 贫困的",
+    "translations": [
+      "adj. 贫困的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00477",
+    "word": "impressive",
+    "phonetic": "",
+    "translation": "adj. 令人印象深刻的、很好的",
+    "translations": [
+      "adj. 令人印象深刻的、很好的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00478",
+    "word": "impulse",
+    "phonetic": "",
+    "translation": "n. 冲动、心血来潮",
+    "translations": [
+      "n. 冲动、心血来潮"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00479",
+    "word": "inability",
+    "phonetic": "",
+    "translation": "n. 无能为力",
+    "translations": [
+      "n. 无能为力"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00480",
+    "word": "incentive",
+    "phonetic": "",
+    "translation": "adj. 激励的、刺激的；n. 激励、刺激",
+    "translations": [
+      "adj. 激励的、刺激的",
+      "n. 激励、刺激"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00481",
+    "word": "incite",
+    "phonetic": "",
+    "translation": "v. 鼓动、煽动",
+    "translations": [
+      "v. 鼓动、煽动"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00482",
+    "word": "incline",
+    "phonetic": "",
+    "translation": "v. 倾斜、倾向于",
+    "translations": [
+      "v. 倾斜、倾向于"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00483",
+    "word": "include",
+    "phonetic": "",
+    "translation": "v. 包含、包括",
+    "translations": [
+      "v. 包含、包括"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00484",
+    "word": "incomplete",
+    "phonetic": "",
+    "translation": "adj. 不完整的、不充分的",
+    "translations": [
+      "adj. 不完整的、不充分的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00485",
+    "word": "independent",
+    "phonetic": "",
+    "translation": "adj. 独立的、自主的",
+    "translations": [
+      "adj. 独立的、自主的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00486",
+    "word": "indicate",
+    "phonetic": "",
+    "translation": "v. 指出、表明、预示",
+    "translations": [
+      "v. 指出、表明、预示"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00487",
+    "word": "indifferent",
+    "phonetic": "",
+    "translation": "adj. 中立的、冷漠的、漠不关心的",
+    "translations": [
+      "adj. 中立的、冷漠的、漠不关心的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00488",
+    "word": "indispensable",
+    "phonetic": "",
+    "translation": "adj. 必不可少的、不可或缺的",
+    "translations": [
+      "adj. 必不可少的、不可或缺的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00489",
+    "word": "induce",
+    "phonetic": "",
+    "translation": "v. 引诱、引起",
+    "translations": [
+      "v. 引诱、引起"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00490",
+    "word": "indulge",
+    "phonetic": "",
+    "translation": "v. 放任、纵容",
+    "translations": [
+      "v. 放任、纵容"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00491",
+    "word": "inedible",
+    "phonetic": "",
+    "translation": "adj. 不能吃的、难吃的",
+    "translations": [
+      "adj. 不能吃的、难吃的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00492",
+    "word": "inevitable",
+    "phonetic": "",
+    "translation": "adj. 不可避免的、必然的",
+    "translations": [
+      "adj. 不可避免的、必然的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00493",
+    "word": "infection",
+    "phonetic": "",
+    "translation": "n. 感染（病）、传染（病）",
+    "translations": [
+      "n. 感染（病）、传染（病）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00494",
+    "word": "infer",
+    "phonetic": "",
+    "translation": "v. 推测、推断",
+    "translations": [
+      "v. 推测、推断"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00495",
+    "word": "inferior",
+    "phonetic": "",
+    "translation": "adj. 较差的、逊色的",
+    "translations": [
+      "adj. 较差的、逊色的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00496",
+    "word": "infirm",
+    "phonetic": "",
+    "translation": "adj. （年老）体弱的、意志薄弱的、不坚固的",
+    "translations": [
+      "adj. （年老）体弱的、意志薄弱的、不坚固的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00497",
+    "word": "inflation",
+    "phonetic": "",
+    "translation": "n. 通货膨胀",
+    "translations": [
+      "n. 通货膨胀"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00498",
+    "word": "influential",
+    "phonetic": "",
+    "translation": "adj. 有影响力的；n. 有影响力的人",
+    "translations": [
+      "adj. 有影响力的",
+      "n. 有影响力的人"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00499",
+    "word": "infrastructure",
+    "phonetic": "",
+    "translation": "n. 基础设施",
+    "translations": [
+      "n. 基础设施"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00500",
+    "word": "infuriating",
+    "phonetic": "",
+    "translation": "adj. 令人愤怒的",
+    "translations": [
+      "adj. 令人愤怒的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00501",
+    "word": "infuse",
+    "phonetic": "",
+    "translation": "v. 注入、灌输",
+    "translations": [
+      "v. 注入、灌输"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00502",
+    "word": "ingenuity",
+    "phonetic": "",
+    "translation": "n. 创造力、智慧",
+    "translations": [
+      "n. 创造力、智慧"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00503",
+    "word": "inherent",
+    "phonetic": "",
+    "translation": "adj. 内在的、与生俱来的",
+    "translations": [
+      "adj. 内在的、与生俱来的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00504",
+    "word": "initial",
+    "phonetic": "",
+    "translation": "adj. 最初的、初始的",
+    "translations": [
+      "adj. 最初的、初始的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00505",
+    "word": "inject",
+    "phonetic": "",
+    "translation": "v. 注射、注入",
+    "translations": [
+      "v. 注射、注入"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00506",
+    "word": "innate",
+    "phonetic": "",
+    "translation": "adj. 天生的、与生俱来的",
+    "translations": [
+      "adj. 天生的、与生俱来的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00507",
+    "word": "innocent",
+    "phonetic": "",
+    "translation": "adj. 无辜的、无罪的",
+    "translations": [
+      "adj. 无辜的、无罪的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00508",
+    "word": "innovation",
+    "phonetic": "",
+    "translation": "n. 创新、革新",
+    "translations": [
+      "n. 创新、革新"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00509",
+    "word": "inquire",
+    "phonetic": "",
+    "translation": "v. 调查、询问",
+    "translations": [
+      "v. 调查、询问"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00510",
+    "word": "insidious",
+    "phonetic": "",
+    "translation": "adj. 潜伏的、不易察觉的",
+    "translations": [
+      "adj. 潜伏的、不易察觉的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00511",
+    "word": "insightful",
+    "phonetic": "",
+    "translation": "adj. 有深刻见解的、富有洞察力的",
+    "translations": [
+      "adj. 有深刻见解的、富有洞察力的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00512",
+    "word": "insist",
+    "phonetic": "",
+    "translation": "v. 坚称、坚决要求",
+    "translations": [
+      "v. 坚称、坚决要求"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00513",
+    "word": "inspire",
+    "phonetic": "",
+    "translation": "v. 激发、使产生灵感",
+    "translations": [
+      "v. 激发、使产生灵感"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00514",
+    "word": "instinct",
+    "phonetic": "",
+    "translation": "n. 本能、直觉",
+    "translations": [
+      "n. 本能、直觉"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00515",
+    "word": "institution",
+    "phonetic": "",
+    "translation": "n. 机构、制度",
+    "translations": [
+      "n. 机构、制度"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00516",
+    "word": "instruct",
+    "phonetic": "",
+    "translation": "v. 指导、命令",
+    "translations": [
+      "v. 指导、命令"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00517",
+    "word": "insure",
+    "phonetic": "",
+    "translation": "v. 确保、保障",
+    "translations": [
+      "v. 确保、保障"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00518",
+    "word": "intangible",
+    "phonetic": "",
+    "translation": "adj. 无形的、触摸不到的",
+    "translations": [
+      "adj. 无形的、触摸不到的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00519",
+    "word": "integrity",
+    "phonetic": "",
+    "translation": "n. 完整、诚信、正直",
+    "translations": [
+      "n. 完整、诚信、正直"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00520",
+    "word": "intellectual",
+    "phonetic": "",
+    "translation": "adj. 学术的、知识的；n. 知识分子",
+    "translations": [
+      "adj. 学术的、知识的",
+      "n. 知识分子"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00521",
+    "word": "intelligence",
+    "phonetic": "",
+    "translation": "n. 智力、智能",
+    "translations": [
+      "n. 智力、智能"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00522",
+    "word": "intend",
+    "phonetic": "",
+    "translation": "v. 打算、想要",
+    "translations": [
+      "v. 打算、想要"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00523",
+    "word": "intense",
+    "phonetic": "",
+    "translation": "adj. 紧张的、强烈的",
+    "translations": [
+      "adj. 紧张的、强烈的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00524",
+    "word": "interact",
+    "phonetic": "",
+    "translation": "v. 相互影响、互动",
+    "translations": [
+      "v. 相互影响、互动"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00525",
+    "word": "interpersonal",
+    "phonetic": "",
+    "translation": "adj. 人际的、人与人之间的",
+    "translations": [
+      "adj. 人际的、人与人之间的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00526",
+    "word": "interpretation",
+    "phonetic": "",
+    "translation": "n. 翻译、解释",
+    "translations": [
+      "n. 翻译、解释"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00527",
+    "word": "interrupt",
+    "phonetic": "",
+    "translation": "v. 中断、打扰",
+    "translations": [
+      "v. 中断、打扰"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00528",
+    "word": "intervention",
+    "phonetic": "",
+    "translation": "n. 干预、介入",
+    "translations": [
+      "n. 干预、介入"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00529",
+    "word": "intimate",
+    "phonetic": "",
+    "translation": "adj. 亲密的、私密的",
+    "translations": [
+      "adj. 亲密的、私密的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00530",
+    "word": "intricate",
+    "phonetic": "",
+    "translation": "adj. 错综复杂的",
+    "translations": [
+      "adj. 错综复杂的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00531",
+    "word": "intrude",
+    "phonetic": "",
+    "translation": "v. 侵扰、侵犯",
+    "translations": [
+      "v. 侵扰、侵犯"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00532",
+    "word": "intuitive",
+    "phonetic": "",
+    "translation": "adj. 本能的、直觉的",
+    "translations": [
+      "adj. 本能的、直觉的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00533",
+    "word": "invert",
+    "phonetic": "",
+    "translation": "v. 使颠覆、使反转",
+    "translations": [
+      "v. 使颠覆、使反转"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00534",
+    "word": "invest",
+    "phonetic": "",
+    "translation": "v. 投资",
+    "translations": [
+      "v. 投资"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00535",
+    "word": "investigation",
+    "phonetic": "",
+    "translation": "n. 调查、研究",
+    "translations": [
+      "n. 调查、研究"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00536",
+    "word": "involve",
+    "phonetic": "",
+    "translation": "v. 包括、参与",
+    "translations": [
+      "v. 包括、参与"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00537",
+    "word": "ironic",
+    "phonetic": "",
+    "translation": "adj. 讽刺的",
+    "translations": [
+      "adj. 讽刺的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00538",
+    "word": "isolate",
+    "phonetic": "",
+    "translation": "v. （使）孤立、（使）免于",
+    "translations": [
+      "v. （使）孤立、（使）免于"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00539",
+    "word": "issue",
+    "phonetic": "",
+    "translation": "v. 发布、发行；n. 问题、发行物",
+    "translations": [
+      "v. 发布、发行",
+      "n. 问题、发行物"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00540",
+    "word": "joint",
+    "phonetic": "",
+    "translation": "adj. 联合的、共同的",
+    "translations": [
+      "adj. 联合的、共同的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00541",
+    "word": "journal",
+    "phonetic": "",
+    "translation": "n. 日报、杂志、期刊",
+    "translations": [
+      "n. 日报、杂志、期刊"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00542",
+    "word": "jury",
+    "phonetic": "",
+    "translation": "n. 陪审团、评委会",
+    "translations": [
+      "n. 陪审团、评委会"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00543",
+    "word": "justice",
+    "phonetic": "",
+    "translation": "n. 法官、公正",
+    "translations": [
+      "n. 法官、公正"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00544",
+    "word": "lag",
+    "phonetic": "",
+    "translation": "v/n. 落后、滞后",
+    "translations": [
+      "v/n. 落后、滞后"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00545",
+    "word": "lame",
+    "phonetic": "",
+    "translation": "adj. 瘸的、蹩脚的",
+    "translations": [
+      "adj. 瘸的、蹩脚的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00546",
+    "word": "launch",
+    "phonetic": "",
+    "translation": "v. 发起、推出（新产品）",
+    "translations": [
+      "v. 发起、推出（新产品）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00547",
+    "word": "leakage",
+    "phonetic": "",
+    "translation": "n. 漏水、泄漏",
+    "translations": [
+      "n. 漏水、泄漏"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00548",
+    "word": "lean",
+    "phonetic": "",
+    "translation": "v. 倾斜、倚靠；adj. 瘦的、贫乏的",
+    "translations": [
+      "v. 倾斜、倚靠",
+      "adj. 瘦的、贫乏的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00549",
+    "word": "legacy",
+    "phonetic": "",
+    "translation": "n. 遗产、传统",
+    "translations": [
+      "n. 遗产、传统"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00550",
+    "word": "legal",
+    "phonetic": "",
+    "translation": "adj. 法律的、合法的",
+    "translations": [
+      "adj. 法律的、合法的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00551",
+    "word": "legitimate",
+    "phonetic": "",
+    "translation": "adj. 合法的、合理的",
+    "translations": [
+      "adj. 合法的、合理的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00552",
+    "word": "leisure",
+    "phonetic": "",
+    "translation": "adj. 空闲的、休闲的；n. 空闲、休闲",
+    "translations": [
+      "adj. 空闲的、休闲的",
+      "n. 空闲、休闲"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00553",
+    "word": "liberal",
+    "phonetic": "",
+    "translation": "adj. 自由（主义）的、开明的；n. 自由主义者、自由党",
+    "translations": [
+      "adj. 自由（主义）的、开明的",
+      "n. 自由主义者、自由党"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00554",
+    "word": "lineage",
+    "phonetic": "",
+    "translation": "n. 血统、谱系",
+    "translations": [
+      "n. 血统、谱系"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00555",
+    "word": "literate",
+    "phonetic": "",
+    "translation": "adj. 有读写能力的、精通的",
+    "translations": [
+      "adj. 有读写能力的、精通的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00556",
+    "word": "lobby",
+    "phonetic": "",
+    "translation": "v. 游说；n. 游说团体、大厅",
+    "translations": [
+      "v. 游说",
+      "n. 游说团体、大厅"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00557",
+    "word": "locate",
+    "phonetic": "",
+    "translation": "v. 定位、位于",
+    "translations": [
+      "v. 定位、位于"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00558",
+    "word": "lure",
+    "phonetic": "",
+    "translation": "v/n. 引诱、诱惑",
+    "translations": [
+      "v/n. 引诱、诱惑"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00559",
+    "word": "luxury",
+    "phonetic": "",
+    "translation": "adj. 奢侈的；n. 奢侈（品）",
+    "translations": [
+      "adj. 奢侈的",
+      "n. 奢侈（品）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00560",
+    "word": "magnify",
+    "phonetic": "",
+    "translation": "v. 放大、扩大",
+    "translations": [
+      "v. 放大、扩大"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00561",
+    "word": "maintain",
+    "phonetic": "",
+    "translation": "v. 保持、坚持认为",
+    "translations": [
+      "v. 保持、坚持认为"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00562",
+    "word": "majestic",
+    "phonetic": "",
+    "translation": "adj. 宏伟的、壮观的、华丽的",
+    "translations": [
+      "adj. 宏伟的、壮观的、华丽的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00563",
+    "word": "major",
+    "phonetic": "",
+    "translation": "adj. 主要的、重要的",
+    "translations": [
+      "adj. 主要的、重要的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00564",
+    "word": "mandatory",
+    "phonetic": "",
+    "translation": "adj. 强制性的、必修的",
+    "translations": [
+      "adj. 强制性的、必修的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00565",
+    "word": "manipulate",
+    "phonetic": "",
+    "translation": "v. 操作、处理、控制",
+    "translations": [
+      "v. 操作、处理、控制"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00566",
+    "word": "manufacture",
+    "phonetic": "",
+    "translation": "v. 加工、制造；n. 制造业",
+    "translations": [
+      "v. 加工、制造",
+      "n. 制造业"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00567",
+    "word": "manuscript",
+    "phonetic": "",
+    "translation": "adj. 手写的；n. 手稿、原稿",
+    "translations": [
+      "adj. 手写的",
+      "n. 手稿、原稿"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00568",
+    "word": "margin",
+    "phonetic": "",
+    "translation": "n. 边缘",
+    "translations": [
+      "n. 边缘"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00569",
+    "word": "marine",
+    "phonetic": "",
+    "translation": "adj. 海洋的",
+    "translations": [
+      "adj. 海洋的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00570",
+    "word": "marvel",
+    "phonetic": "",
+    "translation": "v. 对......感到惊讶；n. 令人惊奇的事物",
+    "translations": [
+      "v. 对......感到惊讶",
+      "n. 令人惊奇的事物"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00571",
+    "word": "massive",
+    "phonetic": "",
+    "translation": "adj. 大量的、巨大的",
+    "translations": [
+      "adj. 大量的、巨大的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00572",
+    "word": "mastery",
+    "phonetic": "",
+    "translation": "n. 掌握、精通、优势、统治权",
+    "translations": [
+      "n. 掌握、精通、优势、统治权"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00573",
+    "word": "materialistic",
+    "phonetic": "",
+    "translation": "adj. 唯物主义的、物质至上的",
+    "translations": [
+      "adj. 唯物主义的、物质至上的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00574",
+    "word": "mature",
+    "phonetic": "",
+    "translation": "adj. 成熟的",
+    "translations": [
+      "adj. 成熟的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00575",
+    "word": "measure",
+    "phonetic": "",
+    "translation": "v. 测量、估量、权衡；n. 措施",
+    "translations": [
+      "v. 测量、估量、权衡",
+      "n. 措施"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00576",
+    "word": "mechanical",
+    "phonetic": "",
+    "translation": "adj. 机械的、呆板的",
+    "translations": [
+      "adj. 机械的、呆板的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00577",
+    "word": "memorize",
+    "phonetic": "",
+    "translation": "v. 记住、记忆",
+    "translations": [
+      "v. 记住、记忆"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00578",
+    "word": "mental",
+    "phonetic": "",
+    "translation": "adj. 精神的、心理的",
+    "translations": [
+      "adj. 精神的、心理的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00579",
+    "word": "merger",
+    "phonetic": "",
+    "translation": "n. 合并、兼并",
+    "translations": [
+      "n. 合并、兼并"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00580",
+    "word": "merit",
+    "phonetic": "",
+    "translation": "n. 价值、优点",
+    "translations": [
+      "n. 价值、优点"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00581",
+    "word": "minimal",
+    "phonetic": "",
+    "translation": "adj. 最小的、最低的",
+    "translations": [
+      "adj. 最小的、最低的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00582",
+    "word": "minister",
+    "phonetic": "",
+    "translation": "n. 牧师、大臣、部长",
+    "translations": [
+      "n. 牧师、大臣、部长"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00583",
+    "word": "minority",
+    "phonetic": "",
+    "translation": "n. 少数（派）",
+    "translations": [
+      "n. 少数（派）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00584",
+    "word": "misery",
+    "phonetic": "",
+    "translation": "n. 不幸、苦难、悲惨的境遇",
+    "translations": [
+      "n. 不幸、苦难、悲惨的境遇"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00585",
+    "word": "mislead",
+    "phonetic": "",
+    "translation": "v. 误导",
+    "translations": [
+      "v. 误导"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00586",
+    "word": "mobilize",
+    "phonetic": "",
+    "translation": "v. 调动、动员",
+    "translations": [
+      "v. 调动、动员"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00587",
+    "word": "modest",
+    "phonetic": "",
+    "translation": "adj. 谦虚的、适度的",
+    "translations": [
+      "adj. 谦虚的、适度的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00588",
+    "word": "monarch",
+    "phonetic": "",
+    "translation": "n. 君主、最高统治者",
+    "translations": [
+      "n. 君主、最高统治者"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00589",
+    "word": "monitor",
+    "phonetic": "",
+    "translation": "v. 监控、监测；n. 监视器、显示屏",
+    "translations": [
+      "v. 监控、监测",
+      "n. 监视器、显示屏"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00590",
+    "word": "monopoly",
+    "phonetic": "",
+    "translation": "n. 垄断",
+    "translations": [
+      "n. 垄断"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00591",
+    "word": "motivate",
+    "phonetic": "",
+    "translation": "v. 激发、驱使",
+    "translations": [
+      "v. 激发、驱使"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00592",
+    "word": "multiply",
+    "phonetic": "",
+    "translation": "v. 乘、大大增加",
+    "translations": [
+      "v. 乘、大大增加"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00593",
+    "word": "mutually",
+    "phonetic": "",
+    "translation": "adv. 相互地、共同地",
+    "translations": [
+      "adv. 相互地、共同地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00594",
+    "word": "nasty",
+    "phonetic": "",
+    "translation": "adj. 肮脏的、令人厌恶的、严重的",
+    "translations": [
+      "adj. 肮脏的、令人厌恶的、严重的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00595",
+    "word": "native",
+    "phonetic": "",
+    "translation": "adj. 天生的、天然的、本国的、本地的",
+    "translations": [
+      "adj. 天生的、天然的、本国的、本地的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00596",
+    "word": "negative",
+    "phonetic": "",
+    "translation": "adj. 负面的、否定的",
+    "translations": [
+      "adj. 负面的、否定的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00597",
+    "word": "neglect",
+    "phonetic": "",
+    "translation": "v. 疏忽、忽视",
+    "translations": [
+      "v. 疏忽、忽视"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00598",
+    "word": "negotiate",
+    "phonetic": "",
+    "translation": "v. 协商、谈判",
+    "translations": [
+      "v. 协商、谈判"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00599",
+    "word": "nightmare",
+    "phonetic": "",
+    "translation": "n. 恶梦、噩梦",
+    "translations": [
+      "n. 恶梦、噩梦"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00600",
+    "word": "nonsense",
+    "phonetic": "",
+    "translation": "adj. 荒谬的；n. 胡说",
+    "translations": [
+      "adj. 荒谬的",
+      "n. 胡说"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00601",
+    "word": "normal",
+    "phonetic": "",
+    "translation": "adj. 正常的、标准的",
+    "translations": [
+      "adj. 正常的、标准的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00602",
+    "word": "notably",
+    "phonetic": "",
+    "translation": "adv. 明显地、尤其地",
+    "translations": [
+      "adv. 明显地、尤其地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00603",
+    "word": "noteworthy",
+    "phonetic": "",
+    "translation": "adj. 值得注意的、显著的",
+    "translations": [
+      "adj. 值得注意的、显著的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00604",
+    "word": "novel",
+    "phonetic": "",
+    "translation": "adj. 新的、新颖的；n. 小说",
+    "translations": [
+      "adj. 新的、新颖的",
+      "n. 小说"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00605",
+    "word": "nurture",
+    "phonetic": "",
+    "translation": "v/n. 培养、培育、养育",
+    "translations": [
+      "v/n. 培养、培育、养育"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00606",
+    "word": "object",
+    "phonetic": "",
+    "translation": "v. 反对、拒绝；n. 物体、对象、目标",
+    "translations": [
+      "v. 反对、拒绝",
+      "n. 物体、对象、目标"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00607",
+    "word": "oblige",
+    "phonetic": "",
+    "translation": "v. 强制、强迫",
+    "translations": [
+      "v. 强制、强迫"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00608",
+    "word": "obscure",
+    "phonetic": "",
+    "translation": "adj. 模糊的、不清楚的",
+    "translations": [
+      "adj. 模糊的、不清楚的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00609",
+    "word": "obsess",
+    "phonetic": "",
+    "translation": "v. 使着迷",
+    "translations": [
+      "v. 使着迷"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00610",
+    "word": "obstruct",
+    "phonetic": "",
+    "translation": "v. 阻碍、妨碍",
+    "translations": [
+      "v. 阻碍、妨碍"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00611",
+    "word": "occupy",
+    "phonetic": "",
+    "translation": "v. 占用、占有、占领",
+    "translations": [
+      "v. 占用、占有、占领"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00612",
+    "word": "occur",
+    "phonetic": "",
+    "translation": "v. 出现、发生",
+    "translations": [
+      "v. 出现、发生"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00613",
+    "word": "odds",
+    "phonetic": "",
+    "translation": "n. 几率、胜算",
+    "translations": [
+      "n. 几率、胜算"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00614",
+    "word": "official",
+    "phonetic": "",
+    "translation": "adj. 官方的、正式的；n. 官员",
+    "translations": [
+      "adj. 官方的、正式的",
+      "n. 官员"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00615",
+    "word": "omission",
+    "phonetic": "",
+    "translation": "n. 遗漏",
+    "translations": [
+      "n. 遗漏"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00616",
+    "word": "opponent",
+    "phonetic": "",
+    "translation": "adj. 敌对的、对立的；n. 对手、反对者",
+    "translations": [
+      "adj. 敌对的、对立的",
+      "n. 对手、反对者"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00617",
+    "word": "oppose",
+    "phonetic": "",
+    "translation": "v. 反对",
+    "translations": [
+      "v. 反对"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00618",
+    "word": "oppressive",
+    "phonetic": "",
+    "translation": "adj. 压迫的、压抑的",
+    "translations": [
+      "adj. 压迫的、压抑的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00619",
+    "word": "optimistic",
+    "phonetic": "",
+    "translation": "adj. 乐观的",
+    "translations": [
+      "adj. 乐观的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00620",
+    "word": "option",
+    "phonetic": "",
+    "translation": "n. 选项、期权",
+    "translations": [
+      "n. 选项、期权"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00621",
+    "word": "organism",
+    "phonetic": "",
+    "translation": "n. 生物体、有机体",
+    "translations": [
+      "n. 生物体、有机体"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00622",
+    "word": "organization",
+    "phonetic": "",
+    "translation": "n. 组织、机构",
+    "translations": [
+      "n. 组织、机构"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00623",
+    "word": "original",
+    "phonetic": "",
+    "translation": "adj. 起初的、原始的",
+    "translations": [
+      "adj. 起初的、原始的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00624",
+    "word": "ornament",
+    "phonetic": "",
+    "translation": "n. 装饰（物）",
+    "translations": [
+      "n. 装饰（物）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00625",
+    "word": "outlive",
+    "phonetic": "",
+    "translation": "v. 比......活得长",
+    "translations": [
+      "v. 比......活得长"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00626",
+    "word": "outraged",
+    "phonetic": "",
+    "translation": "adj. 愤怒的",
+    "translations": [
+      "adj. 愤怒的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00627",
+    "word": "overlook",
+    "phonetic": "",
+    "translation": "v/n. 忽略、忽视",
+    "translations": [
+      "v/n. 忽略、忽视"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00628",
+    "word": "overshadow",
+    "phonetic": "",
+    "translation": "v. 给……蒙上阴影、遮盖",
+    "translations": [
+      "v. 给……蒙上阴影、遮盖"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00629",
+    "word": "overturn",
+    "phonetic": "",
+    "translation": "v/n. 推翻、打翻、翻倒",
+    "translations": [
+      "v/n. 推翻、打翻、翻倒"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00630",
+    "word": "overwhelming",
+    "phonetic": "",
+    "translation": "adj. 压倒性的、绝大部分的",
+    "translations": [
+      "adj. 压倒性的、绝大部分的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00631",
+    "word": "panel",
+    "phonetic": "",
+    "translation": "n. 专家组、仪表盘",
+    "translations": [
+      "n. 专家组、仪表盘"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00632",
+    "word": "panic",
+    "phonetic": "",
+    "translation": "adj. 恐慌的；n. 恐慌",
+    "translations": [
+      "adj. 恐慌的",
+      "n. 恐慌"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00633",
+    "word": "paradox",
+    "phonetic": "",
+    "translation": "n. 悖论、矛盾",
+    "translations": [
+      "n. 悖论、矛盾"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00634",
+    "word": "parallel",
+    "phonetic": "",
+    "translation": "adj. 平行的、类似的；n. 平行线、类似的事情",
+    "translations": [
+      "adj. 平行的、类似的",
+      "n. 平行线、类似的事情"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00635",
+    "word": "paralysis",
+    "phonetic": "",
+    "translation": "n. 麻痹、瘫痪",
+    "translations": [
+      "n. 麻痹、瘫痪"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00636",
+    "word": "partial",
+    "phonetic": "",
+    "translation": "adj. 局部的、偏袒的",
+    "translations": [
+      "adj. 局部的、偏袒的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00637",
+    "word": "participate",
+    "phonetic": "",
+    "translation": "v. 参加、参与",
+    "translations": [
+      "v. 参加、参与"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00638",
+    "word": "passionate",
+    "phonetic": "",
+    "translation": "adj. 热情的、易怒的",
+    "translations": [
+      "adj. 热情的、易怒的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00639",
+    "word": "patent",
+    "phonetic": "",
+    "translation": "v. 授予/取得专利；n. 专利",
+    "translations": [
+      "v. 授予/取得专利",
+      "n. 专利"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00640",
+    "word": "peak",
+    "phonetic": "",
+    "translation": "n. 顶峰",
+    "translations": [
+      "n. 顶峰"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00641",
+    "word": "peer",
+    "phonetic": "",
+    "translation": "v. 凝视、盯着；n. 同辈、同行",
+    "translations": [
+      "v. 凝视、盯着",
+      "n. 同辈、同行"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00642",
+    "word": "penalty",
+    "phonetic": "",
+    "translation": "n. 处罚、惩罚",
+    "translations": [
+      "n. 处罚、惩罚"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00643",
+    "word": "pension",
+    "phonetic": "",
+    "translation": "n. 津贴、退休金",
+    "translations": [
+      "n. 津贴、退休金"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00644",
+    "word": "perceive",
+    "phonetic": "",
+    "translation": "v. 感知、察觉",
+    "translations": [
+      "v. 感知、察觉"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00645",
+    "word": "perish",
+    "phonetic": "",
+    "translation": "v. 死亡、消亡",
+    "translations": [
+      "v. 死亡、消亡"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00646",
+    "word": "permanent",
+    "phonetic": "",
+    "translation": "adj.永久的、永恒的",
+    "translations": [
+      "adj.永久的、永恒的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00647",
+    "word": "permissible",
+    "phonetic": "",
+    "translation": "adj. 允许的",
+    "translations": [
+      "adj. 允许的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00648",
+    "word": "perpetuate",
+    "phonetic": "",
+    "translation": "v. 持续、使长期存在",
+    "translations": [
+      "v. 持续、使长期存在"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00649",
+    "word": "perplexed",
+    "phonetic": "",
+    "translation": "adj. 困惑的",
+    "translations": [
+      "adj. 困惑的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00650",
+    "word": "persistent",
+    "phonetic": "",
+    "translation": "adj. 坚持的、持续的",
+    "translations": [
+      "adj. 坚持的、持续的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00651",
+    "word": "perspective",
+    "phonetic": "",
+    "translation": "n. 视角、观点",
+    "translations": [
+      "n. 视角、观点"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00652",
+    "word": "pervasive",
+    "phonetic": "",
+    "translation": "adj. 普遍的、流行的",
+    "translations": [
+      "adj. 普遍的、流行的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00653",
+    "word": "pessimistic",
+    "phonetic": "",
+    "translation": "adj. 悲观的",
+    "translations": [
+      "adj. 悲观的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00654",
+    "word": "philosophy",
+    "phonetic": "",
+    "translation": "n. 哲学",
+    "translations": [
+      "n. 哲学"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00655",
+    "word": "phony",
+    "phonetic": "",
+    "translation": "adj. 假的、虚伪的",
+    "translations": [
+      "adj. 假的、虚伪的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00656",
+    "word": "physical",
+    "phonetic": "",
+    "translation": "adj. 身体的、生理的、实体的",
+    "translations": [
+      "adj. 身体的、生理的、实体的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00657",
+    "word": "plead",
+    "phonetic": "",
+    "translation": "v. 请求、恳求",
+    "translations": [
+      "v. 请求、恳求"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00658",
+    "word": "polarize",
+    "phonetic": "",
+    "translation": "v. （使）两极分化",
+    "translations": [
+      "v. （使）两极分化"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00659",
+    "word": "ponder",
+    "phonetic": "",
+    "translation": "v. 仔细考虑、深思",
+    "translations": [
+      "v. 仔细考虑、深思"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00660",
+    "word": "popularity",
+    "phonetic": "",
+    "translation": "n. 普及、流行",
+    "translations": [
+      "n. 普及、流行"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00661",
+    "word": "portray",
+    "phonetic": "",
+    "translation": "v. 描述、描绘",
+    "translations": [
+      "v. 描述、描绘"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00662",
+    "word": "possession",
+    "phonetic": "",
+    "translation": "n. 财产、所有物",
+    "translations": [
+      "n. 财产、所有物"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00663",
+    "word": "potential",
+    "phonetic": "",
+    "translation": "adj. 潜在的、可能的；n. 潜能、可能",
+    "translations": [
+      "adj. 潜在的、可能的",
+      "n. 潜能、可能"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00664",
+    "word": "precede",
+    "phonetic": "",
+    "translation": "v. 在……之前、高于",
+    "translations": [
+      "v. 在……之前、高于"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00665",
+    "word": "precious",
+    "phonetic": "",
+    "translation": "adj. 珍贵的、宝贵的",
+    "translations": [
+      "adj. 珍贵的、宝贵的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00666",
+    "word": "precisely",
+    "phonetic": "",
+    "translation": "adv. 准确地、恰恰是",
+    "translations": [
+      "adv. 准确地、恰恰是"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00667",
+    "word": "predecessor",
+    "phonetic": "",
+    "translation": "n. 前任、前辈",
+    "translations": [
+      "n. 前任、前辈"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00668",
+    "word": "predict",
+    "phonetic": "",
+    "translation": "v. 预言、预知",
+    "translations": [
+      "v. 预言、预知"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00669",
+    "word": "preference",
+    "phonetic": "",
+    "translation": "n. 喜好、偏好",
+    "translations": [
+      "n. 喜好、偏好"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00670",
+    "word": "prejudice",
+    "phonetic": "",
+    "translation": "n. 偏见",
+    "translations": [
+      "n. 偏见"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00671",
+    "word": "preliminary",
+    "phonetic": "",
+    "translation": "adj. 初步的、预备的",
+    "translations": [
+      "adj. 初步的、预备的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00672",
+    "word": "premise",
+    "phonetic": "",
+    "translation": "n. 前提",
+    "translations": [
+      "n. 前提"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00673",
+    "word": "prescribe",
+    "phonetic": "",
+    "translation": "v. 开药、开处方",
+    "translations": [
+      "v. 开药、开处方"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00674",
+    "word": "preserve",
+    "phonetic": "",
+    "translation": "v. 保存、保持",
+    "translations": [
+      "v. 保存、保持"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00675",
+    "word": "pressure",
+    "phonetic": "",
+    "translation": "n. 压力",
+    "translations": [
+      "n. 压力"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00676",
+    "word": "prestige",
+    "phonetic": "",
+    "translation": "n. 声望、声誉",
+    "translations": [
+      "n. 声望、声誉"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00677",
+    "word": "presumptively",
+    "phonetic": "",
+    "translation": "adv. 假定地、推测地",
+    "translations": [
+      "adv. 假定地、推测地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00678",
+    "word": "prevailing",
+    "phonetic": "",
+    "translation": "adj. 流行的、现行的",
+    "translations": [
+      "adj. 流行的、现行的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00679",
+    "word": "prevent",
+    "phonetic": "",
+    "translation": "v. 阻止、防止",
+    "translations": [
+      "v. 阻止、防止"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00680",
+    "word": "previous",
+    "phonetic": "",
+    "translation": "adj. 之前的",
+    "translations": [
+      "adj. 之前的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00681",
+    "word": "primary",
+    "phonetic": "",
+    "translation": "adj. 主要的、基本的、初级的",
+    "translations": [
+      "adj. 主要的、基本的、初级的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00682",
+    "word": "principle",
+    "phonetic": "",
+    "translation": "n. 原理、原则",
+    "translations": [
+      "n. 原理、原则"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00683",
+    "word": "prior",
+    "phonetic": "",
+    "translation": "adj. 在……之前的、优先的",
+    "translations": [
+      "adj. 在……之前的、优先的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00684",
+    "word": "private",
+    "phonetic": "",
+    "translation": "adj. 私人的、私密的",
+    "translations": [
+      "adj. 私人的、私密的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00685",
+    "word": "privilege",
+    "phonetic": "",
+    "translation": "n. 特权",
+    "translations": [
+      "n. 特权"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00686",
+    "word": "procedure",
+    "phonetic": "",
+    "translation": "n. 程序、步骤",
+    "translations": [
+      "n. 程序、步骤"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00687",
+    "word": "proceed",
+    "phonetic": "",
+    "translation": "v. 接着、继续；n. 收入",
+    "translations": [
+      "v. 接着、继续",
+      "n. 收入"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00688",
+    "word": "proclaim",
+    "phonetic": "",
+    "translation": "v. 宣布、宣告",
+    "translations": [
+      "v. 宣布、宣告"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00689",
+    "word": "productive",
+    "phonetic": "",
+    "translation": "adj. 生产的、多产的、有效的",
+    "translations": [
+      "adj. 生产的、多产的、有效的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00690",
+    "word": "professional",
+    "phonetic": "",
+    "translation": "adj. 专业的、职业的",
+    "translations": [
+      "adj. 专业的、职业的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00691",
+    "word": "proficient",
+    "phonetic": "",
+    "translation": "adj. 熟练的、精通的",
+    "translations": [
+      "adj. 熟练的、精通的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00692",
+    "word": "profit",
+    "phonetic": "",
+    "translation": "v. 获利、受益；n. 利益、利润",
+    "translations": [
+      "v. 获利、受益",
+      "n. 利益、利润"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00693",
+    "word": "profound",
+    "phonetic": "",
+    "translation": "adj. 深刻的、深远的",
+    "translations": [
+      "adj. 深刻的、深远的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00694",
+    "word": "progress",
+    "phonetic": "",
+    "translation": "v/n. 进步、发展",
+    "translations": [
+      "v/n. 进步、发展"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00695",
+    "word": "prohibition",
+    "phonetic": "",
+    "translation": "n. 禁止、禁令",
+    "translations": [
+      "n. 禁止、禁令"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00696",
+    "word": "prominent",
+    "phonetic": "",
+    "translation": "adj. 显著的、杰出的",
+    "translations": [
+      "adj. 显著的、杰出的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00697",
+    "word": "promising",
+    "phonetic": "",
+    "translation": "adj. 有希望的、好的",
+    "translations": [
+      "adj. 有希望的、好的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00698",
+    "word": "promote",
+    "phonetic": "",
+    "translation": "v. 促进、推广",
+    "translations": [
+      "v. 促进、推广"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00699",
+    "word": "prompt",
+    "phonetic": "",
+    "translation": "adj. 迅速的、立即的；v. 促使、引起",
+    "translations": [
+      "adj. 迅速的、立即的",
+      "v. 促使、引起"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00700",
+    "word": "prone",
+    "phonetic": "",
+    "translation": "adj. 易于……的、倾向于……的",
+    "translations": [
+      "adj. 易于……的、倾向于……的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00701",
+    "word": "pronounced",
+    "phonetic": "",
+    "translation": "adj. 明显的、显著的",
+    "translations": [
+      "adj. 明显的、显著的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00702",
+    "word": "proper",
+    "phonetic": "",
+    "translation": "adj. 合适的、恰当的",
+    "translations": [
+      "adj. 合适的、恰当的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00703",
+    "word": "property",
+    "phonetic": "",
+    "translation": "n. 资产、财产",
+    "translations": [
+      "n. 资产、财产"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00704",
+    "word": "propose",
+    "phonetic": "",
+    "translation": "v. 计划、建议",
+    "translations": [
+      "v. 计划、建议"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00705",
+    "word": "prospect",
+    "phonetic": "",
+    "translation": "n. 前途、前景",
+    "translations": [
+      "n. 前途、前景"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00706",
+    "word": "prosperity",
+    "phonetic": "",
+    "translation": "n. 繁荣",
+    "translations": [
+      "n. 繁荣"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00707",
+    "word": "protest",
+    "phonetic": "",
+    "translation": "v/n. 抗议",
+    "translations": [
+      "v/n. 抗议"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00708",
+    "word": "provide",
+    "phonetic": "",
+    "translation": "v. 提供、供应",
+    "translations": [
+      "v. 提供、供应"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00709",
+    "word": "provoke",
+    "phonetic": "",
+    "translation": "v. 激起、引起",
+    "translations": [
+      "v. 激起、引起"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00710",
+    "word": "prudent",
+    "phonetic": "",
+    "translation": "adj. 谨慎的",
+    "translations": [
+      "adj. 谨慎的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00711",
+    "word": "psychology",
+    "phonetic": "",
+    "translation": "n. 心理（学）",
+    "translations": [
+      "n. 心理（学）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00712",
+    "word": "publication",
+    "phonetic": "",
+    "translation": "n. 出版（物）",
+    "translations": [
+      "n. 出版（物）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00713",
+    "word": "purchase",
+    "phonetic": "",
+    "translation": "v/n. 购买",
+    "translations": [
+      "v/n. 购买"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00714",
+    "word": "pursuit",
+    "phonetic": "",
+    "translation": "n. 追求、职业",
+    "translations": [
+      "n. 追求、职业"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00715",
+    "word": "radical",
+    "phonetic": "",
+    "translation": "adj. 根本的、激进的",
+    "translations": [
+      "adj. 根本的、激进的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00716",
+    "word": "random",
+    "phonetic": "",
+    "translation": "adj. 随机的、随便的",
+    "translations": [
+      "adj. 随机的、随便的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00717",
+    "word": "rarely",
+    "phonetic": "",
+    "translation": "adv. 很少地、罕有地",
+    "translations": [
+      "adv. 很少地、罕有地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00718",
+    "word": "readily",
+    "phonetic": "",
+    "translation": "adv. 乐意地",
+    "translations": [
+      "adv. 乐意地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00719",
+    "word": "realm",
+    "phonetic": "",
+    "translation": "n. 领域、范围",
+    "translations": [
+      "n. 领域、范围"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00720",
+    "word": "reap",
+    "phonetic": "",
+    "translation": "v. 收获、收割",
+    "translations": [
+      "v. 收获、收割"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00721",
+    "word": "reasonable",
+    "phonetic": "",
+    "translation": "adj. 合理的",
+    "translations": [
+      "adj. 合理的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00722",
+    "word": "recessing",
+    "phonetic": "",
+    "translation": "n. 衰退（期）、萧条（期）",
+    "translations": [
+      "n. 衰退（期）、萧条（期）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00723",
+    "word": "recipient",
+    "phonetic": "",
+    "translation": "n. 接受者、获得者",
+    "translations": [
+      "n. 接受者、获得者"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00724",
+    "word": "recitation",
+    "phonetic": "",
+    "translation": "n. 背诵、朗诵",
+    "translations": [
+      "n. 背诵、朗诵"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00725",
+    "word": "recklessly",
+    "phonetic": "",
+    "translation": "adv. 鲁莽地、不计后果地",
+    "translations": [
+      "adv. 鲁莽地、不计后果地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00726",
+    "word": "recognize",
+    "phonetic": "",
+    "translation": "v. 认出、识别",
+    "translations": [
+      "v. 认出、识别"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00727",
+    "word": "recommend",
+    "phonetic": "",
+    "translation": "v. 推荐、建议",
+    "translations": [
+      "v. 推荐、建议"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00728",
+    "word": "recovery",
+    "phonetic": "",
+    "translation": "n. 恢复、复苏",
+    "translations": [
+      "n. 恢复、复苏"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00729",
+    "word": "recruit",
+    "phonetic": "",
+    "translation": "v. 招聘、招募；n. 招聘、新兵、新成员",
+    "translations": [
+      "v. 招聘、招募",
+      "n. 招聘、新兵、新成员"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00730",
+    "word": "rectify",
+    "phonetic": "",
+    "translation": "v. 改正、矫正",
+    "translations": [
+      "v. 改正、矫正"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00731",
+    "word": "reduce",
+    "phonetic": "",
+    "translation": "v. 降低、减少",
+    "translations": [
+      "v. 降低、减少"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00732",
+    "word": "refer",
+    "phonetic": "",
+    "translation": "v. 涉及、提到",
+    "translations": [
+      "v. 涉及、提到"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00733",
+    "word": "reflect",
+    "phonetic": "",
+    "translation": "v. 反射、反映",
+    "translations": [
+      "v. 反射、反映"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00734",
+    "word": "reform",
+    "phonetic": "",
+    "translation": "v/n. 改革",
+    "translations": [
+      "v/n. 改革"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00735",
+    "word": "refutation",
+    "phonetic": "",
+    "translation": "n. 反驳、驳斥",
+    "translations": [
+      "n. 反驳、驳斥"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00736",
+    "word": "regime",
+    "phonetic": "",
+    "translation": "n. 政权、政治制度",
+    "translations": [
+      "n. 政权、政治制度"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00737",
+    "word": "region",
+    "phonetic": "",
+    "translation": "n. 地区、范围",
+    "translations": [
+      "n. 地区、范围"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00738",
+    "word": "register",
+    "phonetic": "",
+    "translation": "v/n. 登记、注册",
+    "translations": [
+      "v/n. 登记、注册"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00739",
+    "word": "regrettable",
+    "phonetic": "",
+    "translation": "adj. 可惜的、令人遗憾的",
+    "translations": [
+      "adj. 可惜的、令人遗憾的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00740",
+    "word": "regulation",
+    "phonetic": "",
+    "translation": "n. 管理、法规",
+    "translations": [
+      "n. 管理、法规"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00741",
+    "word": "reign",
+    "phonetic": "",
+    "translation": "v/n. 统治、支配",
+    "translations": [
+      "v/n. 统治、支配"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00742",
+    "word": "reinforce",
+    "phonetic": "",
+    "translation": "v. 强化、加强",
+    "translations": [
+      "v. 强化、加强"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00743",
+    "word": "reject",
+    "phonetic": "",
+    "translation": "v. 拒绝、排斥",
+    "translations": [
+      "v. 拒绝、排斥"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00744",
+    "word": "release",
+    "phonetic": "",
+    "translation": "v. 发布、释放",
+    "translations": [
+      "v. 发布、释放"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00745",
+    "word": "reliance",
+    "phonetic": "",
+    "translation": "n. 信赖、依赖",
+    "translations": [
+      "n. 信赖、依赖"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00746",
+    "word": "relieve",
+    "phonetic": "",
+    "translation": "v. 缓解、减轻",
+    "translations": [
+      "v. 缓解、减轻"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00747",
+    "word": "religious",
+    "phonetic": "",
+    "translation": "adj. 宗教的、虔诚的",
+    "translations": [
+      "adj. 宗教的、虔诚的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00748",
+    "word": "reluctant",
+    "phonetic": "",
+    "translation": "adj. 勉强的、不情愿的",
+    "translations": [
+      "adj. 勉强的、不情愿的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00749",
+    "word": "remark",
+    "phonetic": "",
+    "translation": "v. 评论、注意到；n. 言论、评论",
+    "translations": [
+      "v. 评论、注意到",
+      "n. 言论、评论"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00750",
+    "word": "reminder",
+    "phonetic": "",
+    "translation": "n. 提醒、暗示",
+    "translations": [
+      "n. 提醒、暗示"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00751",
+    "word": "remote",
+    "phonetic": "",
+    "translation": "adj. 遥远的、偏僻的",
+    "translations": [
+      "adj. 遥远的、偏僻的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00752",
+    "word": "renovation",
+    "phonetic": "",
+    "translation": "n. 整修、翻新",
+    "translations": [
+      "n. 整修、翻新"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00753",
+    "word": "represent",
+    "phonetic": "",
+    "translation": "v. 代表、表现",
+    "translations": [
+      "v. 代表、表现"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00754",
+    "word": "reproducibility",
+    "phonetic": "",
+    "translation": "n. 重现性、再生性",
+    "translations": [
+      "n. 重现性、再生性"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00755",
+    "word": "reputation",
+    "phonetic": "",
+    "translation": "n. 名声、名誉",
+    "translations": [
+      "n. 名声、名誉"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00756",
+    "word": "require",
+    "phonetic": "",
+    "translation": "v. 需要、要求",
+    "translations": [
+      "v. 需要、要求"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00757",
+    "word": "resent",
+    "phonetic": "",
+    "translation": "v. 厌恶、对……感到不满",
+    "translations": [
+      "v. 厌恶、对……感到不满"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00758",
+    "word": "resident",
+    "phonetic": "",
+    "translation": "n. 居民",
+    "translations": [
+      "n. 居民"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00759",
+    "word": "resistant",
+    "phonetic": "",
+    "translation": "adj. 抵制的、抗拒的",
+    "translations": [
+      "adj. 抵制的、抗拒的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00760",
+    "word": "respect",
+    "phonetic": "",
+    "translation": "v. 尊敬、尊重；n. 尊敬、方面",
+    "translations": [
+      "v. 尊敬、尊重",
+      "n. 尊敬、方面"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00761",
+    "word": "responsible",
+    "phonetic": "",
+    "translation": "adj. 负责的、有责任的",
+    "translations": [
+      "adj. 负责的、有责任的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00762",
+    "word": "restore",
+    "phonetic": "",
+    "translation": "v. 修复、恢复、（使）复原",
+    "translations": [
+      "v. 修复、恢复、（使）复原"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00763",
+    "word": "resume",
+    "phonetic": "",
+    "translation": "v. 恢复、重新开始；n. 简历",
+    "translations": [
+      "v. 恢复、重新开始",
+      "n. 简历"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00764",
+    "word": "retail",
+    "phonetic": "",
+    "translation": "adj. 零售的；v/n. 零售",
+    "translations": [
+      "adj. 零售的",
+      "v/n. 零售"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00765",
+    "word": "retain",
+    "phonetic": "",
+    "translation": "v. 保持、保留",
+    "translations": [
+      "v. 保持、保留"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00766",
+    "word": "retreat",
+    "phonetic": "",
+    "translation": "v. 后退、衰退；n. 后退、衰退",
+    "translations": [
+      "v. 后退、衰退",
+      "n. 后退、衰退"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00767",
+    "word": "retrospection",
+    "phonetic": "",
+    "translation": "n. 回忆、反思",
+    "translations": [
+      "n. 回忆、反思"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00768",
+    "word": "reveal",
+    "phonetic": "",
+    "translation": "v. 揭露、表明",
+    "translations": [
+      "v. 揭露、表明"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00769",
+    "word": "revenue",
+    "phonetic": "",
+    "translation": "n. 收入、收益",
+    "translations": [
+      "n. 收入、收益"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00770",
+    "word": "reverse",
+    "phonetic": "",
+    "translation": "v. 颠倒、扭转、（使）转变",
+    "translations": [
+      "v. 颠倒、扭转、（使）转变"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00771",
+    "word": "review",
+    "phonetic": "",
+    "translation": "v/n. 回顾、审核",
+    "translations": [
+      "v/n. 回顾、审核"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00772",
+    "word": "revival",
+    "phonetic": "",
+    "translation": "n. 复活、复兴、苏醒",
+    "translations": [
+      "n. 复活、复兴、苏醒"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00773",
+    "word": "revolutionary",
+    "phonetic": "",
+    "translation": "adj. 革命的、革命性的",
+    "translations": [
+      "adj. 革命的、革命性的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00774",
+    "word": "righteous",
+    "phonetic": "",
+    "translation": "adj. 公正的、正义的",
+    "translations": [
+      "adj. 公正的、正义的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00775",
+    "word": "rigid",
+    "phonetic": "",
+    "translation": "",
+    "translations": [],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00776",
+    "word": "rigorous",
+    "phonetic": "",
+    "translation": "adj. 严格的、枯燥的",
+    "translations": [
+      "adj. 严格的、枯燥的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00777",
+    "word": "ritual",
+    "phonetic": "",
+    "translation": "n. 仪式、习惯",
+    "translations": [
+      "n. 仪式、习惯"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00778",
+    "word": "rival",
+    "phonetic": "",
+    "translation": "n. 竞争者、对手",
+    "translations": [
+      "n. 竞争者、对手"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00779",
+    "word": "robust",
+    "phonetic": "",
+    "translation": "adj. 健壮的、强有力的",
+    "translations": [
+      "adj. 健壮的、强有力的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00780",
+    "word": "rough",
+    "phonetic": "",
+    "translation": "adj. 粗糙的、大致的",
+    "translations": [
+      "adj. 粗糙的、大致的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00781",
+    "word": "routine",
+    "phonetic": "",
+    "translation": "adj. 日常的、常规的；n. 常规、惯例",
+    "translations": [
+      "adj. 日常的、常规的",
+      "n. 常规、惯例"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00782",
+    "word": "satisfy",
+    "phonetic": "",
+    "translation": "v. 满足、使满意",
+    "translations": [
+      "v. 满足、使满意"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00783",
+    "word": "saturate",
+    "phonetic": "",
+    "translation": "v. 浸透、使饱和",
+    "translations": [
+      "v. 浸透、使饱和"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00784",
+    "word": "scapegoat",
+    "phonetic": "",
+    "translation": "n. 替罪羊",
+    "translations": [
+      "n. 替罪羊"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00785",
+    "word": "scary",
+    "phonetic": "",
+    "translation": "adj. 可怕的",
+    "translations": [
+      "adj. 可怕的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00786",
+    "word": "scorn",
+    "phonetic": "",
+    "translation": "v/n. 轻蔑、鄙视",
+    "translations": [
+      "v/n. 轻蔑、鄙视"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00787",
+    "word": "screen",
+    "phonetic": "",
+    "translation": "v. 检查、审查；n. 屏幕",
+    "translations": [
+      "v. 检查、审查",
+      "n. 屏幕"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00788",
+    "word": "scrutinize",
+    "phonetic": "",
+    "translation": "v. 仔细察看、详细检查",
+    "translations": [
+      "v. 仔细察看、详细检查"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00789",
+    "word": "section",
+    "phonetic": "",
+    "translation": "n. 部分、阶层",
+    "translations": [
+      "n. 部分、阶层"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00790",
+    "word": "secure",
+    "phonetic": "",
+    "translation": "adj. 安全的；无忧的；v. 保护、得到",
+    "translations": [
+      "adj. 安全的；无忧的",
+      "v. 保护、得到"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00791",
+    "word": "segment",
+    "phonetic": "",
+    "translation": "v. 切分、分割；n. 部分",
+    "translations": [
+      "v. 切分、分割",
+      "n. 部分"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00792",
+    "word": "selective",
+    "phonetic": "",
+    "translation": "adj. 选择的、挑剔的",
+    "translations": [
+      "adj. 选择的、挑剔的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00793",
+    "word": "senior",
+    "phonetic": "",
+    "translation": "adj. 年长的、高级的",
+    "translations": [
+      "adj. 年长的、高级的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00794",
+    "word": "sensitive",
+    "phonetic": "",
+    "translation": "adj. 敏感的",
+    "translations": [
+      "adj. 敏感的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00795",
+    "word": "sentiment",
+    "phonetic": "",
+    "translation": "n. 感情、情绪",
+    "translations": [
+      "n. 感情、情绪"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00796",
+    "word": "separate",
+    "phonetic": "",
+    "translation": "adj. 单独的、分开的；v. 分开、使分离",
+    "translations": [
+      "adj. 单独的、分开的",
+      "v. 分开、使分离"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00797",
+    "word": "series",
+    "phonetic": "",
+    "translation": "n. 系列（节目）、丛书",
+    "translations": [
+      "n. 系列（节目）、丛书"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00798",
+    "word": "severe",
+    "phonetic": "",
+    "translation": "adj. 严重的、严峻的、严厉的",
+    "translations": [
+      "adj. 严重的、严峻的、严厉的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00799",
+    "word": "shed",
+    "phonetic": "",
+    "translation": "v. 脱落、流出",
+    "translations": [
+      "v. 脱落、流出"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00800",
+    "word": "shield",
+    "phonetic": "",
+    "translation": "v. 遮挡、保护；n. 盾牌",
+    "translations": [
+      "v. 遮挡、保护",
+      "n. 盾牌"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00801",
+    "word": "shift",
+    "phonetic": "",
+    "translation": "v/n. 转移、转变",
+    "translations": [
+      "v/n. 转移、转变"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00802",
+    "word": "shrinking",
+    "phonetic": "",
+    "translation": "adj. 收缩的、萎缩的；n. 收缩、萎缩",
+    "translations": [
+      "adj. 收缩的、萎缩的",
+      "n. 收缩、萎缩"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00803",
+    "word": "signature",
+    "phonetic": "",
+    "translation": "n. 签名",
+    "translations": [
+      "n. 签名"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00804",
+    "word": "significant",
+    "phonetic": "",
+    "translation": "adj. 重要的",
+    "translations": [
+      "adj. 重要的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00805",
+    "word": "skeptical",
+    "phonetic": "",
+    "translation": "adj. 怀疑的",
+    "translations": [
+      "adj. 怀疑的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00806",
+    "word": "skip",
+    "phonetic": "",
+    "translation": "v/n. 跳跃、跳过、跳读",
+    "translations": [
+      "v/n. 跳跃、跳过、跳读"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00807",
+    "word": "slacking",
+    "phonetic": "",
+    "translation": "adj. 懒惰的",
+    "translations": [
+      "adj. 懒惰的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00808",
+    "word": "slim",
+    "phonetic": "",
+    "translation": "adj. 苗条的、薄的",
+    "translations": [
+      "adj. 苗条的、薄的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00809",
+    "word": "sole",
+    "phonetic": "",
+    "translation": "adj. 单独的、唯一的",
+    "translations": [
+      "adj. 单独的、唯一的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00810",
+    "word": "sophisticated",
+    "phonetic": "",
+    "translation": "adj. 复杂的、精致的",
+    "translations": [
+      "adj. 复杂的、精致的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00811",
+    "word": "species",
+    "phonetic": "",
+    "translation": "n. 种类、物种",
+    "translations": [
+      "n. 种类、物种"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00812",
+    "word": "split",
+    "phonetic": "",
+    "translation": "v. 分解、分开、使分离",
+    "translations": [
+      "v. 分解、分开、使分离"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00813",
+    "word": "sponsor",
+    "phonetic": "",
+    "translation": "v. 赞助、发起；n. 赞助商、发起者",
+    "translations": [
+      "v. 赞助、发起",
+      "n. 赞助商、发起者"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00814",
+    "word": "spontaneity",
+    "phonetic": "",
+    "translation": "n. 自然流露、即兴发挥",
+    "translations": [
+      "n. 自然流露、即兴发挥"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00815",
+    "word": "spread",
+    "phonetic": "",
+    "translation": "v/n. 传播、分布",
+    "translations": [
+      "v/n. 传播、分布"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00816",
+    "word": "squeeze",
+    "phonetic": "",
+    "translation": "v. 挤压、榨取",
+    "translations": [
+      "v. 挤压、榨取"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00817",
+    "word": "stable",
+    "phonetic": "",
+    "translation": "adj. 稳定的、稳固的",
+    "translations": [
+      "adj. 稳定的、稳固的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00818",
+    "word": "stagnation",
+    "phonetic": "",
+    "translation": "n. 停滞",
+    "translations": [
+      "n. 停滞"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00819",
+    "word": "statement",
+    "phonetic": "",
+    "translation": "n. 陈述、报表",
+    "translations": [
+      "n. 陈述、报表"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00820",
+    "word": "statistical",
+    "phonetic": "",
+    "translation": "adj. 统计（学）的",
+    "translations": [
+      "adj. 统计（学）的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00821",
+    "word": "status",
+    "phonetic": "",
+    "translation": "n. 身份、地位、状况",
+    "translations": [
+      "n. 身份、地位、状况"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00822",
+    "word": "steep",
+    "phonetic": "",
+    "translation": "adj. 陡峭的、（上升/下降）急剧的",
+    "translations": [
+      "adj. 陡峭的、（上升/下降）急剧的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00823",
+    "word": "steer",
+    "phonetic": "",
+    "translation": "v. 驾驶、引导",
+    "translations": [
+      "v. 驾驶、引导"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00824",
+    "word": "stem",
+    "phonetic": "",
+    "translation": "v. 起源；n. 茎、干",
+    "translations": [
+      "v. 起源",
+      "n. 茎、干"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00825",
+    "word": "stick",
+    "phonetic": "",
+    "translation": "v. 刺、粘住；n. 棍子、棒子",
+    "translations": [
+      "v. 刺、粘住",
+      "n. 棍子、棒子"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00826",
+    "word": "straight",
+    "phonetic": "",
+    "translation": "adj/adv. 笔直的/地、直接的/地",
+    "translations": [
+      "adj/adv. 笔直的/地、直接的/地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00827",
+    "word": "strain",
+    "phonetic": "",
+    "translation": "v. 拉紧；n. 张力、压力",
+    "translations": [
+      "v. 拉紧",
+      "n. 张力、压力"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00828",
+    "word": "strategy",
+    "phonetic": "",
+    "translation": "n. 战略、策略",
+    "translations": [
+      "n. 战略、策略"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00829",
+    "word": "stress",
+    "phonetic": "",
+    "translation": "v. 强调；n. 压力、重点",
+    "translations": [
+      "v. 强调",
+      "n. 压力、重点"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00830",
+    "word": "strict",
+    "phonetic": "",
+    "translation": "adj. 严格的、严谨的",
+    "translations": [
+      "adj. 严格的、严谨的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00831",
+    "word": "striking",
+    "phonetic": "",
+    "translation": "adj. 惊人的、显著的、突出的",
+    "translations": [
+      "adj. 惊人的、显著的、突出的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00832",
+    "word": "strive",
+    "phonetic": "",
+    "translation": "v. 努力、争取",
+    "translations": [
+      "v. 努力、争取"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00833",
+    "word": "subject",
+    "phonetic": "",
+    "translation": "v. （使）遭受；n. 主题、被试（研究对象）",
+    "translations": [
+      "v. （使）遭受",
+      "n. 主题、被试（研究对象）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00834",
+    "word": "submit",
+    "phonetic": "",
+    "translation": "v. 提交、（使）服从",
+    "translations": [
+      "v. 提交、（使）服从"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00835",
+    "word": "subscribe",
+    "phonetic": "",
+    "translation": "v. 签署、赞同、订阅",
+    "translations": [
+      "v. 签署、赞同、订阅"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00836",
+    "word": "subsequent",
+    "phonetic": "",
+    "translation": "adj. 随后的、后来的",
+    "translations": [
+      "adj. 随后的、后来的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00837",
+    "word": "subsidize",
+    "phonetic": "",
+    "translation": "v. 资助、补贴",
+    "translations": [
+      "v. 资助、补贴"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00838",
+    "word": "substantial",
+    "phonetic": "",
+    "translation": "adj. 大量的、实质的",
+    "translations": [
+      "adj. 大量的、实质的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00839",
+    "word": "substitute",
+    "phonetic": "",
+    "translation": "v. 替代；n. 替代（品）",
+    "translations": [
+      "v. 替代",
+      "n. 替代（品）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00840",
+    "word": "subtle",
+    "phonetic": "",
+    "translation": "adj. 不明显的、不易察觉的",
+    "translations": [
+      "adj. 不明显的、不易察觉的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00841",
+    "word": "succeed",
+    "phonetic": "",
+    "translation": "v. 成功、继承",
+    "translations": [
+      "v. 成功、继承"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00842",
+    "word": "suffer",
+    "phonetic": "",
+    "translation": "v. 遭受、经受",
+    "translations": [
+      "v. 遭受、经受"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00843",
+    "word": "suicide",
+    "phonetic": "",
+    "translation": "v. 自杀；n. 自杀（者）",
+    "translations": [
+      "v. 自杀",
+      "n. 自杀（者）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00844",
+    "word": "suitable",
+    "phonetic": "",
+    "translation": "adj. 合适的、适当的、恰当的",
+    "translations": [
+      "adj. 合适的、适当的、恰当的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00845",
+    "word": "summit",
+    "phonetic": "",
+    "translation": "n. 顶点、顶峰",
+    "translations": [
+      "n. 顶点、顶峰"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00846",
+    "word": "superb",
+    "phonetic": "",
+    "translation": "adj. 极好的",
+    "translations": [
+      "adj. 极好的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00847",
+    "word": "superior",
+    "phonetic": "",
+    "translation": "adj. 比……好的、出众的",
+    "translations": [
+      "adj. 比……好的、出众的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00848",
+    "word": "supervision",
+    "phonetic": "",
+    "translation": "n. 监督、管理",
+    "translations": [
+      "n. 监督、管理"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00849",
+    "word": "supplement",
+    "phonetic": "",
+    "translation": "v. 补充；n. 补充、增刊",
+    "translations": [
+      "v. 补充",
+      "n. 补充、增刊"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00850",
+    "word": "suppose",
+    "phonetic": "",
+    "translation": "v. 假设、猜想",
+    "translations": [
+      "v. 假设、猜想"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00851",
+    "word": "suppress",
+    "phonetic": "",
+    "translation": "v. 镇压、压制、抑制",
+    "translations": [
+      "v. 镇压、压制、抑制"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00852",
+    "word": "surface",
+    "phonetic": "",
+    "translation": "v. （使）出现、浮出水面；n. 表面",
+    "translations": [
+      "v. （使）出现、浮出水面",
+      "n. 表面"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00853",
+    "word": "surgery",
+    "phonetic": "",
+    "translation": "n. 外科、手术",
+    "translations": [
+      "n. 外科、手术"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00854",
+    "word": "survive",
+    "phonetic": "",
+    "translation": "v. 幸存、存留",
+    "translations": [
+      "v. 幸存、存留"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00855",
+    "word": "suspect",
+    "phonetic": "",
+    "translation": "v. 怀疑、猜想；n. 嫌疑犯",
+    "translations": [
+      "v. 怀疑、猜想",
+      "n. 嫌疑犯"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00856",
+    "word": "suspend",
+    "phonetic": "",
+    "translation": "v. 悬挂、暂停",
+    "translations": [
+      "v. 悬挂、暂停"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00857",
+    "word": "sustain",
+    "phonetic": "",
+    "translation": "v. 保持、维持、支撑",
+    "translations": [
+      "v. 保持、维持、支撑"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00858",
+    "word": "swamp",
+    "phonetic": "",
+    "translation": "v. 淹没、（使）陷入困境；n. 沼泽",
+    "translations": [
+      "v. 淹没、（使）陷入困境",
+      "n. 沼泽"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00859",
+    "word": "swing",
+    "phonetic": "",
+    "translation": "v/n. 摇摆、波动",
+    "translations": [
+      "v/n. 摇摆、波动"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00860",
+    "word": "switch",
+    "phonetic": "",
+    "translation": "v. 转移、转换；n. 开关",
+    "translations": [
+      "v. 转移、转换",
+      "n. 开关"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00861",
+    "word": "symbolic",
+    "phonetic": "",
+    "translation": "adj. 象征的、符号的",
+    "translations": [
+      "adj. 象征的、符号的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00862",
+    "word": "sympathy",
+    "phonetic": "",
+    "translation": "n. 同情",
+    "translations": [
+      "n. 同情"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00863",
+    "word": "temper",
+    "phonetic": "",
+    "translation": "v. 调和、控制；n. 脾气、性情",
+    "translations": [
+      "v. 调和、控制",
+      "n. 脾气、性情"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00864",
+    "word": "temporary",
+    "phonetic": "",
+    "translation": "adj. 暂时的、临时的",
+    "translations": [
+      "adj. 暂时的、临时的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00865",
+    "word": "tempt",
+    "phonetic": "",
+    "translation": "v. 引诱、诱使、吸引",
+    "translations": [
+      "v. 引诱、诱使、吸引"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00866",
+    "word": "tendency",
+    "phonetic": "",
+    "translation": "n. 趋势、倾向",
+    "translations": [
+      "n. 趋势、倾向"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00867",
+    "word": "terminal",
+    "phonetic": "",
+    "translation": "adj. 终点的、（疾病）晚期的；n. 终点、终端（机）",
+    "translations": [
+      "adj. 终点的、（疾病）晚期的",
+      "n. 终点、终端（机）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00868",
+    "word": "terrify",
+    "phonetic": "",
+    "translation": "v. 恐吓、使害怕",
+    "translations": [
+      "v. 恐吓、使害怕"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00869",
+    "word": "testify",
+    "phonetic": "",
+    "translation": "v. 证实、作证",
+    "translations": [
+      "v. 证实、作证"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00870",
+    "word": "thorny",
+    "phonetic": "",
+    "translation": "adj. 棘手的、麻烦的",
+    "translations": [
+      "adj. 棘手的、麻烦的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00871",
+    "word": "threaten",
+    "phonetic": "",
+    "translation": "v. 威胁",
+    "translations": [
+      "v. 威胁"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00872",
+    "word": "thrive",
+    "phonetic": "",
+    "translation": "v. 繁荣、盛行",
+    "translations": [
+      "v. 繁荣、盛行"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00873",
+    "word": "tissue",
+    "phonetic": "",
+    "translation": "n. （动植物的）组织",
+    "translations": [
+      "n. （动植物的）组织"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00874",
+    "word": "tolerate",
+    "phonetic": "",
+    "translation": "v. 容忍、忍受",
+    "translations": [
+      "v. 容忍、忍受"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00875",
+    "word": "tough",
+    "phonetic": "",
+    "translation": "adj. 强硬的、严苛的",
+    "translations": [
+      "adj. 强硬的、严苛的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00876",
+    "word": "toxic",
+    "phonetic": "",
+    "translation": "adj. 有毒的、不良的",
+    "translations": [
+      "adj. 有毒的、不良的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00877",
+    "word": "transaction",
+    "phonetic": "",
+    "translation": "n. 交易",
+    "translations": [
+      "n. 交易"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00878",
+    "word": "transcendence",
+    "phonetic": "",
+    "translation": "n. 超越",
+    "translations": [
+      "n. 超越"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00879",
+    "word": "transfer",
+    "phonetic": "",
+    "translation": "v/n. 传递、转移",
+    "translations": [
+      "v/n. 传递、转移"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00880",
+    "word": "transform",
+    "phonetic": "",
+    "translation": "v. 改变、转变",
+    "translations": [
+      "v. 改变、转变"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00881",
+    "word": "transition",
+    "phonetic": "",
+    "translation": "n. 转型、过渡",
+    "translations": [
+      "n. 转型、过渡"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00882",
+    "word": "transparency",
+    "phonetic": "",
+    "translation": "n. 透明（度）",
+    "translations": [
+      "n. 透明（度）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00883",
+    "word": "transplant",
+    "phonetic": "",
+    "translation": "v/n. 移植",
+    "translations": [
+      "v/n. 移植"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00884",
+    "word": "transportation",
+    "phonetic": "",
+    "translation": "n. 运输、交通工具",
+    "translations": [
+      "n. 运输、交通工具"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00885",
+    "word": "tremendous",
+    "phonetic": "",
+    "translation": "adj. 巨大的",
+    "translations": [
+      "adj. 巨大的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00886",
+    "word": "triumph",
+    "phonetic": "",
+    "translation": "v/n. 成功，胜利",
+    "translations": [
+      "v/n. 成功，胜利"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00887",
+    "word": "turbulent",
+    "phonetic": "",
+    "translation": "adj. 混乱的、湍急的",
+    "translations": [
+      "adj. 混乱的、湍急的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00888",
+    "word": "ultimate",
+    "phonetic": "",
+    "translation": "adj. 最终的、根本的、极限的",
+    "translations": [
+      "adj. 最终的、根本的、极限的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00889",
+    "word": "unanimous",
+    "phonetic": "",
+    "translation": "adj. 全体同意的、一致通过的",
+    "translations": [
+      "adj. 全体同意的、一致通过的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00890",
+    "word": "undermine",
+    "phonetic": "",
+    "translation": "v. 破坏",
+    "translations": [
+      "v. 破坏"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00891",
+    "word": "uniform",
+    "phonetic": "",
+    "translation": "adj. 统一的、相同的；n. 制服",
+    "translations": [
+      "adj. 统一的、相同的",
+      "n. 制服"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00892",
+    "word": "unique",
+    "phonetic": "",
+    "translation": "adj. 独特的、唯一的",
+    "translations": [
+      "adj. 独特的、唯一的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00893",
+    "word": "unite",
+    "phonetic": "",
+    "translation": "v. 联合、团结、统一",
+    "translations": [
+      "v. 联合、团结、统一"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00894",
+    "word": "universal",
+    "phonetic": "",
+    "translation": "adj. 普遍的、通用的",
+    "translations": [
+      "adj. 普遍的、通用的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00895",
+    "word": "unsurpassed",
+    "phonetic": "",
+    "translation": "adj. 难以超越的、无与伦比的",
+    "translations": [
+      "adj. 难以超越的、无与伦比的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00896",
+    "word": "upset",
+    "phonetic": "",
+    "translation": "v. 打乱、使心烦（生气）",
+    "translations": [
+      "v. 打乱、使心烦（生气）"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00897",
+    "word": "urban",
+    "phonetic": "",
+    "translation": "adj. 城市的",
+    "translations": [
+      "adj. 城市的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00898",
+    "word": "urge",
+    "phonetic": "",
+    "translation": "v. 推动、驱使；n. 欲望、要求",
+    "translations": [
+      "v. 推动、驱使",
+      "n. 欲望、要求"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00899",
+    "word": "utility",
+    "phonetic": "",
+    "translation": "n. 功用、效用",
+    "translations": [
+      "n. 功用、效用"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00900",
+    "word": "vacuum",
+    "phonetic": "",
+    "translation": "v. （用真空吸尘器）清扫、吸入；n. 真空",
+    "translations": [
+      "v. （用真空吸尘器）清扫、吸入",
+      "n. 真空"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00901",
+    "word": "vague",
+    "phonetic": "",
+    "translation": "adj. 模糊的、含糊的",
+    "translations": [
+      "adj. 模糊的、含糊的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00902",
+    "word": "vain",
+    "phonetic": "",
+    "translation": "adj. 自负的",
+    "translations": [
+      "adj. 自负的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00903",
+    "word": "valid",
+    "phonetic": "",
+    "translation": "adj. 有效的、正当的",
+    "translations": [
+      "adj. 有效的、正当的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00904",
+    "word": "vanish",
+    "phonetic": "",
+    "translation": "v. 消失",
+    "translations": [
+      "v. 消失"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00905",
+    "word": "vanity",
+    "phonetic": "",
+    "translation": "n. 虚荣",
+    "translations": [
+      "n. 虚荣"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00906",
+    "word": "various",
+    "phonetic": "",
+    "translation": "adj. 各种各样的",
+    "translations": [
+      "adj. 各种各样的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00907",
+    "word": "verbal",
+    "phonetic": "",
+    "translation": "adj. 口头的、语言的、文字的",
+    "translations": [
+      "adj. 口头的、语言的、文字的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00908",
+    "word": "verdict",
+    "phonetic": "",
+    "translation": "n. 结论、判决",
+    "translations": [
+      "n. 结论、判决"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00909",
+    "word": "verify",
+    "phonetic": "",
+    "translation": "v. 证实、核实",
+    "translations": [
+      "v. 证实、核实"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00910",
+    "word": "viable",
+    "phonetic": "",
+    "translation": "adj. 可行的",
+    "translations": [
+      "adj. 可行的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00911",
+    "word": "vibrant",
+    "phonetic": "",
+    "translation": "adj. 充满活力的",
+    "translations": [
+      "adj. 充满活力的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00912",
+    "word": "victory",
+    "phonetic": "",
+    "translation": "n. 胜利",
+    "translations": [
+      "n. 胜利"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00913",
+    "word": "vigorously",
+    "phonetic": "",
+    "translation": "adv. 精力充沛地、强烈地",
+    "translations": [
+      "adv. 精力充沛地、强烈地"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00914",
+    "word": "violate",
+    "phonetic": "",
+    "translation": "v. 违反、侵犯",
+    "translations": [
+      "v. 违反、侵犯"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00915",
+    "word": "virtually",
+    "phonetic": "",
+    "translation": "adv. 几乎、事实上",
+    "translations": [
+      "adv. 几乎、事实上"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00916",
+    "word": "visible",
+    "phonetic": "",
+    "translation": "adj. 看得见的、明显的",
+    "translations": [
+      "adj. 看得见的、明显的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00917",
+    "word": "vision",
+    "phonetic": "",
+    "translation": "n. 视力、憧憬",
+    "translations": [
+      "n. 视力、憧憬"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00918",
+    "word": "visualize",
+    "phonetic": "",
+    "translation": "v. 想像、（使）形象化",
+    "translations": [
+      "v. 想像、（使）形象化"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00919",
+    "word": "vital",
+    "phonetic": "",
+    "translation": "adj. 至关重要的、生死攸关的",
+    "translations": [
+      "adj. 至关重要的、生死攸关的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00920",
+    "word": "vivid",
+    "phonetic": "",
+    "translation": "adj. 生动的、逼真的",
+    "translations": [
+      "adj. 生动的、逼真的"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00921",
+    "word": "vocation",
+    "phonetic": "",
+    "translation": "n. 职业",
+    "translations": [
+      "n. 职业"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00922",
+    "word": "withdraw",
+    "phonetic": "",
+    "translation": "v. 撤销、收回",
+    "translations": [
+      "v. 撤销、收回"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00923",
+    "word": "withstand",
+    "phonetic": "",
+    "translation": "v. 承受",
+    "translations": [
+      "v. 承受"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00924",
+    "word": "worship",
+    "phonetic": "",
+    "translation": "v/n. 敬奉、崇拜",
+    "translations": [
+      "v/n. 敬奉、崇拜"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00925",
+    "word": "yield",
+    "phonetic": "",
+    "translation": "v. 生产、产生；n. 产量、收益",
+    "translations": [
+      "v. 生产、产生",
+      "n. 产量、收益"
+    ],
+    "domain": "qwerty_926"
+  },
+  {
+    "id": "qwerty_926_00926",
+    "word": "zone",
+    "phonetic": "",
+    "translation": "n. 地区",
+    "translations": [
+      "n. 地区"
+    ],
+    "domain": "qwerty_926"
+  }
+]

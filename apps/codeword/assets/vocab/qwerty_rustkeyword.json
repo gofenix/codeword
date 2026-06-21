@@ -1,0 +1,352 @@
+[
+  {
+    "id": "qwerty_rustkeyword_00001",
+    "word": "as",
+    "phonetic": "",
+    "translation": "`as` 用于进行类型转换（类型别名），将一种类型转换为另一种类型，通常用于强制类型转换或者是简化泛型。",
+    "translations": [
+      "`as` 用于进行类型转换（类型别名），将一种类型转换为另一种类型，通常用于强制类型转换或者是简化泛型。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00002",
+    "word": "async",
+    "phonetic": "",
+    "translation": "`async` 用于定义异步函数或闭包，表示该函数将返回一个 `Future`，可以通过 `await` 来等待其执行结果。",
+    "translations": [
+      "`async` 用于定义异步函数或闭包，表示该函数将返回一个 `Future`，可以通过 `await` 来等待其执行结果。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00003",
+    "word": "await",
+    "phonetic": "",
+    "translation": "`await` 用于在异步上下文中等待异步操作的完成。它只能在 `async` 函数中使用。",
+    "translations": [
+      "`await` 用于在异步上下文中等待异步操作的完成。它只能在 `async` 函数中使用。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00004",
+    "word": "break",
+    "phonetic": "",
+    "translation": "`break` 用于跳出当前的循环或 `match` 语句，终止循环或匹配。",
+    "translations": [
+      "`break` 用于跳出当前的循环或 `match` 语句，终止循环或匹配。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00005",
+    "word": "const",
+    "phonetic": "",
+    "translation": "`const` 用于定义常量，其值在编译时就已经确定，并且值不可变。常量的类型必须显式指定。",
+    "translations": [
+      "`const` 用于定义常量，其值在编译时就已经确定，并且值不可变。常量的类型必须显式指定。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00006",
+    "word": "continue",
+    "phonetic": "",
+    "translation": "`continue` 用于跳过当前循环的剩余部分，继续执行下一次循环。",
+    "translations": [
+      "`continue` 用于跳过当前循环的剩余部分，继续执行下一次循环。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00007",
+    "word": "crate",
+    "phonetic": "",
+    "translation": "`crate` 表示当前包（crate），用于标识模块或外部 crate 的路径。",
+    "translations": [
+      "`crate` 表示当前包（crate），用于标识模块或外部 crate 的路径。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00008",
+    "word": "dyn",
+    "phonetic": "",
+    "translation": "`dyn` 用于创建 trait 对象，允许在运行时动态调用 trait 中定义的方法。",
+    "translations": [
+      "`dyn` 用于创建 trait 对象，允许在运行时动态调用 trait 中定义的方法。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00009",
+    "word": "else",
+    "phonetic": "",
+    "translation": "`else` 用于与 `if` 语句配合，指定条件不成立时执行的代码块。",
+    "translations": [
+      "`else` 用于与 `if` 语句配合，指定条件不成立时执行的代码块。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00010",
+    "word": "enum",
+    "phonetic": "",
+    "translation": "`enum` 用于定义枚举类型，枚举可以有多个变体，每个变体可以包含不同类型的数据。",
+    "translations": [
+      "`enum` 用于定义枚举类型，枚举可以有多个变体，每个变体可以包含不同类型的数据。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00011",
+    "word": "extern",
+    "phonetic": "",
+    "translation": "`extern` 用于声明外部函数或外部库（通常是 C 或其他语言），以便可以在 Rust 代码中调用。",
+    "translations": [
+      "`extern` 用于声明外部函数或外部库（通常是 C 或其他语言），以便可以在 Rust 代码中调用。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00012",
+    "word": "fn",
+    "phonetic": "",
+    "translation": "`fn` 用于定义函数。函数有一个明确的返回类型（如果有的话），并且可以接受参数。",
+    "translations": [
+      "`fn` 用于定义函数。函数有一个明确的返回类型（如果有的话），并且可以接受参数。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00013",
+    "word": "for",
+    "phonetic": "",
+    "translation": "`for` 用于创建一个迭代循环，通常用来遍历集合、范围或其他可迭代的类型。",
+    "translations": [
+      "`for` 用于创建一个迭代循环，通常用来遍历集合、范围或其他可迭代的类型。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00014",
+    "word": "if",
+    "phonetic": "",
+    "translation": "`if` 用于执行条件判断语句，如果条件为真，则执行对应代码块。",
+    "translations": [
+      "`if` 用于执行条件判断语句，如果条件为真，则执行对应代码块。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00015",
+    "word": "impl",
+    "phonetic": "",
+    "translation": "`impl` 用于为类型（如结构体、枚举或 trait）实现方法，或者为类型实现某个 trait。",
+    "translations": [
+      "`impl` 用于为类型（如结构体、枚举或 trait）实现方法，或者为类型实现某个 trait。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00016",
+    "word": "in",
+    "phonetic": "",
+    "translation": "`in` 用于模式匹配中，表示模式的匹配条件。通常与 `for` 循环一起使用。",
+    "translations": [
+      "`in` 用于模式匹配中，表示模式的匹配条件。通常与 `for` 循环一起使用。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00017",
+    "word": "let",
+    "phonetic": "",
+    "translation": "`let` 用于声明变量或常量，常用来进行值绑定，支持可变和不可变绑定。",
+    "translations": [
+      "`let` 用于声明变量或常量，常用来进行值绑定，支持可变和不可变绑定。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00018",
+    "word": "loop",
+    "phonetic": "",
+    "translation": "`loop` 用于创建一个无限循环，直到使用 `break` 或其他控制流语句终止。",
+    "translations": [
+      "`loop` 用于创建一个无限循环，直到使用 `break` 或其他控制流语句终止。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00019",
+    "word": "match",
+    "phonetic": "",
+    "translation": "`match` 用于模式匹配，根据给定的值匹配多个可能的情况并执行相应的代码块。",
+    "translations": [
+      "`match` 用于模式匹配，根据给定的值匹配多个可能的情况并执行相应的代码块。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00020",
+    "word": "mod",
+    "phonetic": "",
+    "translation": "`mod` 用于定义模块，模块是组织代码的基本单元，包含函数、结构体、枚举等内容。",
+    "translations": [
+      "`mod` 用于定义模块，模块是组织代码的基本单元，包含函数、结构体、枚举等内容。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00021",
+    "word": "move",
+    "phonetic": "",
+    "translation": "`move` 用于捕获闭包中的值时，强制将其所有权转移给闭包，而非通过引用传递。",
+    "translations": [
+      "`move` 用于捕获闭包中的值时，强制将其所有权转移给闭包，而非通过引用传递。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00022",
+    "word": "mut",
+    "phonetic": "",
+    "translation": "`mut` 用于声明一个可变变量或可变引用，表示该变量的值可以被修改。",
+    "translations": [
+      "`mut` 用于声明一个可变变量或可变引用，表示该变量的值可以被修改。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00023",
+    "word": "pub",
+    "phonetic": "",
+    "translation": "`pub` 用于将项（如结构体、函数或模块）标记为公有，使得它们可以在模块外部访问。",
+    "translations": [
+      "`pub` 用于将项（如结构体、函数或模块）标记为公有，使得它们可以在模块外部访问。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00024",
+    "word": "ref",
+    "phonetic": "",
+    "translation": "`ref` 用于通过引用模式匹配值，避免值的所有权转移，而是获取一个引用。",
+    "translations": [
+      "`ref` 用于通过引用模式匹配值，避免值的所有权转移，而是获取一个引用。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00025",
+    "word": "return",
+    "phonetic": "",
+    "translation": "`return` 用于从函数中返回值，终止函数执行并返回控制权给调用者。",
+    "translations": [
+      "`return` 用于从函数中返回值，终止函数执行并返回控制权给调用者。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00026",
+    "word": "self",
+    "phonetic": "",
+    "translation": "`self` 表示当前实例，在方法定义中引用调用该方法的对象。",
+    "translations": [
+      "`self` 表示当前实例，在方法定义中引用调用该方法的对象。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00027",
+    "word": "static",
+    "phonetic": "",
+    "translation": "`static` 用于声明具有静态生命周期的变量，这些变量在程序的整个生命周期中都存在。",
+    "translations": [
+      "`static` 用于声明具有静态生命周期的变量，这些变量在程序的整个生命周期中都存在。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00028",
+    "word": "struct",
+    "phonetic": "",
+    "translation": "`struct` 用于定义结构体类型，它是一种自定义的数据类型，可以包含多个字段。",
+    "translations": [
+      "`struct` 用于定义结构体类型，它是一种自定义的数据类型，可以包含多个字段。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00029",
+    "word": "super",
+    "phonetic": "",
+    "translation": "`super` 用于引用父模块，通常用于访问父模块中的函数或类型。",
+    "translations": [
+      "`super` 用于引用父模块，通常用于访问父模块中的函数或类型。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00030",
+    "word": "trait",
+    "phonetic": "",
+    "translation": "`trait` 用于定义 trait，它是一组方法签名，可以被不同的类型实现以提供共享功能。",
+    "translations": [
+      "`trait` 用于定义 trait，它是一组方法签名，可以被不同的类型实现以提供共享功能。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00031",
+    "word": "type",
+    "phonetic": "",
+    "translation": "`type` 用于定义类型别名，或者在泛型中为类型参数指定约束条件。",
+    "translations": [
+      "`type` 用于定义类型别名，或者在泛型中为类型参数指定约束条件。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00032",
+    "word": "unsafe",
+    "phonetic": "",
+    "translation": "`unsafe` 用于标记不安全的代码块，允许进行一些编译器不检查的操作，如直接操作指针等。",
+    "translations": [
+      "`unsafe` 用于标记不安全的代码块，允许进行一些编译器不检查的操作，如直接操作指针等。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00033",
+    "word": "use",
+    "phonetic": "",
+    "translation": "`use` 用于将模块、函数、类型等引入当前作用域，减少代码冗余并简化访问路径。",
+    "translations": [
+      "`use` 用于将模块、函数、类型等引入当前作用域，减少代码冗余并简化访问路径。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00034",
+    "word": "where",
+    "phonetic": "",
+    "translation": "`where` 用于在泛型约束中指定类型约束，通常用于定义函数或结构体时的类型参数约束。",
+    "translations": [
+      "`where` 用于在泛型约束中指定类型约束，通常用于定义函数或结构体时的类型参数约束。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00035",
+    "word": "while",
+    "phonetic": "",
+    "translation": "`while` 用于创建一个基于条件判断的循环，只要条件为真，循环就会继续执行。",
+    "translations": [
+      "`while` 用于创建一个基于条件判断的循环，只要条件为真，循环就会继续执行。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  }
+]

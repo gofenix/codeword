@@ -1,0 +1,722 @@
+[
+  {
+    "id": "qwerty_san2_00001",
+    "word": "UK",
+    "phonetic": "",
+    "translation": "英国",
+    "translations": [
+      "英国"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00002",
+    "word": "Canada",
+    "phonetic": "'kænədə",
+    "translation": "加拿大",
+    "translations": [
+      "加拿大"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00003",
+    "word": "USA",
+    "phonetic": "",
+    "translation": "美国",
+    "translations": [
+      "美国"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00004",
+    "word": "China",
+    "phonetic": "ˈtʃaɪnə",
+    "translation": "中国",
+    "translations": [
+      "中国"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00005",
+    "word": "she",
+    "phonetic": "ʃi",
+    "translation": "她；（指雌性动物）它",
+    "translations": [
+      "她；（指雌性动物）它"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00006",
+    "word": "student",
+    "phonetic": "'studnt",
+    "translation": "学生, 学者",
+    "translations": [
+      "学生, 学者"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00007",
+    "word": "pupil",
+    "phonetic": "pjupl",
+    "translation": "小学生",
+    "translations": [
+      "小学生"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00008",
+    "word": "he",
+    "phonetic": "hi",
+    "translation": "他；它（指雄性动物）",
+    "translations": [
+      "他；它（指雄性动物）"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00009",
+    "word": "teacher",
+    "phonetic": "'titʃɚ",
+    "translation": "教师, 老师, 导师",
+    "translations": [
+      "教师, 老师, 导师"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00010",
+    "word": "boy",
+    "phonetic": "bɔɪ",
+    "translation": "男孩, 儿子, 孩子气的人, 男仆",
+    "translations": [
+      "男孩, 儿子, 孩子气的人, 男仆"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00011",
+    "word": "and",
+    "phonetic": "ənd, ən,ænd",
+    "translation": "和",
+    "translations": [
+      "和"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00012",
+    "word": "girl",
+    "phonetic": "ɡɝl",
+    "translation": "女孩, 少女, 女仆, (商店等的)女工作人员",
+    "translations": [
+      "女孩, 少女, 女仆, (商店等的)女工作人员"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00013",
+    "word": "new",
+    "phonetic": "nu",
+    "translation": "新的，新近的；新来的；不熟悉的",
+    "translations": [
+      "新的，新近的；新来的；不熟悉的"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00014",
+    "word": "friend",
+    "phonetic": "frɛnd",
+    "translation": "朋友，友人；支持者，同情者",
+    "translations": [
+      "朋友，友人；支持者，同情者"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00015",
+    "word": "today",
+    "phonetic": "tə'de",
+    "translation": "今天；现在，目前",
+    "translations": [
+      "今天；现在，目前"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00016",
+    "word": "father",
+    "phonetic": "'fɑðɚ",
+    "translation": "父亲；爸爸",
+    "translations": [
+      "父亲；爸爸"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00017",
+    "word": "dad",
+    "phonetic": "dæd",
+    "translation": "（口语）爸爸；爹爹",
+    "translations": [
+      "（口语）爸爸；爹爹"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00018",
+    "word": "man",
+    "phonetic": "mæn",
+    "translation": "男人",
+    "translations": [
+      "男人"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00019",
+    "word": "woman",
+    "phonetic": "'wʊmən",
+    "translation": "女人",
+    "translations": [
+      "女人"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00020",
+    "word": "mother",
+    "phonetic": "'mʌðɚ",
+    "translation": "母亲；妈妈",
+    "translations": [
+      "母亲；妈妈"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00021",
+    "word": "sister",
+    "phonetic": "'sɪstɚ",
+    "translation": "姐；妹",
+    "translations": [
+      "姐；妹"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00022",
+    "word": "brother",
+    "phonetic": "'brʌðɚ",
+    "translation": "兄；弟",
+    "translations": [
+      "兄；弟"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00023",
+    "word": "grandmother",
+    "phonetic": "'ɡrænmʌðɚ",
+    "translation": "（外）祖母",
+    "translations": [
+      "（外）祖母"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00024",
+    "word": "grandma",
+    "phonetic": "ɡrænmɑ",
+    "translation": "（口语）（外）祖母",
+    "translations": [
+      "（口语）（外）祖母"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00025",
+    "word": "grandfather",
+    "phonetic": "'græn'fɑðɚ",
+    "translation": "（外）祖父",
+    "translations": [
+      "（外）祖父"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00026",
+    "word": "grandpa",
+    "phonetic": "grandpa",
+    "translation": "（口语）（外）祖父",
+    "translations": [
+      "（口语）（外）祖父"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00027",
+    "word": "family",
+    "phonetic": "ˈfæməlɪ",
+    "translation": "家；家庭",
+    "translations": [
+      "家；家庭"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00028",
+    "word": "thin",
+    "phonetic": "θɪn",
+    "translation": "瘦的",
+    "translations": [
+      "瘦的"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00029",
+    "word": "fat",
+    "phonetic": "fæt",
+    "translation": "胖的；肥的",
+    "translations": [
+      "胖的；肥的"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00030",
+    "word": "tall",
+    "phonetic": "tɔl",
+    "translation": "高的",
+    "translations": [
+      "高的"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00031",
+    "word": "short",
+    "phonetic": "ʃɔrt",
+    "translation": "矮的；短的",
+    "translations": [
+      "矮的；短的"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00032",
+    "word": "long",
+    "phonetic": "lɔŋ",
+    "translation": "长的",
+    "translations": [
+      "长的"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00033",
+    "word": "small",
+    "phonetic": "smɔl",
+    "translation": "小的",
+    "translations": [
+      "小的"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00034",
+    "word": "big",
+    "phonetic": "bɪɡ",
+    "translation": "大的",
+    "translations": [
+      "大的"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00035",
+    "word": "giraffe",
+    "phonetic": "dʒəˈræf; dʒəˈræf",
+    "translation": "长颈鹿",
+    "translations": [
+      "长颈鹿"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00036",
+    "word": "so",
+    "phonetic": "so",
+    "translation": "这么；那么",
+    "translations": [
+      "这么；那么"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00037",
+    "word": "children",
+    "phonetic": "'tʃɪldrən",
+    "translation": "儿童",
+    "translations": [
+      "儿童"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00038",
+    "word": "child",
+    "phonetic": "tʃaɪld",
+    "translation": "儿童",
+    "translations": [
+      "儿童"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00039",
+    "word": "tail",
+    "phonetic": "tel",
+    "translation": "尾巴",
+    "translations": [
+      "尾巴"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00040",
+    "word": "on",
+    "phonetic": "ɑn",
+    "translation": "在⋯⋯上",
+    "translations": [
+      "在⋯⋯上"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00041",
+    "word": "in",
+    "phonetic": "ɪn",
+    "translation": "在⋯⋯里",
+    "translations": [
+      "在⋯⋯里"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00042",
+    "word": "under",
+    "phonetic": "'ʌndɚ",
+    "translation": "在⋯⋯下面",
+    "translations": [
+      "在⋯⋯下面"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00043",
+    "word": "chair",
+    "phonetic": "tʃɛr",
+    "translation": "椅子",
+    "translations": [
+      "椅子"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00044",
+    "word": "desk",
+    "phonetic": "dɛsk",
+    "translation": "书桌",
+    "translations": [
+      "书桌"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00045",
+    "word": "cap",
+    "phonetic": "kæp",
+    "translation": "帽子",
+    "translations": [
+      "帽子"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00046",
+    "word": "ball",
+    "phonetic": "bɔl",
+    "translation": "球",
+    "translations": [
+      "球"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00047",
+    "word": "car",
+    "phonetic": "kɑr",
+    "translation": "小汽车",
+    "translations": [
+      "小汽车"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00048",
+    "word": "boat",
+    "phonetic": "bot",
+    "translation": "小船",
+    "translations": [
+      "小船"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00049",
+    "word": "map",
+    "phonetic": "mæp",
+    "translation": "地图",
+    "translations": [
+      "地图"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00050",
+    "word": "toy",
+    "phonetic": "tɔɪ",
+    "translation": "玩具",
+    "translations": [
+      "玩具"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00051",
+    "word": "box",
+    "phonetic": "bɑks",
+    "translation": "盒；箱",
+    "translations": [
+      "盒；箱"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00052",
+    "word": "pear",
+    "phonetic": "pɛr",
+    "translation": "梨",
+    "translations": [
+      "梨"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00053",
+    "word": "apple",
+    "phonetic": "'æpl",
+    "translation": "苹果",
+    "translations": [
+      "苹果"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00054",
+    "word": "orange",
+    "phonetic": "'ɔrɪndʒ",
+    "translation": "橙子",
+    "translations": [
+      "橙子"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00055",
+    "word": "banana",
+    "phonetic": "bə'nænə",
+    "translation": "香蕉",
+    "translations": [
+      "香蕉"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00056",
+    "word": "watermelon",
+    "phonetic": "'wɔtɚmɛlən",
+    "translation": "西瓜",
+    "translations": [
+      "西瓜"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00057",
+    "word": "strawberry",
+    "phonetic": "'strɔbɛri",
+    "translation": "草莓",
+    "translations": [
+      "草莓"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00058",
+    "word": "grape",
+    "phonetic": "ɡrep",
+    "translation": "葡萄",
+    "translations": [
+      "葡萄"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00059",
+    "word": "buy",
+    "phonetic": "baɪ",
+    "translation": "买",
+    "translations": [
+      "买"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00060",
+    "word": "fruit",
+    "phonetic": "frut",
+    "translation": "水果",
+    "translations": [
+      "水果"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00061",
+    "word": "eleven",
+    "phonetic": "ɪ'lɛvn",
+    "translation": "十一",
+    "translations": [
+      "十一"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00062",
+    "word": "twelve",
+    "phonetic": "twɛlv",
+    "translation": "十二",
+    "translations": [
+      "十二"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00063",
+    "word": "thirteen",
+    "phonetic": "'θɝ'tin",
+    "translation": "十三",
+    "translations": [
+      "十三"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00064",
+    "word": "fourteen",
+    "phonetic": ",fɔr'tin",
+    "translation": "十四",
+    "translations": [
+      "十四"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00065",
+    "word": "fifteen",
+    "phonetic": ",fɪf'tin",
+    "translation": "十五",
+    "translations": [
+      "十五"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00066",
+    "word": "sixteen",
+    "phonetic": ",sɪks'tin",
+    "translation": "十六",
+    "translations": [
+      "十六"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00067",
+    "word": "seventeen",
+    "phonetic": ",sɛvn'tin",
+    "translation": "十七",
+    "translations": [
+      "十七"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00068",
+    "word": "eighteen",
+    "phonetic": ",e'tin",
+    "translation": "十八",
+    "translations": [
+      "十八"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00069",
+    "word": "nineteen",
+    "phonetic": ",naɪn'tin",
+    "translation": "十九",
+    "translations": [
+      "十九"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00070",
+    "word": "twenty",
+    "phonetic": "'twɛnti",
+    "translation": "二十",
+    "translations": [
+      "二十"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00071",
+    "word": "kite",
+    "phonetic": "kaɪt",
+    "translation": "风筝",
+    "translations": [
+      "风筝"
+    ],
+    "domain": "qwerty_san2"
+  },
+  {
+    "id": "qwerty_san2_00072",
+    "word": "beautiful",
+    "phonetic": "'bjʊtəfəl",
+    "translation": "美丽的",
+    "translations": [
+      "美丽的"
+    ],
+    "domain": "qwerty_san2"
+  }
+]

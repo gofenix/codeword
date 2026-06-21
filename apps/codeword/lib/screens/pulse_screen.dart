@@ -23,7 +23,9 @@ class PulseScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final stats = ref.watch(reviewStateProvider.notifier).stats();
+    final stats = ref.watch(reviewStateProvider.notifier).stats(
+          catalog: ref.watch(qwertyCatalogProvider),
+        );
     return SafeArea(
       child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(
@@ -61,7 +63,9 @@ final _dueWordsProvider = FutureProvider.family<List<PulseWordEntry>, int>(
 
 final _recommendedNewProvider = FutureProvider.family<List<PulseWordEntry>, int>(
   (ref, limit) =>
-      ref.watch(reviewStateProvider.notifier).recommendedNewWords(limit: limit),
+      ref
+          .watch(reviewStateProvider.notifier)
+          .recommendedNewWords(limit: limit, catalog: ref.watch(qwertyCatalogProvider)),
 );
 
 class _PulseHeader extends StatelessWidget {
@@ -275,7 +279,7 @@ class _PulseListCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final hasEntries = entries.isNotEmpty;
-    final primaryVocabId = hasEntries ? entries.first.vocabId : 'ai_core';
+    final primaryVocabId = entries.firstOrNull?.vocabId;
     return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -325,7 +329,9 @@ class _PulseListCard extends ConsumerWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (_) =>
-                          LearningSessionScreen(vocabId: primaryVocabId),
+                          LearningSessionScreen(
+                            vocabId: primaryVocabId ?? kDefaultVocabId,
+                          ),
                     ),
                   );
                 },

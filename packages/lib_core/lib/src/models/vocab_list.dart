@@ -7,6 +7,7 @@ class VocabList {
   final String domainColor;
   final int level;
   final int wordCount;
+  final String category;
 
   const VocabList({
     required this.id,
@@ -16,6 +17,7 @@ class VocabList {
     required this.domainColor,
     required this.level,
     required this.wordCount,
+    this.category = '',
   });
 
   factory VocabList.fromJson(Map<String, dynamic> json) => VocabList(
@@ -26,6 +28,7 @@ class VocabList {
         domainColor: (json['domainColor'] as String?) ?? '#10B981',
         level: (json['level'] as int?) ?? 1,
         wordCount: (json['wordCount'] as int?) ?? 0,
+        category: (json['category'] as String?) ?? '',
       );
 
   Map<String, dynamic> toJson() => {
@@ -36,6 +39,7 @@ class VocabList {
         'domainColor': domainColor,
         'level': level,
         'wordCount': wordCount,
+        'category': category,
       };
 }
 

@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "qwerty_si2_00001",
+    "word": "first floor",
+    "phonetic": "",
+    "translation": "一楼（美）；二楼（英）",
+    "translations": [
+      "一楼（美）；二楼（英）"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00002",
+    "word": "second floor",
+    "phonetic": "",
+    "translation": "二楼",
+    "translations": [
+      "二楼"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00003",
+    "word": "teacher's office",
+    "phonetic": "",
+    "translation": "教师办公室",
+    "translations": [
+      "教师办公室"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00004",
+    "word": "library",
+    "phonetic": "laɪˌbrɛrɪ",
+    "translation": "图书馆",
+    "translations": [
+      "图书馆"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00005",
+    "word": "playground",
+    "phonetic": "'ple'graʊnd",
+    "translation": "操场",
+    "translations": [
+      "操场"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00006",
+    "word": "computer room",
+    "phonetic": "",
+    "translation": "计算机房",
+    "translations": [
+      "计算机房"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00007",
+    "word": "art room",
+    "phonetic": "",
+    "translation": "美术教室",
+    "translations": [
+      "美术教室"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00008",
+    "word": "music room",
+    "phonetic": "",
+    "translation": "音乐教室",
+    "translations": [
+      "音乐教室"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00009",
+    "word": "next to",
+    "phonetic": "",
+    "translation": "紧邻",
+    "translations": [
+      "紧邻"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00010",
+    "word": "homework",
+    "phonetic": "'hom'wɝk",
+    "translation": "作业",
+    "translations": [
+      "作业"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00011",
+    "word": "class",
+    "phonetic": "klæs",
+    "translation": "班级",
+    "translations": [
+      "班级"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00012",
+    "word": "forty",
+    "phonetic": "'fɔrti",
+    "translation": "四十",
+    "translations": [
+      "四十"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00013",
+    "word": "way",
+    "phonetic": "we",
+    "translation": "方向",
+    "translations": [
+      "方向"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00014",
+    "word": "breakfast",
+    "phonetic": "'brɛkfəst",
+    "translation": "早餐",
+    "translations": [
+      "早餐"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00015",
+    "word": "English class",
+    "phonetic": "",
+    "translation": "英语课",
+    "translations": [
+      "英语课"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00016",
+    "word": "lunch",
+    "phonetic": "lʌntʃ",
+    "translation": "午饭",
+    "translations": [
+      "午饭"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00017",
+    "word": "music class",
+    "phonetic": "",
+    "translation": "音乐课",
+    "translations": [
+      "音乐课"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00018",
+    "word": "PE class",
+    "phonetic": "",
+    "translation": "体育课",
+    "translations": [
+      "体育课"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00019",
+    "word": "dinner",
+    "phonetic": "'dɪnɚ",
+    "translation": "正餐",
+    "translations": [
+      "正餐"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00020",
+    "word": "get up",
+    "phonetic": "",
+    "translation": "起床",
+    "translations": [
+      "起床"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00021",
+    "word": "go to school",
+    "phonetic": "",
+    "translation": "上学",
+    "translations": [
+      "上学"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00022",
+    "word": "go home",
+    "phonetic": "",
+    "translation": "回家",
+    "translations": [
+      "回家"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00023",
+    "word": "go to bed",
+    "phonetic": "",
+    "translation": "去睡觉",
+    "translations": [
+      "去睡觉"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00024",
+    "word": "over",
+    "phonetic": "'ovɚ",
+    "translation": "结束",
+    "translations": [
+      "结束"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00025",
+    "word": "now",
+    "phonetic": "naʊ",
+    "translation": "现在",
+    "translations": [
+      "现在"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00026",
+    "word": "o'clock",
+    "phonetic": "ə'klɑk",
+    "translation": "⋯⋯点钟",
+    "translations": [
+      "⋯⋯点钟"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00027",
+    "word": "kid",
+    "phonetic": "kɪd",
+    "translation": "小孩",
+    "translations": [
+      "小孩"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00028",
+    "word": "thirty",
+    "phonetic": "'θɝti",
+    "translation": "三十",
+    "translations": [
+      "三十"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00029",
+    "word": "hurry up",
+    "phonetic": "'hɝrɪ ʌp",
+    "translation": "快点",
+    "translations": [
+      "快点"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00030",
+    "word": "come on",
+    "phonetic": "",
+    "translation": "加油",
+    "translations": [
+      "加油"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00031",
+    "word": "just a minute",
+    "phonetic": "",
+    "translation": "稍等一会儿",
+    "translations": [
+      "稍等一会儿"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00032",
+    "word": "cold",
+    "phonetic": "kold",
+    "translation": "冷的",
+    "translations": [
+      "冷的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00033",
+    "word": "cool",
+    "phonetic": "kul",
+    "translation": "凉的",
+    "translations": [
+      "凉的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00034",
+    "word": "warm",
+    "phonetic": "wɔrm",
+    "translation": "温暖的",
+    "translations": [
+      "温暖的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00035",
+    "word": "hot",
+    "phonetic": "hɑt",
+    "translation": "热的",
+    "translations": [
+      "热的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00036",
+    "word": "sunny",
+    "phonetic": "'sʌni",
+    "translation": "阳光充足的",
+    "translations": [
+      "阳光充足的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00037",
+    "word": "windy",
+    "phonetic": "'wɪndi",
+    "translation": "多风的",
+    "translations": [
+      "多风的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00038",
+    "word": "cloudy",
+    "phonetic": "'klaʊdi",
+    "translation": "多云的",
+    "translations": [
+      "多云的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00039",
+    "word": "snowy",
+    "phonetic": "'snoɪ",
+    "translation": "下雪的",
+    "translations": [
+      "下雪的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00040",
+    "word": "rainy",
+    "phonetic": "'reni",
+    "translation": "阴雨的",
+    "translations": [
+      "阴雨的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00041",
+    "word": "outside",
+    "phonetic": ",aʊt'saɪd",
+    "translation": "在户外",
+    "translations": [
+      "在户外"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00042",
+    "word": "be careful",
+    "phonetic": "",
+    "translation": "小心",
+    "translations": [
+      "小心"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00043",
+    "word": "weather",
+    "phonetic": "'wɛðɚ",
+    "translation": "天气",
+    "translations": [
+      "天气"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00044",
+    "word": "New York",
+    "phonetic": "",
+    "translation": "纽约",
+    "translations": [
+      "纽约"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00045",
+    "word": "how about...",
+    "phonetic": "",
+    "translation": "怎么样？",
+    "translations": [
+      "怎么样？"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00046",
+    "word": "degree",
+    "phonetic": "dɪ'ɡri",
+    "translation": "度",
+    "translations": [
+      "度"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00047",
+    "word": "world",
+    "phonetic": "wɝld",
+    "translation": "世界",
+    "translations": [
+      "世界"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00048",
+    "word": "London",
+    "phonetic": "ˈlʌndən",
+    "translation": "伦敦",
+    "translations": [
+      "伦敦"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00049",
+    "word": "Moscow",
+    "phonetic": "ˈmɑsˌkaʊ",
+    "translation": "莫斯科",
+    "translations": [
+      "莫斯科"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00050",
+    "word": "Singapore",
+    "phonetic": "ˌsɪŋgə'pɔ:",
+    "translation": "新加坡城",
+    "translations": [
+      "新加坡城"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00051",
+    "word": "Sydney",
+    "phonetic": "'sɪdnɪ",
+    "translation": "悉尼",
+    "translations": [
+      "悉尼"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00052",
+    "word": "fly",
+    "phonetic": "flaɪ",
+    "translation": "放（风筝）",
+    "translations": [
+      "放（风筝）"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00053",
+    "word": "love",
+    "phonetic": "lʌv",
+    "translation": "爱你的",
+    "translations": [
+      "爱你的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00054",
+    "word": "tomato",
+    "phonetic": "tə'meto",
+    "translation": "西红柿",
+    "translations": [
+      "西红柿"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00055",
+    "word": "potato",
+    "phonetic": "pə'teto",
+    "translation": "马铃薯",
+    "translations": [
+      "马铃薯"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00056",
+    "word": "green beans",
+    "phonetic": "",
+    "translation": "豆角",
+    "translations": [
+      "豆角"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00057",
+    "word": "carrot",
+    "phonetic": "'kærət",
+    "translation": "胡萝卜",
+    "translations": [
+      "胡萝卜"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00058",
+    "word": "horse",
+    "phonetic": "hɔrs",
+    "translation": "马",
+    "translations": [
+      "马"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00059",
+    "word": "cow",
+    "phonetic": "kaʊ",
+    "translation": "牛",
+    "translations": [
+      "牛"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00060",
+    "word": "sheep",
+    "phonetic": "ʃip",
+    "translation": "绵羊",
+    "translations": [
+      "绵羊"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00061",
+    "word": "hen",
+    "phonetic": "hɛn",
+    "translation": "母鸡",
+    "translations": [
+      "母鸡"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00062",
+    "word": "these",
+    "phonetic": "ðiz",
+    "translation": "这些",
+    "translations": [
+      "这些"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00063",
+    "word": "yum",
+    "phonetic": "jʌm",
+    "translation": "味道好",
+    "translations": [
+      "味道好"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00064",
+    "word": "animal",
+    "phonetic": "'ænɪml",
+    "translation": "动物",
+    "translations": [
+      "动物"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00065",
+    "word": "those",
+    "phonetic": "ðoz",
+    "translation": "那些",
+    "translations": [
+      "那些"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00066",
+    "word": "garden",
+    "phonetic": "'ɡɑrdn",
+    "translation": "花园",
+    "translations": [
+      "花园"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00067",
+    "word": "farm",
+    "phonetic": "fɑrm",
+    "translation": "农场",
+    "translations": [
+      "农场"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00068",
+    "word": "goat",
+    "phonetic": "ɡot",
+    "translation": "山羊",
+    "translations": [
+      "山羊"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00069",
+    "word": "eat",
+    "phonetic": "it",
+    "translation": "吃",
+    "translations": [
+      "吃"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00070",
+    "word": "clothes",
+    "phonetic": "kloz",
+    "translation": "服装",
+    "translations": [
+      "服装"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00071",
+    "word": "pants",
+    "phonetic": "pænts",
+    "translation": "裤子",
+    "translations": [
+      "裤子"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00072",
+    "word": "hat",
+    "phonetic": "hæt",
+    "translation": "帽子",
+    "translations": [
+      "帽子"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00073",
+    "word": "dress",
+    "phonetic": "drɛs",
+    "translation": "连衣裙",
+    "translations": [
+      "连衣裙"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00074",
+    "word": "skirt",
+    "phonetic": "skɝt",
+    "translation": "女裙",
+    "translations": [
+      "女裙"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00075",
+    "word": "coat",
+    "phonetic": "kot",
+    "translation": "大衣",
+    "translations": [
+      "大衣"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00076",
+    "word": "sweater",
+    "phonetic": "'swɛtɚ",
+    "translation": "毛衣",
+    "translations": [
+      "毛衣"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00077",
+    "word": "sock",
+    "phonetic": "sɑk",
+    "translation": "短袜",
+    "translations": [
+      "短袜"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00078",
+    "word": "shorts",
+    "phonetic": "ʃɔrts",
+    "translation": "短裤",
+    "translations": [
+      "短裤"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00079",
+    "word": "jacket",
+    "phonetic": "'dʒækɪt",
+    "translation": "夹克衫",
+    "translations": [
+      "夹克衫"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00080",
+    "word": "shirt",
+    "phonetic": "ʃɝt",
+    "translation": "衬衫",
+    "translations": [
+      "衬衫"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00081",
+    "word": "yours",
+    "phonetic": "jʊrz",
+    "translation": "你的",
+    "translations": [
+      "你的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00082",
+    "word": "whose",
+    "phonetic": "huz",
+    "translation": "谁的",
+    "translations": [
+      "谁的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00083",
+    "word": "mine",
+    "phonetic": "maɪn",
+    "translation": "我的",
+    "translations": [
+      "我的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00084",
+    "word": "pack",
+    "phonetic": "pæk",
+    "translation": "收拾",
+    "translations": [
+      "收拾"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00085",
+    "word": "wait",
+    "phonetic": "wet",
+    "translation": "等待",
+    "translations": [
+      "等待"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00086",
+    "word": "glove",
+    "phonetic": "ɡlʌv",
+    "translation": "手套",
+    "translations": [
+      "手套"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00087",
+    "word": "scarf",
+    "phonetic": "skɑrf",
+    "translation": "围巾",
+    "translations": [
+      "围巾"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00088",
+    "word": "umbrella",
+    "phonetic": "ʌm'brɛlə",
+    "translation": "伞",
+    "translations": [
+      "伞"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00089",
+    "word": "sunglasses",
+    "phonetic": "'sʌnɡlæsɪz",
+    "translation": "太阳镜",
+    "translations": [
+      "太阳镜"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00090",
+    "word": "pretty",
+    "phonetic": "ˈprɪtɪ",
+    "translation": "美丽的",
+    "translations": [
+      "美丽的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00091",
+    "word": "expensive",
+    "phonetic": "ɪk'spɛnsɪv",
+    "translation": "贵的",
+    "translations": [
+      "贵的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00092",
+    "word": "cheap",
+    "phonetic": "tʃip",
+    "translation": "便宜的",
+    "translations": [
+      "便宜的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00093",
+    "word": "nice",
+    "phonetic": "naɪs",
+    "translation": "好的",
+    "translations": [
+      "好的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00094",
+    "word": "try on",
+    "phonetic": "",
+    "translation": "试穿",
+    "translations": [
+      "试穿"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00095",
+    "word": "size",
+    "phonetic": "saɪz",
+    "translation": "尺码",
+    "translations": [
+      "尺码"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00096",
+    "word": "of course",
+    "phonetic": "",
+    "translation": "当然",
+    "translations": [
+      "当然"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00097",
+    "word": "too",
+    "phonetic": "tu",
+    "translation": "太",
+    "translations": [
+      "太"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00098",
+    "word": "just",
+    "phonetic": "dʒʌst",
+    "translation": "正好",
+    "translations": [
+      "正好"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00099",
+    "word": "how much",
+    "phonetic": "haʊ mʌtʃ",
+    "translation": "多少钱",
+    "translations": [
+      "多少钱"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00100",
+    "word": "eighty",
+    "phonetic": "ˈeti",
+    "translation": "八十",
+    "translations": [
+      "八十"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00101",
+    "word": "dollar",
+    "phonetic": "'dɑlɚ",
+    "translation": "元",
+    "translations": [
+      "元"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00102",
+    "word": "sale",
+    "phonetic": "sel",
+    "translation": "特价销售",
+    "translations": [
+      "特价销售"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00103",
+    "word": "more",
+    "phonetic": "mɔr",
+    "translation": "更多的",
+    "translations": [
+      "更多的"
+    ],
+    "domain": "qwerty_si2"
+  },
+  {
+    "id": "qwerty_si2_00104",
+    "word": "us",
+    "phonetic": "əs; ʌs",
+    "translation": "我们",
+    "translations": [
+      "我们"
+    ],
+    "domain": "qwerty_si2"
+  }
+]

@@ -1,0 +1,4342 @@
+[
+  {
+    "id": "qwerty_raz_s_00001",
+    "word": "compliment",
+    "phonetic": "ˈkɒmplɪmənt",
+    "translation": "n. 恭维；称赞；问候；致意；道贺 vt. 恭维；称赞",
+    "translations": [
+      "n. 恭维；称赞；问候；致意；道贺 vt. 恭维；称赞"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00002",
+    "word": "flattering",
+    "phonetic": "ˈflætərɪŋ",
+    "translation": "adj. 奉承的；谄媚的",
+    "translations": [
+      "adj. 奉承的；谄媚的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00003",
+    "word": "greedy",
+    "phonetic": "ˈɡriːdi",
+    "translation": "adj. 贪婪的；贪吃的；渴望的",
+    "translations": [
+      "adj. 贪婪的；贪吃的；渴望的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00004",
+    "word": "humble",
+    "phonetic": "ˈhʌmbl",
+    "translation": "adj. 谦逊的；简陋的；（级别或地位）低下的；不大的 vt. 使谦恭；轻松打败（尤指强大的对手）；低声下气",
+    "translations": [
+      "adj. 谦逊的；简陋的；（级别或地位）低下的；不大的 vt. 使谦恭；轻松打败（尤指强大的对手）；低声下气"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00005",
+    "word": "persistence",
+    "phonetic": "pəˈsɪstəns",
+    "translation": "n. 持续；固执；存留；坚持不懈；毅力",
+    "translations": [
+      "n. 持续；固执；存留；坚持不懈；毅力"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00006",
+    "word": "strength",
+    "phonetic": "streŋθ",
+    "translation": "n. 力量；力气；兵力；长处",
+    "translations": [
+      "n. 力量；力气；兵力；长处"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00007",
+    "word": "competitive",
+    "phonetic": "kəmˈpetətɪv",
+    "translation": "adj. 竞争的；比赛的；求胜心切的",
+    "translations": [
+      "adj. 竞争的；比赛的；求胜心切的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00008",
+    "word": "cooperate",
+    "phonetic": "kəʊˈɒpəreɪt",
+    "translation": "vi. 合作，配合；协力",
+    "translations": [
+      "vi. 合作，配合；协力"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00009",
+    "word": "matriarch",
+    "phonetic": "ˈmeɪtriɑːk",
+    "translation": "n. 女家长；女统治者；女负责人；受人尊敬的妇女",
+    "translations": [
+      "n. 女家长；女统治者；女负责人；受人尊敬的妇女"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00010",
+    "word": "predator",
+    "phonetic": "ˈpredətə(r)",
+    "translation": "n. [动] 捕食者；[动] 食肉动物；掠夺者",
+    "translations": [
+      "n. [动] 捕食者；[动] 食肉动物；掠夺者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00011",
+    "word": "solitary",
+    "phonetic": "ˈsɒlətri",
+    "translation": "adj. 孤独的；独居的 n. 独居者；隐士",
+    "translations": [
+      "adj. 孤独的；独居的 n. 独居者；隐士"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00012",
+    "word": "young",
+    "phonetic": "jʌŋ",
+    "translation": "adj. 年轻的；初期的；没有经验的 n. 年轻人；（动物的）崽，仔 n. (Young)人名；(中)杨(广东话·威妥玛)；(柬)永；(英、葡)扬",
+    "translations": [
+      "adj. 年轻的；初期的；没有经验的 n. 年轻人；（动物的）崽，仔 n. (Young)人名；(中)杨(广东话·威妥玛)；(柬)永；(英、葡)扬"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00013",
+    "word": "compassion",
+    "phonetic": "kəmˈpæʃn",
+    "translation": "n. 同情；怜悯",
+    "translations": [
+      "n. 同情；怜悯"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00014",
+    "word": "devotion",
+    "phonetic": "dɪˈvəʊʃn",
+    "translation": "n. 献身，奉献；忠诚；热爱",
+    "translations": [
+      "n. 献身，奉献；忠诚；热爱"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00015",
+    "word": "evidence",
+    "phonetic": "ˈevɪdəns",
+    "translation": "n. 证据，证明；迹象；明显 vt. 证明",
+    "translations": [
+      "n. 证据，证明；迹象；明显 vt. 证明"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00016",
+    "word": "instinct",
+    "phonetic": "ˈɪnstɪŋkt",
+    "translation": "n. 本能，直觉；天性 adj. 充满着的",
+    "translations": [
+      "n. 本能，直觉；天性 adj. 充满着的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00017",
+    "word": "loyalty",
+    "phonetic": "ˈlɔɪəlti",
+    "translation": "n. 忠诚；忠心；忠实；忠于…感情",
+    "translations": [
+      "n. 忠诚；忠心；忠实；忠于…感情"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00018",
+    "word": "passive",
+    "phonetic": "ˈpæsɪv",
+    "translation": "adj. 被动的，消极的；被动语态的 n. 被动语态",
+    "translations": [
+      "adj. 被动的，消极的；被动语态的 n. 被动语态"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00019",
+    "word": "hoax",
+    "phonetic": "həʊks",
+    "translation": "n. 恶作剧；骗局；谎报 v. 捉弄，欺骗",
+    "translations": [
+      "n. 恶作剧；骗局；谎报 v. 捉弄，欺骗"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00020",
+    "word": "media",
+    "phonetic": "ˈmiːdiə",
+    "translation": "n. 媒体；媒质（medium的复数）；血管中层；浊塞音；中脉",
+    "translations": [
+      "n. 媒体；媒质（medium的复数）；血管中层；浊塞音；中脉"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00021",
+    "word": "naive",
+    "phonetic": "naɪˈiːv",
+    "translation": "adj. 天真的,幼稚的",
+    "translations": [
+      "adj. 天真的,幼稚的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00022",
+    "word": "prank",
+    "phonetic": "præŋk",
+    "translation": "n. 恶作剧，开玩笑；戏谑 vt. 装饰；打扮 vi. 炫耀自己；胡闹",
+    "translations": [
+      "n. 恶作剧，开玩笑；戏谑 vt. 装饰；打扮 vi. 炫耀自己；胡闹"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00023",
+    "word": "traditional",
+    "phonetic": "trəˈdɪʃənl",
+    "translation": "adj. 传统的；惯例的",
+    "translations": [
+      "adj. 传统的；惯例的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00024",
+    "word": "victim",
+    "phonetic": "ˈvɪktɪm",
+    "translation": "n. 受害人，牺牲品，牺牲者；受骗者，上当的人；祭品，牺牲；无助者，被动者",
+    "translations": [
+      "n. 受害人，牺牲品，牺牲者；受骗者，上当的人；祭品，牺牲；无助者，被动者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00025",
+    "word": "culture",
+    "phonetic": "ˈkʌltʃə(r)",
+    "translation": "n. 文化，文明；修养；栽培 vt. [细胞][微] 培养（等于cultivate）",
+    "translations": [
+      "n. 文化，文明；修养；栽培 vt. [细胞][微] 培养（等于cultivate）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00026",
+    "word": "elect",
+    "phonetic": "ɪˈlekt",
+    "translation": "v. 选举；选择，决定（做某事）；（上帝）挑选（某人）（使其灵魂永远得救） adj. 卓越的；蒙上帝挑选（而得救）的；当选（而尚未就职的） n. 被选的人；上帝的选民；特权集体",
+    "translations": [
+      "v. 选举；选择，决定（做某事）；（上帝）挑选（某人）（使其灵魂永远得救） adj. 卓越的；蒙上帝挑选（而得救）的；当选（而尚未就职的） n. 被选的人；上帝的选民；特权集体"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00027",
+    "word": "festival",
+    "phonetic": "ˈfestɪvl",
+    "translation": "n. 节日；庆祝，纪念活动；欢乐 adj. 节日的，喜庆的；快乐的",
+    "translations": [
+      "n. 节日；庆祝，纪念活动；欢乐 adj. 节日的，喜庆的；快乐的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00028",
+    "word": "gaucho",
+    "phonetic": "ˈɡaʊtʃəʊ",
+    "translation": "n. 加乌乔人（居住于南美大草原上的印第安人和西班牙人的混血种族）",
+    "translations": [
+      "n. 加乌乔人（居住于南美大草原上的印第安人和西班牙人的混血种族）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00029",
+    "word": "province",
+    "phonetic": "ˈprɒvɪns",
+    "translation": "n. 省；领域；职权",
+    "translations": [
+      "n. 省；领域；职权"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00030",
+    "word": "textile",
+    "phonetic": "ˈtekstaɪl",
+    "translation": "n. 纺织品，织物 adj. 纺织的",
+    "translations": [
+      "n. 纺织品，织物 adj. 纺织的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00031",
+    "word": "abandon",
+    "phonetic": "əˈbændən",
+    "translation": "v. 遗弃；离开；放弃；终止；陷入 n. 放任，狂热",
+    "translations": [
+      "v. 遗弃；离开；放弃；终止；陷入 n. 放任，狂热"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00032",
+    "word": "cannon",
+    "phonetic": "ˈkænən",
+    "translation": "n. 大炮；加农炮；榴弹炮；机关炮 vi. 炮轰；开炮 vt. 炮轰 n. (Cannon)人名；(英、葡)坎农",
+    "translations": [
+      "n. 大炮；加农炮；榴弹炮；机关炮 vi. 炮轰；开炮 vt. 炮轰 n. (Cannon)人名；(英、葡)坎农"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00033",
+    "word": "flee",
+    "phonetic": "fliː",
+    "translation": "vi. 逃走；消失，消散 vt. 逃跑，逃走；逃避",
+    "translations": [
+      "vi. 逃走；消失，消散 vt. 逃跑，逃走；逃避"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00034",
+    "word": "fort",
+    "phonetic": "fɔːt",
+    "translation": "n. 堡垒；要塞；（美）边界贸易站 vt. 设要塞保卫 vi. 构筑要塞 n. (Fort)人名；(法)福尔；(德、英、西、葡、匈)福特",
+    "translations": [
+      "n. 堡垒；要塞；（美）边界贸易站 vt. 设要塞保卫 vi. 构筑要塞 n. (Fort)人名；(法)福尔；(德、英、西、葡、匈)福特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00035",
+    "word": "ransack",
+    "phonetic": "ˈrænsæk",
+    "translation": "vt. 洗劫，掠夺；遍寻",
+    "translations": [
+      "vt. 洗劫，掠夺；遍寻"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00036",
+    "word": "degree",
+    "phonetic": "dɪˈɡriː",
+    "translation": "n. 程度，等级；度；学位；阶层",
+    "translations": [
+      "n. 程度，等级；度；学位；阶层"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00037",
+    "word": "ethnicity",
+    "phonetic": "eθˈnɪsəti",
+    "translation": "n. 种族划分",
+    "translations": [
+      "n. 种族划分"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00038",
+    "word": "heritage",
+    "phonetic": "ˈherɪtɪdʒ",
+    "translation": "n. 遗产；传统；继承物；继承权 n. (Heritage)人名；(英)赫里蒂奇",
+    "translations": [
+      "n. 遗产；传统；继承物；继承权 n. (Heritage)人名；(英)赫里蒂奇"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00039",
+    "word": "injustice",
+    "phonetic": "ɪnˈdʒʌstɪs",
+    "translation": "n. 不公正；不讲道义",
+    "translations": [
+      "n. 不公正；不讲道义"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00040",
+    "word": "race",
+    "phonetic": "reɪs",
+    "translation": "n. 属，种；种族，人种；家庭，门第；赛事，赛跑 vt. 使参加比赛；和…竞赛；使急走，使全速行进 vi. 比速度，参加竞赛；全速行进 n. (Race)人名；(英)雷斯；(塞)拉采",
+    "translations": [
+      "n. 属，种；种族，人种；家庭，门第；赛事，赛跑 vt. 使参加比赛；和…竞赛；使急走，使全速行进 vi. 比速度，参加竞赛；全速行进 n. (Race)人名；(英)雷斯；(塞)拉采"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00041",
+    "word": "biologist",
+    "phonetic": "baɪˈɒlədʒɪst",
+    "translation": "n. 生物学家",
+    "translations": [
+      "n. 生物学家"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00042",
+    "word": "carnivore",
+    "phonetic": "ˈkɑːnɪvɔː(r)",
+    "translation": "n. [动] 食肉动物；食虫植物",
+    "translations": [
+      "n. [动] 食肉动物；食虫植物"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00043",
+    "word": "extinction",
+    "phonetic": "ɪkˈstɪŋkʃn",
+    "translation": "n. 灭绝；消失；消灭；废止",
+    "translations": [
+      "n. 灭绝；消失；消灭；废止"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00044",
+    "word": "hibernate",
+    "phonetic": "ˈhaɪbəneɪt",
+    "translation": "vi. 过冬；（动物）冬眠；（人等）避寒",
+    "translations": [
+      "vi. 过冬；（动物）冬眠；（人等）避寒"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00045",
+    "word": "muzzle",
+    "phonetic": "ˈmʌzl",
+    "translation": "n. 枪口，炮口；口套，口络；动物的鼻口 vt. 使…缄默；给…戴口套；封锁…的言论",
+    "translations": [
+      "n. 枪口，炮口；口套，口络；动物的鼻口 vt. 使…缄默；给…戴口套；封锁…的言论"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00046",
+    "word": "omnivore",
+    "phonetic": "ˈɒmnɪvɔː(r)",
+    "translation": "n. [动] 杂食动物；不偏食的人",
+    "translations": [
+      "n. [动] 杂食动物；不偏食的人"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00047",
+    "word": "contact",
+    "phonetic": "ˈkɒntækt",
+    "translation": "n. 接触，联系 vt. 使接触，联系 vi. 使接触，联系",
+    "translations": [
+      "n. 接触，联系 vt. 使接触，联系 vi. 使接触，联系"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00048",
+    "word": "information",
+    "phonetic": "ˌɪnfəˈmeɪʃn",
+    "translation": "n. 信息，资料；知识；情报",
+    "translations": [
+      "n. 信息，资料；知识；情报"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00049",
+    "word": "interview",
+    "phonetic": "ˈɪntəvjuː",
+    "translation": "n. 接见，采访；面试，面谈 vt. 采访；接见；对…进行面谈；对某人进行面试",
+    "translations": [
+      "n. 接见，采访；面试，面谈 vt. 采访；接见；对…进行面谈；对某人进行面试"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00050",
+    "word": "research",
+    "phonetic": "rɪ'sɜːtʃ; 'riːsɜːtʃ",
+    "translation": "n. 研究；调查 vi. 研究；调查 vt. 研究；调查 [ 过去式 researched 过去分词 researched 现在分词 researching ]",
+    "translations": [
+      "n. 研究；调查 vi. 研究；调查 vt. 研究；调查 [ 过去式 researched 过去分词 researched 现在分词 researching ]"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00051",
+    "word": "resource",
+    "phonetic": "rɪˈsɔːs; rɪˈzɔːs",
+    "translation": "n. 资源，财力；办法；智谋 vi. 向...提供资金",
+    "translations": [
+      "n. 资源，财力；办法；智谋 vi. 向...提供资金"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00052",
+    "word": "source",
+    "phonetic": "sɔːs",
+    "translation": "n. 来源；水源；原始资料 n. (Source)人名；(法)苏尔斯",
+    "translations": [
+      "n. 来源；水源；原始资料 n. (Source)人名；(法)苏尔斯"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00053",
+    "word": "apologize",
+    "phonetic": "əˈpɒlədʒaɪz",
+    "translation": "vi. 道歉；辩解；赔不是 vt. 道歉；谢罪；辩白",
+    "translations": [
+      "vi. 道歉；辩解；赔不是 vt. 道歉；谢罪；辩白"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00054",
+    "word": "depart",
+    "phonetic": "dɪˈpɑːt",
+    "translation": "vi. 离开；出发，起程；违反；去世 adj. 逝世的",
+    "translations": [
+      "vi. 离开；出发，起程；违反；去世 adj. 逝世的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00055",
+    "word": "emotional",
+    "phonetic": "ɪˈməʊʃənl",
+    "translation": "adj. 情绪的；易激动的；感动人的",
+    "translations": [
+      "adj. 情绪的；易激动的；感动人的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00056",
+    "word": "frantic",
+    "phonetic": "ˈfræntɪk",
+    "translation": "adj. 狂乱的，疯狂的",
+    "translations": [
+      "adj. 狂乱的，疯狂的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00057",
+    "word": "heave",
+    "phonetic": "hiːv",
+    "translation": "vt. 举起；使起伏；投掷；恶心；发出（叹息等） vi. 起伏；举起；喘息；呕吐 n. 举起；起伏；投掷；一阵呕吐",
+    "translations": [
+      "vt. 举起；使起伏；投掷；恶心；发出（叹息等） vi. 起伏；举起；喘息；呕吐 n. 举起；起伏；投掷；一阵呕吐"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00058",
+    "word": "wreck",
+    "phonetic": "rek",
+    "translation": "n. 破坏；失事；残骸；失去健康的人 vt. 破坏；使失事；拆毁 vi. 失事；营救失事船只",
+    "translations": [
+      "n. 破坏；失事；残骸；失去健康的人 vt. 破坏；使失事；拆毁 vi. 失事；营救失事船只"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00059",
+    "word": "division",
+    "phonetic": "dɪˈvɪʒn",
+    "translation": "n. [数] 除法；部门；分配；分割；师（军队）；赛区",
+    "translations": [
+      "n. [数] 除法；部门；分配；分割；师（军队）；赛区"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00060",
+    "word": "goal",
+    "phonetic": "ɡəʊl",
+    "translation": "n. 目标；球门，得分数；终点 vi. 攻门，射门得分",
+    "translations": [
+      "n. 目标；球门，得分数；终点 vi. 攻门，射门得分"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00061",
+    "word": "league",
+    "phonetic": "liːɡ",
+    "translation": "n. 联盟；社团；范畴 vt. 使…结盟；与…联合 vi. 团结；结盟 n. (League)人名；(英)利格",
+    "translations": [
+      "n. 联盟；社团；范畴 vt. 使…结盟；与…联合 vi. 团结；结盟 n. (League)人名；(英)利格"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00062",
+    "word": "organized",
+    "phonetic": "ˈɔːɡənaɪzd",
+    "translation": "adj. 有组织的；安排有秩序的；做事有条理的 v. 组织（organize的过去分词）",
+    "translations": [
+      "adj. 有组织的；安排有秩序的；做事有条理的 v. 组织（organize的过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00063",
+    "word": "pastime",
+    "phonetic": "ˈpɑːstaɪm",
+    "translation": "n. 娱乐，消遣",
+    "translations": [
+      "n. 娱乐，消遣"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00064",
+    "word": "tournament",
+    "phonetic": "ˈtʊənəmənt; ˈtɔːnəmənt; ˈtɜːnəmənt",
+    "translation": "n. 锦标赛，联赛；比赛",
+    "translations": [
+      "n. 锦标赛，联赛；比赛"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00065",
+    "word": "Arabic",
+    "phonetic": "ˈærəbɪk",
+    "translation": "adj. 阿拉伯的；阿拉伯人的 n. 阿拉伯语",
+    "translations": [
+      "adj. 阿拉伯的；阿拉伯人的 n. 阿拉伯语"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00066",
+    "word": "baklava",
+    "phonetic": "ˈbɑːkləvə",
+    "translation": "n. 果仁蜜饼",
+    "translations": [
+      "n. 果仁蜜饼"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00067",
+    "word": "homeland",
+    "phonetic": "ˈhəʊmlænd",
+    "translation": "n. 祖国；故乡",
+    "translations": [
+      "n. 祖国；故乡"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00068",
+    "word": "pistachio",
+    "phonetic": "pɪˈstæʃiəʊ; pɪˈstɑːʃiəʊ",
+    "translation": "n. 开心果；阿月浑子果实；阿月浑子树；淡草绿色",
+    "translations": [
+      "n. 开心果；阿月浑子果实；阿月浑子树；淡草绿色"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00069",
+    "word": "refugee",
+    "phonetic": "ˌrefjuˈdʒiː",
+    "translation": "n. 难民，避难者；流亡者，逃亡者",
+    "translations": [
+      "n. 难民，避难者；流亡者，逃亡者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00070",
+    "word": "Syria",
+    "phonetic": "ˈsɪriə",
+    "translation": "n. 叙利亚共和国",
+    "translations": [
+      "n. 叙利亚共和国"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00071",
+    "word": "assess",
+    "phonetic": "əˈses",
+    "translation": "vt. 评定；估价；对…征税",
+    "translations": [
+      "vt. 评定；估价；对…征税"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00072",
+    "word": "diagnosis",
+    "phonetic": "ˌdaɪəɡˈnəʊsɪs",
+    "translation": "n. 诊断",
+    "translations": [
+      "n. 诊断"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00073",
+    "word": "inflammation",
+    "phonetic": "ˌɪnfləˈmeɪʃn",
+    "translation": "n. [病理] 炎症；[医] 发炎；燃烧；发火",
+    "translations": [
+      "n. [病理] 炎症；[医] 发炎；燃烧；发火"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00074",
+    "word": "puncture",
+    "phonetic": "ˈpʌŋktʃə(r)",
+    "translation": "n. （轮胎被扎的）小孔；刺痕；刺伤 v. 刺穿；（被）戳破；使突然泄气；打断",
+    "translations": [
+      "n. （轮胎被扎的）小孔；刺痕；刺伤 v. 刺穿；（被）戳破；使突然泄气；打断"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00075",
+    "word": "symptom",
+    "phonetic": "ˈsɪmptəm",
+    "translation": "n. [临床] 症状；征兆",
+    "translations": [
+      "n. [临床] 症状；征兆"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00076",
+    "word": "venom",
+    "phonetic": "ˈvenəm",
+    "translation": "n. 毒液；恶意 vt. 使有毒；放毒",
+    "translations": [
+      "n. 毒液；恶意 vt. 使有毒；放毒"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00077",
+    "word": "commotion",
+    "phonetic": "kəˈməʊʃn",
+    "translation": "n. 骚动；暴乱",
+    "translations": [
+      "n. 骚动；暴乱"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00078",
+    "word": "fiasco",
+    "phonetic": "fiˈæskəʊ",
+    "translation": "n. 惨败 n. (Fiasco)人名；(意)菲亚斯科",
+    "translations": [
+      "n. 惨败 n. (Fiasco)人名；(意)菲亚斯科"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00079",
+    "word": "menace",
+    "phonetic": "ˈmenəs",
+    "translation": "n. 威胁；恐吓 vi. 恐吓；进行威胁 vt. 威胁；恐吓",
+    "translations": [
+      "n. 威胁；恐吓 vi. 恐吓；进行威胁 vt. 威胁；恐吓"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00080",
+    "word": "responsible",
+    "phonetic": "rɪˈspɒnsəbl",
+    "translation": "adj. 负责的，可靠的；有责任的",
+    "translations": [
+      "adj. 负责的，可靠的；有责任的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00081",
+    "word": "route",
+    "phonetic": "ruːt",
+    "translation": "n. 路线，航线；道路，公路；（交通工具的）固定路线；巡访；途径，渠道；（北美）递送路线；用于美国干线公路号码前 v. 按特定路线发送，为……规定路线",
+    "translations": [
+      "n. 路线，航线；道路，公路；（交通工具的）固定路线；巡访；途径，渠道；（北美）递送路线；用于美国干线公路号码前 v. 按特定路线发送，为……规定路线"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00082",
+    "word": "trample",
+    "phonetic": "ˈtræmpl",
+    "translation": "vt. 践踏；蔑视，伤害 vi. 践踏；蔑视，伤害；脚步沉重地走 n. 蹂躏；践踏声",
+    "translations": [
+      "vt. 践踏；蔑视，伤害 vi. 践踏；蔑视，伤害；脚步沉重地走 n. 蹂躏；践踏声"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00083",
+    "word": "advance",
+    "phonetic": "ədˈvɑːns",
+    "translation": "n. 发展；前进；增长；预付款 vt. 提出；预付；使……前进；将……提前 vi. 前进；进展；上涨 adj. 预先的；先行的",
+    "translations": [
+      "n. 发展；前进；增长；预付款 vt. 提出；预付；使……前进；将……提前 vi. 前进；进展；上涨 adj. 预先的；先行的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00084",
+    "word": "correspondence",
+    "phonetic": "ˌkɒrəˈspɒndəns",
+    "translation": "n. 通信；一致；相当",
+    "translations": [
+      "n. 通信；一致；相当"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00085",
+    "word": "entrepreneur",
+    "phonetic": "ˌɒntrəprəˈnɜː(r)",
+    "translation": "n. 企业家；承包人；主办者",
+    "translations": [
+      "n. 企业家；承包人；主办者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00086",
+    "word": "income",
+    "phonetic": "ˈɪnkʌm; ˈɪnkəm",
+    "translation": "n. 收入，收益；所得",
+    "translations": [
+      "n. 收入，收益；所得"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00087",
+    "word": "negotiate",
+    "phonetic": "nɪˈɡəʊʃieɪt",
+    "translation": "vt. 谈判，商议；转让；越过 vi. 谈判，交涉",
+    "translations": [
+      "vt. 谈判，商议；转让；越过 vi. 谈判，交涉"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00088",
+    "word": "skeptical",
+    "phonetic": "ˈskeptɪkl",
+    "translation": "adj. 怀疑的；（哲学）怀疑论的，不可知论的",
+    "translations": [
+      "adj. 怀疑的；（哲学）怀疑论的，不可知论的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00089",
+    "word": "allowance",
+    "phonetic": "əˈlaʊəns",
+    "translation": "n. 津贴，零用钱；允许；限额 vt. 定量供应",
+    "translations": [
+      "n. 津贴，零用钱；允许；限额 vt. 定量供应"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00090",
+    "word": "exploit",
+    "phonetic": "ɪkˈsplɔɪt",
+    "translation": "vt. 开发，开拓；剥削；开采 n. 勋绩；功绩",
+    "translations": [
+      "vt. 开发，开拓；剥削；开采 n. 勋绩；功绩"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00091",
+    "word": "leverage",
+    "phonetic": "ˈliːvərɪdʒ",
+    "translation": "n. 手段，影响力；杠杆作用；杠杆效率 v. 利用；举债经营",
+    "translations": [
+      "n. 手段，影响力；杠杆作用；杠杆效率 v. 利用；举债经营"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00092",
+    "word": "oppress",
+    "phonetic": "əˈpres",
+    "translation": "vt. 压迫，压抑；使……烦恼；使……感到沉重",
+    "translations": [
+      "vt. 压迫，压抑；使……烦恼；使……感到沉重"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00093",
+    "word": "donated",
+    "phonetic": "ˈdəʊneɪtɪd",
+    "translation": "adj. 捐赠的 v. 捐赠（donate的过去分词形式）",
+    "translations": [
+      "adj. 捐赠的 v. 捐赠（donate的过去分词形式）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00094",
+    "word": "profit",
+    "phonetic": "ˈprɒfɪt",
+    "translation": "n. 利润；利益 vi. vi. 获利；有益 vt. 有益于 n. (Profit)（法）普罗菲（人名）",
+    "translations": [
+      "n. 利润；利益 vi. vi. 获利；有益 vt. 有益于 n. (Profit)（法）普罗菲（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00095",
+    "word": "retro",
+    "phonetic": "ˈretrəʊ",
+    "translation": "adj. 复古的，（服装式样等）重新流行的；仿效不久前流行风格的 n. （服装式样等）重新流行；回顾展 abbr. 制动火箭，减速火箭 (retrorocket)",
+    "translations": [
+      "adj. 复古的，（服装式样等）重新流行的；仿效不久前流行风格的 n. （服装式样等）重新流行；回顾展 abbr. 制动火箭，减速火箭 (retrorocket)"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00096",
+    "word": "secondhand",
+    "phonetic": "'sekənd'hænd",
+    "translation": "adj. 二手的；旧的；间接获得的；做旧货生意的 adv. 间接地；间接听来；以旧货",
+    "translations": [
+      "adj. 二手的；旧的；间接获得的；做旧货生意的 adv. 间接地；间接听来；以旧货"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00097",
+    "word": "wardrobe",
+    "phonetic": "ˈwɔːdrəʊb",
+    "translation": "n. 衣柜；行头；全部戏装",
+    "translations": [
+      "n. 衣柜；行头；全部戏装"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00098",
+    "word": "cocoon",
+    "phonetic": "kəˈkuːn",
+    "translation": "n. 茧；卵囊 vt. 把……紧紧包住",
+    "translations": [
+      "n. 茧；卵囊 vt. 把……紧紧包住"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00099",
+    "word": "exoskeleton",
+    "phonetic": "ˈeksəʊskelɪtn",
+    "translation": "n. [昆] 外骨骼",
+    "translations": [
+      "n. [昆] 外骨骼"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00100",
+    "word": "insect",
+    "phonetic": "ˈɪnsekt",
+    "translation": "n. 昆虫；卑鄙的人",
+    "translations": [
+      "n. 昆虫；卑鄙的人"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00101",
+    "word": "invertebrate",
+    "phonetic": "ɪnˈvɜːtɪbrət",
+    "translation": "adj. 无脊椎的；无骨气的 n. 无脊椎动物；无骨气的人",
+    "translations": [
+      "adj. 无脊椎的；无骨气的 n. 无脊椎动物；无骨气的人"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00102",
+    "word": "molt",
+    "phonetic": "məʊlt",
+    "translation": "vi. 脱毛；换毛 n. 换毛；脱皮；换毛期 vt. 脱毛；换毛 n. (Molt)人名；(德、捷)莫尔特",
+    "translations": [
+      "vi. 脱毛；换毛 n. 换毛；脱皮；换毛期 vt. 脱毛；换毛 n. (Molt)人名；(德、捷)莫尔特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00103",
+    "word": "species",
+    "phonetic": "ˈspiːʃiːz",
+    "translation": "n. [生物] 物种；种类 adj. 物种上的",
+    "translations": [
+      "n. [生物] 物种；种类 adj. 物种上的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00104",
+    "word": "glacier",
+    "phonetic": "ˈɡlæsiə(r)",
+    "translation": "n. 冰河，冰川",
+    "translations": [
+      "n. 冰河，冰川"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00105",
+    "word": "Inuit",
+    "phonetic": "ˈɪnjuɪt; ˈɪnuɪt",
+    "translation": "n. 因纽特人；因纽特语 adj. 因纽特人的；因纽特语的",
+    "translations": [
+      "n. 因纽特人；因纽特语 adj. 因纽特人的；因纽特语的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00106",
+    "word": "Métis",
+    "phonetic": "meɪˈtiː",
+    "translation": "adj. 混血儿的 n. 混血儿",
+    "translations": [
+      "adj. 混血儿的 n. 混血儿"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00107",
+    "word": "territory",
+    "phonetic": "ˈterətri",
+    "translation": "n. 领土，领域；范围；地域；版图",
+    "translations": [
+      "n. 领土，领域；范围；地域；版图"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00108",
+    "word": "apology",
+    "phonetic": "əˈpɒlədʒi",
+    "translation": "n. 道歉；谢罪；辩护；勉强的替代物",
+    "translations": [
+      "n. 道歉；谢罪；辩护；勉强的替代物"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00109",
+    "word": "hesitate",
+    "phonetic": "ˈhezɪteɪt",
+    "translation": "vi. 踌躇，犹豫；不愿 vt. 踌躇，犹豫；有疑虑，不愿意",
+    "translations": [
+      "vi. 踌躇，犹豫；不愿 vt. 踌躇，犹豫；有疑虑，不愿意"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00110",
+    "word": "linger",
+    "phonetic": "ˈlɪŋɡə(r)",
+    "translation": "vi. 徘徊；苟延残喘；磨蹭 vt. 消磨；缓慢度过 n. (Linger)人名；(德、捷、瑞典)林格；(法)兰热",
+    "translations": [
+      "vi. 徘徊；苟延残喘；磨蹭 vt. 消磨；缓慢度过 n. (Linger)人名；(德、捷、瑞典)林格；(法)兰热"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00111",
+    "word": "mimic",
+    "phonetic": "ˈmɪmɪk",
+    "translation": "vt. 模仿，摹拟 n. 效颦者，模仿者；仿制品；小丑 adj. 模仿的，模拟的；假装的",
+    "translations": [
+      "vt. 模仿，摹拟 n. 效颦者，模仿者；仿制品；小丑 adj. 模仿的，模拟的；假装的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00112",
+    "word": "mischievous",
+    "phonetic": "ˈmɪstʃɪvəs",
+    "translation": "adj. 淘气的；（人、行为等）恶作剧的；有害的",
+    "translations": [
+      "adj. 淘气的；（人、行为等）恶作剧的；有害的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00113",
+    "word": "unpleasant",
+    "phonetic": "ʌnˈpleznt",
+    "translation": "adj. 讨厌的；使人不愉快的",
+    "translations": [
+      "adj. 讨厌的；使人不愉快的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00114",
+    "word": "break",
+    "phonetic": "breɪk",
+    "translation": "v. 打破；（人或动物）骨折；擦破（皮肤）；违犯；弄坏；（机器）失灵；打断（连续性）；（天气）突变；（新闻）突然传开；终止 n. 间断；休息；短假；缺口；破裂；进攻；骨折；结束；机会；（斯诺克）一次连续得分；蓓蕾",
+    "translations": [
+      "v. 打破；（人或动物）骨折；擦破（皮肤）；违犯；弄坏；（机器）失灵；打断（连续性）；（天气）突变；（新闻）突然传开；终止 n. 间断；休息；短假；缺口；破裂；进攻；骨折；结束；机会；（斯诺克）一次连续得分；蓓蕾"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00115",
+    "word": "cryptographic",
+    "phonetic": ",krɪptə'græfɪk",
+    "translation": "adj. 关于暗号的，用密码写的",
+    "translations": [
+      "adj. 关于暗号的，用密码写的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00116",
+    "word": "discrimination",
+    "phonetic": "dɪˌskrɪmɪˈneɪʃn",
+    "translation": "n. 歧视；区别，辨别；识别力",
+    "translations": [
+      "n. 歧视；区别，辨别；识别力"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00117",
+    "word": "Navajo",
+    "phonetic": "ˈnævəhəʊ",
+    "translation": "n. 纳瓦霍人（美国最大的印第安部落）",
+    "translations": [
+      "n. 纳瓦霍人（美国最大的印第安部落）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00118",
+    "word": "reservation",
+    "phonetic": "ˌrezəˈveɪʃn",
+    "translation": "n. 预约，预订；保留",
+    "translations": [
+      "n. 预约，预订；保留"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00119",
+    "word": "captivity",
+    "phonetic": "kæpˈtɪvəti",
+    "translation": "n. 囚禁；被关",
+    "translations": [
+      "n. 囚禁；被关"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00120",
+    "word": "carrion",
+    "phonetic": "ˈkæriən",
+    "translation": "n. （动物的）腐肉；不洁之物 adj. 腐肉的；腐朽的 n. (Carrion) （美、西）卡里翁（人名）",
+    "translations": [
+      "n. （动物的）腐肉；不洁之物 adj. 腐肉的；腐朽的 n. (Carrion) （美、西）卡里翁（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00121",
+    "word": "current",
+    "phonetic": "ˈkʌrənt",
+    "translation": "adj. 现在的；流通的，通用的；最近的；草写的 n. （水，气，电）流；趋势；涌流 n. (Current)人名；(英)柯伦特",
+    "translations": [
+      "adj. 现在的；流通的，通用的；最近的；草写的 n. （水，气，电）流；趋势；涌流 n. (Current)人名；(英)柯伦特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00122",
+    "word": "decompose",
+    "phonetic": "ˌdiːkəmˈpəʊz",
+    "translation": "vt. 分解；使腐烂 vi. 分解；腐烂",
+    "translations": [
+      "vt. 分解；使腐烂 vi. 分解；腐烂"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00123",
+    "word": "refuge",
+    "phonetic": "ˈrefjuːdʒ",
+    "translation": "n. 避难；避难所；庇护 vt. 给予…庇护；接纳…避难 vi. 避难；逃避",
+    "translations": [
+      "n. 避难；避难所；庇护 vt. 给予…庇护；接纳…避难 vi. 避难；逃避"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00124",
+    "word": "wingspan",
+    "phonetic": "ˈwɪŋspæn",
+    "translation": "n. 翼展；翼幅",
+    "translations": [
+      "n. 翼展；翼幅"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00125",
+    "word": "boundary",
+    "phonetic": "ˈbaʊndri",
+    "translation": "n. 边界；范围；分界线",
+    "translations": [
+      "n. 边界；范围；分界线"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00126",
+    "word": "complicated",
+    "phonetic": "ˈkɒmplɪkeɪtɪd",
+    "translation": "adj. 难懂的，复杂的",
+    "translations": [
+      "adj. 难懂的，复杂的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00127",
+    "word": "draw",
+    "phonetic": "drɔː",
+    "translation": "vt. 画；拉；吸引 vi. 拉；拖 n. 平局；抽签 n. (Draw)人名；(英)德劳",
+    "translations": [
+      "vt. 画；拉；吸引 vi. 拉；拖 n. 平局；抽签 n. (Draw)人名；(英)德劳"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00128",
+    "word": "fielding",
+    "phonetic": "ˈfiːldɪŋ",
+    "translation": "n. 守备；防守 v. 保护；担任外场员（field的ing形式）",
+    "translations": [
+      "n. 守备；防守 v. 保护；担任外场员（field的ing形式）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00129",
+    "word": "international",
+    "phonetic": "ˌɪntəˈnæʃnəl",
+    "translation": "adj. 国际的；国际通用的 n. 国际体育比赛（选手）；外国人 n. (International) 共产国际（组织）",
+    "translations": [
+      "adj. 国际的；国际通用的 n. 国际体育比赛（选手）；外国人 n. (International) 共产国际（组织）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00130",
+    "word": "umpire",
+    "phonetic": "ˈʌmpaɪə(r)",
+    "translation": "n. 裁判员，仲裁人 v. 仲裁，裁判；当裁判，任裁判",
+    "translations": [
+      "n. 裁判员，仲裁人 v. 仲裁，裁判；当裁判，任裁判"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00131",
+    "word": "conjurer",
+    "phonetic": "'kʌndʒərə",
+    "translation": "n. 魔术师；巫师",
+    "translations": [
+      "n. 魔术师；巫师"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00132",
+    "word": "desperate",
+    "phonetic": "ˈdespərət",
+    "translation": "adj. 不顾一切的；令人绝望的；极度渴望的",
+    "translations": [
+      "adj. 不顾一切的；令人绝望的；极度渴望的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00133",
+    "word": "fabric",
+    "phonetic": "ˈfæbrɪk",
+    "translation": "n. 织物；布；组织；构造；建筑物",
+    "translations": [
+      "n. 织物；布；组织；构造；建筑物"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00134",
+    "word": "potion",
+    "phonetic": "ˈpəʊʃn",
+    "translation": "n. 一剂；一服；饮剂",
+    "translations": [
+      "n. 一剂；一服；饮剂"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00135",
+    "word": "scraping",
+    "phonetic": "ˈskreɪpɪŋ",
+    "translation": "n. 刮削下的碎屑；刮擦声；抹去 adj. 刮擦的；吝啬的 v. 刮，擦（scrape的现在分词）",
+    "translations": [
+      "n. 刮削下的碎屑；刮擦声；抹去 adj. 刮擦的；吝啬的 v. 刮，擦（scrape的现在分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00136",
+    "word": "sorrow",
+    "phonetic": "ˈsɒrəʊ",
+    "translation": "n. 悲伤；懊悔；伤心事 vi. 懊悔；遗憾；感到悲伤 vt. 为…悲痛",
+    "translations": [
+      "n. 悲伤；懊悔；伤心事 vi. 懊悔；遗憾；感到悲伤 vt. 为…悲痛"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00137",
+    "word": "explanation",
+    "phonetic": "ˌekspləˈneɪʃn",
+    "translation": "n. 说明，解释；辩解",
+    "translations": [
+      "n. 说明，解释；辩解"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00138",
+    "word": "gloomy",
+    "phonetic": "ˈɡluːmi",
+    "translation": "adj. 黑暗的；沮丧的；阴郁的",
+    "translations": [
+      "adj. 黑暗的；沮丧的；阴郁的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00139",
+    "word": "proactive",
+    "phonetic": "ˌprəʊˈæktɪv",
+    "translation": "adj. 前摄的（前一活动中的因素对后一活动造成影响的）；有前瞻性的，先行一步的；积极主动的",
+    "translations": [
+      "adj. 前摄的（前一活动中的因素对后一活动造成影响的）；有前瞻性的，先行一步的；积极主动的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00140",
+    "word": "terrified",
+    "phonetic": "ˈterɪfaɪd",
+    "translation": "v. （使）害怕，惊恐；恐吓（terrify 的过去式及过去分词） adj. 非常害怕的，极度惊恐的",
+    "translations": [
+      "v. （使）害怕，惊恐；恐吓（terrify 的过去式及过去分词） adj. 非常害怕的，极度惊恐的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00141",
+    "word": "tome",
+    "phonetic": "təʊm",
+    "translation": "n. 大部头巨著；（几卷中的）一册 n. (Tome) （美、巴西、西、葡）托梅（人名）",
+    "translations": [
+      "n. 大部头巨著；（几卷中的）一册 n. (Tome) （美、巴西、西、葡）托梅（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00142",
+    "word": "baguette",
+    "phonetic": "bæˈɡet",
+    "translation": "n. 法国棍子面包；成长方形的宝石 n. (Baguette)人名；(法)巴盖特",
+    "translations": [
+      "n. 法国棍子面包；成长方形的宝石 n. (Baguette)人名；(法)巴盖特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00143",
+    "word": "carnival",
+    "phonetic": "ˈkɑːnɪvl",
+    "translation": "n. 狂欢节，嘉年华会；饮宴狂欢",
+    "translations": [
+      "n. 狂欢节，嘉年华会；饮宴狂欢"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00144",
+    "word": "cathedral",
+    "phonetic": "kəˈθiːdrəl",
+    "translation": "n. 大教堂",
+    "translations": [
+      "n. 大教堂"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00145",
+    "word": "fashion",
+    "phonetic": "ˈfæʃn",
+    "translation": "n. 时尚；时装；样式；方式；时髦人物 vt. 使用；改变；做成…的形状",
+    "translations": [
+      "n. 时尚；时装；样式；方式；时髦人物 vt. 使用；改变；做成…的形状"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00146",
+    "word": "gorge",
+    "phonetic": "ɡɔːdʒ",
+    "translation": "n. 峡谷；胃；暴食；咽喉；障碍物 vt. 使吃饱；吞下；使扩张 vi. 拚命吃；狼吞虎咽 n. (Gorge)人名；(西)戈赫；(法)戈尔热",
+    "translations": [
+      "n. 峡谷；胃；暴食；咽喉；障碍物 vt. 使吃饱；吞下；使扩张 vi. 拚命吃；狼吞虎咽 n. (Gorge)人名；(西)戈赫；(法)戈尔热"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00147",
+    "word": "vineyard",
+    "phonetic": "ˈvɪnjəd",
+    "translation": "n. 葡萄园",
+    "translations": [
+      "n. 葡萄园"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00148",
+    "word": "abolition",
+    "phonetic": "ˌæbəˈlɪʃn",
+    "translation": "n. 废除；废止",
+    "translations": [
+      "n. 废除；废止"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00149",
+    "word": "autobiography",
+    "phonetic": "ˌɔːtəbaɪˈɒɡrəfi",
+    "translation": "n. 自传；自传文学",
+    "translations": [
+      "n. 自传；自传文学"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00150",
+    "word": "editorial",
+    "phonetic": "ˌedɪˈtɔːriəl",
+    "translation": "adj. 编辑的，主编的；社论的 n. （报刊）社论，（美国电台）评论",
+    "translations": [
+      "adj. 编辑的，主编的；社论的 n. （报刊）社论，（美国电台）评论"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00151",
+    "word": "enslave",
+    "phonetic": "ɪnˈsleɪv",
+    "translation": "vt. 束缚；征服；使某人成为奴隶",
+    "translations": [
+      "vt. 束缚；征服；使某人成为奴隶"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00152",
+    "word": "literacy",
+    "phonetic": "ˈlɪtərəsi",
+    "translation": "n. 读写能力；精通文学",
+    "translations": [
+      "n. 读写能力；精通文学"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00153",
+    "word": "astronomy",
+    "phonetic": "əˈstrɒnəmi",
+    "translation": "n. 天文学",
+    "translations": [
+      "n. 天文学"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00154",
+    "word": "gravity",
+    "phonetic": "ˈɡrævəti",
+    "translation": "n. 重力，地心引力；严重性；庄严",
+    "translations": [
+      "n. 重力，地心引力；严重性；庄严"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00155",
+    "word": "solar system",
+    "phonetic": "ˈsəʊlə sɪstəm",
+    "translation": "[天] 太阳系",
+    "translations": [
+      "[天] 太阳系"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00156",
+    "word": "telescope",
+    "phonetic": "ˈtelɪskəʊp",
+    "translation": "n. 望远镜 v. 叠套缩短；精简，压缩；（车）相撞而嵌进",
+    "translations": [
+      "n. 望远镜 v. 叠套缩短；精简，压缩；（车）相撞而嵌进"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00157",
+    "word": "trial",
+    "phonetic": "ˈtraɪəl",
+    "translation": "n. 试验；审讯；努力；磨炼 adj. 试验的；审讯的 n. (Trial)人名；(法)特里亚尔",
+    "translations": [
+      "n. 试验；审讯；努力；磨炼 adj. 试验的；审讯的 n. (Trial)人名；(法)特里亚尔"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00158",
+    "word": "character",
+    "phonetic": "ˈkærəktə(r)",
+    "translation": "n. 性格，品质；特性；角色；[计] 字符 vt. 印，刻；使具有特征 n. (Character)人名；(英)克拉克特",
+    "translations": [
+      "n. 性格，品质；特性；角色；[计] 字符 vt. 印，刻；使具有特征 n. (Character)人名；(英)克拉克特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00159",
+    "word": "colony",
+    "phonetic": "ˈkɒləni",
+    "translation": "n. 殖民地；移民队；种群；动物栖息地",
+    "translations": [
+      "n. 殖民地；移民队；种群；动物栖息地"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00160",
+    "word": "Constitution",
+    "phonetic": "ˌkɒnstɪˈtjuːʃn",
+    "translation": "n. 宪法；体制；章程；构造；建立，组成；体格",
+    "translations": [
+      "n. 宪法；体制；章程；构造；建立，组成；体格"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00161",
+    "word": "convention",
+    "phonetic": "kənˈvenʃn",
+    "translation": "n. 大会；[法] 惯例；[计] 约定；[法] 协定；习俗",
+    "translations": [
+      "n. 大会；[法] 惯例；[计] 约定；[法] 协定；习俗"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00162",
+    "word": "retreat",
+    "phonetic": "rɪˈtriːt",
+    "translation": "n. 撤退；休息寓所 vi. 撤退；退避；向后倾 vt. 退（棋）；使后退",
+    "translations": [
+      "n. 撤退；休息寓所 vi. 撤退；退避；向后倾 vt. 退（棋）；使后退"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00163",
+    "word": "treaty",
+    "phonetic": "ˈtriːti",
+    "translation": "n. 条约，协议；谈判",
+    "translations": [
+      "n. 条约，协议；谈判"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00164",
+    "word": "annoyed",
+    "phonetic": "əˈnɔɪd",
+    "translation": "adj. 恼怒的；烦闷的 v. 使烦恼；打扰（annoy 的过去式和过去分词）",
+    "translations": [
+      "adj. 恼怒的；烦闷的 v. 使烦恼；打扰（annoy 的过去式和过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00165",
+    "word": "devise",
+    "phonetic": "dɪˈvaɪz",
+    "translation": "vt. 设计；想出；发明；图谋；遗赠给 n. 遗赠 n. (Devise) （美、法）德维兹（人名）",
+    "translations": [
+      "vt. 设计；想出；发明；图谋；遗赠给 n. 遗赠 n. (Devise) （美、法）德维兹（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00166",
+    "word": "fugitive",
+    "phonetic": "ˈfjuːdʒətɪv",
+    "translation": "adj. 逃亡的；无常的；易变的 n. 逃亡者；难捕捉之物",
+    "translations": [
+      "adj. 逃亡的；无常的；易变的 n. 逃亡者；难捕捉之物"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00167",
+    "word": "haunted",
+    "phonetic": "ˈhɔːntɪd",
+    "translation": "adj. 闹鬼的；反复出现的；受到困扰的 v. 常去；缠住；使担忧（haunt的过去式和过去分词）",
+    "translations": [
+      "adj. 闹鬼的；反复出现的；受到困扰的 v. 常去；缠住；使担忧（haunt的过去式和过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00168",
+    "word": "lullaby",
+    "phonetic": "ˈlʌləbaɪ",
+    "translation": "n. 摇篮曲；催眠曲 vt. 唱摇篮曲使入睡",
+    "translations": [
+      "n. 摇篮曲；催眠曲 vt. 唱摇篮曲使入睡"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00169",
+    "word": "rural",
+    "phonetic": "ˈrʊərəl",
+    "translation": "adj. 农村的，乡下的；田园的，有乡村风味的",
+    "translations": [
+      "adj. 农村的，乡下的；田园的，有乡村风味的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00170",
+    "word": "agile",
+    "phonetic": "ˈædʒaɪl",
+    "translation": "adj. 敏捷的；机敏的；活泼的",
+    "translations": [
+      "adj. 敏捷的；机敏的；活泼的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00171",
+    "word": "burrow",
+    "phonetic": "ˈbʌrəʊ",
+    "translation": "v. 挖地洞，挖通道；依偎；挖穿；钻入；（使）……钻到……下面；（在……里）搜寻；深入查询 n. （动物的，尤指兔子挖的）洞穴，地洞 n. (Burrow) （美）伯罗（人名）",
+    "translations": [
+      "v. 挖地洞，挖通道；依偎；挖穿；钻入；（使）……钻到……下面；（在……里）搜寻；深入查询 n. （动物的，尤指兔子挖的）洞穴，地洞 n. (Burrow) （美）伯罗（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00172",
+    "word": "captive",
+    "phonetic": "ˈkæptɪv",
+    "translation": "adj. 被俘虏的；被迷住的 n. 俘虏；迷恋者",
+    "translations": [
+      "adj. 被俘虏的；被迷住的 n. 俘虏；迷恋者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00173",
+    "word": "larvae",
+    "phonetic": "",
+    "translation": "n. 幼虫，幼体（larva 的复数）",
+    "translations": [
+      "n. 幼虫，幼体（larva 的复数）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00174",
+    "word": "scarab",
+    "phonetic": "ˈskærəb",
+    "translation": "n. 圣甲虫；圣甲虫形宝石",
+    "translations": [
+      "n. 圣甲虫；圣甲虫形宝石"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00175",
+    "word": "social",
+    "phonetic": "ˈsəʊʃl",
+    "translation": "adj. 社会的，社交的；群居的 n. 联谊会；联欢会",
+    "translations": [
+      "adj. 社会的，社交的；群居的 n. 联谊会；联欢会"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00176",
+    "word": "conserve",
+    "phonetic": "kənˈsɜːv",
+    "translation": "vt. 保存；将…做成蜜饯；使守恒 n. 果酱；蜜饯",
+    "translations": [
+      "vt. 保存；将…做成蜜饯；使守恒 n. 果酱；蜜饯"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00177",
+    "word": "crisis",
+    "phonetic": "ˈkraɪsɪs",
+    "translation": "n. 危机；危险期；决定性时刻 adj. 危机的；用于处理危机的",
+    "translations": [
+      "n. 危机；危险期；决定性时刻 adj. 危机的；用于处理危机的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00178",
+    "word": "drought",
+    "phonetic": "draʊt",
+    "translation": "n. 干旱；缺乏 n. (Drought)人名；(英)德劳特",
+    "translations": [
+      "n. 干旱；缺乏 n. (Drought)人名；(英)德劳特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00179",
+    "word": "groundwater",
+    "phonetic": "ˈɡraʊndwɔːtə(r)",
+    "translation": "n. 地下水 n. (Groundwater)人名；(英)格朗德沃特",
+    "translations": [
+      "n. 地下水 n. (Groundwater)人名；(英)格朗德沃特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00180",
+    "word": "irrigate",
+    "phonetic": "ˈɪrɪɡeɪt",
+    "translation": "vt. 灌溉；冲洗；使清新 vi. 灌溉；冲洗",
+    "translations": [
+      "vt. 灌溉；冲洗；使清新 vi. 灌溉；冲洗"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00181",
+    "word": "bonfire",
+    "phonetic": "ˈbɒnfaɪə(r)",
+    "translation": "n. 篝火；营火",
+    "translations": [
+      "n. 篝火；营火"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00182",
+    "word": "dummy",
+    "phonetic": "ˈdʌmi",
+    "translation": "n. 人体模型；仿制品；蠢货；假动作；橡皮奶头；（桥牌）明手牌；傀儡；沉默的人；（书的）装帧样本；空包弹；（语法中作修饰语）假代的 adj. 假的，仿真的 v. （在英式足球中）做假动作",
+    "translations": [
+      "n. 人体模型；仿制品；蠢货；假动作；橡皮奶头；（桥牌）明手牌；傀儡；沉默的人；（书的）装帧样本；空包弹；（语法中作修饰语）假代的 adj. 假的，仿真的 v. （在英式足球中）做假动作"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00183",
+    "word": "Parliament",
+    "phonetic": "ˈpɑːləmənt",
+    "translation": "n. 议会，国会",
+    "translations": [
+      "n. 议会，国会"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00184",
+    "word": "plot",
+    "phonetic": "plɒt",
+    "translation": "n. 情节；图；阴谋 vt. 密谋；绘图；划分；标绘 vi. 密谋；策划；绘制 n. (Plot)人名；(捷)普洛特；(法)普洛",
+    "translations": [
+      "n. 情节；图；阴谋 vt. 密谋；绘图；划分；标绘 vi. 密谋；策划；绘制 n. (Plot)人名；(捷)普洛特；(法)普洛"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00185",
+    "word": "rebellion",
+    "phonetic": "rɪˈbeljən",
+    "translation": "n. 叛乱；反抗；谋反；不服从",
+    "translations": [
+      "n. 叛乱；反抗；谋反；不服从"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00186",
+    "word": "treason",
+    "phonetic": "ˈtriːzn",
+    "translation": "n. [法] 叛国罪；不忠",
+    "translations": [
+      "n. [法] 叛国罪；不忠"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00187",
+    "word": "abolitionist",
+    "phonetic": "ˌæbəˈlɪʃənɪst",
+    "translation": "n. 废奴主义者；废除主义者",
+    "translations": [
+      "n. 废奴主义者；废除主义者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00188",
+    "word": "escapee",
+    "phonetic": "ɪˌskeɪˈpiː",
+    "translation": "n. 逃避者；逃亡者",
+    "translations": [
+      "n. 逃避者；逃亡者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00189",
+    "word": "meager",
+    "phonetic": "",
+    "translation": "adj. 贫乏的；瘦的 n. 兆",
+    "translations": [
+      "adj. 贫乏的；瘦的 n. 兆"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00190",
+    "word": "perilous",
+    "phonetic": "ˈperələs",
+    "translation": "adj. 危险的，冒险的",
+    "translations": [
+      "adj. 危险的，冒险的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00191",
+    "word": "plantation",
+    "phonetic": "plɑːnˈteɪʃn",
+    "translation": "n. 栽植；殖民；大农场 adj. 适用于种植园或热带、亚热带国家的",
+    "translations": [
+      "n. 栽植；殖民；大农场 adj. 适用于种植园或热带、亚热带国家的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00192",
+    "word": "beckon",
+    "phonetic": "ˈbekən",
+    "translation": "vt. 召唤；吸引 vi. 吸引；（招手或点头）示意 n. 表召唤的点头；手势",
+    "translations": [
+      "vt. 召唤；吸引 vi. 吸引；（招手或点头）示意 n. 表召唤的点头；手势"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00193",
+    "word": "bizarre",
+    "phonetic": "bɪˈzɑː(r)",
+    "translation": "adj. 奇异的（指态度，容貌，款式等）",
+    "translations": [
+      "adj. 奇异的（指态度，容貌，款式等）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00194",
+    "word": "comb",
+    "phonetic": "kəʊm",
+    "translation": "n. 梳子；蜂巢；鸡冠 vt. 梳头发；梳毛 vi. （浪）涌起",
+    "translations": [
+      "n. 梳子；蜂巢；鸡冠 vt. 梳头发；梳毛 vi. （浪）涌起"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00195",
+    "word": "creepy",
+    "phonetic": "ˈkriːpi",
+    "translation": "adj. 诡异的；令人毛骨悚然的；爬行的",
+    "translations": [
+      "adj. 诡异的；令人毛骨悚然的；爬行的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00196",
+    "word": "divulge",
+    "phonetic": "daɪˈvʌldʒ",
+    "translation": "vt. 泄露；暴露",
+    "translations": [
+      "vt. 泄露；暴露"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00197",
+    "word": "reveal",
+    "phonetic": "rɪˈviːl",
+    "translation": "vt. 显示；透露；揭露；泄露 n. 揭露；暴露；门侧，窗侧",
+    "translations": [
+      "vt. 显示；透露；揭露；泄露 n. 揭露；暴露；门侧，窗侧"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00198",
+    "word": "calve",
+    "phonetic": "kɑːv",
+    "translation": "vt. 下仔；生小牛；使崩解 vi. 生小牛；下仔；崩解 n. (Calve)人名；(西、意)卡尔韦；(法)卡尔夫",
+    "translations": [
+      "vt. 下仔；生小牛；使崩解 vi. 生小牛；下仔；崩解 n. (Calve)人名；(西、意)卡尔韦；(法)卡尔夫"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00199",
+    "word": "compact",
+    "phonetic": "kəmˈpækt; ˈkɒmpækt",
+    "translation": "adj. 袖珍的；紧凑的；坚实的；矮小而健壮的；简洁的 n. 小汽车；带镜小粉盒；契约 v. 把……压实；使简洁；使紧密，压缩；订立（协定）",
+    "translations": [
+      "adj. 袖珍的；紧凑的；坚实的；矮小而健壮的；简洁的 n. 小汽车；带镜小粉盒；契约 v. 把……压实；使简洁；使紧密，压缩；订立（协定）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00200",
+    "word": "dense",
+    "phonetic": "dens",
+    "translation": "adj. 稠密的；浓厚的；愚钝的",
+    "translations": [
+      "adj. 稠密的；浓厚的；愚钝的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00201",
+    "word": "endanger",
+    "phonetic": "ɪnˈdeɪndʒə(r)",
+    "translation": "vt. 危及；使遭到危险",
+    "translations": [
+      "vt. 危及；使遭到危险"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00202",
+    "word": "iceberg",
+    "phonetic": "ˈaɪsbɜːɡ",
+    "translation": "n. [地理] 冰山；显露部分",
+    "translations": [
+      "n. [地理] 冰山；显露部分"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00203",
+    "word": "Hindu",
+    "phonetic": "ˈhɪnduː; ˌhɪnˈduː",
+    "translation": "adj. (Hindu) 印度的；印度教的 n. (Hindu) 印度人；印度教教徒 n. (Hindu) （印、美、英、俄、加）欣杜（人名）",
+    "translations": [
+      "adj. (Hindu) 印度的；印度教的 n. (Hindu) 印度人；印度教教徒 n. (Hindu) （印、美、英、俄、加）欣杜（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00204",
+    "word": "monsoon",
+    "phonetic": "ˌmɒnˈsuːn",
+    "translation": "n. 季风；（印度等地的）雨季；季候风",
+    "translations": [
+      "n. 季风；（印度等地的）雨季；季候风"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00205",
+    "word": "Muslim",
+    "phonetic": "ˈmʊzlɪm; ˈmʌzlɪm; ˈmʊslɪm",
+    "translation": "n. 穆斯林；穆罕默德信徒 adj. 伊斯兰教的",
+    "translations": [
+      "n. 穆斯林；穆罕默德信徒 adj. 伊斯兰教的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00206",
+    "word": "peninsula",
+    "phonetic": "pəˈnɪnsjələ",
+    "translation": "n. 半岛",
+    "translations": [
+      "n. 半岛"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00207",
+    "word": "poverty",
+    "phonetic": "ˈpɒvəti",
+    "translation": "n. 贫困；困难；缺少；低劣",
+    "translations": [
+      "n. 贫困；困难；缺少；低劣"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00208",
+    "word": "subcontinent",
+    "phonetic": "ˌsʌbˈkɒntɪnənt",
+    "translation": "n. 次大陆",
+    "translations": [
+      "n. 次大陆"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00209",
+    "word": "currency",
+    "phonetic": "ˈkʌrənsi",
+    "translation": "n. 货币；通货",
+    "translations": [
+      "n. 货币；通货"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00210",
+    "word": "Internet",
+    "phonetic": "ˈɪntənet",
+    "translation": "n. 因特网",
+    "translations": [
+      "n. 因特网"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00211",
+    "word": "search engine",
+    "phonetic": "ˈsɜːtʃ endʒɪn",
+    "translation": "搜索引擎",
+    "translations": [
+      "搜索引擎"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00212",
+    "word": "strategy",
+    "phonetic": "ˈstrætədʒi",
+    "translation": "n. 战略，策略",
+    "translations": [
+      "n. 战略，策略"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00213",
+    "word": "stumper",
+    "phonetic": "'stʌmpɚ",
+    "translation": "n. 难题；伐木机；竞选演说者；板球三柱门守球员",
+    "translations": [
+      "n. 难题；伐木机；竞选演说者；板球三柱门守球员"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00214",
+    "word": "champion",
+    "phonetic": "ˈtʃæmpiən",
+    "translation": "n. 冠军；拥护者；战士 vt. 支持；拥护 adj. 优胜的；第一流的 n. (Champion)人名；(英)钱皮恩；(法)尚皮翁",
+    "translations": [
+      "n. 冠军；拥护者；战士 vt. 支持；拥护 adj. 优胜的；第一流的 n. (Champion)人名；(英)钱皮恩；(法)尚皮翁"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00215",
+    "word": "conservation",
+    "phonetic": "ˌkɒnsəˈveɪʃn",
+    "translation": "n. 保存，保持；保护",
+    "translations": [
+      "n. 保存，保持；保护"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00216",
+    "word": "inspire",
+    "phonetic": "ɪnˈspaɪə(r)",
+    "translation": "vt. 激发；鼓舞；启示；产生；使生灵感",
+    "translations": [
+      "vt. 激发；鼓舞；启示；产生；使生灵感"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00217",
+    "word": "passion",
+    "phonetic": "ˈpæʃn",
+    "translation": "n. 激情；热情；酷爱；盛怒",
+    "translations": [
+      "n. 激情；热情；酷爱；盛怒"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00218",
+    "word": "protect",
+    "phonetic": "prəˈtekt",
+    "translation": "vt. 保护，防卫；警戒",
+    "translations": [
+      "vt. 保护，防卫；警戒"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00219",
+    "word": "conquer",
+    "phonetic": "ˈkɒŋkə(r)",
+    "translation": "vt. 战胜，征服；攻克，攻取 vi. 胜利；得胜",
+    "translations": [
+      "vt. 战胜，征服；攻克，攻取 vi. 胜利；得胜"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00220",
+    "word": "corrupt",
+    "phonetic": "kəˈrʌpt",
+    "translation": "adj. 腐败的，贪污的；堕落的 vt. 使腐烂；使堕落，使恶化 vi. 堕落，腐化；腐烂",
+    "translations": [
+      "adj. 腐败的，贪污的；堕落的 vt. 使腐烂；使堕落，使恶化 vi. 堕落，腐化；腐烂"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00221",
+    "word": "empire",
+    "phonetic": "ˈempaɪə(r)",
+    "translation": "n. 帝国；帝王统治，君权 n. (Empire)人名；(法)昂皮尔",
+    "translations": [
+      "n. 帝国；帝王统治，君权 n. (Empire)人名；(法)昂皮尔"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00222",
+    "word": "military",
+    "phonetic": "ˈmɪlətri",
+    "translation": "adj. 军事的；军人的；适于战争的 n. 军队；军人",
+    "translations": [
+      "adj. 军事的；军人的；适于战争的 n. 军队；军人"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00223",
+    "word": "politician",
+    "phonetic": "ˌpɒləˈtɪʃn",
+    "translation": "n. 政治家，政客",
+    "translations": [
+      "n. 政治家，政客"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00224",
+    "word": "stable",
+    "phonetic": "ˈsteɪbl",
+    "translation": "adj. 稳定的，牢固的；稳重的，沉稳的；持久的；（化学术语）稳定的 n. 马厩；养马场；（属同一马主或驯马师的）一群赛马；（同一地方工作的）一批人，（同一公司生产的）系列产品；（提供相同训练的）组织，机构 v. 赶入马房，把（马）拴在马厩；（被）关在马厩 n. (Stable) （美、英、法）斯特布尔（人名）",
+    "translations": [
+      "adj. 稳定的，牢固的；稳重的，沉稳的；持久的；（化学术语）稳定的 n. 马厩；养马场；（属同一马主或驯马师的）一群赛马；（同一地方工作的）一批人，（同一公司生产的）系列产品；（提供相同训练的）组织，机构 v. 赶入马房，把（马）拴在马厩；（被）关在马厩 n. (Stable) （美、英、法）斯特布尔（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00225",
+    "word": "labor",
+    "phonetic": "'leɪbə(r)",
+    "translation": "n. 劳动；工作；劳工；分娩 vi. 劳动；努力；苦干 vt. 详细分析；使厌烦 n. (Labor)人名；(德、塞、法)拉博尔；(英)拉博",
+    "translations": [
+      "n. 劳动；工作；劳工；分娩 vi. 劳动；努力；苦干 vt. 详细分析；使厌烦 n. (Labor)人名；(德、塞、法)拉博尔；(英)拉博"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00226",
+    "word": "right",
+    "phonetic": "raɪt",
+    "translation": "adj. 正确的；直接的；右方的 vi. 复正；恢复平稳 n. 正确；右边；正义；权利 adv. 正确地；恰当地；彻底地 vt. 纠正 n. (Right)人名；(英)赖特",
+    "translations": [
+      "adj. 正确的；直接的；右方的 vi. 复正；恢复平稳 n. 正确；右边；正义；权利 adv. 正确地；恰当地；彻底地 vt. 纠正 n. (Right)人名；(英)赖特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00227",
+    "word": "strike",
+    "phonetic": "straɪk",
+    "translation": "v. 撞击；打；踢（球等）；突击；罢工；使打动；侵袭；突然想到；照射；击出（火星）；擦（火柴）；触发（电弧）；鸣；弹奏；开采出；行进；铸造（硬币）；（电影摄影术）复刻；达到（平衡）；（金融）结算；闯出新的事业；撤（营）；给……印象；把……迷住；摆出（姿态） n. 罢工；抗拒；袭击；殴打；（体育中得分的）击球；（十柱保龄球）一投全倒；（尤指石油的）发现；打击；（对上钩的鱼）急拉钓线；（投球）未击中；（投出的）好球；败坏名声的事 n. (Strike) （美、俄、秘）斯特赖克（人名）",
+    "translations": [
+      "v. 撞击；打；踢（球等）；突击；罢工；使打动；侵袭；突然想到；照射；击出（火星）；擦（火柴）；触发（电弧）；鸣；弹奏；开采出；行进；铸造（硬币）；（电影摄影术）复刻；达到（平衡）；（金融）结算；闯出新的事业；撤（营）；给……印象；把……迷住；摆出（姿态） n. 罢工；抗拒；袭击；殴打；（体育中得分的）击球；（十柱保龄球）一投全倒；（尤指石油的）发现；打击；（对上钩的鱼）急拉钓线；（投球）未击中；（投出的）好球；败坏名声的事 n. (Strike) （美、俄、秘）斯特赖克（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00228",
+    "word": "wage",
+    "phonetic": "weɪdʒ",
+    "translation": "n. 工资；报酬；代价；报应 v. 进行，发动（运动、战争等）；开展 n. (Wage) （美）伟杰（人名）",
+    "translations": [
+      "n. 工资；报酬；代价；报应 v. 进行，发动（运动、战争等）；开展 n. (Wage) （美）伟杰（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00229",
+    "word": "acrobatic",
+    "phonetic": "ˌækrəˈbætɪk",
+    "translation": "adj. 杂技的；特技的",
+    "translations": [
+      "adj. 杂技的；特技的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00230",
+    "word": "ancient",
+    "phonetic": "ˈeɪnʃənt",
+    "translation": "adj. 古代的；古老的，过时的；年老的 n. 古代人；老人",
+    "translations": [
+      "adj. 古代的；古老的，过时的；年老的 n. 古代人；老人"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00231",
+    "word": "athletic",
+    "phonetic": "æθˈletɪk",
+    "translation": "adj. 运动的，运动员的；体格健壮的",
+    "translations": [
+      "adj. 运动的，运动员的；体格健壮的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00232",
+    "word": "cradle",
+    "phonetic": "ˈkreɪdl",
+    "translation": "n. 摇篮；发源地；发祥地；支船架 vt. 抚育；把...搁在支架上；把...放在摇篮内",
+    "translations": [
+      "n. 摇篮；发源地；发祥地；支船架 vt. 抚育；把...搁在支架上；把...放在摇篮内"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00233",
+    "word": "goalie",
+    "phonetic": "'gəʊlɪ",
+    "translation": "n. 守门员（等于goalkeeper）",
+    "translations": [
+      "n. 守门员（等于goalkeeper）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00234",
+    "word": "popularity",
+    "phonetic": "ˌpɒpjuˈlærəti",
+    "translation": "n. 普及，流行；名气；受大众欢迎",
+    "translations": [
+      "n. 普及，流行；名气；受大众欢迎"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00235",
+    "word": "hardship",
+    "phonetic": "ˈhɑːdʃɪp",
+    "translation": "n. 困苦；苦难；艰难险阻",
+    "translations": [
+      "n. 困苦；苦难；艰难险阻"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00236",
+    "word": "homestead",
+    "phonetic": "ˈhəʊmsted",
+    "translation": "n. 宅地；家园；田产",
+    "translations": [
+      "n. 宅地；家园；田产"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00237",
+    "word": "pioneer",
+    "phonetic": "ˌpaɪəˈnɪə(r)",
+    "translation": "n. 先锋；拓荒者 vt. 开辟；倡导；提倡 vi. 作先驱",
+    "translations": [
+      "n. 先锋；拓荒者 vt. 开辟；倡导；提倡 vi. 作先驱"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00238",
+    "word": "prairie",
+    "phonetic": "ˈpreəri",
+    "translation": "n. 大草原；牧场",
+    "translations": [
+      "n. 大草原；牧场"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00239",
+    "word": "publisher",
+    "phonetic": "ˈpʌblɪʃə(r)",
+    "translation": "n. 出版者，出版商；发行人",
+    "translations": [
+      "n. 出版者，出版商；发行人"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00240",
+    "word": "boil",
+    "phonetic": "bɔɪl",
+    "translation": "v. 煮沸，（使）沸腾，达到沸点；用沸水煮或烫洗；对……施以烹刑；翻腾；发火 n. 沸点，沸腾；激昂；疖，皮下脓肿；突然浮上来食鱼饵 n. (Boil) （美）博伊尔（人名）",
+    "translations": [
+      "v. 煮沸，（使）沸腾，达到沸点；用沸水煮或烫洗；对……施以烹刑；翻腾；发火 n. 沸点，沸腾；激昂；疖，皮下脓肿；突然浮上来食鱼饵 n. (Boil) （美）博伊尔（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00241",
+    "word": "broth",
+    "phonetic": "brɒθ",
+    "translation": "n. 肉汤；液体培养基",
+    "translations": [
+      "n. 肉汤；液体培养基"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00242",
+    "word": "ladle",
+    "phonetic": "ˈleɪdl",
+    "translation": "n. 长柄杓；钢铁水包 v. 用长柄勺舀；把……倒入",
+    "translations": [
+      "n. 长柄杓；钢铁水包 v. 用长柄勺舀；把……倒入"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00243",
+    "word": "simmer",
+    "phonetic": "ˈsɪmə(r)",
+    "translation": "v. 炖，煨；（水或食物）慢慢沸腾；内心充满（愤怒），酝酿；即将爆发 n. 炖；即将沸腾的状态 n. (Simmer) （美、印、波、德）西梅（人名）",
+    "translations": [
+      "v. 炖，煨；（水或食物）慢慢沸腾；内心充满（愤怒），酝酿；即将爆发 n. 炖；即将沸腾的状态 n. (Simmer) （美、印、波、德）西梅（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00244",
+    "word": "strainer",
+    "phonetic": "ˈstreɪnə(r)",
+    "translation": "n. 过滤器；松紧扣；用力拉的人，拉紧者",
+    "translations": [
+      "n. 过滤器；松紧扣；用力拉的人，拉紧者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00245",
+    "word": "tender",
+    "phonetic": "ˈtendə(r)",
+    "translation": "adj. 温柔的；（食物）柔软的；疼痛的；（植物）脆弱的；年轻的；棘手的；审慎的；易倾斜的 vt. 提议；使变脆弱；温柔地对待 vi. 投标 n. 投标；辅助救火车；附属船；（挂在机车后的）煤水车；看管人",
+    "translations": [
+      "adj. 温柔的；（食物）柔软的；疼痛的；（植物）脆弱的；年轻的；棘手的；审慎的；易倾斜的 vt. 提议；使变脆弱；温柔地对待 vi. 投标 n. 投标；辅助救火车；附属船；（挂在机车后的）煤水车；看管人"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00246",
+    "word": "astronaut",
+    "phonetic": "ˈæstrənɔːt",
+    "translation": "n. 宇航员，航天员；太空旅行者",
+    "translations": [
+      "n. 宇航员，航天员；太空旅行者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00247",
+    "word": "launch",
+    "phonetic": "lɔːntʃ",
+    "translation": "v. 发射（导弹、火箭等）；发起，发动；使……下水；开始；起飞 n. 发射；发行，投放市场；下水；汽艇",
+    "translations": [
+      "v. 发射（导弹、火箭等）；发起，发动；使……下水；开始；起飞 n. 发射；发行，投放市场；下水；汽艇"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00248",
+    "word": "orbit",
+    "phonetic": "ˈɔːbɪt",
+    "translation": "n. 轨道；眼眶；势力范围；生活常规 vi. 盘旋；绕轨道运行 vt. 绕…轨道而行",
+    "translations": [
+      "n. 轨道；眼眶；势力范围；生活常规 vi. 盘旋；绕轨道运行 vt. 绕…轨道而行"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00249",
+    "word": "space station",
+    "phonetic": "ˈspeɪs steɪʃn",
+    "translation": "空间站，太空站",
+    "translations": [
+      "空间站，太空站"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00250",
+    "word": "training",
+    "phonetic": "ˈtreɪnɪŋ",
+    "translation": "n. 训练；培养；瞄准；整枝 v. 训练；教养（train的ing形式）",
+    "translations": [
+      "n. 训练；培养；瞄准；整枝 v. 训练；教养（train的ing形式）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00251",
+    "word": "antic",
+    "phonetic": "'æntɪk",
+    "translation": "adj. 古怪的；滑稽可笑的 n. 滑稽动作；丑角 vi. 扮小丑；做滑稽动作 n. (Antic)人名；(法)安蒂克",
+    "translations": [
+      "adj. 古怪的；滑稽可笑的 n. 滑稽动作；丑角 vi. 扮小丑；做滑稽动作 n. (Antic)人名；(法)安蒂克"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00252",
+    "word": "arthritis",
+    "phonetic": "ɑːˈθraɪtɪs",
+    "translation": "n. [外科] 关节炎",
+    "translations": [
+      "n. [外科] 关节炎"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00253",
+    "word": "coma",
+    "phonetic": "ˈkəʊmə",
+    "translation": "n. [医] 昏迷；[天] 彗形像差 n. (Coma)人名；(法、西)科马",
+    "translations": [
+      "n. [医] 昏迷；[天] 彗形像差 n. (Coma)人名；(法、西)科马"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00254",
+    "word": "funeral",
+    "phonetic": "ˈfjuːnərəl",
+    "translation": "n. 葬礼；麻烦事 adj. 丧葬的，出殡的",
+    "translations": [
+      "n. 葬礼；麻烦事 adj. 丧葬的，出殡的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00255",
+    "word": "paramedic",
+    "phonetic": "ˌpærəˈmedɪk",
+    "translation": "n. 护理人员；伞兵军医；伞降医务人员",
+    "translations": [
+      "n. 护理人员；伞兵军医；伞降医务人员"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00256",
+    "word": "stroke",
+    "phonetic": "strəʊk",
+    "translation": "n. （游泳或划船的）划；中风；（打、击等的）一下；冲程；（成功的）举动；尝试；轻抚 vt. （用笔等）画；轻抚；轻挪；敲击；划尾桨；划掉；（打字时）击打键盘 vi. 击球；作尾桨手，指挥划桨；（打字时）击打键盘",
+    "translations": [
+      "n. （游泳或划船的）划；中风；（打、击等的）一下；冲程；（成功的）举动；尝试；轻抚 vt. （用笔等）画；轻抚；轻挪；敲击；划尾桨；划掉；（打字时）击打键盘 vi. 击球；作尾桨手，指挥划桨；（打字时）击打键盘"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00257",
+    "word": "cure",
+    "phonetic": "kjʊə(r)",
+    "translation": "v. 缓解（人或动物）的疾病症状，治疗；治愈；解决（问题）；（用腌、晒、熏等方法）加工处理，保存（肉、鱼、烟草、兽皮）；被硫化，使硬化；凝固，养护 n. 药物；疗法，治疗；治愈；对策；（对橡胶、塑料或其他材料的）熟化；（基督教牧师的）牧师责任（或责任区）；教区 n. (Cure) （美、法）楚雷（人名）",
+    "translations": [
+      "v. 缓解（人或动物）的疾病症状，治疗；治愈；解决（问题）；（用腌、晒、熏等方法）加工处理，保存（肉、鱼、烟草、兽皮）；被硫化，使硬化；凝固，养护 n. 药物；疗法，治疗；治愈；对策；（对橡胶、塑料或其他材料的）熟化；（基督教牧师的）牧师责任（或责任区）；教区 n. (Cure) （美、法）楚雷（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00258",
+    "word": "float",
+    "phonetic": "fləʊt",
+    "translation": "v. 使漂浮，浮动；漂流，飘动；飘移；安排（贷款）提出，提请考虑（想法或计划）；发行（股票）上市；（货币汇率）自由浮动实行 n. （酒吧等用于给顾客找零的）备用零钱；彩车，花车；浮板；漂浮物；鱼漂；浮子；加冰激凌的饮料；浮动期；坐浮箱（治病、疗伤或放松）；救生圈 n. (Float)（美、英、德）弗洛特（人名）",
+    "translations": [
+      "v. 使漂浮，浮动；漂流，飘动；飘移；安排（贷款）提出，提请考虑（想法或计划）；发行（股票）上市；（货币汇率）自由浮动实行 n. （酒吧等用于给顾客找零的）备用零钱；彩车，花车；浮板；漂浮物；鱼漂；浮子；加冰激凌的饮料；浮动期；坐浮箱（治病、疗伤或放松）；救生圈 n. (Float)（美、英、德）弗洛特（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00259",
+    "word": "mosaic",
+    "phonetic": "məʊˈzeɪɪk",
+    "translation": "n. 马赛克；镶嵌画般的东西；不同要素组合体；（电视摄像机的）感光镶嵌板面；（生）嵌合体；花叶病 v. 用马赛克装饰；整合 adj. （生）镶嵌性的；拼成的；摩西的 n. (Mosaic) （印、美）摩塞克（人名）",
+    "translations": [
+      "n. 马赛克；镶嵌画般的东西；不同要素组合体；（电视摄像机的）感光镶嵌板面；（生）嵌合体；花叶病 v. 用马赛克装饰；整合 adj. （生）镶嵌性的；拼成的；摩西的 n. (Mosaic) （印、美）摩塞克（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00260",
+    "word": "polymer",
+    "phonetic": "ˈpɒlɪmə(r)",
+    "translation": "n. [高分子] 聚合物 n. (Polymer)人名；(英)波利默",
+    "translations": [
+      "n. [高分子] 聚合物 n. (Polymer)人名；(英)波利默"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00261",
+    "word": "trowel",
+    "phonetic": "ˈtraʊəl",
+    "translation": "n. （园艺用的）泥铲；（砌砖用的）[建] 泥刀；（抹灰用的）抹子 vt. 用抹子涂抹；用小泥铲挖",
+    "translations": [
+      "n. （园艺用的）泥铲；（砌砖用的）[建] 泥刀；（抹灰用的）抹子 vt. 用抹子涂抹；用小泥铲挖"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00262",
+    "word": "boycott",
+    "phonetic": "ˈbɔɪkɒt",
+    "translation": "v. 联合抵制；拒绝购买；拒绝参加 n. 联合抵制 n. (Boycott) 博伊科特（人名）",
+    "translations": [
+      "v. 联合抵制；拒绝购买；拒绝参加 n. 联合抵制 n. (Boycott) 博伊科特（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00263",
+    "word": "leadership",
+    "phonetic": "ˈliːdəʃɪp",
+    "translation": "n. 领导能力；领导阶层",
+    "translations": [
+      "n. 领导能力；领导阶层"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00264",
+    "word": "march",
+    "phonetic": "mɑːtʃ",
+    "translation": "vi. （坚定地向某地）前进；行军，进军；游行示威；进展，进行 vt. 使前进；使行军 n. 行进，前进；行军；游行示威；进行曲",
+    "translations": [
+      "vi. （坚定地向某地）前进；行军，进军；游行示威；进展，进行 vt. 使前进；使行军 n. 行进，前进；行军；游行示威；进行曲"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00265",
+    "word": "resist",
+    "phonetic": "rɪˈzɪst",
+    "translation": "vi. 抵抗，抗拒；忍耐 vt. 抵抗；忍耐，忍住 n. [助剂] 抗蚀剂；防染剂",
+    "translations": [
+      "vi. 抵抗，抗拒；忍耐 vt. 抵抗；忍耐，忍住 n. [助剂] 抗蚀剂；防染剂"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00266",
+    "word": "segregated",
+    "phonetic": "'seɡrɪɡeɪtɪd",
+    "translation": "adj. 被隔离的 v. 隔离（segregate的过去式）；分离",
+    "translations": [
+      "adj. 被隔离的 v. 隔离（segregate的过去式）；分离"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00267",
+    "word": "advise",
+    "phonetic": "ədˈvaɪz",
+    "translation": "vt. 建议；劝告，忠告；通知；警告 vi. 建议；与…商量",
+    "translations": [
+      "vt. 建议；劝告，忠告；通知；警告 vi. 建议；与…商量"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00268",
+    "word": "determined",
+    "phonetic": "dɪˈtɜːmɪnd",
+    "translation": "adj. 决定了的；坚决的 v. 决定；断定（determine的过去分词）",
+    "translations": [
+      "adj. 决定了的；坚决的 v. 决定；断定（determine的过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00269",
+    "word": "diverse",
+    "phonetic": "daɪˈvɜːs",
+    "translation": "adj. 不同的，相异的；多种多样的，形形色色的",
+    "translations": [
+      "adj. 不同的，相异的；多种多样的，形形色色的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00270",
+    "word": "encourage",
+    "phonetic": "ɪnˈkʌrɪdʒ",
+    "translation": "vt. 鼓励，怂恿；激励；支持",
+    "translations": [
+      "vt. 鼓励，怂恿；激励；支持"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00271",
+    "word": "law",
+    "phonetic": "lɔː",
+    "translation": "n. 法律；规律；法治；法学；诉讼；司法界 vi. 起诉；控告 vt. 控告；对…起诉 n. (Law)人名；(东南亚国家华语)刘；(英、缅、柬)劳",
+    "translations": [
+      "n. 法律；规律；法治；法学；诉讼；司法界 vi. 起诉；控告 vt. 控告；对…起诉 n. (Law)人名；(东南亚国家华语)刘；(英、缅、柬)劳"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00272",
+    "word": "ballot",
+    "phonetic": "ˈbælət",
+    "translation": "n. 投票；投票用纸；投票总数 vi. 投票；抽签决定 vt. 使投票表决；拉选票 n. (Ballot)人名；(英)巴洛特；(法)巴洛",
+    "translations": [
+      "n. 投票；投票用纸；投票总数 vi. 投票；抽签决定 vt. 使投票表决；拉选票 n. (Ballot)人名；(英)巴洛特；(法)巴洛"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00273",
+    "word": "district",
+    "phonetic": "ˈdɪstrɪkt",
+    "translation": "n. 区域；地方；行政区",
+    "translations": [
+      "n. 区域；地方；行政区"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00274",
+    "word": "enthusiastic",
+    "phonetic": "ɪnˌθjuːziˈæstɪk",
+    "translation": "adj. 热情的；热心的；狂热的",
+    "translations": [
+      "adj. 热情的；热心的；狂热的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00275",
+    "word": "signature",
+    "phonetic": "ˈsɪɡnətʃə(r)",
+    "translation": "n. 署名；签名；信号",
+    "translations": [
+      "n. 署名；签名；信号"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00276",
+    "word": "anthropoid",
+    "phonetic": "ˈænθrəpɔɪd",
+    "translation": "adj. 类人的，（猿等）似人类的；类人猿的；与高等灵长类有关的；（非正式）举止像猿猴的 n. 类人猿；灵长目；（非正式）猿猴似的人",
+    "translations": [
+      "adj. 类人的，（猿等）似人类的；类人猿的；与高等灵长类有关的；（非正式）举止像猿猴的 n. 类人猿；灵长目；（非正式）猿猴似的人"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00277",
+    "word": "habitat",
+    "phonetic": "ˈhæbɪtæt",
+    "translation": "n. [生态] 栖息地，产地 n. (Habitat)人名；(德)哈比塔特",
+    "translations": [
+      "n. [生态] 栖息地，产地 n. (Habitat)人名；(德)哈比塔特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00278",
+    "word": "prehensile",
+    "phonetic": "prɪˈhensaɪl",
+    "translation": "adj. 适于抓握的；善于领会的",
+    "translations": [
+      "adj. 适于抓握的；善于领会的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00279",
+    "word": "primate",
+    "phonetic": "'praɪmeɪt; -mət",
+    "translation": "n. 灵长目动物（包括人、猴子等）；大主教；首领 adj. 灵长目动物的；大主教的",
+    "translations": [
+      "n. 灵长目动物（包括人、猴子等）；大主教；首领 adj. 灵长目动物的；大主教的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00280",
+    "word": "prosimian",
+    "phonetic": "pro'sɪmiən",
+    "translation": "adj. 原猴亚目的 n. 原猴亚目的猴",
+    "translations": [
+      "adj. 原猴亚目的 n. 原猴亚目的猴"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00281",
+    "word": "troop",
+    "phonetic": "truːp",
+    "translation": "n. 军队；组；群；多数 vi. 群集；成群而行；结队 vt. 把（骑兵）编成骑兵连",
+    "translations": [
+      "n. 军队；组；群；多数 vi. 群集；成群而行；结队 vt. 把（骑兵）编成骑兵连"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00282",
+    "word": "aisle",
+    "phonetic": "aɪl",
+    "translation": "n. 通道，走道；侧廊",
+    "translations": [
+      "n. 通道，走道；侧廊"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00283",
+    "word": "balance",
+    "phonetic": "ˈbæləns",
+    "translation": "n. 平衡；余额；匀称 vt. 使平衡；结算；使相称 vi. 保持平衡；相称；抵销 n. (Balance)人名；(西)巴兰塞",
+    "translations": [
+      "n. 平衡；余额；匀称 vt. 使平衡；结算；使相称 vi. 保持平衡；相称；抵销 n. (Balance)人名；(西)巴兰塞"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00284",
+    "word": "ceremony",
+    "phonetic": "ˈserəməni",
+    "translation": "n. 典礼，仪式；礼节，礼仪；客套，虚礼",
+    "translations": [
+      "n. 典礼，仪式；礼节，礼仪；客套，虚礼"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00285",
+    "word": "mock",
+    "phonetic": "mɒk",
+    "translation": "v. 嘲笑，（通过模仿）嘲弄；不尊重，蔑视；使显得可笑 adj. 虚假的，不诚实的；模拟的，仿制的 n. （非正式）英国模拟考试；笑柄；嘲笑；模仿，仿造（品） adv. 虚假地，不诚实地 n. (Mock) （美、德）莫克（人名）",
+    "translations": [
+      "v. 嘲笑，（通过模仿）嘲弄；不尊重，蔑视；使显得可笑 adj. 虚假的，不诚实的；模拟的，仿制的 n. （非正式）英国模拟考试；笑柄；嘲笑；模仿，仿造（品） adv. 虚假地，不诚实地 n. (Mock) （美、德）莫克（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00286",
+    "word": "boast",
+    "phonetic": "bəʊst",
+    "translation": "vt. 夸口说，自吹自擂说；以有…而自豪 n. 自夸；值得夸耀的事物，引以为荣的事物 vi. 自吹自擂 n. (Boast)人名；(英)博斯特",
+    "translations": [
+      "vt. 夸口说，自吹自擂说；以有…而自豪 n. 自夸；值得夸耀的事物，引以为荣的事物 vi. 自吹自擂 n. (Boast)人名；(英)博斯特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00287",
+    "word": "courtesy",
+    "phonetic": "ˈkɜːtəsi",
+    "translation": "n. 礼貌；好意；恩惠 adj. 殷勤的；被承认的；出于礼节的",
+    "translations": [
+      "n. 礼貌；好意；恩惠 adj. 殷勤的；被承认的；出于礼节的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00288",
+    "word": "odor",
+    "phonetic": "'əʊdə",
+    "translation": "n. 气味；名声 n. (Odor)人名；(匈)欧多尔",
+    "translations": [
+      "n. 气味；名声 n. (Odor)人名；(匈)欧多尔"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00289",
+    "word": "remorse",
+    "phonetic": "rɪˈmɔːs",
+    "translation": "n. 懊悔；同情",
+    "translations": [
+      "n. 懊悔；同情"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00290",
+    "word": "tolerate",
+    "phonetic": "ˈtɒləreɪt",
+    "translation": "vt. 忍受；默许；宽恕",
+    "translations": [
+      "vt. 忍受；默许；宽恕"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00291",
+    "word": "apologetic",
+    "phonetic": "əˌpɒləˈdʒetɪk",
+    "translation": "adj. 道歉的；赔罪的",
+    "translations": [
+      "adj. 道歉的；赔罪的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00292",
+    "word": "dejected",
+    "phonetic": "dɪˈdʒektɪd",
+    "translation": "adj. 沮丧的，灰心的",
+    "translations": [
+      "adj. 沮丧的，灰心的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00293",
+    "word": "humiliation",
+    "phonetic": "hjuːˌmɪliˈeɪʃn",
+    "translation": "n. 丢脸，耻辱；蒙羞；谦卑",
+    "translations": [
+      "n. 丢脸，耻辱；蒙羞；谦卑"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00294",
+    "word": "indignation",
+    "phonetic": "ˌɪndɪɡˈneɪʃn",
+    "translation": "n. 愤慨；愤怒；义愤",
+    "translations": [
+      "n. 愤慨；愤怒；义愤"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00295",
+    "word": "mortified",
+    "phonetic": "'mɔːtɪfaɪd",
+    "translation": "adj. 窘迫的；受辱的 v. 使受辱（mortify的过去式）",
+    "translations": [
+      "adj. 窘迫的；受辱的 v. 使受辱（mortify的过去式）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00296",
+    "word": "overcome",
+    "phonetic": "ˌəʊvəˈkʌm",
+    "translation": "vt. 克服；胜过 vi. 克服；得胜",
+    "translations": [
+      "vt. 克服；胜过 vi. 克服；得胜"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00297",
+    "word": "chapel",
+    "phonetic": "ˈtʃæpl",
+    "translation": "n. 小礼拜堂，小教堂；礼拜 adj. 非国教的 n. (Chapel)人名；(法)沙佩尔；(英)查普尔",
+    "translations": [
+      "n. 小礼拜堂，小教堂；礼拜 adj. 非国教的 n. (Chapel)人名；(法)沙佩尔；(英)查普尔"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00298",
+    "word": "chiseled",
+    "phonetic": "'tʃɪzəld",
+    "translation": "adj. 轮廓分明的；凿刻的 v. 镌刻；用凿子刻（chisel的过去分词）",
+    "translations": [
+      "adj. 轮廓分明的；凿刻的 v. 镌刻；用凿子刻（chisel的过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00299",
+    "word": "engrave",
+    "phonetic": "ɪnˈɡreɪv",
+    "translation": "vt. 雕刻；铭记",
+    "translations": [
+      "vt. 雕刻；铭记"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00300",
+    "word": "indignant",
+    "phonetic": "ɪnˈdɪɡnənt",
+    "translation": "adj. 愤愤不平的；义愤的",
+    "translations": [
+      "adj. 愤愤不平的；义愤的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00301",
+    "word": "masterpiece",
+    "phonetic": "ˈmɑːstəpiːs",
+    "translation": "n. 杰作；绝无仅有的人",
+    "translations": [
+      "n. 杰作；绝无仅有的人"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00302",
+    "word": "renowned",
+    "phonetic": "rɪˈnaʊnd",
+    "translation": "adj. 著名的；有声望的 v. 使有声誉（renown的过去分词）",
+    "translations": [
+      "adj. 著名的；有声望的 v. 使有声誉（renown的过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00303",
+    "word": "creature",
+    "phonetic": "ˈkriːtʃə(r)",
+    "translation": "n. 动物，生物；人；创造物",
+    "translations": [
+      "n. 动物，生物；人；创造物"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00304",
+    "word": "defeat",
+    "phonetic": "dɪˈfiːt",
+    "translation": "v. 击败；挫败（某人）；阻止达成（目的）；反对（动议或提议）；（使）无法理解；（使）无效 n. 失败；战胜",
+    "translations": [
+      "v. 击败；挫败（某人）；阻止达成（目的）；反对（动议或提议）；（使）无法理解；（使）无效 n. 失败；战胜"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00305",
+    "word": "hybrid",
+    "phonetic": "ˈhaɪbrɪd",
+    "translation": "n. 杂种，混血儿；混合物 adj. 混合的；杂种的",
+    "translations": [
+      "n. 杂种，混血儿；混合物 adj. 混合的；杂种的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00306",
+    "word": "myth",
+    "phonetic": "mɪθ",
+    "translation": "n. 神话；虚构的人，虚构的事",
+    "translations": [
+      "n. 神话；虚构的人，虚构的事"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00307",
+    "word": "symbolize",
+    "phonetic": "ˈsɪmbəlaɪz",
+    "translation": "vt. 象征；用符号表现 vi. 采用象征；使用符号；作为…的象征",
+    "translations": [
+      "vt. 象征；用符号表现 vi. 采用象征；使用符号；作为…的象征"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00308",
+    "word": "ban",
+    "phonetic": "bæn",
+    "translation": "v. 禁止，取缔；（官方）把（某人）逐出某地 n. 禁止，禁令，禁忌；剥夺公民权的判决；诅咒；巴尼（罗马尼亚货币单位） n. (Ban) （美、罗马、克罗地亚）班恩（人名）",
+    "translations": [
+      "v. 禁止，取缔；（官方）把（某人）逐出某地 n. 禁止，禁令，禁忌；剥夺公民权的判决；诅咒；巴尼（罗马尼亚货币单位） n. (Ban) （美、罗马、克罗地亚）班恩（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00309",
+    "word": "cause",
+    "phonetic": "kɔːz",
+    "translation": "n. 原因；事业；目标 vt. 引起；使遭受",
+    "translations": [
+      "n. 原因；事业；目标 vt. 引起；使遭受"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00310",
+    "word": "column",
+    "phonetic": "ˈkɒləm",
+    "translation": "n. 纵队，列；专栏；圆柱，柱形物",
+    "translations": [
+      "n. 纵队，列；专栏；圆柱，柱形物"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00311",
+    "word": "committee",
+    "phonetic": "kəˈmɪti",
+    "translation": "n. 委员会",
+    "translations": [
+      "n. 委员会"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00312",
+    "word": "protest",
+    "phonetic": "ˈprəʊtest; prəˈtest",
+    "translation": "n. 抗议，反对；（多来自公证人）拒付证书 v. 抗议，反对；坚决表示，断言；拒付",
+    "translations": [
+      "n. 抗议，反对；（多来自公证人）拒付证书 v. 抗议，反对；坚决表示，断言；拒付"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00313",
+    "word": "dominant",
+    "phonetic": "ˈdɒmɪnənt",
+    "translation": "adj. 显性的；占优势的；支配的，统治的 n. 显性",
+    "translations": [
+      "adj. 显性的；占优势的；支配的，统治的 n. 显性"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00314",
+    "word": "endangered",
+    "phonetic": "ɪnˈdeɪndʒəd",
+    "translation": "adj. 濒临灭绝的；有生命危险的",
+    "translations": [
+      "adj. 濒临灭绝的；有生命危险的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00315",
+    "word": "gizzard",
+    "phonetic": "ˈɡɪzəd",
+    "translation": "n. （鸟的）[鸟] 砂囊；胃；喉咙",
+    "translations": [
+      "n. （鸟的）[鸟] 砂囊；胃；喉咙"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00316",
+    "word": "intimidate",
+    "phonetic": "ɪnˈtɪmɪdeɪt",
+    "translation": "vt. 恐吓，威胁；胁迫",
+    "translations": [
+      "vt. 恐吓，威胁；胁迫"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00317",
+    "word": "savanna",
+    "phonetic": "sə'vænə",
+    "translation": "n. [生态] 热带草原；热带的稀树大草原",
+    "translations": [
+      "n. [生态] 热带草原；热带的稀树大草原"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00318",
+    "word": "atmosphere",
+    "phonetic": "ˈætməsfɪə(r)",
+    "translation": "n. 气氛；大气；空气",
+    "translations": [
+      "n. 气氛；大气；空气"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00319",
+    "word": "diameter",
+    "phonetic": "daɪˈæmɪtə(r)",
+    "translation": "n. 直径",
+    "translations": [
+      "n. 直径"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00320",
+    "word": "meteor",
+    "phonetic": "ˈmiːtiə(r); ˈmiːtiɔː(r)",
+    "translation": "n. 流星；[气象] 大气现象",
+    "translations": [
+      "n. 流星；[气象] 大气现象"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00321",
+    "word": "meteorite",
+    "phonetic": "ˈmiːtiəraɪt",
+    "translation": "n. 陨石，陨星；流星",
+    "translations": [
+      "n. 陨石，陨星；流星"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00322",
+    "word": "algae",
+    "phonetic": "ˈældʒiː; ˈælɡiː",
+    "translation": "n. [植] 藻类；[植] 海藻",
+    "translations": [
+      "n. [植] 藻类；[植] 海藻"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00323",
+    "word": "insulation",
+    "phonetic": "ˌɪnsjuˈleɪʃn",
+    "translation": "n. 绝缘；隔离，孤立",
+    "translations": [
+      "n. 绝缘；隔离，孤立"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00324",
+    "word": "pollution",
+    "phonetic": "pəˈluːʃn",
+    "translation": "n. 污染 污染物",
+    "translations": [
+      "n. 污染 污染物"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00325",
+    "word": "streamlined",
+    "phonetic": "'striːmlaɪnd",
+    "translation": "adj. 流线型的；改进的；最新型的 v. 使成流线型；使合理化（streamline的过去式和过去分词）",
+    "translations": [
+      "adj. 流线型的；改进的；最新型的 v. 使成流线型；使合理化（streamline的过去式和过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00326",
+    "word": "appetizing",
+    "phonetic": "ˈæpɪtaɪzɪŋ",
+    "translation": "adj. 开胃的；促进食欲的",
+    "translations": [
+      "adj. 开胃的；促进食欲的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00327",
+    "word": "devour",
+    "phonetic": "dɪˈvaʊə(r)",
+    "translation": "v. 吞食；毁灭",
+    "translations": [
+      "v. 吞食；毁灭"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00328",
+    "word": "peculiar",
+    "phonetic": "pɪˈkjuːliə(r)",
+    "translation": "adj. 特殊的；独特的；奇怪的；罕见的 n. 特权；特有财产",
+    "translations": [
+      "adj. 特殊的；独特的；奇怪的；罕见的 n. 特权；特有财产"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00329",
+    "word": "savor",
+    "phonetic": "'seɪvə",
+    "translation": "vt. 尽情享受；使有风味；加调味品于；品尝，欣赏 vi. 有…的滋味；带有…的性质 n. 滋味；气味；食欲",
+    "translations": [
+      "vt. 尽情享受；使有风味；加调味品于；品尝，欣赏 vi. 有…的滋味；带有…的性质 n. 滋味；气味；食欲"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00330",
+    "word": "scrumptious",
+    "phonetic": "ˈskrʌmpʃəs",
+    "translation": "adj. 美味的；绝妙的，极好的",
+    "translations": [
+      "adj. 美味的；绝妙的，极好的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00331",
+    "word": "suspicious",
+    "phonetic": "səˈspɪʃəs",
+    "translation": "adj. 可疑的；怀疑的；多疑的",
+    "translations": [
+      "adj. 可疑的；怀疑的；多疑的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00332",
+    "word": "concentrated",
+    "phonetic": "ˈkɒnsntreɪtɪd",
+    "translation": "adj. 集中的；浓缩的；全神贯注的 v. 集中（concentrate的过去分词）",
+    "translations": [
+      "adj. 集中的；浓缩的；全神贯注的 v. 集中（concentrate的过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00333",
+    "word": "focus",
+    "phonetic": "ˈfəʊkəs",
+    "translation": "n. 焦点；中心；清晰；焦距 vt. 使集中；使聚焦 vi. 集中；聚焦；调节焦距 n. (Focus)人名；(瑞典)福库斯",
+    "translations": [
+      "n. 焦点；中心；清晰；焦距 vt. 使集中；使聚焦 vi. 集中；聚焦；调节焦距 n. (Focus)人名；(瑞典)福库斯"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00334",
+    "word": "reflection",
+    "phonetic": "rɪˈflekʃn",
+    "translation": "n. 反射；沉思；映象",
+    "translations": [
+      "n. 反射；沉思；映象"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00335",
+    "word": "refraction",
+    "phonetic": "rɪˈfrækʃn",
+    "translation": "n. 折射；折光",
+    "translations": [
+      "n. 折射；折光"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00336",
+    "word": "substance",
+    "phonetic": "ˈsʌbstəns",
+    "translation": "n. 物质；实质；资产；主旨",
+    "translations": [
+      "n. 物质；实质；资产；主旨"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00337",
+    "word": "debunk",
+    "phonetic": "diːˈbʌŋk",
+    "translation": "vt. 揭穿；拆穿…的假面具；暴露",
+    "translations": [
+      "vt. 揭穿；拆穿…的假面具；暴露"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00338",
+    "word": "disembark",
+    "phonetic": "ˌdɪsɪmˈbɑːk",
+    "translation": "vi. 登陆，下车；上岸 vt. 使……登陆；使……上岸",
+    "translations": [
+      "vi. 登陆，下车；上岸 vt. 使……登陆；使……上岸"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00339",
+    "word": "lair",
+    "phonetic": "leə(r)",
+    "translation": "n. （野兽的）[动] 巢穴；躲藏处 vi. 进入兽穴；在穴中休息 vt. 使陷入泥潭；放于穴中 n. (Lair)人名；(英、法)莱尔",
+    "translations": [
+      "n. （野兽的）[动] 巢穴；躲藏处 vi. 进入兽穴；在穴中休息 vt. 使陷入泥潭；放于穴中 n. (Lair)人名；(英、法)莱尔"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00340",
+    "word": "peat",
+    "phonetic": "piːt",
+    "translation": "n. 泥煤；泥炭块；泥炭色 n. (Peat)人名；(英)皮特",
+    "translations": [
+      "n. 泥煤；泥炭块；泥炭色 n. (Peat)人名；(英)皮特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00341",
+    "word": "scour",
+    "phonetic": "ˈskaʊə(r)",
+    "translation": "vi. 冲刷；擦；腹泻 vt. 擦亮，洗涤；冲洗，清除 n. 擦，冲刷；洗涤剂；（畜类等的）腹泻",
+    "translations": [
+      "vi. 冲刷；擦；腹泻 vt. 擦亮，洗涤；冲洗，清除 n. 擦，冲刷；洗涤剂；（畜类等的）腹泻"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00342",
+    "word": "sonar",
+    "phonetic": "ˈsəʊnɑː(r)",
+    "translation": "n. 声呐；声波定位仪（等于asdic） n. （Sonar）人名；（土）索纳尔",
+    "translations": [
+      "n. 声呐；声波定位仪（等于asdic） n. （Sonar）人名；（土）索纳尔"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00343",
+    "word": "delighted",
+    "phonetic": "dɪˈlaɪtɪd",
+    "translation": "adj. 高兴的；令人愉快的；乐意的 v. （使）高兴，愉快（delight 的过去式及过去分词）",
+    "translations": [
+      "adj. 高兴的；令人愉快的；乐意的 v. （使）高兴，愉快（delight 的过去式及过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00344",
+    "word": "errand",
+    "phonetic": "ˈerənd",
+    "translation": "n. 使命；差事；差使",
+    "translations": [
+      "n. 使命；差事；差使"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00345",
+    "word": "fetch",
+    "phonetic": "fetʃ",
+    "translation": "vt. 取来；接来；到达；吸引 vi. 拿；取物；卖得 n. 取得；诡计",
+    "translations": [
+      "vt. 取来；接来；到达；吸引 vi. 拿；取物；卖得 n. 取得；诡计"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00346",
+    "word": "master",
+    "phonetic": "ˈmɑːstə(r)",
+    "translation": "n. 主人；大师；硕士；男教师；原件；院长；主宰者；船长；著名画家；少爷；桅船 v. 精通；控制；征服；制作……母版 adj. 主人的；主要的；熟练的；原始版的 n. (Master) 马斯特（人名）",
+    "translations": [
+      "n. 主人；大师；硕士；男教师；原件；院长；主宰者；船长；著名画家；少爷；桅船 v. 精通；控制；征服；制作……母版 adj. 主人的；主要的；熟练的；原始版的 n. (Master) 马斯特（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00347",
+    "word": "engineer",
+    "phonetic": "ˌendʒɪˈnɪə(r)",
+    "translation": "n. 工程师；工兵；火车司机 vt. 设计；策划；精明地处理 vi. 设计；建造",
+    "translations": [
+      "n. 工程师；工兵；火车司机 vt. 设计；策划；精明地处理 vi. 设计；建造"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00348",
+    "word": "landmark",
+    "phonetic": "ˈlændmɑːk",
+    "translation": "n. [航]陆标；地标；界标；里程碑；纪念碑；地界标；划时代的事 adj. 有重大意义或影响的 n. （瑞典、挪）兰德马克（人名）",
+    "translations": [
+      "n. [航]陆标；地标；界标；里程碑；纪念碑；地界标；划时代的事 adj. 有重大意义或影响的 n. （瑞典、挪）兰德马克（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00349",
+    "word": "scholar",
+    "phonetic": "ˈskɒlə(r)",
+    "translation": "n. 学者；奖学金获得者",
+    "translations": [
+      "n. 学者；奖学金获得者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00350",
+    "word": "skyline",
+    "phonetic": "ˈskaɪlaɪn",
+    "translation": "n. 地平线；空中轮廓线；架空索 vt. 天空映衬出…的轮廓",
+    "translations": [
+      "n. 地平线；空中轮廓线；架空索 vt. 天空映衬出…的轮廓"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00351",
+    "word": "waterway",
+    "phonetic": "ˈwɔːtəweɪ",
+    "translation": "n. 航道；水路；排水沟",
+    "translations": [
+      "n. 航道；水路；排水沟"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00352",
+    "word": "campaign",
+    "phonetic": "kæmˈpeɪn",
+    "translation": "n. 运动；活动；战役，军事行动；竞选 v. 领导或参加运动；参加竞选",
+    "translations": [
+      "n. 运动；活动；战役，军事行动；竞选 v. 领导或参加运动；参加竞选"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00353",
+    "word": "candidate",
+    "phonetic": "ˈkændɪdət; ˈkændɪdeɪt",
+    "translation": "n. 候选人，候补者；应试者",
+    "translations": [
+      "n. 候选人，候补者；应试者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00354",
+    "word": "era",
+    "phonetic": "ˈɪərə",
+    "translation": "n. 时代；年代；纪元 n. (Era)人名；(意、芬、印)埃拉",
+    "translations": [
+      "n. 时代；年代；纪元 n. (Era)人名；(意、芬、印)埃拉"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00355",
+    "word": "legislature",
+    "phonetic": "ˈledʒɪslətʃə(r)",
+    "translation": "n. 立法机关；立法机构",
+    "translations": [
+      "n. 立法机关；立法机构"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00356",
+    "word": "nomination",
+    "phonetic": "ˌnɒmɪˈneɪʃn",
+    "translation": "n. 任命，提名；提名权",
+    "translations": [
+      "n. 任命，提名；提名权"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00357",
+    "word": "antivenin",
+    "phonetic": ",æntɪ'venɪn",
+    "translation": "n. 抗蛇毒素；抗蛇毒血清",
+    "translations": [
+      "n. 抗蛇毒素；抗蛇毒血清"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00358",
+    "word": "inject",
+    "phonetic": "ɪnˈdʒekt",
+    "translation": "vt. 注入；注射",
+    "translations": [
+      "vt. 注入；注射"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00359",
+    "word": "prey",
+    "phonetic": "preɪ",
+    "translation": "n. 猎物；受害者，牺牲品；（情绪易受伤的）脆弱的人；掠夺品 v. 捕食；伤害；折磨，困扰 n. (Prey) （美、德、爱）普赖（人名）",
+    "translations": [
+      "n. 猎物；受害者，牺牲品；（情绪易受伤的）脆弱的人；掠夺品 v. 捕食；伤害；折磨，困扰 n. (Prey) （美、德、爱）普赖（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00360",
+    "word": "exploration",
+    "phonetic": "ˌekspləˈreɪʃn",
+    "translation": "n. 探测；探究；踏勘",
+    "translations": [
+      "n. 探测；探究；踏勘"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00361",
+    "word": "rover",
+    "phonetic": "ˈrəʊvə(r)",
+    "translation": "n. 漫游者；流浪者；漂泊者；巡视器 n. (Rover)人名；(英)罗弗；(意)罗韦尔",
+    "translations": [
+      "n. 漫游者；流浪者；漂泊者；巡视器 n. (Rover)人名；(英)罗弗；(意)罗韦尔"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00362",
+    "word": "simulator",
+    "phonetic": "ˈsɪmjuleɪtə(r)",
+    "translation": "n. 模拟器；假装者，模拟者",
+    "translations": [
+      "n. 模拟器；假装者，模拟者"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00363",
+    "word": "spacecraft",
+    "phonetic": "ˈspeɪskrɑːft",
+    "translation": "n. [航] 宇宙飞船，航天器",
+    "translations": [
+      "n. [航] 宇宙飞船，航天器"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00364",
+    "word": "trainee",
+    "phonetic": "ˌtreɪˈniː",
+    "translation": "n. 练习生，实习生；受训者；新兵；训练中的动物",
+    "translations": [
+      "n. 练习生，实习生；受训者；新兵；训练中的动物"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00365",
+    "word": "disguise",
+    "phonetic": "dɪsˈɡaɪz",
+    "translation": "vt. 掩饰；假装；隐瞒 n. 伪装；假装；用作伪装的东西",
+    "translations": [
+      "vt. 掩饰；假装；隐瞒 n. 伪装；假装；用作伪装的东西"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00366",
+    "word": "mythology",
+    "phonetic": "mɪˈθɒlədʒi",
+    "translation": "n. 神话；神话学；神话集",
+    "translations": [
+      "n. 神话；神话学；神话集"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00367",
+    "word": "Norse",
+    "phonetic": "nɔːs",
+    "translation": "adj. 挪威的；挪威人的；斯堪的纳维亚语的 n. 挪威人；挪威语",
+    "translations": [
+      "adj. 挪威的；挪威人的；斯堪的纳维亚语的 n. 挪威人；挪威语"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00368",
+    "word": "trickster",
+    "phonetic": "ˈtrɪkstə(r)",
+    "translation": "n. 骗子；魔术师",
+    "translations": [
+      "n. 骗子；魔术师"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00369",
+    "word": "wager",
+    "phonetic": "ˈweɪdʒə(r)",
+    "translation": "n. 赌注；赌博；赌物 vi. 打赌 vt. 下赌注 n. (Wager)人名；(英)韦杰；(芬、瑞典)瓦格",
+    "translations": [
+      "n. 赌注；赌博；赌物 vi. 打赌 vt. 下赌注 n. (Wager)人名；(英)韦杰；(芬、瑞典)瓦格"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00370",
+    "word": "demand",
+    "phonetic": "dɪˈmɑːnd",
+    "translation": "n. （坚决的或困难的）要求；（顾客的）需求 v. 强烈要求；需要；逼问；查问，查询 n. (Demand) （德）德曼德（人名）",
+    "translations": [
+      "n. （坚决的或困难的）要求；（顾客的）需求 v. 强烈要求；需要；逼问；查问，查询 n. (Demand) （德）德曼德（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00371",
+    "word": "fluctuate",
+    "phonetic": "ˈflʌktʃueɪt",
+    "translation": "vi. 波动；涨落；动摇 vt. 使波动；使动摇",
+    "translations": [
+      "vi. 波动；涨落；动摇 vt. 使波动；使动摇"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00372",
+    "word": "influence",
+    "phonetic": "ˈɪnfluəns",
+    "translation": "n. 影响；势力；感化；有影响的人或事 vt. 影响；改变",
+    "translations": [
+      "n. 影响；势力；感化；有影响的人或事 vt. 影响；改变"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00373",
+    "word": "merchandise",
+    "phonetic": "ˈmɜːtʃəndaɪs; ˈmɜːtʃəndaɪz",
+    "translation": "n. 商品；货物 vt. 买卖；推销 vi. 经商",
+    "translations": [
+      "n. 商品；货物 vt. 买卖；推销 vi. 经商"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00374",
+    "word": "product",
+    "phonetic": "ˈprɒdʌkt",
+    "translation": "n. 产品；结果；[数] 乘积；作品",
+    "translations": [
+      "n. 产品；结果；[数] 乘积；作品"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00375",
+    "word": "supply",
+    "phonetic": "səˈplaɪ",
+    "translation": "n. 供给，补给；供应品 vt. 供给，提供；补充 vi. 供给；替代",
+    "translations": [
+      "n. 供给，补给；供应品 vt. 供给，提供；补充 vi. 供给；替代"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00376",
+    "word": "contraption",
+    "phonetic": "kənˈtræpʃn",
+    "translation": "n. 奇妙的装置；精巧的设计",
+    "translations": [
+      "n. 奇妙的装置；精巧的设计"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00377",
+    "word": "dire",
+    "phonetic": "ˈdaɪə(r)",
+    "translation": "adj. 可怕的；悲惨的；极端的",
+    "translations": [
+      "adj. 可怕的；悲惨的；极端的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00378",
+    "word": "magnificent",
+    "phonetic": "mæɡˈnɪfɪsnt",
+    "translation": "adj. 高尚的；壮丽的；华丽的；宏伟的",
+    "translations": [
+      "adj. 高尚的；壮丽的；华丽的；宏伟的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00379",
+    "word": "steerage",
+    "phonetic": "ˈstɪərɪdʒ",
+    "translation": "n. 统舱；舵效；操舵；驾驶；管理；士官的二等室",
+    "translations": [
+      "n. 统舱；舵效；操舵；驾驶；管理；士官的二等室"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00380",
+    "word": "electronic",
+    "phonetic": "ɪˌlekˈtrɒnɪk",
+    "translation": "adj. 电子的 n. 电子电路；电子器件",
+    "translations": [
+      "adj. 电子的 n. 电子电路；电子器件"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00381",
+    "word": "interact",
+    "phonetic": "ˌɪntərˈækt",
+    "translation": "vt. 互相影响；互相作用 vi. 互相影响；互相作用 n. 幕间剧；幕间休息",
+    "translations": [
+      "vt. 互相影响；互相作用 vi. 互相影响；互相作用 n. 幕间剧；幕间休息"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00382",
+    "word": "relationship",
+    "phonetic": "rɪˈleɪʃnʃɪp",
+    "translation": "n. 关系；关联",
+    "translations": [
+      "n. 关系；关联"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00383",
+    "word": "technology",
+    "phonetic": "tekˈnɒlədʒi",
+    "translation": "n. 技术；工艺；术语",
+    "translations": [
+      "n. 技术；工艺；术语"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00384",
+    "word": "devastating",
+    "phonetic": "ˈdevəsteɪtɪŋ",
+    "translation": "adj. 毁灭性的；全然的 v. 摧毁（devastate的ing形式）；毁坏",
+    "translations": [
+      "adj. 毁灭性的；全然的 v. 摧毁（devastate的ing形式）；毁坏"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00385",
+    "word": "earthquake",
+    "phonetic": "ˈɜːθkweɪk",
+    "translation": "n. 地震；大动荡",
+    "translations": [
+      "n. 地震；大动荡"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00386",
+    "word": "evacuation",
+    "phonetic": "ɪˌvækjuˈeɪʃn",
+    "translation": "n. 疏散；撤离；排泄",
+    "translations": [
+      "n. 疏散；撤离；排泄"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00387",
+    "word": "fault",
+    "phonetic": "fɔːlt",
+    "translation": "n. 故障；[地质] 断层；错误；缺点；毛病；（网球等）发球失误 vi. 弄错；产生断层 vt. （通常用于疑问句或否定句）挑剔",
+    "translations": [
+      "n. 故障；[地质] 断层；错误；缺点；毛病；（网球等）发球失误 vi. 弄错；产生断层 vt. （通常用于疑问句或否定句）挑剔"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00388",
+    "word": "siren",
+    "phonetic": "ˈsaɪrən",
+    "translation": "n. 汽笛；迷人的女人；歌声动人的女歌手 adj. 迷人的 vi. 响着警报器行驶 vt. 引诱",
+    "translations": [
+      "n. 汽笛；迷人的女人；歌声动人的女歌手 adj. 迷人的 vi. 响着警报器行驶 vt. 引诱"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00389",
+    "word": "tsunami",
+    "phonetic": "tsuːˈnɑːmi",
+    "translation": "n. 海啸",
+    "translations": [
+      "n. 海啸"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00390",
+    "word": "crater",
+    "phonetic": "ˈkreɪtə(r)",
+    "translation": "n. 火山口；弹坑 vt. 在…上形成坑；取消；毁坏 vi. 形成坑；消亡",
+    "translations": [
+      "n. 火山口；弹坑 vt. 在…上形成坑；取消；毁坏 vi. 形成坑；消亡"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00391",
+    "word": "dormant",
+    "phonetic": "ˈdɔːmənt",
+    "translation": "adj. 休眠的；静止的；睡眠状态的；隐匿的 n. (Dormant)人名；(法)多尔芒",
+    "translations": [
+      "adj. 休眠的；静止的；睡眠状态的；隐匿的 n. (Dormant)人名；(法)多尔芒"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00392",
+    "word": "lava",
+    "phonetic": "ˈlɑːvə",
+    "translation": "n. 火山岩浆；火山所喷出的熔岩 n. (Lava)人名；(西、意)拉瓦",
+    "translations": [
+      "n. 火山岩浆；火山所喷出的熔岩 n. (Lava)人名；(西、意)拉瓦"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00393",
+    "word": "magma",
+    "phonetic": "ˈmæɡmə",
+    "translation": "n. [地质] 岩浆；糊剂 n. (Magma)人名；(英)马格马",
+    "translations": [
+      "n. [地质] 岩浆；糊剂 n. (Magma)人名；(英)马格马"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00394",
+    "word": "plate",
+    "phonetic": "pleɪt",
+    "translation": "n. 碟；金属板；金属牌；感光底片 vt. 电镀；给…装甲 n. (Plate)人名；(英、德、俄、西、意、瑞典)普拉特",
+    "translations": [
+      "n. 碟；金属板；金属牌；感光底片 vt. 电镀；给…装甲 n. (Plate)人名；(英、德、俄、西、意、瑞典)普拉特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00395",
+    "word": "explore",
+    "phonetic": "ɪkˈsplɔː(r)",
+    "translation": "vt. 探索；探测；探险 vi. 探索；探测；探险",
+    "translations": [
+      "vt. 探索；探测；探险 vi. 探索；探测；探险"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00396",
+    "word": "instrument",
+    "phonetic": "ˈɪnstrəmənt",
+    "translation": "n. 仪器；工具；乐器；手段；器械 v. 给……装测量仪器",
+    "translations": [
+      "n. 仪器；工具；乐器；手段；器械 v. 给……装测量仪器"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00397",
+    "word": "mission",
+    "phonetic": "ˈmɪʃn",
+    "translation": "n. 使命，任务；代表团；布道 vt. 派遣；向……传教",
+    "translations": [
+      "n. 使命，任务；代表团；布道 vt. 派遣；向……传教"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00398",
+    "word": "probe",
+    "phonetic": "prəʊb",
+    "translation": "n. 探针；调查 vi. 调查；探测 vt. 探查；用探针探测 n. (Probe)人名；(法)普罗布",
+    "translations": [
+      "n. 探针；调查 vi. 调查；探测 vt. 探查；用探针探测 n. (Probe)人名；(法)普罗布"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00399",
+    "word": "despise",
+    "phonetic": "dɪˈspaɪz",
+    "translation": "vt. 轻视，鄙视",
+    "translations": [
+      "vt. 轻视，鄙视"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00400",
+    "word": "invade",
+    "phonetic": "ɪnˈveɪd",
+    "translation": "vt. 侵略；侵袭；侵扰；涌入 vi. 侵略；侵入；侵袭；侵犯",
+    "translations": [
+      "vt. 侵略；侵袭；侵扰；涌入 vi. 侵略；侵入；侵袭；侵犯"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00401",
+    "word": "kingdom",
+    "phonetic": "ˈkɪŋdəm",
+    "translation": "n. 王国；界；领域 n. (Kingdom)人名；(英)金德姆",
+    "translations": [
+      "n. 王国；界；领域 n. (Kingdom)人名；(英)金德姆"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00402",
+    "word": "regret",
+    "phonetic": "rɪˈɡret",
+    "translation": "vt. 后悔；对……感到遗憾；礼貌或正式地表示惋惜或抱歉；对（损失或缺乏）感到痛惜 vi. 遗憾 n. 遗憾，歉意",
+    "translations": [
+      "vt. 后悔；对……感到遗憾；礼貌或正式地表示惋惜或抱歉；对（损失或缺乏）感到痛惜 vi. 遗憾 n. 遗憾，歉意"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00403",
+    "word": "ruffian",
+    "phonetic": "ˈrʌfiən",
+    "translation": "n. 恶棍；流氓；无赖 adj. 残暴的；凶恶的；无法无天的",
+    "translations": [
+      "n. 恶棍；流氓；无赖 adj. 残暴的；凶恶的；无法无天的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00404",
+    "word": "analyze",
+    "phonetic": "ˈænəlaɪz",
+    "translation": "vt. 对…进行分析，分解（等于analyse）",
+    "translations": [
+      "vt. 对…进行分析，分解（等于analyse）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00405",
+    "word": "discovery",
+    "phonetic": "dɪˈskʌvəri",
+    "translation": "n. 发现，发觉；被发现的事物",
+    "translations": [
+      "n. 发现，发觉；被发现的事物"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00406",
+    "word": "method",
+    "phonetic": "ˈmeθəd",
+    "translation": "n. 方法；条理；类函数 adj. 使用体验派表演方法的",
+    "translations": [
+      "n. 方法；条理；类函数 adj. 使用体验派表演方法的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00407",
+    "word": "mysterious",
+    "phonetic": "mɪˈstɪəriəs",
+    "translation": "adj. 神秘的；不可思议的；难解的",
+    "translations": [
+      "adj. 神秘的；不可思议的；难解的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00408",
+    "word": "commitment",
+    "phonetic": "kəˈmɪtmənt",
+    "translation": "n. 承诺，保证；委托；承担义务；献身",
+    "translations": [
+      "n. 承诺，保证；委托；承担义务；献身"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00409",
+    "word": "disappoint",
+    "phonetic": "ˌdɪsəˈpɔɪnt",
+    "translation": "vt. 使失望",
+    "translations": [
+      "vt. 使失望"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00410",
+    "word": "fascinating",
+    "phonetic": "ˈfæsɪneɪtɪŋ",
+    "translation": "adj. 迷人的；吸引人的；使人神魂颠倒的 v. 使…着迷；使…陶醉（fascinate的ing形式）",
+    "translations": [
+      "adj. 迷人的；吸引人的；使人神魂颠倒的 v. 使…着迷；使…陶醉（fascinate的ing形式）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00411",
+    "word": "frustrated",
+    "phonetic": "frʌˈstreɪtɪd",
+    "translation": "adj. 懊恼的，沮丧的；无效的，没有得到满足的；失意的，不得志的；（性欲）被抑制的 v. 挫败；阻挠（frustrate 的过去式和过去分词）",
+    "translations": [
+      "adj. 懊恼的，沮丧的；无效的，没有得到满足的；失意的，不得志的；（性欲）被抑制的 v. 挫败；阻挠（frustrate 的过去式和过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00412",
+    "word": "investigate",
+    "phonetic": "ɪnˈvestɪɡeɪt",
+    "translation": "v. 调查；研究",
+    "translations": [
+      "v. 调查；研究"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00413",
+    "word": "volunteer",
+    "phonetic": "ˌvɒlənˈtɪə(r)",
+    "translation": "n. 志愿者；志愿兵 adj. 志愿的 vi. 自愿 vt. 自愿",
+    "translations": [
+      "n. 志愿者；志愿兵 adj. 志愿的 vi. 自愿 vt. 自愿"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00414",
+    "word": "harass",
+    "phonetic": "ˈhærəs; həˈræs",
+    "translation": "v. 骚扰，（使）困扰（或烦恼）；反复袭击",
+    "translations": [
+      "v. 骚扰，（使）困扰（或烦恼）；反复袭击"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00415",
+    "word": "irrigation",
+    "phonetic": "ˌɪrɪˈɡeɪʃn",
+    "translation": "n. 灌溉；[临床] 冲洗；冲洗法",
+    "translations": [
+      "n. 灌溉；[临床] 冲洗；冲洗法"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00416",
+    "word": "mutter",
+    "phonetic": "ˈmʌtə(r)",
+    "translation": "vi. 咕哝；喃喃自语 vt. 咕哝；抱怨地说；低声含糊地说 n. 咕哝；喃喃低语 n. (Mutter)人名；(法)米泰；(德、匈、西)穆特；(英)马特",
+    "translations": [
+      "vi. 咕哝；喃喃自语 vt. 咕哝；抱怨地说；低声含糊地说 n. 咕哝；喃喃低语 n. (Mutter)人名；(法)米泰；(德、匈、西)穆特；(英)马特"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00417",
+    "word": "ominous",
+    "phonetic": "ˈɒmɪnəs",
+    "translation": "adj. 预兆的；不吉利的",
+    "translations": [
+      "adj. 预兆的；不吉利的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00418",
+    "word": "taunt",
+    "phonetic": "tɔːnt",
+    "translation": "v. 奚落，逗弄 n. 嘲弄（话），讥讽（话） adj. 很高的",
+    "translations": [
+      "v. 奚落，逗弄 n. 嘲弄（话），讥讽（话） adj. 很高的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00419",
+    "word": "tradition",
+    "phonetic": "trəˈdɪʃn",
+    "translation": "n. 惯例，传统；传说",
+    "translations": [
+      "n. 惯例，传统；传说"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00420",
+    "word": "function",
+    "phonetic": "ˈfʌŋkʃn",
+    "translation": "n. 功能；[数] 函数；职责；盛大的集会 vi. 运行；活动；行使职责",
+    "translations": [
+      "n. 功能；[数] 函数；职责；盛大的集会 vi. 运行；活动；行使职责"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00421",
+    "word": "reorganize",
+    "phonetic": "riˈɔːɡənaɪz",
+    "translation": "vt. 整理；改组；重新制定 vi. 整顿；改编",
+    "translations": [
+      "vt. 整理；改组；重新制定 vi. 整顿；改编"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00422",
+    "word": "restore",
+    "phonetic": "rɪˈstɔː(r)",
+    "translation": "vt. 恢复；修复；归还 vi. 恢复；还原",
+    "translations": [
+      "vt. 恢复；修复；归还 vi. 恢复；还原"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00423",
+    "word": "schedule",
+    "phonetic": "ˈʃedjuːl",
+    "translation": "n. 计划（表）；时间表；一览表；（电视或广播）节目表；课程表；报税单；附件（尤指表格、单据等） v. 安排，预定；将……列入计划表或清单；把（建筑物）列为文物保护单位",
+    "translations": [
+      "n. 计划（表）；时间表；一览表；（电视或广播）节目表；课程表；报税单；附件（尤指表格、单据等） v. 安排，预定；将……列入计划表或清单；把（建筑物）列为文物保护单位"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00424",
+    "word": "shuffle",
+    "phonetic": "ˈʃʌfl",
+    "translation": "v. 拖着脚走；把脚动来动去；坐立不安；洗牌；把……变换位置；调动；搪塞 n. 洗牌；拖着脚走，曳行；曳步舞，曳步动作；改组；慢切分节奏；随机播放装置",
+    "translations": [
+      "v. 拖着脚走；把脚动来动去；坐立不安；洗牌；把……变换位置；调动；搪塞 n. 洗牌；拖着脚走，曳行；曳步舞，曳步动作；改组；慢切分节奏；随机播放装置"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00425",
+    "word": "extension",
+    "phonetic": "ɪkˈstenʃn",
+    "translation": "n. 延长；延期；扩大；伸展；电话分机",
+    "translations": [
+      "n. 延长；延期；扩大；伸展；电话分机"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00426",
+    "word": "ornate",
+    "phonetic": "ɔːˈneɪt",
+    "translation": "adj. 华丽的；装饰的；（文体）绚丽的",
+    "translations": [
+      "adj. 华丽的；装饰的；（文体）绚丽的"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00427",
+    "word": "toupee",
+    "phonetic": "ˈtuːpeɪ",
+    "translation": "n. 假发；男子假发",
+    "translations": [
+      "n. 假发；男子假发"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00428",
+    "word": "wealthy",
+    "phonetic": "ˈwelθi",
+    "translation": "adj. 富有的；充分的；丰裕的 n. 富人",
+    "translations": [
+      "adj. 富有的；充分的；丰裕的 n. 富人"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00429",
+    "word": "wig",
+    "phonetic": "wɪɡ",
+    "translation": "n. 假发；要人；头脑 vt. 使戴假发；斥责 vi. 激动；发狂 n. (Wig)人名；(英、瑞典)威格；(德)维希",
+    "translations": [
+      "n. 假发；要人；头脑 vt. 使戴假发；斥责 vi. 激动；发狂 n. (Wig)人名；(英、瑞典)威格；(德)维希"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00430",
+    "word": "attempt",
+    "phonetic": "əˈtempt",
+    "translation": "n. 企图，试图；攻击 vt. 企图，试图；尝试",
+    "translations": [
+      "n. 企图，试图；攻击 vt. 企图，试图；尝试"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00431",
+    "word": "crevasse",
+    "phonetic": "krəˈvæs",
+    "translation": "n. 裂缝；破口，崩溃处",
+    "translations": [
+      "n. 裂缝；破口，崩溃处"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00432",
+    "word": "crouch",
+    "phonetic": "kraʊtʃ",
+    "translation": "v. 蹲伏；俯身接近 n. 蹲着的姿势 n. (Crouch) （美）克劳奇（人名）",
+    "translations": [
+      "v. 蹲伏；俯身接近 n. 蹲着的姿势 n. (Crouch) （美）克劳奇（人名）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00433",
+    "word": "isolated",
+    "phonetic": "ˈaɪsəleɪtɪd",
+    "translation": "adj. 偏远的；孤立的；孤独的；单独的； 绝缘的 v. 使……孤立；使……分离；将……剔出（isolate 的过去式和过去分词）",
+    "translations": [
+      "adj. 偏远的；孤立的；孤独的；单独的； 绝缘的 v. 使……孤立；使……分离；将……剔出（isolate 的过去式和过去分词）"
+    ],
+    "domain": "qwerty_raz_s"
+  },
+  {
+    "id": "qwerty_raz_s_00434",
+    "word": "migration",
+    "phonetic": "maɪˈɡreɪʃn",
+    "translation": "n. 迁移；移民；移动",
+    "translations": [
+      "n. 迁移；移民；移动"
+    ],
+    "domain": "qwerty_raz_s"
+  }
+]

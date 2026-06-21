@@ -1,0 +1,192 @@
+[
+  {
+    "id": "qwerty_childcode_00001",
+    "word": "if",
+    "phonetic": "",
+    "translation": "如果",
+    "translations": [
+      "如果"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00002",
+    "word": "else",
+    "phonetic": "",
+    "translation": "否则",
+    "translations": [
+      "否则"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00003",
+    "word": "while",
+    "phonetic": "",
+    "translation": "while 型循环",
+    "translations": [
+      "while 型循环"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00004",
+    "word": "for",
+    "phonetic": "",
+    "translation": "for 型循环",
+    "translations": [
+      "for 型循环"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00005",
+    "word": "and",
+    "phonetic": "",
+    "translation": "逻辑与运算符",
+    "translations": [
+      "逻辑与运算符"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00006",
+    "word": "or",
+    "phonetic": "",
+    "translation": "逻辑或运算符",
+    "translations": [
+      "逻辑或运算符"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00007",
+    "word": "not",
+    "phonetic": "",
+    "translation": "逻辑非运算符",
+    "translations": [
+      "逻辑非运算符"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00008",
+    "word": "TRUE",
+    "phonetic": "",
+    "translation": "真",
+    "translations": [
+      "真"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00009",
+    "word": "FALSE",
+    "phonetic": "",
+    "translation": "假",
+    "translations": [
+      "假"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00010",
+    "word": "None",
+    "phonetic": "",
+    "translation": "空值",
+    "translations": [
+      "空值"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00011",
+    "word": "continue",
+    "phonetic": "",
+    "translation": "跳出本次循环，继续下一轮循环",
+    "translations": [
+      "跳出本次循环，继续下一轮循环"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00012",
+    "word": "break",
+    "phonetic": "",
+    "translation": "跳出整个循环",
+    "translations": [
+      "跳出整个循环"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00013",
+    "word": "pass",
+    "phonetic": "",
+    "translation": "空语句，不做任何事情",
+    "translations": [
+      "空语句，不做任何事情"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00014",
+    "word": "def",
+    "phonetic": "",
+    "translation": "define的缩写，定义一个函数",
+    "translations": [
+      "define的缩写，定义一个函数"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00015",
+    "word": "return",
+    "phonetic": "",
+    "translation": "返回语句，退出def语句块",
+    "translations": [
+      "返回语句，退出def语句块"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00016",
+    "word": "global",
+    "phonetic": "",
+    "translation": "声明全局变量",
+    "translations": [
+      "声明全局变量"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00017",
+    "word": "class",
+    "phonetic": "",
+    "translation": "定义一个类",
+    "translations": [
+      "定义一个类"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00018",
+    "word": "import",
+    "phonetic": "",
+    "translation": "导入模块",
+    "translations": [
+      "导入模块"
+    ],
+    "domain": "qwerty_childcode"
+  },
+  {
+    "id": "qwerty_childcode_00019",
+    "word": "from",
+    "phonetic": "",
+    "translation": "与import配合导入模块",
+    "translations": [
+      "与import配合导入模块"
+    ],
+    "domain": "qwerty_childcode"
+  }
+]

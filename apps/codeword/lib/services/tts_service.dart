@@ -1,62 +1,70 @@
 import 'dart:async';
 import 'dart:developer' as developer;
+import 'dart:io';
 
 import 'package:audioplayers/audioplayers.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:http/http.dart' as http;
 
-/// Self-contained, offline text-to-speech.
+import 'qwerty_tts_resolver.dart';
+import 'tts_cache.dart';
+
+/// Self-contained text-to-speech for vocabulary words.
 ///
-/// Plays pre-generated OGG (Opus) audio files bundled in the app. No
-/// system TTS, no Google TTS, no network. Audio files are produced
-/// ahead of time by `tools/generate_audio.py` (espeak-ng + ffmpeg).
+/// 1. Check on-disk cache (`<appDocs>/tts_cache/<sha1>.mp3`) — play if hit.
+/// 2. Otherwise fetch from Youdao `dictvoice` and cache the bytes, then play.
 ///
-/// To play a word, callers invoke [speak] with the word ID (e.g.
-/// 'ai_001') or the literal word. The service keeps an in-memory
-/// wordId → file map so we can resolve either form.
+/// No bundled OGG assets; no system TTS. Always network on first hit,
+/// offline after that. The Youdao endpoint is a public, no-auth,
+/// CORS-open resource.
 class TtsService {
   TtsService._();
   static final TtsService instance = TtsService._();
 
   final AudioPlayer _player = AudioPlayer();
-  bool _assetIndexLoaded = false;
-  bool _available = false;
+  static const String _userAgent =
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+      'AppleWebKit/537.36 (KHTML, like Gecko) '
+      'Chrome/126.0.0.0 Safari/537.36';
 
-  bool get isAvailable => _available;
-
-  final _availabilityController = StreamController<bool>.broadcast();
-  Stream<bool> get availabilityStream => _availabilityController.stream;
-
-  Future<void> _loadIndex() async {
-    if (_assetIndexLoaded) return;
-    _assetIndexLoaded = true;
-    _available = true;
-  }
-
-  /// Play the audio for [wordId] (e.g. `'ai_001'`) or the literal
-  /// word text (e.g. `'algorithm'`). Falls back to scanning known
-  /// vocab files for a matching entry.
-  Future<bool> speak(String wordIdOrText) async {
+  /// Play the audio for [text]. [lang] is `'us'` (default) or `'uk'`.
+  /// Returns true on successful playback, false on any failure.
+  Future<bool> speak({required String text, String lang = 'us'}) async {
     try {
-      await _loadIndex();
-      if (!_available) return false;
-      final assetPath = 'audio/$wordIdOrText.ogg';
-      // Quick existence check via rootBundle so we can give a useful
-      // error instead of a silent failure.
-      try {
-        await rootBundle.load('assets/$assetPath');
-      } catch (_) {
-        _availabilityController.add(false);
+      final cached = await TtsCache.get(text, lang);
+      if (cached != null) {
+        await _playFile(cached);
+        developer.log('TTS cache hit $text ($lang)', name: 'TtsService');
+        return true;
+      }
+      final resp = await http
+          .get(
+            Uri.parse(youdaoAudioUrl(text, lang)),
+            headers: const {'User-Agent': _userAgent},
+          )
+          .timeout(const Duration(seconds: 8));
+      final ct = resp.headers['content-type'] ?? '';
+      if (resp.statusCode != 200 ||
+          resp.bodyBytes.isEmpty ||
+          !ct.contains('audio')) {
+        developer.log(
+          'TTS fetch bad: status=${resp.statusCode} ct=$ct for $text',
+          name: 'TtsService',
+        );
         return false;
       }
-      await _player.stop();
-      await _player.play(AssetSource(assetPath));
-      developer.log('TTS play $assetPath', name: 'TtsService');
+      final file = await TtsCache.put(text, lang, resp.bodyBytes);
+      await _playFile(file);
+      developer.log('TTS fetched + cached $text ($lang)', name: 'TtsService');
       return true;
     } catch (e, st) {
-      developer.log('TTS play failed: $e\n$st', name: 'TtsService',
-          error: e, stackTrace: st);
-      _availabilityController.add(false);
+      developer.log('TTS play failed: $e\n$st',
+          name: 'TtsService', error: e, stackTrace: st);
       return false;
     }
+  }
+
+  Future<void> _playFile(File f) async {
+    await _player.stop();
+    await _player.play(DeviceFileSource(f.path));
   }
 }

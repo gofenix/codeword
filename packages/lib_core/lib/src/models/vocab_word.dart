@@ -5,6 +5,7 @@ class VocabWord {
   final String phonetic;
   final String pos;
   final String translation;
+  final List<String> translations;
   final String exampleEn;
   final String exampleCn;
   final String domain;
@@ -18,6 +19,7 @@ class VocabWord {
     required this.phonetic,
     required this.pos,
     required this.translation,
+    this.translations = const [],
     required this.exampleEn,
     required this.exampleCn,
     required this.domain,
@@ -32,12 +34,19 @@ class VocabWord {
         phonetic: (json['phonetic'] as String?) ?? '',
         pos: (json['pos'] as String?) ?? 'n.',
         translation: json['translation'] as String,
+        translations: ((json['translations'] as List?) ?? const [])
+            .map((e) => e.toString())
+            .toList(),
         exampleEn: (json['exampleEn'] as String?) ?? '',
         exampleCn: (json['exampleCn'] as String?) ?? '',
         domain: json['domain'] as String,
         level: (json['level'] as String?) ?? 'B2',
-        synonyms: ((json['synonyms'] as List?) ?? const []).map((e) => e.toString()).toList(),
-        antonyms: ((json['antonyms'] as List?) ?? const []).map((e) => e.toString()).toList(),
+        synonyms: ((json['synonyms'] as List?) ?? const [])
+            .map((e) => e.toString())
+            .toList(),
+        antonyms: ((json['antonyms'] as List?) ?? const [])
+            .map((e) => e.toString())
+            .toList(),
       );
 
   Map<String, dynamic> toJson() => {
@@ -46,6 +55,7 @@ class VocabWord {
         'phonetic': phonetic,
         'pos': pos,
         'translation': translation,
+        'translations': translations,
         'exampleEn': exampleEn,
         'exampleCn': exampleCn,
         'domain': domain,

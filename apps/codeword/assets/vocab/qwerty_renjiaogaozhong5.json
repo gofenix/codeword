@@ -1,0 +1,3609 @@
+[
+  {
+    "id": "qwerty_renjiaogaozhong5_00001",
+    "word": "characteristic",
+    "phonetic": ",kærəktə'rɪstɪk",
+    "translation": "特征；特性",
+    "translations": [
+      "特征；特性"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00002",
+    "word": "radium",
+    "phonetic": "'redɪəm",
+    "translation": "镭",
+    "translations": [
+      "镭"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00003",
+    "word": "painter",
+    "phonetic": "'pentɚ",
+    "translation": "画家；油漆匠",
+    "translations": [
+      "画家；油漆匠"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00004",
+    "word": "put forward",
+    "phonetic": "",
+    "translation": "提出",
+    "translations": [
+      "提出"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00005",
+    "word": "scientific",
+    "phonetic": ",saɪən'tɪfɪk",
+    "translation": "科学的",
+    "translations": [
+      "科学的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00006",
+    "word": "conclude",
+    "phonetic": "kən'klud",
+    "translation": "推断出；结束",
+    "translations": [
+      "推断出；结束"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00007",
+    "word": "conclusion",
+    "phonetic": "kən'kluʒn",
+    "translation": "结论；结束",
+    "translations": [
+      "结论；结束"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00008",
+    "word": "draw a conclusion",
+    "phonetic": "",
+    "translation": "提出结论",
+    "translations": [
+      "提出结论"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00009",
+    "word": "analyse",
+    "phonetic": "'æn(ə)laɪz",
+    "translation": "分析",
+    "translations": [
+      "分析"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00010",
+    "word": "infect",
+    "phonetic": "ɪn'fɛkt",
+    "translation": "传染；感染",
+    "translations": [
+      "传染；感染"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00011",
+    "word": "infectious",
+    "phonetic": "ɪn'fɛkʃəs",
+    "translation": "传染的",
+    "translations": [
+      "传染的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00012",
+    "word": "cholera",
+    "phonetic": "'kɑlərə",
+    "translation": "霍乱",
+    "translations": [
+      "霍乱"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00013",
+    "word": "defeat",
+    "phonetic": "dɪ'fit",
+    "translation": "打败；战胜；使受挫；失败",
+    "translations": [
+      "打败；战胜；使受挫",
+      "失败"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00014",
+    "word": "expert",
+    "phonetic": "'ɛkspɝt; (for adj., also) ɛksˈpɝt ; ɪkˈspɝt",
+    "translation": "内行的；专家；行家",
+    "translations": [
+      "内行的",
+      "专家；行家"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00015",
+    "word": "attend",
+    "phonetic": "ə'tɛnd",
+    "translation": "参加; 出席；照顾；护理",
+    "translations": [
+      "参加; 出席；照顾；护理"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00016",
+    "word": "physician",
+    "phonetic": "fɪ'zɪʃən",
+    "translation": "医生；内科医师",
+    "translations": [
+      "医生；内科医师"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00017",
+    "word": "expose",
+    "phonetic": "ɪk'spoz；ek-",
+    "translation": "暴露；揭露；使曝光",
+    "translations": [
+      "暴露；揭露；使曝光"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00018",
+    "word": "expose...to",
+    "phonetic": "",
+    "translation": "使显露；暴露",
+    "translations": [
+      "使显露；暴露"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00019",
+    "word": "deadly",
+    "phonetic": "'dɛdli",
+    "translation": "致命的",
+    "translations": [
+      "致命的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00020",
+    "word": "cure",
+    "phonetic": "kjʊr",
+    "translation": "治愈；痊愈；治愈；治疗",
+    "translations": [
+      "治愈；痊愈",
+      "治愈；治疗"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00021",
+    "word": "outbreak",
+    "phonetic": "'aʊtbrek",
+    "translation": "爆发；发作（尤指疾病或战争）",
+    "translations": [
+      "爆发；发作（尤指疾病或战争）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00022",
+    "word": "challenge",
+    "phonetic": "'tʃælɪndʒ",
+    "translation": "挑战；向……挑战",
+    "translations": [
+      "挑战",
+      "向……挑战"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00023",
+    "word": "victim",
+    "phonetic": "'vɪktɪm",
+    "translation": "受害者",
+    "translations": [
+      "受害者"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00024",
+    "word": "absorb",
+    "phonetic": "æbˈsɔrb; æbˈzɔrb; əbˈsɔrb",
+    "translation": "吸收；吸引；使专心",
+    "translations": [
+      "吸收；吸引；使专心"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00025",
+    "word": "suspect",
+    "phonetic": "sʌspɛkt; (for v.) səˈspɛkt",
+    "translation": "怀疑；被怀疑者；嫌疑犯",
+    "translations": [
+      "怀疑",
+      "被怀疑者；嫌疑犯"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00026",
+    "word": "enquiry",
+    "phonetic": "ɛnˈkwaɪri, ˈɛnkwəri",
+    "translation": "询问",
+    "translations": [
+      "询问"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00027",
+    "word": "neighbourhood",
+    "phonetic": "nebɚˌhʊd",
+    "translation": "附近(的居民)；邻近(的居民)",
+    "translations": [
+      "附近(的居民)；邻近(的居民)"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00028",
+    "word": "severe",
+    "phonetic": "səˈvɪr",
+    "translation": "严重的；严厉的",
+    "translations": [
+      "严重的；严厉的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00029",
+    "word": "clue",
+    "phonetic": "klʊ",
+    "translation": "线索；提示",
+    "translations": [
+      "线索；提示"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00030",
+    "word": "pump",
+    "phonetic": "pʌmp",
+    "translation": "泵；抽水机；（用泵）抽（水）",
+    "translations": [
+      "泵；抽水机",
+      "（用泵）抽（水）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00031",
+    "word": "Cambridge",
+    "phonetic": "ˈkembrɪdʒ",
+    "translation": "剑桥大学",
+    "translations": [
+      "剑桥大学"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00032",
+    "word": "foresee",
+    "phonetic": "fɔr'si",
+    "translation": "预见；预知",
+    "translations": [
+      "预见；预知"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00033",
+    "word": "investigate",
+    "phonetic": "ɪn'vɛstɪɡet",
+    "translation": "调查",
+    "translations": [
+      "调查"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00034",
+    "word": "investigation",
+    "phonetic": "ɪn,vɛstɪ'ɡeʃən",
+    "translation": "调查",
+    "translations": [
+      "调查"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00035",
+    "word": "blame",
+    "phonetic": "blem",
+    "translation": "责备；谴责；过失；责备",
+    "translations": [
+      "责备；谴责",
+      "过失；责备"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00036",
+    "word": "pollute",
+    "phonetic": "pə'lut",
+    "translation": "污染；弄脏",
+    "translations": [
+      "污染；弄脏"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00037",
+    "word": "handle",
+    "phonetic": "'hændl",
+    "translation": "柄；把手；处理；操纵",
+    "translations": [
+      "柄；把手",
+      "处理；操纵"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00038",
+    "word": "germ",
+    "phonetic": "dʒɝm",
+    "translation": "微生物；细菌",
+    "translations": [
+      "微生物；细菌"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00039",
+    "word": "link",
+    "phonetic": "lɪŋk",
+    "translation": "连接；联系；连接；联系",
+    "translations": [
+      "连接；联系",
+      "连接；联系"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00040",
+    "word": "link...to...",
+    "phonetic": "",
+    "translation": "将……和……联系或连接起来",
+    "translations": [
+      "将……和……联系或连接起来"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00041",
+    "word": "announce",
+    "phonetic": "ə'naʊns",
+    "translation": "宣布；通知",
+    "translations": [
+      "宣布；通知"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00042",
+    "word": "certainty",
+    "phonetic": "'sɝtnti",
+    "translation": "确实",
+    "translations": [
+      "确实"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00043",
+    "word": "instruct",
+    "phonetic": "ɪn'strʌkt",
+    "translation": "命令；指示；教导",
+    "translations": [
+      "命令；指示；教导"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00044",
+    "word": "responsible",
+    "phonetic": "rɪ'spɑnsəbl",
+    "translation": "有责任的；负责的",
+    "translations": [
+      "有责任的；负责的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00045",
+    "word": "construct",
+    "phonetic": "kən'strʌkt",
+    "translation": "建设；修建",
+    "translations": [
+      "建设；修建"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00046",
+    "word": "construction",
+    "phonetic": "kən'strʌkʃən",
+    "translation": "建造，建筑",
+    "translations": [
+      "建造，建筑"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00047",
+    "word": "contribute",
+    "phonetic": "kən'trɪbjut",
+    "translation": "捐献；贡献；捐助",
+    "translations": [
+      "捐献；贡献；捐助"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00048",
+    "word": "apart from",
+    "phonetic": "",
+    "translation": "除……之外；此外",
+    "translations": [
+      "除……之外；此外"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00049",
+    "word": "firework",
+    "phonetic": "'faɪɚwɝk",
+    "translation": "烟火",
+    "translations": [
+      "烟火"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00050",
+    "word": "chart",
+    "phonetic": "tʃɑrt",
+    "translation": "图表",
+    "translations": [
+      "图表"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00051",
+    "word": "creative",
+    "phonetic": "krɪ'etɪv",
+    "translation": "创造性的；有创造力的",
+    "translations": [
+      "创造性的；有创造力的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00052",
+    "word": "co-operative",
+    "phonetic": "kəu'ɔpərətiv",
+    "translation": "合作的",
+    "translations": [
+      "合作的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00053",
+    "word": "positive",
+    "phonetic": "'pɑzətɪv",
+    "translation": "积极的；肯定的",
+    "translations": [
+      "积极的；肯定的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00054",
+    "word": "(be)strict with...",
+    "phonetic": "",
+    "translation": "对……严格的",
+    "translations": [
+      "对……严格的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00055",
+    "word": "Nicolaus Copernicus",
+    "phonetic": "",
+    "translation": "尼古拉•哥白尼（波兰天文学家）",
+    "translations": [
+      "尼古拉•哥白尼（波兰天文学家）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00056",
+    "word": "revolutionary",
+    "phonetic": "'rɛvə'lʊʃə'nɛri",
+    "translation": "革命的；重大变革的",
+    "translations": [
+      "革命的；重大变革的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00057",
+    "word": "movement",
+    "phonetic": "'muvmənt",
+    "translation": "移动；运动；动作",
+    "translations": [
+      "移动；运动；动作"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00058",
+    "word": "make sense",
+    "phonetic": "",
+    "translation": "讲得通；有意义",
+    "translations": [
+      "讲得通；有意义"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00059",
+    "word": "backward",
+    "phonetic": "'bækwɚd",
+    "translation": "向后的；相反的；退步的；向后地；相反地；退步地",
+    "translations": [
+      "向后的；相反的；退步的",
+      "向后地；相反地；退步地"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00060",
+    "word": "loop",
+    "phonetic": "lup",
+    "translation": "圈；环",
+    "translations": [
+      "圈；环"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00061",
+    "word": "privately",
+    "phonetic": "'praɪvɪtli",
+    "translation": "私下地",
+    "translations": [
+      "私下地"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00062",
+    "word": "spin",
+    "phonetic": "spɪn",
+    "translation": "(使)旋转；纺（线或纱）",
+    "translations": [
+      "(使)旋转；纺（线或纱）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00063",
+    "word": "brightness",
+    "phonetic": "'braɪtnɪs",
+    "translation": "明亮；亮度；聪颖",
+    "translations": [
+      "明亮；亮度；聪颖"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00064",
+    "word": "enthusiastic",
+    "phonetic": "ɪn,θuzɪ'æstɪk",
+    "translation": "热情的；热心的",
+    "translations": [
+      "热情的；热心的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00065",
+    "word": "cautious",
+    "phonetic": "'kɔʃəs",
+    "translation": "小心的；谨慎的",
+    "translations": [
+      "小心的；谨慎的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00066",
+    "word": "reject",
+    "phonetic": "rɪ'dʒɛkt",
+    "translation": "拒绝；不接受",
+    "translations": [
+      "拒绝；不接受"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00067",
+    "word": "universe",
+    "phonetic": "'junɪvɝs",
+    "translation": "宇宙；世界",
+    "translations": [
+      "宇宙；世界"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00068",
+    "word": "unite",
+    "phonetic": "ju'naɪt",
+    "translation": "联合；团结",
+    "translations": [
+      "联合；团结"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00069",
+    "word": "kingdom",
+    "phonetic": "'kɪŋdəm",
+    "translation": "王国",
+    "translations": [
+      "王国"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00070",
+    "word": "consist",
+    "phonetic": "kən'sɪst",
+    "translation": "组成；在于",
+    "translations": [
+      "组成；在于"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00071",
+    "word": "consist of",
+    "phonetic": "",
+    "translation": "由……组成",
+    "translations": [
+      "由……组成"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00072",
+    "word": "London Heathrow Airport",
+    "phonetic": "",
+    "translation": "伦敦希思罗机场",
+    "translations": [
+      "伦敦希思罗机场"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00073",
+    "word": "province",
+    "phonetic": "'prɑvɪns",
+    "translation": "省；行政区",
+    "translations": [
+      "省；行政区"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00074",
+    "word": "River Avon",
+    "phonetic": "",
+    "translation": "埃文河",
+    "translations": [
+      "埃文河"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00075",
+    "word": "River Thames",
+    "phonetic": "",
+    "translation": "泰晤士河",
+    "translations": [
+      "泰晤士河"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00076",
+    "word": "River Severn",
+    "phonetic": "",
+    "translation": "塞文河",
+    "translations": [
+      "塞文河"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00077",
+    "word": "divide...into",
+    "phonetic": "",
+    "translation": "把……分成",
+    "translations": [
+      "把……分成"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00078",
+    "word": "Wales",
+    "phonetic": "weilz",
+    "translation": "威尔士（英）",
+    "translations": [
+      "威尔士（英）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00079",
+    "word": "Scotland",
+    "phonetic": "'skɔtlənd",
+    "translation": "苏格兰（英）",
+    "translations": [
+      "苏格兰（英）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00080",
+    "word": "Northern Ireland",
+    "phonetic": "",
+    "translation": "北爱尔兰（英）",
+    "translations": [
+      "北爱尔兰（英）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00081",
+    "word": "clarify",
+    "phonetic": "'klærəfaɪ",
+    "translation": "澄清；阐明",
+    "translations": [
+      "澄清；阐明"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00082",
+    "word": "accomplish",
+    "phonetic": "ə'kɑmplɪʃ",
+    "translation": "完成；达到；实现",
+    "translations": [
+      "完成；达到；实现"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00083",
+    "word": "conflict",
+    "phonetic": "'kɑnflɪkt",
+    "translation": "矛盾；冲突",
+    "translations": [
+      "矛盾；冲突"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00084",
+    "word": "unwilling",
+    "phonetic": "ʌn'wɪlɪŋ",
+    "translation": "不愿意（的）；不乐意（的）",
+    "translations": [
+      "不愿意（的）；不乐意（的）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00085",
+    "word": "break away",
+    "phonetic": "",
+    "translation": "挣脱（束缚）；脱离",
+    "translations": [
+      "挣脱（束缚）；脱离"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00086",
+    "word": "break away from",
+    "phonetic": "",
+    "translation": "挣脱（束缚）；脱离",
+    "translations": [
+      "挣脱（束缚）；脱离"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00087",
+    "word": "union",
+    "phonetic": "'junɪən",
+    "translation": "工会；；联盟；协会；联合",
+    "translations": [
+      "工会；；联盟；协会；联合"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00088",
+    "word": "the Union Jack",
+    "phonetic": "",
+    "translation": "英国国旗",
+    "translations": [
+      "英国国旗"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00089",
+    "word": "credit",
+    "phonetic": "'krɛdɪt",
+    "translation": "赊购；信贷；赞扬；信任；学分",
+    "translations": [
+      "赊购；信贷；赞扬；信任；学分"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00090",
+    "word": "to one's credit",
+    "phonetic": "",
+    "translation": "为……带来荣誉；值得赞扬；在……名下",
+    "translations": [
+      "为……带来荣誉；值得赞扬；在……名下"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00091",
+    "word": "currency",
+    "phonetic": "ˈkɜrənsi",
+    "translation": "货币；通货",
+    "translations": [
+      "货币；通货"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00092",
+    "word": "institution",
+    "phonetic": ",ɪnstɪ'tuʃən",
+    "translation": "社会公共机构；制度；设立，制定",
+    "translations": [
+      "社会公共机构；制度；设立，制定"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00093",
+    "word": "educational",
+    "phonetic": ",ɛdʒu'keʃənl",
+    "translation": "教育的",
+    "translations": [
+      "教育的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00094",
+    "word": "convenience",
+    "phonetic": "kən'vinɪəns",
+    "translation": "便利；方便",
+    "translations": [
+      "便利；方便"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00095",
+    "word": "rough",
+    "phonetic": "rʌf",
+    "translation": "粗糙的",
+    "translations": [
+      "粗糙的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00096",
+    "word": "roughly",
+    "phonetic": "'rʌfli",
+    "translation": "粗略地",
+    "translations": [
+      "粗略地"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00097",
+    "word": "Midlands",
+    "phonetic": "",
+    "translation": "英格兰中部地区（英）",
+    "translations": [
+      "英格兰中部地区（英）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00098",
+    "word": "nationwide",
+    "phonetic": ",neʃn'waɪd",
+    "translation": "全国性的；全国范围的",
+    "translations": [
+      "全国性的；全国范围的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00099",
+    "word": "attract",
+    "phonetic": "ə'trækt",
+    "translation": "吸引；引起注意",
+    "translations": [
+      "吸引；引起注意"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00100",
+    "word": "historical",
+    "phonetic": "hɪ'stɔrɪkl",
+    "translation": "有关历史的；历史（上）的",
+    "translations": [
+      "有关历史的；历史（上）的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00101",
+    "word": "architecture",
+    "phonetic": "'ɑrkə'tɛktʃɚ",
+    "translation": "建筑学；建筑艺术",
+    "translations": [
+      "建筑学；建筑艺术"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00102",
+    "word": "Roman",
+    "phonetic": "'romən",
+    "translation": "(古)罗马人；（古）罗马的",
+    "translations": [
+      "(古)罗马人",
+      "（古）罗马的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00103",
+    "word": "collection",
+    "phonetic": "kə'lɛkʃən",
+    "translation": "收藏品",
+    "translations": [
+      "收藏品"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00104",
+    "word": "administration",
+    "phonetic": "əd,mɪnɪ'streʃən",
+    "translation": "管理；行政部门",
+    "translations": [
+      "管理；行政部门"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00105",
+    "word": "port",
+    "phonetic": "pɔrt",
+    "translation": "港口（城市）",
+    "translations": [
+      "港口（城市）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00106",
+    "word": "Anglo-Saxon",
+    "phonetic": ",æŋɡləu'sæksən",
+    "translation": "盎格鲁-撒克逊人；盎格鲁撒克逊时期的",
+    "translations": [
+      "盎格鲁-撒克逊人",
+      "盎格鲁撒克逊时期的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00107",
+    "word": "Norman",
+    "phonetic": "'nɔrmən",
+    "translation": "诺曼人；诺曼的",
+    "translations": [
+      "诺曼人",
+      "诺曼的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00108",
+    "word": "Viking",
+    "phonetic": "",
+    "translation": "北欧海盗；维京人",
+    "translations": [
+      "北欧海盗；维京人"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00109",
+    "word": "countryside",
+    "phonetic": "'kʌntrɪsaɪd",
+    "translation": "乡下；农村",
+    "translations": [
+      "乡下；农村"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00110",
+    "word": "enjoyable",
+    "phonetic": "ɪn'dʒɔɪəbl",
+    "translation": "令人愉快的；使人高兴的",
+    "translations": [
+      "令人愉快的；使人高兴的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00111",
+    "word": "leave out",
+    "phonetic": "",
+    "translation": "省去；遗漏；不考虑",
+    "translations": [
+      "省去；遗漏；不考虑"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00112",
+    "word": "opportunity",
+    "phonetic": "ˌɑpɚˈtunətɪ",
+    "translation": "机会；时机",
+    "translations": [
+      "机会；时机"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00113",
+    "word": "description",
+    "phonetic": "dɪ'skrɪpʃən",
+    "translation": "描写；描述",
+    "translations": [
+      "描写；描述"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00114",
+    "word": "fax",
+    "phonetic": "fæks",
+    "translation": "传真（机）；用传真传输（文件）",
+    "translations": [
+      "传真（机）",
+      "用传真传输（文件）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00115",
+    "word": "possibility",
+    "phonetic": ",pɑsə'bɪləti",
+    "translation": "可能（性）",
+    "translations": [
+      "可能（性）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00116",
+    "word": "plus",
+    "phonetic": "plʌs",
+    "translation": "加上；和；加的；正的；零上的",
+    "translations": [
+      "加上；和",
+      "加的；正的；零上的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00117",
+    "word": "quarrel",
+    "phonetic": "'kwɔrəl",
+    "translation": "争吵；争论；吵架；争吵；吵架",
+    "translations": [
+      "争吵；争论；吵架",
+      "争吵；吵架"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00118",
+    "word": "alike",
+    "phonetic": "ə'laɪk",
+    "translation": "相同的；类似的",
+    "translations": [
+      "相同的；类似的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00119",
+    "word": "take the place of",
+    "phonetic": "",
+    "translation": "代替",
+    "translations": [
+      "代替"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00120",
+    "word": "break down",
+    "phonetic": "",
+    "translation": "(机器)损坏；破坏",
+    "translations": [
+      "(机器)损坏；破坏"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00121",
+    "word": "arrange",
+    "phonetic": "ə'rendʒ",
+    "translation": "筹备；安排；整理",
+    "translations": [
+      "筹备；安排；整理"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00122",
+    "word": "wedding",
+    "phonetic": "'wɛdɪŋ",
+    "translation": "婚礼",
+    "translations": [
+      "婚礼"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00123",
+    "word": "fold",
+    "phonetic": "fold",
+    "translation": "折叠；对折",
+    "translations": [
+      "折叠；对折"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00124",
+    "word": "sightseeing",
+    "phonetic": "'saɪtsiɪŋ",
+    "translation": "观光；游览",
+    "translations": [
+      "观光；游览"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00125",
+    "word": "delight",
+    "phonetic": "dɪ'laɪt",
+    "translation": "快乐；高兴；喜悦；使高兴；使欣喜",
+    "translations": [
+      "快乐；高兴；喜悦",
+      "使高兴；使欣喜"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00126",
+    "word": "royal",
+    "phonetic": "'rɔɪəl",
+    "translation": "王室的；皇家的；高贵的",
+    "translations": [
+      "王室的；皇家的；高贵的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00127",
+    "word": "uniform",
+    "phonetic": "junəˌfɔrm",
+    "translation": "制服",
+    "translations": [
+      "制服"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00128",
+    "word": "St Paul's Cathedral",
+    "phonetic": "",
+    "translation": "圣保罗大教堂",
+    "translations": [
+      "圣保罗大教堂"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00129",
+    "word": "splendid",
+    "phonetic": "'splɛndɪd",
+    "translation": "极好的；壮丽的；辉煌的",
+    "translations": [
+      "极好的；壮丽的；辉煌的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00130",
+    "word": "Westminster Abbey",
+    "phonetic": "",
+    "translation": "威斯敏斯特教堂（英国名人墓地）",
+    "translations": [
+      "威斯敏斯特教堂（英国名人墓地）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00131",
+    "word": "statue",
+    "phonetic": "'stætʃu",
+    "translation": "塑像；雕像",
+    "translations": [
+      "塑像；雕像"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00132",
+    "word": "Buckingham  Palace",
+    "phonetic": "",
+    "translation": "白金汉宫",
+    "translations": [
+      "白金汉宫"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00133",
+    "word": "Greenwich",
+    "phonetic": "",
+    "translation": "格林尼治（英城市）",
+    "translations": [
+      "格林尼治（英城市）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00134",
+    "word": "longitude",
+    "phonetic": "'lɑndʒətud",
+    "translation": "经线；经度",
+    "translations": [
+      "经线；经度"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00135",
+    "word": "imaginary",
+    "phonetic": "ɪ'mædʒɪnɛri",
+    "translation": "想象中的；假想的；虚构的",
+    "translations": [
+      "想象中的；假想的；虚构的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00136",
+    "word": "navigation",
+    "phonetic": "'nævə'geʃən",
+    "translation": "导航；航行",
+    "translations": [
+      "导航；航行"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00137",
+    "word": "Highgate Cemetery",
+    "phonetic": "",
+    "translation": "海格特墓地（英伦敦北郊，内有马克思及其家人的坟墓）",
+    "translations": [
+      "海格特墓地（英伦敦北郊，内有马克思及其家人的坟墓）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00138",
+    "word": "communism",
+    "phonetic": "'kɑmjʊ'nɪzəm",
+    "translation": "共产主义",
+    "translations": [
+      "共产主义"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00139",
+    "word": "original",
+    "phonetic": "ə'rɪdʒənl",
+    "translation": "最初的；原始的；独创的；新颖的；原作的",
+    "translations": [
+      "最初的；原始的；独创的；新颖的；原作的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00140",
+    "word": "thrill",
+    "phonetic": "θrɪl",
+    "translation": "使激动",
+    "translations": [
+      "使激动"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00141",
+    "word": "pot",
+    "phonetic": "pɑt",
+    "translation": "罐；壶",
+    "translations": [
+      "罐；壶"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00142",
+    "word": "error",
+    "phonetic": "'ɛrɚ",
+    "translation": "错误；过失；谬误",
+    "translations": [
+      "错误；过失；谬误"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00143",
+    "word": "tense",
+    "phonetic": "tɛns",
+    "translation": "时态",
+    "translations": [
+      "时态"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00144",
+    "word": "consistent",
+    "phonetic": "kən'sɪstənt",
+    "translation": "一致的",
+    "translations": [
+      "一致的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00145",
+    "word": "aspect",
+    "phonetic": "'æspɛkt",
+    "translation": "方面；层面",
+    "translations": [
+      "方面；层面"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00146",
+    "word": "impression",
+    "phonetic": "ɪm'prɛʃən",
+    "translation": "印象；感想",
+    "translations": [
+      "印象；感想"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00147",
+    "word": "take up",
+    "phonetic": "",
+    "translation": "开始；继续；拿起；接受；占用",
+    "translations": [
+      "开始；继续；拿起；接受；占用"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00148",
+    "word": "constant",
+    "phonetic": "'kɑnstənt",
+    "translation": "时常发生的；连续不断的",
+    "translations": [
+      "时常发生的；连续不断的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00149",
+    "word": "constantly",
+    "phonetic": "'kɑnstəntli",
+    "translation": "不断地",
+    "translations": [
+      "不断地"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00150",
+    "word": "jet",
+    "phonetic": "dʒɛt",
+    "translation": "喷气式飞机",
+    "translations": [
+      "喷气式飞机"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00151",
+    "word": "jet lag",
+    "phonetic": "",
+    "translation": "飞行时差反应",
+    "translations": [
+      "飞行时差反应"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00152",
+    "word": "flashback",
+    "phonetic": "'flæʃbæk",
+    "translation": "闪回；倒叙",
+    "translations": [
+      "闪回；倒叙"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00153",
+    "word": "previous",
+    "phonetic": "'privɪəs",
+    "translation": "在前的；早先的",
+    "translations": [
+      "在前的；早先的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00154",
+    "word": "uncertain",
+    "phonetic": "ʌn'sɝtn",
+    "translation": "不确切的；无把握的",
+    "translations": [
+      "不确切的；无把握的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00155",
+    "word": "guide",
+    "phonetic": "ɡaɪd",
+    "translation": "指导；向导；导游；指引；指导",
+    "translations": [
+      "指导；向导；导游",
+      "指引；指导"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00156",
+    "word": "tablet",
+    "phonetic": "ˈtæblɪt",
+    "translation": "药片",
+    "translations": [
+      "药片"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00157",
+    "word": "expertise",
+    "phonetic": "'ɛkspɝ'tiz",
+    "translation": "专业技能; 专业知识（技能等）",
+    "translations": [
+      "专业技能; 专业知识（技能等）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00158",
+    "word": "capsule",
+    "phonetic": "ˈkæpsl;",
+    "translation": "胶囊；太空舱",
+    "translations": [
+      "胶囊；太空舱"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00159",
+    "word": "steward",
+    "phonetic": "'stuɚd",
+    "translation": "乘务员；服务员",
+    "translations": [
+      "乘务员；服务员"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00160",
+    "word": "stewardess",
+    "phonetic": "ˈstuərdəs",
+    "translation": "女乘务员",
+    "translations": [
+      "女乘务员"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00161",
+    "word": "opening",
+    "phonetic": "'opənɪŋ",
+    "translation": "（出入的）通路；开口；开端",
+    "translations": [
+      "（出入的）通路；开口；开端"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00162",
+    "word": "sideways",
+    "phonetic": "'saɪdwez",
+    "translation": "往（向、从）一侧；侧着；侧面朝前",
+    "translations": [
+      "往（向、从）一侧；侧着；侧面朝前"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00163",
+    "word": "surrounding",
+    "phonetic": "sə'raʊndɪŋ",
+    "translation": "周围的事物；环境；周围的",
+    "translations": [
+      "周围的事物；环境",
+      "周围的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00164",
+    "word": "tolerate",
+    "phonetic": "'tɑləret",
+    "translation": "容忍；忍受",
+    "translations": [
+      "容忍；忍受"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00165",
+    "word": "combination",
+    "phonetic": ",kɑmbɪ'neʃən",
+    "translation": "结合；组合",
+    "translations": [
+      "结合；组合"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00166",
+    "word": "lack",
+    "phonetic": "læk",
+    "translation": "缺乏；没有；缺乏；短缺的东西",
+    "translations": [
+      "缺乏；没有",
+      "缺乏；短缺的东西"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00167",
+    "word": "adjustment",
+    "phonetic": "ə'dʒʌstmənt",
+    "translation": "调整；调节",
+    "translations": [
+      "调整；调节"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00168",
+    "word": "mask",
+    "phonetic": "mæsk",
+    "translation": "面具；面罩；伪装",
+    "translations": [
+      "面具；面罩；伪装"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00169",
+    "word": "be back on one's feet",
+    "phonetic": "",
+    "translation": "(困境后)恢复；完全复原",
+    "translations": [
+      "(困境后)恢复；完全复原"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00170",
+    "word": "hover",
+    "phonetic": "'hʌvɚ",
+    "translation": "盘旋",
+    "translations": [
+      "盘旋"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00171",
+    "word": "carriage",
+    "phonetic": "'kærɪdʒ",
+    "translation": "运输工具；四轮马车；客车",
+    "translations": [
+      "运输工具；四轮马车；客车"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00172",
+    "word": "press",
+    "phonetic": "prɛs",
+    "translation": "按；压；按；压；印刷；新闻；新闻界",
+    "translations": [
+      "按；压",
+      "按；压；印刷；新闻；新闻界"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00173",
+    "word": "fasten",
+    "phonetic": "'fæsən",
+    "translation": "系牢；扎牢",
+    "translations": [
+      "系牢；扎牢"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00174",
+    "word": "belt",
+    "phonetic": "bɛlt",
+    "translation": "腰带；皮带",
+    "translations": [
+      "腰带；皮带"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00175",
+    "word": "safety belt",
+    "phonetic": "",
+    "translation": "安全带",
+    "translations": [
+      "安全带"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00176",
+    "word": "lose sight of...",
+    "phonetic": "",
+    "translation": "看不见……",
+    "translations": [
+      "看不见……"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00177",
+    "word": "sweep up",
+    "phonetic": "",
+    "translation": "打扫；横扫",
+    "translations": [
+      "打扫；横扫"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00178",
+    "word": "flash",
+    "phonetic": "flæʃ",
+    "translation": "（使）闪光；（使）闪现",
+    "translations": [
+      "（使）闪光；（使）闪现"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00179",
+    "word": "switch",
+    "phonetic": "swɪtʃ",
+    "translation": "开关；转换；转换",
+    "translations": [
+      "开关；转换",
+      "转换"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00180",
+    "word": "timetable",
+    "phonetic": "'taɪm'tebl",
+    "translation": "时间表；时刻表",
+    "translations": [
+      "时间表；时刻表"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00181",
+    "word": "exhausted",
+    "phonetic": "ɪɡ'zɔstɪd",
+    "translation": "筋疲力尽的；疲惫不堪的",
+    "translations": [
+      "筋疲力尽的；疲惫不堪的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00182",
+    "word": "slide into",
+    "phonetic": "",
+    "translation": "（快捷而悄声地）移动；溜进……",
+    "translations": [
+      "（快捷而悄声地）移动；溜进……"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00183",
+    "word": "optimistic",
+    "phonetic": ",ɑptɪ'mɪstɪk",
+    "translation": "乐观（主义）的",
+    "translations": [
+      "乐观（主义）的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00184",
+    "word": "pessimistic",
+    "phonetic": ",pɛsɪ'mɪstɪk",
+    "translation": "悲观（主义）的",
+    "translations": [
+      "悲观（主义）的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00185",
+    "word": "speed up",
+    "phonetic": "",
+    "translation": "加速",
+    "translations": [
+      "加速"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00186",
+    "word": "pedal",
+    "phonetic": "'pɛdl",
+    "translation": "踏板；脚蹬",
+    "translations": [
+      "踏板；脚蹬"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00187",
+    "word": "alien",
+    "phonetic": "ˈeliən,ˈeljən",
+    "translation": "外星人；外国人；陌生的；外国的；外星球的",
+    "translations": [
+      "外星人；外国人",
+      "陌生的；外国的；外星球的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00188",
+    "word": "mud",
+    "phonetic": "mʌd",
+    "translation": "泥（浆）",
+    "translations": [
+      "泥（浆）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00189",
+    "word": "desert",
+    "phonetic": "(for v.) dɪˈzɝ​t; (for n.) 'dɛzɚt",
+    "translation": "沙漠；荒原",
+    "translations": [
+      "沙漠；荒原"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00190",
+    "word": "enormous",
+    "phonetic": "ɪ'nɔrməs",
+    "translation": "巨大的；庞大的",
+    "translations": [
+      "巨大的；庞大的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00191",
+    "word": "imitate",
+    "phonetic": "'ɪmɪtet",
+    "translation": "模仿",
+    "translations": [
+      "模仿"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00192",
+    "word": "moveable",
+    "phonetic": "",
+    "translation": "可移动的；活动的",
+    "translations": [
+      "可移动的；活动的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00193",
+    "word": "citizen",
+    "phonetic": "'sɪtɪzn",
+    "translation": "市民，城镇居民；公民",
+    "translations": [
+      "市民，城镇居民；公民"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00194",
+    "word": "typist",
+    "phonetic": "'taɪpɪst",
+    "translation": "打字员",
+    "translations": [
+      "打字员"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00195",
+    "word": "typewriter",
+    "phonetic": "'taɪpraɪtɚ",
+    "translation": "打字机",
+    "translations": [
+      "打字机"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00196",
+    "word": "postage",
+    "phonetic": "'postɪdʒ",
+    "translation": "邮资",
+    "translations": [
+      "邮资"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00197",
+    "word": "postcode",
+    "phonetic": "'post'kod",
+    "translation": "邮政编码",
+    "translations": [
+      "邮政编码"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00198",
+    "word": "button",
+    "phonetic": "'bʌtn",
+    "translation": "按钮",
+    "translations": [
+      "按钮"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00199",
+    "word": "instant",
+    "phonetic": "'ɪnstənt",
+    "translation": "瞬间；片刻；立即的；立刻的",
+    "translations": [
+      "瞬间；片刻",
+      "立即的；立刻的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00200",
+    "word": "receiver",
+    "phonetic": "rɪ'sivɚ",
+    "translation": "电话听筒；接收器；〔破产企业或公司的〕管理人，接管人",
+    "translations": [
+      "电话听筒；接收器；〔破产企业或公司的〕管理人，接管人"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00201",
+    "word": "efficiency",
+    "phonetic": "ɪˈfɪʃənsɪ",
+    "translation": "效率；功效",
+    "translations": [
+      "效率；功效"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00202",
+    "word": "efficient",
+    "phonetic": "ɪ'fɪʃnt",
+    "translation": "效率高的；有能力的",
+    "translations": [
+      "效率高的；有能力的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00203",
+    "word": "ribbon",
+    "phonetic": "'rɪbən",
+    "translation": "丝带；带状物",
+    "translations": [
+      "丝带；带状物"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00204",
+    "word": "dustbin",
+    "phonetic": "'dʌstbɪn",
+    "translation": "垃圾箱",
+    "translations": [
+      "垃圾箱"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00205",
+    "word": "dispose",
+    "phonetic": "dɪ'spoz",
+    "translation": "布置；安排",
+    "translations": [
+      "布置；安排"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00206",
+    "word": "disposal",
+    "phonetic": "dɪ'spozl",
+    "translation": "清除；处理",
+    "translations": [
+      "清除；处理"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00207",
+    "word": "ecology",
+    "phonetic": "ɪ'kɑlədʒi",
+    "translation": "生态；生态学",
+    "translations": [
+      "生态；生态学"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00208",
+    "word": "greedy",
+    "phonetic": "'gridi",
+    "translation": "贪吃的；贪婪的；贪心的",
+    "translations": [
+      "贪吃的；贪婪的；贪心的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00209",
+    "word": "swallow",
+    "phonetic": "'swɑlo",
+    "translation": "吞下；咽下",
+    "translations": [
+      "吞下；咽下"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00210",
+    "word": "material",
+    "phonetic": "mə'tɪrɪəl",
+    "translation": "原料；材料",
+    "translations": [
+      "原料；材料"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00211",
+    "word": "recycle",
+    "phonetic": ",ri'saɪkl",
+    "translation": "回收利用；再利用",
+    "translations": [
+      "回收利用；再利用"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00212",
+    "word": "manufacture",
+    "phonetic": "'mænjə'fæktʃɚ",
+    "translation": "(用机器)大量生产；成批制造",
+    "translations": [
+      "(用机器)大量生产；成批制造"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00213",
+    "word": "goods",
+    "phonetic": "ɡʊdz",
+    "translation": "货物",
+    "translations": [
+      "货物"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00214",
+    "word": "etc",
+    "phonetic": "ɪt'sɛtərə, ɛt-",
+    "translation": "诸如此类；等等",
+    "translations": [
+      "诸如此类；等等"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00215",
+    "word": "representative",
+    "phonetic": "'rɛprɪ'zɛntətɪv",
+    "translation": "代表；典型人物；典型的；有代表性的",
+    "translations": [
+      "代表；典型人物",
+      "典型的；有代表性的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00216",
+    "word": "settlement",
+    "phonetic": "'sɛtlmənt",
+    "translation": "协议，和解",
+    "translations": [
+      "协议，和解"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00217",
+    "word": "motivation",
+    "phonetic": ",motə'veʃən",
+    "translation": "动机",
+    "translations": [
+      "动机"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00218",
+    "word": "journalist",
+    "phonetic": "ˈdʒɝ​nlɪst",
+    "translation": "记者；新闻工作者",
+    "translations": [
+      "记者；新闻工作者"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00219",
+    "word": "involve",
+    "phonetic": "ɪn'vɑlv",
+    "translation": "牵涉；涉及；影响；包括；使参与（卷入）……",
+    "translations": [
+      "牵涉；涉及；影响；包括；使参与（卷入）……"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00220",
+    "word": "editor",
+    "phonetic": "'ɛdɪtɚ",
+    "translation": "编辑",
+    "translations": [
+      "编辑"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00221",
+    "word": "photograph",
+    "phonetic": "'fotəɡræf",
+    "translation": "照片；给……照相",
+    "translations": [
+      "照片",
+      "给……照相"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00222",
+    "word": "photographer",
+    "phonetic": "fə'tɑgrəfɚ",
+    "translation": "摄影师",
+    "translations": [
+      "摄影师"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00223",
+    "word": "photography",
+    "phonetic": "fə'tɑɡrəfi",
+    "translation": "摄影",
+    "translations": [
+      "摄影"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00224",
+    "word": "unforgettable",
+    "phonetic": ",ʌnfɚ'ɡɛtəbl",
+    "translation": "难忘的；永远记得的",
+    "translations": [
+      "难忘的；永远记得的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00225",
+    "word": "assignment",
+    "phonetic": "ə'saɪnmənt",
+    "translation": "任务; 作业",
+    "translations": [
+      "任务; 作业"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00226",
+    "word": "delighted",
+    "phonetic": "dɪ'laɪtɪd",
+    "translation": "快乐的；欣喜的",
+    "translations": [
+      "快乐的；欣喜的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00227",
+    "word": "admirable",
+    "phonetic": "'ædmərəbl",
+    "translation": "值得赞扬的；令人钦佩的",
+    "translations": [
+      "值得赞扬的；令人钦佩的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00228",
+    "word": "unusual",
+    "phonetic": "ʌnˈjuʒəl",
+    "translation": "不同寻常的；独特的",
+    "translations": [
+      "不同寻常的；独特的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00229",
+    "word": "assist",
+    "phonetic": "ə'sɪst",
+    "translation": "帮助；协助；援助",
+    "translations": [
+      "帮助；协助；援助"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00230",
+    "word": "assistant",
+    "phonetic": "ə'sɪstənt",
+    "translation": "助手；助理",
+    "translations": [
+      "助手；助理"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00231",
+    "word": "submit",
+    "phonetic": "səb'mɪt",
+    "translation": "递交；呈递（文件等）",
+    "translations": [
+      "递交；呈递（文件等）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00232",
+    "word": "profession",
+    "phonetic": "prə'fɛʃən",
+    "translation": "职业；专业",
+    "translations": [
+      "职业；专业"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00233",
+    "word": "professional",
+    "phonetic": "prə'fɛʃənl",
+    "translation": "专业的；职业的；专业人员",
+    "translations": [
+      "专业的；职业的",
+      "专业人员"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00234",
+    "word": "colleague",
+    "phonetic": "'kɑliɡ",
+    "translation": "同事",
+    "translations": [
+      "同事"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00235",
+    "word": "eager",
+    "phonetic": "'igɚ",
+    "translation": "渴望的；热切的",
+    "translations": [
+      "渴望的；热切的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00236",
+    "word": "concentrate",
+    "phonetic": "'kɑnsn'tret",
+    "translation": "集中；聚集",
+    "translations": [
+      "集中；聚集"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00237",
+    "word": "concentrate on",
+    "phonetic": "",
+    "translation": "集中；全神贯注于",
+    "translations": [
+      "集中；全神贯注于"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00238",
+    "word": "amateur",
+    "phonetic": "ˈæmətər",
+    "translation": "业余爱好者",
+    "translations": [
+      "业余爱好者"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00239",
+    "word": "update",
+    "phonetic": ",ʌp'det",
+    "translation": "更新；使现代化",
+    "translations": [
+      "更新；使现代化"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00240",
+    "word": "acquire",
+    "phonetic": "ə'kwaɪr",
+    "translation": "获得；取得",
+    "translations": [
+      "获得；取得"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00241",
+    "word": "assess",
+    "phonetic": "ə'sɛs",
+    "translation": "评估；评定",
+    "translations": [
+      "评估；评定"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00242",
+    "word": "inform",
+    "phonetic": "ɪn'fɔrm",
+    "translation": "告知；通知",
+    "translations": [
+      "告知；通知"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00243",
+    "word": "deadline",
+    "phonetic": "ˈdedlaɪn",
+    "translation": "最后期限",
+    "translations": [
+      "最后期限"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00244",
+    "word": "interviewee",
+    "phonetic": ",ɪntɚvju'i",
+    "translation": "参加面试者；接受采访者",
+    "translations": [
+      "参加面试者；接受采访者"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00245",
+    "word": "meanwhile",
+    "phonetic": "'minwaɪl",
+    "translation": "其间；同时",
+    "translations": [
+      "其间；同时"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00246",
+    "word": "depend on",
+    "phonetic": "",
+    "translation": "依靠；依赖",
+    "translations": [
+      "依靠；依赖"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00247",
+    "word": "case",
+    "phonetic": "kes",
+    "translation": "情况；病例；案例",
+    "translations": [
+      "情况；病例；案例"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00248",
+    "word": "accuse",
+    "phonetic": "ə'kjuz",
+    "translation": "指责；谴责；控告",
+    "translations": [
+      "指责；谴责；控告"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00249",
+    "word": "accuse...of",
+    "phonetic": "",
+    "translation": "因……指责或控告……",
+    "translations": [
+      "因……指责或控告……"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00250",
+    "word": "accusation",
+    "phonetic": ",ækju'zeʃən",
+    "translation": "指责；谴责；控告",
+    "translations": [
+      "指责；谴责；控告"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00251",
+    "word": "deliberately",
+    "phonetic": "dɪ'lɪbərətli",
+    "translation": "故意地",
+    "translations": [
+      "故意地"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00252",
+    "word": "so as to (do sth)",
+    "phonetic": "",
+    "translation": "为了（做）……",
+    "translations": [
+      "为了（做）……"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00253",
+    "word": "deny",
+    "phonetic": "dɪ'nai",
+    "translation": "否认；拒绝",
+    "translations": [
+      "否认；拒绝"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00254",
+    "word": "sceptical",
+    "phonetic": "'skeptikəl",
+    "translation": "怀疑的（<美>skeptical）",
+    "translations": [
+      "怀疑的（<美>skeptical）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00255",
+    "word": "guilty",
+    "phonetic": "'ɡɪlti",
+    "translation": "犯罪的；有罪的；有过错的，有过失的；内疚的",
+    "translations": [
+      "犯罪的；有罪的；有过错的，有过失的；内疚的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00256",
+    "word": "dilemma",
+    "phonetic": "dəˈlɛmə, daɪ-",
+    "translation": "（进退两难的）困境；窘境",
+    "translations": [
+      "（进退两难的）困境；窘境"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00257",
+    "word": "demand",
+    "phonetic": "dɪ'mænd",
+    "translation": "需求；要求；强烈要求",
+    "translations": [
+      "需求；要求",
+      "强烈要求"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00258",
+    "word": "demanding",
+    "phonetic": "dɪ'mændɪŋ",
+    "translation": "要求很高的；费力的",
+    "translations": [
+      "要求很高的；费力的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00259",
+    "word": "publish",
+    "phonetic": "'pʌblɪʃ",
+    "translation": "出版；发行；发表；公布",
+    "translations": [
+      "出版；发行；发表；公布"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00260",
+    "word": "scoop",
+    "phonetic": "skup",
+    "translation": "抢先获得的新闻、利润等；勺子",
+    "translations": [
+      "抢先获得的新闻、利润等；勺子"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00261",
+    "word": "section",
+    "phonetic": "'sɛkʃən",
+    "translation": "部分；节",
+    "translations": [
+      "部分；节"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00262",
+    "word": "concise",
+    "phonetic": "kən'saɪs",
+    "translation": "简明的；简练的",
+    "translations": [
+      "简明的；简练的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00263",
+    "word": "imaginative",
+    "phonetic": "ɪ'mædʒɪnətɪv",
+    "translation": "富于想象力的",
+    "translations": [
+      "富于想象力的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00264",
+    "word": "technical",
+    "phonetic": "'tɛknɪkl",
+    "translation": "技术（上）的；技巧方面的",
+    "translations": [
+      "技术（上）的；技巧方面的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00265",
+    "word": "technically",
+    "phonetic": "'tɛknɪkli",
+    "translation": "技术上；工艺上",
+    "translations": [
+      "技术上；工艺上"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00266",
+    "word": "thorough",
+    "phonetic": "ˈθʌrəʊ; θʌro",
+    "translation": "彻底的；详尽的",
+    "translations": [
+      "彻底的；详尽的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00267",
+    "word": "gifted",
+    "phonetic": "'ɡɪftɪd",
+    "translation": "有天赋的",
+    "translations": [
+      "有天赋的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00268",
+    "word": "idiomatic",
+    "phonetic": ",ɪdɪə'mætɪk",
+    "translation": "合乎语言习惯的",
+    "translations": [
+      "合乎语言习惯的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00269",
+    "word": "housewife",
+    "phonetic": "'haʊs'waɪf",
+    "translation": "家庭主妇",
+    "translations": [
+      "家庭主妇"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00270",
+    "word": "crime",
+    "phonetic": "kraɪm",
+    "translation": "罪行；犯罪",
+    "translations": [
+      "罪行；犯罪"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00271",
+    "word": "edition",
+    "phonetic": "ɪ'dɪʃən",
+    "translation": "版（本）；版次",
+    "translations": [
+      "版（本）；版次"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00272",
+    "word": "ahead of",
+    "phonetic": "",
+    "translation": "在……前面",
+    "translations": [
+      "在……前面"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00273",
+    "word": "department",
+    "phonetic": "dɪ'pɑrtmənt",
+    "translation": "部门；部；处；系",
+    "translations": [
+      "部门；部；处；系"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00274",
+    "word": "accurate",
+    "phonetic": "'ækjərət",
+    "translation": "正确的；精确的",
+    "translations": [
+      "正确的；精确的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00275",
+    "word": "senior",
+    "phonetic": "'sinɪɚ",
+    "translation": "高级的",
+    "translations": [
+      "高级的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00276",
+    "word": "polish",
+    "phonetic": "'pɑlɪʃ",
+    "translation": "擦亮；磨光；润色",
+    "translations": [
+      "擦亮；磨光；润色"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00277",
+    "word": "chief",
+    "phonetic": "tʃif",
+    "translation": "首领；长官；首席的；主要的",
+    "translations": [
+      "首领；长官",
+      "首席的；主要的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00278",
+    "word": "approve",
+    "phonetic": "ə'prʊv",
+    "translation": "批准；赞成，同意",
+    "translations": [
+      "批准；赞成，同意"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00279",
+    "word": "process",
+    "phonetic": "proˈsɛs;(for n.)prɑsɛs",
+    "translation": "过程，进程；；工序；工艺流程；处理",
+    "translations": [
+      "过程，进程；；工序；工艺流程",
+      "处理"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00280",
+    "word": "negative",
+    "phonetic": "'nɛɡətɪv",
+    "translation": "底片；消积的；否定的",
+    "translations": [
+      "底片",
+      "消积的；否定的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00281",
+    "word": "appointment",
+    "phonetic": "ə'pɔɪntmənt",
+    "translation": "约会；任命",
+    "translations": [
+      "约会；任命"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00282",
+    "word": "aid",
+    "phonetic": "ed",
+    "translation": "帮助；援助；资助；帮助；援助；资助",
+    "translations": [
+      "帮助；援助；资助",
+      "帮助；援助；资助"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00283",
+    "word": "first aid",
+    "phonetic": "",
+    "translation": "（对伤患者的）急救",
+    "translations": [
+      "（对伤患者的）急救"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00284",
+    "word": "temporary",
+    "phonetic": "ˈtempəreri",
+    "translation": "暂时的；临时的",
+    "translations": [
+      "暂时的；临时的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00285",
+    "word": "fall ill",
+    "phonetic": "",
+    "translation": "生病",
+    "translations": [
+      "生病"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00286",
+    "word": "injury",
+    "phonetic": "'ɪndʒəri",
+    "translation": "损伤；伤害",
+    "translations": [
+      "损伤；伤害"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00287",
+    "word": "bleed",
+    "phonetic": "blid",
+    "translation": "(bled,bled)流血",
+    "translations": [
+      "(bled,bled)流血"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00288",
+    "word": "nosebleed",
+    "phonetic": "'nozblid",
+    "translation": "鼻出血；流鼻血",
+    "translations": [
+      "鼻出血；流鼻血"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00289",
+    "word": "sprain",
+    "phonetic": "spren",
+    "translation": "扭伤",
+    "translations": [
+      "扭伤"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00290",
+    "word": "sprained",
+    "phonetic": "",
+    "translation": "扭伤的",
+    "translations": [
+      "扭伤的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00291",
+    "word": "ankle",
+    "phonetic": "'æŋkl",
+    "translation": "踝（关节）",
+    "translations": [
+      "踝（关节）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00292",
+    "word": "choke",
+    "phonetic": "tʃok",
+    "translation": "（使）噎住；（使）窒息",
+    "translations": [
+      "（使）噎住；（使）窒息"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00293",
+    "word": "cupboard",
+    "phonetic": "'kʌbɚd",
+    "translation": "橱柜；衣柜",
+    "translations": [
+      "橱柜；衣柜"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00294",
+    "word": "skin",
+    "phonetic": "skɪn",
+    "translation": "皮；皮肤",
+    "translations": [
+      "皮；皮肤"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00295",
+    "word": "essential",
+    "phonetic": "ɪ'sɛnʃl",
+    "translation": "最重要的；不可缺少的；本质的",
+    "translations": [
+      "最重要的；不可缺少的；本质的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00296",
+    "word": "organ",
+    "phonetic": "'ɔrɡən",
+    "translation": "器官",
+    "translations": [
+      "器官"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00297",
+    "word": "layer",
+    "phonetic": "'leɪr",
+    "translation": "层；层次",
+    "translations": [
+      "层；层次"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00298",
+    "word": "barrier",
+    "phonetic": "'bærɪɚ",
+    "translation": "屏障；障碍（物）",
+    "translations": [
+      "屏障；障碍（物）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00299",
+    "word": "poison",
+    "phonetic": "'pɔɪzn",
+    "translation": "毒药；毒害；毒害；使中毒",
+    "translations": [
+      "毒药；毒害",
+      "毒害；使中毒"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00300",
+    "word": "ray",
+    "phonetic": "re",
+    "translation": "光线；射线",
+    "translations": [
+      "光线；射线"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00301",
+    "word": "complex",
+    "phonetic": "ˈkɑmplɛks;kəmˈplɛks",
+    "translation": "复杂的",
+    "translations": [
+      "复杂的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00302",
+    "word": "variety",
+    "phonetic": "və'raɪəti",
+    "translation": "变化；多样（化）；多变（性）",
+    "translations": [
+      "变化；多样（化）；多变（性）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00303",
+    "word": "liquid",
+    "phonetic": "'lɪkwɪd",
+    "translation": "液体",
+    "translations": [
+      "液体"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00304",
+    "word": "radiation",
+    "phonetic": ",redɪ'eʃən",
+    "translation": "辐射",
+    "translations": [
+      "辐射"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00305",
+    "word": "mild",
+    "phonetic": "maɪld",
+    "translation": "轻微的；暖和的；温柔的",
+    "translations": [
+      "轻微的；暖和的；温柔的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00306",
+    "word": "mildly",
+    "phonetic": "'maɪldli",
+    "translation": "轻微地；温和地",
+    "translations": [
+      "轻微地；温和地"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00307",
+    "word": "pan",
+    "phonetic": "pæn",
+    "translation": "平底锅",
+    "translations": [
+      "平底锅"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00308",
+    "word": "stove",
+    "phonetic": "stov",
+    "translation": "炉子；火炉",
+    "translations": [
+      "炉子；火炉"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00309",
+    "word": "heal",
+    "phonetic": "hil",
+    "translation": "（使）康复；痊愈",
+    "translations": [
+      "（使）康复；痊愈"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00310",
+    "word": "tissue",
+    "phonetic": "'tɪʃu",
+    "translation": "手巾纸；（生物）组织",
+    "translations": [
+      "手巾纸；（生物）组织"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00311",
+    "word": "electric shock",
+    "phonetic": "",
+    "translation": "触电；电休克",
+    "translations": [
+      "触电；电休克"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00312",
+    "word": "swell",
+    "phonetic": "swɛl",
+    "translation": "（使）膨胀；隆起",
+    "translations": [
+      "（使）膨胀；隆起"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00313",
+    "word": "swollen",
+    "phonetic": "'swolən",
+    "translation": "肿胀的",
+    "translations": [
+      "肿胀的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00314",
+    "word": "blister",
+    "phonetic": "'blɪstɚ",
+    "translation": "水泡；（使）起泡",
+    "translations": [
+      "水泡",
+      "（使）起泡"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00315",
+    "word": "watery",
+    "phonetic": "'wɑtəri",
+    "translation": "（似）水的",
+    "translations": [
+      "（似）水的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00316",
+    "word": "char",
+    "phonetic": "tʃɑr",
+    "translation": "烧焦",
+    "translations": [
+      "烧焦"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00317",
+    "word": "nerve",
+    "phonetic": "nɝv",
+    "translation": "神经",
+    "translations": [
+      "神经"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00318",
+    "word": "scissors",
+    "phonetic": "'sɪzɚz",
+    "translation": "剪刀",
+    "translations": [
+      "剪刀"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00319",
+    "word": "unbearable",
+    "phonetic": "ʌn'bɛrəbl",
+    "translation": "难以忍受的；不能容忍的",
+    "translations": [
+      "难以忍受的；不能容忍的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00320",
+    "word": "basin",
+    "phonetic": "'besn",
+    "translation": "盆；盆地",
+    "translations": [
+      "盆；盆地"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00321",
+    "word": "squeeze",
+    "phonetic": "skwiz",
+    "translation": "榨；挤；压",
+    "translations": [
+      "榨；挤；压"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00322",
+    "word": "squeeze out",
+    "phonetic": "",
+    "translation": "榨出；挤出",
+    "translations": [
+      "榨出；挤出"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00323",
+    "word": "over and over again",
+    "phonetic": "",
+    "translation": "反复；多次",
+    "translations": [
+      "反复；多次"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00324",
+    "word": "bandage",
+    "phonetic": "'bændɪdʒ",
+    "translation": "绷",
+    "translations": [
+      "绷"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00325",
+    "word": "in place",
+    "phonetic": "",
+    "translation": "在适当的位置；适当",
+    "translations": [
+      "在适当的位置；适当"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00326",
+    "word": "ointment",
+    "phonetic": "'ɔɪntmənt",
+    "translation": "药膏；油膏",
+    "translations": [
+      "药膏；油膏"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00327",
+    "word": "infection",
+    "phonetic": "ɪn'fɛkʃən",
+    "translation": "传染病；感染；传染",
+    "translations": [
+      "传染病；感染；传染"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00328",
+    "word": "vital",
+    "phonetic": "'vaɪtl",
+    "translation": "至关重要的；生死攸关的",
+    "translations": [
+      "至关重要的；生死攸关的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00329",
+    "word": "symptom",
+    "phonetic": "'sɪmptəm",
+    "translation": "症状；征兆",
+    "translations": [
+      "症状；征兆"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00330",
+    "word": "label",
+    "phonetic": "ˈlebəl",
+    "translation": "加标签或标记；标签；标记",
+    "translations": [
+      "加标签或标记",
+      "标签；标记"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00331",
+    "word": "kettle",
+    "phonetic": "'kɛtl",
+    "translation": "(水)壶；罐",
+    "translations": [
+      "(水)壶；罐"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00332",
+    "word": "pour",
+    "phonetic": "pɔr",
+    "translation": "倒；灌；注；涌",
+    "translations": [
+      "倒；灌；注；涌"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00333",
+    "word": "wrist",
+    "phonetic": "rɪst",
+    "translation": "手腕",
+    "translations": [
+      "手腕"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00334",
+    "word": "damp",
+    "phonetic": "dæmp",
+    "translation": "潮湿的",
+    "translations": [
+      "潮湿的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00335",
+    "word": "Casey",
+    "phonetic": "",
+    "translation": "凯西（姓）",
+    "translations": [
+      "凯西（姓）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00336",
+    "word": "sleeve",
+    "phonetic": "sliv",
+    "translation": "袖子",
+    "translations": [
+      "袖子"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00337",
+    "word": "blouse",
+    "phonetic": "blaʊs",
+    "translation": "女衬衫",
+    "translations": [
+      "女衬衫"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00338",
+    "word": "tight",
+    "phonetic": "taɪt",
+    "translation": "紧的；紧密的",
+    "translations": [
+      "紧的；紧密的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00339",
+    "word": "tightly",
+    "phonetic": "'taɪtli",
+    "translation": "紧地；牢牢地",
+    "translations": [
+      "紧地；牢牢地"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00340",
+    "word": "firm",
+    "phonetic": "fɝm",
+    "translation": "结实的，坚实的；坚定的",
+    "translations": [
+      "结实的，坚实的；坚定的"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00341",
+    "word": "firmly",
+    "phonetic": "'fɝmli",
+    "translation": "坚固地；稳定地",
+    "translations": [
+      "坚固地；稳定地"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00342",
+    "word": "throat",
+    "phonetic": "θrot",
+    "translation": "咽喉；喉咙",
+    "translations": [
+      "咽喉；喉咙"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00343",
+    "word": "Janson",
+    "phonetic": "",
+    "translation": "詹森（姓）",
+    "translations": [
+      "詹森（姓）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00344",
+    "word": "ceremony",
+    "phonetic": "ˈsɛrəˌmoʊni",
+    "translation": "典礼；仪式；礼节",
+    "translations": [
+      "典礼；仪式；礼节"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00345",
+    "word": "bravery",
+    "phonetic": "'brevəri",
+    "translation": "勇敢；勇气",
+    "translations": [
+      "勇敢；勇气"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00346",
+    "word": "Slade",
+    "phonetic": "",
+    "translation": "斯莱德（姓）",
+    "translations": [
+      "斯莱德（姓）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00347",
+    "word": "stab",
+    "phonetic": "stæb",
+    "translation": "刺；戳；刺伤",
+    "translations": [
+      "刺；戳；刺伤"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00348",
+    "word": "a number of",
+    "phonetic": "",
+    "translation": "若干；许多",
+    "translations": [
+      "若干；许多"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00349",
+    "word": "put one's hands on",
+    "phonetic": "",
+    "translation": "找到",
+    "translations": [
+      "找到"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00350",
+    "word": "treat",
+    "phonetic": "trit",
+    "translation": "对待；款待；治疗；款待；招待",
+    "translations": [
+      "对待；款待；治疗",
+      "款待；招待"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00351",
+    "word": "apply",
+    "phonetic": "ə'plaɪ",
+    "translation": "申请；应用；涂，敷",
+    "translations": [
+      "申请；应用；涂，敷"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00352",
+    "word": "pressure",
+    "phonetic": "'prɛʃɚ",
+    "translation": "压力；挤压；压迫（感）",
+    "translations": [
+      "压力；挤压；压迫（感）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00353",
+    "word": "ambulance",
+    "phonetic": "'æmbjələns",
+    "translation": "救护车",
+    "translations": [
+      "救护车"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00354",
+    "word": "scheme",
+    "phonetic": "skim",
+    "translation": "方案；计划",
+    "translations": [
+      "方案；计划"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00355",
+    "word": "Southerton",
+    "phonetic": "",
+    "translation": "萨瑟顿（姓）",
+    "translations": [
+      "萨瑟顿（姓）"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00356",
+    "word": "make a difference",
+    "phonetic": "",
+    "translation": "区别对待；有影响；起（重要）作用",
+    "translations": [
+      "区别对待；有影响；起（重要）作用"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  },
+  {
+    "id": "qwerty_renjiaogaozhong5_00357",
+    "word": "bruise",
+    "phonetic": "bruz",
+    "translation": "瘀伤；擦伤；瘀伤；擦伤",
+    "translations": [
+      "瘀伤；擦伤",
+      "瘀伤；擦伤"
+    ],
+    "domain": "qwerty_renjiaogaozhong5"
+  }
+]

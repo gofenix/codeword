@@ -1,0 +1,222 @@
+[
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00001",
+    "word": "assignment",
+    "phonetic": "",
+    "translation": "n. 任务，作业",
+    "translations": [
+      "n. 任务，作业"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00002",
+    "word": "case study",
+    "phonetic": "",
+    "translation": "N. phrase 案例研究",
+    "translations": [
+      "N. phrase 案例研究"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00003",
+    "word": "dissertation",
+    "phonetic": "",
+    "translation": "n. 专题论文；学位论文",
+    "translations": [
+      "n. 专题论文；学位论文"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00004",
+    "word": "focus",
+    "phonetic": "",
+    "translation": "n. 中心，焦点；v. 集中目光",
+    "translations": [
+      "n. 中心，焦点；v. 集中目光"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00005",
+    "word": "aim",
+    "phonetic": "",
+    "translation": "n. 目标；v. 打算",
+    "translations": [
+      "n. 目标；v. 打算"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00006",
+    "word": "purpose",
+    "phonetic": "",
+    "translation": "n. 目标，意图",
+    "translations": [
+      "n. 目标，意图"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00007",
+    "word": "target",
+    "phonetic": "",
+    "translation": "n. 目标，对象；v. 以…为目标",
+    "translations": [
+      "n. 目标，对象；v. 以…为目标"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00008",
+    "word": "article",
+    "phonetic": "",
+    "translation": "n. 文章",
+    "translations": [
+      "n. 文章"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00009",
+    "word": "editorial",
+    "phonetic": "",
+    "translation": "n. 社评",
+    "translations": [
+      "n. 社评"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00010",
+    "word": "interview",
+    "phonetic": "",
+    "translation": "n. 面试，面谈；v. 采访",
+    "translations": [
+      "n. 面试，面谈；v. 采访"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00011",
+    "word": "questionnaire",
+    "phonetic": "",
+    "translation": "n. 问卷；情况调查表",
+    "translations": [
+      "n. 问卷；情况调查表"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00012",
+    "word": "fact",
+    "phonetic": "",
+    "translation": "n. 现实，实际情况；（尤指）事实，真相",
+    "translations": [
+      "n. 现实，实际情况；（尤指）事实，真相"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00013",
+    "word": "statistic",
+    "phonetic": "",
+    "translation": "n. 统计数据；统计资料",
+    "translations": [
+      "n. 统计数据；统计资料"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00014",
+    "word": "data",
+    "phonetic": "",
+    "translation": "n. 信息，数据",
+    "translations": [
+      "n. 信息，数据"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00015",
+    "word": "chart",
+    "phonetic": "",
+    "translation": "n. 图表；示意图；曲线图",
+    "translations": [
+      "n. 图表；示意图；曲线图"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00016",
+    "word": "table",
+    "phonetic": "",
+    "translation": "n. （一览）表，表格",
+    "translations": [
+      "n. （一览）表，表格"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00017",
+    "word": "trend",
+    "phonetic": "",
+    "translation": "n. 趋势，趋向；倾向，动向",
+    "translations": [
+      "n. 趋势，趋向；倾向，动向"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00018",
+    "word": "regularity",
+    "phonetic": "",
+    "translation": "n. 规则;规律",
+    "translations": [
+      "n. 规则;规律"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00019",
+    "word": "section",
+    "phonetic": "",
+    "translation": "n. 章节；部分；片段",
+    "translations": [
+      "n. 章节；部分；片段"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00020",
+    "word": "catalogue",
+    "phonetic": "",
+    "translation": "n. 目录",
+    "translations": [
+      "n. 目录"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00021",
+    "word": "headline",
+    "phonetic": "",
+    "translation": "n. 大字标题",
+    "translations": [
+      "n. 大字标题"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task17_00022",
+    "word": "bibliography",
+    "phonetic": "",
+    "translation": "n. 参考书目，文献目录",
+    "translations": [
+      "n. 参考书目，文献目录"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task17"
+  }
+]

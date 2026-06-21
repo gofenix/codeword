@@ -1,0 +1,462 @@
+[
+  {
+    "id": "qwerty_top_50_prepositions_00001",
+    "word": "of",
+    "phonetic": "ʌv; əv",
+    "translation": "indicating the relationship between a part and a whole.",
+    "translations": [
+      "indicating the relationship between a part and a whole."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00002",
+    "word": "with",
+    "phonetic": "wɪð; wɪθ",
+    "translation": "indicating the accompanying presence of someone or something.",
+    "translations": [
+      "indicating the accompanying presence of someone or something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00003",
+    "word": "at",
+    "phonetic": "æt; ət",
+    "translation": "indicating the location or time of an event.",
+    "translations": [
+      "indicating the location or time of an event."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00004",
+    "word": "from",
+    "phonetic": "frʌm",
+    "translation": "indicating the source or origin of something.",
+    "translations": [
+      "indicating the source or origin of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00005",
+    "word": "into",
+    "phonetic": "ˈɪntu",
+    "translation": "indicating movement from the outside to the inside of something.",
+    "translations": [
+      "indicating movement from the outside to the inside of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00006",
+    "word": "during",
+    "phonetic": "'dʊrɪŋ",
+    "translation": "indicating a period of time when an event is taking place.",
+    "translations": [
+      "indicating a period of time when an event is taking place."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00007",
+    "word": "including",
+    "phonetic": "ɪn'klʊdɪŋ",
+    "translation": "indicating the presence of someone or something as part of a larger group.",
+    "translations": [
+      "indicating the presence of someone or something as part of a larger group."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00008",
+    "word": "until",
+    "phonetic": "ən'tɪl",
+    "translation": "indicating the end of a period of time.",
+    "translations": [
+      "indicating the end of a period of time."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00009",
+    "word": "against",
+    "phonetic": "əˈɡɛnst;əˈɡenst",
+    "translation": "indicating physical contact with someone or something.",
+    "translations": [
+      "indicating physical contact with someone or something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00010",
+    "word": "among",
+    "phonetic": "ə'mʌŋ",
+    "translation": "indicating being a member of a group or in the midst of something.",
+    "translations": [
+      "indicating being a member of a group or in the midst of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00011",
+    "word": "throughout",
+    "phonetic": "θrʊ'aʊt",
+    "translation": "indicating something that occurs or exists in every part of a place or thing.",
+    "translations": [
+      "indicating something that occurs or exists in every part of a place or thing."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00012",
+    "word": "despite",
+    "phonetic": "dɪ'spaɪt",
+    "translation": "indicating something happening despite a circumstance or obstacle.",
+    "translations": [
+      "indicating something happening despite a circumstance or obstacle."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00013",
+    "word": "towards",
+    "phonetic": "tɔrdz",
+    "translation": "indicating movement in the direction of something.",
+    "translations": [
+      "indicating movement in the direction of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00014",
+    "word": "upon",
+    "phonetic": "ə'pɑn",
+    "translation": "indicating something happening immediately after something else.",
+    "translations": [
+      "indicating something happening immediately after something else."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00015",
+    "word": "concerning",
+    "phonetic": "kən'sɝnɪŋ",
+    "translation": "indicating something that relates to or is about something.",
+    "translations": [
+      "indicating something that relates to or is about something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00016",
+    "word": "to",
+    "phonetic": "tə;tu;tuː",
+    "translation": "indicating the direction or movement towards a place or person.",
+    "translations": [
+      "indicating the direction or movement towards a place or person."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00017",
+    "word": "in",
+    "phonetic": "ɪn",
+    "translation": "indicating being located inside an enclosed space.",
+    "translations": [
+      "indicating being located inside an enclosed space."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00018",
+    "word": "for",
+    "phonetic": "fɚ; strong form fɔr",
+    "translation": "indicating the purpose or intended use of something.",
+    "translations": [
+      "indicating the purpose or intended use of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00019",
+    "word": "on",
+    "phonetic": "ɑn",
+    "translation": "indicating physical contact with a surface or being positioned on top of something.",
+    "translations": [
+      "indicating physical contact with a surface or being positioned on top of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00020",
+    "word": "by",
+    "phonetic": "baɪ",
+    "translation": "indicating the means or method of doing something.",
+    "translations": [
+      "indicating the means or method of doing something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00021",
+    "word": "about",
+    "phonetic": "ə'baʊt",
+    "translation": "indicating the topic of something.",
+    "translations": [
+      "indicating the topic of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00022",
+    "word": "like",
+    "phonetic": "laɪk",
+    "translation": "indicating similarity or resemblance between two things.",
+    "translations": [
+      "indicating similarity or resemblance between two things."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00023",
+    "word": "through",
+    "phonetic": "θru",
+    "translation": "indicating movement from one side of something to the other side.",
+    "translations": [
+      "indicating movement from one side of something to the other side."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00024",
+    "word": "over",
+    "phonetic": "'ovɚ",
+    "translation": "indicating movement from one side to another side of something.",
+    "translations": [
+      "indicating movement from one side to another side of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00025",
+    "word": "before",
+    "phonetic": "bɪ'fɔr",
+    "translation": "indicating the time or event occurring earlier than another time or event.",
+    "translations": [
+      "indicating the time or event occurring earlier than another time or event."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00026",
+    "word": "between",
+    "phonetic": "bəˈtwin",
+    "translation": "indicating the relationship of two things or people when they are separated by something else.",
+    "translations": [
+      "indicating the relationship of two things or people when they are separated by something else."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00027",
+    "word": "after",
+    "phonetic": "'æftɚ",
+    "translation": "indicating the time or event occurring later than another time or event.",
+    "translations": [
+      "indicating the time or event occurring later than another time or event."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00028",
+    "word": "since",
+    "phonetic": "sɪns",
+    "translation": "indicating the time period from a past event until now.",
+    "translations": [
+      "indicating the time period from a past event until now."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00029",
+    "word": "without",
+    "phonetic": "wɪðˈaʊt",
+    "translation": "indicating the absence or lack of something.",
+    "translations": [
+      "indicating the absence or lack of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00030",
+    "word": "under",
+    "phonetic": "'ʌndɚ",
+    "translation": "indicating physical contact with the lower surface of something.",
+    "translations": [
+      "indicating physical contact with the lower surface of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00031",
+    "word": "within",
+    "phonetic": "wɪ'ðɪn",
+    "translation": "indicating being inside or contained within something.",
+    "translations": [
+      "indicating being inside or contained within something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00032",
+    "word": "along",
+    "phonetic": "ə'lɔŋ",
+    "translation": "indicating movement in the same direction as something else.",
+    "translations": [
+      "indicating movement in the same direction as something else."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00033",
+    "word": "following",
+    "phonetic": "ˈfɑloʊɪŋ",
+    "translation": "indicating occurring after something else.",
+    "translations": [
+      "indicating occurring after something else."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00034",
+    "word": "across",
+    "phonetic": "ə'krɔs",
+    "translation": "indicating movement from one side to the opposite side of something.",
+    "translations": [
+      "indicating movement from one side to the opposite side of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00035",
+    "word": "behind",
+    "phonetic": "bɪ'haɪnd",
+    "translation": "indicating being at the back of something or someone.",
+    "translations": [
+      "indicating being at the back of something or someone."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00036",
+    "word": "beyond",
+    "phonetic": "bɪ'jɑnd",
+    "translation": "indicating something being at or to the further side of something else.",
+    "translations": [
+      "indicating something being at or to the further side of something else."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00037",
+    "word": "plus",
+    "phonetic": "plʌs",
+    "translation": "indicating addition or inclusion.",
+    "translations": [
+      "indicating addition or inclusion."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00038",
+    "word": "except",
+    "phonetic": "ɪk'sɛpt",
+    "translation": "indicating exclusion or something that is not included.",
+    "translations": [
+      "indicating exclusion or something that is not included."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00039",
+    "word": "but",
+    "phonetic": "bʌt",
+    "translation": "indicating a contrast or something that is not part of something else.",
+    "translations": [
+      "indicating a contrast or something that is not part of something else."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00040",
+    "word": "up",
+    "phonetic": "ʌp",
+    "translation": "indicating movement in a higher direction.",
+    "translations": [
+      "indicating movement in a higher direction."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00041",
+    "word": "out",
+    "phonetic": "aʊt",
+    "translation": "indicating movement away from the inside of something.",
+    "translations": [
+      "indicating movement away from the inside of something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00042",
+    "word": "around",
+    "phonetic": "ə'raʊnd",
+    "translation": "indicating movement in a circular direction or surrounding something.",
+    "translations": [
+      "indicating movement in a circular direction or surrounding something."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00043",
+    "word": "down",
+    "phonetic": "daʊn",
+    "translation": "indicating movement in a lower direction.",
+    "translations": [
+      "indicating movement in a lower direction."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00044",
+    "word": "off",
+    "phonetic": "ɔf",
+    "translation": "indicating separation or disconnection.",
+    "translations": [
+      "indicating separation or disconnection."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00045",
+    "word": "above",
+    "phonetic": "ə'bʌv",
+    "translation": "indicating something being at a higher level or position than something else.",
+    "translations": [
+      "indicating something being at a higher level or position than something else."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  },
+  {
+    "id": "qwerty_top_50_prepositions_00046",
+    "word": "near",
+    "phonetic": "nɪr",
+    "translation": "indicating being close or in proximity to something or someone.",
+    "translations": [
+      "indicating being close or in proximity to something or someone."
+    ],
+    "domain": "qwerty_top_50_prepositions"
+  }
+]

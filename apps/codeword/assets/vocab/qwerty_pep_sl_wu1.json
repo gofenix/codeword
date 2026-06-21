@@ -1,0 +1,665 @@
+[
+  {
+    "id": "qwerty_pep_sl_wu1_00001",
+    "word": "clever",
+    "phonetic": "ˈklɛvər",
+    "translation": "聪明的",
+    "translations": [
+      "聪明的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00002",
+    "word": "careless",
+    "phonetic": "ˈkɛrləs",
+    "translation": "粗心的",
+    "translations": [
+      "粗心的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00003",
+    "word": "polite",
+    "phonetic": "pəˈlaɪt",
+    "translation": "有礼貌的",
+    "translations": [
+      "有礼貌的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00004",
+    "word": "quiet",
+    "phonetic": "ˈkwaɪət",
+    "translation": "安静的",
+    "translations": [
+      "安静的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00005",
+    "word": "cute",
+    "phonetic": "kjut",
+    "translation": "漂亮的；可爱的",
+    "translations": [
+      "漂亮的",
+      "可爱的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00006",
+    "word": "friendly",
+    "phonetic": "ˈfrɛndli",
+    "translation": "友好的",
+    "translations": [
+      "友好的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00007",
+    "word": "helpful",
+    "phonetic": "ˈhɛlpfəl",
+    "translation": "肯帮忙的",
+    "translations": [
+      "肯帮忙的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00008",
+    "word": "active",
+    "phonetic": "ˈæktɪv",
+    "translation": "活跃的",
+    "translations": [
+      "活跃的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00009",
+    "word": "popular",
+    "phonetic": "ˈpɑpjələr",
+    "translation": "受欢迎的",
+    "translations": [
+      "受欢迎的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00010",
+    "word": "talk",
+    "phonetic": "tɔk",
+    "translation": "说话",
+    "translations": [
+      "说话"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00011",
+    "word": "party",
+    "phonetic": "ˈpɑrti",
+    "translation": "聚会",
+    "translations": [
+      "聚会"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00012",
+    "word": "all",
+    "phonetic": "ɔl",
+    "translation": "全部",
+    "translations": [
+      "全部"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00013",
+    "word": "but",
+    "phonetic": "bʌt",
+    "translation": "但是",
+    "translations": [
+      "但是"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00014",
+    "word": "sometimes",
+    "phonetic": "ˈsʌmˌtaɪmz",
+    "translation": "有时",
+    "translations": [
+      "有时"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00015",
+    "word": "bark",
+    "phonetic": "bɑrk",
+    "translation": "吠，叫",
+    "translations": [
+      "吠，叫"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00016",
+    "word": "forget",
+    "phonetic": "fərˈɡɛt",
+    "translation": "忘记",
+    "translations": [
+      "忘记"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00017",
+    "word": "with",
+    "phonetic": "wɪð",
+    "translation": "同……一起",
+    "translations": [
+      "同……一起"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00018",
+    "word": "wear glasses",
+    "phonetic": "wɛr ˈɡlæsɪz",
+    "translation": "戴眼镜",
+    "translations": [
+      "戴眼镜"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00019",
+    "word": "slim",
+    "phonetic": "slɪm",
+    "translation": "苗条的",
+    "translations": [
+      "苗条的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00020",
+    "word": "curly",
+    "phonetic": "ˈkɜrli",
+    "translation": "卷曲的",
+    "translations": [
+      "卷曲的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00021",
+    "word": "straight",
+    "phonetic": "streɪt",
+    "translation": "直的",
+    "translations": [
+      "直的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00022",
+    "word": "nice",
+    "phonetic": "naɪs",
+    "translation": "好的",
+    "translations": [
+      "好的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00023",
+    "word": "young",
+    "phonetic": "jʌŋ",
+    "translation": "年轻的",
+    "translations": [
+      "年轻的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00024",
+    "word": "teach",
+    "phonetic": "titʃ",
+    "translation": "教",
+    "translations": [
+      "教"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00025",
+    "word": "guess",
+    "phonetic": "ɡɛs",
+    "translation": "猜",
+    "translations": [
+      "猜"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00026",
+    "word": "has",
+    "phonetic": "hæz",
+    "translation": "有",
+    "translations": [
+      "有"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00027",
+    "word": "animal",
+    "phonetic": "ˈænɪməl",
+    "translation": "动物",
+    "translations": [
+      "动物"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00028",
+    "word": "elephant",
+    "phonetic": "ˈɛləfənt",
+    "translation": "大象",
+    "translations": [
+      "大象"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00029",
+    "word": "panda",
+    "phonetic": "ˈpændə",
+    "translation": "熊猫",
+    "translations": [
+      "熊猫"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00030",
+    "word": "horse",
+    "phonetic": "hɔrs",
+    "translation": "马",
+    "translations": [
+      "马"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00031",
+    "word": "cow",
+    "phonetic": "kaʊ",
+    "translation": "奶牛",
+    "translations": [
+      "奶牛"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00032",
+    "word": "pig",
+    "phonetic": "pɪɡ",
+    "translation": "猪",
+    "translations": [
+      "猪"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00033",
+    "word": "sheep",
+    "phonetic": "ʃip",
+    "translation": "绵羊",
+    "translations": [
+      "绵羊"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00034",
+    "word": "bee",
+    "phonetic": "bi",
+    "translation": "蜜蜂",
+    "translations": [
+      "蜜蜂"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00035",
+    "word": "farm",
+    "phonetic": "fɑrm",
+    "translation": "农场",
+    "translations": [
+      "农场"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00036",
+    "word": "fast",
+    "phonetic": "fæst",
+    "translation": "快的；迅速地",
+    "translations": [
+      "快的",
+      "迅速地"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00037",
+    "word": "why",
+    "phonetic": "waɪ",
+    "translation": "为什么",
+    "translations": [
+      "为什么"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00038",
+    "word": "lovely",
+    "phonetic": "ˈlʌvli",
+    "translation": "可爱的",
+    "translations": [
+      "可爱的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00039",
+    "word": "butterfly",
+    "phonetic": "ˈbʌtərˌflaɪ",
+    "translation": "蝴蝶",
+    "translations": [
+      "蝴蝶"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00040",
+    "word": "exercise book",
+    "phonetic": "ˈɛksərsaɪz bʊk",
+    "translation": "练习本",
+    "translations": [
+      "练习本"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00041",
+    "word": "pencil sharpener",
+    "phonetic": "ˈpɛnsəl ˈʃɑrpənər",
+    "translation": "铅笔刀",
+    "translations": [
+      "铅笔刀"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00042",
+    "word": "a pair of scissors",
+    "phonetic": "ə pɛr ʌv ˈsɪzərz",
+    "translation": "一把剪刀",
+    "translations": [
+      "一把剪刀"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00043",
+    "word": "pencil box",
+    "phonetic": "ˈpɛnsəl bɑks",
+    "translation": "铅笔盒",
+    "translations": [
+      "铅笔盒"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00044",
+    "word": "a box of crayons",
+    "phonetic": "ə bɑks ʌv ˈkreɪənz",
+    "translation": "一盒蜡笔",
+    "translations": [
+      "一盒蜡笔"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00045",
+    "word": "please",
+    "phonetic": "pliːz",
+    "translation": "请",
+    "translations": [
+      "请"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00046",
+    "word": "only",
+    "phonetic": "ˈoʊnli",
+    "translation": "只；仅仅",
+    "translations": [
+      "只",
+      "仅仅"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00047",
+    "word": "also",
+    "phonetic": "ˈɔlsoʊ",
+    "translation": "也",
+    "translations": [
+      "也"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00048",
+    "word": "saleswoman",
+    "phonetic": "ˈseɪlzˌwʊmən",
+    "translation": "女售货员",
+    "translations": [
+      "女售货员"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00049",
+    "word": "great",
+    "phonetic": "ɡreɪt",
+    "translation": "好极了",
+    "translations": [
+      "好极了"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00050",
+    "word": "love",
+    "phonetic": "lʌv",
+    "translation": "喜欢",
+    "translations": [
+      "喜欢"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00051",
+    "word": "how much",
+    "phonetic": "haʊ mʌtʃ",
+    "translation": "（价钱）多少？",
+    "translations": [
+      "（价钱）多少？"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00052",
+    "word": "a lot",
+    "phonetic": "ə lɑt",
+    "translation": "很多",
+    "translations": [
+      "很多"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00053",
+    "word": "wonderful",
+    "phonetic": "ˈwʌndərfəl",
+    "translation": "精彩的",
+    "translations": [
+      "精彩的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00054",
+    "word": "cool",
+    "phonetic": "kul",
+    "translation": "酷的",
+    "translations": [
+      "酷的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00055",
+    "word": "fantastic",
+    "phonetic": "fænˈtæstɪk",
+    "translation": "极好的",
+    "translations": [
+      "极好的"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00056",
+    "word": "cartoons",
+    "phonetic": "kɑrˈtunz",
+    "translation": "动画片",
+    "translations": [
+      "动画片"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00057",
+    "word": "news shows",
+    "phonetic": "nuz ʃoʊz",
+    "translation": "新闻节目",
+    "translations": [
+      "新闻节目"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00058",
+    "word": "nature shows",
+    "phonetic": "ˈneɪtʃər ʃoʊz",
+    "translation": "自然节目",
+    "translations": [
+      "自然节目"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00059",
+    "word": "chore",
+    "phonetic": "tʃɔr",
+    "translation": "家务",
+    "translations": [
+      "家务"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00060",
+    "word": "clean the room",
+    "phonetic": "klin ðə rum",
+    "translation": "打扫房间",
+    "translations": [
+      "打扫房间"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00061",
+    "word": "make the bed",
+    "phonetic": "meɪk ðə bɛd",
+    "translation": "整理床铺",
+    "translations": [
+      "整理床铺"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00062",
+    "word": "take out the rubbish",
+    "phonetic": "teɪk aʊt ðə ˈrʌbɪʃ",
+    "translation": "倒垃圾",
+    "translations": [
+      "倒垃圾"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00063",
+    "word": "wash clothes",
+    "phonetic": "wɔʃ kloʊðz",
+    "translation": "洗衣服",
+    "translations": [
+      "洗衣服"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00064",
+    "word": "tidy the desk",
+    "phonetic": "ˈtaɪdi ðə dɛsk",
+    "translation": "清理书桌",
+    "translations": [
+      "清理书桌"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00065",
+    "word": "sweep the floor",
+    "phonetic": "swip ðə flɔr",
+    "translation": "扫地",
+    "translations": [
+      "扫地"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  },
+  {
+    "id": "qwerty_pep_sl_wu1_00066",
+    "word": "call",
+    "phonetic": "kɔl",
+    "translation": "打电话给……",
+    "translations": [
+      "打电话给……"
+    ],
+    "domain": "qwerty_pep_sl_wu1"
+  }
+]

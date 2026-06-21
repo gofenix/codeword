@@ -1,0 +1,452 @@
+[
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00001",
+    "word": "venue",
+    "phonetic": "",
+    "translation": "n. 场所，场馆",
+    "translations": [
+      "n. 场所，场馆"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00002",
+    "word": "theatre / theater",
+    "phonetic": "",
+    "translation": "n. 剧院",
+    "translations": [
+      "n. 剧院"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00003",
+    "word": "concert hall",
+    "phonetic": "",
+    "translation": "n. 音乐厅",
+    "translations": [
+      "n. 音乐厅"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00004",
+    "word": "museum",
+    "phonetic": "",
+    "translation": "n. 博物馆",
+    "translations": [
+      "n. 博物馆"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00005",
+    "word": "castle",
+    "phonetic": "",
+    "translation": "n. 城堡",
+    "translations": [
+      "n. 城堡"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00006",
+    "word": "unsafe",
+    "phonetic": "",
+    "translation": "adj. 不安全的",
+    "translations": [
+      "adj. 不安全的"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00007",
+    "word": "shabby-looking",
+    "phonetic": "",
+    "translation": "adj. 外表破旧的",
+    "translations": [
+      "adj. 外表破旧的"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00008",
+    "word": "damaged",
+    "phonetic": "",
+    "translation": "adj. 被破坏的",
+    "translations": [
+      "adj. 被破坏的"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00009",
+    "word": "destroy",
+    "phonetic": "",
+    "translation": "v. 毁坏",
+    "translations": [
+      "v. 毁坏"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00010",
+    "word": "bomb",
+    "phonetic": "",
+    "translation": "n. 炸弹",
+    "translations": [
+      "n. 炸弹"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00011",
+    "word": "demolition",
+    "phonetic": "",
+    "translation": "n. 拆除",
+    "translations": [
+      "n. 拆除"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00012",
+    "word": "reconstruct",
+    "phonetic": "",
+    "translation": "v. 重建",
+    "translations": [
+      "v. 重建"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00013",
+    "word": "rebuild",
+    "phonetic": "",
+    "translation": "v. 重建",
+    "translations": [
+      "v. 重建"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00014",
+    "word": "refurbish",
+    "phonetic": "",
+    "translation": "v. 整修",
+    "translations": [
+      "v. 整修"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00015",
+    "word": "redecorate",
+    "phonetic": "",
+    "translation": "v. 重新装饰",
+    "translations": [
+      "v. 重新装饰"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00016",
+    "word": "relocate",
+    "phonetic": "",
+    "translation": "v. 搬迁",
+    "translations": [
+      "v. 搬迁"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00017",
+    "word": "reorient",
+    "phonetic": "",
+    "translation": "v. 重定向，改变方向",
+    "translations": [
+      "v. 重定向，改变方向"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00018",
+    "word": "exterior",
+    "phonetic": "",
+    "translation": "n. 外部",
+    "translations": [
+      "n. 外部"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00019",
+    "word": "repaint",
+    "phonetic": "",
+    "translation": "v. 重新粉刷",
+    "translations": [
+      "v. 重新粉刷"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00020",
+    "word": "statue",
+    "phonetic": "",
+    "translation": "n. 雕像，塑像",
+    "translations": [
+      "n. 雕像，塑像"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00021",
+    "word": "sculpture",
+    "phonetic": "",
+    "translation": "n. 雕塑，雕刻",
+    "translations": [
+      "n. 雕塑，雕刻"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00022",
+    "word": "interior",
+    "phonetic": "",
+    "translation": "n. 内部",
+    "translations": [
+      "n. 内部"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00023",
+    "word": "ceiling",
+    "phonetic": "",
+    "translation": "n. 天花板",
+    "translations": [
+      "n. 天花板"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00024",
+    "word": "light",
+    "phonetic": "",
+    "translation": "n. 灯",
+    "translations": [
+      "n. 灯"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00025",
+    "word": "chandelier",
+    "phonetic": "",
+    "translation": "n. 枝形吊灯",
+    "translations": [
+      "n. 枝形吊灯"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00026",
+    "word": "wall",
+    "phonetic": "",
+    "translation": "n. 墙壁",
+    "translations": [
+      "n. 墙壁"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00027",
+    "word": "acoustic",
+    "phonetic": "",
+    "translation": "adj. 音响的",
+    "translations": [
+      "adj. 音响的"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00028",
+    "word": "floor",
+    "phonetic": "",
+    "translation": "n. 地板，楼层",
+    "translations": [
+      "n. 地板，楼层"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00029",
+    "word": "basement",
+    "phonetic": "",
+    "translation": "n. 地下室",
+    "translations": [
+      "n. 地下室"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00030",
+    "word": "ground floor",
+    "phonetic": "",
+    "translation": "n. 【英】一层",
+    "translations": [
+      "n. 【英】一层"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00031",
+    "word": "foyer",
+    "phonetic": "",
+    "translation": "n. 门厅",
+    "translations": [
+      "n. 门厅"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00032",
+    "word": "box office",
+    "phonetic": "",
+    "translation": "n. 售票处",
+    "translations": [
+      "n. 售票处"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00033",
+    "word": "lift",
+    "phonetic": "",
+    "translation": "n. 【英】电梯",
+    "translations": [
+      "n. 【英】电梯"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00034",
+    "word": "elevator",
+    "phonetic": "",
+    "translation": "n. 【美】电梯",
+    "translations": [
+      "n. 【美】电梯"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00035",
+    "word": "escalator",
+    "phonetic": "",
+    "translation": "n. 扶梯",
+    "translations": [
+      "n. 扶梯"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00036",
+    "word": "dressing room",
+    "phonetic": "",
+    "translation": "n. 化妆间",
+    "translations": [
+      "n. 化妆间"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00037",
+    "word": "cloakroom",
+    "phonetic": "",
+    "translation": "n. 衣帽寄存处",
+    "translations": [
+      "n. 衣帽寄存处"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00038",
+    "word": "stage",
+    "phonetic": "",
+    "translation": "n. 舞台",
+    "translations": [
+      "n. 舞台"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00039",
+    "word": "backstage",
+    "phonetic": "",
+    "translation": "n. 后台",
+    "translations": [
+      "n. 后台"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00040",
+    "word": "auditorium",
+    "phonetic": "",
+    "translation": "n. 观众席",
+    "translations": [
+      "n. 观众席"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00041",
+    "word": "leg-room",
+    "phonetic": "",
+    "translation": "n. 伸腿处",
+    "translations": [
+      "n. 伸腿处"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00042",
+    "word": "funding",
+    "phonetic": "",
+    "translation": "n. 资金",
+    "translations": [
+      "n. 资金"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00043",
+    "word": "government",
+    "phonetic": "",
+    "translation": "n. 政府",
+    "translations": [
+      "n. 政府"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00044",
+    "word": "council",
+    "phonetic": "",
+    "translation": "n. 议会",
+    "translations": [
+      "n. 议会"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task12_00045",
+    "word": "raise",
+    "phonetic": "",
+    "translation": "v. 筹集（资金）",
+    "translations": [
+      "v. 筹集（资金）"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task12"
+  }
+]

@@ -42,3 +42,6 @@ coverage/
 *.apk
 *.ipa
 release/
+
+# Qwerty-learner source — cloned at conversion time by tools/import_qwerty_dict.py
+tools/_qwerty_src/

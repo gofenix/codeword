@@ -1,0 +1,462 @@
+[
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00001",
+    "word": "compose",
+    "phonetic": "",
+    "translation": "构成",
+    "translations": [
+      "构成"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00002",
+    "word": "trace",
+    "phonetic": "",
+    "translation": "痕迹",
+    "translations": [
+      "痕迹"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00003",
+    "word": "mineral",
+    "phonetic": "",
+    "translation": "矿物",
+    "translations": [
+      "矿物"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00004",
+    "word": "metabolism",
+    "phonetic": "",
+    "translation": "新陈代谢",
+    "translations": [
+      "新陈代谢"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00005",
+    "word": "deserve",
+    "phonetic": "",
+    "translation": "应得",
+    "translations": [
+      "应得"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00006",
+    "word": "maintenance",
+    "phonetic": "",
+    "translation": "维护",
+    "translations": [
+      "维护"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00007",
+    "word": "intrigue",
+    "phonetic": "",
+    "translation": "激起",
+    "translations": [
+      "激起"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00008",
+    "word": "poison",
+    "phonetic": "",
+    "translation": "毒",
+    "translations": [
+      "毒"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00009",
+    "word": "decline",
+    "phonetic": "",
+    "translation": "下降",
+    "translations": [
+      "下降"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00010",
+    "word": "aging",
+    "phonetic": "",
+    "translation": "老化",
+    "translations": [
+      "老化"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00011",
+    "word": "ocean",
+    "phonetic": "",
+    "translation": "大洋",
+    "translations": [
+      "大洋"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00012",
+    "word": "marriage",
+    "phonetic": "",
+    "translation": "结婚",
+    "translations": [
+      "结婚"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00013",
+    "word": "curve",
+    "phonetic": "",
+    "translation": "曲线",
+    "translations": [
+      "曲线"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00014",
+    "word": "constant",
+    "phonetic": "",
+    "translation": "不变的",
+    "translations": [
+      "不变的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00015",
+    "word": "muscle",
+    "phonetic": "",
+    "translation": "肌肉",
+    "translations": [
+      "肌肉"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00016",
+    "word": "immune",
+    "phonetic": "",
+    "translation": "免疫的",
+    "translations": [
+      "免疫的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00017",
+    "word": "spider",
+    "phonetic": "",
+    "translation": "蜘蛛",
+    "translations": [
+      "蜘蛛"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00018",
+    "word": "extensive",
+    "phonetic": "",
+    "translation": "广泛的",
+    "translations": [
+      "广泛的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00019",
+    "word": "pottery",
+    "phonetic": "",
+    "translation": "陶瓷",
+    "translations": [
+      "陶瓷"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00020",
+    "word": "enrollment",
+    "phonetic": "",
+    "translation": "登记",
+    "translations": [
+      "登记"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00021",
+    "word": "oxygen",
+    "phonetic": "",
+    "translation": "氧气",
+    "translations": [
+      "氧气"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00022",
+    "word": "shark",
+    "phonetic": "",
+    "translation": "鲨鱼",
+    "translations": [
+      "鲨鱼"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00023",
+    "word": "straightforward",
+    "phonetic": "",
+    "translation": "简单的",
+    "translations": [
+      "简单的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00024",
+    "word": "injury",
+    "phonetic": "",
+    "translation": "伤害",
+    "translations": [
+      "伤害"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00025",
+    "word": "corporate",
+    "phonetic": "",
+    "translation": "公司的",
+    "translations": [
+      "公司的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00026",
+    "word": "attack",
+    "phonetic": "",
+    "translation": "攻击",
+    "translations": [
+      "攻击"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00027",
+    "word": "reserve",
+    "phonetic": "",
+    "translation": "储备",
+    "translations": [
+      "储备"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00028",
+    "word": "plough",
+    "phonetic": "",
+    "translation": "耕地",
+    "translations": [
+      "耕地"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00029",
+    "word": "commodity",
+    "phonetic": "",
+    "translation": "商品",
+    "translations": [
+      "商品"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00030",
+    "word": "transportation",
+    "phonetic": "",
+    "translation": "运输",
+    "translations": [
+      "运输"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00031",
+    "word": "operational",
+    "phonetic": "",
+    "translation": "合作",
+    "translations": [
+      "合作"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00032",
+    "word": "aerial",
+    "phonetic": "",
+    "translation": "空中的",
+    "translations": [
+      "空中的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00033",
+    "word": "barrier",
+    "phonetic": "",
+    "translation": "障碍物",
+    "translations": [
+      "障碍物"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00034",
+    "word": "fertilizer",
+    "phonetic": "",
+    "translation": "肥料",
+    "translations": [
+      "肥料"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00035",
+    "word": "yield",
+    "phonetic": "",
+    "translation": "产出",
+    "translations": [
+      "产出"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00036",
+    "word": "shellfish",
+    "phonetic": "",
+    "translation": "甲壳类动物",
+    "translations": [
+      "甲壳类动物"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00037",
+    "word": "nomadic",
+    "phonetic": "",
+    "translation": "游动的",
+    "translations": [
+      "游动的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00038",
+    "word": "grain",
+    "phonetic": "",
+    "translation": "谷类",
+    "translations": [
+      "谷类"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00039",
+    "word": "pedal",
+    "phonetic": "",
+    "translation": "踏板",
+    "translations": [
+      "踏板"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00040",
+    "word": "stomach",
+    "phonetic": "",
+    "translation": "胃",
+    "translations": [
+      "胃"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00041",
+    "word": "peer",
+    "phonetic": "",
+    "translation": "同龄人",
+    "translations": [
+      "同龄人"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00042",
+    "word": "confusion",
+    "phonetic": "",
+    "translation": "困惑",
+    "translations": [
+      "困惑"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00043",
+    "word": "drum",
+    "phonetic": "",
+    "translation": "鼓",
+    "translations": [
+      "鼓"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00044",
+    "word": "intensity",
+    "phonetic": "",
+    "translation": "强度",
+    "translations": [
+      "强度"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00045",
+    "word": "fade",
+    "phonetic": "",
+    "translation": "逐渐消失",
+    "translations": [
+      "逐渐消失"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_17_00046",
+    "word": "pirate",
+    "phonetic": "",
+    "translation": "海盗",
+    "translations": [
+      "海盗"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_17"
+  }
+]

@@ -1,3 +1,5 @@
+import 'dart:developer' as developer;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,7 +20,25 @@ void main() async {
   try {
     await ReviewRepository.instance.recordOpen(DateTime.now());
   } catch (_) {}
-  runApp(const ProviderScope(child: CodewordApp()));
+  // Pre-load the qwerty catalog so all consumers (me screen, learning
+  // session, stats) can read vocabMetaProvider synchronously. If the
+  // manifest asset is missing or corrupt, fall back to an empty list
+  // rather than crashing the app.
+  List<VocabList> catalog = const [];
+  try {
+    catalog = await loadQwertyCatalog();
+  } catch (e, st) {
+    developer.log('Failed to load qwerty catalog: $e\n$st',
+        name: 'main', error: e, stackTrace: st);
+  }
+  runApp(
+    ProviderScope(
+      overrides: [
+        qwertyCatalogProvider.overrideWithValue(catalog),
+      ],
+      child: const CodewordApp(),
+    ),
+  );
 }
 
 class CodewordApp extends StatelessWidget {
@@ -140,7 +160,9 @@ class TodayPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final stats = ref.watch(reviewStateProvider.notifier).stats();
+    final stats = ref.watch(reviewStateProvider.notifier).stats(
+          catalog: ref.watch(qwertyCatalogProvider),
+        );
     return SafeArea(
       child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(
@@ -331,14 +353,14 @@ class _SummaryCell extends StatelessWidget {
   }
 }
 
-class _HeroWordOfTheDay extends StatefulWidget {
+class _HeroWordOfTheDay extends ConsumerStatefulWidget {
   const _HeroWordOfTheDay();
 
   @override
-  State<_HeroWordOfTheDay> createState() => _HeroWordOfTheDayState();
+  ConsumerState<_HeroWordOfTheDay> createState() => _HeroWordOfTheDayState();
 }
 
-class _HeroWordOfTheDayState extends State<_HeroWordOfTheDay> {
+class _HeroWordOfTheDayState extends ConsumerState<_HeroWordOfTheDay> {
   late Future<_HeroEntry?> _future;
 
   @override
@@ -351,7 +373,17 @@ class _HeroWordOfTheDayState extends State<_HeroWordOfTheDay> {
   /// same "word of the day" all day, but it changes every day.
   Future<_HeroEntry?> _pickHero() async {
     try {
-      final container = await ContentLoader.loadList('ai_core');
+      // Resolve the qwerty catalog so we can look up the human-readable
+      // list name for the hero card's tag. Fall back to the raw id if
+      // the catalog can't be loaded.
+      final catalog = ref.read(qwertyCatalogProvider);
+      const heroId = 'qwerty_biomedical_terms';
+      final heroMeta = catalog
+          .where((l) => l.id == heroId)
+          .cast<VocabList?>()
+          .firstOrNull;
+      final heroLabel = heroMeta?.name ?? heroId;
+      final container = await ContentLoader.loadList(heroId);
       if (container.isEmpty) return null;
       final day = DateTime.now();
       final epoch = day.year * 10000 + day.month * 100 + day.day;
@@ -362,7 +394,7 @@ class _HeroWordOfTheDayState extends State<_HeroWordOfTheDay> {
         phonetic: w.phonetic,
         pos: w.pos,
         translation: w.translation,
-        domain: w.domain.toUpperCase(),
+        domain: heroLabel,
         level: w.level,
       );
     } catch (_) {
@@ -451,7 +483,7 @@ class _HeroWordCard extends StatelessWidget {
                 children: [
                   PillTag.domain(
                     domain,
-                    color: AppColors.domainAi,
+                    color: AppColors.qwertyPalette[0],
                     icon: Icons.bolt,
                   ),
                   const SizedBox(width: 6),
@@ -491,12 +523,12 @@ class _StartLearningButton extends StatelessWidget {
           HapticFeedback.lightImpact();
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (_) => const LearningSessionScreen(vocabId: 'ai_core'),
+              builder: (_) => const LearningSessionScreen(vocabId: 'qwerty_biomedical_terms'),
             ),
           );
         },
         icon: const Icon(Icons.play_arrow_rounded, size: 22),
-        label: const Text('开始学 ·  AI 核心'),
+          label: const Text('开始学 · 生物医学专业英语词汇'),
         style: FilledButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
           textStyle: const TextStyle(

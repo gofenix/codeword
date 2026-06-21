@@ -1,0 +1,1527 @@
+[
+  {
+    "id": "qwerty_waiyan9_00001",
+    "word": "hello",
+    "phonetic": "[həˈləʊ]",
+    "translation": "n. 表示问候， 惊奇或唤起注意时的用语；int. 喂；哈罗",
+    "translations": [
+      "n. 表示问候， 惊奇或唤起注意时的用语",
+      "int. 喂；哈罗"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00002",
+    "word": "hi",
+    "phonetic": "[haɪ]",
+    "translation": "int. 嗨！（表示问候或用以唤起注意）",
+    "translations": [
+      "int. 嗨！（表示问候或用以唤起注意）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00003",
+    "word": "aah",
+    "phonetic": "['e 'e 'etʃ]",
+    "translation": "先进攻击直升机（Advanced Attack Helicopter）；不典型增生改变；美国催眠治疗师学会（American Institute of Hypnotherapy）",
+    "translations": [
+      "先进攻击直升机（Advanced Attack Helicopter）；不典型增生改变；美国催眠治疗师学会（American Institute of Hypnotherapy）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00004",
+    "word": "ooh",
+    "phonetic": "[uː]",
+    "translation": "int. （表示惊异、热心、高兴或不悦的叫声）哦！",
+    "translations": [
+      "int. （表示惊异、热心、高兴或不悦的叫声）哦！"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00005",
+    "word": "I",
+    "phonetic": "[aɪ]",
+    "translation": "n. 碘元素；英语字母I；pron. 我",
+    "translations": [
+      "n. 碘元素；英语字母I",
+      "pron. 我"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00006",
+    "word": "am",
+    "phonetic": "[əm; æm]",
+    "translation": "abbr. 调幅；v. 是",
+    "translations": [
+      "abbr. 调幅",
+      "v. 是"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00007",
+    "word": "I'm",
+    "phonetic": "",
+    "translation": "abbr. 我是（缩写）",
+    "translations": [
+      "abbr. 我是（缩写）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00008",
+    "word": "I am",
+    "phonetic": "",
+    "translation": "我是；这就是我；唯我是问",
+    "translations": [
+      "我是；这就是我；唯我是问"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00009",
+    "word": "goodbye",
+    "phonetic": "[ˌɡʊdˈbaɪ]",
+    "translation": "int. 再见；放弃；告别",
+    "translations": [
+      "int. 再见",
+      "放弃",
+      "告别"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00010",
+    "word": "bye",
+    "phonetic": "[baɪ]",
+    "translation": "n. 轮空；次要的东西；int. 再见；adj. 次要的",
+    "translations": [
+      "n. 轮空；次要的东西",
+      "int. 再见",
+      "adj. 次要的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00011",
+    "word": "How are you?",
+    "phonetic": "[haʊ ɑr ju]",
+    "translation": "你身体好吗？",
+    "translations": [
+      "你身体好吗？"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00012",
+    "word": "woof",
+    "phonetic": "[wʊf]",
+    "translation": "n. 纬线；织物；低吠声；vi. 发出低吠声；发低音",
+    "translations": [
+      "n. 纬线；织物；低吠声",
+      "vi. 发出低吠声；发低音"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00013",
+    "word": "no",
+    "phonetic": "[noʊ]",
+    "translation": "adv. 不；adj. 没有；不是；n. 不；否决票；abbr. 数字（number）；元素锘（nobelium）的符号",
+    "translations": [
+      "adv. 不",
+      "adj. 没有；不是",
+      "n. 不；否决票",
+      "abbr. 数字（number）；元素锘（nobelium）的符号"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00014",
+    "word": "yes",
+    "phonetic": "[jes]",
+    "translation": "n. 是（表示肯定）；adv. 是, 是的",
+    "translations": [
+      "n. 是（表示肯定）",
+      "adv. 是, 是的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00015",
+    "word": "sorry",
+    "phonetic": "[ˈsɑːri]",
+    "translation": "adj. 遗憾的；对不起的，抱歉的；int. 对不起，抱歉（表示委婉的拒绝等）",
+    "translations": [
+      "adj. 遗憾的；对不起的，抱歉的",
+      "int. 对不起，抱歉（表示委婉的拒绝等）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00016",
+    "word": "fine",
+    "phonetic": "[faɪn]",
+    "translation": "n. 罚款；adj. 好的；优良的；细小的，精美的；健康的；晴朗的；vt. 罚款；澄清；adv. 很好地；精巧地",
+    "translations": [
+      "n. 罚款",
+      "adj. 好的；优良的；细小的，精美的；健康的；晴朗的",
+      "vt. 罚款；澄清",
+      "adv. 很好地；精巧地"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00017",
+    "word": "thank",
+    "phonetic": "[θæŋk]",
+    "translation": "n. 感谢；vt. 感谢；int. 谢谢",
+    "translations": [
+      "n. 感谢",
+      "vt. 感谢",
+      "int. 谢谢"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00018",
+    "word": "you",
+    "phonetic": "[juː; jə]",
+    "translation": "pron. 你；你们",
+    "translations": [
+      "pron. 你；你们"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00019",
+    "word": "what",
+    "phonetic": "[wʌt]",
+    "translation": "pron. 什么；多么；多少；adv. 到什么程度，在哪一方面；adj. 什么；多么；何等；int. 什么；多么",
+    "translations": [
+      "pron. 什么；多么；多少",
+      "adv. 到什么程度，在哪一方面",
+      "adj. 什么；多么；何等",
+      "int. 什么；多么"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00020",
+    "word": "is",
+    "phonetic": "[ɪz]",
+    "translation": "v. 是（be的三单形式）；n. 存在",
+    "translations": [
+      "v. 是（be的三单形式）",
+      "n. 存在"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00021",
+    "word": "what's",
+    "phonetic": "",
+    "translation": "…是什么（等于what is）；…有什么（等于what has）",
+    "translations": [
+      "…是什么（等于what is）；…有什么（等于what has）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00022",
+    "word": "what is",
+    "phonetic": "",
+    "translation": "[计] whatis命令",
+    "translations": [
+      "[计] whatis命令"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00023",
+    "word": "your",
+    "phonetic": "[jʊr; jər]",
+    "translation": "pron. 你的，你们的",
+    "translations": [
+      "pron. 你的，你们的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00024",
+    "word": "name",
+    "phonetic": "[neɪm]",
+    "translation": "n. 名称，名字；姓名；名誉；vt. 命名，任命；指定；称呼；提名；叫出；adj. 姓名的；据以取名的",
+    "translations": [
+      "n. 名称，名字；姓名；名誉",
+      "vt. 命名，任命；指定；称呼；提名；叫出",
+      "adj. 姓名的；据以取名的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00025",
+    "word": "please",
+    "phonetic": "[pliːz]",
+    "translation": "int. 请（礼貌用语）；vt. 使喜欢；使高兴，使满意；vi. 讨人喜欢；令人高兴",
+    "translations": [
+      "int. 请（礼貌用语）",
+      "vt. 使喜欢；使高兴，使满意",
+      "vi. 讨人喜欢；令人高兴"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00026",
+    "word": "ha ha",
+    "phonetic": "",
+    "translation": "n. (造在花园界沟里不遮挡视线的)隐篱；哈哈的笑声；哈哈的笑声；〔美俚〕(对某人的)嘲笑；int. 哈哈；哈哈!〔表示嘲笑等〕",
+    "translations": [
+      "n. (造在花园界沟里不遮挡视线的)隐篱；哈哈的笑声；哈哈的笑声；〔美俚〕(对某人的)嘲笑",
+      "int. 哈哈；哈哈!〔表示嘲笑等〕"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00027",
+    "word": "good",
+    "phonetic": "[ɡʊd]",
+    "translation": "n. 好处；善行；慷慨的行为；adj. 好的；优良的；愉快的；虔诚的；adv. 好",
+    "translations": [
+      "n. 好处；善行；慷慨的行为",
+      "adj. 好的；优良的；愉快的；虔诚的",
+      "adv. 好"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00028",
+    "word": "morning",
+    "phonetic": "[ˈmɔːrnɪŋ]",
+    "translation": "n. 早晨；黎明；初期",
+    "translations": [
+      "n. 早晨；黎明；初期"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00029",
+    "word": "Ms",
+    "phonetic": "[mɪz]",
+    "translation": "abbr. 存贮系统（Memory System）；主存储器（Main Storage）；主程序装置（Master Sequecer）；中速，平均速度（Medium Speed）；主（总）开关（Master Switch）",
+    "translations": [
+      "abbr. 存贮系统（Memory System）；主存储器（Main Storage）；主程序装置（Master Sequecer）；中速，平均速度（Medium Speed）；主（总）开关（Master Switch）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00030",
+    "word": "my",
+    "phonetic": "[maɪ]",
+    "translation": "pron. 我的；int. 哎呀（表示惊奇等）；喔唷",
+    "translations": [
+      "pron. 我的",
+      "int. 哎呀（表示惊奇等）；喔唷"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00031",
+    "word": "bird",
+    "phonetic": "[bɜːrd]",
+    "translation": "n. 鸟；家伙；羽毛球；vt. 向…喝倒彩；起哄；vi. 猎鸟；观察研究野鸟",
+    "translations": [
+      "n. 鸟；家伙；羽毛球",
+      "vt. 向…喝倒彩；起哄",
+      "vi. 猎鸟；观察研究野鸟"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00032",
+    "word": "tweet",
+    "phonetic": "[twiːt]",
+    "translation": "n. 小鸟叫声；自录音再现装置发出的高音；推特；vi. 吱吱地叫；啾鸣",
+    "translations": [
+      "n. 小鸟叫声；自录音再现装置发出的高音；推特",
+      "vi. 吱吱地叫；啾鸣"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00033",
+    "word": "a",
+    "phonetic": "[ə; eɪ]",
+    "translation": "n. 字母A；第一流的；学业成绩达最高标准的评价符号；abbr. [物]安（ampere）",
+    "translations": [
+      "n. 字母A；第一流的；学业成绩达最高标准的评价符号",
+      "abbr. [物]安（ampere）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00034",
+    "word": "an",
+    "phonetic": "[ən; æn]",
+    "translation": "art. 一（在元音音素前）",
+    "translations": [
+      "art. 一（在元音音素前）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00035",
+    "word": "boy",
+    "phonetic": "[bɔɪ]",
+    "translation": "n. 男孩；男人",
+    "translations": [
+      "n. 男孩；男人"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00036",
+    "word": "girl",
+    "phonetic": "[ɡɜːrl]",
+    "translation": "n. 女孩；姑娘，未婚女子；女职员，女演员；（男人的）女朋友；n. （捷）吉尔",
+    "translations": [
+      "n. 女孩；姑娘，未婚女子；女职员，女演员；（男人的）女朋友",
+      "n. （捷）吉尔"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00037",
+    "word": "whoops",
+    "phonetic": "[wʊps]",
+    "translation": "int. 哎呀！",
+    "translations": [
+      "int. 哎呀！"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00038",
+    "word": "afternoon",
+    "phonetic": "[ˌæftərˈnuːn]",
+    "translation": "n. 午后，下午",
+    "translations": [
+      "n. 午后，下午"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00039",
+    "word": "panda",
+    "phonetic": "[ˈpændə]",
+    "translation": "n. 熊猫；猫熊",
+    "translations": [
+      "n. 熊猫；猫熊"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00040",
+    "word": "sit",
+    "phonetic": "[sɪt]",
+    "translation": "vi. 坐；位于；vt. 使就座",
+    "translations": [
+      "vi. 坐；位于",
+      "vt. 使就座"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00041",
+    "word": "down",
+    "phonetic": "[daʊn]",
+    "translation": "prep. 沿着，往下；n. 软毛，绒毛；[地质] 开阔的高地；adj. 向下的；vt. 打倒，击败；adv. 向下，下去；在下面；vi. 下降；下去",
+    "translations": [
+      "prep. 沿着，往下",
+      "n. 软毛，绒毛；[地质] 开阔的高地",
+      "adj. 向下的",
+      "vt. 打倒，击败",
+      "adv. 向下，下去；在下面",
+      "vi. 下降；下去"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00042",
+    "word": "stand",
+    "phonetic": "[stænd]",
+    "translation": "n. 站立；立场；看台；停止；vi. 站立；位于；停滞；vt. 使站立；忍受；抵抗",
+    "translations": [
+      "n. 站立；立场；看台；停止",
+      "vi. 站立；位于；停滞",
+      "vt. 使站立；忍受；抵抗"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00043",
+    "word": "up",
+    "phonetic": "[ʌp]",
+    "translation": "prep. 在…之上；向…的较高处；n. 上升；繁荣；adj. 涨的；起床的；向上的；adv. 起来；上涨；向上",
+    "translations": [
+      "prep. 在…之上；向…的较高处",
+      "n. 上升；繁荣",
+      "adj. 涨的；起床的；向上的",
+      "adv. 起来；上涨；向上"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00044",
+    "word": "open",
+    "phonetic": "[ˈoʊpən]",
+    "translation": "adj. 公开的；敞开的；空旷的；坦率的；营业着的；vi. 开始；展现；vt. 公开；打开；n. 公开；空旷；户外",
+    "translations": [
+      "adj. 公开的；敞开的；空旷的；坦率的；营业着的",
+      "vi. 开始；展现",
+      "vt. 公开；打开",
+      "n. 公开；空旷；户外"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00045",
+    "word": "the",
+    "phonetic": "[ðə; ði; ðiː]",
+    "translation": "art. 这；那；adv. 更加（用于比较级，最高级前）",
+    "translations": [
+      "art. 这；那",
+      "adv. 更加（用于比较级，最高级前）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00046",
+    "word": "window",
+    "phonetic": "[ˈwɪndoʊ]",
+    "translation": "n. 窗；窗口；窗户",
+    "translations": [
+      "n. 窗；窗口；窗户"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00047",
+    "word": "door",
+    "phonetic": "[dɔːr]",
+    "translation": "n. 门；家，户；门口；通道",
+    "translations": [
+      "n. 门；家，户；门口；通道"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00048",
+    "word": "See you!",
+    "phonetic": "",
+    "translation": "[口语]再见!",
+    "translations": [
+      "[口语]再见!"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00049",
+    "word": "point",
+    "phonetic": "[pɔɪnt]",
+    "translation": "n. 要点；得分；标点；[机] 尖端；vt. 指向；弄尖；加标点于；vi. 表明；指向",
+    "translations": [
+      "n. 要点；得分；标点；[机] 尖端",
+      "vt. 指向；弄尖；加标点于",
+      "vi. 表明；指向"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00050",
+    "word": "to",
+    "phonetic": "[tə; tu; tuː]",
+    "translation": "prep. 到；向；（表示时间、方向）朝…方向；adv. 向前；（门等）关上",
+    "translations": [
+      "prep. 到；向；（表示时间、方向）朝…方向",
+      "adv. 向前；（门等）关上"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00051",
+    "word": "aargh",
+    "phonetic": "[ɑːr]",
+    "translation": "啊",
+    "translations": [
+      "啊"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00052",
+    "word": "desk",
+    "phonetic": "[desk]",
+    "translation": "n. 办公桌；服务台；编辑部；（美）讲道台；乐谱架；adj. 书桌的；桌上用的；伏案做的",
+    "translations": [
+      "n. 办公桌；服务台；编辑部；（美）讲道台；乐谱架",
+      "adj. 书桌的；桌上用的；伏案做的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00053",
+    "word": "chair",
+    "phonetic": "[tʃer]",
+    "translation": "n. 椅子；讲座；（会议的）主席位；大学教授的职位；vt. 担任（会议的）主席；使…入座；使就任要职",
+    "translations": [
+      "n. 椅子；讲座；（会议的）主席位；大学教授的职位",
+      "vt. 担任（会议的）主席；使…入座；使就任要职"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00054",
+    "word": "it",
+    "phonetic": "[ɪt]",
+    "translation": "abbr. 信息技术information technology；abbr. 意大利Italy；意大利的Italian",
+    "translations": [
+      "abbr. 信息技术information technology",
+      "abbr. 意大利Italy；意大利的Italian"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00055",
+    "word": "it's",
+    "phonetic": "",
+    "translation": "abbr. 它的（it has）；它是（it is）",
+    "translations": [
+      "abbr. 它的（it has）；它是（it is）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00056",
+    "word": "it is",
+    "phonetic": "",
+    "translation": "它是；是的；这是",
+    "translations": [
+      "它是；是的；这是"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00057",
+    "word": "red",
+    "phonetic": "[red]",
+    "translation": "n. 红色，红颜料；赤字；adj. 红色的；红肿的，充血的",
+    "translations": [
+      "n. 红色，红颜料；赤字",
+      "adj. 红色的；红肿的，充血的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00058",
+    "word": "aha",
+    "phonetic": "[ɑːˈhɑː]",
+    "translation": "int. 啊哈（表示喜悦、轻蔑、惊讶等）",
+    "translations": [
+      "int. 啊哈（表示喜悦、轻蔑、惊讶等）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00059",
+    "word": "blue",
+    "phonetic": "[bluː]",
+    "translation": "adj. 蓝色的；沮丧的，忧郁的；下流的；n. 蓝色；[复数]（美国海、陆、空三军穿的）蓝色制服；蓝颜料；[the blue(s)][用作单数或复数]布鲁斯（歌曲）（一种伤感的美国黑人民歌；vi. 变成蓝色，呈蓝色；vt. 把…染成蓝色；使成蓝色；给…用上蓝剂；用上蓝剂于",
+    "translations": [
+      "adj. 蓝色的；沮丧的，忧郁的；下流的",
+      "n. 蓝色；[复数]（美国海、陆、空三军穿的）蓝色制服；蓝颜料；[the blue(s)][用作单数或复数]布鲁斯（歌曲）（一种伤感的美国黑人民歌",
+      "vi. 变成蓝色，呈蓝色",
+      "vt. 把…染成蓝色；使成蓝色；给…用上蓝剂；用上蓝剂于"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00060",
+    "word": "wow",
+    "phonetic": "[waʊ]",
+    "translation": "n. 极大的成功；一鸣惊人之举；魔兽世界(World of Warcraft)；失真；int. （表示极大的惊奇或钦佩）哇，呀",
+    "translations": [
+      "n. 极大的成功；一鸣惊人之举；魔兽世界(World of Warcraft)；失真",
+      "int. （表示极大的惊奇或钦佩）哇，呀"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00061",
+    "word": "yellow",
+    "phonetic": "[ˈjeloʊ]",
+    "translation": "n. 黄色；黄种人；黄色颜料；adj. 黄色的；黄皮肤的；vt. 使变黄或发黄；vi. 变黄或发黄",
+    "translations": [
+      "n. 黄色；黄种人；黄色颜料",
+      "adj. 黄色的；黄皮肤的",
+      "vt. 使变黄或发黄",
+      "vi. 变黄或发黄"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00062",
+    "word": "oh",
+    "phonetic": "[oʊ]",
+    "translation": "int. 哦；哎呀（表示惊讶或恐惧等）",
+    "translations": [
+      "int. 哦；哎呀（表示惊讶或恐惧等）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00063",
+    "word": "colour",
+    "phonetic": "[ˈkʌlər]",
+    "translation": "n. 颜色；风格；气色，面色；外貌；vt. 把…涂颜色，粉饰；歪曲；使脸红；vi. 变色",
+    "translations": [
+      "n. 颜色；风格；气色，面色；外貌",
+      "vt. 把…涂颜色，粉饰；歪曲；使脸红",
+      "vi. 变色"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00064",
+    "word": "green",
+    "phonetic": "[ɡriːn]",
+    "translation": "n. 绿色；青春；adj. 绿色的；青春的；vt. 使…变绿色；vi. 变绿色",
+    "translations": [
+      "n. 绿色；青春",
+      "adj. 绿色的；青春的",
+      "vt. 使…变绿色",
+      "vi. 变绿色"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00065",
+    "word": "now",
+    "phonetic": "[naʊ]",
+    "translation": "adv. 现在；如今；立刻；adj. 现在的；n. 现在；目前；conj. 由于；既然",
+    "translations": [
+      "adv. 现在；如今；立刻",
+      "adj. 现在的",
+      "n. 现在；目前",
+      "conj. 由于；既然"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00066",
+    "word": "black",
+    "phonetic": "[blæk]",
+    "translation": "n. 黑色；黑人；黑颜料；adj. 黑色的；黑人的；邪恶的；vt. 使变黑；把鞋油等涂在…上；把（眼眶）打成青肿；vi. 变黑",
+    "translations": [
+      "n. 黑色；黑人；黑颜料",
+      "adj. 黑色的；黑人的；邪恶的",
+      "vt. 使变黑；把鞋油等涂在…上；把（眼眶）打成青肿",
+      "vi. 变黑"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00067",
+    "word": "white",
+    "phonetic": "[waɪt]",
+    "translation": "n. 白色；洁白；白种人；adj. 白色的；白种的；纯洁的",
+    "translations": [
+      "n. 白色；洁白；白种人",
+      "adj. 白色的；白种的；纯洁的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00068",
+    "word": "dog",
+    "phonetic": "[dɔːɡ]",
+    "translation": "n. 狗；丑女人；卑鄙的人；(俚)朋友；vt. 跟踪；尾随",
+    "translations": [
+      "n. 狗；丑女人；卑鄙的人；(俚)朋友",
+      "vt. 跟踪；尾随"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00069",
+    "word": "cat",
+    "phonetic": "[kæt]",
+    "translation": "n. 猫，猫科动物",
+    "translations": [
+      "n. 猫，猫科动物"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00070",
+    "word": "and",
+    "phonetic": "[ənd; ən; n; ænd]",
+    "translation": "conj. 和，与；就；而且；但是；然后",
+    "translations": [
+      "conj. 和，与；就；而且；但是；然后"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00071",
+    "word": "hey",
+    "phonetic": "[heɪ]",
+    "translation": "n. 干草（等于hay）；int. 喂！（引起注意等）；你好！（表示问候）",
+    "translations": [
+      "n. 干草（等于hay）",
+      "int. 喂！（引起注意等）；你好！（表示问候）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00072",
+    "word": "look",
+    "phonetic": "[lʊk]",
+    "translation": "vt. 看；期待；注意；面向；看上去像；vi. 看；看起来；注意；面向；n. 看；样子；面容",
+    "translations": [
+      "vt. 看；期待；注意；面向；看上去像",
+      "vi. 看；看起来；注意；面向",
+      "n. 看；样子；面容"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00073",
+    "word": "orange",
+    "phonetic": "[ˈɔrɪndʒ]",
+    "translation": "adj. 橙色的；橘色的；n. 橙；橙色；桔子",
+    "translations": [
+      "adj. 橙色的；橘色的",
+      "n. 橙；橙色；桔子"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00074",
+    "word": "this",
+    "phonetic": "[ðɪs]",
+    "translation": "adj. 这；本；这个；今；pron. 这；这个；这里；adv. 这样地；这么",
+    "translations": [
+      "adj. 这；本；这个；今",
+      "pron. 这；这个；这里",
+      "adv. 这样地；这么"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00075",
+    "word": "our",
+    "phonetic": "[ɑːr]",
+    "translation": "pron. 我们的",
+    "translations": [
+      "pron. 我们的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00076",
+    "word": "teacher",
+    "phonetic": "[ˈtiːtʃər]",
+    "translation": "n. 教师；导师",
+    "translations": [
+      "n. 教师；导师"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00077",
+    "word": "school",
+    "phonetic": "[skuːl]",
+    "translation": "n. 学校；学院；学派；鱼群；vt. 教育",
+    "translations": [
+      "n. 学校；学院；学派；鱼群",
+      "vt. 教育"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00078",
+    "word": "classroom",
+    "phonetic": "[ˈklæsruːm; ˈklæsrʊm]",
+    "translation": "n. 教室",
+    "translations": [
+      "n. 教室"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00079",
+    "word": "Nice to meet you.",
+    "phonetic": "",
+    "translation": "很高兴见到你；很高兴认识你；见到你很高兴",
+    "translations": [
+      "很高兴见到你；很高兴认识你；见到你很高兴"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00080",
+    "word": "child",
+    "phonetic": "[tʃaɪld]",
+    "translation": "n. 儿童，小孩，孩子；产物；子孙；幼稚的人；弟子",
+    "translations": [
+      "n. 儿童，小孩，孩子；产物；子孙；幼稚的人；弟子"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00081",
+    "word": "that",
+    "phonetic": "[ðæt]",
+    "translation": "conj. 因为；以至于；adj. 那；那个；pron. 那；那个；adv. 那么；那样",
+    "translations": [
+      "conj. 因为；以至于",
+      "adj. 那；那个",
+      "pron. 那；那个",
+      "adv. 那么；那样"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00082",
+    "word": "bag",
+    "phonetic": "[bæɡ]",
+    "translation": "n. 袋；猎获物；（俚）一瓶啤酒；vt. 猎获；把…装入袋中；占据，私吞；使膨大；vi. 松垂",
+    "translations": [
+      "n. 袋；猎获物；（俚）一瓶啤酒",
+      "vt. 猎获；把…装入袋中；占据，私吞；使膨大",
+      "vi. 松垂"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00083",
+    "word": "schoolbag",
+    "phonetic": "[ˈskuːlˌbæɡ]",
+    "translation": "n. 书包",
+    "translations": [
+      "n. 书包"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00084",
+    "word": "book",
+    "phonetic": "[bʊk]",
+    "translation": "n. 书籍；卷；帐簿；名册；工作簿；vt. 预订；登记",
+    "translations": [
+      "n. 书籍；卷；帐簿；名册；工作簿",
+      "vt. 预订；登记"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00085",
+    "word": "pen",
+    "phonetic": "[pen]",
+    "translation": "n. 钢笔；作家；围栏；vt. 写；关入栏中",
+    "translations": [
+      "n. 钢笔；作家；围栏",
+      "vt. 写；关入栏中"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00086",
+    "word": "pencil",
+    "phonetic": "[ˈpensl]",
+    "translation": "n. 铅笔；笔状物；vt. 用铅笔写；用眉笔涂；vi. 成铅笔状",
+    "translations": [
+      "n. 铅笔；笔状物",
+      "vt. 用铅笔写；用眉笔涂",
+      "vi. 成铅笔状"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00087",
+    "word": "ruler",
+    "phonetic": "[ˈruːlər]",
+    "translation": "n. 尺；统治者；[测] 划线板，划线的人",
+    "translations": [
+      "n. 尺；统治者；[测] 划线板，划线的人"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00088",
+    "word": "eraser",
+    "phonetic": "[ɪˈreɪsər]",
+    "translation": "n. 橡皮；擦除器；[计] 清除器",
+    "translations": [
+      "n. 橡皮；擦除器；[计] 清除器"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00089",
+    "word": "pencil case",
+    "phonetic": "[ˈpensl keɪs]",
+    "translation": "n. 铅笔盒；铅笔袋",
+    "translations": [
+      "n. 铅笔盒；铅笔袋"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00090",
+    "word": "crayon",
+    "phonetic": "[ˈkreɪən; ˈkreɪɑːn]",
+    "translation": "n. 蜡笔，有色粉笔；vt. 以蜡笔作画，用颜色粉笔画",
+    "translations": [
+      "n. 蜡笔，有色粉笔",
+      "vt. 以蜡笔作画，用颜色粉笔画"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00091",
+    "word": "new",
+    "phonetic": "[nuː]",
+    "translation": "adj. 新的，新鲜的；更新的；初见的；adv. 新近",
+    "translations": [
+      "adj. 新的，新鲜的；更新的；初见的",
+      "adv. 新近"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00092",
+    "word": "kite",
+    "phonetic": "[kaɪt]",
+    "translation": "n. 风筝；vi. 使用空头支票；像风筝一样飞；轻快地移动；vt. 骗钱；涂改（支票）",
+    "translations": [
+      "n. 风筝",
+      "vi. 使用空头支票；像风筝一样飞；轻快地移动",
+      "vt. 骗钱；涂改（支票）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00093",
+    "word": "or",
+    "phonetic": "[ɔːr]",
+    "translation": "conj. 或，或者；还是",
+    "translations": [
+      "conj. 或，或者；还是"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00094",
+    "word": "not",
+    "phonetic": "[nɑːt]",
+    "translation": "adv. 表示否定，不；n. “非”（计算机中逻辑运算的一种）",
+    "translations": [
+      "adv. 表示否定，不",
+      "n. “非”（计算机中逻辑运算的一种）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00095",
+    "word": "isn't",
+    "phonetic": "",
+    "translation": "不是（等于is not）",
+    "translations": [
+      "不是（等于is not）"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00096",
+    "word": "is not",
+    "phonetic": "",
+    "translation": "",
+    "translations": [],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00097",
+    "word": "monkey",
+    "phonetic": "[ˈmʌŋki]",
+    "translation": "n. 猴子；顽童；vi. 胡闹；捣蛋；vt. 嘲弄",
+    "translations": [
+      "n. 猴子；顽童",
+      "vi. 胡闹；捣蛋",
+      "vt. 嘲弄"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00098",
+    "word": "monster",
+    "phonetic": "[ˈmɑːnstər]",
+    "translation": "n. 怪物；巨人，巨兽；残忍的人；adj. 巨大的，庞大的",
+    "translations": [
+      "n. 怪物；巨人，巨兽；残忍的人",
+      "adj. 巨大的，庞大的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00099",
+    "word": "help",
+    "phonetic": "[help]",
+    "translation": "n. 帮助；补救办法；帮忙者；有益的东西；vt. 帮助；促进；治疗；补救；vi. 帮助；有用；招待",
+    "translations": [
+      "n. 帮助；补救办法；帮忙者；有益的东西",
+      "vt. 帮助；促进；治疗；补救",
+      "vi. 帮助；有用；招待"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00100",
+    "word": "house",
+    "phonetic": "[haʊs]",
+    "translation": "n. 住宅；家庭；机构；议会；某种用途的建筑物；vt. 覆盖；给…房子住；把…储藏在房内；vi. 住",
+    "translations": [
+      "n. 住宅；家庭；机构；议会；某种用途的建筑物",
+      "vt. 覆盖；给…房子住；把…储藏在房内",
+      "vi. 住"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00101",
+    "word": "box",
+    "phonetic": "[bɑːks]",
+    "translation": "n. 箱，盒子；包厢；一拳；vt. 拳击；装…入盒中；打耳光；vi. 拳击",
+    "translations": [
+      "n. 箱，盒子；包厢；一拳",
+      "vt. 拳击；装…入盒中；打耳光",
+      "vi. 拳击"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00102",
+    "word": "how many",
+    "phonetic": "",
+    "translation": "na. 多少",
+    "translations": [
+      "na. 多少"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00103",
+    "word": "one",
+    "phonetic": "[wʌn]",
+    "translation": "pron. 一个人；任何人；adj. 一的；唯一的；n. 一；num. 一；一个",
+    "translations": [
+      "pron. 一个人；任何人",
+      "adj. 一的；唯一的",
+      "n. 一",
+      "num. 一；一个"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00104",
+    "word": "two",
+    "phonetic": "[tuː]",
+    "translation": "num. 二；n. 两个；adj. 两个的",
+    "translations": [
+      "num. 二",
+      "n. 两个",
+      "adj. 两个的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00105",
+    "word": "three",
+    "phonetic": "[θriː]",
+    "translation": "num. 三；n. 三，三个；adj. 三的，三个的",
+    "translations": [
+      "num. 三",
+      "n. 三，三个",
+      "adj. 三的，三个的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00106",
+    "word": "four",
+    "phonetic": "[fɔːr]",
+    "translation": "num. 四；四个；adj. 四的；四个的",
+    "translations": [
+      "num. 四；四个",
+      "adj. 四的；四个的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00107",
+    "word": "count",
+    "phonetic": "[kaʊnt]",
+    "translation": "n. 计数；计算；伯爵；vt. 计算；认为；vi. 计数；有价值",
+    "translations": [
+      "n. 计数；计算；伯爵",
+      "vt. 计算；认为",
+      "vi. 计数；有价值"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00108",
+    "word": "say",
+    "phonetic": "[seɪ]",
+    "translation": "vt. 讲；说明；例如；声称；假设；指明；vi. 讲；表示；念；假定；背诵",
+    "translations": [
+      "vt. 讲；说明；例如；声称；假设；指明",
+      "vi. 讲；表示；念；假定；背诵"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00109",
+    "word": "five",
+    "phonetic": "[faɪv]",
+    "translation": "num. 五，五个；n. 五，五个；五美元钞票；adj. 五的；五个的",
+    "translations": [
+      "num. 五，五个",
+      "n. 五，五个；五美元钞票",
+      "adj. 五的；五个的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00110",
+    "word": "six",
+    "phonetic": "[sɪks]",
+    "translation": "num. 六，六个；n. 六，六个",
+    "translations": [
+      "num. 六，六个",
+      "n. 六，六个"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00111",
+    "word": "seven",
+    "phonetic": "[ˈsev(ə)n]",
+    "translation": "num. 七个，七；n. 七个，七；adj. 七的；七个的",
+    "translations": [
+      "num. 七个，七",
+      "n. 七个，七",
+      "adj. 七的；七个的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00112",
+    "word": "eight",
+    "phonetic": "[eɪt]",
+    "translation": "num. 八；八个；第八；n. 八字形；adj. 八的",
+    "translations": [
+      "num. 八；八个；第八",
+      "n. 八字形",
+      "adj. 八的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00113",
+    "word": "nine",
+    "phonetic": "[naɪn]",
+    "translation": "n. 九，九个；num. 九；九个；adj. 九的，九个的",
+    "translations": [
+      "n. 九，九个",
+      "num. 九；九个",
+      "adj. 九的，九个的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00114",
+    "word": "ten",
+    "phonetic": "[ten]",
+    "translation": "num. 十个，十",
+    "translations": [
+      "num. 十个，十"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00115",
+    "word": "pink",
+    "phonetic": "[pɪŋk]",
+    "translation": "n. 粉红色；化身，典范；石竹花；头面人物；adj. 粉红的；比较激进的；石竹科的；脸色发红的；vt. 扎，刺，戳；使…变粉红色；使…面红耳赤；vi. 变粉红色",
+    "translations": [
+      "n. 粉红色；化身，典范；石竹花；头面人物",
+      "adj. 粉红的；比较激进的；石竹科的；脸色发红的",
+      "vt. 扎，刺，戳；使…变粉红色；使…面红耳赤",
+      "vi. 变粉红色"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00116",
+    "word": "ball",
+    "phonetic": "[bɔːl]",
+    "translation": "n. 球；舞会；vt. 捏成球形；vi. 成团块",
+    "translations": [
+      "n. 球；舞会",
+      "vt. 捏成球形",
+      "vi. 成团块"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00117",
+    "word": "so",
+    "phonetic": "[soʊ]",
+    "translation": "conj. 所以；因此；adv. 如此，这么；确是如此；pron. 这样",
+    "translations": [
+      "conj. 所以；因此",
+      "adv. 如此，这么；确是如此",
+      "pron. 这样"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00118",
+    "word": "many",
+    "phonetic": "[ˈmeni]",
+    "translation": "pron. 许多；许多人；adj. 许多的",
+    "translations": [
+      "pron. 许多；许多人",
+      "adj. 许多的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00119",
+    "word": "brown",
+    "phonetic": "[braʊn]",
+    "translation": "n. 褐色，棕色；adj. 棕色的，褐色的；太阳晒黑的；vt. 使变成褐色；vi. 变成褐色",
+    "translations": [
+      "n. 褐色，棕色",
+      "adj. 棕色的，褐色的；太阳晒黑的",
+      "vt. 使变成褐色",
+      "vi. 变成褐色"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00120",
+    "word": "how old",
+    "phonetic": "",
+    "translation": "conj. 多少岁",
+    "translations": [
+      "conj. 多少岁"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00121",
+    "word": "are",
+    "phonetic": "[ər; ɑːr; er]",
+    "translation": "v. 是（be的第二人称单复数现在式）；n. 公亩",
+    "translations": [
+      "v. 是（be的第二人称单复数现在式）",
+      "n. 公亩"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00122",
+    "word": "too",
+    "phonetic": "[tuː]",
+    "translation": "adv. 太；也；很；还；非常；过度",
+    "translations": [
+      "adv. 太；也；很；还；非常；过度"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00123",
+    "word": "happy",
+    "phonetic": "[ˈhæpi]",
+    "translation": "adj. 幸福的；高兴的；巧妙的",
+    "translations": [
+      "adj. 幸福的；高兴的；巧妙的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00124",
+    "word": "birthday",
+    "phonetic": "[ˈbɜːrθdeɪ]",
+    "translation": "n. 生日，诞辰；诞生的日子",
+    "translations": [
+      "n. 生日，诞辰；诞生的日子"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00125",
+    "word": "but",
+    "phonetic": "[bət; bʌt]",
+    "translation": "conj. 但是；而是；然而；adv. 仅仅，只；prep. 除…以外",
+    "translations": [
+      "conj. 但是；而是；然而",
+      "adv. 仅仅，只",
+      "prep. 除…以外"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00126",
+    "word": "for",
+    "phonetic": "[fər; fɔːr]",
+    "translation": "prep. 为，为了；因为；给；对于；至于；适合于；conj. 因为",
+    "translations": [
+      "prep. 为，为了；因为；给；对于；至于；适合于",
+      "conj. 因为"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00127",
+    "word": "You're welcome!",
+    "phonetic": "",
+    "translation": "不客气；别客气；不用谢",
+    "translations": [
+      "不客气；别客气；不用谢"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00128",
+    "word": "father",
+    "phonetic": "[ˈfɑːðər]",
+    "translation": "n. 父亲，爸爸；神父；祖先；前辈；vt. 发明，创立；当…的父亲",
+    "translations": [
+      "n. 父亲，爸爸；神父；祖先；前辈",
+      "vt. 发明，创立；当…的父亲"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00129",
+    "word": "daddy",
+    "phonetic": "[ˈdædi]",
+    "translation": "n. 爸爸",
+    "translations": [
+      "n. 爸爸"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00130",
+    "word": "mother",
+    "phonetic": "[ˈmʌðər]",
+    "translation": "n. 母亲；大娘；女修道院院长；vt. 生下；养育；像母亲般关怀或照管；adj. 母亲的；出生地的",
+    "translations": [
+      "n. 母亲；大娘；女修道院院长",
+      "vt. 生下；养育；像母亲般关怀或照管",
+      "adj. 母亲的；出生地的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00131",
+    "word": "grandpa",
+    "phonetic": "[ˈɡrænpɑː]",
+    "translation": "n. 爷爷；外公",
+    "translations": [
+      "n. 爷爷；外公"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00132",
+    "word": "grandma",
+    "phonetic": "[ˈɡrænmɑː]",
+    "translation": "n. 奶奶；外婆",
+    "translations": [
+      "n. 奶奶；外婆"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00133",
+    "word": "friend",
+    "phonetic": "[frend]",
+    "translation": "n. 朋友；助手；赞助者",
+    "translations": [
+      "n. 朋友；助手；赞助者"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00134",
+    "word": "his",
+    "phonetic": "[hɪz; ɪz]",
+    "translation": "pron. 他的",
+    "translations": [
+      "pron. 他的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00135",
+    "word": "car",
+    "phonetic": "[kɑːr]",
+    "translation": "n. 汽车；车厢",
+    "translations": [
+      "n. 汽车；车厢"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00136",
+    "word": "sister",
+    "phonetic": "[ˈsɪstər]",
+    "translation": "n. 姐妹；（称志同道合者）姐妹；修女；护士；adj. 姐妹般的；同类型的",
+    "translations": [
+      "n. 姐妹；（称志同道合者）姐妹；修女；护士",
+      "adj. 姐妹般的；同类型的"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00137",
+    "word": "brother",
+    "phonetic": "[ˈbrʌðər]",
+    "translation": "n. 兄弟；同事；战友；int. 我的老兄！",
+    "translations": [
+      "n. 兄弟；同事；战友",
+      "int. 我的老兄！"
+    ],
+    "domain": "qwerty_waiyan9"
+  },
+  {
+    "id": "qwerty_waiyan9_00138",
+    "word": "her",
+    "phonetic": "[hər; ɜːr; ər; hɜːr]",
+    "translation": "pron. 她（she的宾格）；她的（she的所有格）；她（指某个国家；一艘船）",
+    "translations": [
+      "pron. 她（she的宾格）；她的（she的所有格）；她（指某个国家；一艘船）"
+    ],
+    "domain": "qwerty_waiyan9"
+  }
+]

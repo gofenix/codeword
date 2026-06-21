@@ -1,0 +1,1031 @@
+[
+  {
+    "id": "qwerty_pep_sl_liu1_00001",
+    "word": "morning tea",
+    "phonetic": "ˈmɔr.ɪ.ŋ tiː",
+    "translation": "早茶",
+    "translations": [
+      "早茶"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00002",
+    "word": "soup",
+    "phonetic": "soʊp",
+    "translation": "汤",
+    "translations": [
+      "汤"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00003",
+    "word": "garden",
+    "phonetic": "ˈɡɑː.dən",
+    "translation": "花园",
+    "translations": [
+      "花园"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00004",
+    "word": "the Potala Palace",
+    "phonetic": "pəˈtɑː.lə ˈpæl.ə.m",
+    "translation": "布达拉宫",
+    "translations": [
+      "布达拉宫"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00005",
+    "word": "the Summer Palace",
+    "phonetic": "ˈsʌm.ər ˈpæl.əs",
+    "translation": "颐和园",
+    "translations": [
+      "颐和园"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00006",
+    "word": "the Terracotta Army",
+    "phonetic": "tɪˈræk.ə.tə ˈɑːr.mɪ",
+    "translation": "兵马俑",
+    "translations": [
+      "兵马俑"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00007",
+    "word": "vacation",
+    "phonetic": "vəˈkeɪ.ʃən",
+    "translation": "假期",
+    "translations": [
+      "假期"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00008",
+    "word": "taste",
+    "phonetic": "teɪst",
+    "translation": "",
+    "translations": [],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00009",
+    "word": "map",
+    "phonetic": "mæp",
+    "translation": "地图",
+    "translations": [
+      "地图"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00010",
+    "word": "north",
+    "phonetic": "nɔːrθ",
+    "translation": "北",
+    "translations": [
+      "北"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00011",
+    "word": "south",
+    "phonetic": "saʊθ",
+    "translation": "南",
+    "translations": [
+      "南"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00012",
+    "word": "east",
+    "phonetic": "iːst",
+    "translation": "东",
+    "translations": [
+      "东"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00013",
+    "word": "west",
+    "phonetic": "wɛst",
+    "translation": "西",
+    "translations": [
+      "西"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00014",
+    "word": "famous",
+    "phonetic": "ˈfeɪ.məs",
+    "translation": "著名的",
+    "translations": [
+      "著名的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00015",
+    "word": "temple",
+    "phonetic": "ˈtɛm.pəl",
+    "translation": "寺",
+    "translations": [
+      "寺"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00016",
+    "word": "around",
+    "phonetic": "əˈraʊ.nd",
+    "translation": "遍及；围绕",
+    "translations": [
+      "遍及；围绕"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00017",
+    "word": "the Yangtze River",
+    "phonetic": "ˈjæŋk.si ˈrɪv.ər",
+    "translation": "长江",
+    "translations": [
+      "长江"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00018",
+    "word": "foggy",
+    "phonetic": "ˈfɑː.ɡi",
+    "translation": "有雾的",
+    "translations": [
+      "有雾的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00019",
+    "word": "spicy",
+    "phonetic": "ˈspaɪ.si",
+    "translation": "辣的",
+    "translations": [
+      "辣的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00020",
+    "word": "silk",
+    "phonetic": "sɪlk",
+    "translation": "丝绸",
+    "translations": [
+      "丝绸"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00021",
+    "word": "forest",
+    "phonetic": "ˈfɔːr.ɪst",
+    "translation": "树林",
+    "translations": [
+      "树林"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00022",
+    "word": "stone",
+    "phonetic": "stoʊn",
+    "translation": "石头",
+    "translations": [
+      "石头"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00023",
+    "word": "London",
+    "phonetic": "ˈlʌn.dən",
+    "translation": "伦敦",
+    "translations": [
+      "伦敦"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00024",
+    "word": "Toronto",
+    "phonetic": "tɔːˈrɑːn.toʊ",
+    "translation": "多伦多",
+    "translations": [
+      "多伦多"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00025",
+    "word": "Sydney",
+    "phonetic": "sɪd.ni",
+    "translation": "悉尼",
+    "translations": [
+      "悉尼"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00026",
+    "word": "Washington",
+    "phonetic": "ˈwɑːʃ.ɪŋ.tən",
+    "translation": "华盛顿",
+    "translations": [
+      "华盛顿"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00027",
+    "word": "the British Museum",
+    "phonetic": "ðə ˈbrɪt.ɪʃ mjuˈziː.əm",
+    "translation": "大英博物馆",
+    "translations": [
+      "大英博物馆"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00028",
+    "word": "the CN Tower",
+    "phonetic": "ðə ˌsiːˈen ˈtaʊ.ər",
+    "translation": "加拿大国家电视塔",
+    "translations": [
+      "加拿大国家电视塔"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00029",
+    "word": "kangaroo",
+    "phonetic": "ˌkæŋ.ɡəˈruː",
+    "translation": "袋鼠",
+    "translations": [
+      "袋鼠"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00030",
+    "word": "the Opera House (Sydney)",
+    "phonetic": "ðə ˈɑp.ər ˈhaʊs",
+    "translation": "（悉尼）歌剧院",
+    "translations": [
+      "（悉尼）歌剧院"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00031",
+    "word": "the White House",
+    "phonetic": "ðə ˌwaɪt ˈhaʊs",
+    "translation": "白宫",
+    "translations": [
+      "白宫"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00032",
+    "word": "clock",
+    "phonetic": "klɑːk",
+    "translation": "时钟",
+    "translations": [
+      "时钟"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00033",
+    "word": "speak",
+    "phonetic": "spiːk",
+    "translation": "讲；说",
+    "translations": [
+      "讲；说"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00034",
+    "word": "French",
+    "phonetic": "fraɪʃ",
+    "translation": "法语",
+    "translations": [
+      "法语"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00035",
+    "word": "Tower Bridge",
+    "phonetic": "ˈtaʊ.ər ˈbrɪdʒ",
+    "translation": "塔桥",
+    "translations": [
+      "塔桥"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00036",
+    "word": "the London Eye",
+    "phonetic": "ðə ˈlʌn.dən ˈaɪ",
+    "translation": "伦敦眼",
+    "translations": [
+      "伦敦眼"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00037",
+    "word": "hiking",
+    "phonetic": "ˈhaɪ.kɪŋ",
+    "translation": "远足",
+    "translations": [
+      "远足"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00038",
+    "word": "sunrise",
+    "phonetic": "ˈsʌn.raɪz",
+    "translation": "日出",
+    "translations": [
+      "日出"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00039",
+    "word": "president",
+    "phonetic": "ˈprɛs.ɪ.dənt",
+    "translation": "总统",
+    "translations": [
+      "总统"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00040",
+    "word": "reptile",
+    "phonetic": "ˈrɛp.taɪl",
+    "translation": "爬行动物",
+    "translations": [
+      "爬行动物"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00041",
+    "word": "bird",
+    "phonetic": "bɜːrd",
+    "translation": "鸟",
+    "translations": [
+      "鸟"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00042",
+    "word": "fish",
+    "phonetic": "fɪʃ",
+    "translation": "鱼",
+    "translations": [
+      "鱼"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00043",
+    "word": "mammal",
+    "phonetic": "ˈmæm.əl",
+    "translation": "哺乳动物",
+    "translations": [
+      "哺乳动物"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00044",
+    "word": "insect",
+    "phonetic": "ˈɪn.sɛkt",
+    "translation": "昆虫",
+    "translations": [
+      "昆虫"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00045",
+    "word": "penguin",
+    "phonetic": "ˈpɛŋ.ɡwɪn",
+    "translation": "企鹅",
+    "translations": [
+      "企鹅"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00046",
+    "word": "shark",
+    "phonetic": "ʃɑːrk",
+    "translation": "鲨鱼",
+    "translations": [
+      "鲨鱼"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00047",
+    "word": "whale",
+    "phonetic": "weɪl",
+    "translation": "鲸",
+    "translations": [
+      "鲸"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00048",
+    "word": "kind",
+    "phonetic": "kaɪnd",
+    "translation": "种类",
+    "translations": [
+      "种类"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00049",
+    "word": "metre",
+    "phonetic": "ˈmiː.tər",
+    "translation": "米",
+    "translations": [
+      "米"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00050",
+    "word": "spend",
+    "phonetic": "spɛnd",
+    "translation": "花费",
+    "translations": [
+      "花费"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00051",
+    "word": "trunk",
+    "phonetic": "trʌŋk",
+    "translation": "象鼻",
+    "translations": [
+      "象鼻"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00052",
+    "word": "peanut",
+    "phonetic": "ˈpiː.nʌt",
+    "translation": "花生",
+    "translations": [
+      "花生"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00053",
+    "word": "fan",
+    "phonetic": "fæn",
+    "translation": "扇子",
+    "translations": [
+      "扇子"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00054",
+    "word": "tusk",
+    "phonetic": "tʌsk",
+    "translation": "（象、野猪等的）长牙",
+    "translations": [
+      "（象、野猪等的）长牙"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00055",
+    "word": "Africa",
+    "phonetic": "ˈæf.rɪ.kə",
+    "translation": "非洲",
+    "translations": [
+      "非洲"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00056",
+    "word": "Asia",
+    "phonetic": "ˈeɪ.ʒə",
+    "translation": "亚洲",
+    "translations": [
+      "亚洲"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00057",
+    "word": "smart",
+    "phonetic": "smɑːrt",
+    "translation": "聪明的",
+    "translations": [
+      "聪明的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00058",
+    "word": "scared",
+    "phonetic": "skerd",
+    "translation": "害怕的",
+    "translations": [
+      "害怕的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00059",
+    "word": "worried",
+    "phonetic": "ˈwʌr.id",
+    "translation": "担心的",
+    "translations": [
+      "担心的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00060",
+    "word": "angry",
+    "phonetic": "ˈæŋ.ɡri",
+    "translation": "生气的",
+    "translations": [
+      "生气的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00061",
+    "word": "proud",
+    "phonetic": "praʊd",
+    "translation": "自豪的；骄傲的",
+    "translations": [
+      "自豪的",
+      "骄傲的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00062",
+    "word": "sad",
+    "phonetic": "sæd",
+    "translation": "难过的",
+    "translations": [
+      "难过的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00063",
+    "word": "excited",
+    "phonetic": "ɪkˈsaɪ.tɪd",
+    "translation": "激动的",
+    "translations": [
+      "激动的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00064",
+    "word": "happy",
+    "phonetic": "ˈhæp.i",
+    "translation": "高兴的",
+    "translations": [
+      "高兴的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00065",
+    "word": "ill",
+    "phonetic": "ɪl",
+    "translation": "有病的；不舒服的",
+    "translations": [
+      "有病的",
+      "不舒服的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00066",
+    "word": "win",
+    "phonetic": "wɪn",
+    "translation": "获胜",
+    "translations": [
+      "获胜"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00067",
+    "word": "race",
+    "phonetic": "reɪs",
+    "translation": "赛跑",
+    "translations": [
+      "赛跑"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00068",
+    "word": "find",
+    "phonetic": "faɪnd",
+    "translation": "发现",
+    "translations": [
+      "发现"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00069",
+    "word": "cry",
+    "phonetic": "kraɪ",
+    "translation": "哭",
+    "translations": [
+      "哭"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00070",
+    "word": "because",
+    "phonetic": "bɪˈkɔːz",
+    "translation": "因为",
+    "translations": [
+      "因为"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00071",
+    "word": "test",
+    "phonetic": "tɛst",
+    "translation": "测验",
+    "translations": [
+      "测验"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00072",
+    "word": "competition",
+    "phonetic": "kɑːm.pəˈtɪʃ.ən",
+    "translation": "竞赛",
+    "translations": [
+      "竞赛"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00073",
+    "word": "hurt",
+    "phonetic": "hɜːrt",
+    "translation": "弄伤",
+    "translations": [
+      "弄伤"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00074",
+    "word": "inventor",
+    "phonetic": "ɪnˈvɛn.t̬ɚ",
+    "translation": "发明家",
+    "translations": [
+      "发明家"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00075",
+    "word": "artist",
+    "phonetic": "ˈɑːr.t̬ɪst",
+    "translation": "画家；艺术家",
+    "translations": [
+      "画家",
+      "艺术家"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00076",
+    "word": "scientist",
+    "phonetic": "ˈsaɪən.t̬ɪst",
+    "translation": "科学家",
+    "translations": [
+      "科学家"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00077",
+    "word": "poet",
+    "phonetic": "ˈpoʊ.ət",
+    "translation": "诗人",
+    "translations": [
+      "诗人"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00078",
+    "word": "writer",
+    "phonetic": "ˈraɪ.t̬ɚ",
+    "translation": "作家",
+    "translations": [
+      "作家"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00079",
+    "word": "American",
+    "phonetic": "əˈmer.ɪ.kən",
+    "translation": "美国人；美国的",
+    "translations": [
+      "美国人",
+      "美国的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00080",
+    "word": "French",
+    "phonetic": "ˈfrentʃ",
+    "translation": "法国人；法国的",
+    "translations": [
+      "法国人",
+      "法国的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00081",
+    "word": "Danish",
+    "phonetic": "ˈdeɪ.nɪʃ",
+    "translation": "丹麦人；丹麦的；丹麦语",
+    "translations": [
+      "丹麦人",
+      "丹麦的",
+      "丹麦语"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00082",
+    "word": "poem",
+    "phonetic": "ˈpoʊ.əm",
+    "translation": "诗；诗歌",
+    "translations": [
+      "诗",
+      "诗歌"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00083",
+    "word": "paint",
+    "phonetic": "peɪnt",
+    "translation": "用颜料画",
+    "translations": [
+      "用颜料画"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00084",
+    "word": "invention",
+    "phonetic": "ɪnˈvɛn.ʃən",
+    "translation": "发明",
+    "translations": [
+      "发明"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00085",
+    "word": "invent",
+    "phonetic": "ɪnˈvɛnt",
+    "translation": "发明",
+    "translations": [
+      "发明"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00086",
+    "word": "study",
+    "phonetic": "ˈstʌd.i",
+    "translation": "学习；研究",
+    "translations": [
+      "学习",
+      "研究"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00087",
+    "word": "story",
+    "phonetic": "ˈstɔːr.i",
+    "translation": "故事",
+    "translations": [
+      "故事"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00088",
+    "word": "university",
+    "phonetic": "ˌjuː.nəˈvɝː.sə.t̬i",
+    "translation": "大学",
+    "translations": [
+      "大学"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00089",
+    "word": "deaf",
+    "phonetic": "dɛf",
+    "translation": "聋的",
+    "translations": [
+      "聋的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00090",
+    "word": "blind",
+    "phonetic": "blaɪnd",
+    "translation": "失明的",
+    "translations": [
+      "失明的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00091",
+    "word": "fall",
+    "phonetic": "fɑːl",
+    "translation": "落下",
+    "translations": [
+      "落下"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00092",
+    "word": "dumpling",
+    "phonetic": "ˈdʌm.plɪŋ",
+    "translation": "饺子；汤团",
+    "translations": [
+      "饺子",
+      "汤团"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00093",
+    "word": "fan",
+    "phonetic": "fæn",
+    "translation": "迷；爱好者",
+    "translations": [
+      "迷",
+      "爱好者"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00094",
+    "word": "ice lantern",
+    "phonetic": "aɪs ˈlæn.tərn",
+    "translation": "冰灯",
+    "translations": [
+      "冰灯"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00095",
+    "word": "bring",
+    "phonetic": "brɪŋ",
+    "translation": "带来",
+    "translations": [
+      "带来"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00096",
+    "word": "be afraid of",
+    "phonetic": "bi əˈfreɪd əv",
+    "translation": "害怕",
+    "translations": [
+      "害怕"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00097",
+    "word": "hear",
+    "phonetic": "hɪr",
+    "translation": "听到",
+    "translations": [
+      "听到"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00098",
+    "word": "pen pal",
+    "phonetic": "pɛn pæl",
+    "translation": "笔友",
+    "translations": [
+      "笔友"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00099",
+    "word": "broken",
+    "phonetic": "ˈbroʊ.kən",
+    "translation": "损坏了的",
+    "translations": [
+      "损坏了的"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00100",
+    "word": "pity",
+    "phonetic": "ˈpɪt.i",
+    "translation": "遗憾",
+    "translations": [
+      "遗憾"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00101",
+    "word": "prize",
+    "phonetic": "praɪz",
+    "translation": "奖（品）",
+    "translations": [
+      "奖（品）"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  },
+  {
+    "id": "qwerty_pep_sl_liu1_00102",
+    "word": "look forward to",
+    "phonetic": "lʊk ˈfɔrwərd tu",
+    "translation": "盼望",
+    "translations": [
+      "盼望"
+    ],
+    "domain": "qwerty_pep_sl_liu1"
+  }
+]

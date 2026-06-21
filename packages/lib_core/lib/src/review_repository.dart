@@ -76,6 +76,10 @@ class ReviewRepository {
       _instance!._filePath = filePath;
       _instance!._activityFilePath = activityPath;
       _instance!._userDataFilePath = userDataPath;
+      // One-shot migration: anything below schemaVersion 2 belongs to
+      // the pre-qwerty era (wordIds like cs_001 / ai_022 that no longer
+      // exist in any list). Wipe the three files and start fresh.
+      await _instance!._enforceSchemaVersion();
       _initCompleter!.complete(_instance!);
       _initCompleter = null;
       return _instance!;
@@ -84,6 +88,44 @@ class ReviewRepository {
       _initCompleter = null;
       rethrow;
     }
+  }
+
+  /// Bump whenever the on-disk format changes. Any data without the
+  /// current header is treated as legacy and wiped.
+  static const int _schemaVersion = 2;
+
+  Future<void> _enforceSchemaVersion() async {
+    final file = File(_userDataFilePath);
+    int present = 0;
+    if (file.existsSync()) {
+      try {
+        final raw = jsonDecode(await file.readAsString());
+        if (raw is Map<String, dynamic>) {
+          present = (raw['schemaVersion'] as int?) ?? 0;
+        }
+      } catch (_) {
+        present = 0;
+      }
+    }
+    if (present >= _schemaVersion) return;
+
+    // Legacy data — wipe the three JSONs and reset in-memory state.
+    for (final p in [_filePath, _activityFilePath, _userDataFilePath]) {
+      try {
+        await File(p).delete();
+      } catch (_) {}
+    }
+    _cache.clear();
+    _activity.clear();
+    _favorites.clear();
+    _removed.clear();
+    _openCounts.clear();
+    _studyMinutes.clear();
+    _dirtyReview = false;
+    _dirtyActivity = false;
+    _dirtyUserData = false;
+    // Write a fresh user-data file carrying the new schemaVersion header.
+    await _saveUserData();
   }
 
   static ReviewRepository get instance {
@@ -148,6 +190,7 @@ class ReviewRepository {
     final file = File(_userDataFilePath);
     await file.parent.create(recursive: true);
     final json = {
+      'schemaVersion': _schemaVersion,
       'favorites': _favorites.toList(),
       'removed': _removed.toList(),
       'openCounts': _openCounts,

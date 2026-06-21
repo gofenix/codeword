@@ -28,16 +28,21 @@ class AppColors {
   static const Color danger = Color(0xFFEF4444);
   static const Color info = Color(0xFF3B82F6);
 
-  // Domain tag colors (one per built-in vocabulary)
-  static const Color domainCs = Color(0xFF6366F1); // CS
-  static const Color domainPython = Color(0xFF3776AB); // Python
-  static const Color domainAi = Color(0xFF059669); // AI (darker green, distinct from primary)
-  static const Color domainLlm = Color(0xFF8B5CF6); // LLM
-  static const Color domainWeb = Color(0xFFF59E0B); // Web
-  static const Color domainDevops = Color(0xFF14B8A6); // DevOps
-  static const Color domainData = Color(0xFFEC4899); // Data
-  static const Color domainSecurity = Color(0xFFEF4444); // Security
-  static const Color domainProduct = Color(0xFFF97316); // Product (orange, matches catalog)
+  // 8-color palette for vocab tags & per-vocab progress chips.
+  // Used by hash-based coloring across the app, indexed by vocabId/domain.
+  static const List<Color> qwertyPalette = [
+    Color(0xFF3B82F6), // blue
+    Color(0xFF8B5CF6), // violet
+    Color(0xFFEC4899), // pink
+    Color(0xFF10B981), // green
+    Color(0xFFF59E0B), // amber
+    Color(0xFF14B8A6), // teal
+    Color(0xFFEF4444), // red
+    Color(0xFF6366F1), // indigo
+  ];
+
+  // Backwards-compatible: when a list explicitly sets `domainColor` in its
+  // manifest, that wins; otherwise the UI hashes into `qwertyPalette`.
 
   // Level pills (CEFR-style)
   static const Color levelA1 = Color(0xFF86EFAC);

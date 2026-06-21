@@ -1,0 +1,372 @@
+[
+  {
+    "id": "qwerty_python_math_00001",
+    "word": "math.ceil(x)",
+    "phonetic": "",
+    "translation": "返回数字的上入整数（返回传入数字的向上取整的值）",
+    "translations": [
+      "返回数字的上入整数（返回传入数字的向上取整的值）"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00002",
+    "word": "math.copysign(x,y)",
+    "phonetic": "",
+    "translation": "方法返回一个浮点数，该浮点数由第一个参数的值和第二个参数的正负号（+/-）组成",
+    "translations": [
+      "方法返回一个浮点数，该浮点数由第一个参数的值和第二个参数的正负号（+/-）组成"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00003",
+    "word": "math.fabs(x)",
+    "phonetic": "",
+    "translation": "返回浮点型数字的绝对值，如​math.fabs(-10) ​返回10.0。",
+    "translations": [
+      "返回浮点型数字的绝对值，如​math.fabs(-10) ​返回10.0。"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00004",
+    "word": "math.factorial(x)",
+    "phonetic": "",
+    "translation": "返回数字的阶乘",
+    "translations": [
+      "返回数字的阶乘"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00005",
+    "word": "math.floor(x)",
+    "phonetic": "",
+    "translation": "返回数字的下舍整数（向下取整的浮点型整数）",
+    "translations": [
+      "返回数字的下舍整数（向下取整的浮点型整数）"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00006",
+    "word": "math.fmod(x,y)",
+    "phonetic": "",
+    "translation": "返回x/y的余数（模）",
+    "translations": [
+      "返回x/y的余数（模）"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00007",
+    "word": "math.frexp(x)",
+    "phonetic": "",
+    "translation": "以成对（m，e）的形式返回尾数和指定数字的指数",
+    "translations": [
+      "以成对（m，e）的形式返回尾数和指定数字的指数"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00008",
+    "word": "math.fsum(iterable)",
+    "phonetic": "",
+    "translation": "返回所有项目的总和",
+    "translations": [
+      "返回所有项目的总和"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00009",
+    "word": "math.isinf(x)",
+    "phonetic": "",
+    "translation": "检查值是否为无穷大",
+    "translations": [
+      "检查值是否为无穷大"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00010",
+    "word": "math.isnan(x)",
+    "phonetic": "",
+    "translation": "检查值是否为NaN",
+    "translations": [
+      "检查值是否为NaN"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00011",
+    "word": "math.ldexp(x,i)",
+    "phonetic": "",
+    "translation": "返回给定数字x和i的x * (2 ** i)，这是math.frexp()的反函数",
+    "translations": [
+      "返回给定数字x和i的x * (2 ** i)，这是math.frexp()的反函数"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00012",
+    "word": "math.modf(x)",
+    "phonetic": "",
+    "translation": "返回x的整数部分与小数部分，两部分的数值符号与x相同，整数部分以浮点型表示",
+    "translations": [
+      "返回x的整数部分与小数部分，两部分的数值符号与x相同，整数部分以浮点型表示"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00013",
+    "word": "math.trunc()",
+    "phonetic": "",
+    "translation": "返回数字的截断的整数部分",
+    "translations": [
+      "返回数字的截断的整数部分"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00014",
+    "word": "math.exp(x)",
+    "phonetic": "",
+    "translation": "返回x的指数,ex",
+    "translations": [
+      "返回x的指数,ex"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00015",
+    "word": "math.log(x[,base])",
+    "phonetic": "",
+    "translation": "返回数字的自然对数，或数字以对数为底的对数",
+    "translations": [
+      "返回数字的自然对数，或数字以对数为底的对数"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00016",
+    "word": "math.log10(x)",
+    "phonetic": "",
+    "translation": "返回数字的以10为底的对数",
+    "translations": [
+      "返回数字的以10为底的对数"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00017",
+    "word": "math.log1p(x)",
+    "phonetic": "",
+    "translation": "返回log(1 + number)，即使在number的值接近于零的情况下，其计算方式也是准确的",
+    "translations": [
+      "返回log(1 + number)，即使在number的值接近于零的情况下，其计算方式也是准确的"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00018",
+    "word": "math.pow(x,y)",
+    "phonetic": "",
+    "translation": "方法返回 xy（x的y次方） 的值。",
+    "translations": [
+      "方法返回 xy（x的y次方） 的值。"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00019",
+    "word": "math.sqrt(x)",
+    "phonetic": "",
+    "translation": "​方法返回数字x的平方根",
+    "translations": [
+      "​方法返回数字x的平方根"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00020",
+    "word": "math.acos(x)",
+    "phonetic": "",
+    "translation": "返回x的反余弦弧度值",
+    "translations": [
+      "返回x的反余弦弧度值"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00021",
+    "word": "math.asin(x)",
+    "phonetic": "",
+    "translation": "返回x的反正弦弧度值。",
+    "translations": [
+      "返回x的反正弦弧度值。"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00022",
+    "word": "math.atan(x)",
+    "phonetic": "",
+    "translation": "返回x的反正切弧度值。",
+    "translations": [
+      "返回x的反正切弧度值。"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00023",
+    "word": "math.atan2(y,x)",
+    "phonetic": "",
+    "translation": "返回给定的 X 及 Y 坐标值的反正切值。",
+    "translations": [
+      "返回给定的 X 及 Y 坐标值的反正切值。"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00024",
+    "word": "math.cos(x)",
+    "phonetic": "",
+    "translation": "返回x的弧度的余弦值",
+    "translations": [
+      "返回x的弧度的余弦值"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00025",
+    "word": "math.hypot(x,y)",
+    "phonetic": "",
+    "translation": "返回欧几里德范数 sqrt(x*x + y*y)",
+    "translations": [
+      "返回欧几里德范数 sqrt(x*x + y*y)"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00026",
+    "word": "math.sin(x)",
+    "phonetic": "",
+    "translation": "返回的x弧度的正弦值",
+    "translations": [
+      "返回的x弧度的正弦值"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00027",
+    "word": "math.tan(x)",
+    "phonetic": "",
+    "translation": "返回x弧度的正弦值",
+    "translations": [
+      "返回x弧度的正弦值"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00028",
+    "word": "math.degrees(x)",
+    "phonetic": "",
+    "translation": "弧度转换为角度",
+    "translations": [
+      "弧度转换为角度"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00029",
+    "word": "math.radians(x)",
+    "phonetic": "",
+    "translation": "将角度转换为弧度",
+    "translations": [
+      "将角度转换为弧度"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00030",
+    "word": "math.acosh(x)",
+    "phonetic": "",
+    "translation": "返回数字的反双曲余弦值",
+    "translations": [
+      "返回数字的反双曲余弦值"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00031",
+    "word": "math.asinh(x)",
+    "phonetic": "",
+    "translation": "返回数字的反双曲正弦",
+    "translations": [
+      "返回数字的反双曲正弦"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00032",
+    "word": "math.atanh(x)",
+    "phonetic": "",
+    "translation": "返回数字的反双曲正切值",
+    "translations": [
+      "返回数字的反双曲正切值"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00033",
+    "word": "math.cosh(x)",
+    "phonetic": "",
+    "translation": "求不同数的双曲余弦",
+    "translations": [
+      "求不同数的双曲余弦"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00034",
+    "word": "math.sinh(x)",
+    "phonetic": "",
+    "translation": "查找不同数字的双曲正弦值",
+    "translations": [
+      "查找不同数字的双曲正弦值"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00035",
+    "word": "math.tanh(x)",
+    "phonetic": "",
+    "translation": "返回不同数的双曲正切",
+    "translations": [
+      "返回不同数的双曲正切"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00036",
+    "word": "math.e",
+    "phonetic": "",
+    "translation": "数学常量 e，e即自然常数（自然常数）。",
+    "translations": [
+      "数学常量 e，e即自然常数（自然常数）。"
+    ],
+    "domain": "qwerty_python_math"
+  },
+  {
+    "id": "qwerty_python_math_00037",
+    "word": "math.pi",
+    "phonetic": "",
+    "translation": "数学常量 pi（圆周率，一般以π来表示）。",
+    "translations": [
+      "数学常量 pi（圆周率，一般以π来表示）。"
+    ],
+    "domain": "qwerty_python_math"
+  }
+]

@@ -1,0 +1,6342 @@
+[
+  {
+    "id": "qwerty_japanese003_zh_00001",
+    "word": "kaijou",
+    "phonetic": "",
+    "translation": "大会堂或会议场所",
+    "translations": [
+      "大会堂或会议场所"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00002",
+    "word": "ikiru",
+    "phonetic": "",
+    "translation": "活着",
+    "translations": [
+      "活着"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00003",
+    "word": "pasokon",
+    "phonetic": "",
+    "translation": "个人电脑",
+    "translations": [
+      "个人电脑"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00004",
+    "word": "kare",
+    "phonetic": "",
+    "translation": "他，男朋友",
+    "translations": [
+      "他，男朋友"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00005",
+    "word": "bikkuri/suru",
+    "phonetic": "",
+    "translation": "令人惊讶",
+    "translations": [
+      "令人惊讶"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00006",
+    "word": "yoshuu",
+    "phonetic": "",
+    "translation": "备课",
+    "translations": [
+      "备课"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00007",
+    "word": "dame",
+    "phonetic": "",
+    "translation": "白搭",
+    "translations": [
+      "白搭"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00008",
+    "word": "kagami",
+    "phonetic": "",
+    "translation": "镜子",
+    "translations": [
+      "镜子"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00009",
+    "word": "gomi",
+    "phonetic": "",
+    "translation": "垃圾",
+    "translations": [
+      "垃圾"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00010",
+    "word": "outobai",
+    "phonetic": "",
+    "translation": "摩托车",
+    "translations": [
+      "摩托车"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00011",
+    "word": "utsukushii",
+    "phonetic": "",
+    "translation": "美丽",
+    "translations": [
+      "美丽"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00012",
+    "word": "kibun",
+    "phonetic": "",
+    "translation": "心情",
+    "translations": [
+      "心情"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00013",
+    "word": "oiwai",
+    "phonetic": "",
+    "translation": "祝贺",
+    "translations": [
+      "祝贺"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00014",
+    "word": "kangofu",
+    "phonetic": "",
+    "translation": "女护士",
+    "translations": [
+      "女护士"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00015",
+    "word": "unten",
+    "phonetic": "",
+    "translation": "开车",
+    "translations": [
+      "开车"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00016",
+    "word": "hyou",
+    "phonetic": "",
+    "translation": "正面",
+    "translations": [
+      "正面"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00017",
+    "word": "kuukou",
+    "phonetic": "",
+    "translation": "飞机场",
+    "translations": [
+      "飞机场"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00018",
+    "word": "hiruma",
+    "phonetic": "",
+    "translation": "白天，白天",
+    "translations": [
+      "白天，白天"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00019",
+    "word": "koutougakkou",
+    "phonetic": "",
+    "translation": "高中",
+    "translations": [
+      "高中"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00020",
+    "word": "kayou",
+    "phonetic": "",
+    "translation": "通勤",
+    "translations": [
+      "通勤"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00021",
+    "word": "takaru",
+    "phonetic": "",
+    "translation": "聚集",
+    "translations": [
+      "聚集"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00022",
+    "word": "tsukeru",
+    "phonetic": "",
+    "translation": "浸泡，腌制",
+    "translations": [
+      "浸泡，腌制"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00023",
+    "word": "mizuumi",
+    "phonetic": "",
+    "translation": "湖",
+    "translations": [
+      "湖"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00024",
+    "word": "suberu",
+    "phonetic": "",
+    "translation": "滑动，滑动",
+    "translations": [
+      "滑动，滑动"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00025",
+    "word": "aa",
+    "phonetic": "",
+    "translation": "诸如此类",
+    "translations": [
+      "诸如此类"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00026",
+    "word": "tamani",
+    "phonetic": "",
+    "translation": "偶尔",
+    "translations": [
+      "偶尔"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00027",
+    "word": "keshiki",
+    "phonetic": "",
+    "translation": "场景，景观",
+    "translations": [
+      "场景，景观"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00028",
+    "word": "odori",
+    "phonetic": "",
+    "translation": "舞蹈",
+    "translations": [
+      "舞蹈"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00029",
+    "word": "akusesarii",
+    "phonetic": "",
+    "translation": "附属品",
+    "translations": [
+      "附属品"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00030",
+    "word": "umai",
+    "phonetic": "",
+    "translation": "美味",
+    "translations": [
+      "美味"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00031",
+    "word": "amerika",
+    "phonetic": "",
+    "translation": "美洲",
+    "translations": [
+      "美洲"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00032",
+    "word": "sutereo",
+    "phonetic": "",
+    "translation": "立体声",
+    "translations": [
+      "立体声"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00033",
+    "word": "yubiwa",
+    "phonetic": "",
+    "translation": "戒指",
+    "translations": [
+      "戒指"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00034",
+    "word": "sotsugyou",
+    "phonetic": "",
+    "translation": "毕业",
+    "translations": [
+      "毕业"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00035",
+    "word": "tadashii",
+    "phonetic": "",
+    "translation": "正确",
+    "translations": [
+      "正确"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00036",
+    "word": "sumi",
+    "phonetic": "",
+    "translation": "角落，角落",
+    "translations": [
+      "角落，角落"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00037",
+    "word": "kaigi",
+    "phonetic": "",
+    "translation": "会议",
+    "translations": [
+      "会议"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00038",
+    "word": "kawari",
+    "phonetic": "",
+    "translation": "替补，替补",
+    "translations": [
+      "替补，替补"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00039",
+    "word": "kisha",
+    "phonetic": "",
+    "translation": "蒸汽火车",
+    "translations": [
+      "蒸汽火车"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00040",
+    "word": "igaku",
+    "phonetic": "",
+    "translation": "醫學",
+    "translations": [
+      "醫學"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00041",
+    "word": "ashita",
+    "phonetic": "",
+    "translation": "明天",
+    "translations": [
+      "明天"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00042",
+    "word": "omatsuri",
+    "phonetic": "",
+    "translation": "节日",
+    "translations": [
+      "节日"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00043",
+    "word": "zuibun",
+    "phonetic": "",
+    "translation": "非常",
+    "translations": [
+      "非常"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00044",
+    "word": "saikin",
+    "phonetic": "",
+    "translation": "最新，如今",
+    "translations": [
+      "最新，如今"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00045",
+    "word": "tomeru",
+    "phonetic": "",
+    "translation": "停止",
+    "translations": [
+      "停止"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00046",
+    "word": "utsuru",
+    "phonetic": "",
+    "translation": "搬家或转让",
+    "translations": [
+      "搬家或转让"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00047",
+    "word": "nokoru",
+    "phonetic": "",
+    "translation": "留下来",
+    "translations": [
+      "留下来"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00048",
+    "word": "musuko",
+    "phonetic": "",
+    "translation": "（谦卑的）儿子",
+    "translations": [
+      "（谦卑的）儿子"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00049",
+    "word": "okuru",
+    "phonetic": "",
+    "translation": "发送",
+    "translations": [
+      "发送"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00050",
+    "word": "sangyou",
+    "phonetic": "",
+    "translation": "工业",
+    "translations": [
+      "工业"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00051",
+    "word": "ugoku",
+    "phonetic": "",
+    "translation": "移动",
+    "translations": [
+      "移动"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00052",
+    "word": "warau",
+    "phonetic": "",
+    "translation": "笑，笑",
+    "translations": [
+      "笑，笑"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00053",
+    "word": "keredo/keredomo",
+    "phonetic": "",
+    "translation": "然而",
+    "translations": [
+      "然而"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00054",
+    "word": "baai",
+    "phonetic": "",
+    "translation": "情况",
+    "translations": [
+      "情况"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00055",
+    "word": "reji",
+    "phonetic": "",
+    "translation": "注册",
+    "translations": [
+      "注册"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00056",
+    "word": "hieru",
+    "phonetic": "",
+    "translation": "变冷",
+    "translations": [
+      "变冷"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00057",
+    "word": "seki",
+    "phonetic": "",
+    "translation": "座位",
+    "translations": [
+      "座位"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00058",
+    "word": "ueru",
+    "phonetic": "",
+    "translation": "种植，成长",
+    "translations": [
+      "种植，成长"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00059",
+    "word": "shikaru",
+    "phonetic": "",
+    "translation": "一个特定的",
+    "translations": [
+      "一个特定的"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00060",
+    "word": "seiyou",
+    "phonetic": "",
+    "translation": "西方国家",
+    "translations": [
+      "西方国家"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00061",
+    "word": "shachou",
+    "phonetic": "",
+    "translation": "公司总裁",
+    "translations": [
+      "公司总裁"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00062",
+    "word": "rakumu",
+    "phonetic": "",
+    "translation": "尽情享受",
+    "translations": [
+      "尽情享受"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00063",
+    "word": "konsaato",
+    "phonetic": "",
+    "translation": "音乐会",
+    "translations": [
+      "音乐会"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00064",
+    "word": "yatto",
+    "phonetic": "",
+    "translation": "最后",
+    "translations": [
+      "最后"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00065",
+    "word": "omou",
+    "phonetic": "",
+    "translation": "去思考，去感受",
+    "translations": [
+      "去思考，去感受"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00066",
+    "word": "jimusho",
+    "phonetic": "",
+    "translation": "办公室",
+    "translations": [
+      "办公室"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00067",
+    "word": "sandaru",
+    "phonetic": "",
+    "translation": "凉鞋",
+    "translations": [
+      "凉鞋"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00068",
+    "word": "enryo",
+    "phonetic": "",
+    "translation": "要保留，要克制",
+    "translations": [
+      "要保留，要克制"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00069",
+    "word": "mottomo",
+    "phonetic": "",
+    "translation": "非常",
+    "translations": [
+      "非常"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00070",
+    "word": "shousetsu",
+    "phonetic": "",
+    "translation": "小说",
+    "translations": [
+      "小说"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00071",
+    "word": "fuben",
+    "phonetic": "",
+    "translation": "不便",
+    "translations": [
+      "不便"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00072",
+    "word": "kinu",
+    "phonetic": "",
+    "translation": "丝绸",
+    "translations": [
+      "丝绸"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00073",
+    "word": "naosu",
+    "phonetic": "",
+    "translation": "修复，修复",
+    "translations": [
+      "修复，修复"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00074",
+    "word": "senpai",
+    "phonetic": "",
+    "translation": "前辈",
+    "translations": [
+      "前辈"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00075",
+    "word": "netsu",
+    "phonetic": "",
+    "translation": "发烧",
+    "translations": [
+      "发烧"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00076",
+    "word": "kibishii",
+    "phonetic": "",
+    "translation": "严格",
+    "translations": [
+      "严格"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00077",
+    "word": "ningyou",
+    "phonetic": "",
+    "translation": "娃娃， 数字",
+    "translations": [
+      "娃娃， 数字"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00078",
+    "word": "fukuzatsu",
+    "phonetic": "",
+    "translation": "复杂性、复杂性",
+    "translations": [
+      "复杂性、复杂性"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00079",
+    "word": "jamu",
+    "phonetic": "",
+    "translation": "果酱",
+    "translations": [
+      "果酱"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00080",
+    "word": "oku",
+    "phonetic": "",
+    "translation": "一亿",
+    "translations": [
+      "一亿"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00081",
+    "word": "anshin",
+    "phonetic": "",
+    "translation": "救济",
+    "translations": [
+      "救济"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00082",
+    "word": "sekai",
+    "phonetic": "",
+    "translation": "世界",
+    "translations": [
+      "世界"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00083",
+    "word": "denpou",
+    "phonetic": "",
+    "translation": "电报",
+    "translations": [
+      "电报"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00084",
+    "word": "tekisuto",
+    "phonetic": "",
+    "translation": "教科书，教科书",
+    "translations": [
+      "教科书，教科书"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00085",
+    "word": "zannen",
+    "phonetic": "",
+    "translation": "失望",
+    "translations": [
+      "失望"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00086",
+    "word": "chekku/suru",
+    "phonetic": "",
+    "translation": "检查",
+    "translations": [
+      "检查"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00087",
+    "word": "komakai",
+    "phonetic": "",
+    "translation": "小巧、精细",
+    "translations": [
+      "小巧、精细"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00088",
+    "word": "kanashii",
+    "phonetic": "",
+    "translation": "伤心",
+    "translations": [
+      "伤心"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00089",
+    "word": "yaku",
+    "phonetic": "",
+    "translation": "烘烤，烧烤",
+    "translations": [
+      "烘烤，烧烤"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00090",
+    "word": "kougi",
+    "phonetic": "",
+    "translation": "演讲",
+    "translations": [
+      "演讲"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00091",
+    "word": "hakkiri",
+    "phonetic": "",
+    "translation": "清楚",
+    "translations": [
+      "清楚"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00092",
+    "word": "hikidashi",
+    "phonetic": "",
+    "translation": "抽屉，拉出",
+    "translations": [
+      "抽屉，拉出"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00093",
+    "word": "purezento",
+    "phonetic": "",
+    "translation": "目前",
+    "translations": [
+      "目前"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00094",
+    "word": "korekara",
+    "phonetic": "",
+    "translation": "在此之后",
+    "translations": [
+      "在此之后"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00095",
+    "word": "tenin",
+    "phonetic": "",
+    "translation": "店员",
+    "translations": [
+      "店员"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00096",
+    "word": "hikari",
+    "phonetic": "",
+    "translation": "光",
+    "translations": [
+      "光"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00097",
+    "word": "irassharu",
+    "phonetic": "",
+    "translation": "（恭敬）是，来或去",
+    "translations": [
+      "（恭敬）是，来或去"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00098",
+    "word": "dansei",
+    "phonetic": "",
+    "translation": "雄",
+    "translations": [
+      "雄"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00099",
+    "word": "nodo",
+    "phonetic": "",
+    "translation": "喉",
+    "translations": [
+      "喉"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00100",
+    "word": "otosu",
+    "phonetic": "",
+    "translation": "掉落",
+    "translations": [
+      "掉落"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00101",
+    "word": "sonnani",
+    "phonetic": "",
+    "translation": "如此之多，就像那样",
+    "translations": [
+      "如此之多，就像那样"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00102",
+    "word": "homeru",
+    "phonetic": "",
+    "translation": "赞美",
+    "translations": [
+      "赞美"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00103",
+    "word": "sawagu",
+    "phonetic": "",
+    "translation": "制造噪音，兴奋",
+    "translations": [
+      "制造噪音，兴奋"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00104",
+    "word": "sumu",
+    "phonetic": "",
+    "translation": "完成",
+    "translations": [
+      "完成"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00105",
+    "word": "ryokan",
+    "phonetic": "",
+    "translation": "日本酒店",
+    "translations": [
+      "日本酒店"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00106",
+    "word": "oyogikata",
+    "phonetic": "",
+    "translation": "游泳方式",
+    "translations": [
+      "游泳方式"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00107",
+    "word": "ude",
+    "phonetic": "",
+    "translation": "手臂",
+    "translations": [
+      "手臂"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00108",
+    "word": "annai",
+    "phonetic": "",
+    "translation": "指导",
+    "translations": [
+      "指导"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00109",
+    "word": "daigakusei",
+    "phonetic": "",
+    "translation": "大学生",
+    "translations": [
+      "大学生"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00110",
+    "word": "hi",
+    "phonetic": "",
+    "translation": "火灾",
+    "translations": [
+      "火灾"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00111",
+    "word": "kenka/suru",
+    "phonetic": "",
+    "translation": "吵架",
+    "translations": [
+      "吵架"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00112",
+    "word": "juufun",
+    "phonetic": "",
+    "translation": "足够",
+    "translations": [
+      "足够"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00113",
+    "word": "renraku",
+    "phonetic": "",
+    "translation": "联系",
+    "translations": [
+      "联系"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00114",
+    "word": "gochisou",
+    "phonetic": "",
+    "translation": "一场盛宴",
+    "translations": [
+      "一场盛宴"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00115",
+    "word": "nureru",
+    "phonetic": "",
+    "translation": "弄湿",
+    "translations": [
+      "弄湿"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00116",
+    "word": "kenkyuu",
+    "phonetic": "",
+    "translation": "研究",
+    "translations": [
+      "研究"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00117",
+    "word": "tsukamaeru",
+    "phonetic": "",
+    "translation": "抓住",
+    "translations": [
+      "抓住"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00118",
+    "word": "kimeru",
+    "phonetic": "",
+    "translation": "决定",
+    "translations": [
+      "决定"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00119",
+    "word": "tooru",
+    "phonetic": "",
+    "translation": "通过",
+    "translations": [
+      "通过"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00120",
+    "word": "ippai",
+    "phonetic": "",
+    "translation": "满",
+    "translations": [
+      "满"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00121",
+    "word": "okoru",
+    "phonetic": "",
+    "translation": "生气，生气",
+    "translations": [
+      "生气，生气"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00122",
+    "word": "suutsu",
+    "phonetic": "",
+    "translation": "适合",
+    "translations": [
+      "适合"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00123",
+    "word": "untenshu",
+    "phonetic": "",
+    "translation": "司机",
+    "translations": [
+      "司机"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00124",
+    "word": "jama",
+    "phonetic": "",
+    "translation": "阻碍，入侵",
+    "translations": [
+      "阻碍，入侵"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00125",
+    "word": "juudou",
+    "phonetic": "",
+    "translation": "柔道",
+    "translations": [
+      "柔道"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00126",
+    "word": "kureru",
+    "phonetic": "",
+    "translation": "给",
+    "translations": [
+      "给"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00127",
+    "word": "ma",
+    "phonetic": "",
+    "translation": "一个空间",
+    "translations": [
+      "一个空间"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00128",
+    "word": "ika",
+    "phonetic": "",
+    "translation": "小于",
+    "translations": [
+      "小于"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00129",
+    "word": "kimi",
+    "phonetic": "",
+    "translation": "（非正式）你（男人对女人使用）",
+    "translations": [
+      "（非正式）你（男人对女人使用）"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00130",
+    "word": "shima",
+    "phonetic": "",
+    "translation": "岛",
+    "translations": [
+      "岛"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00131",
+    "word": "kitto",
+    "phonetic": "",
+    "translation": "肯定",
+    "translations": [
+      "肯定"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00132",
+    "word": "ochiru",
+    "phonetic": "",
+    "translation": "跌倒或跌落",
+    "translations": [
+      "跌倒或跌落"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00133",
+    "word": "okage",
+    "phonetic": "",
+    "translation": "由于",
+    "translations": [
+      "由于"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00134",
+    "word": "shouchi",
+    "phonetic": "",
+    "translation": "同意",
+    "translations": [
+      "同意"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00135",
+    "word": "bunpou",
+    "phonetic": "",
+    "translation": "语法",
+    "translations": [
+      "语法"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00136",
+    "word": "shuppatsu",
+    "phonetic": "",
+    "translation": "出发",
+    "translations": [
+      "出发"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00137",
+    "word": "kamau",
+    "phonetic": "",
+    "translation": "介意",
+    "translations": [
+      "介意"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00138",
+    "word": "akanbou",
+    "phonetic": "",
+    "translation": "婴儿",
+    "translations": [
+      "婴儿"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00139",
+    "word": "kinjo",
+    "phonetic": "",
+    "translation": "附近",
+    "translations": [
+      "附近"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00140",
+    "word": "anaunsaa",
+    "phonetic": "",
+    "translation": "播音员",
+    "translations": [
+      "播音员"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00141",
+    "word": "tasu",
+    "phonetic": "",
+    "translation": "添加数字",
+    "translations": [
+      "添加数字"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00142",
+    "word": "shoukai",
+    "phonetic": "",
+    "translation": "介绍",
+    "translations": [
+      "介绍"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00143",
+    "word": "isshoukenmei",
+    "phonetic": "",
+    "translation": "尽最大努力",
+    "translations": [
+      "尽最大努力"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00144",
+    "word": "harau",
+    "phonetic": "",
+    "translation": "支付",
+    "translations": [
+      "支付"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00145",
+    "word": "yureru",
+    "phonetic": "",
+    "translation": "摇晃，摇摆",
+    "translations": [
+      "摇晃，摇摆"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00146",
+    "word": "to",
+    "phonetic": "",
+    "translation": "大主教",
+    "translations": [
+      "大主教"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00147",
+    "word": "oto",
+    "phonetic": "",
+    "translation": "声音，注意",
+    "translations": [
+      "声音，注意"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00148",
+    "word": "sorosoro",
+    "phonetic": "",
+    "translation": "渐渐地，很快",
+    "translations": [
+      "渐渐地，很快"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00149",
+    "word": "mousu",
+    "phonetic": "",
+    "translation": "（谦卑）被召唤，说",
+    "translations": [
+      "（谦卑）被召唤，说"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00150",
+    "word": "shakai",
+    "phonetic": "",
+    "translation": "社会，公众",
+    "translations": [
+      "社会，公众"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00151",
+    "word": "un",
+    "phonetic": "",
+    "translation": "（非正式）是",
+    "translations": [
+      "（非正式）是"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00152",
+    "word": "ishi",
+    "phonetic": "",
+    "translation": "石头",
+    "translations": [
+      "石头"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00153",
+    "word": "soreni",
+    "phonetic": "",
+    "translation": "此外",
+    "translations": [
+      "此外"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00154",
+    "word": "kaji",
+    "phonetic": "",
+    "translation": "火灾",
+    "translations": [
+      "火灾"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00155",
+    "word": "keshigomu",
+    "phonetic": "",
+    "translation": "橡皮擦",
+    "translations": [
+      "橡皮擦"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00156",
+    "word": "hodo",
+    "phonetic": "",
+    "translation": "程度",
+    "translations": [
+      "程度"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00157",
+    "word": "nikki",
+    "phonetic": "",
+    "translation": "杂志",
+    "translations": [
+      "杂志"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00158",
+    "word": "bungaku",
+    "phonetic": "",
+    "translation": "文献",
+    "translations": [
+      "文献"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00159",
+    "word": "sofuto",
+    "phonetic": "",
+    "translation": "软",
+    "translations": [
+      "软"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00160",
+    "word": "minato",
+    "phonetic": "",
+    "translation": "港湾",
+    "translations": [
+      "港湾"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00161",
+    "word": "shinbunsha",
+    "phonetic": "",
+    "translation": "报社",
+    "translations": [
+      "报社"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00162",
+    "word": "sarada",
+    "phonetic": "",
+    "translation": "沙拉",
+    "translations": [
+      "沙拉"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00163",
+    "word": "mannaka",
+    "phonetic": "",
+    "translation": "中间",
+    "translations": [
+      "中间"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00164",
+    "word": "mairu",
+    "phonetic": "",
+    "translation": "（谦卑）去，来",
+    "translations": [
+      "（谦卑）去，来"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00165",
+    "word": "koshou",
+    "phonetic": "",
+    "translation": "分解",
+    "translations": [
+      "分解"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00166",
+    "word": "uso",
+    "phonetic": "",
+    "translation": "谎言",
+    "translations": [
+      "谎言"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00167",
+    "word": "subarashii",
+    "phonetic": "",
+    "translation": "美妙",
+    "translations": [
+      "美妙"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00168",
+    "word": "katsu",
+    "phonetic": "",
+    "translation": "赢",
+    "translations": [
+      "赢"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00169",
+    "word": "wariai",
+    "phonetic": "",
+    "translation": "比率，比率，百分比",
+    "translations": [
+      "比率，比率，百分比"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00170",
+    "word": "kowasu",
+    "phonetic": "",
+    "translation": "打破",
+    "translations": [
+      "打破"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00171",
+    "word": "sukuriin",
+    "phonetic": "",
+    "translation": "屏幕",
+    "translations": [
+      "屏幕"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00172",
+    "word": "jiyuu",
+    "phonetic": "",
+    "translation": "自由",
+    "translations": [
+      "自由"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00173",
+    "word": "daiji",
+    "phonetic": "",
+    "translation": "重要、有价值、严肃的事情",
+    "translations": [
+      "重要、有价值、严肃的事情"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00174",
+    "word": "tsugou",
+    "phonetic": "",
+    "translation": "环境，便利",
+    "translations": [
+      "环境，便利"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00175",
+    "word": "kyouiku",
+    "phonetic": "",
+    "translation": "教育",
+    "translations": [
+      "教育"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00176",
+    "word": "chuui",
+    "phonetic": "",
+    "translation": "谨慎",
+    "translations": [
+      "谨慎"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00177",
+    "word": "sagasu",
+    "phonetic": "",
+    "translation": "寻找",
+    "translations": [
+      "寻找"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00178",
+    "word": "shusseki",
+    "phonetic": "",
+    "translation": "参加",
+    "translations": [
+      "参加"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00179",
+    "word": "gijutsu",
+    "phonetic": "",
+    "translation": "艺术、技术、技能",
+    "translations": [
+      "艺术、技术、技能"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00180",
+    "word": "kimono",
+    "phonetic": "",
+    "translation": "和服",
+    "translations": [
+      "和服"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00181",
+    "word": "jiko",
+    "phonetic": "",
+    "translation": "事故",
+    "translations": [
+      "事故"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00182",
+    "word": "oideninaru",
+    "phonetic": "",
+    "translation": "（恭敬）成为",
+    "translations": [
+      "（恭敬）成为"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00183",
+    "word": "uriba",
+    "phonetic": "",
+    "translation": "卖东西的地方",
+    "translations": [
+      "卖东西的地方"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00184",
+    "word": "kikai",
+    "phonetic": "",
+    "translation": "机会",
+    "translations": [
+      "机会"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00185",
+    "word": "futsuu",
+    "phonetic": "",
+    "translation": "通常，或者在每个车站停靠的火车",
+    "translations": [
+      "通常，或者在每个车站停靠的火车"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00186",
+    "word": "moshi",
+    "phonetic": "",
+    "translation": "如果",
+    "translations": [
+      "如果"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00187",
+    "word": "riyuu",
+    "phonetic": "",
+    "translation": "原因",
+    "translations": [
+      "原因"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00188",
+    "word": "arukouru",
+    "phonetic": "",
+    "translation": "酒精",
+    "translations": [
+      "酒精"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00189",
+    "word": "inai",
+    "phonetic": "",
+    "translation": "在",
+    "translations": [
+      "在"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00190",
+    "word": "yotei",
+    "phonetic": "",
+    "translation": "安排",
+    "translations": [
+      "安排"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00191",
+    "word": "housou",
+    "phonetic": "",
+    "translation": "广播",
+    "translations": [
+      "广播"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00192",
+    "word": "tashika",
+    "phonetic": "",
+    "translation": "明确",
+    "translations": [
+      "明确"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00193",
+    "word": "kyuu",
+    "phonetic": "",
+    "translation": "紧急，陡峭",
+    "translations": [
+      "紧急，陡峭"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00194",
+    "word": "kesshite",
+    "phonetic": "",
+    "translation": "从不",
+    "translations": [
+      "从不"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00195",
+    "word": "yorokobu",
+    "phonetic": "",
+    "translation": "高兴",
+    "translations": [
+      "高兴"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00196",
+    "word": "shuukan",
+    "phonetic": "",
+    "translation": "风俗，礼仪",
+    "translations": [
+      "风俗，礼仪"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00197",
+    "word": "chuugakkou",
+    "phonetic": "",
+    "translation": "初中、初中",
+    "translations": [
+      "初中、初中"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00198",
+    "word": "tana",
+    "phonetic": "",
+    "translation": "货架",
+    "translations": [
+      "货架"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00199",
+    "word": "kubi",
+    "phonetic": "",
+    "translation": "脖子",
+    "translations": [
+      "脖子"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00200",
+    "word": "oshiire",
+    "phonetic": "",
+    "translation": "壁橱",
+    "translations": [
+      "壁橱"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00201",
+    "word": "koukou",
+    "phonetic": "",
+    "translation": "高中",
+    "translations": [
+      "高中"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00202",
+    "word": "sou",
+    "phonetic": "",
+    "translation": "真",
+    "translations": [
+      "真"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00203",
+    "word": "kakeru",
+    "phonetic": "",
+    "translation": "挂东西",
+    "translations": [
+      "挂东西"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00204",
+    "word": "shimin",
+    "phonetic": "",
+    "translation": "公民",
+    "translations": [
+      "公民"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00205",
+    "word": "manga",
+    "phonetic": "",
+    "translation": "漫画",
+    "translations": [
+      "漫画"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00206",
+    "word": "kotae",
+    "phonetic": "",
+    "translation": "响应",
+    "translations": [
+      "响应"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00207",
+    "word": "futoru",
+    "phonetic": "",
+    "translation": "变胖",
+    "translations": [
+      "变胖"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00208",
+    "word": "okonau",
+    "phonetic": "",
+    "translation": "去做",
+    "translations": [
+      "去做"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00209",
+    "word": "kumo",
+    "phonetic": "",
+    "translation": "云",
+    "translations": [
+      "云"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00210",
+    "word": "basho",
+    "phonetic": "",
+    "translation": "位置",
+    "translations": [
+      "位置"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00211",
+    "word": "ryouhou",
+    "phonetic": "",
+    "translation": "双方",
+    "translations": [
+      "双方"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00212",
+    "word": "youji",
+    "phonetic": "",
+    "translation": "要做的事",
+    "translations": [
+      "要做的事"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00213",
+    "word": "kachou",
+    "phonetic": "",
+    "translation": "部门经理",
+    "translations": [
+      "部门经理"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00214",
+    "word": "sashiageru",
+    "phonetic": "",
+    "translation": "（礼貌）给",
+    "translations": [
+      "（礼貌）给"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00215",
+    "word": "konpyuuta/konpyuutaa",
+    "phonetic": "",
+    "translation": "计算机",
+    "translations": [
+      "计算机"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00216",
+    "word": "kokoro",
+    "phonetic": "",
+    "translation": "核心，心脏",
+    "translations": [
+      "核心，心脏"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00217",
+    "word": "piano",
+    "phonetic": "",
+    "translation": "钢琴",
+    "translations": [
+      "钢琴"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00218",
+    "word": "oya",
+    "phonetic": "",
+    "translation": "父母",
+    "translations": [
+      "父母"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00219",
+    "word": "muri",
+    "phonetic": "",
+    "translation": "不可能的",
+    "translations": [
+      "不可能的"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00220",
+    "word": "shiraberu",
+    "phonetic": "",
+    "translation": "进行调查",
+    "translations": [
+      "进行调查"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00221",
+    "word": "gasu",
+    "phonetic": "",
+    "translation": "汽油",
+    "translations": [
+      "汽油"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00222",
+    "word": "reibou",
+    "phonetic": "",
+    "translation": "空调",
+    "translations": [
+      "空调"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00223",
+    "word": "nedan",
+    "phonetic": "",
+    "translation": "价格",
+    "translations": [
+      "价格"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00224",
+    "word": "nakunaru",
+    "phonetic": "",
+    "translation": "去死",
+    "translations": [
+      "去死"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00225",
+    "word": "sorehodo",
+    "phonetic": "",
+    "translation": "在某种程度上",
+    "translations": [
+      "在某种程度上"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00226",
+    "word": "naoru",
+    "phonetic": "",
+    "translation": "被治愈，被治愈",
+    "translations": [
+      "被治愈，被治愈"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00227",
+    "word": "kenkyuushitsu",
+    "phonetic": "",
+    "translation": "书房、实验室",
+    "translations": [
+      "书房、实验室"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00228",
+    "word": "wake",
+    "phonetic": "",
+    "translation": "意义，原因",
+    "translations": [
+      "意义，原因"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00229",
+    "word": "sandoicchi",
+    "phonetic": "",
+    "translation": "三明治",
+    "translations": [
+      "三明治"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00230",
+    "word": "fueru",
+    "phonetic": "",
+    "translation": "增加",
+    "translations": [
+      "增加"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00231",
+    "word": "nemui",
+    "phonetic": "",
+    "translation": "困",
+    "translations": [
+      "困"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00232",
+    "word": "hikaru",
+    "phonetic": "",
+    "translation": "闪耀，闪闪发光",
+    "translations": [
+      "闪耀，闪闪发光"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00233",
+    "word": "arubaito",
+    "phonetic": "",
+    "translation": "兼职工作",
+    "translations": [
+      "兼职工作"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00234",
+    "word": "kusa",
+    "phonetic": "",
+    "translation": "草",
+    "translations": [
+      "草"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00235",
+    "word": "henji",
+    "phonetic": "",
+    "translation": "答",
+    "translations": [
+      "答"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00236",
+    "word": "sen",
+    "phonetic": "",
+    "translation": "线",
+    "translations": [
+      "线"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00237",
+    "word": "yogiru",
+    "phonetic": "",
+    "translation": "超过。",
+    "translations": [
+      "超过。"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00238",
+    "word": "ken/kata/katai",
+    "phonetic": "",
+    "translation": "硬",
+    "translations": [
+      "硬"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00239",
+    "word": "kuuki",
+    "phonetic": "",
+    "translation": "空气，大气",
+    "translations": [
+      "空气，大气"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00240",
+    "word": "seisan",
+    "phonetic": "",
+    "translation": "生产",
+    "translations": [
+      "生产"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00241",
+    "word": "kanarazu",
+    "phonetic": "",
+    "translation": "当然，必然",
+    "translations": [
+      "当然，必然"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00242",
+    "word": "mataha",
+    "phonetic": "",
+    "translation": "或者，否则",
+    "translations": [
+      "或者，否则"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00243",
+    "word": "dentou",
+    "phonetic": "",
+    "translation": "电灯",
+    "translations": [
+      "电灯"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00244",
+    "word": "hanami",
+    "phonetic": "",
+    "translation": "赏樱",
+    "translations": [
+      "赏樱"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00245",
+    "word": "senaka",
+    "phonetic": "",
+    "translation": "身体后部",
+    "translations": [
+      "身体后部"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00246",
+    "word": "inaka",
+    "phonetic": "",
+    "translation": "农村",
+    "translations": [
+      "农村"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00247",
+    "word": "oreru",
+    "phonetic": "",
+    "translation": "折断或被折叠",
+    "translations": [
+      "折断或被折叠"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00248",
+    "word": "okujou",
+    "phonetic": "",
+    "translation": "屋顶",
+    "translations": [
+      "屋顶"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00249",
+    "word": "suku",
+    "phonetic": "",
+    "translation": "打开，变成空",
+    "translations": [
+      "打开，变成空"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00250",
+    "word": "kondo",
+    "phonetic": "",
+    "translation": "现在，下次",
+    "translations": [
+      "现在，下次"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00251",
+    "word": "biru",
+    "phonetic": "",
+    "translation": "建筑或账单",
+    "translations": [
+      "建筑或账单"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00252",
+    "word": "uchi",
+    "phonetic": "",
+    "translation": "在",
+    "translations": [
+      "在"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00253",
+    "word": "haisha",
+    "phonetic": "",
+    "translation": "牙医",
+    "translations": [
+      "牙医"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00254",
+    "word": "suteru",
+    "phonetic": "",
+    "translation": "扔掉",
+    "translations": [
+      "扔掉"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00255",
+    "word": "yasashii",
+    "phonetic": "",
+    "translation": "类",
+    "translations": [
+      "类"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00256",
+    "word": "ijimeru",
+    "phonetic": "",
+    "translation": "挑逗",
+    "translations": [
+      "挑逗"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00257",
+    "word": "sabishii",
+    "phonetic": "",
+    "translation": "孤独",
+    "translations": [
+      "孤独"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00258",
+    "word": "taifuu",
+    "phonetic": "",
+    "translation": "台风",
+    "translations": [
+      "台风"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00259",
+    "word": "hakobu",
+    "phonetic": "",
+    "translation": "运输",
+    "translations": [
+      "运输"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00260",
+    "word": "taoreru",
+    "phonetic": "",
+    "translation": "分解",
+    "translations": [
+      "分解"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00261",
+    "word": "yahari/yappari",
+    "phonetic": "",
+    "translation": "正如我所想的，绝对",
+    "translations": [
+      "正如我所想的，绝对"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00262",
+    "word": "budou",
+    "phonetic": "",
+    "translation": "葡萄",
+    "translations": [
+      "葡萄"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00263",
+    "word": "omocha",
+    "phonetic": "",
+    "translation": "玩具",
+    "translations": [
+      "玩具"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00264",
+    "word": "youi",
+    "phonetic": "",
+    "translation": "制备",
+    "translations": [
+      "制备"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00265",
+    "word": "jinkou",
+    "phonetic": "",
+    "translation": "人口",
+    "translations": [
+      "人口"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00266",
+    "word": "suugaku",
+    "phonetic": "",
+    "translation": "数学，算术",
+    "translations": [
+      "数学，算术"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00267",
+    "word": "gasorin",
+    "phonetic": "",
+    "translation": "汽油",
+    "translations": [
+      "汽油"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00268",
+    "word": "kotori",
+    "phonetic": "",
+    "translation": "小鸟",
+    "translations": [
+      "小鸟"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00269",
+    "word": "sutto",
+    "phonetic": "",
+    "translation": "直，突然",
+    "translations": [
+      "直，突然"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00270",
+    "word": "norikaeru",
+    "phonetic": "",
+    "translation": "在公共汽车或火车之间换乘",
+    "translations": [
+      "在公共汽车或火车之间换乘"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00271",
+    "word": "riyou",
+    "phonetic": "",
+    "translation": "利用",
+    "translations": [
+      "利用"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00272",
+    "word": "atsumeru",
+    "phonetic": "",
+    "translation": "收集一些东西",
+    "translations": [
+      "收集一些东西"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00273",
+    "word": "nyuugaku",
+    "phonetic": "",
+    "translation": "进入学校或大学",
+    "translations": [
+      "进入学校或大学"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00274",
+    "word": "shibaraku",
+    "phonetic": "",
+    "translation": "一会儿",
+    "translations": [
+      "一会儿"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00275",
+    "word": "ossharu",
+    "phonetic": "",
+    "translation": "（恭敬）说",
+    "translations": [
+      "（恭敬）说"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00276",
+    "word": "yoroshii",
+    "phonetic": "",
+    "translation": "（恭敬）好的，好的",
+    "translations": [
+      "（恭敬）好的，好的"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00277",
+    "word": "majime",
+    "phonetic": "",
+    "translation": "严重",
+    "translations": [
+      "严重"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00278",
+    "word": "suidou",
+    "phonetic": "",
+    "translation": "供水",
+    "translations": [
+      "供水"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00279",
+    "word": "tatami",
+    "phonetic": "",
+    "translation": "日本草席",
+    "translations": [
+      "日本草席"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00280",
+    "word": "sakki",
+    "phonetic": "",
+    "translation": "前段时间",
+    "translations": [
+      "前段时间"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00281",
+    "word": "hi",
+    "phonetic": "",
+    "translation": "天， 太阳",
+    "translations": [
+      "天， 太阳"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00282",
+    "word": "hatsuon",
+    "phonetic": "",
+    "translation": "发音",
+    "translations": [
+      "发音"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00283",
+    "word": "honyaku",
+    "phonetic": "",
+    "translation": "译本",
+    "translations": [
+      "译本"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00284",
+    "word": "ito",
+    "phonetic": "",
+    "translation": "线",
+    "translations": [
+      "线"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00285",
+    "word": "kiken",
+    "phonetic": "",
+    "translation": "危险",
+    "translations": [
+      "危险"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00286",
+    "word": "narubeku",
+    "phonetic": "",
+    "translation": "尽可能多",
+    "translations": [
+      "尽可能多"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00287",
+    "word": "ura",
+    "phonetic": "",
+    "translation": "反面",
+    "translations": [
+      "反面"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00288",
+    "word": "tochuu",
+    "phonetic": "",
+    "translation": "在路上",
+    "translations": [
+      "在路上"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00289",
+    "word": "okashii",
+    "phonetic": "",
+    "translation": "奇怪或滑稽",
+    "translations": [
+      "奇怪或滑稽"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00290",
+    "word": "asai",
+    "phonetic": "",
+    "translation": "浅，浅",
+    "translations": [
+      "浅，浅"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00291",
+    "word": "hen",
+    "phonetic": "",
+    "translation": "奇怪",
+    "translations": [
+      "奇怪"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00292",
+    "word": "saisho",
+    "phonetic": "",
+    "translation": "开始，第一",
+    "translations": [
+      "开始，第一"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00293",
+    "word": "haiken",
+    "phonetic": "",
+    "translation": "（谦虚）看",
+    "translations": [
+      "（谦虚）看"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00294",
+    "word": "you",
+    "phonetic": "",
+    "translation": "用",
+    "translations": [
+      "用"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00295",
+    "word": "tsutaeru",
+    "phonetic": "",
+    "translation": "报告",
+    "translations": [
+      "报告"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00296",
+    "word": "sorede",
+    "phonetic": "",
+    "translation": "正因为如此",
+    "translations": [
+      "正因为如此"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00297",
+    "word": "mieru",
+    "phonetic": "",
+    "translation": "近在咫尺",
+    "translations": [
+      "近在咫尺"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00298",
+    "word": "otaku",
+    "phonetic": "",
+    "translation": "（礼貌）你的房子",
+    "translations": [
+      "（礼貌）你的房子"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00299",
+    "word": "tariru",
+    "phonetic": "",
+    "translation": "就足够了",
+    "translations": [
+      "就足够了"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00300",
+    "word": "nioi",
+    "phonetic": "",
+    "translation": "一种气味",
+    "translations": [
+      "一种气味"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00301",
+    "word": "otsuri",
+    "phonetic": "",
+    "translation": "从购买、余额更改",
+    "translations": [
+      "从购买、余额更改"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00302",
+    "word": "shiken",
+    "phonetic": "",
+    "translation": "考试",
+    "translations": [
+      "考试"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00303",
+    "word": "moushiageru",
+    "phonetic": "",
+    "translation": "（谦虚）说，说",
+    "translations": [
+      "（谦虚）说，说"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00304",
+    "word": "saraishuu",
+    "phonetic": "",
+    "translation": "后一周",
+    "translations": [
+      "后一周"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00305",
+    "word": "kudaru",
+    "phonetic": "",
+    "translation": "下山，下山",
+    "translations": [
+      "下山，下山"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00306",
+    "word": "hikoujou",
+    "phonetic": "",
+    "translation": "飞机场",
+    "translations": [
+      "飞机场"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00307",
+    "word": "kougyou",
+    "phonetic": "",
+    "translation": "制造业",
+    "translations": [
+      "制造业"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00308",
+    "word": "tera",
+    "phonetic": "",
+    "translation": "寺庙",
+    "translations": [
+      "寺庙"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00309",
+    "word": "fune",
+    "phonetic": "",
+    "translation": "船",
+    "translations": [
+      "船"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00310",
+    "word": "nuru",
+    "phonetic": "",
+    "translation": "去画，去抹灰",
+    "translations": [
+      "去画，去抹灰"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00311",
+    "word": "utsu",
+    "phonetic": "",
+    "translation": "击中",
+    "translations": [
+      "击中"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00312",
+    "word": "chikara",
+    "phonetic": "",
+    "translation": "强度，功率",
+    "translations": [
+      "强度，功率"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00313",
+    "word": "tokuni",
+    "phonetic": "",
+    "translation": "特别是，特别是",
+    "translations": [
+      "特别是，特别是"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00314",
+    "word": "ji",
+    "phonetic": "",
+    "translation": "字符",
+    "translations": [
+      "字符"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00315",
+    "word": "iken",
+    "phonetic": "",
+    "translation": "意见",
+    "translations": [
+      "意见"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00316",
+    "word": "naru",
+    "phonetic": "",
+    "translation": "发声",
+    "translations": [
+      "发声"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00317",
+    "word": "komu",
+    "phonetic": "",
+    "translation": "拥挤",
+    "translations": [
+      "拥挤"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00318",
+    "word": "katachi",
+    "phonetic": "",
+    "translation": "形状",
+    "translations": [
+      "形状"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00319",
+    "word": "hayashi",
+    "phonetic": "",
+    "translation": "伍兹，护林员",
+    "translations": [
+      "伍兹，护林员"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00320",
+    "word": "owari",
+    "phonetic": "",
+    "translation": "结束",
+    "translations": [
+      "结束"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00321",
+    "word": "nemuru",
+    "phonetic": "",
+    "translation": "睡觉",
+    "translations": [
+      "睡觉"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00322",
+    "word": "futon",
+    "phonetic": "",
+    "translation": "日式床上用品、被褥",
+    "translations": [
+      "日式床上用品、被褥"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00323",
+    "word": "konogoro",
+    "phonetic": "",
+    "translation": "如今，如今",
+    "translations": [
+      "如今，如今"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00324",
+    "word": "yunyuu",
+    "phonetic": "",
+    "translation": "导入",
+    "translations": [
+      "导入"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00325",
+    "word": "yogoreru",
+    "phonetic": "",
+    "translation": "弄脏",
+    "translations": [
+      "弄脏"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00326",
+    "word": "garasu",
+    "phonetic": "",
+    "translation": "玻璃板",
+    "translations": [
+      "玻璃板"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00327",
+    "word": "nasaru",
+    "phonetic": "",
+    "translation": "（恭敬）去做",
+    "translations": [
+      "（恭敬）去做"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00328",
+    "word": "kisetsu",
+    "phonetic": "",
+    "translation": "季节",
+    "translations": [
+      "季节"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00329",
+    "word": "tateru",
+    "phonetic": "",
+    "translation": "站起来",
+    "translations": [
+      "站起来"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00330",
+    "word": "hisashiburi",
+    "phonetic": "",
+    "translation": "久久不见",
+    "translations": [
+      "久久不见"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00331",
+    "word": "bei",
+    "phonetic": "",
+    "translation": "米",
+    "translations": [
+      "米"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00332",
+    "word": "keeki",
+    "phonetic": "",
+    "translation": "蛋糕",
+    "translations": [
+      "蛋糕"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00333",
+    "word": "seikatsu",
+    "phonetic": "",
+    "translation": "活着",
+    "translations": [
+      "活着"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00334",
+    "word": "wakareru",
+    "phonetic": "",
+    "translation": "分开",
+    "translations": [
+      "分开"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00335",
+    "word": "wasuremono",
+    "phonetic": "",
+    "translation": "遗失物品",
+    "translations": [
+      "遗失物品"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00336",
+    "word": "kowai",
+    "phonetic": "",
+    "translation": "可怕",
+    "translations": [
+      "可怕"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00337",
+    "word": "nyuuin",
+    "phonetic": "",
+    "translation": "住院",
+    "translations": [
+      "住院"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00338",
+    "word": "suri",
+    "phonetic": "",
+    "translation": "扒手",
+    "translations": [
+      "扒手"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00339",
+    "word": "shoutai",
+    "phonetic": "",
+    "translation": "邀请",
+    "translations": [
+      "邀请"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00340",
+    "word": "suutsukeesu",
+    "phonetic": "",
+    "translation": "手提箱",
+    "translations": [
+      "手提箱"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00341",
+    "word": "nebou",
+    "phonetic": "",
+    "translation": "睡得很晚",
+    "translations": [
+      "睡得很晚"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00342",
+    "word": "mochiron",
+    "phonetic": "",
+    "translation": "答案是肯定的",
+    "translations": [
+      "答案是肯定的"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00343",
+    "word": "kimi",
+    "phonetic": "",
+    "translation": "熟悉的年轻男性的后缀",
+    "translations": [
+      "熟悉的年轻男性的后缀"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00344",
+    "word": "rusu",
+    "phonetic": "",
+    "translation": "缺席",
+    "translations": [
+      "缺席"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00345",
+    "word": "suruto",
+    "phonetic": "",
+    "translation": "然后",
+    "translations": [
+      "然后"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00346",
+    "word": "shinamono",
+    "phonetic": "",
+    "translation": "货物",
+    "translations": [
+      "货物"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00347",
+    "word": "nageru",
+    "phonetic": "",
+    "translation": "扔掉或扔掉",
+    "translations": [
+      "扔掉或扔掉"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00348",
+    "word": "tsuma",
+    "phonetic": "",
+    "translation": "（谦卑）妻子",
+    "translations": [
+      "（谦卑）妻子"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00349",
+    "word": "fakkusu",
+    "phonetic": "",
+    "translation": "传真",
+    "translations": [
+      "传真"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00350",
+    "word": "odoroku",
+    "phonetic": "",
+    "translation": "令人惊讶",
+    "translations": [
+      "令人惊讶"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00351",
+    "word": "kawaru",
+    "phonetic": "",
+    "translation": "更改",
+    "translations": [
+      "更改"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00352",
+    "word": "tatoeba",
+    "phonetic": "",
+    "translation": "例如",
+    "translations": [
+      "例如"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00353",
+    "word": "orei",
+    "phonetic": "",
+    "translation": "表达感激之情",
+    "translations": [
+      "表达感激之情"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00354",
+    "word": "tsureru",
+    "phonetic": "",
+    "translation": "领导",
+    "translations": [
+      "领导"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00355",
+    "word": "tokoya",
+    "phonetic": "",
+    "translation": "理发师",
+    "translations": [
+      "理发师"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00356",
+    "word": "keizai",
+    "phonetic": "",
+    "translation": "金融、经济",
+    "translations": [
+      "金融、经济"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00357",
+    "word": "koudou",
+    "phonetic": "",
+    "translation": "礼堂",
+    "translations": [
+      "礼堂"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00358",
+    "word": "seiji",
+    "phonetic": "",
+    "translation": "政治，政府",
+    "translations": [
+      "政治，政府"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00359",
+    "word": "jishin",
+    "phonetic": "",
+    "translation": "地震",
+    "translations": [
+      "地震"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00360",
+    "word": "beru",
+    "phonetic": "",
+    "translation": "钟",
+    "translations": [
+      "钟"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00361",
+    "word": "mousugu",
+    "phonetic": "",
+    "translation": "很快",
+    "translations": [
+      "很快"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00362",
+    "word": "doubutsuen",
+    "phonetic": "",
+    "translation": "动物园",
+    "translations": [
+      "动物园"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00363",
+    "word": "wareru",
+    "phonetic": "",
+    "translation": "打破",
+    "translations": [
+      "打破"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00364",
+    "word": "yoru",
+    "phonetic": "",
+    "translation": "参观",
+    "translations": [
+      "参观"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00365",
+    "word": "ageru",
+    "phonetic": "",
+    "translation": "给",
+    "translations": [
+      "给"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00366",
+    "word": "paato",
+    "phonetic": "",
+    "translation": "非全日制",
+    "translations": [
+      "非全日制"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00367",
+    "word": "tazuneru",
+    "phonetic": "",
+    "translation": "询问",
+    "translations": [
+      "询问"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00368",
+    "word": "mou",
+    "phonetic": "",
+    "translation": "毛发或毛皮",
+    "translations": [
+      "毛发或毛皮"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00369",
+    "word": "sukkari",
+    "phonetic": "",
+    "translation": "完全",
+    "translations": [
+      "完全"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00370",
+    "word": "hijouni",
+    "phonetic": "",
+    "translation": "非常",
+    "translations": [
+      "非常"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00371",
+    "word": "tsuru",
+    "phonetic": "",
+    "translation": "去钓鱼",
+    "translations": [
+      "去钓鱼"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00372",
+    "word": "houritsu",
+    "phonetic": "",
+    "translation": "法律",
+    "translations": [
+      "法律"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00373",
+    "word": "shitaku",
+    "phonetic": "",
+    "translation": "准备",
+    "translations": [
+      "准备"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00374",
+    "word": "soudan",
+    "phonetic": "",
+    "translation": "讨论",
+    "translations": [
+      "讨论"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00375",
+    "word": "yakunitatsu",
+    "phonetic": "",
+    "translation": "提供帮助",
+    "translations": [
+      "提供帮助"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00376",
+    "word": "fumu",
+    "phonetic": "",
+    "translation": "踩上",
+    "translations": [
+      "踩上"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00377",
+    "word": "handobaggu",
+    "phonetic": "",
+    "translation": "手提包",
+    "translations": [
+      "手提包"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00378",
+    "word": "daitai",
+    "phonetic": "",
+    "translation": "一般",
+    "translations": [
+      "一般"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00379",
+    "word": "kangaeru",
+    "phonetic": "",
+    "translation": "要考虑",
+    "translations": [
+      "要考虑"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00380",
+    "word": "toutou",
+    "phonetic": "",
+    "translation": "最后，毕竟",
+    "translations": [
+      "最后，毕竟"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00381",
+    "word": "mukashi",
+    "phonetic": "",
+    "translation": "旧日，前",
+    "translations": [
+      "旧日，前"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00382",
+    "word": "oru",
+    "phonetic": "",
+    "translation": "折断或折叠",
+    "translations": [
+      "折断或折叠"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00383",
+    "word": "chittomo",
+    "phonetic": "",
+    "translation": "完全没有（与否定动词一起使用）",
+    "translations": [
+      "完全没有（与否定动词一起使用）"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00384",
+    "word": "kabe",
+    "phonetic": "",
+    "translation": "墙",
+    "translations": [
+      "墙"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00385",
+    "word": "tooku",
+    "phonetic": "",
+    "translation": "远",
+    "translations": [
+      "远"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00386",
+    "word": "kagaku",
+    "phonetic": "",
+    "translation": "科学",
+    "translations": [
+      "科学"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00387",
+    "word": "sobo",
+    "phonetic": "",
+    "translation": "奶奶",
+    "translations": [
+      "奶奶"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00388",
+    "word": "aisatsu-suru",
+    "phonetic": "",
+    "translation": "打招呼",
+    "translations": [
+      "打招呼"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00389",
+    "word": "akachan",
+    "phonetic": "",
+    "translation": "婴儿",
+    "translations": [
+      "婴儿"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00390",
+    "word": "saigo",
+    "phonetic": "",
+    "translation": "上一页，完",
+    "translations": [
+      "上一页，完"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00391",
+    "word": "uketsuke",
+    "phonetic": "",
+    "translation": "收据",
+    "translations": [
+      "收据"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00392",
+    "word": "tsuzuku",
+    "phonetic": "",
+    "translation": "未完待续",
+    "translations": [
+      "未完待续"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00393",
+    "word": "kyousou",
+    "phonetic": "",
+    "translation": "竞争",
+    "translations": [
+      "竞争"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00394",
+    "word": "yubi",
+    "phonetic": "",
+    "translation": "手指",
+    "translations": [
+      "手指"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00395",
+    "word": "todokeru",
+    "phonetic": "",
+    "translation": "达到",
+    "translations": [
+      "达到"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00396",
+    "word": "ijou",
+    "phonetic": "",
+    "translation": "不仅如此，仅此而已",
+    "translations": [
+      "不仅如此，仅此而已"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00397",
+    "word": "geshuku",
+    "phonetic": "",
+    "translation": "住宿",
+    "translations": [
+      "住宿"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00398",
+    "word": "odoru",
+    "phonetic": "",
+    "translation": "跳舞",
+    "translations": [
+      "跳舞"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00399",
+    "word": "hikidasu",
+    "phonetic": "",
+    "translation": "取款",
+    "translations": [
+      "取款"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00400",
+    "word": "dorobou",
+    "phonetic": "",
+    "translation": "小偷",
+    "translations": [
+      "小偷"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00401",
+    "word": "kuraberu",
+    "phonetic": "",
+    "translation": "进行比较",
+    "translations": [
+      "进行比较"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00402",
+    "word": "yaseru",
+    "phonetic": "",
+    "translation": "变瘦",
+    "translations": [
+      "变瘦"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00403",
+    "word": "shourai",
+    "phonetic": "",
+    "translation": "展望",
+    "translations": [
+      "展望"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00404",
+    "word": "tenisu",
+    "phonetic": "",
+    "translation": "网球",
+    "translations": [
+      "网球"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00405",
+    "word": "nusumu",
+    "phonetic": "",
+    "translation": "偷窃",
+    "translations": [
+      "偷窃"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00406",
+    "word": "goranninaru",
+    "phonetic": "",
+    "translation": "（恭敬）看",
+    "translations": [
+      "（恭敬）看"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00407",
+    "word": "esukareetaa",
+    "phonetic": "",
+    "translation": "自动扶梯",
+    "translations": [
+      "自动扶梯"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00408",
+    "word": "kokusai",
+    "phonetic": "",
+    "translation": "国际",
+    "translations": [
+      "国际"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00409",
+    "word": "hiruyasumi",
+    "phonetic": "",
+    "translation": "中午休息",
+    "translations": [
+      "中午休息"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00410",
+    "word": "kyaku",
+    "phonetic": "",
+    "translation": "客人，客户",
+    "translations": [
+      "客人，客户"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00411",
+    "word": "chiri",
+    "phonetic": "",
+    "translation": "地理",
+    "translations": [
+      "地理"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00412",
+    "word": "kowata",
+    "phonetic": "",
+    "translation": "棉花",
+    "translations": [
+      "棉花"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00413",
+    "word": "shiai",
+    "phonetic": "",
+    "translation": "比赛，游戏",
+    "translations": [
+      "比赛，游戏"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00414",
+    "word": "tenrankai",
+    "phonetic": "",
+    "translation": "展览",
+    "translations": [
+      "展览"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00415",
+    "word": "boku",
+    "phonetic": "",
+    "translation": "I（男性使用）",
+    "translations": [
+      "I（男性使用）"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00416",
+    "word": "kakkou",
+    "phonetic": "",
+    "translation": "外观",
+    "translations": [
+      "外观"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00417",
+    "word": "otto",
+    "phonetic": "",
+    "translation": "老公",
+    "translations": [
+      "老公"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00418",
+    "word": "afurika",
+    "phonetic": "",
+    "translation": "非洲",
+    "translations": [
+      "非洲"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00419",
+    "word": "anzen",
+    "phonetic": "",
+    "translation": "安全",
+    "translations": [
+      "安全"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00420",
+    "word": "kaaten",
+    "phonetic": "",
+    "translation": "窗帘",
+    "translations": [
+      "窗帘"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00421",
+    "word": "shinpai",
+    "phonetic": "",
+    "translation": "担心",
+    "translations": [
+      "担心"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00422",
+    "word": "nigeru",
+    "phonetic": "",
+    "translation": "逃避",
+    "translations": [
+      "逃避"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00423",
+    "word": "tanoshimi",
+    "phonetic": "",
+    "translation": "喜悦",
+    "translations": [
+      "喜悦"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00424",
+    "word": "kimochi",
+    "phonetic": "",
+    "translation": "感觉，情绪",
+    "translations": [
+      "感觉，情绪"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00425",
+    "word": "ojousan",
+    "phonetic": "",
+    "translation": "小姐",
+    "translations": [
+      "小姐"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00426",
+    "word": "rekishi",
+    "phonetic": "",
+    "translation": "历史",
+    "translations": [
+      "历史"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00427",
+    "word": "norimono",
+    "phonetic": "",
+    "translation": "车辆",
+    "translations": [
+      "车辆"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00428",
+    "word": "nesshin",
+    "phonetic": "",
+    "translation": "热情",
+    "translations": [
+      "热情"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00429",
+    "word": "hige",
+    "phonetic": "",
+    "translation": "胡子",
+    "translations": [
+      "胡子"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00430",
+    "word": "taitei",
+    "phonetic": "",
+    "translation": "通常",
+    "translations": [
+      "通常"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00431",
+    "word": "genin",
+    "phonetic": "",
+    "translation": "原因，来源",
+    "translations": [
+      "原因，来源"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00432",
+    "word": "kudasaru",
+    "phonetic": "",
+    "translation": "（恭敬）给",
+    "translations": [
+      "（恭敬）给"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00433",
+    "word": "kami",
+    "phonetic": "",
+    "translation": "毛",
+    "translations": [
+      "毛"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00434",
+    "word": "sonna",
+    "phonetic": "",
+    "translation": "那种",
+    "translations": [
+      "那种"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00435",
+    "word": "itasu",
+    "phonetic": "",
+    "translation": "（谦虚）去做",
+    "translations": [
+      "（谦虚）去做"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00436",
+    "word": "kaiwa",
+    "phonetic": "",
+    "translation": "谈话",
+    "translations": [
+      "谈话"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00437",
+    "word": "kimaru",
+    "phonetic": "",
+    "translation": "待定",
+    "translations": [
+      "待定"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00438",
+    "word": "okosu",
+    "phonetic": "",
+    "translation": "唤醒",
+    "translations": [
+      "唤醒"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00439",
+    "word": "zenzen",
+    "phonetic": "",
+    "translation": "不完全（用于否定句）",
+    "translations": [
+      "不完全（用于否定句）"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00440",
+    "word": "kanai",
+    "phonetic": "",
+    "translation": "家庭 主妇",
+    "translations": [
+      "家庭 主妇"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00441",
+    "word": "ten",
+    "phonetic": "",
+    "translation": "点，点",
+    "translations": [
+      "点，点"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00442",
+    "word": "kaeru",
+    "phonetic": "",
+    "translation": "更改",
+    "translations": [
+      "更改"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00443",
+    "word": "okurimono",
+    "phonetic": "",
+    "translation": "礼物",
+    "translations": [
+      "礼物"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00444",
+    "word": "chan",
+    "phonetic": "",
+    "translation": "熟悉的女性的后缀",
+    "translations": [
+      "熟悉的女性的后缀"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00445",
+    "word": "kyoumi",
+    "phonetic": "",
+    "translation": "兴趣",
+    "translations": [
+      "兴趣"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00446",
+    "word": "chuushajou",
+    "phonetic": "",
+    "translation": "停车场",
+    "translations": [
+      "停车场"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00447",
+    "word": "dougu",
+    "phonetic": "",
+    "translation": "工具，手段",
+    "translations": [
+      "工具，手段"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00448",
+    "word": "nareru",
+    "phonetic": "",
+    "translation": "习惯",
+    "translations": [
+      "习惯"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00449",
+    "word": "kega/suru",
+    "phonetic": "",
+    "translation": "伤害",
+    "translations": [
+      "伤害"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00450",
+    "word": "sawaru",
+    "phonetic": "",
+    "translation": "触摸",
+    "translations": [
+      "触摸"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00451",
+    "word": "yushutsu",
+    "phonetic": "",
+    "translation": "导出",
+    "translations": [
+      "导出"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00452",
+    "word": "keisatsu",
+    "phonetic": "",
+    "translation": "警察",
+    "translations": [
+      "警察"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00453",
+    "word": "utsusu",
+    "phonetic": "",
+    "translation": "复印或拍照",
+    "translations": [
+      "复印或拍照"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00454",
+    "word": "kankei",
+    "phonetic": "",
+    "translation": "关系",
+    "translations": [
+      "关系"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00455",
+    "word": "gozonji",
+    "phonetic": "",
+    "translation": "认识，熟人",
+    "translations": [
+      "认识，熟人"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00456",
+    "word": "hirou",
+    "phonetic": "",
+    "translation": "捡起，收集",
+    "translations": [
+      "捡起，收集"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00457",
+    "word": "yakusoku",
+    "phonetic": "",
+    "translation": "承诺",
+    "translations": [
+      "承诺"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00458",
+    "word": "kyuukou",
+    "phonetic": "",
+    "translation": "快速，快递",
+    "translations": [
+      "快速，快递"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00459",
+    "word": "kantan",
+    "phonetic": "",
+    "translation": "简单",
+    "translations": [
+      "简单"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00460",
+    "word": "mazu",
+    "phonetic": "",
+    "translation": "首先",
+    "translations": [
+      "首先"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00461",
+    "word": "josei",
+    "phonetic": "",
+    "translation": "女人",
+    "translations": [
+      "女人"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00462",
+    "word": "ukeru",
+    "phonetic": "",
+    "translation": "上课或测试",
+    "translations": [
+      "上课或测试"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00463",
+    "word": "ajia",
+    "phonetic": "",
+    "translation": "亚洲",
+    "translations": [
+      "亚洲"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00464",
+    "word": "tame",
+    "phonetic": "",
+    "translation": "为了",
+    "translations": [
+      "为了"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00465",
+    "word": "buchou",
+    "phonetic": "",
+    "translation": "部门负责人",
+    "translations": [
+      "部门负责人"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00466",
+    "word": "teinei",
+    "phonetic": "",
+    "translation": "礼貌",
+    "translations": [
+      "礼貌"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00467",
+    "word": "au",
+    "phonetic": "",
+    "translation": "匹配",
+    "translations": [
+      "匹配"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00468",
+    "word": "susumu",
+    "phonetic": "",
+    "translation": "取得进展",
+    "translations": [
+      "取得进展"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00469",
+    "word": "noboru",
+    "phonetic": "",
+    "translation": "上升",
+    "translations": [
+      "上升"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00470",
+    "word": "makeru",
+    "phonetic": "",
+    "translation": "输",
+    "translations": [
+      "输"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00471",
+    "word": "saka",
+    "phonetic": "",
+    "translation": "斜坡，丘陵",
+    "translations": [
+      "斜坡，丘陵"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00472",
+    "word": "ureshii",
+    "phonetic": "",
+    "translation": "高兴",
+    "translations": [
+      "高兴"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00473",
+    "word": "yoyaku",
+    "phonetic": "",
+    "translation": "保留",
+    "translations": [
+      "保留"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00474",
+    "word": "shitagi",
+    "phonetic": "",
+    "translation": "内衣",
+    "translations": [
+      "内衣"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00475",
+    "word": "chuusha",
+    "phonetic": "",
+    "translation": "注射",
+    "translations": [
+      "注射"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00476",
+    "word": "maniau",
+    "phonetic": "",
+    "translation": "及时",
+    "translations": [
+      "及时"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00477",
+    "word": "saraigetsu",
+    "phonetic": "",
+    "translation": "后月再度",
+    "translations": [
+      "后月再度"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00478",
+    "word": "suteeki",
+    "phonetic": "",
+    "translation": "牛排",
+    "translations": [
+      "牛排"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00479",
+    "word": "mitsukaru",
+    "phonetic": "",
+    "translation": "有待发现",
+    "translations": [
+      "有待发现"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00480",
+    "word": "keikaku",
+    "phonetic": "",
+    "translation": "规划",
+    "translations": [
+      "规划"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00481",
+    "word": "mukaeru",
+    "phonetic": "",
+    "translation": "出去见面",
+    "translations": [
+      "出去见面"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00482",
+    "word": "kanojo",
+    "phonetic": "",
+    "translation": "她，女朋友",
+    "translations": [
+      "她，女朋友"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00483",
+    "word": "igai",
+    "phonetic": "",
+    "translation": "除了",
+    "translations": [
+      "除了"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00484",
+    "word": "kamu",
+    "phonetic": "",
+    "translation": "咬，咀嚼",
+    "translations": [
+      "咬，咀嚼"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00485",
+    "word": "miso",
+    "phonetic": "",
+    "translation": "豆瓣酱",
+    "translations": [
+      "豆瓣酱"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00486",
+    "word": "ha",
+    "phonetic": "",
+    "translation": "叶",
+    "translations": [
+      "叶"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00487",
+    "word": "koujou",
+    "phonetic": "",
+    "translation": "厂",
+    "translations": [
+      "厂"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00488",
+    "word": "kazaru",
+    "phonetic": "",
+    "translation": "装饰",
+    "translations": [
+      "装饰"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00489",
+    "word": "tsuki",
+    "phonetic": "",
+    "translation": "月亮",
+    "translations": [
+      "月亮"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00490",
+    "word": "koumuin",
+    "phonetic": "",
+    "translation": "政府工作人员",
+    "translations": [
+      "政府工作人员"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00491",
+    "word": "kikoeru",
+    "phonetic": "",
+    "translation": "被倾听",
+    "translations": [
+      "被倾听"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00492",
+    "word": "naruhodo",
+    "phonetic": "",
+    "translation": "现在我明白了",
+    "translations": [
+      "现在我明白了"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00493",
+    "word": "itadaku",
+    "phonetic": "",
+    "translation": "（谦卑）接受",
+    "translations": [
+      "（谦卑）接受"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00494",
+    "word": "chi",
+    "phonetic": "",
+    "translation": "血",
+    "translations": [
+      "血"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00495",
+    "word": "tekitou",
+    "phonetic": "",
+    "translation": "适用性",
+    "translations": [
+      "适用性"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00496",
+    "word": "tsutsumu",
+    "phonetic": "",
+    "translation": "包装",
+    "translations": [
+      "包装"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00497",
+    "word": "niru",
+    "phonetic": "",
+    "translation": "相似",
+    "translations": [
+      "相似"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00498",
+    "word": "undou",
+    "phonetic": "",
+    "translation": "锻炼",
+    "translations": [
+      "锻炼"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00499",
+    "word": "mori",
+    "phonetic": "",
+    "translation": "森林",
+    "translations": [
+      "森林"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00500",
+    "word": "shinsetsu",
+    "phonetic": "",
+    "translation": "恩",
+    "translations": [
+      "恩"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00501",
+    "word": "tebukuro",
+    "phonetic": "",
+    "translation": "手套",
+    "translations": [
+      "手套"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00502",
+    "word": "kougai",
+    "phonetic": "",
+    "translation": "郊外",
+    "translations": [
+      "郊外"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00503",
+    "word": "nigai",
+    "phonetic": "",
+    "translation": "苦",
+    "translations": [
+      "苦"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00504",
+    "word": "hoshi",
+    "phonetic": "",
+    "translation": "星",
+    "translations": [
+      "星"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00505",
+    "word": "tsumori",
+    "phonetic": "",
+    "translation": "意图",
+    "translations": [
+      "意图"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00506",
+    "word": "dakara",
+    "phonetic": "",
+    "translation": "所以，因此",
+    "translations": [
+      "所以，因此"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00507",
+    "word": "koukousei",
+    "phonetic": "",
+    "translation": "高中生",
+    "translations": [
+      "高中生"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00508",
+    "word": "mawaru",
+    "phonetic": "",
+    "translation": "四处走动",
+    "translations": [
+      "四处走动"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00509",
+    "word": "ukagau",
+    "phonetic": "",
+    "translation": "参观",
+    "translations": [
+      "参观"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00510",
+    "word": "anna",
+    "phonetic": "",
+    "translation": "这样",
+    "translations": [
+      "这样"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00511",
+    "word": "katazukeru",
+    "phonetic": "",
+    "translation": "整理",
+    "translations": [
+      "整理"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00512",
+    "word": "shiraseru",
+    "phonetic": "",
+    "translation": "通知",
+    "translations": [
+      "通知"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00513",
+    "word": "juusho",
+    "phonetic": "",
+    "translation": "一个地址，一个住所",
+    "translations": [
+      "一个地址，一个住所"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00514",
+    "word": "kaigan",
+    "phonetic": "",
+    "translation": "海岸",
+    "translations": [
+      "海岸"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00515",
+    "word": "sodateru",
+    "phonetic": "",
+    "translation": "要养育，要养育",
+    "translations": [
+      "要养育，要养育"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00516",
+    "word": "shumi",
+    "phonetic": "",
+    "translation": "爱好",
+    "translations": [
+      "爱好"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00517",
+    "word": "tokubetsu",
+    "phonetic": "",
+    "translation": "特殊",
+    "translations": [
+      "特殊"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00518",
+    "word": "kou",
+    "phonetic": "",
+    "translation": "这边",
+    "translations": [
+      "这边"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00519",
+    "word": "mitsukeru",
+    "phonetic": "",
+    "translation": "去发现",
+    "translations": [
+      "去发现"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00520",
+    "word": "tsuku",
+    "phonetic": "",
+    "translation": "待附",
+    "translations": [
+      "待附"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00521",
+    "word": "asobi",
+    "phonetic": "",
+    "translation": "玩",
+    "translations": [
+      "玩"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00522",
+    "word": "sakan",
+    "phonetic": "",
+    "translation": "人气大，兴旺发达",
+    "translations": [
+      "人气大，兴旺发达"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00523",
+    "word": "shokuryouhin",
+    "phonetic": "",
+    "translation": "杂货",
+    "translations": [
+      "杂货"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00524",
+    "word": "hidoi",
+    "phonetic": "",
+    "translation": "可怕",
+    "translations": [
+      "可怕"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00525",
+    "word": "morau",
+    "phonetic": "",
+    "translation": "接收",
+    "translations": [
+      "接收"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00526",
+    "word": "gasorinsutando",
+    "phonetic": "",
+    "translation": "加油站",
+    "translations": [
+      "加油站"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00527",
+    "word": "nikaidate",
+    "phonetic": "",
+    "translation": "两层楼",
+    "translations": [
+      "两层楼"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00528",
+    "word": "yu",
+    "phonetic": "",
+    "translation": "热水",
+    "translations": [
+      "热水"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00529",
+    "word": "kureru",
+    "phonetic": "",
+    "translation": "天黑了，走到了尽头",
+    "translations": [
+      "天黑了，走到了尽头"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00530",
+    "word": "torikaeru",
+    "phonetic": "",
+    "translation": "兑换",
+    "translations": [
+      "兑换"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00531",
+    "word": "omimai",
+    "phonetic": "",
+    "translation": "探望生病的人，查询",
+    "translations": [
+      "探望生病的人，查询"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00532",
+    "word": "shokuji",
+    "phonetic": "",
+    "translation": "吃一顿饭",
+    "translations": [
+      "吃一顿饭"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00533",
+    "word": "omiyage",
+    "phonetic": "",
+    "translation": "纪念品",
+    "translations": [
+      "纪念品"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00534",
+    "word": "tomeru",
+    "phonetic": "",
+    "translation": "停止某事",
+    "translations": [
+      "停止某事"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00535",
+    "word": "nakanaka",
+    "phonetic": "",
+    "translation": "大大",
+    "translations": [
+      "大大"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00536",
+    "word": "karera",
+    "phonetic": "",
+    "translation": "他们",
+    "translations": [
+      "他们"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00537",
+    "word": "wakasu",
+    "phonetic": "",
+    "translation": "煮沸，加热",
+    "translations": [
+      "煮沸，加热"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00538",
+    "word": "shippai",
+    "phonetic": "",
+    "translation": "失败，错误",
+    "translations": [
+      "失败，错误"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00539",
+    "word": "waku",
+    "phonetic": "",
+    "translation": "沸腾，变热，兴奋",
+    "translations": [
+      "沸腾，变热，兴奋"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00540",
+    "word": "naku",
+    "phonetic": "",
+    "translation": "哭泣",
+    "translations": [
+      "哭泣"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00541",
+    "word": "junbi",
+    "phonetic": "",
+    "translation": "准备",
+    "translations": [
+      "准备"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00542",
+    "word": "tazuneru",
+    "phonetic": "",
+    "translation": "参观",
+    "translations": [
+      "参观"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00543",
+    "word": "omoidasu",
+    "phonetic": "",
+    "translation": "要记住",
+    "translations": [
+      "要记住"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00544",
+    "word": "keiken",
+    "phonetic": "",
+    "translation": "去体验",
+    "translations": [
+      "去体验"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00545",
+    "word": "guai",
+    "phonetic": "",
+    "translation": "条件，健康",
+    "translations": [
+      "条件，健康"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00546",
+    "word": "yawarakai",
+    "phonetic": "",
+    "translation": "软",
+    "translations": [
+      "软"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00547",
+    "word": "ko",
+    "phonetic": "",
+    "translation": "孩子",
+    "translations": [
+      "孩子"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00548",
+    "word": "naoru",
+    "phonetic": "",
+    "translation": "待修复，待修复",
+    "translations": [
+      "待修复，待修复"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00549",
+    "word": "jidai",
+    "phonetic": "",
+    "translation": "时代",
+    "translations": [
+      "时代"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00550",
+    "word": "kowareru",
+    "phonetic": "",
+    "translation": "被打破",
+    "translations": [
+      "被打破"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00551",
+    "word": "mina",
+    "phonetic": "",
+    "translation": "大家",
+    "translations": [
+      "大家"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00552",
+    "word": "oriru",
+    "phonetic": "",
+    "translation": "下车",
+    "translations": [
+      "下车"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00553",
+    "word": "ayamaru",
+    "phonetic": "",
+    "translation": "道歉",
+    "translations": [
+      "道歉"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00554",
+    "word": "bijutsukan",
+    "phonetic": "",
+    "translation": "美术馆",
+    "translations": [
+      "美术馆"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00555",
+    "word": "yakeru",
+    "phonetic": "",
+    "translation": "燃烧，烘烤",
+    "translations": [
+      "燃烧，烘烤"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00556",
+    "word": "shi",
+    "phonetic": "",
+    "translation": "城市",
+    "translations": [
+      "城市"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00557",
+    "word": "waapuro",
+    "phonetic": "",
+    "translation": "文字处理软件",
+    "translations": [
+      "文字处理软件"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00558",
+    "word": "mushi",
+    "phonetic": "",
+    "translation": "昆虫",
+    "translations": [
+      "昆虫"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00559",
+    "word": "tsuzukeru",
+    "phonetic": "",
+    "translation": "继续",
+    "translations": [
+      "继续"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00560",
+    "word": "koutsuu",
+    "phonetic": "",
+    "translation": "交通，运输",
+    "translations": [
+      "交通，运输"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00561",
+    "word": "tetsudau",
+    "phonetic": "",
+    "translation": "协助",
+    "translations": [
+      "协助"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00562",
+    "word": "bunka",
+    "phonetic": "",
+    "translation": "文化",
+    "translations": [
+      "文化"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00563",
+    "word": "kaeri",
+    "phonetic": "",
+    "translation": "返回",
+    "translations": [
+      "返回"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00564",
+    "word": "isogu",
+    "phonetic": "",
+    "translation": "快点",
+    "translations": [
+      "快点"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00565",
+    "word": "hotondo",
+    "phonetic": "",
+    "translation": "主要",
+    "translations": [
+      "主要"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00566",
+    "word": "hitsuyou",
+    "phonetic": "",
+    "translation": "必要",
+    "translations": [
+      "必要"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00567",
+    "word": "sofu",
+    "phonetic": "",
+    "translation": "爷爷",
+    "translations": [
+      "爷爷"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00568",
+    "word": "jinja",
+    "phonetic": "",
+    "translation": "神社",
+    "translations": [
+      "神社"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00569",
+    "word": "boueki",
+    "phonetic": "",
+    "translation": "贸易",
+    "translations": [
+      "贸易"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00570",
+    "word": "betsu",
+    "phonetic": "",
+    "translation": "不同",
+    "translations": [
+      "不同"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00571",
+    "word": "tenkiyohou",
+    "phonetic": "",
+    "translation": "天气预报",
+    "translations": [
+      "天气预报"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00572",
+    "word": "tokkyuu",
+    "phonetic": "",
+    "translation": "特快列车（比特快列车快）",
+    "translations": [
+      "特快列车（比特快列车快）"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00573",
+    "word": "o/kanemochi",
+    "phonetic": "",
+    "translation": "有钱人",
+    "translations": [
+      "有钱人"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00574",
+    "word": "hiraku",
+    "phonetic": "",
+    "translation": "打开事件",
+    "translations": [
+      "打开事件"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00575",
+    "word": "ichido",
+    "phonetic": "",
+    "translation": "一次",
+    "translations": [
+      "一次"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00576",
+    "word": "dekirudake",
+    "phonetic": "",
+    "translation": "尽可能多",
+    "translations": [
+      "尽可能多"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00577",
+    "word": "okureru",
+    "phonetic": "",
+    "translation": "迟到",
+    "translations": [
+      "迟到"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00578",
+    "word": "hajimeru",
+    "phonetic": "",
+    "translation": "开始",
+    "translations": [
+      "开始"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00579",
+    "word": "a",
+    "phonetic": "",
+    "translation": "啊",
+    "translations": [
+      "啊"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00580",
+    "word": "taipu",
+    "phonetic": "",
+    "translation": "类型，样式",
+    "translations": [
+      "类型，样式"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00581",
+    "word": "repouto/ripouto",
+    "phonetic": "",
+    "translation": "报告",
+    "translations": [
+      "报告"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00582",
+    "word": "konya",
+    "phonetic": "",
+    "translation": "今晚",
+    "translations": [
+      "今晚"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00583",
+    "word": "bai",
+    "phonetic": "",
+    "translation": "双",
+    "translations": [
+      "双"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00584",
+    "word": "furidasu",
+    "phonetic": "",
+    "translation": "开始下雨",
+    "translations": [
+      "开始下雨"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00585",
+    "word": "mawari",
+    "phonetic": "",
+    "translation": "环境",
+    "translations": [
+      "环境"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00586",
+    "word": "suku",
+    "phonetic": "",
+    "translation": "变得空虚",
+    "translations": [
+      "变得空虚"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00587",
+    "word": "setsumei",
+    "phonetic": "",
+    "translation": "解释",
+    "translations": [
+      "解释"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00588",
+    "word": "bangumi",
+    "phonetic": "",
+    "translation": "电视或广播节目",
+    "translations": [
+      "电视或广播节目"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00589",
+    "word": "kisoku",
+    "phonetic": "",
+    "translation": "法规",
+    "translations": [
+      "法规"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00590",
+    "word": "taiin",
+    "phonetic": "",
+    "translation": "出院",
+    "translations": [
+      "出院"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00591",
+    "word": "suiei",
+    "phonetic": "",
+    "translation": "游泳",
+    "translations": [
+      "游泳"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00592",
+    "word": "kouchou",
+    "phonetic": "",
+    "translation": "校长",
+    "translations": [
+      "校长"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00593",
+    "word": "hazukashii",
+    "phonetic": "",
+    "translation": "尴尬",
+    "translations": [
+      "尴尬"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00594",
+    "word": "jiten",
+    "phonetic": "",
+    "translation": "字典",
+    "translations": [
+      "字典"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00595",
+    "word": "hikkosu",
+    "phonetic": "",
+    "translation": "搬家",
+    "translations": [
+      "搬家"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00596",
+    "word": "danbou",
+    "phonetic": "",
+    "translation": "加热",
+    "translations": [
+      "加热"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00597",
+    "word": "fukushuu",
+    "phonetic": "",
+    "translation": "校订",
+    "translations": [
+      "校订"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00598",
+    "word": "meshiagaru",
+    "phonetic": "",
+    "translation": "（礼貌）吃饭",
+    "translations": [
+      "（礼貌）吃饭"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00599",
+    "word": "kawaku",
+    "phonetic": "",
+    "translation": "晾干",
+    "translations": [
+      "晾干"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00600",
+    "word": "sensou",
+    "phonetic": "",
+    "translation": "战争",
+    "translations": [
+      "战争"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00601",
+    "word": "tomaru",
+    "phonetic": "",
+    "translation": "寄宿地点",
+    "translations": [
+      "寄宿地点"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00602",
+    "word": "kenbutsu",
+    "phonetic": "",
+    "translation": "观光",
+    "translations": [
+      "观光"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00603",
+    "word": "kyoukai",
+    "phonetic": "",
+    "translation": "教堂",
+    "translations": [
+      "教堂"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00604",
+    "word": "sugoi",
+    "phonetic": "",
+    "translation": "了不起",
+    "translations": [
+      "了不起"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00605",
+    "word": "eda",
+    "phonetic": "",
+    "translation": "树枝， 树枝",
+    "translations": [
+      "树枝， 树枝"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00606",
+    "word": "mukau",
+    "phonetic": "",
+    "translation": "面对",
+    "translations": [
+      "面对"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00607",
+    "word": "yamu",
+    "phonetic": "",
+    "translation": "停止",
+    "translations": [
+      "停止"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00608",
+    "word": "tateru",
+    "phonetic": "",
+    "translation": "构建",
+    "translations": [
+      "构建"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00609",
+    "word": "yume",
+    "phonetic": "",
+    "translation": "梦",
+    "translations": [
+      "梦"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00610",
+    "word": "shikata",
+    "phonetic": "",
+    "translation": "方法",
+    "translations": [
+      "方法"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00611",
+    "word": "shikkari",
+    "phonetic": "",
+    "translation": "坚定，稳定",
+    "translations": [
+      "坚定，稳定"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00612",
+    "word": "sewa",
+    "phonetic": "",
+    "translation": "照顾",
+    "translations": [
+      "照顾"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00613",
+    "word": "fukai",
+    "phonetic": "",
+    "translation": "深",
+    "translations": [
+      "深"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00614",
+    "word": "mezurashii",
+    "phonetic": "",
+    "translation": "罕见",
+    "translations": [
+      "罕见"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00615",
+    "word": "koto",
+    "phonetic": "",
+    "translation": "事物，物质",
+    "translations": [
+      "事物，物质"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00616",
+    "word": "suna",
+    "phonetic": "",
+    "translation": "沙",
+    "translations": [
+      "沙"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00617",
+    "word": "hantai",
+    "phonetic": "",
+    "translation": "反对",
+    "translations": [
+      "反对"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00618",
+    "word": "ki",
+    "phonetic": "",
+    "translation": "精神，心情",
+    "translations": [
+      "精神，心情"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00619",
+    "word": "musume",
+    "phonetic": "",
+    "translation": "（谦卑）女儿",
+    "translations": [
+      "（谦卑）女儿"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00620",
+    "word": "kaigishitsu",
+    "phonetic": "",
+    "translation": "会议室",
+    "translations": [
+      "会议室"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00621",
+    "word": "ooita",
+    "phonetic": "",
+    "translation": "大大",
+    "translations": [
+      "大大"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00622",
+    "word": "shougakkou",
+    "phonetic": "",
+    "translation": "小学",
+    "translations": [
+      "小学"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00623",
+    "word": "nakunaru",
+    "phonetic": "",
+    "translation": "消失，迷失",
+    "translations": [
+      "消失，迷失"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00624",
+    "word": "inoru",
+    "phonetic": "",
+    "translation": "祷告",
+    "translations": [
+      "祷告"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00625",
+    "word": "erabu",
+    "phonetic": "",
+    "translation": "选择",
+    "translations": [
+      "选择"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00626",
+    "word": "aji",
+    "phonetic": "",
+    "translation": "味道",
+    "translations": [
+      "味道"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00627",
+    "word": "hazu",
+    "phonetic": "",
+    "translation": "应该是这样",
+    "translations": [
+      "应该是这样"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00628",
+    "word": "dondon",
+    "phonetic": "",
+    "translation": "越来越多",
+    "translations": [
+      "越来越多"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00629",
+    "word": "machigaeru",
+    "phonetic": "",
+    "translation": "犯错",
+    "translations": [
+      "犯错"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00630",
+    "word": "sageru",
+    "phonetic": "",
+    "translation": "挂，降，后移",
+    "translations": [
+      "挂，降，后移"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00631",
+    "word": "goshujin",
+    "phonetic": "",
+    "translation": "（尊敬的）你的丈夫",
+    "translations": [
+      "（尊敬的）你的丈夫"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00632",
+    "word": "konoaida",
+    "phonetic": "",
+    "translation": "前几天，最近",
+    "translations": [
+      "前几天，最近"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00633",
+    "word": "zehi",
+    "phonetic": "",
+    "translation": "必定",
+    "translations": [
+      "必定"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  },
+  {
+    "id": "qwerty_japanese003_zh_00634",
+    "word": "modoru",
+    "phonetic": "",
+    "translation": "回头",
+    "translations": [
+      "回头"
+    ],
+    "domain": "qwerty_japanese003_zh"
+  }
+]

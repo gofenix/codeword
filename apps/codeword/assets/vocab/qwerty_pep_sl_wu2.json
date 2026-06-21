@@ -1,0 +1,962 @@
+[
+  {
+    "id": "qwerty_pep_sl_wu2_00001",
+    "word": "too much",
+    "phonetic": "tuː ˈmʌtʃ",
+    "translation": "太多",
+    "translations": [
+      "太多"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00002",
+    "word": "candy",
+    "phonetic": "ˈkændi",
+    "translation": "糖果",
+    "translations": [
+      "糖果"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00003",
+    "word": "go to bed",
+    "phonetic": "ɡoʊ tu bɛd",
+    "translation": "去睡；就寝",
+    "translations": [
+      "去睡；就寝"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00004",
+    "word": "early",
+    "phonetic": "ˈɜrli",
+    "translation": "早",
+    "translations": [
+      "早"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00005",
+    "word": "exercise",
+    "phonetic": "ˈɛksərsaɪz",
+    "translation": "锻炼",
+    "translations": [
+      "锻炼"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00006",
+    "word": "tired",
+    "phonetic": "ˈtaɪrd",
+    "translation": "困倦的；疲倦的",
+    "translations": [
+      "困倦的；疲倦的"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00007",
+    "word": "drink",
+    "phonetic": "drɪŋk",
+    "translation": "喝；饮",
+    "translations": [
+      "喝；饮"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00008",
+    "word": "before",
+    "phonetic": "bɪˈfɔr",
+    "translation": "在……之前",
+    "translations": [
+      "在……之前"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00009",
+    "word": "dirty",
+    "phonetic": "ˈdɜrti",
+    "translation": "肮脏的",
+    "translations": [
+      "肮脏的"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00010",
+    "word": "always",
+    "phonetic": "ˈɔlweɪz",
+    "translation": "总是",
+    "translations": [
+      "总是"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00011",
+    "word": "stomachache",
+    "phonetic": "ˈstʌməkeɪk",
+    "translation": "胃疼",
+    "translations": [
+      "胃疼"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00012",
+    "word": "headache",
+    "phonetic": "ˈhɛdeɪk",
+    "translation": "头疼",
+    "translations": [
+      "头疼"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00013",
+    "word": "toothache",
+    "phonetic": "ˈtuːθeɪk",
+    "translation": "牙疼",
+    "translations": [
+      "牙疼"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00014",
+    "word": "a lot of",
+    "phonetic": "ə ˈlɑt əv",
+    "translation": "大量；许多",
+    "translations": [
+      "大量；许多"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00015",
+    "word": "sleepy",
+    "phonetic": "ˈsliːpi",
+    "translation": "困的；欲睡的",
+    "translations": [
+      "困的；欲睡的"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00016",
+    "word": "subject",
+    "phonetic": "ˈsʌbdʒɪkt",
+    "translation": "学科",
+    "translations": [
+      "学科"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00017",
+    "word": "mark",
+    "phonetic": "mɑrk",
+    "translation": "分数",
+    "translations": [
+      "分数"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00018",
+    "word": "advice",
+    "phonetic": "ædˈvaɪs",
+    "translation": "建议",
+    "translations": [
+      "建议"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00019",
+    "word": "more",
+    "phonetic": "mɔr",
+    "translation": "更多的",
+    "translations": [
+      "更多的"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00020",
+    "word": "New Year's Day",
+    "phonetic": "nu ˈjirz deɪ",
+    "translation": "新年",
+    "translations": [
+      "新年"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00021",
+    "word": "Tree Planting Day",
+    "phonetic": "tri ˈplæntɪŋ deɪ",
+    "translation": "植树节",
+    "translations": [
+      "植树节"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00022",
+    "word": "Mother's Day",
+    "phonetic": "ˈmʌðərz deɪ",
+    "translation": "母亲节",
+    "translations": [
+      "母亲节"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00023",
+    "word": "Children's Day",
+    "phonetic": "ˈtʃɪldrənz deɪ",
+    "translation": "儿童节",
+    "translations": [
+      "儿童节"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00024",
+    "word": "Father's Day",
+    "phonetic": "ˈfɑðərz deɪ",
+    "translation": "父亲节",
+    "translations": [
+      "父亲节"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00025",
+    "word": "Teachers' Day",
+    "phonetic": "ˈtiːtʃərz deɪ",
+    "translation": "教师节",
+    "translations": [
+      "教师节"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00026",
+    "word": "National Day",
+    "phonetic": "ˈnæʃənəl deɪ",
+    "translation": "国庆节",
+    "translations": [
+      "国庆节"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00027",
+    "word": "Christmas Day",
+    "phonetic": "ˈkrɪsməs deɪ",
+    "translation": "圣诞节",
+    "translations": [
+      "圣诞节"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00028",
+    "word": "birthday",
+    "phonetic": "ˈbɜrθdeɪ",
+    "translation": "生日",
+    "translations": [
+      "生日"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00029",
+    "word": "fifth (5th)",
+    "phonetic": "fɪfθ",
+    "translation": "第五",
+    "translations": [
+      "第五"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00030",
+    "word": "tenth (10th)",
+    "phonetic": "tenθ",
+    "translation": "第十",
+    "translations": [
+      "第十"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00031",
+    "word": "twelfth (12th)",
+    "phonetic": "twɛlfθ",
+    "translation": "第十二",
+    "translations": [
+      "第十二"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00032",
+    "word": "twenty-fifth (25th)",
+    "phonetic": "ˈtwɛnti fɪfθ",
+    "translation": "第二十五",
+    "translations": [
+      "第二十五"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00033",
+    "word": "plant",
+    "phonetic": "plænt",
+    "translation": "种植",
+    "translations": [
+      "种植"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00034",
+    "word": "make a poster",
+    "phonetic": "meɪk ə ˈpoʊstər",
+    "translation": "制作海报",
+    "translations": [
+      "制作海报"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00035",
+    "word": "celebrate",
+    "phonetic": "ˈsɛləˌbreɪt",
+    "translation": "庆祝",
+    "translations": [
+      "庆祝"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00036",
+    "word": "have a picnic",
+    "phonetic": "hæv ə ˈpɪknɪk",
+    "translation": "野餐",
+    "translations": [
+      "野餐"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00037",
+    "word": "office",
+    "phonetic": "ˈɔfɪs",
+    "translation": "办公室",
+    "translations": [
+      "办公室"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00038",
+    "word": "together",
+    "phonetic": "təˈɡɛðər",
+    "translation": "在一起；共同",
+    "translations": [
+      "在一起；共同"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00039",
+    "word": "special",
+    "phonetic": "ˈspɛʃəl",
+    "translation": "特殊的；特别的",
+    "translations": [
+      "特殊的；特别的"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00040",
+    "word": "send an email",
+    "phonetic": "sɛnd ən ˈi.ˌmeɪl",
+    "translation": "发送电子邮件",
+    "translations": [
+      "发送电子邮件"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00041",
+    "word": "write a letter",
+    "phonetic": "raɪt ə ˈlɛtər",
+    "translation": "写信",
+    "translations": [
+      "写信"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00042",
+    "word": "make a phone call",
+    "phonetic": "meɪk ə foʊn kɔːl",
+    "translation": "打电话",
+    "translations": [
+      "打电话"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00043",
+    "word": "send a short message",
+    "phonetic": "sɛnd ə ʃɔrt ˈmɛsɪdʒ",
+    "translation": "发送短消息",
+    "translations": [
+      "发送短消息"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00044",
+    "word": "mail a present",
+    "phonetic": "meɪl ə ˈprɛzənt",
+    "translation": "邮寄礼物",
+    "translations": [
+      "邮寄礼物"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00045",
+    "word": "make a video call",
+    "phonetic": "meɪk ə ˈvɪdioʊ kɔːl",
+    "translation": "打视频电话",
+    "translations": [
+      "打视频电话"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00046",
+    "word": "say",
+    "phonetic": "seɪ",
+    "translation": "说；讲",
+    "translations": [
+      "说；讲"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00047",
+    "word": "make a card",
+    "phonetic": "meɪk ə kɑːrd",
+    "translation": "制作卡片",
+    "translations": [
+      "制作卡片"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00048",
+    "word": "everywhere",
+    "phonetic": "ˈɛvriwɛr",
+    "translation": "各处；到处",
+    "translations": [
+      "各处；到处"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00049",
+    "word": "flower show",
+    "phonetic": "ˈflaʊər ʃoʊ",
+    "translation": "花展",
+    "translations": [
+      "花展"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00050",
+    "word": "cleaned the window",
+    "phonetic": "kliːnd ðə ˈwɪndoʊ",
+    "translation": "擦窗子",
+    "translations": [
+      "擦窗子"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00051",
+    "word": "watched TV",
+    "phonetic": "wɑtʃt ˈtiːˈviː",
+    "translation": "看电视",
+    "translations": [
+      "看电视"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00052",
+    "word": "climbed a hill",
+    "phonetic": "klaɪmd ə hɪl",
+    "translation": "爬山",
+    "translations": [
+      "爬山"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00053",
+    "word": "visited grandparents",
+    "phonetic": "ˈvɪzɪtɪd ˈɡrændˌpɛrənts",
+    "translation": "看望祖父母",
+    "translations": [
+      "看望祖父母"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00054",
+    "word": "danced",
+    "phonetic": "dænst",
+    "translation": "跳舞",
+    "translations": [
+      "跳舞"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00055",
+    "word": "jumped rope",
+    "phonetic": "dʒʌmpt roʊp",
+    "translation": "跳绳",
+    "translations": [
+      "跳绳"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00056",
+    "word": "listened to music",
+    "phonetic": "ˈlɪsənd tu ˈmjuːzɪk",
+    "translation": "听音乐",
+    "translations": [
+      "听音乐"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00057",
+    "word": "rowed a boat",
+    "phonetic": "roʊd ə boʊt",
+    "translation": "划船",
+    "translations": [
+      "划船"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00058",
+    "word": "played computer games",
+    "phonetic": "pleɪd kəmˈpjuːtər ɡeɪmz",
+    "translation": "玩电子游戏",
+    "translations": [
+      "玩电子游戏"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00059",
+    "word": "stayed at home",
+    "phonetic": "steɪd æt hoʊm",
+    "translation": "呆在家里",
+    "translations": [
+      "呆在家里"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00060",
+    "word": "played the piano",
+    "phonetic": "pleɪd ðə piˈænoʊ",
+    "translation": "弹钢琴",
+    "translations": [
+      "弹钢琴"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00061",
+    "word": "played chess",
+    "phonetic": "pleɪd tʃɛs",
+    "translation": "下棋",
+    "translations": [
+      "下棋"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00062",
+    "word": "washed clothes",
+    "phonetic": "wɑʃt kloʊðz",
+    "translation": "洗衣服",
+    "translations": [
+      "洗衣服"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00063",
+    "word": "boring",
+    "phonetic": "ˈbɔrɪŋ",
+    "translation": "单调的；乏味的",
+    "translations": [
+      "单调的；乏味的"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00064",
+    "word": "badminton",
+    "phonetic": "ˈbædmɪntən",
+    "translation": "羽毛球",
+    "translations": [
+      "羽毛球"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00065",
+    "word": "won",
+    "phonetic": "wʌn",
+    "translation": "赢；获胜",
+    "translations": [
+      "赢；获胜"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00066",
+    "word": "went to the beach",
+    "phonetic": "wɛnt tu ðə bitʃ",
+    "translation": "过去式：去海边",
+    "translations": [
+      "过去式：去海边"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00067",
+    "word": "drank cold drinks",
+    "phonetic": "dræŋk koʊld drɪŋks",
+    "translation": "过去式：喝冷饮",
+    "translations": [
+      "过去式：喝冷饮"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00068",
+    "word": "swam",
+    "phonetic": "swæm",
+    "translation": "swim的过去式：游泳",
+    "translations": [
+      "swim的过去式：游泳"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00069",
+    "word": "ate ice cream",
+    "phonetic": "ˈeɪt aɪs krim",
+    "translation": "过去式：吃冰激凌",
+    "translations": [
+      "过去式：吃冰激凌"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00070",
+    "word": "the Stone Forest",
+    "phonetic": "ðə ston ˈfɔrɪst",
+    "translation": "石林",
+    "translations": [
+      "石林"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00071",
+    "word": "bought some gifts",
+    "phonetic": "bɔt sʌm ɡɪfts",
+    "translation": "过去式：买礼物",
+    "translations": [
+      "过去式：买礼物"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00072",
+    "word": "took photos",
+    "phonetic": "tʊk ˈfoʊtoʊz",
+    "translation": "过去式：拍照片",
+    "translations": [
+      "过去式：拍照片"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00073",
+    "word": "saw flowers",
+    "phonetic": "sɔ flaʊərz",
+    "translation": "过去式：赏花",
+    "translations": [
+      "过去式：赏花"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00074",
+    "word": "slept",
+    "phonetic": "slɛpt",
+    "translation": "sleep的过去式：睡觉",
+    "translations": [
+      "sleep的过去式：睡觉"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00075",
+    "word": "delicious",
+    "phonetic": "dɪˈlɪʃəs",
+    "translation": "美味的；可口的",
+    "translations": [
+      "美味的；可口的"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00076",
+    "word": "felt happy",
+    "phonetic": "fɛlt ˈhæpi",
+    "translation": "过去式：觉得高兴",
+    "translations": [
+      "过去式：觉得高兴"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00077",
+    "word": "sad",
+    "phonetic": "sæd",
+    "translation": "悲哀的；难过的",
+    "translations": [
+      "悲哀的；难过的"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00078",
+    "word": "left",
+    "phonetic": "lɛft",
+    "translation": "leave的过去式：离开",
+    "translations": [
+      "leave的过去式：离开"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00079",
+    "word": "French fries",
+    "phonetic": "frɛntʃ fraɪz",
+    "translation": "法式炸薯条",
+    "translations": [
+      "法式炸薯条"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00080",
+    "word": "were",
+    "phonetic": "wər",
+    "translation": "are的过去式：是",
+    "translations": [
+      "are的过去式：是"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00081",
+    "word": "was born",
+    "phonetic": "wɑz bɔrn",
+    "translation": "过去式：出生",
+    "translations": [
+      "过去式：出生"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00082",
+    "word": "started to speak",
+    "phonetic": "ˈstɑrtɪd tu spiːk",
+    "translation": "过去式：开始说话",
+    "translations": [
+      "过去式：开始说话"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00083",
+    "word": "learned to walk",
+    "phonetic": "lɜːrnd tu wɔːk",
+    "translation": "过去式：学走路",
+    "translations": [
+      "过去式：学走路"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00084",
+    "word": "learned to ride a bike",
+    "phonetic": "lɜːrnd tu raɪd ə ˈbaɪk",
+    "translation": "过去式：学骑自行车",
+    "translations": [
+      "过去式：学骑自行车"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00085",
+    "word": "went to kindergarten",
+    "phonetic": "wɛnt tu ˈkɪndərˌɡɑːrdən",
+    "translation": "过去式：上幼儿园",
+    "translations": [
+      "过去式：上幼儿园"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00086",
+    "word": "went to school",
+    "phonetic": "wɛnt tu skul",
+    "translation": "过去式：上学",
+    "translations": [
+      "过去式：上学"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00087",
+    "word": "learned to swim",
+    "phonetic": "lɜːrnd tu swɪm",
+    "translation": "过去式：学游泳",
+    "translations": [
+      "过去式：学游泳"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00088",
+    "word": "fifteenth (15th)",
+    "phonetic": "ˌfɪfˈtiːnθ",
+    "translation": "第十五",
+    "translations": [
+      "第十五"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00089",
+    "word": "started to buy things",
+    "phonetic": "ˈstɑrtɪd tu baɪ θɪŋz",
+    "translation": "过去式：开始学买东西",
+    "translations": [
+      "过去式：开始学买东西"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00090",
+    "word": "started to study English",
+    "phonetic": "ˈstɑrtɪd tu ˈstʌdi ˈɪŋɡlɪʃ",
+    "translation": "过去式：开始学英语",
+    "translations": [
+      "过去式：开始学英语"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00091",
+    "word": "started to use a computer",
+    "phonetic": "ˈstɑrtɪd tuː juz ə kəmˈpjuːtər",
+    "translation": "过去式：开始使用电脑",
+    "translations": [
+      "过去式：开始使用电脑"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00092",
+    "word": "all over",
+    "phonetic": "ɔːl ˈoʊvər",
+    "translation": "到处；各处",
+    "translations": [
+      "到处；各处"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00093",
+    "word": "out of",
+    "phonetic": "aʊt əv",
+    "translation": "离开（某处）",
+    "translations": [
+      "离开（某处）"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00094",
+    "word": "into",
+    "phonetic": "ˈɪntuː",
+    "translation": "进入；到……里",
+    "translations": [
+      "进入；到……里"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00095",
+    "word": "chopsticks",
+    "phonetic": "ˈtʃɑpˌstɪks",
+    "translation": "筷子",
+    "translations": [
+      "筷子"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  },
+  {
+    "id": "qwerty_pep_sl_wu2_00096",
+    "word": "wet",
+    "phonetic": "wɛt",
+    "translation": "湿的，潮湿的",
+    "translations": [
+      "湿的，潮湿的"
+    ],
+    "domain": "qwerty_pep_sl_wu2"
+  }
+]

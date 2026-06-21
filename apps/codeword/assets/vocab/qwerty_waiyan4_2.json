@@ -1,0 +1,1342 @@
+[
+  {
+    "id": "qwerty_waiyan4_2_00001",
+    "word": "nice",
+    "phonetic": "",
+    "translation": "adv.友好的，亲切的，讨人喜欢的",
+    "translations": [
+      "adv.友好的，亲切的，讨人喜欢的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00002",
+    "word": "clever",
+    "phonetic": "",
+    "translation": "adv.聪明的",
+    "translations": [
+      "adv.聪明的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00003",
+    "word": "naughy",
+    "phonetic": "",
+    "translation": "adv.淘气的",
+    "translations": [
+      "adv.淘气的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00004",
+    "word": "a bit",
+    "phonetic": "",
+    "translation": "adv.稍微，有点",
+    "translations": [
+      "adv.稍微，有点"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00005",
+    "word": "shy",
+    "phonetic": "",
+    "translation": "adv.害羞的",
+    "translations": [
+      "adv.害羞的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00006",
+    "word": "answer",
+    "phonetic": "",
+    "translation": "adv.接（电话）",
+    "translations": [
+      "adv.接（电话）"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00007",
+    "word": "call",
+    "phonetic": "",
+    "translation": "adv.电话；（给......)打电话",
+    "translations": [
+      "adv.电话；（给......)打电话"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00008",
+    "word": "bad",
+    "phonetic": "",
+    "translation": "adv.不好的，坏的",
+    "translations": [
+      "adv.不好的，坏的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00009",
+    "word": "cool",
+    "phonetic": "",
+    "translation": "adv.酷的",
+    "translations": [
+      "adv.酷的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00010",
+    "word": "aunt",
+    "phonetic": "",
+    "translation": "adv.姨母；姑母；舅母；伯母；婶母",
+    "translations": [
+      "adv.姨母；姑母；舅母；伯母；婶母"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00011",
+    "word": "uncle",
+    "phonetic": "",
+    "translation": "adv.伯父；叔父；舅父；姑父；姨父",
+    "translations": [
+      "adv.伯父；叔父；舅父；姑父；姨父"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00012",
+    "word": "big",
+    "phonetic": "",
+    "translation": "adv.年龄较大的",
+    "translations": [
+      "adv.年龄较大的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00013",
+    "word": "little",
+    "phonetic": "",
+    "translation": "adv.幼小的，年幼的",
+    "translations": [
+      "adv.幼小的，年幼的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00014",
+    "word": "cute",
+    "phonetic": "",
+    "translation": "adv.可爱的",
+    "translations": [
+      "adv.可爱的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00015",
+    "word": "city",
+    "phonetic": "",
+    "translation": "adv.城市",
+    "translations": [
+      "adv.城市"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00016",
+    "word": "ship",
+    "phonetic": "",
+    "translation": "adv.船",
+    "translations": [
+      "adv.船"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00017",
+    "word": "beautiful",
+    "phonetic": "",
+    "translation": "adv.美丽的，",
+    "translations": [
+      "adv.美丽的，"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00018",
+    "word": "whose",
+    "phonetic": "",
+    "translation": "adv.谁的",
+    "translations": [
+      "adv.谁的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00019",
+    "word": "queen",
+    "phonetic": "",
+    "translation": "adv.女王",
+    "translations": [
+      "adv.女王"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00020",
+    "word": "close",
+    "phonetic": "",
+    "translation": "adv.近的，接近的",
+    "translations": [
+      "adv.近的，接近的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00021",
+    "word": "old",
+    "phonetic": "",
+    "translation": "adv.年代久的，古老的",
+    "translations": [
+      "adv.年代久的，古老的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00022",
+    "word": "famous",
+    "phonetic": "",
+    "translation": "adv.著名的",
+    "translations": [
+      "adv.著名的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00023",
+    "word": "robot",
+    "phonetic": "",
+    "translation": "adv.机器人",
+    "translations": [
+      "adv.机器人"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00024",
+    "word": "will",
+    "phonetic": "",
+    "translation": "adv.将，将会",
+    "translations": [
+      "adv.将，将会"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00025",
+    "word": "everything",
+    "phonetic": "",
+    "translation": "adv.所有事情",
+    "translations": [
+      "adv.所有事情"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00026",
+    "word": "one day",
+    "phonetic": "",
+    "translation": "（将来）有一天",
+    "translations": [
+      "（将来）有一天"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00027",
+    "word": "housework",
+    "phonetic": "",
+    "translation": "adv.家务活",
+    "translations": [
+      "adv.家务活"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00028",
+    "word": "learn",
+    "phonetic": "",
+    "translation": "adv.学习",
+    "translations": [
+      "adv.学习"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00029",
+    "word": "our",
+    "phonetic": "",
+    "translation": "adv.我们的",
+    "translations": [
+      "adv.我们的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00030",
+    "word": "homework",
+    "phonetic": "",
+    "translation": "adv.家庭作业",
+    "translations": [
+      "adv.家庭作业"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00031",
+    "word": "won't=will not",
+    "phonetic": "",
+    "translation": "adv.将不会",
+    "translations": [
+      "adv.将不会"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00032",
+    "word": "Tuesday",
+    "phonetic": "",
+    "translation": "adv.星期二",
+    "translations": [
+      "adv.星期二"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00033",
+    "word": "Wednesday",
+    "phonetic": "",
+    "translation": "adv.星期三",
+    "translations": [
+      "adv.星期三"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00034",
+    "word": "Thursday",
+    "phonetic": "",
+    "translation": "adv.星期四",
+    "translations": [
+      "adv.星期四"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00035",
+    "word": "Friday",
+    "phonetic": "",
+    "translation": "adv.星期五",
+    "translations": [
+      "adv.星期五"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00036",
+    "word": "have",
+    "phonetic": "",
+    "translation": "adv.有，拥有",
+    "translations": [
+      "adv.有，拥有"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00037",
+    "word": "next",
+    "phonetic": "",
+    "translation": "adv.下一个的",
+    "translations": [
+      "adv.下一个的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00038",
+    "word": "week",
+    "phonetic": "",
+    "translation": "adv.星期，周",
+    "translations": [
+      "adv.星期，周"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00039",
+    "word": "holiday",
+    "phonetic": "",
+    "translation": "adv.假期",
+    "translations": [
+      "adv.假期"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00040",
+    "word": "take",
+    "phonetic": "",
+    "translation": "adv.带，拿",
+    "translations": [
+      "adv.带，拿"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00041",
+    "word": "fly",
+    "phonetic": "",
+    "translation": "adv.飞",
+    "translations": [
+      "adv.飞"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00042",
+    "word": "picnic",
+    "phonetic": "",
+    "translation": "adv.野餐",
+    "translations": [
+      "adv.野餐"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00043",
+    "word": "great",
+    "phonetic": "",
+    "translation": "adv.太好了好极了",
+    "translations": [
+      "adv.太好了好极了"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00044",
+    "word": "why",
+    "phonetic": "",
+    "translation": "adv.为什么",
+    "translations": [
+      "adv.为什么"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00045",
+    "word": "why not?",
+    "phonetic": "",
+    "translation": "adv.为什么不呢？",
+    "translations": [
+      "adv.为什么不呢？"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00046",
+    "word": "because",
+    "phonetic": "",
+    "translation": "adv.因为",
+    "translations": [
+      "adv.因为"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00047",
+    "word": "so",
+    "phonetic": "",
+    "translation": "adv.所以",
+    "translations": [
+      "adv.所以"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00048",
+    "word": "cloudy",
+    "phonetic": "",
+    "translation": "adv.多云的",
+    "translations": [
+      "adv.多云的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00049",
+    "word": "weather",
+    "phonetic": "",
+    "translation": "adv.天气",
+    "translations": [
+      "adv.天气"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00050",
+    "word": "was",
+    "phonetic": "",
+    "translation": "adv.（am,is的过去式）是",
+    "translations": [
+      "adv.（am,is的过去式）是"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00051",
+    "word": "then",
+    "phonetic": "",
+    "translation": "adv.当时，那是",
+    "translations": [
+      "adv.当时，那是"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00052",
+    "word": "grandparent",
+    "phonetic": "",
+    "translation": "adv.祖父；祖母，外祖父；外祖母",
+    "translations": [
+      "adv.祖父；祖母，外祖父；外祖母"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00053",
+    "word": "were",
+    "phonetic": "",
+    "translation": "adv.（are的过去式）是",
+    "translations": [
+      "adv.（are的过去式）是"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00054",
+    "word": "young",
+    "phonetic": "",
+    "translation": "adv.年轻的",
+    "translations": [
+      "adv.年轻的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00055",
+    "word": "hair",
+    "phonetic": "",
+    "translation": "adv.头发",
+    "translations": [
+      "adv.头发"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00056",
+    "word": "so",
+    "phonetic": "",
+    "translation": "adv.这么，那么",
+    "translations": [
+      "adv.这么，那么"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00057",
+    "word": "short",
+    "phonetic": "",
+    "translation": "adv.短的",
+    "translations": [
+      "adv.短的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00058",
+    "word": "long",
+    "phonetic": "",
+    "translation": "adv.长的",
+    "translations": [
+      "adv.长的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00059",
+    "word": "wasn't=was not",
+    "phonetic": "",
+    "translation": "adv.不是",
+    "translations": [
+      "adv.不是"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00060",
+    "word": "weren't=were not",
+    "phonetic": "",
+    "translation": "adv.不是",
+    "translations": [
+      "adv.不是"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00061",
+    "word": "clean",
+    "phonetic": "",
+    "translation": "adv.干净的",
+    "translations": [
+      "adv.干净的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00062",
+    "word": "dirty",
+    "phonetic": "",
+    "translation": "adv.脏的",
+    "translations": [
+      "adv.脏的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00063",
+    "word": "yesterday",
+    "phonetic": "",
+    "translation": "adv.昨天",
+    "translations": [
+      "adv.昨天"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00064",
+    "word": "out",
+    "phonetic": "",
+    "translation": "adv.不在家（的）；在外面（的)",
+    "translations": [
+      "adv.不在家（的）；在外面（的)"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00065",
+    "word": "well",
+    "phonetic": "",
+    "translation": "adv.健康的",
+    "translations": [
+      "adv.健康的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00066",
+    "word": "thanks",
+    "phonetic": "",
+    "translation": "adv.谢谢",
+    "translations": [
+      "adv.谢谢"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00067",
+    "word": "sun",
+    "phonetic": "",
+    "translation": "adv.太阳",
+    "translations": [
+      "adv.太阳"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00068",
+    "word": "lesson",
+    "phonetic": "",
+    "translation": "adv.一节课，一堂课",
+    "translations": [
+      "adv.一节课，一堂课"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00069",
+    "word": "village",
+    "phonetic": "",
+    "translation": "adv.乡村，村子",
+    "translations": [
+      "adv.乡村，村子"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00070",
+    "word": "had",
+    "phonetic": "",
+    "translation": "adv.（have的过去式）度过",
+    "translations": [
+      "adv.（have的过去式）度过"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00071",
+    "word": "phone",
+    "phonetic": "",
+    "translation": "adv.（给......）打电话",
+    "translations": [
+      "adv.（给......）打电话"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00072",
+    "word": "cook",
+    "phonetic": "",
+    "translation": "adv.烹调;煮;烧",
+    "translations": [
+      "adv.烹调;煮;烧"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00073",
+    "word": "really",
+    "phonetic": "",
+    "translation": "adv.真的",
+    "translations": [
+      "adv.真的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00074",
+    "word": "wash",
+    "phonetic": "",
+    "translation": "adv.洗",
+    "translations": [
+      "adv.洗"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00075",
+    "word": "what about...?",
+    "phonetic": "",
+    "translation": "adv.......怎么样？",
+    "translations": [
+      "adv.......怎么样？"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00076",
+    "word": "did",
+    "phonetic": "",
+    "translation": "adv.(do的过去式）助动词",
+    "translations": [
+      "adv.(do的过去式）助动词"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00077",
+    "word": "didn't=did not",
+    "phonetic": "",
+    "translation": "adv.没有",
+    "translations": [
+      "adv.没有"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00078",
+    "word": "computer",
+    "phonetic": "",
+    "translation": "adv.计算机，电脑",
+    "translations": [
+      "adv.计算机，电脑"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00079",
+    "word": "love",
+    "phonetic": "",
+    "translation": "adv.爱，喜欢",
+    "translations": [
+      "adv.爱，喜欢"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00080",
+    "word": "him",
+    "phonetic": "",
+    "translation": "adv.（宾格）他",
+    "translations": [
+      "adv.（宾格）他"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00081",
+    "word": "Mrs",
+    "phonetic": "",
+    "translation": "adv.太太，夫人",
+    "translations": [
+      "adv.太太，夫人"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00082",
+    "word": "Miss",
+    "phonetic": "",
+    "translation": "adv.小姐",
+    "translations": [
+      "adv.小姐"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00083",
+    "word": "sang",
+    "phonetic": "",
+    "translation": "adv.（sing的过去式）唱歌",
+    "translations": [
+      "adv.（sing的过去式）唱歌"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00084",
+    "word": "beautifully",
+    "phonetic": "",
+    "translation": "adv.优美的，动听的",
+    "translations": [
+      "adv.优美的，动听的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00085",
+    "word": "saw",
+    "phonetic": "",
+    "translation": "adv.（see的过去式）看见",
+    "translations": [
+      "adv.（see的过去式）看见"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00086",
+    "word": "game",
+    "phonetic": "",
+    "translation": "adv.游戏，比赛",
+    "translations": [
+      "adv.游戏，比赛"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00087",
+    "word": "last",
+    "phonetic": "",
+    "translation": "adv.最近过去的",
+    "translations": [
+      "adv.最近过去的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00088",
+    "word": "fun",
+    "phonetic": "",
+    "translation": "adv.有趣的是",
+    "translations": [
+      "adv.有趣的是"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00089",
+    "word": "went",
+    "phonetic": "",
+    "translation": "adv.（go的过去式）去",
+    "translations": [
+      "adv.（go的过去式）去"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00090",
+    "word": "there",
+    "phonetic": "",
+    "translation": "adv.在那儿，往那里",
+    "translations": [
+      "adv.在那儿，往那里"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00091",
+    "word": "ate",
+    "phonetic": "",
+    "translation": "adv.（eat的过去式）吃",
+    "translations": [
+      "adv.（eat的过去式）吃"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00092",
+    "word": "drank",
+    "phonetic": "",
+    "translation": "adv.（drink的过去式）喝，饮",
+    "translations": [
+      "adv.（drink的过去式）喝，饮"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00093",
+    "word": "drink",
+    "phonetic": "",
+    "translation": "adv.饮料",
+    "translations": [
+      "adv.饮料"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00094",
+    "word": "time",
+    "phonetic": "",
+    "translation": "adv.一段时间",
+    "translations": [
+      "adv.一段时间"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00095",
+    "word": "have a good time",
+    "phonetic": "",
+    "translation": "adv.玩得开心",
+    "translations": [
+      "adv.玩得开心"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00096",
+    "word": "busy",
+    "phonetic": "",
+    "translation": "adv.忙的，忙碌的",
+    "translations": [
+      "adv.忙的，忙碌的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00097",
+    "word": "took",
+    "phonetic": "",
+    "translation": "adv.（take的过去式）拍摄",
+    "translations": [
+      "adv.（take的过去式）拍摄"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00098",
+    "word": "tell",
+    "phonetic": "",
+    "translation": "adv.告诉，告知",
+    "translations": [
+      "adv.告诉，告知"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00099",
+    "word": "great",
+    "phonetic": "",
+    "translation": "adv.非常好，令人愉快的",
+    "translations": [
+      "adv.非常好，令人愉快的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00100",
+    "word": "delicious",
+    "phonetic": "",
+    "translation": "adv.美味的，可口的",
+    "translations": [
+      "adv.美味的，可口的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00101",
+    "word": "made",
+    "phonetic": "",
+    "translation": "adv.（make的过去式）做，制作",
+    "translations": [
+      "adv.（make的过去式）做，制作"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00102",
+    "word": "poster",
+    "phonetic": "",
+    "translation": "adv.海报，招贴画",
+    "translations": [
+      "adv.海报，招贴画"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00103",
+    "word": "welcome",
+    "phonetic": "",
+    "translation": "adv.欢迎",
+    "translations": [
+      "adv.欢迎"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00104",
+    "word": "postcard",
+    "phonetic": "",
+    "translation": "adv.明信片",
+    "translations": [
+      "adv.明信片"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00105",
+    "word": "cousin",
+    "phonetic": "",
+    "translation": "adv.表（堂）兄弟；表（堂）兄妹",
+    "translations": [
+      "adv.表（堂）兄弟；表（堂）兄妹"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00106",
+    "word": "dear",
+    "phonetic": "",
+    "translation": "adv.亲爱的",
+    "translations": [
+      "adv.亲爱的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00107",
+    "word": "on holiday",
+    "phonetic": "",
+    "translation": "adv.在休假，在度假",
+    "translations": [
+      "adv.在休假，在度假"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00108",
+    "word": "travel",
+    "phonetic": "",
+    "translation": "adv.旅行；游历",
+    "translations": [
+      "adv.旅行；游历"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00109",
+    "word": "came",
+    "phonetic": "",
+    "translation": "adv.（come的过去式）来",
+    "translations": [
+      "adv.（come的过去式）来"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00110",
+    "word": "pop",
+    "phonetic": "",
+    "translation": "adv.流行音乐",
+    "translations": [
+      "adv.流行音乐"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00111",
+    "word": "concert",
+    "phonetic": "",
+    "translation": "adv.音乐会",
+    "translations": [
+      "adv.音乐会"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00112",
+    "word": "earth",
+    "phonetic": "",
+    "translation": "adv.地球",
+    "translations": [
+      "adv.地球"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00113",
+    "word": "fall",
+    "phonetic": "",
+    "translation": "adv.掉下，落下；摔倒",
+    "translations": [
+      "adv.掉下，落下；摔倒"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00114",
+    "word": "fall of",
+    "phonetic": "",
+    "translation": "adv.跌落",
+    "translations": [
+      "adv.跌落"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00115",
+    "word": "fell",
+    "phonetic": "",
+    "translation": "adv.(fall的过去式）掉下，落下；摔倒",
+    "translations": [
+      "adv.(fall的过去式）掉下，落下；摔倒"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00116",
+    "word": "fall down",
+    "phonetic": "",
+    "translation": "adv.摔倒，跌倒；坍塌",
+    "translations": [
+      "adv.摔倒，跌倒；坍塌"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00117",
+    "word": "found",
+    "phonetic": "",
+    "translation": "adv.（find的过去式）发现，找到",
+    "translations": [
+      "adv.（find的过去式）发现，找到"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00118",
+    "word": "town",
+    "phonetic": "",
+    "translation": "adv.城镇，市镇",
+    "translations": [
+      "adv.城镇，市镇"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00119",
+    "word": "happen",
+    "phonetic": "",
+    "translation": "adv.发生",
+    "translations": [
+      "adv.发生"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00120",
+    "word": "ride",
+    "phonetic": "",
+    "translation": "adv.骑车",
+    "translations": [
+      "adv.骑车"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00121",
+    "word": "then",
+    "phonetic": "",
+    "translation": "adv.然后",
+    "translations": [
+      "adv.然后"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00122",
+    "word": "thirsty",
+    "phonetic": "",
+    "translation": "adv.（口）渴的",
+    "translations": [
+      "adv.（口）渴的"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00123",
+    "word": "water",
+    "phonetic": "",
+    "translation": "adv.水",
+    "translations": [
+      "adv.水"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00124",
+    "word": "bought",
+    "phonetic": "",
+    "translation": "adv.（buy的过去式）买",
+    "translations": [
+      "adv.（buy的过去式）买"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00125",
+    "word": "watermelon",
+    "phonetic": "",
+    "translation": "adv.西瓜",
+    "translations": [
+      "adv.西瓜"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00126",
+    "word": "carried",
+    "phonetic": "",
+    "translation": "adv.carry的过去式）拿，搬",
+    "translations": [
+      "adv.carry的过去式）拿，搬"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00127",
+    "word": "bump",
+    "phonetic": "",
+    "translation": "adv.撞伤",
+    "translations": [
+      "adv.撞伤"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00128",
+    "word": "hospital",
+    "phonetic": "",
+    "translation": "adv.医院",
+    "translations": [
+      "adv.医院"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00129",
+    "word": "had",
+    "phonetic": "",
+    "translation": "adv.（have的过去式）吃，喝",
+    "translations": [
+      "adv.（have的过去式）吃，喝"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00130",
+    "word": "chocolate",
+    "phonetic": "",
+    "translation": "adv.巧克力",
+    "translations": [
+      "adv.巧克力"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00131",
+    "word": "stomach ache",
+    "phonetic": "",
+    "translation": "adv.胃痛",
+    "translations": [
+      "adv.胃痛"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00132",
+    "word": "cold",
+    "phonetic": "",
+    "translation": "adv.感冒",
+    "translations": [
+      "adv.感冒"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00133",
+    "word": "headache",
+    "phonetic": "",
+    "translation": "adv.头痛",
+    "translations": [
+      "adv.头痛"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  },
+  {
+    "id": "qwerty_waiyan4_2_00134",
+    "word": "fever",
+    "phonetic": "",
+    "translation": "adv.发烧",
+    "translations": [
+      "adv.发烧"
+    ],
+    "domain": "qwerty_waiyan4_2"
+  }
+]

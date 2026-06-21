@@ -1,0 +1,2552 @@
+[
+  {
+    "id": "qwerty_top_250_adv_words_00001",
+    "word": "not",
+    "phonetic": "nɑt",
+    "translation": "Not means the opposite or the absence of a particular thing or action.",
+    "translations": [
+      "Not means the opposite or the absence of a particular thing or action."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00002",
+    "word": "also",
+    "phonetic": "'ɔlso",
+    "translation": "Also means in addition to something or too.",
+    "translations": [
+      "Also means in addition to something or too."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00003",
+    "word": "very",
+    "phonetic": "ˈvɛrɪ",
+    "translation": "Very means to a great extent or degree.",
+    "translations": [
+      "Very means to a great extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00004",
+    "word": "often",
+    "phonetic": "ˈɔ:fn; ɔfən",
+    "translation": "Often means many times or frequently.",
+    "translations": [
+      "Often means many times or frequently."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00005",
+    "word": "however",
+    "phonetic": "haʊ'ɛvɚ",
+    "translation": "However means on the other hand or nevertheless.",
+    "translations": [
+      "However means on the other hand or nevertheless."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00006",
+    "word": "too",
+    "phonetic": "tu",
+    "translation": "Too means also or in addition, and can also indicate an excess or degree of something.",
+    "translations": [
+      "Too means also or in addition, and can also indicate an excess or degree of something."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00007",
+    "word": "usually",
+    "phonetic": "juʒəlɪ",
+    "translation": "Usually means normally or typically.",
+    "translations": [
+      "Usually means normally or typically."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00008",
+    "word": "really",
+    "phonetic": "ˈriəˌli, ˈrili",
+    "translation": "Really means truly or genuinely.",
+    "translations": [
+      "Really means truly or genuinely."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00009",
+    "word": "early",
+    "phonetic": "'ɝli",
+    "translation": "Early means before the usual or expected time.",
+    "translations": [
+      "Early means before the usual or expected time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00010",
+    "word": "never",
+    "phonetic": "'nɛvɚ",
+    "translation": "Never means not at any time or not once.",
+    "translations": [
+      "Never means not at any time or not once."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00011",
+    "word": "always",
+    "phonetic": "'ɔlwez",
+    "translation": "Always means at all times or on every occasion.",
+    "translations": [
+      "Always means at all times or on every occasion."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00012",
+    "word": "sometimes",
+    "phonetic": "'sʌmtaɪmz",
+    "translation": "Sometimes means occasionally or from time to time.",
+    "translations": [
+      "Sometimes means occasionally or from time to time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00013",
+    "word": "together",
+    "phonetic": "tə'ɡɛðɚ",
+    "translation": "Together means in a group or in a cooperative manner.",
+    "translations": [
+      "Together means in a group or in a cooperative manner."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00014",
+    "word": "likely",
+    "phonetic": "'laɪkli",
+    "translation": "Likely means probably or with a high probability.",
+    "translations": [
+      "Likely means probably or with a high probability."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00015",
+    "word": "simply",
+    "phonetic": "'sɪmpli",
+    "translation": "Simply means in a plain or straightforward manner.",
+    "translations": [
+      "Simply means in a plain or straightforward manner."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00016",
+    "word": "generally",
+    "phonetic": "'dʒɛnrəli",
+    "translation": "Generally means usually or commonly.",
+    "translations": [
+      "Generally means usually or commonly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00017",
+    "word": "instead",
+    "phonetic": "ɪn'stɛd",
+    "translation": "Instead means as an alternative or substitute.",
+    "translations": [
+      "Instead means as an alternative or substitute."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00018",
+    "word": "actually",
+    "phonetic": "'æktʃuəli",
+    "translation": "Actually means in reality or in fact.",
+    "translations": [
+      "Actually means in reality or in fact."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00019",
+    "word": "again",
+    "phonetic": "əˈɡɛn, əˈɡen",
+    "translation": "Again means once more or another time.",
+    "translations": [
+      "Again means once more or another time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00020",
+    "word": "rather",
+    "phonetic": "'ræðɚ",
+    "translation": "Rather means to a certain extent or degree.",
+    "translations": [
+      "Rather means to a certain extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00021",
+    "word": "almost",
+    "phonetic": "'ɔlmost",
+    "translation": "Almost means nearly or just about.",
+    "translations": [
+      "Almost means nearly or just about."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00022",
+    "word": "especially",
+    "phonetic": "ɪˈspɛʃlɪ",
+    "translation": "Especially means particularly or notably.",
+    "translations": [
+      "Especially means particularly or notably."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00023",
+    "word": "ever",
+    "phonetic": "'ɛvɚ",
+    "translation": "Ever means at any time or in the course of one's life.",
+    "translations": [
+      "Ever means at any time or in the course of one's life."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00024",
+    "word": "quickly",
+    "phonetic": "'kwɪkli",
+    "translation": "Quickly means in a rapid or speedy manner.",
+    "translations": [
+      "Quickly means in a rapid or speedy manner."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00025",
+    "word": "probably",
+    "phonetic": "'prɑbəbli",
+    "translation": "Probably means likely or with a high probability.",
+    "translations": [
+      "Probably means likely or with a high probability."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00026",
+    "word": "already",
+    "phonetic": "ɔl'rɛdi",
+    "translation": "Already means by this time or before the present time.",
+    "translations": [
+      "Already means by this time or before the present time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00027",
+    "word": "below",
+    "phonetic": "bɪ'lo",
+    "translation": "Below means lower or beneath.",
+    "translations": [
+      "Below means lower or beneath."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00028",
+    "word": "directly",
+    "phonetic": "dəˈrektli",
+    "translation": "Directly means immediately or straight.",
+    "translations": [
+      "Directly means immediately or straight."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00029",
+    "word": "therefore",
+    "phonetic": "'ðɛrfɔr",
+    "translation": "Therefore means as a result or consequently.",
+    "translations": [
+      "Therefore means as a result or consequently."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00030",
+    "word": "else",
+    "phonetic": "ɛls",
+    "translation": "Else means otherwise or in addition to.",
+    "translations": [
+      "Else means otherwise or in addition to."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00031",
+    "word": "thus",
+    "phonetic": "ðʌs",
+    "translation": "Thus means in this way or as a result of this.",
+    "translations": [
+      "Thus means in this way or as a result of this."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00032",
+    "word": "easily",
+    "phonetic": "'izəli",
+    "translation": "Easily means with ease or without difficulty.",
+    "translations": [
+      "Easily means with ease or without difficulty."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00033",
+    "word": "eventually",
+    "phonetic": "ɪ'vɛntʃuəli",
+    "translation": "Eventually means in the end or finally.",
+    "translations": [
+      "Eventually means in the end or finally."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00034",
+    "word": "exactly",
+    "phonetic": "ɪɡ'zæktli",
+    "translation": "Exactly means precisely or accurately.",
+    "translations": [
+      "Exactly means precisely or accurately."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00035",
+    "word": "certainly",
+    "phonetic": "'sɝtnli",
+    "translation": "Certainly means without doubt or surely.",
+    "translations": [
+      "Certainly means without doubt or surely."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00036",
+    "word": "normally",
+    "phonetic": "'nɔrmli",
+    "translation": "Normally means typically or usually.",
+    "translations": [
+      "Normally means typically or usually."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00037",
+    "word": "currently",
+    "phonetic": "'kɝrəntlɪ",
+    "translation": "Currently means at the present time or now.",
+    "translations": [
+      "Currently means at the present time or now."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00038",
+    "word": "extremely",
+    "phonetic": "ɪk'strimli",
+    "translation": "Extremely means to a great extent or degree.",
+    "translations": [
+      "Extremely means to a great extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00039",
+    "word": "finally",
+    "phonetic": "'faɪnlɪ",
+    "translation": "Finally means at last or in the end.",
+    "translations": [
+      "Finally means at last or in the end."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00040",
+    "word": "constantly",
+    "phonetic": "'kɑnstəntli",
+    "translation": "Constantly means continuously or always.",
+    "translations": [
+      "Constantly means continuously or always."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00041",
+    "word": "properly",
+    "phonetic": "'prɑpɚli",
+    "translation": "Properly means correctly or in the appropriate manner.",
+    "translations": [
+      "Properly means correctly or in the appropriate manner."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00042",
+    "word": "soon",
+    "phonetic": "sun",
+    "translation": "Soon means in a short time or shortly.",
+    "translations": [
+      "Soon means in a short time or shortly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00043",
+    "word": "specifically",
+    "phonetic": "spə'sɪfɪkli",
+    "translation": "Specifically means in a precise or detailed manner.",
+    "translations": [
+      "Specifically means in a precise or detailed manner."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00044",
+    "word": "ahead",
+    "phonetic": "ə'hɛd",
+    "translation": "Ahead means in front or before.",
+    "translations": [
+      "Ahead means in front or before."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00045",
+    "word": "daily",
+    "phonetic": "'delɪ",
+    "translation": "Daily means occurring every day or on a daily basis.",
+    "translations": [
+      "Daily means occurring every day or on a daily basis."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00046",
+    "word": "highly",
+    "phonetic": "'haɪli",
+    "translation": "Highly means to a great degree or extent.",
+    "translations": [
+      "Highly means to a great degree or extent."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00047",
+    "word": "immediately",
+    "phonetic": "ɪ'midɪətli",
+    "translation": "Immediately means instantly or without delay.",
+    "translations": [
+      "Immediately means instantly or without delay."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00048",
+    "word": "relatively",
+    "phonetic": "'rɛlətɪvli",
+    "translation": "Relatively means comparatively or to a certain extent.",
+    "translations": [
+      "Relatively means comparatively or to a certain extent."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00049",
+    "word": "slowly",
+    "phonetic": "'sloli",
+    "translation": "Slowly means at a low speed or pace.",
+    "translations": [
+      "Slowly means at a low speed or pace."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00050",
+    "word": "fairly",
+    "phonetic": "'fɛrli",
+    "translation": "Fairly means in a just or impartial manner.",
+    "translations": [
+      "Fairly means in a just or impartial manner."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00051",
+    "word": "primarily",
+    "phonetic": "praɪ'mɛrəli",
+    "translation": "Primarily means mainly or principally.",
+    "translations": [
+      "Primarily means mainly or principally."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00052",
+    "word": "completely",
+    "phonetic": "kəm'plitli",
+    "translation": "Completely means entirely or fully.",
+    "translations": [
+      "Completely means entirely or fully."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00053",
+    "word": "ultimately",
+    "phonetic": "'ʌltɪmətli",
+    "translation": "Ultimately means finally or in the end.",
+    "translations": [
+      "Ultimately means finally or in the end."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00054",
+    "word": "widely",
+    "phonetic": "'waɪdli",
+    "translation": "Widely means extensively or broadly.",
+    "translations": [
+      "Widely means extensively or broadly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00055",
+    "word": "recently",
+    "phonetic": "'risntli",
+    "translation": "Recently means in the recent past or lately.",
+    "translations": [
+      "Recently means in the recent past or lately."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00056",
+    "word": "seriously",
+    "phonetic": "'sɪrɪəsli",
+    "translation": "Seriously means in a serious manner or with sincerity.",
+    "translations": [
+      "Seriously means in a serious manner or with sincerity."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00057",
+    "word": "frequently",
+    "phonetic": "'frikwəntli",
+    "translation": "Frequently means often or repeatedly.",
+    "translations": [
+      "Frequently means often or repeatedly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00058",
+    "word": "fully",
+    "phonetic": "'fʊli",
+    "translation": "Fully means completely or entirely.",
+    "translations": [
+      "Fully means completely or entirely."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00059",
+    "word": "mostly",
+    "phonetic": "'mostli",
+    "translation": "Mostly means mainly or for the most part.",
+    "translations": [
+      "Mostly means mainly or for the most part."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00060",
+    "word": "naturally",
+    "phonetic": "'nætʃrəli",
+    "translation": "Naturally means in a natural way or without any artificial influence.",
+    "translations": [
+      "Naturally means in a natural way or without any artificial influence."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00061",
+    "word": "nearly",
+    "phonetic": "'nɪrli",
+    "translation": "Nearly means almost or close to.",
+    "translations": [
+      "Nearly means almost or close to."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00062",
+    "word": "occasionally",
+    "phonetic": "o'keʒənəli",
+    "translation": "Occasionally means sometimes or from time to time.",
+    "translations": [
+      "Occasionally means sometimes or from time to time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00063",
+    "word": "carefully",
+    "phonetic": "'kɛrfəli",
+    "translation": "Carefully means with care or caution.",
+    "translations": [
+      "Carefully means with care or caution."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00064",
+    "word": "clearly",
+    "phonetic": "'klɪrli",
+    "translation": "Clearly means in a clear or obvious way.",
+    "translations": [
+      "Clearly means in a clear or obvious way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00065",
+    "word": "essentially",
+    "phonetic": "ɪ'sɛnʃəli",
+    "translation": "Essentially means basically or fundamentally.",
+    "translations": [
+      "Essentially means basically or fundamentally."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00066",
+    "word": "possibly",
+    "phonetic": "'pɑsəbli",
+    "translation": "Possibly means maybe or perhaps.",
+    "translations": [
+      "Possibly means maybe or perhaps."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00067",
+    "word": "slightly",
+    "phonetic": "'slaɪtli",
+    "translation": "Slightly means to a small degree or in a minor way.",
+    "translations": [
+      "Slightly means to a small degree or in a minor way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00068",
+    "word": "somewhat",
+    "phonetic": "'sʌmwʌt",
+    "translation": "Somewhat means to some extent or in a moderate way.",
+    "translations": [
+      "Somewhat means to some extent or in a moderate way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00069",
+    "word": "equally",
+    "phonetic": "'ikwəli",
+    "translation": "Equally means to an equal degree or in a balanced way.",
+    "translations": [
+      "Equally means to an equal degree or in a balanced way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00070",
+    "word": "greatly",
+    "phonetic": "'ɡretli",
+    "translation": "Greatly means to a large extent or significantly.",
+    "translations": [
+      "Greatly means to a large extent or significantly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00071",
+    "word": "necessarily",
+    "phonetic": ",nɛsə'sɛrəli",
+    "translation": "Necessarily means inevitably or as a logical consequence.",
+    "translations": [
+      "Necessarily means inevitably or as a logical consequence."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00072",
+    "word": "personally",
+    "phonetic": "'pə:sənəli",
+    "translation": "Personally means in a personal or individual manner.",
+    "translations": [
+      "Personally means in a personal or individual manner."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00073",
+    "word": "rarely",
+    "phonetic": "'rɛrli",
+    "translation": "Rarely means seldom or infrequently.",
+    "translations": [
+      "Rarely means seldom or infrequently."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00074",
+    "word": "regularly",
+    "phonetic": "'reɡjələli",
+    "translation": "Regularly means habitually or on a consistent basis.",
+    "translations": [
+      "Regularly means habitually or on a consistent basis."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00075",
+    "word": "similarly",
+    "phonetic": "'sɪməlɚli",
+    "translation": "Similarly means in a similar way or manner.",
+    "translations": [
+      "Similarly means in a similar way or manner."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00076",
+    "word": "basically",
+    "phonetic": "'besɪkli",
+    "translation": "Basically means fundamentally or essentially.",
+    "translations": [
+      "Basically means fundamentally or essentially."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00077",
+    "word": "closely",
+    "phonetic": "'klosli",
+    "translation": "Closely means intimately or with close attention.",
+    "translations": [
+      "Closely means intimately or with close attention."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00078",
+    "word": "effectively",
+    "phonetic": "ɪ'fɛktɪvli",
+    "translation": "Effectively means in an effective or successful way.",
+    "translations": [
+      "Effectively means in an effective or successful way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00079",
+    "word": "initially",
+    "phonetic": "ɪ'nɪʃəli",
+    "translation": "Initially means at first or initially.",
+    "translations": [
+      "Initially means at first or initially."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00080",
+    "word": "literally",
+    "phonetic": "'lɪtərəli",
+    "translation": "Literally means actually or in a literal sense.",
+    "translations": [
+      "Literally means actually or in a literal sense."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00081",
+    "word": "mainly",
+    "phonetic": "'menli",
+    "translation": "Mainly means primarily or chiefly.",
+    "translations": [
+      "Mainly means primarily or chiefly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00082",
+    "word": "merely",
+    "phonetic": "'mɪrli",
+    "translation": "Merely means only or just.",
+    "translations": [
+      "Merely means only or just."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00083",
+    "word": "gently",
+    "phonetic": "'dʒɛntli",
+    "translation": "Gently means in a gentle or mild way.",
+    "translations": [
+      "Gently means in a gentle or mild way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00084",
+    "word": "hopefully",
+    "phonetic": "",
+    "translation": "Hopefully means with hope or optimism.",
+    "translations": [
+      "Hopefully means with hope or optimism."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00085",
+    "word": "originally",
+    "phonetic": "ə'rɪdʒənəli",
+    "translation": "Originally means initially or from the beginning.",
+    "translations": [
+      "Originally means initially or from the beginning."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00086",
+    "word": "roughly",
+    "phonetic": "'rʌfli",
+    "translation": "Roughly means approximately or roughly.",
+    "translations": [
+      "Roughly means approximately or roughly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00087",
+    "word": "significantly",
+    "phonetic": "sɪg'nɪfɪkəntli",
+    "translation": "Significantly means in a significant or important way.",
+    "translations": [
+      "Significantly means in a significant or important way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00088",
+    "word": "totally",
+    "phonetic": "'totəli",
+    "translation": "Totally means completely or entirely.",
+    "translations": [
+      "Totally means completely or entirely."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00089",
+    "word": "twice",
+    "phonetic": "twaɪs",
+    "translation": "Twice means two times or twice as much.",
+    "translations": [
+      "Twice means two times or twice as much."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00090",
+    "word": "elsewhere",
+    "phonetic": ",els'hwεə",
+    "translation": "Elsewhere means in another place or elsewhere.",
+    "translations": [
+      "Elsewhere means in another place or elsewhere."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00091",
+    "word": "everywhere",
+    "phonetic": "'ɛvrɪwɛr",
+    "translation": "Everywhere means in all places or everywhere.",
+    "translations": [
+      "Everywhere means in all places or everywhere."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00092",
+    "word": "obviously",
+    "phonetic": "'ɑbvɪəsli",
+    "translation": "Obviously means clearly or obviously.",
+    "translations": [
+      "Obviously means clearly or obviously."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00093",
+    "word": "perfectly",
+    "phonetic": "'pɝfɪktli",
+    "translation": "Perfectly means in a perfect or flawless way.",
+    "translations": [
+      "Perfectly means in a perfect or flawless way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00094",
+    "word": "physically",
+    "phonetic": "'fɪzɪkli",
+    "translation": "Physically means in a physical or bodily way.",
+    "translations": [
+      "Physically means in a physical or bodily way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00095",
+    "word": "successfully",
+    "phonetic": "",
+    "translation": "Successfully means in a successful or effective way.",
+    "translations": [
+      "Successfully means in a successful or effective way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00096",
+    "word": "suddenly",
+    "phonetic": "'sʌdnlɪ",
+    "translation": "Suddenly means suddenly or abruptly.",
+    "translations": [
+      "Suddenly means suddenly or abruptly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00097",
+    "word": "truly",
+    "phonetic": "ˈtruːli",
+    "translation": "Truly means truly or sincerely.",
+    "translations": [
+      "Truly means truly or sincerely."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00098",
+    "word": "virtually",
+    "phonetic": "ˈvɜrtʃuəli",
+    "translation": "Virtually means almost or nearly.",
+    "translations": [
+      "Virtually means almost or nearly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00099",
+    "word": "altogether",
+    "phonetic": ",ɔltə'ɡɛðɚ",
+    "translation": "Altogether means completely or entirely.",
+    "translations": [
+      "Altogether means completely or entirely."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00100",
+    "word": "anyway",
+    "phonetic": "'ɛnɪ'we",
+    "translation": "Anyway means regardless or in any case.",
+    "translations": [
+      "Anyway means regardless or in any case."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00101",
+    "word": "automatically",
+    "phonetic": ",ɔ:tə'mætikəli",
+    "translation": "Automatically means in a way that is done without conscious thought or effort.",
+    "translations": [
+      "Automatically means in a way that is done without conscious thought or effort."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00102",
+    "word": "deeply",
+    "phonetic": "'diplɪ",
+    "translation": "Deeply means to an intense or extreme degree.",
+    "translations": [
+      "Deeply means to an intense or extreme degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00103",
+    "word": "definitely",
+    "phonetic": "'dɛfɪnətli",
+    "translation": "Definitely means without doubt, for sure.",
+    "translations": [
+      "Definitely means without doubt, for sure."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00104",
+    "word": "deliberately",
+    "phonetic": "",
+    "translation": "Deliberately means done consciously and intentionally.",
+    "translations": [
+      "Deliberately means done consciously and intentionally."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00105",
+    "word": "hardly",
+    "phonetic": "'hɑrdli",
+    "translation": "Hardly means barely or almost not at all.",
+    "translations": [
+      "Hardly means barely or almost not at all."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00106",
+    "word": "readily",
+    "phonetic": "'rɛdɪli",
+    "translation": "Readily means easily and without hesitation.",
+    "translations": [
+      "Readily means easily and without hesitation."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00107",
+    "word": "terribly",
+    "phonetic": "'tɛrəbli",
+    "translation": "Terribly means in a very bad or serious way.",
+    "translations": [
+      "Terribly means in a very bad or serious way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00108",
+    "word": "unfortunately",
+    "phonetic": "ʌn'fɔrtʃənətli",
+    "translation": "Unfortunately means regrettably or sadly.",
+    "translations": [
+      "Unfortunately means regrettably or sadly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00109",
+    "word": "forth",
+    "phonetic": "fɔrθ",
+    "translation": "Forth means forward in time or place.",
+    "translations": [
+      "Forth means forward in time or place."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00110",
+    "word": "briefly",
+    "phonetic": "'brifli",
+    "translation": "Briefly means for a short period of time.",
+    "translations": [
+      "Briefly means for a short period of time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00111",
+    "word": "moreover",
+    "phonetic": "mɔr'ovɚ",
+    "translation": "Moreover means in addition to what has been said.",
+    "translations": [
+      "Moreover means in addition to what has been said."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00112",
+    "word": "strongly",
+    "phonetic": "'strɔŋli",
+    "translation": "Strongly means with great force or intensity.",
+    "translations": [
+      "Strongly means with great force or intensity."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00113",
+    "word": "honestly",
+    "phonetic": "'ɑnɪstli",
+    "translation": "Honestly means in an honest or truthful manner.",
+    "translations": [
+      "Honestly means in an honest or truthful manner."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00114",
+    "word": "previously",
+    "phonetic": "'priviəsli",
+    "translation": "Previously means at an earlier time or before.",
+    "translations": [
+      "Previously means at an earlier time or before."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00115",
+    "word": "as",
+    "phonetic": "æz; əz",
+    "translation": "As means to the same degree or in the same way.",
+    "translations": [
+      "As means to the same degree or in the same way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00116",
+    "word": "there",
+    "phonetic": "ðɛr",
+    "translation": "There means in or at that place or position.",
+    "translations": [
+      "There means in or at that place or position."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00117",
+    "word": "when",
+    "phonetic": "hwen; hwɛn",
+    "translation": "When means at what time or during what period.",
+    "translations": [
+      "When means at what time or during what period."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00118",
+    "word": "how",
+    "phonetic": "haʊ",
+    "translation": "How means in what way or by what means.",
+    "translations": [
+      "How means in what way or by what means."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00119",
+    "word": "so",
+    "phonetic": "so",
+    "translation": "So means in such a way or to such an extent.",
+    "translations": [
+      "So means in such a way or to such an extent."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00120",
+    "word": "up",
+    "phonetic": "ʌp",
+    "translation": "Up means towards a higher place or position.",
+    "translations": [
+      "Up means towards a higher place or position."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00121",
+    "word": "out",
+    "phonetic": "aʊt",
+    "translation": "Out means away from the inside or center.",
+    "translations": [
+      "Out means away from the inside or center."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00122",
+    "word": "no",
+    "phonetic": "no",
+    "translation": "No means not at all or not by any means.",
+    "translations": [
+      "No means not at all or not by any means."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00123",
+    "word": "only",
+    "phonetic": "onlɪ",
+    "translation": "Only means and no one or nothing more besides.",
+    "translations": [
+      "Only means and no one or nothing more besides."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00124",
+    "word": "well",
+    "phonetic": "wɛl",
+    "translation": "Well means in a good or satisfactory way.",
+    "translations": [
+      "Well means in a good or satisfactory way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00125",
+    "word": "then",
+    "phonetic": "ðɛn",
+    "translation": "Then means at that time or subsequently.",
+    "translations": [
+      "Then means at that time or subsequently."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00126",
+    "word": "first",
+    "phonetic": "fɝst",
+    "translation": "First means before anything else in order or time.",
+    "translations": [
+      "First means before anything else in order or time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00127",
+    "word": "where",
+    "phonetic": "hweə(r); hwɛr",
+    "translation": "Where means in or at what place or location.",
+    "translations": [
+      "Where means in or at what place or location."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00128",
+    "word": "why",
+    "phonetic": "hwaɪ",
+    "translation": "Why means for what reason or purpose.",
+    "translations": [
+      "Why means for what reason or purpose."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00129",
+    "word": "now",
+    "phonetic": "naʊ",
+    "translation": "Now means at the present time or moment.",
+    "translations": [
+      "Now means at the present time or moment."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00130",
+    "word": "around",
+    "phonetic": "ə'raʊnd",
+    "translation": "Around means in a circular direction or surrounding.",
+    "translations": [
+      "Around means in a circular direction or surrounding."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00131",
+    "word": "once",
+    "phonetic": "wʌns",
+    "translation": "Once means on one occasion or at one time.",
+    "translations": [
+      "Once means on one occasion or at one time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00132",
+    "word": "down",
+    "phonetic": "daʊn",
+    "translation": "Down means towards or in a lower place or position.",
+    "translations": [
+      "Down means towards or in a lower place or position."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00133",
+    "word": "off",
+    "phonetic": "ɔf",
+    "translation": "Off means away from a place or position.",
+    "translations": [
+      "Off means away from a place or position."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00134",
+    "word": "here",
+    "phonetic": "hɪr",
+    "translation": "Here means in or at this place or location.",
+    "translations": [
+      "Here means in or at this place or location."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00135",
+    "word": "tonight",
+    "phonetic": "tə'naɪt",
+    "translation": "Tonight means on the present or coming evening.",
+    "translations": [
+      "Tonight means on the present or coming evening."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00136",
+    "word": "away",
+    "phonetic": "əˈwe",
+    "translation": "Away means at a distance from a particular place or person.",
+    "translations": [
+      "Away means at a distance from a particular place or person."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00137",
+    "word": "today",
+    "phonetic": "tə'de",
+    "translation": "Today means on the present or current day.",
+    "translations": [
+      "Today means on the present or current day."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00138",
+    "word": "far",
+    "phonetic": "fɑr",
+    "translation": "Far means at, to, or by a great distance.",
+    "translations": [
+      "Far means at, to, or by a great distance."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00139",
+    "word": "quite",
+    "phonetic": "kwaɪt",
+    "translation": "Quite means to a considerable extent or degree.",
+    "translations": [
+      "Quite means to a considerable extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00140",
+    "word": "later",
+    "phonetic": "'letɚ",
+    "translation": "Later means at a time in the future or subsequently.",
+    "translations": [
+      "Later means at a time in the future or subsequently."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00141",
+    "word": "above",
+    "phonetic": "ə'bʌv",
+    "translation": "Above means at a higher level or position.",
+    "translations": [
+      "Above means at a higher level or position."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00142",
+    "word": "yet",
+    "phonetic": "jɛt",
+    "translation": "Yet means up until the present or a specified time.",
+    "translations": [
+      "Yet means up until the present or a specified time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00143",
+    "word": "maybe",
+    "phonetic": "'mebi",
+    "translation": "Maybe means perhaps or possibly.",
+    "translations": [
+      "Maybe means perhaps or possibly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00144",
+    "word": "otherwise",
+    "phonetic": "'ʌðɚwaɪz",
+    "translation": "Otherwise means in a different way or under different circumstances.",
+    "translations": [
+      "Otherwise means in a different way or under different circumstances."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00145",
+    "word": "near",
+    "phonetic": "nɪr",
+    "translation": "Near means close to or not far away from.",
+    "translations": [
+      "Near means close to or not far away from."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00146",
+    "word": "forward",
+    "phonetic": "'fɔrwɚd",
+    "translation": "Forward means towards a destination or goal.",
+    "translations": [
+      "Forward means towards a destination or goal."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00147",
+    "word": "somewhere",
+    "phonetic": "'sʌmwɛr",
+    "translation": "Somewhere means in or to a place not specified or known.",
+    "translations": [
+      "Somewhere means in or to a place not specified or known."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00148",
+    "word": "anywhere",
+    "phonetic": "'ɛnɪwɛr",
+    "translation": "Anywhere means in, at, or to any place.",
+    "translations": [
+      "Anywhere means in, at, or to any place."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00149",
+    "word": "please",
+    "phonetic": "pliz",
+    "translation": "Please means as a polite expression of request or agreement.",
+    "translations": [
+      "Please means as a polite expression of request or agreement."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00150",
+    "word": "forever",
+    "phonetic": "fɚ'ɛvɚ",
+    "translation": "Forever means for all future time; for always.",
+    "translations": [
+      "Forever means for all future time; for always."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00151",
+    "word": "somehow",
+    "phonetic": "'sʌmhaʊ",
+    "translation": "In a way that is not known or specified.",
+    "translations": [
+      "In a way that is not known or specified."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00152",
+    "word": "absolutely",
+    "phonetic": "'æbsəlutli",
+    "translation": "Completely or totally.",
+    "translations": [
+      "Completely or totally."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00153",
+    "word": "abroad",
+    "phonetic": "ə'brɔd",
+    "translation": "In or to a foreign country or countries.",
+    "translations": [
+      "In or to a foreign country or countries."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00154",
+    "word": "yeah",
+    "phonetic": "jɛə",
+    "translation": "Yes or sure.",
+    "translations": [
+      "Yes or sure."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00155",
+    "word": "nowhere",
+    "phonetic": "'no'wɛr",
+    "translation": "Not in or to any place.",
+    "translations": [
+      "Not in or to any place."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00156",
+    "word": "tomorrow",
+    "phonetic": "tə'mɔro",
+    "translation": "On or for the day after today.",
+    "translations": [
+      "On or for the day after today."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00157",
+    "word": "yesterday",
+    "phonetic": "ˈjɛstɚdɪ;-de",
+    "translation": "On or for the day before today.",
+    "translations": [
+      "On or for the day before today."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00158",
+    "word": "the",
+    "phonetic": "ðə; ði",
+    "translation": "Used to indicate a particular thing already mentioned or known.",
+    "translations": [
+      "Used to indicate a particular thing already mentioned or known."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00159",
+    "word": "to",
+    "phonetic": "tə;tu;tuː",
+    "translation": "Expressing motion in the direction of (a particular location).",
+    "translations": [
+      "Expressing motion in the direction of (a particular location)."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00160",
+    "word": "in",
+    "phonetic": "ɪn",
+    "translation": "Expressing the location of someone or something inside a place or thing.",
+    "translations": [
+      "Expressing the location of someone or something inside a place or thing."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00161",
+    "word": "on",
+    "phonetic": "ɑn",
+    "translation": "Expressing the location of something at the surface of a thing.",
+    "translations": [
+      "Expressing the location of something at the surface of a thing."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00162",
+    "word": "by",
+    "phonetic": "baɪ",
+    "translation": "Indicating the means of achieving something.",
+    "translations": [
+      "Indicating the means of achieving something."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00163",
+    "word": "more",
+    "phonetic": "mɔr",
+    "translation": "To a greater extent or degree.",
+    "translations": [
+      "To a greater extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00164",
+    "word": "about",
+    "phonetic": "ə'baʊt",
+    "translation": "On the subject of; concerning.",
+    "translations": [
+      "On the subject of; concerning."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00165",
+    "word": "such",
+    "phonetic": "sʌtʃ",
+    "translation": "Of the type previously mentioned or easily identified.",
+    "translations": [
+      "Of the type previously mentioned or easily identified."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00166",
+    "word": "through",
+    "phonetic": "θru",
+    "translation": "Moving in one side and out of the other side of (an opening, channel, or location).",
+    "translations": [
+      "Moving in one side and out of the other side of (an opening, channel, or location)."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00167",
+    "word": "new",
+    "phonetic": "nu",
+    "translation": "Recently made, discovered, or created.",
+    "translations": [
+      "Recently made, discovered, or created."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00168",
+    "word": "just",
+    "phonetic": "dʒʌst",
+    "translation": "Exactly or very recently.",
+    "translations": [
+      "Exactly or very recently."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00169",
+    "word": "any",
+    "phonetic": "'ɛni",
+    "translation": "Used to refer to one or some of a thing or number of things, no matter how much or how many.",
+    "translations": [
+      "Used to refer to one or some of a thing or number of things, no matter how much or how many."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00170",
+    "word": "each",
+    "phonetic": "itʃ",
+    "translation": "Used to refer to every one of two or more people or things.",
+    "translations": [
+      "Used to refer to every one of two or more people or things."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00171",
+    "word": "much",
+    "phonetic": "mʌtʃ",
+    "translation": "To a great extent or degree.",
+    "translations": [
+      "To a great extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00172",
+    "word": "before",
+    "phonetic": "bɪ'fɔr",
+    "translation": "During the period of time preceding (a particular event or time).",
+    "translations": [
+      "During the period of time preceding (a particular event or time)."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00173",
+    "word": "between",
+    "phonetic": "bəˈtwin",
+    "translation": "At, into, or across the space separating (two objects or regions).",
+    "translations": [
+      "At, into, or across the space separating (two objects or regions)."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00174",
+    "word": "free",
+    "phonetic": "fri",
+    "translation": "Without cost or payment.",
+    "translations": [
+      "Without cost or payment."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00175",
+    "word": "right",
+    "phonetic": "raɪt",
+    "translation": "To an exact or precise extent or degree.",
+    "translations": [
+      "To an exact or precise extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00176",
+    "word": "best",
+    "phonetic": "bɛst",
+    "translation": "Most excellently or effectively.",
+    "translations": [
+      "Most excellently or effectively."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00177",
+    "word": "since",
+    "phonetic": "sɪns",
+    "translation": "From a particular time or event in the past until now or a particular time in the past.",
+    "translations": [
+      "From a particular time or event in the past until now or a particular time in the past."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00178",
+    "word": "both",
+    "phonetic": "boθ",
+    "translation": "Used to refer to two people or things, regarded and identified together.",
+    "translations": [
+      "Used to refer to two people or things, regarded and identified together."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00179",
+    "word": "sure",
+    "phonetic": "ʃʊər; ʃʊr",
+    "translation": "Completely confident or certain about something.",
+    "translations": [
+      "Completely confident or certain about something."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00180",
+    "word": "without",
+    "phonetic": "wɪðˈaʊt",
+    "translation": "Not having or using.",
+    "translations": [
+      "Not having or using."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00181",
+    "word": "back",
+    "phonetic": "bæk",
+    "translation": "In or into a previous position or state.",
+    "translations": [
+      "In or into a previous position or state."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00182",
+    "word": "better",
+    "phonetic": "'bɛtɚ",
+    "translation": "To a greater extent or degree.",
+    "translations": [
+      "To a greater extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00183",
+    "word": "enough",
+    "phonetic": "ɪ'nʌf",
+    "translation": "As much or as many as required.",
+    "translations": [
+      "As much or as many as required."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00184",
+    "word": "lot",
+    "phonetic": "lɑt",
+    "translation": "A large number or amount.",
+    "translations": [
+      "A large number or amount."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00185",
+    "word": "small",
+    "phonetic": "smɔl",
+    "translation": "In a way that is limited in size or amount.",
+    "translations": [
+      "In a way that is limited in size or amount."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00186",
+    "word": "though",
+    "phonetic": "ðo",
+    "translation": "Despite the fact that; although.",
+    "translations": [
+      "Despite the fact that; although."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00187",
+    "word": "less",
+    "phonetic": "lɛs",
+    "translation": "To a smaller extent or degree.",
+    "translations": [
+      "To a smaller extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00188",
+    "word": "little",
+    "phonetic": "'lɪtl",
+    "translation": "To only a small extent or degree.",
+    "translations": [
+      "To only a small extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00189",
+    "word": "under",
+    "phonetic": "'ʌndɚ",
+    "translation": "Extending or directly below something else.",
+    "translations": [
+      "Extending or directly below something else."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00190",
+    "word": "next",
+    "phonetic": "nɛkst",
+    "translation": "Coming immediately after the present one in sequence or order.",
+    "translations": [
+      "Coming immediately after the present one in sequence or order."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00191",
+    "word": "hard",
+    "phonetic": "hɑrd",
+    "translation": "With a great deal of effort or force.",
+    "translations": [
+      "With a great deal of effort or force."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00192",
+    "word": "real",
+    "phonetic": "'riəl",
+    "translation": "Actually existing or happening as described or perceived.",
+    "translations": [
+      "Actually existing or happening as described or perceived."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00193",
+    "word": "left",
+    "phonetic": "lɛft",
+    "translation": "On or to the side of something that is considered the weaker or less important side.",
+    "translations": [
+      "On or to the side of something that is considered the weaker or less important side."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00194",
+    "word": "least",
+    "phonetic": "list",
+    "translation": "To the smallest extent or degree.",
+    "translations": [
+      "To the smallest extent or degree."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00195",
+    "word": "short",
+    "phonetic": "ʃɔrt",
+    "translation": "In a way that does not take a long time.",
+    "translations": [
+      "In a way that does not take a long time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00196",
+    "word": "last",
+    "phonetic": "læst",
+    "translation": "On or until the final part of an event or period of time.",
+    "translations": [
+      "On or until the final part of an event or period of time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00197",
+    "word": "within",
+    "phonetic": "wɪ'ðɪn",
+    "translation": "Inside something; inside a particular area or space.",
+    "translations": [
+      "Inside something; inside a particular area or space."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00198",
+    "word": "along",
+    "phonetic": "ə'lɔŋ",
+    "translation": "Moving in a constant direction on (a path or route).",
+    "translations": [
+      "Moving in a constant direction on (a path or route)."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00199",
+    "word": "lower",
+    "phonetic": "'loɚ",
+    "translation": "At a lower level or rank than something.",
+    "translations": [
+      "At a lower level or rank than something."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00200",
+    "word": "true",
+    "phonetic": "",
+    "translation": "In accordance with fact or reality.",
+    "translations": [
+      "In accordance with fact or reality."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00201",
+    "word": "bad",
+    "phonetic": "bæd",
+    "translation": "Badly is used to describe how something is done, or how someone is feeling, in a negative or unpleasant way.",
+    "translations": [
+      "Badly is used to describe how something is done, or how someone is feeling, in a negative or unpleasant way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00202",
+    "word": "across",
+    "phonetic": "ə'krɔs",
+    "translation": "Across means from one side of something to the other side.",
+    "translations": [
+      "Across means from one side of something to the other side."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00203",
+    "word": "clear",
+    "phonetic": "klɪr",
+    "translation": "Clearly means something is easy to see, hear, or understand.",
+    "translations": [
+      "Clearly means something is easy to see, hear, or understand."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00204",
+    "word": "easy",
+    "phonetic": "'izi",
+    "translation": "Easily means without difficulty or effort.",
+    "translations": [
+      "Easily means without difficulty or effort."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00205",
+    "word": "full",
+    "phonetic": "fʊl",
+    "translation": "Fully means completely or to the greatest extent possible.",
+    "translations": [
+      "Fully means completely or to the greatest extent possible."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00206",
+    "word": "close",
+    "phonetic": "kloz",
+    "translation": "Closely means in a way that is near in space, time, or relationship.",
+    "translations": [
+      "Closely means in a way that is near in space, time, or relationship."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00207",
+    "word": "late",
+    "phonetic": "let",
+    "translation": "Lately means not on time, or after the expected or usual time.",
+    "translations": [
+      "Lately means not on time, or after the expected or usual time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00208",
+    "word": "proper",
+    "phonetic": "'prɑpɚ",
+    "translation": "Properly means in the right or appropriate way.",
+    "translations": [
+      "Properly means in the right or appropriate way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00209",
+    "word": "fast",
+    "phonetic": "fæst",
+    "translation": "Fast means quickly or at a high speed.",
+    "translations": [
+      "Fast means quickly or at a high speed."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00210",
+    "word": "wide",
+    "phonetic": "waɪd",
+    "translation": "Widely means over a large area or range.",
+    "translations": [
+      "Widely means over a large area or range."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00211",
+    "word": "item",
+    "phonetic": "'aɪtəm",
+    "translation": "An item refers to a particular thing or object.",
+    "translations": [
+      "An item refers to a particular thing or object."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00212",
+    "word": "wrong",
+    "phonetic": "rɔŋ",
+    "translation": "Wrongly means in a way that is not correct or accurate.",
+    "translations": [
+      "Wrongly means in a way that is not correct or accurate."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00213",
+    "word": "ago",
+    "phonetic": "ə'ɡo",
+    "translation": "Ago means in the past or before the present time.",
+    "translations": [
+      "Ago means in the past or before the present time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00214",
+    "word": "behind",
+    "phonetic": "bɪ'haɪnd",
+    "translation": "Behind means at the back of or in the rear of something.",
+    "translations": [
+      "Behind means at the back of or in the rear of something."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00215",
+    "word": "quick",
+    "phonetic": "kwɪk",
+    "translation": "Quickly means in a short amount of time or without delay.",
+    "translations": [
+      "Quickly means in a short amount of time or without delay."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00216",
+    "word": "straight",
+    "phonetic": "stret",
+    "translation": "Straight means without bending or curving, or in a direct and honest way.",
+    "translations": [
+      "Straight means without bending or curving, or in a direct and honest way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00217",
+    "word": "direct",
+    "phonetic": "dəˈrekt; daɪˈrekt",
+    "translation": "Directly means in a straight line or without intervening factors.",
+    "translations": [
+      "Directly means in a straight line or without intervening factors."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00218",
+    "word": "extra",
+    "phonetic": "'ɛkstrə",
+    "translation": "Extra means in addition to what is usual or expected.",
+    "translations": [
+      "Extra means in addition to what is usual or expected."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00219",
+    "word": "morning",
+    "phonetic": "'mɔrnɪŋ",
+    "translation": "In the morning means during the early part of the day, from sunrise until noon.",
+    "translations": [
+      "In the morning means during the early part of the day, from sunrise until noon."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00220",
+    "word": "pretty",
+    "phonetic": "ˈprɪtɪ",
+    "translation": "Pretty means attractive or pleasing to look at.",
+    "translations": [
+      "Pretty means attractive or pleasing to look at."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00221",
+    "word": "overall",
+    "phonetic": ",ovə'rɔl",
+    "translation": "Overall means taking everything into account or in general.",
+    "translations": [
+      "Overall means taking everything into account or in general."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00222",
+    "word": "alone",
+    "phonetic": "ə'lon",
+    "translation": "Alone means without anyone else or being solitary.",
+    "translations": [
+      "Alone means without anyone else or being solitary."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00223",
+    "word": "bright",
+    "phonetic": "braɪt",
+    "translation": "Brightly means giving out a lot of light or shining strongly.",
+    "translations": [
+      "Brightly means giving out a lot of light or shining strongly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00224",
+    "word": "flat",
+    "phonetic": "flæt",
+    "translation": "Flatly means without any emotion or enthusiasm.",
+    "translations": [
+      "Flatly means without any emotion or enthusiasm."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00225",
+    "word": "whatever",
+    "phonetic": "wət'ɛvɚ",
+    "translation": "Whatever means anything or everything that.",
+    "translations": [
+      "Whatever means anything or everything that."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00226",
+    "word": "slow",
+    "phonetic": "sloʊ",
+    "translation": "Slowly means at a low speed or taking a long time.",
+    "translations": [
+      "Slowly means at a low speed or taking a long time."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00227",
+    "word": "clean",
+    "phonetic": "klin",
+    "translation": "Cleanly means in a way that is free from dirt, marks, or unwanted substances.",
+    "translations": [
+      "Cleanly means in a way that is free from dirt, marks, or unwanted substances."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00228",
+    "word": "fresh",
+    "phonetic": "frɛʃ",
+    "translation": "Freshly means recently or newly.",
+    "translations": [
+      "Freshly means recently or newly."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00229",
+    "word": "whenever",
+    "phonetic": "wɛn'ɛvɚ",
+    "translation": "Whenever means at any time or every time that.",
+    "translations": [
+      "Whenever means at any time or every time that."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00230",
+    "word": "cheap",
+    "phonetic": "tʃip",
+    "translation": "Cheaply means at a low cost or price.",
+    "translations": [
+      "Cheaply means at a low cost or price."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00231",
+    "word": "thin",
+    "phonetic": "θɪn",
+    "translation": "Thinly means in a way that is not thick or with very little substance.",
+    "translations": [
+      "Thinly means in a way that is not thick or with very little substance."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00232",
+    "word": "cool",
+    "phonetic": "kul",
+    "translation": "Coolly means in a calm and composed way or without showing much emotion.",
+    "translations": [
+      "Coolly means in a calm and composed way or without showing much emotion."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00233",
+    "word": "fair",
+    "phonetic": "fɛr",
+    "translation": "Fairly means in a way that is just, reasonable, or without bias.",
+    "translations": [
+      "Fairly means in a way that is just, reasonable, or without bias."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00234",
+    "word": "fine",
+    "phonetic": "faɪn",
+    "translation": "Finely means in a way that is delicate, subtle, or precise.",
+    "translations": [
+      "Finely means in a way that is delicate, subtle, or precise."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00235",
+    "word": "smooth",
+    "phonetic": "smʊð",
+    "translation": "Smoothly means in a way that is without any roughness, bumps, or irregularities.",
+    "translations": [
+      "Smoothly means in a way that is without any roughness, bumps, or irregularities."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00236",
+    "word": "false",
+    "phonetic": "",
+    "translation": "Falsely means in a way that is not true or accurate.",
+    "translations": [
+      "Falsely means in a way that is not true or accurate."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00237",
+    "word": "thick",
+    "phonetic": "θɪk",
+    "translation": "Thickly means in a way that is not thin or with a lot of substance.",
+    "translations": [
+      "Thickly means in a way that is not thin or with a lot of substance."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00238",
+    "word": "collect",
+    "phonetic": "kə'lɛkt",
+    "translation": "Collectively means as a group or as a whole.",
+    "translations": [
+      "Collectively means as a group or as a whole."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00239",
+    "word": "nearby",
+    "phonetic": ",nɪr'baɪ",
+    "translation": "Nearby means in the vicinity or close to a particular place.",
+    "translations": [
+      "Nearby means in the vicinity or close to a particular place."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00240",
+    "word": "wild",
+    "phonetic": "waɪld",
+    "translation": "Wildly means in a way that is uncontrolled or with great enthusiasm.",
+    "translations": [
+      "Wildly means in a way that is uncontrolled or with great enthusiasm."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00241",
+    "word": "apart",
+    "phonetic": "ə'pɑrt",
+    "translation": "Apart means separated by a distance or interval.",
+    "translations": [
+      "Apart means separated by a distance or interval."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00242",
+    "word": "none",
+    "phonetic": "nʌn",
+    "translation": "None means not any or not one.",
+    "translations": [
+      "None means not any or not one."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00243",
+    "word": "strange",
+    "phonetic": "strendʒ",
+    "translation": "Strangely means in a way that is unusual, surprising, or difficult to understand.",
+    "translations": [
+      "Strangely means in a way that is unusual, surprising, or difficult to understand."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00244",
+    "word": "tourist",
+    "phonetic": "'tʊrɪst",
+    "translation": "Touristically means in a way that is related to tourism or the tourist industry.",
+    "translations": [
+      "Touristically means in a way that is related to tourism or the tourist industry."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00245",
+    "word": "aside",
+    "phonetic": "ə'saɪd",
+    "translation": "Aside means to one side or out of the way.",
+    "translations": [
+      "Aside means to one side or out of the way."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00246",
+    "word": "loud",
+    "phonetic": "laʊd",
+    "translation": "Loudly means with a high volume or in a way that can be easily heard.",
+    "translations": [
+      "Loudly means with a high volume or in a way that can be easily heard."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00247",
+    "word": "super",
+    "phonetic": "'sʊpɚ",
+    "translation": "Super means to an extremely high degree or level.",
+    "translations": [
+      "Super means to an extremely high degree or level."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00248",
+    "word": "tight",
+    "phonetic": "taɪt",
+    "translation": "Tightly means in a way that is firmly or closely fixed in place.",
+    "translations": [
+      "Tightly means in a way that is firmly or closely fixed in place."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00249",
+    "word": "gross",
+    "phonetic": "ɡros",
+    "translation": "Grossly means in a way that is extremely unpleasant or offensive.",
+    "translations": [
+      "Grossly means in a way that is extremely unpleasant or offensive."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00250",
+    "word": "ill",
+    "phonetic": "ɪl",
+    "translation": "Ill means in a way that is not healthy or suffering from a disease or illness.",
+    "translations": [
+      "Ill means in a way that is not healthy or suffering from a disease or illness."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00251",
+    "word": "downtown",
+    "phonetic": "'daʊn'taʊn",
+    "translation": "Downtown means in or towards the central part of a city or town.",
+    "translations": [
+      "Downtown means in or towards the central part of a city or town."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00252",
+    "word": "honest",
+    "phonetic": "'ɑnɪst",
+    "translation": "Honestly means in a way that is truthful or sincere.",
+    "translations": [
+      "Honestly means in a way that is truthful or sincere."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00253",
+    "word": "ok",
+    "phonetic": "",
+    "translation": "Okay means in a way that is acceptable or satisfactory.",
+    "translations": [
+      "Okay means in a way that is acceptable or satisfactory."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00254",
+    "word": "pray",
+    "phonetic": "pre",
+    "translation": "Pray means in a way that is related to religious worship or asking for help from a higher power.",
+    "translations": [
+      "Pray means in a way that is related to religious worship or asking for help from a higher power."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  },
+  {
+    "id": "qwerty_top_250_adv_words_00255",
+    "word": "weekly",
+    "phonetic": "'wikli",
+    "translation": "Weekly means happening or done once a week.",
+    "translations": [
+      "Weekly means happening or done once a week."
+    ],
+    "domain": "qwerty_top_250_adv_words"
+  }
+]

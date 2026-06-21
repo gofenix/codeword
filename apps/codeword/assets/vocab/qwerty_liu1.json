@@ -1,0 +1,1302 @@
+[
+  {
+    "id": "qwerty_liu1_00001",
+    "word": "science",
+    "phonetic": "'saɪəns",
+    "translation": "科学",
+    "translations": [
+      "科学"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00002",
+    "word": "museum",
+    "phonetic": "mjuˈzɪəm",
+    "translation": "博物馆",
+    "translations": [
+      "博物馆"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00003",
+    "word": "post office",
+    "phonetic": "ˈpost ɔfɪs",
+    "translation": "邮局",
+    "translations": [
+      "邮局"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00004",
+    "word": "bookstore",
+    "phonetic": "bʊkstɔr",
+    "translation": "书店",
+    "translations": [
+      "书店"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00005",
+    "word": "cinema",
+    "phonetic": "'sɪnəmə",
+    "translation": "电影院",
+    "translations": [
+      "电影院"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00006",
+    "word": "hospital",
+    "phonetic": "'hɑspɪtl",
+    "translation": "医院",
+    "translations": [
+      "医院"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00007",
+    "word": "crossing",
+    "phonetic": "'krɔsɪŋ",
+    "translation": "十字路口",
+    "translations": [
+      "十字路口"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00008",
+    "word": "turn",
+    "phonetic": "tɝn",
+    "translation": "转弯",
+    "translations": [
+      "转弯"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00009",
+    "word": "left",
+    "phonetic": "lɛft",
+    "translation": "左",
+    "translations": [
+      "左"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00010",
+    "word": "on foot",
+    "phonetic": "",
+    "translation": "步行",
+    "translations": [
+      "步行"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00011",
+    "word": "by",
+    "phonetic": "baɪ",
+    "translation": "乘",
+    "translations": [
+      "乘"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00012",
+    "word": "bus",
+    "phonetic": "bʌs",
+    "translation": "公共汽车",
+    "translations": [
+      "公共汽车"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00013",
+    "word": "plane",
+    "phonetic": "plen",
+    "translation": "飞机",
+    "translations": [
+      "飞机"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00014",
+    "word": "taxi",
+    "phonetic": "'tæksi",
+    "translation": "出租汽车",
+    "translations": [
+      "出租汽车"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00015",
+    "word": "ship",
+    "phonetic": "ʃɪp",
+    "translation": "船",
+    "translations": [
+      "船"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00016",
+    "word": "subway",
+    "phonetic": "'sʌbwe",
+    "translation": "地铁",
+    "translations": [
+      "地铁"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00017",
+    "word": "train",
+    "phonetic": "tren",
+    "translation": "火车",
+    "translations": [
+      "火车"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00018",
+    "word": "slow",
+    "phonetic": "sloʊ",
+    "translation": "慢的",
+    "translations": [
+      "慢的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00019",
+    "word": "down",
+    "phonetic": "daʊn",
+    "translation": "减少",
+    "translations": [
+      "减少"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00020",
+    "word": "slow down",
+    "phonetic": "",
+    "translation": "慢下来",
+    "translations": [
+      "慢下来"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00021",
+    "word": "stop",
+    "phonetic": "stɑp",
+    "translation": "停下",
+    "translations": [
+      "停下"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00022",
+    "word": "Mrs",
+    "phonetic": "ˈmɪsɪz",
+    "translation": "夫人",
+    "translations": [
+      "夫人"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00023",
+    "word": "early",
+    "phonetic": "'ɝli",
+    "translation": "早到的",
+    "translations": [
+      "早到的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00024",
+    "word": "helmet",
+    "phonetic": "'hɛlmɪt",
+    "translation": "头盔",
+    "translations": [
+      "头盔"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00025",
+    "word": "must",
+    "phonetic": "mʌst",
+    "translation": "必须",
+    "translations": [
+      "必须"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00026",
+    "word": "wear",
+    "phonetic": "wɛr",
+    "translation": "戴",
+    "translations": [
+      "戴"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00027",
+    "word": "attention",
+    "phonetic": "ə'tɛnʃən",
+    "translation": "注意",
+    "translations": [
+      "注意"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00028",
+    "word": "pay attention to",
+    "phonetic": "",
+    "translation": "注意",
+    "translations": [
+      "注意"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00029",
+    "word": "traffic",
+    "phonetic": "'træfɪk",
+    "translation": "交通",
+    "translations": [
+      "交通"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00030",
+    "word": "traffic lights",
+    "phonetic": "",
+    "translation": "交通信号灯",
+    "translations": [
+      "交通信号灯"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00031",
+    "word": "Munich",
+    "phonetic": "'mju:nik",
+    "translation": "慕尼黑",
+    "translations": [
+      "慕尼黑"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00032",
+    "word": "Germany",
+    "phonetic": "'dʒɝməni",
+    "translation": "德国",
+    "translations": [
+      "德国"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00033",
+    "word": "Alaska",
+    "phonetic": "ə'læskə",
+    "translation": "阿拉斯加州",
+    "translations": [
+      "阿拉斯加州"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00034",
+    "word": "sled",
+    "phonetic": "slɛd",
+    "translation": "雪橇",
+    "translations": [
+      "雪橇"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00035",
+    "word": "fast",
+    "phonetic": "fæst",
+    "translation": "快的",
+    "translations": [
+      "快的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00036",
+    "word": "ferry",
+    "phonetic": "'fɛri",
+    "translation": "轮渡",
+    "translations": [
+      "轮渡"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00037",
+    "word": "Papa Westray",
+    "phonetic": "",
+    "translation": "帕帕韦斯特雷岛",
+    "translations": [
+      "帕帕韦斯特雷岛"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00038",
+    "word": "Scotland",
+    "phonetic": "'skɔtlənd",
+    "translation": "苏格兰",
+    "translations": [
+      "苏格兰"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00039",
+    "word": "visit",
+    "phonetic": "'vɪzɪt",
+    "translation": "拜访",
+    "translations": [
+      "拜访"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00040",
+    "word": "film",
+    "phonetic": "fɪlm",
+    "translation": "电影",
+    "translations": [
+      "电影"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00041",
+    "word": "see a film",
+    "phonetic": "",
+    "translation": "看电影",
+    "translations": [
+      "看电影"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00042",
+    "word": "trip",
+    "phonetic": "trɪp",
+    "translation": "旅行",
+    "translations": [
+      "旅行"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00043",
+    "word": "take a trip",
+    "phonetic": "",
+    "translation": "去旅行",
+    "translations": [
+      "去旅行"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00044",
+    "word": "supermarket",
+    "phonetic": "'sʊpɚ'mɑrkɪt",
+    "translation": "超市",
+    "translations": [
+      "超市"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00045",
+    "word": "evening",
+    "phonetic": "'ivnɪŋ",
+    "translation": "晚上",
+    "translations": [
+      "晚上"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00046",
+    "word": "tonight",
+    "phonetic": "tə'naɪt",
+    "translation": "今晚",
+    "translations": [
+      "今晚"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00047",
+    "word": "tomorrow",
+    "phonetic": "tə'mɔro",
+    "translation": "明天",
+    "translations": [
+      "明天"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00048",
+    "word": "next week",
+    "phonetic": "nɛkst wik",
+    "translation": "下周",
+    "translations": [
+      "下周"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00049",
+    "word": "dictionary",
+    "phonetic": "'dɪkʃə'nɛri",
+    "translation": "词典",
+    "translations": [
+      "词典"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00050",
+    "word": "comic",
+    "phonetic": "'kɑmɪk",
+    "translation": "滑稽的",
+    "translations": [
+      "滑稽的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00051",
+    "word": "comic book",
+    "phonetic": "",
+    "translation": "连环画",
+    "translations": [
+      "连环画"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00052",
+    "word": "word",
+    "phonetic": "wɝd",
+    "translation": "单词",
+    "translations": [
+      "单词"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00053",
+    "word": "word book",
+    "phonetic": "'wɝk'bʊk",
+    "translation": "单词书",
+    "translations": [
+      "单词书"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00054",
+    "word": "post card",
+    "phonetic": "",
+    "translation": "明信片",
+    "translations": [
+      "明信片"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00055",
+    "word": "lesson",
+    "phonetic": "'lɛsn",
+    "translation": "课",
+    "translations": [
+      "课"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00056",
+    "word": "space",
+    "phonetic": "spes",
+    "translation": "太空",
+    "translations": [
+      "太空"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00057",
+    "word": "travel",
+    "phonetic": "'trævl",
+    "translation": "旅行",
+    "translations": [
+      "旅行"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00058",
+    "word": "half",
+    "phonetic": "hæf",
+    "translation": "一半",
+    "translations": [
+      "一半"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00059",
+    "word": "price",
+    "phonetic": "praɪs",
+    "translation": "价格",
+    "translations": [
+      "价格"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00060",
+    "word": "Mid-Autumn Festival",
+    "phonetic": "",
+    "translation": "中秋节",
+    "translations": [
+      "中秋节"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00061",
+    "word": "together",
+    "phonetic": "tə'ɡɛðɚ",
+    "translation": "一起",
+    "translations": [
+      "一起"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00062",
+    "word": "get together",
+    "phonetic": "",
+    "translation": "聚会",
+    "translations": [
+      "聚会"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00063",
+    "word": "mooncake",
+    "phonetic": "'munkeɪk",
+    "translation": "月饼",
+    "translations": [
+      "月饼"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00064",
+    "word": "poem",
+    "phonetic": "'poəm",
+    "translation": "诗",
+    "translations": [
+      "诗"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00065",
+    "word": "moon",
+    "phonetic": "mun",
+    "translation": "月亮",
+    "translations": [
+      "月亮"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00066",
+    "word": "studies",
+    "phonetic": "'stʌdiz",
+    "translation": "学习",
+    "translations": [
+      "学习"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00067",
+    "word": "puzzle",
+    "phonetic": "'pʌzl",
+    "translation": "谜",
+    "translations": [
+      "谜"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00068",
+    "word": "hiking",
+    "phonetic": "'haɪkɪŋ",
+    "translation": "远足",
+    "translations": [
+      "远足"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00069",
+    "word": "pen pal",
+    "phonetic": "",
+    "translation": "笔友",
+    "translations": [
+      "笔友"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00070",
+    "word": "hobby",
+    "phonetic": "'hɑbi",
+    "translation": "业余爱好",
+    "translations": [
+      "业余爱好"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00071",
+    "word": "jasmine",
+    "phonetic": "'dʒæzmɪn",
+    "translation": "茉莉",
+    "translations": [
+      "茉莉"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00072",
+    "word": "idea",
+    "phonetic": "aɪ'diə",
+    "translation": "主意",
+    "translations": [
+      "主意"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00073",
+    "word": "Canberra",
+    "phonetic": "'kænbərə",
+    "translation": "堪培拉",
+    "translations": [
+      "堪培拉"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00074",
+    "word": "amazing",
+    "phonetic": "ə'mezɪŋ",
+    "translation": "令人惊奇的",
+    "translations": [
+      "令人惊奇的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00075",
+    "word": "shall",
+    "phonetic": "ʃəl",
+    "translation": "表示征求意见",
+    "translations": [
+      "表示征求意见"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00076",
+    "word": "goal",
+    "phonetic": "ɡol",
+    "translation": "射门",
+    "translations": [
+      "射门"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00077",
+    "word": "join",
+    "phonetic": "dʒɔɪn",
+    "translation": "加入",
+    "translations": [
+      "加入"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00078",
+    "word": "club",
+    "phonetic": "klʌb",
+    "translation": "俱乐部",
+    "translations": [
+      "俱乐部"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00079",
+    "word": "share",
+    "phonetic": "ʃɛr",
+    "translation": "分享",
+    "translations": [
+      "分享"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00080",
+    "word": "factory",
+    "phonetic": "'fæktri",
+    "translation": "工厂",
+    "translations": [
+      "工厂"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00081",
+    "word": "worker",
+    "phonetic": "'wɝkɚ",
+    "translation": "工人",
+    "translations": [
+      "工人"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00082",
+    "word": "postman",
+    "phonetic": "'postmən",
+    "translation": "邮递员",
+    "translations": [
+      "邮递员"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00083",
+    "word": "businessman",
+    "phonetic": "'bɪznəsmæn",
+    "translation": "商人",
+    "translations": [
+      "商人"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00084",
+    "word": "police officer",
+    "phonetic": "pəˈlis ˈɔfɪsɚ",
+    "translation": "警察",
+    "translations": [
+      "警察"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00085",
+    "word": "fisherman",
+    "phonetic": "'fɪʃɚmən",
+    "translation": "渔民",
+    "translations": [
+      "渔民"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00086",
+    "word": "scientist",
+    "phonetic": "'saɪəntɪst",
+    "translation": "科学家",
+    "translations": [
+      "科学家"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00087",
+    "word": "pilot",
+    "phonetic": "'paɪlət",
+    "translation": "飞行员",
+    "translations": [
+      "飞行员"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00088",
+    "word": "coach",
+    "phonetic": "kotʃ",
+    "translation": "教练",
+    "translations": [
+      "教练"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00089",
+    "word": "country",
+    "phonetic": "'kʌntri",
+    "translation": "国家",
+    "translations": [
+      "国家"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00090",
+    "word": "head teacher",
+    "phonetic": "",
+    "translation": "校长",
+    "translations": [
+      "校长"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00091",
+    "word": "sea",
+    "phonetic": "si",
+    "translation": "大海",
+    "translations": [
+      "大海"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00092",
+    "word": "stay",
+    "phonetic": "ste",
+    "translation": "保持",
+    "translations": [
+      "保持"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00093",
+    "word": "university",
+    "phonetic": ",junɪ'vɝsəti",
+    "translation": "大学",
+    "translations": [
+      "大学"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00094",
+    "word": "gym",
+    "phonetic": "dʒɪm",
+    "translation": "体育馆",
+    "translations": [
+      "体育馆"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00095",
+    "word": "if",
+    "phonetic": "ɪf",
+    "translation": "如果",
+    "translations": [
+      "如果"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00096",
+    "word": "reporter",
+    "phonetic": "rɪ'pɔrtɚ",
+    "translation": "记者",
+    "translations": [
+      "记者"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00097",
+    "word": "use",
+    "phonetic": "juz",
+    "translation": "使用",
+    "translations": [
+      "使用"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00098",
+    "word": "type",
+    "phonetic": "taɪp",
+    "translation": "打字",
+    "translations": [
+      "打字"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00099",
+    "word": "quickly",
+    "phonetic": "'kwɪkli",
+    "translation": "迅速地",
+    "translations": [
+      "迅速地"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00100",
+    "word": "secretary",
+    "phonetic": "'sɛkrətɛrɪ",
+    "translation": "秘书",
+    "translations": [
+      "秘书"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00101",
+    "word": "angry",
+    "phonetic": "ˈæŋgrɪ",
+    "translation": "生气的",
+    "translations": [
+      "生气的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00102",
+    "word": "afraid",
+    "phonetic": "ə'fred",
+    "translation": "害怕",
+    "translations": [
+      "害怕"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00103",
+    "word": "sad",
+    "phonetic": "sæd",
+    "translation": "难过的",
+    "translations": [
+      "难过的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00104",
+    "word": "worried",
+    "phonetic": "'wɝrɪd",
+    "translation": "担心的",
+    "translations": [
+      "担心的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00105",
+    "word": "happy",
+    "phonetic": "'hæpɪ",
+    "translation": "高兴的",
+    "translations": [
+      "高兴的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00106",
+    "word": "see a doctor",
+    "phonetic": "",
+    "translation": "看病",
+    "translations": [
+      "看病"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00107",
+    "word": "wear.",
+    "phonetic": "wɛr",
+    "translation": "穿",
+    "translations": [
+      "穿"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00108",
+    "word": "more",
+    "phonetic": "mɔr",
+    "translation": "更多的",
+    "translations": [
+      "更多的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00109",
+    "word": "deep",
+    "phonetic": "dip",
+    "translation": "深的",
+    "translations": [
+      "深的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00110",
+    "word": "breath",
+    "phonetic": "brɛθ",
+    "translation": "呼吸",
+    "translations": [
+      "呼吸"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00111",
+    "word": "take a deep breath",
+    "phonetic": "",
+    "translation": "深呼吸",
+    "translations": [
+      "深呼吸"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00112",
+    "word": "count",
+    "phonetic": "kaʊnt",
+    "translation": "数数",
+    "translations": [
+      "数数"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00113",
+    "word": "count to ten",
+    "phonetic": "",
+    "translation": "数到十",
+    "translations": [
+      "数到十"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00114",
+    "word": "chase",
+    "phonetic": "tʃeis",
+    "translation": "追赶",
+    "translations": [
+      "追赶"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00115",
+    "word": "mice",
+    "phonetic": "maɪs",
+    "translation": "老鼠",
+    "translations": [
+      "老鼠"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00116",
+    "word": "bad",
+    "phonetic": "bæd",
+    "translation": "邪恶的",
+    "translations": [
+      "邪恶的"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00117",
+    "word": "hurt",
+    "phonetic": "hɝ​t",
+    "translation": "受伤",
+    "translations": [
+      "受伤"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00118",
+    "word": "ill",
+    "phonetic": "ɪl",
+    "translation": "有病",
+    "translations": [
+      "有病"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00119",
+    "word": "wrong",
+    "phonetic": "rɔŋ",
+    "translation": "有毛病",
+    "translations": [
+      "有毛病"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00120",
+    "word": "should",
+    "phonetic": "ʃəd; strong form ʃʊd",
+    "translation": "应该",
+    "translations": [
+      "应该"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00121",
+    "word": "feel",
+    "phonetic": "fil",
+    "translation": "觉得",
+    "translations": [
+      "觉得"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00122",
+    "word": "well",
+    "phonetic": "wɛl",
+    "translation": "健康",
+    "translations": [
+      "健康"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00123",
+    "word": "sit",
+    "phonetic": "sɪt",
+    "translation": "坐",
+    "translations": [
+      "坐"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00124",
+    "word": "grass",
+    "phonetic": "ɡræs",
+    "translation": "草坪",
+    "translations": [
+      "草坪"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00125",
+    "word": "ant",
+    "phonetic": "ænt",
+    "translation": "蚂蚁",
+    "translations": [
+      "蚂蚁"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00126",
+    "word": "worry",
+    "phonetic": "ˈwʌrɪ",
+    "translation": "担心",
+    "translations": [
+      "担心"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00127",
+    "word": "stuck",
+    "phonetic": "stʌk",
+    "translation": "陷住",
+    "translations": [
+      "陷住"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00128",
+    "word": "mud",
+    "phonetic": "mʌd",
+    "translation": "泥",
+    "translations": [
+      "泥"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00129",
+    "word": "pull",
+    "phonetic": "pʊl",
+    "translation": "拉",
+    "translations": [
+      "拉"
+    ],
+    "domain": "qwerty_liu1"
+  },
+  {
+    "id": "qwerty_liu1_00130",
+    "word": "everyone",
+    "phonetic": "'ɛvrɪwʌn",
+    "translation": "每人",
+    "translations": [
+      "每人"
+    ],
+    "domain": "qwerty_liu1"
+  }
+]

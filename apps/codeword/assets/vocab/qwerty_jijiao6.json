@@ -1,0 +1,1088 @@
+[
+  {
+    "id": "qwerty_jijiao6_00001",
+    "word": "run",
+    "phonetic": "[rʌn]",
+    "translation": "n. 奔跑；赛跑；趋向；奔跑的路程；vt. 管理，经营；运行；参赛；vi. 经营；奔跑；运转",
+    "translations": [
+      "n. 奔跑；赛跑；趋向；奔跑的路程",
+      "vt. 管理，经营；运行；参赛",
+      "vi. 经营；奔跑；运转"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00002",
+    "word": "sorry",
+    "phonetic": "[ˈsɑːri]",
+    "translation": "adj. 遗憾的；对不起的，抱歉的；int. 对不起，抱歉（表示委婉的拒绝等）",
+    "translations": [
+      "adj. 遗憾的；对不起的，抱歉的",
+      "int. 对不起，抱歉（表示委婉的拒绝等）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00003",
+    "word": "jump",
+    "phonetic": "[dʒʌmp]",
+    "translation": "n. 跳跃；暴涨；惊跳；vt. 跳跃；使跳跃；跳过；突升；vi. 跳跃；暴涨；猛增",
+    "translations": [
+      "n. 跳跃；暴涨；惊跳",
+      "vt. 跳跃；使跳跃；跳过；突升",
+      "vi. 跳跃；暴涨；猛增"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00004",
+    "word": "sing",
+    "phonetic": "[sɪŋ]",
+    "translation": "n. 演唱；鸣声；呼啸声；vt. 唱；用诗赞颂；唱着使；vi. 唱歌；歌颂；鸣叫；呼号",
+    "translations": [
+      "n. 演唱；鸣声；呼啸声",
+      "vt. 唱；用诗赞颂；唱着使",
+      "vi. 唱歌；歌颂；鸣叫；呼号"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00005",
+    "word": "dance",
+    "phonetic": "[dæns]",
+    "translation": "n. 舞蹈；舞会；舞曲；adj. 舞蹈的；用于跳舞的；vt. 跳舞；使跳跃；vi. 跳舞；跳跃；飘扬",
+    "translations": [
+      "n. 舞蹈；舞会；舞曲",
+      "adj. 舞蹈的；用于跳舞的",
+      "vt. 跳舞；使跳跃",
+      "vi. 跳舞；跳跃；飘扬"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00006",
+    "word": "sit",
+    "phonetic": "[sɪt]",
+    "translation": "vi. 坐；位于；vt. 使就座",
+    "translations": [
+      "vi. 坐；位于",
+      "vt. 使就座"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00007",
+    "word": "down",
+    "phonetic": "[daʊn]",
+    "translation": "prep. 沿着，往下；n. 软毛，绒毛；[地质] 开阔的高地；adj. 向下的；vt. 打倒，击败；adv. 向下，下去；在下面；vi. 下降；下去",
+    "translations": [
+      "prep. 沿着，往下",
+      "n. 软毛，绒毛；[地质] 开阔的高地",
+      "adj. 向下的",
+      "vt. 打倒，击败",
+      "adv. 向下，下去；在下面",
+      "vi. 下降；下去"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00008",
+    "word": "stand",
+    "phonetic": "[stænd]",
+    "translation": "n. 站立；立场；看台；停止；vi. 站立；位于；停滞；vt. 使站立；忍受；抵抗",
+    "translations": [
+      "n. 站立；立场；看台；停止",
+      "vi. 站立；位于；停滞",
+      "vt. 使站立；忍受；抵抗"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00009",
+    "word": "up",
+    "phonetic": "[ʌp]",
+    "translation": "prep. 在…之上；向…的较高处；n. 上升；繁荣；adj. 涨的；起床的；向上的；adv. 起来；上涨；向上",
+    "translations": [
+      "prep. 在…之上；向…的较高处",
+      "n. 上升；繁荣",
+      "adj. 涨的；起床的；向上的",
+      "adv. 起来；上涨；向上"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00010",
+    "word": "see",
+    "phonetic": "[siː]",
+    "translation": "vi. 看；看见；领会；vt. 看见；理解；领会",
+    "translations": [
+      "vi. 看；看见；领会",
+      "vt. 看见；理解；领会"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00011",
+    "word": "saw",
+    "phonetic": "[sɔː]",
+    "translation": "n. 锯子；谚语；v. see的过去式；vi. 锯；用锯；将某物锯成小块；vt. 看见；明白，了解；锯；锯成；锯开",
+    "translations": [
+      "n. 锯子；谚语",
+      "v. see的过去式",
+      "vi. 锯；用锯；将某物锯成小块",
+      "vt. 看见；明白，了解；锯；锯成；锯开"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00012",
+    "word": "look",
+    "phonetic": "[lʊk]",
+    "translation": "vt. 看；期待；注意；面向；看上去像；vi. 看；看起来；注意；面向；n. 看；样子；面容",
+    "translations": [
+      "vt. 看；期待；注意；面向；看上去像",
+      "vi. 看；看起来；注意；面向",
+      "n. 看；样子；面容"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00013",
+    "word": "look out of",
+    "phonetic": "",
+    "translation": "向外看；朝外看；从……朝外看",
+    "translations": [
+      "向外看；朝外看；从……朝外看"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00014",
+    "word": "look at",
+    "phonetic": "",
+    "translation": "na. 看；考虑",
+    "translations": [
+      "na. 看；考虑"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00015",
+    "word": "boy",
+    "phonetic": "[bɔɪ]",
+    "translation": "n. 男孩；男人",
+    "translations": [
+      "n. 男孩；男人"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00016",
+    "word": "girl",
+    "phonetic": "[ɡɜːrl]",
+    "translation": "n. 女孩；姑娘，未婚女子；女职员，女演员；（男人的）女朋友；n. （捷）吉尔",
+    "translations": [
+      "n. 女孩；姑娘，未婚女子；女职员，女演员；（男人的）女朋友",
+      "n. （捷）吉尔"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00017",
+    "word": "now",
+    "phonetic": "[naʊ]",
+    "translation": "adv. 现在；如今；立刻；adj. 现在的；n. 现在；目前；conj. 由于；既然",
+    "translations": [
+      "adv. 现在；如今；立刻",
+      "adj. 现在的",
+      "n. 现在；目前",
+      "conj. 由于；既然"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00018",
+    "word": "draw",
+    "phonetic": "[drɔː]",
+    "translation": "n. 平局；抽签；vi. 拉；拖；vt. 画；拉；吸引",
+    "translations": [
+      "n. 平局；抽签",
+      "vi. 拉；拖",
+      "vt. 画；拉；吸引"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00019",
+    "word": "picture",
+    "phonetic": "[ˈpɪktʃər]",
+    "translation": "n. 照片，图画；影片；景色；化身；vt. 画；想像；描写",
+    "translations": [
+      "n. 照片，图画；影片；景色；化身",
+      "vt. 画；想像；描写"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00020",
+    "word": "woman",
+    "phonetic": "[ˈwʊmən]",
+    "translation": "n. 妇女；女性；成年女子",
+    "translations": [
+      "n. 妇女；女性；成年女子"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00021",
+    "word": "baby",
+    "phonetic": "[ˈbeɪbi]",
+    "translation": "n. 婴儿，婴孩；孩子气的人；adj. 婴儿的；幼小的；vt. 纵容，娇纵；把……当婴儿般对待",
+    "translations": [
+      "n. 婴儿，婴孩；孩子气的人",
+      "adj. 婴儿的；幼小的",
+      "vt. 纵容，娇纵；把……当婴儿般对待"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00022",
+    "word": "cry",
+    "phonetic": "[kraɪ]",
+    "translation": "n. 叫喊；叫声；口号；呼叫；vi. 哭；叫；喊；vt. 叫喊；哭出；大声说",
+    "translations": [
+      "n. 叫喊；叫声；口号；呼叫",
+      "vi. 哭；叫；喊",
+      "vt. 叫喊；哭出；大声说"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00023",
+    "word": "talk",
+    "phonetic": "[tɔːk]",
+    "translation": "n. 谈话；演讲；空谈；vi. 谈话；说闲话；vt. 说；谈话；讨论",
+    "translations": [
+      "n. 谈话；演讲；空谈",
+      "vi. 谈话；说闲话",
+      "vt. 说；谈话；讨论"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00024",
+    "word": "man",
+    "phonetic": "[mæn]",
+    "translation": "n. 人；男人；人类；丈夫；雇工；vt. 操纵；给…配置人员；使增强勇气；在…就位",
+    "translations": [
+      "n. 人；男人；人类；丈夫；雇工",
+      "vt. 操纵；给…配置人员；使增强勇气；在…就位"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00025",
+    "word": "sleep",
+    "phonetic": "[sliːp]",
+    "translation": "n. 睡眠；vi. 睡，睡觉",
+    "translations": [
+      "n. 睡眠",
+      "vi. 睡，睡觉"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00026",
+    "word": "who",
+    "phonetic": "[huː]",
+    "translation": "pron. 谁；什么人",
+    "translations": [
+      "pron. 谁；什么人"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00027",
+    "word": "hungry",
+    "phonetic": "[ˈhʌŋɡri]",
+    "translation": "adj. 饥饿的；渴望的；荒年的；不毛的",
+    "translations": [
+      "adj. 饥饿的；渴望的；荒年的；不毛的"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00028",
+    "word": "water",
+    "phonetic": "[ˈwɔːtər]",
+    "translation": "n. 水；海水；雨水；海域，大片的水；vt. 使湿；供以水；给…浇水；vi. 加水；流泪；流口水",
+    "translations": [
+      "n. 水；海水；雨水；海域，大片的水",
+      "vt. 使湿；供以水；给…浇水",
+      "vi. 加水；流泪；流口水"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00029",
+    "word": "tea",
+    "phonetic": "[tiː]",
+    "translation": "n. 茶叶；茶树；茶点；vt. 给…沏茶；vi. 喝茶；进茶点",
+    "translations": [
+      "n. 茶叶；茶树；茶点",
+      "vt. 给…沏茶",
+      "vi. 喝茶；进茶点"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00030",
+    "word": "candy",
+    "phonetic": "[ˈkændi]",
+    "translation": "n. 糖果（等于sweets）；冰糖（等于sugar candy，rock candy）；毒品；adj. 新潮的（服饰）；甜言蜜语的；vt. 用糖煮；使结晶为砂糖；美化；vi. 糖煮；成为结晶",
+    "translations": [
+      "n. 糖果（等于sweets）；冰糖（等于sugar candy，rock candy）；毒品",
+      "adj. 新潮的（服饰）；甜言蜜语的",
+      "vt. 用糖煮；使结晶为砂糖；美化",
+      "vi. 糖煮；成为结晶"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00031",
+    "word": "people",
+    "phonetic": "[ˈpiːpl]",
+    "translation": "n. 人；人类；民族；公民；vt. 居住于；使住满人",
+    "translations": [
+      "n. 人；人类；民族；公民",
+      "vt. 居住于；使住满人"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00032",
+    "word": "many",
+    "phonetic": "[ˈmeni]",
+    "translation": "pron. 许多；许多人；adj. 许多的",
+    "translations": [
+      "pron. 许多；许多人",
+      "adj. 许多的"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00033",
+    "word": "child",
+    "phonetic": "[tʃaɪld]",
+    "translation": "n. 儿童，小孩，孩子；产物；子孙；幼稚的人；弟子",
+    "translations": [
+      "n. 儿童，小孩，孩子；产物；子孙；幼稚的人；弟子"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00034",
+    "word": "children",
+    "phonetic": "[ˈtʃɪldrən]",
+    "translation": "n. 孩子们（child的复数）",
+    "translations": [
+      "n. 孩子们（child的复数）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00035",
+    "word": "women",
+    "phonetic": "[ˈwɪmɪn]",
+    "translation": "n. 女人（woman的复数）",
+    "translations": [
+      "n. 女人（woman的复数）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00036",
+    "word": "woman",
+    "phonetic": "[ˈwʊmən]",
+    "translation": "n. 妇女；女性；成年女子",
+    "translations": [
+      "n. 妇女；女性；成年女子"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00037",
+    "word": "men",
+    "phonetic": "[men]",
+    "translation": "n. 男人，人类（man的复数）",
+    "translations": [
+      "n. 男人，人类（man的复数）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00038",
+    "word": "man",
+    "phonetic": "[mæn]",
+    "translation": "n. 人；男人；人类；丈夫；雇工；vt. 操纵；给…配置人员；使增强勇气；在…就位",
+    "translations": [
+      "n. 人；男人；人类；丈夫；雇工",
+      "vt. 操纵；给…配置人员；使增强勇气；在…就位"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00039",
+    "word": "say",
+    "phonetic": "[seɪ]",
+    "translation": "vt. 讲；说明；例如；声称；假设；指明；vi. 讲；表示；念；假定；背诵",
+    "translations": [
+      "vt. 讲；说明；例如；声称；假设；指明",
+      "vi. 讲；表示；念；假定；背诵"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00040",
+    "word": "help",
+    "phonetic": "[help]",
+    "translation": "n. 帮助；补救办法；帮忙者；有益的东西；vt. 帮助；促进；治疗；补救；vi. 帮助；有用；招待",
+    "translations": [
+      "n. 帮助；补救办法；帮忙者；有益的东西",
+      "vt. 帮助；促进；治疗；补救",
+      "vi. 帮助；有用；招待"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00041",
+    "word": "worry",
+    "phonetic": "[ˈwɜːri]",
+    "translation": "n. 担心；烦恼；撕咬；vi. 担心；烦恼；撕咬；vt. 担心；发愁；折磨",
+    "translations": [
+      "n. 担心；烦恼；撕咬",
+      "vi. 担心；烦恼；撕咬",
+      "vt. 担心；发愁；折磨"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00042",
+    "word": "sad",
+    "phonetic": "[sæd]",
+    "translation": "adj. 难过的；悲哀的，令人悲痛的；凄惨的，阴郁的（形容颜色）",
+    "translations": [
+      "adj. 难过的；悲哀的，令人悲痛的；凄惨的，阴郁的（形容颜色）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00043",
+    "word": "take",
+    "phonetic": "[teɪk]",
+    "translation": "vi. 拿；获得；vt. 拿，取；采取；接受（礼物等）；买，花费；耗费（时间等）；n. 捕获量；看法；利益，盈益；（入场券的）售得金额",
+    "translations": [
+      "vi. 拿；获得",
+      "vt. 拿，取；采取；接受（礼物等）；买，花费；耗费（时间等）",
+      "n. 捕获量；看法；利益，盈益；（入场券的）售得金额"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00044",
+    "word": "take a picture",
+    "phonetic": "",
+    "translation": "v. 照相",
+    "translations": [
+      "v. 照相"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00045",
+    "word": "be",
+    "phonetic": "[bi; biː]",
+    "translation": "vt. 是； 有，存在； 做，成为； 发生",
+    "translations": [
+      "vt. 是； 有，存在； 做，成为； 发生"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00046",
+    "word": "am",
+    "phonetic": "[əm; æm]",
+    "translation": "abbr. 调幅；v. 是",
+    "translations": [
+      "abbr. 调幅",
+      "v. 是"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00047",
+    "word": "is",
+    "phonetic": "[ɪz]",
+    "translation": "v. 是（be的三单形式）；n. 存在",
+    "translations": [
+      "v. 是（be的三单形式）",
+      "n. 存在"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00048",
+    "word": "are",
+    "phonetic": "[ər; ɑːr; er]",
+    "translation": "v. 是（be的第二人称单复数现在式）；n. 公亩",
+    "translations": [
+      "v. 是（be的第二人称单复数现在式）",
+      "n. 公亩"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00049",
+    "word": "feel",
+    "phonetic": "[fiːl]",
+    "translation": "n. 感觉；触摸；vi. 觉得；摸索；vt. 感觉；认为；触摸；试探",
+    "translations": [
+      "n. 感觉；触摸",
+      "vi. 觉得；摸索",
+      "vt. 感觉；认为；触摸；试探"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00050",
+    "word": "tired",
+    "phonetic": "[ˈtaɪərd]",
+    "translation": "v. 疲倦；对…腻烦（tire的过去分词形式）；adj. 疲倦的；厌倦的，厌烦的",
+    "translations": [
+      "v. 疲倦；对…腻烦（tire的过去分词形式）",
+      "adj. 疲倦的；厌倦的，厌烦的"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00051",
+    "word": "stop",
+    "phonetic": "[stɑːp]",
+    "translation": "n. 停止；车站；障碍；逗留；vi. 停止；中止；逗留；被塞住；vt. 停止；堵塞；断绝",
+    "translations": [
+      "n. 停止；车站；障碍；逗留",
+      "vi. 停止；中止；逗留；被塞住",
+      "vt. 停止；堵塞；断绝"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00052",
+    "word": "wait",
+    "phonetic": "[weɪt]",
+    "translation": "n. 等待；等候；vi. 等待；耽搁；伺候用餐；vt. 等候；推迟；延缓",
+    "translations": [
+      "n. 等待；等候",
+      "vi. 等待；耽搁；伺候用餐",
+      "vt. 等候；推迟；延缓"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00053",
+    "word": "afraid",
+    "phonetic": "[əˈfreɪd]",
+    "translation": "adj. 害怕的；恐怕；担心的",
+    "translations": [
+      "adj. 害怕的；恐怕；担心的"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00054",
+    "word": "for",
+    "phonetic": "[fər; fɔːr]",
+    "translation": "prep. 为，为了；因为；给；对于；至于；适合于；conj. 因为",
+    "translations": [
+      "prep. 为，为了；因为；给；对于；至于；适合于",
+      "conj. 因为"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00055",
+    "word": "busy",
+    "phonetic": "[ˈbɪzi]",
+    "translation": "adj. 忙碌的；热闹的；正被占用的；vt. 使忙于",
+    "translations": [
+      "adj. 忙碌的；热闹的；正被占用的",
+      "vt. 使忙于"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00056",
+    "word": "much",
+    "phonetic": "[mʌtʃ]",
+    "translation": "adv. 非常，很；adj. 大量的；n. 许多，大",
+    "translations": [
+      "adv. 非常，很",
+      "adj. 大量的",
+      "n. 许多，大"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00057",
+    "word": "how much",
+    "phonetic": "[haʊ mʌtʃ]",
+    "translation": "conj. 多少",
+    "translations": [
+      "conj. 多少"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00058",
+    "word": "write",
+    "phonetic": "[raɪt]",
+    "translation": "vi. 写，写字；写作，作曲；写信；vt. 写，书写；写信给；著述",
+    "translations": [
+      "vi. 写，写字；写作，作曲；写信",
+      "vt. 写，书写；写信给；著述"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00059",
+    "word": "mum",
+    "phonetic": "[mʌm]",
+    "translation": "adj. 沉默的；n. 妈妈（口语）；沉默；菊花；vi. 演哑剧；int. 别说话",
+    "translations": [
+      "adj. 沉默的",
+      "n. 妈妈（口语）；沉默；菊花",
+      "vi. 演哑剧",
+      "int. 别说话"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00060",
+    "word": "dad",
+    "phonetic": "[dæd]",
+    "translation": "n. 爸爸；爹爹",
+    "translations": [
+      "n. 爸爸；爹爹"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00061",
+    "word": "dear",
+    "phonetic": "[dɪr]",
+    "translation": "n. 亲爱的人；adj. 亲爱的；尊敬的；昂贵的；adv. 高价地；疼爱地；int. 哎呀",
+    "translations": [
+      "n. 亲爱的人",
+      "adj. 亲爱的；尊敬的；昂贵的",
+      "adv. 高价地；疼爱地",
+      "int. 哎呀"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00062",
+    "word": "fine",
+    "phonetic": "[faɪn]",
+    "translation": "n. 罚款；adj. 好的；优良的；细小的，精美的；健康的；晴朗的；vt. 罚款；澄清；adv. 很好地；精巧地",
+    "translations": [
+      "n. 罚款",
+      "adj. 好的；优良的；细小的，精美的；健康的；晴朗的",
+      "vt. 罚款；澄清",
+      "adv. 很好地；精巧地"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00063",
+    "word": "left",
+    "phonetic": "[left]",
+    "translation": "adj. 左边的；左派的；剩下的；adv. 在左面；n. 左边；左派；激进分子；v. 离开（leave的过去式）",
+    "translations": [
+      "adj. 左边的；左派的；剩下的",
+      "adv. 在左面",
+      "n. 左边；左派；激进分子",
+      "v. 离开（leave的过去式）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00064",
+    "word": "right",
+    "phonetic": "[raɪt]",
+    "translation": "n. 正确；右边；正义；adj. 正确的；直接的；右方的；vt. 纠正；adv. 正确地；恰当地；彻底地；vi. 复正；恢复平稳",
+    "translations": [
+      "n. 正确；右边；正义",
+      "adj. 正确的；直接的；右方的",
+      "vt. 纠正",
+      "adv. 正确地；恰当地；彻底地",
+      "vi. 复正；恢复平稳"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00065",
+    "word": "turn",
+    "phonetic": "[tɜːrn]",
+    "translation": "n. 转弯；变化；(损害或有益于别人的)行为，举动，举止；vi. 转向；转变；转动；vt. 转动，使旋转；转弯；翻过来；兑换",
+    "translations": [
+      "n. 转弯；变化；(损害或有益于别人的)行为，举动，举止",
+      "vi. 转向；转变；转动",
+      "vt. 转动，使旋转；转弯；翻过来；兑换"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00066",
+    "word": "wrong",
+    "phonetic": "[rɔːŋ]",
+    "translation": "n. 坏事；不公正；adj. 错误的；失常的；不适当的；vt. 委屈；无理地对待；诽谤；adv. 错误地；邪恶地，不正当地",
+    "translations": [
+      "n. 坏事；不公正",
+      "adj. 错误的；失常的；不适当的",
+      "vt. 委屈；无理地对待；诽谤",
+      "adv. 错误地；邪恶地，不正当地"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00067",
+    "word": "email",
+    "phonetic": "[ˈiːmeɪl]",
+    "translation": "n. 电子信函；vt. 给…发电子邮件",
+    "translations": [
+      "n. 电子信函",
+      "vt. 给…发电子邮件"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00068",
+    "word": "idea",
+    "phonetic": "[aɪˈdiːə]",
+    "translation": "n. 想法；主意；概念",
+    "translations": [
+      "n. 想法；主意；概念"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00069",
+    "word": "computer",
+    "phonetic": "[kəmˈpjuːtər]",
+    "translation": "n. 计算机；电脑；电子计算机",
+    "translations": [
+      "n. 计算机；电脑；电子计算机"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00070",
+    "word": "use",
+    "phonetic": "[juːz]",
+    "translation": "n. 使用；用途；发挥；vt. 利用；耗费；vi. 使用，运用",
+    "translations": [
+      "n. 使用；用途；发挥",
+      "vt. 利用；耗费",
+      "vi. 使用，运用"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00071",
+    "word": "kind",
+    "phonetic": "[kaɪnd]",
+    "translation": "n. 种类；性质；adj. 和蔼的；宽容的；令人感激的",
+    "translations": [
+      "n. 种类；性质",
+      "adj. 和蔼的；宽容的；令人感激的"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00072",
+    "word": "us",
+    "phonetic": "[əs; ʌs]",
+    "translation": "pron. 我们",
+    "translations": [
+      "pron. 我们"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00073",
+    "word": "we",
+    "phonetic": "[wi]",
+    "translation": "pron. 我们（主格）；笔者，本人（作者或演讲人使用）；朕，寡人",
+    "translations": [
+      "pron. 我们（主格）；笔者，本人（作者或演讲人使用）；朕，寡人"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00074",
+    "word": "story",
+    "phonetic": "[ˈstɔːri]",
+    "translation": "n. 故事；小说；新闻报道；来历；假话；vt. 用历史故事画装饰；vi. 说谎",
+    "translations": [
+      "n. 故事；小说；新闻报道；来历；假话",
+      "vt. 用历史故事画装饰",
+      "vi. 说谎"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00075",
+    "word": "did",
+    "phonetic": "[dɪd]",
+    "translation": "v. 做（do的过去式）",
+    "translations": [
+      "v. 做（do的过去式）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00076",
+    "word": "do",
+    "phonetic": "[duː; də; du; doʊ]",
+    "translation": "vi. 行，足够；生长；n. 要求；规定；C大调音阶中的第一音；v. 做；干；学习；研究；进行；完成；解答；整理；算出；引起；行过；aux. 助动词（构成疑问句和否定句）；（代替动词）；（用于加强语气）；n. （口语）事件；（主英国口语）诈骗；（主英国、新西兰口语）宴会；（口语）必须做到的事情",
+    "translations": [
+      "vi. 行，足够；生长",
+      "n. 要求；规定；C大调音阶中的第一音",
+      "v. 做；干；学习；研究；进行；完成；解答；整理；算出；引起；行过",
+      "aux. 助动词（构成疑问句和否定句）；（代替动词）；（用于加强语气）",
+      "n. （口语）事件；（主英国口语）诈骗；（主英国、新西兰口语）宴会；（口语）必须做到的事情"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00077",
+    "word": "yesterday",
+    "phonetic": "[ˈjestərdeɪ; ˈjestərdi]",
+    "translation": "n. 昨天；往昔；adv. 昨天",
+    "translations": [
+      "n. 昨天；往昔",
+      "adv. 昨天"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00078",
+    "word": "night",
+    "phonetic": "[naɪt]",
+    "translation": "n. 夜晚，晚上；黑暗，黑夜；adj. 夜晚的，夜间的",
+    "translations": [
+      "n. 夜晚，晚上；黑暗，黑夜",
+      "adj. 夜晚的，夜间的"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00079",
+    "word": "had",
+    "phonetic": "[həd; əd; hæd]",
+    "translation": "v. 有；吃；得到（动词have的过去式和过去分词）；aux. 已经（用于过去完成时和过去完成进行时）",
+    "translations": [
+      "v. 有；吃；得到（动词have的过去式和过去分词）",
+      "aux. 已经（用于过去完成时和过去完成进行时）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00080",
+    "word": "have",
+    "phonetic": "[həv; əv; hæv]",
+    "translation": "aux. 已经；vt. 有；让；拿；从事；允许",
+    "translations": [
+      "aux. 已经",
+      "vt. 有；让；拿；从事；允许"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00081",
+    "word": "went",
+    "phonetic": "[went]",
+    "translation": "v. 去，过去（go的过去式）",
+    "translations": [
+      "v. 去，过去（go的过去式）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00082",
+    "word": "go",
+    "phonetic": "[ɡoʊ]",
+    "translation": "n. 去；进行；尝试；vi. 走；达到；运转；趋于；vt. 忍受；出产；以…打赌；[复数 goes 第三人称单数 goes 过去式 went 过去分词 gone 现在分词 going]",
+    "translations": [
+      "n. 去；进行；尝试",
+      "vi. 走；达到；运转；趋于",
+      "vt. 忍受；出产；以…打赌",
+      "[复数 goes 第三人称单数 goes 过去式 went 过去分词 gone 现在分词 going]"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00083",
+    "word": "saw",
+    "phonetic": "[sɔː]",
+    "translation": "n. 锯子；谚语；v. see的过去式；vi. 锯；用锯；将某物锯成小块；vt. 看见；明白，了解；锯；锯成；锯开",
+    "translations": [
+      "n. 锯子；谚语",
+      "v. see的过去式",
+      "vi. 锯；用锯；将某物锯成小块",
+      "vt. 看见；明白，了解；锯；锯成；锯开"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00084",
+    "word": "see",
+    "phonetic": "[siː]",
+    "translation": "vi. 看；看见；领会；vt. 看见；理解；领会",
+    "translations": [
+      "vi. 看；看见；领会",
+      "vt. 看见；理解；领会"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00085",
+    "word": "ate",
+    "phonetic": "[eɪt]",
+    "translation": "v. 吃（eat的过去式）",
+    "translations": [
+      "v. 吃（eat的过去式）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00086",
+    "word": "eat",
+    "phonetic": "[iːt]",
+    "translation": "vt. 吃，喝；腐蚀；烦扰；vi. 进食；腐蚀，侵蚀",
+    "translations": [
+      "vt. 吃，喝；腐蚀；烦扰",
+      "vi. 进食；腐蚀，侵蚀"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00087",
+    "word": "photo",
+    "phonetic": "[ˈfoʊtoʊ]",
+    "translation": "n. 照片",
+    "translations": [
+      "n. 照片"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00088",
+    "word": "were",
+    "phonetic": "[wər; wɜːr]",
+    "translation": "v. 是，在（are的过去式）",
+    "translations": [
+      "v. 是，在（are的过去式）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00089",
+    "word": "are",
+    "phonetic": "[ər; ɑːr; er]",
+    "translation": "v. 是（be的第二人称单复数现在式）；n. 公亩",
+    "translations": [
+      "v. 是（be的第二人称单复数现在式）",
+      "n. 公亩"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00090",
+    "word": "was",
+    "phonetic": "[wəz; wʌz]",
+    "translation": "be的第一和第三人称单数过去式",
+    "translations": [
+      "be的第一和第三人称单数过去式"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00091",
+    "word": "am",
+    "phonetic": "[əm; æm]",
+    "translation": "abbr. 调幅；v. 是",
+    "translations": [
+      "abbr. 调幅",
+      "v. 是"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00092",
+    "word": "is",
+    "phonetic": "[ɪz]",
+    "translation": "v. 是（be的三单形式）；n. 存在",
+    "translations": [
+      "v. 是（be的三单形式）",
+      "n. 存在"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00093",
+    "word": "happy",
+    "phonetic": "[ˈhæpi]",
+    "translation": "adj. 幸福的；高兴的；巧妙的",
+    "translations": [
+      "adj. 幸福的；高兴的；巧妙的"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00094",
+    "word": "bought",
+    "phonetic": "[bɔːt]",
+    "translation": "v. 买（buy的过去式和过去分词）",
+    "translations": [
+      "v. 买（buy的过去式和过去分词）"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00095",
+    "word": "buy",
+    "phonetic": "[baɪ]",
+    "translation": "n. 购买，买卖；所购的物品；vi. 买，采购；vt. 购买；获得；贿赂",
+    "translations": [
+      "n. 购买，买卖；所购的物品",
+      "vi. 买，采购",
+      "vt. 购买；获得；贿赂"
+    ],
+    "domain": "qwerty_jijiao6"
+  },
+  {
+    "id": "qwerty_jijiao6_00096",
+    "word": "back",
+    "phonetic": "[bæk]",
+    "translation": "n. 后面；背部；靠背；足球等的后卫；书报等的末尾；adj. 后面的；过去的；拖欠的；vt. 支持；后退；背书；下赌注；adv. 以前；向后地；来回地；上溯；回来；回原处；vi. 后退；背靠；倒退",
+    "translations": [
+      "n. 后面；背部；靠背；足球等的后卫；书报等的末尾",
+      "adj. 后面的；过去的；拖欠的",
+      "vt. 支持；后退；背书；下赌注",
+      "adv. 以前；向后地；来回地；上溯；回来；回原处",
+      "vi. 后退；背靠；倒退"
+    ],
+    "domain": "qwerty_jijiao6"
+  }
+]

@@ -1,0 +1,876 @@
+[
+  {
+    "id": "qwerty_waiyan16_00001",
+    "word": "machine",
+    "phonetic": "[məˈʃiːn]",
+    "translation": "n. 机械，机器；机构；机械般工作的人；vt. 用机器制造",
+    "translations": [
+      "n. 机械，机器；机构；机械般工作的人",
+      "vt. 用机器制造"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00002",
+    "word": "welcome",
+    "phonetic": "[ˈwelkəm]",
+    "translation": "n. 欢迎；vt. 欢迎；adj. 受欢迎的；int. 欢迎",
+    "translations": [
+      "n. 欢迎",
+      "vt. 欢迎",
+      "adj. 受欢迎的",
+      "int. 欢迎"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00003",
+    "word": "crisp",
+    "phonetic": "[krɪsp]",
+    "translation": "adj. 脆的；新鲜的；易碎的；vt. 使卷曲；使发脆；vi. 卷曲；发脆；n. 松脆物；油炸马铃薯片",
+    "translations": [
+      "adj. 脆的；新鲜的；易碎的",
+      "vt. 使卷曲；使发脆",
+      "vi. 卷曲；发脆",
+      "n. 松脆物；油炸马铃薯片"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00004",
+    "word": "sir",
+    "phonetic": "[sɜːr; sər]",
+    "translation": "n. 先生；（用于姓名前）爵士；阁下；（中小学生对男教师的称呼）先生；老师",
+    "translations": [
+      "n. 先生；（用于姓名前）爵士；阁下；（中小学生对男教师的称呼）先生；老师"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00005",
+    "word": "potato",
+    "phonetic": "[pəˈteɪtoʊ]",
+    "translation": "n. [作物] 土豆，[作物] 马铃薯",
+    "translations": [
+      "n. [作物] 土豆，[作物] 马铃薯"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00006",
+    "word": "dangerous",
+    "phonetic": "[ˈdeɪndʒərəs]",
+    "translation": "adj. 危险的；危险地",
+    "translations": [
+      "adj. 危险的",
+      "危险地"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00007",
+    "word": "put",
+    "phonetic": "[pʊt]",
+    "translation": "n. 掷；笨蛋；投击；怪人；adj. 固定不动的；vi. 出发；击；航行；发芽；vt. 放；表达；移动；安置；赋予",
+    "translations": [
+      "n. 掷；笨蛋；投击；怪人",
+      "adj. 固定不动的",
+      "vi. 出发；击；航行；发芽",
+      "vt. 放；表达；移动；安置；赋予"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00008",
+    "word": "wait",
+    "phonetic": "[weɪt]",
+    "translation": "n. 等待；等候；vi. 等待；耽搁；伺候用餐；vt. 等候；推迟；延缓",
+    "translations": [
+      "n. 等待；等候",
+      "vi. 等待；耽搁；伺候用餐",
+      "vt. 等候；推迟；延缓"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00009",
+    "word": "each",
+    "phonetic": "[iːtʃ]",
+    "translation": "adj. 每；各自的；pron. 每个；各自；adv. 每个；各自",
+    "translations": [
+      "adj. 每；各自的",
+      "pron. 每个；各自",
+      "adv. 每个；各自"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00010",
+    "word": "cheap",
+    "phonetic": "[tʃiːp]",
+    "translation": "adj. 便宜的；小气的；不值钱的；adv. 便宜地",
+    "translations": [
+      "adj. 便宜的；小气的；不值钱的",
+      "adv. 便宜地"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00011",
+    "word": "expensive",
+    "phonetic": "[ɪkˈspensɪv]",
+    "translation": "adj. 昂贵的；花钱的",
+    "translations": [
+      "adj. 昂贵的；花钱的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00012",
+    "word": "send",
+    "phonetic": "[send]",
+    "translation": "n. 上升运动；vi. 派人；寄信；vt. 发送，寄；派遣；使进入；发射",
+    "translations": [
+      "n. 上升运动",
+      "vi. 派人；寄信",
+      "vt. 发送，寄；派遣；使进入；发射"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00013",
+    "word": "email",
+    "phonetic": "[ˈiːmeɪl]",
+    "translation": "n. 电子信函；vt. 给…发电子邮件",
+    "translations": [
+      "n. 电子信函",
+      "vt. 给…发电子邮件"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00014",
+    "word": "cost",
+    "phonetic": "[kɔːst]",
+    "translation": "n. 费用，代价，成本；损失；vt. 花费；使付出；使花许多钱；vi. 花费",
+    "translations": [
+      "n. 费用，代价，成本；损失",
+      "vt. 花费；使付出；使花许多钱",
+      "vi. 花费"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00015",
+    "word": "hundred",
+    "phonetic": "[ˈhʌndrəd]",
+    "translation": "num. 百；百个；n. 一百；许多；adj. 一百的；许多的",
+    "translations": [
+      "num. 百；百个",
+      "n. 一百；许多",
+      "adj. 一百的；许多的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00016",
+    "word": "shout",
+    "phonetic": "[ʃaʊt]",
+    "translation": "n. 呼喊；呼叫；vi. 呼喊；喊叫；大声说；vt. 呼喊；大声说",
+    "translations": [
+      "n. 呼喊；呼叫",
+      "vi. 呼喊；喊叫；大声说",
+      "vt. 呼喊；大声说"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00017",
+    "word": "wolf",
+    "phonetic": "[wʊlf]",
+    "translation": "n. 狼；色狼；残忍贪婪之人；vt. 大吃；狼吞虎咽地吃",
+    "translations": [
+      "n. 狼；色狼；残忍贪婪之人",
+      "vt. 大吃；狼吞虎咽地吃"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00018",
+    "word": "sheep",
+    "phonetic": "[ʃiːp]",
+    "translation": "n. 羊，绵羊；胆小鬼",
+    "translations": [
+      "n. 羊，绵羊；胆小鬼"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00019",
+    "word": "ran",
+    "phonetic": "[ræn]",
+    "translation": "v. 跑（run的过去式）",
+    "translations": [
+      "v. 跑（run的过去式）"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00020",
+    "word": "once upon a time",
+    "phonetic": "",
+    "translation": "na. 从前；很久很久以前；古时候",
+    "translations": [
+      "na. 从前；很久很久以前；古时候"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00021",
+    "word": "look after",
+    "phonetic": "[lʊk ˈæftər]",
+    "translation": "na. 照看；照顾；看管；对…负责",
+    "translations": [
+      "na. 照看；照顾；看管；对…负责"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00022",
+    "word": "bored",
+    "phonetic": "[bɔːrd]",
+    "translation": "v. 使厌烦（bore的过去式）；烦扰；adj. 无聊的；无趣的；烦人的",
+    "translations": [
+      "v. 使厌烦（bore的过去式）；烦扰",
+      "adj. 无聊的；无趣的；烦人的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00023",
+    "word": "village",
+    "phonetic": "[ˈvɪlɪdʒ]",
+    "translation": "n. 村庄；村民；（动物的）群落",
+    "translations": [
+      "n. 村庄；村民；（动物的）群落"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00024",
+    "word": "everyone",
+    "phonetic": "[ˈevriwʌn]",
+    "translation": "n. 每个人；pron. 每个人；人人",
+    "translations": [
+      "n. 每个人",
+      "pron. 每个人；人人"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00025",
+    "word": "laugh",
+    "phonetic": "[læf]",
+    "translation": "n. 笑；引人发笑的事或人；vi. 笑；vt. 以笑表示；使…笑得",
+    "translations": [
+      "n. 笑；引人发笑的事或人",
+      "vi. 笑",
+      "vt. 以笑表示；使…笑得"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00026",
+    "word": "lie",
+    "phonetic": "[laɪ]",
+    "translation": "vi. 躺；说谎；位于；展现；vt. 谎骗；n. 谎言；位置",
+    "translations": [
+      "vi. 躺；说谎；位于；展现",
+      "vt. 谎骗",
+      "n. 谎言；位置"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00027",
+    "word": "learnt",
+    "phonetic": "[lɜːrnt]",
+    "translation": "v. 学习（learn的过去式和过去分词）",
+    "translations": [
+      "v. 学习（learn的过去式和过去分词）"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00028",
+    "word": "lesson",
+    "phonetic": "[ˈlesn]",
+    "translation": "n. 教训；课；vt. 教训；上课",
+    "translations": [
+      "n. 教训；课",
+      "vt. 教训；上课"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00029",
+    "word": "wouldn't",
+    "phonetic": "",
+    "translation": "（等于would not）",
+    "translations": [
+      "（等于would not）"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00030",
+    "word": "into",
+    "phonetic": "[ˈɪntə; ˈɪntu; ˈɪntuː]",
+    "translation": "prep. 到…里；深入…之中；成为…状况；进入到…之内",
+    "translations": [
+      "prep. 到…里；深入…之中；成为…状况；进入到…之内"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00031",
+    "word": "month",
+    "phonetic": "[mʌnθ]",
+    "translation": "n. 月，一个月的时间",
+    "translations": [
+      "n. 月，一个月的时间"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00032",
+    "word": "cheese",
+    "phonetic": "[tʃiːz]",
+    "translation": "n. [食品] 奶酪；干酪；要人；adj. 叛变的；胆小的；vt. 停止",
+    "translations": [
+      "n. [食品] 奶酪；干酪；要人",
+      "adj. 叛变的；胆小的",
+      "vt. 停止"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00033",
+    "word": "scared",
+    "phonetic": "[skerd]",
+    "translation": "v. 使害怕（scare的过去分词）；adj. 害怕的",
+    "translations": [
+      "v. 使害怕（scare的过去分词）",
+      "adj. 害怕的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00034",
+    "word": "run away",
+    "phonetic": "",
+    "translation": "na. 私奔；逃；弄不好",
+    "translations": [
+      "na. 私奔；逃；弄不好"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00035",
+    "word": "concert",
+    "phonetic": "[ˈkɑːnsərt]",
+    "translation": "n. 音乐会；一致；和谐；adj. 音乐会用的；在音乐会上演出的；vt. 使协调；协同安排；vi. 协调；协力",
+    "translations": [
+      "n. 音乐会；一致；和谐",
+      "adj. 音乐会用的；在音乐会上演出的",
+      "vt. 使协调；协同安排",
+      "vi. 协调；协力"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00036",
+    "word": "violin",
+    "phonetic": "[ˌvaɪəˈlɪn]",
+    "translation": "n. 小提琴；小提琴手",
+    "translations": [
+      "n. 小提琴；小提琴手"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00037",
+    "word": "guitar",
+    "phonetic": "[ɡɪˈtɑːr]",
+    "translation": "n. 吉他，六弦琴；vi. 弹吉他",
+    "translations": [
+      "n. 吉他，六弦琴",
+      "vi. 弹吉他"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00038",
+    "word": "nervous",
+    "phonetic": "[ˈnɜːrvəs]",
+    "translation": "adj. 神经的；紧张不安的；强健有力的",
+    "translations": [
+      "adj. 神经的；紧张不安的；强健有力的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00039",
+    "word": "end",
+    "phonetic": "[end]",
+    "translation": "n. 结束；目标；尽头；末端；死亡；vi. 结束，终止；终结；vt. 结束，终止；终结",
+    "translations": [
+      "n. 结束；目标；尽头；末端；死亡",
+      "vi. 结束，终止；终结",
+      "vt. 结束，终止；终结"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00040",
+    "word": "proud",
+    "phonetic": "[praʊd]",
+    "translation": "adj. 自豪的；得意的；自负的",
+    "translations": [
+      "adj. 自豪的；得意的；自负的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00041",
+    "word": "surprise",
+    "phonetic": "[sərˈpraɪz]",
+    "translation": "n. 惊奇，诧异；突然袭击；adj. 令人惊讶的；vt. 使惊奇；奇袭",
+    "translations": [
+      "n. 惊奇，诧异；突然袭击",
+      "adj. 令人惊讶的",
+      "vt. 使惊奇；奇袭"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00042",
+    "word": "hear",
+    "phonetic": "[hɪr]",
+    "translation": "vi. 听；听见；vt. 听到，听；听说；审理",
+    "translations": [
+      "vi. 听；听见",
+      "vt. 听到，听；听说；审理"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00043",
+    "word": "special",
+    "phonetic": "[ˈspeʃl]",
+    "translation": "n. 特使，特派人员；特刊；特色菜；专车；特价商品；adj. 特别的；专门的，专用的",
+    "translations": [
+      "n. 特使，特派人员；特刊；特色菜；专车；特价商品",
+      "adj. 特别的；专门的，专用的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00044",
+    "word": "Father's Day",
+    "phonetic": "",
+    "translation": "na. 〈美〉父亲节(每年六月的第三个星期日)",
+    "translations": [
+      "na. 〈美〉父亲节(每年六月的第三个星期日)"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00045",
+    "word": "message",
+    "phonetic": "[ˈmesɪdʒ]",
+    "translation": "n. 消息；差使；启示；预言；广告词；vi. 报信，报告；[通信] 报文；vt. 通知",
+    "translations": [
+      "n. 消息；差使；启示；预言；广告词",
+      "vi. 报信，报告；[通信] 报文",
+      "vt. 通知"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00046",
+    "word": "great",
+    "phonetic": "[ɡreɪt]",
+    "translation": "n. 大师；大人物；伟人们；adj. 伟大的，重大的；极好的，好的；主要的",
+    "translations": [
+      "n. 大师；大人物；伟人们",
+      "adj. 伟大的，重大的；极好的，好的；主要的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00047",
+    "word": "report",
+    "phonetic": "[rɪˈpɔːrt]",
+    "translation": "n. 报告；报道；成绩单；vt. 报告；报导；使报到；vi. 报告；报到；写报导",
+    "translations": [
+      "n. 报告；报道；成绩单",
+      "vt. 报告；报导；使报到",
+      "vi. 报告；报到；写报导"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00048",
+    "word": "stick",
+    "phonetic": "[stɪk]",
+    "translation": "n. 棍；手杖；呆头呆脑的人；vi. 坚持；伸出；粘住；vt. 刺，戳；伸出；粘贴",
+    "translations": [
+      "n. 棍；手杖；呆头呆脑的人",
+      "vi. 坚持；伸出；粘住",
+      "vt. 刺，戳；伸出；粘贴"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00049",
+    "word": "fantastic",
+    "phonetic": "[fænˈtæstɪk]",
+    "translation": "n. 古怪的人；adj. 奇异的；空想的；异想天开的；古怪的；极好的，极出色的；不可思议的；不切实际的",
+    "translations": [
+      "n. 古怪的人",
+      "adj. 奇异的；空想的；异想天开的；古怪的；极好的，极出色的；不可思议的；不切实际的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00050",
+    "word": "fun",
+    "phonetic": "[fʌn]",
+    "translation": "n. 乐趣；玩笑；有趣的人或事；adj. 供娱乐用的；vi. 开玩笑",
+    "translations": [
+      "n. 乐趣；玩笑；有趣的人或事",
+      "adj. 供娱乐用的",
+      "vi. 开玩笑"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00051",
+    "word": "meet",
+    "phonetic": "[miːt]",
+    "translation": "vt. 满足；遇见；对付；vi. 相遇；接触；n. 集会；adj. 合适的；适宜的",
+    "translations": [
+      "vt. 满足；遇见；对付",
+      "vi. 相遇；接触",
+      "n. 集会",
+      "adj. 合适的；适宜的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00052",
+    "word": "east",
+    "phonetic": "[iːst]",
+    "translation": "n. 东方；东风；东方国家；adj. 东方的；向东的；从东方来的；adv. 向东方，在东方",
+    "translations": [
+      "n. 东方；东风；东方国家",
+      "adj. 东方的；向东的；从东方来的",
+      "adv. 向东方，在东方"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00053",
+    "word": "west",
+    "phonetic": "[west]",
+    "translation": "n. 西；西方；西部；adj. 西方的；朝西的；adv. 在西方；向西方；自西方",
+    "translations": [
+      "n. 西；西方；西部",
+      "adj. 西方的；朝西的",
+      "adv. 在西方；向西方；自西方"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00054",
+    "word": "o'clock",
+    "phonetic": "",
+    "translation": "abbr. …点钟（等于of the clock）",
+    "translations": [
+      "abbr. …点钟（等于of the clock）"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00055",
+    "word": "time",
+    "phonetic": "[taɪm]",
+    "translation": "n. 时间；时代；次数；节拍；倍数；adj. 定时的；定期的；分期的；vt. 计时；测定…的时间；安排…的速度",
+    "translations": [
+      "n. 时间；时代；次数；节拍；倍数",
+      "adj. 定时的；定期的；分期的",
+      "vt. 计时；测定…的时间；安排…的速度"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00056",
+    "word": "cartoon",
+    "phonetic": "[kɑːrˈtuːn]",
+    "translation": "n. 卡通片，[电影] 动画片；连环漫画；vt. 为…画漫画；vi. 画漫画",
+    "translations": [
+      "n. 卡通片，[电影] 动画片；连环漫画",
+      "vt. 为…画漫画",
+      "vi. 画漫画"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00057",
+    "word": "much",
+    "phonetic": "[mʌtʃ]",
+    "translation": "adv. 非常，很；adj. 大量的；n. 许多，大量；pron. 许多，大量",
+    "translations": [
+      "adv. 非常，很",
+      "adj. 大量的",
+      "n. 许多，大量",
+      "pron. 许多，大量"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00058",
+    "word": "am",
+    "phonetic": "[əm; æm]",
+    "translation": "abbr. 调幅；v. 是",
+    "translations": [
+      "abbr. 调幅",
+      "v. 是"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00059",
+    "word": "pm",
+    "phonetic": "[ˌpiː ˈem]",
+    "translation": "abbr. （拉）下午（Post Meridiem，等于afternoon）；调相（Phase Modulation）；abbr. 产品经理（Product Manager）",
+    "translations": [
+      "abbr. （拉）下午（Post Meridiem，等于afternoon）；调相（Phase Modulation）",
+      "abbr. 产品经理（Product Manager）"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00060",
+    "word": "best",
+    "phonetic": "[best]",
+    "translation": "n. 最好的人，最好的事物；最佳状态；adj. 最好的；vt. 打败，胜过；adv. 最好地",
+    "translations": [
+      "n. 最好的人，最好的事物；最佳状态",
+      "adj. 最好的",
+      "vt. 打败，胜过",
+      "adv. 最好地"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00061",
+    "word": "north",
+    "phonetic": "[nɔːrθ]",
+    "translation": "n. 北，北方；adj. 北方的；朝北的；adv. 在北方，向北方",
+    "translations": [
+      "n. 北，北方",
+      "adj. 北方的；朝北的",
+      "adv. 在北方，向北方"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00062",
+    "word": "south",
+    "phonetic": "[saʊθ]",
+    "translation": "n. 南方，南边；南部；adj. 南的，南方的；adv. 在南方，向南方",
+    "translations": [
+      "n. 南方，南边；南部",
+      "adj. 南的，南方的",
+      "adv. 在南方，向南方"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00063",
+    "word": "rest",
+    "phonetic": "[rest]",
+    "translation": "n. 休息，静止；休息时间；剩余部分；支架；vt. 使休息，使轻松；把…寄托于；vi. 休息；静止；依赖；安置",
+    "translations": [
+      "n. 休息，静止；休息时间；剩余部分；支架",
+      "vt. 使休息，使轻松；把…寄托于",
+      "vi. 休息；静止；依赖；安置"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00064",
+    "word": "have a rest",
+    "phonetic": "[hæv ərest]",
+    "translation": "v. 休息一下",
+    "translations": [
+      "v. 休息一下"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00065",
+    "word": "country",
+    "phonetic": "[ˈkʌntri]",
+    "translation": "n. 国家，国土；国民；乡下，农村；乡村；故乡；adj. 祖国的，故乡的；地方的，乡村的；国家的；粗鲁的；乡村音乐的",
+    "translations": [
+      "n. 国家，国土；国民；乡下，农村；乡村；故乡",
+      "adj. 祖国的，故乡的；地方的，乡村的；国家的；粗鲁的；乡村音乐的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00066",
+    "word": "speak",
+    "phonetic": "[spiːk]",
+    "translation": "vi. 说话；演讲；表明；陈述；vt. 讲话；发言；讲演",
+    "translations": [
+      "vi. 说话；演讲；表明；陈述",
+      "vt. 讲话；发言；讲演"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00067",
+    "word": "capital",
+    "phonetic": "[ˈkæpɪt(ə)l]",
+    "translation": "n. 首都，省会；资金；大写字母；资本家；adj. 首都的；重要的；大写的",
+    "translations": [
+      "n. 首都，省会；资金；大写字母；资本家",
+      "adj. 首都的；重要的；大写的"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00068",
+    "word": "maybe",
+    "phonetic": "[ˈmeɪbi]",
+    "translation": "adv. 也许；可能；大概；n. 可能性；不确定性",
+    "translations": [
+      "adv. 也许；可能；大概",
+      "n. 可能性；不确定性"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00069",
+    "word": "map",
+    "phonetic": "[mæp]",
+    "translation": "vt. 映射；计划；绘制地图；确定基因在染色体中的位置；n. 地图；示意图；染色体图；vi. 基因被安置",
+    "translations": [
+      "vt. 映射；计划；绘制地图；确定基因在染色体中的位置",
+      "n. 地图；示意图；染色体图",
+      "vi. 基因被安置"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00070",
+    "word": "because",
+    "phonetic": "[bɪˈkəz, bɪˈkɔːz]",
+    "translation": "conj. 因为",
+    "translations": [
+      "conj. 因为"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00071",
+    "word": "language",
+    "phonetic": "[ˈlæŋɡwɪdʒ]",
+    "translation": "n. 语言；语言文字；表达能力",
+    "translations": [
+      "n. 语言；语言文字；表达能力"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00072",
+    "word": "Australian",
+    "phonetic": "[ɔːˈstreɪliən]",
+    "translation": "adj. 澳大利亚的，澳大利亚人的；n. 澳大利亚人",
+    "translations": [
+      "adj. 澳大利亚的，澳大利亚人的",
+      "n. 澳大利亚人"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00073",
+    "word": "kangaroo",
+    "phonetic": "[ˌkæŋɡəˈruː]",
+    "translation": "n. 袋鼠",
+    "translations": [
+      "n. 袋鼠"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00074",
+    "word": "back",
+    "phonetic": "[bæk]",
+    "translation": "n. 后面；背部；靠背；足球等的后卫；书报等的末尾；adj. 后面的；过去的；拖欠的；vt. 支持；后退；背书；下赌注；adv. 以前；向后地；来回地；上溯；回来；回原处；vi. 后退；背靠；倒退",
+    "translations": [
+      "n. 后面；背部；靠背；足球等的后卫；书报等的末尾",
+      "adj. 后面的；过去的；拖欠的",
+      "vt. 支持；后退；背书；下赌注",
+      "adv. 以前；向后地；来回地；上溯；回来；回原处",
+      "vi. 后退；背靠；倒退"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00075",
+    "word": "postcard",
+    "phonetic": "[ˈpoʊstkɑːrd]",
+    "translation": "n. 明信片",
+    "translations": [
+      "n. 明信片"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00076",
+    "word": "plan",
+    "phonetic": "[plæn]",
+    "translation": "n. 计划；平面图；vt. 计划；设计；打算；vi. 计划；打算",
+    "translations": [
+      "n. 计划；平面图",
+      "vt. 计划；设计；打算",
+      "vi. 计划；打算"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00077",
+    "word": "museum",
+    "phonetic": "[mjuˈziːəm]",
+    "translation": "n. 博物馆",
+    "translations": [
+      "n. 博物馆"
+    ],
+    "domain": "qwerty_waiyan16"
+  },
+  {
+    "id": "qwerty_waiyan16_00078",
+    "word": "restaurant",
+    "phonetic": "[ˈrestrɑːnt; ˈrestərɑːnt]",
+    "translation": "n. 餐馆；[经] 饭店",
+    "translations": [
+      "n. 餐馆；[经] 饭店"
+    ],
+    "domain": "qwerty_waiyan16"
+  }
+]

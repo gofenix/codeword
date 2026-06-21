@@ -1,0 +1,252 @@
+[
+  {
+    "id": "qwerty_javearraylist_00001",
+    "word": "add()",
+    "phonetic": "",
+    "translation": "add():将元素插入到指定位置的 arraylist 中",
+    "translations": [
+      "add():将元素插入到指定位置的 arraylist 中"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00002",
+    "word": "addAll()",
+    "phonetic": "",
+    "translation": "addAll():添加集合中的所有元素到 arraylist 中",
+    "translations": [
+      "addAll():添加集合中的所有元素到 arraylist 中"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00003",
+    "word": "clear()",
+    "phonetic": "",
+    "translation": "clear():删除 arraylist 中的所有元素",
+    "translations": [
+      "clear():删除 arraylist 中的所有元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00004",
+    "word": "clone()",
+    "phonetic": "",
+    "translation": "clone():复制一份 arraylist",
+    "translations": [
+      "clone():复制一份 arraylist"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00005",
+    "word": "contains()",
+    "phonetic": "",
+    "translation": "contains():判断元素是否在 arraylist",
+    "translations": [
+      "contains():判断元素是否在 arraylist"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00006",
+    "word": "get()",
+    "phonetic": "",
+    "translation": "get():通过索引值获取 arraylist 中的元素",
+    "translations": [
+      "get():通过索引值获取 arraylist 中的元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00007",
+    "word": "indexOf()",
+    "phonetic": "",
+    "translation": "indexOf():返回 arraylist 中元素的索引值",
+    "translations": [
+      "indexOf():返回 arraylist 中元素的索引值"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00008",
+    "word": "removeAll()",
+    "phonetic": "",
+    "translation": "removeAll():删除存在于指定集合中的 arraylist 里的所有元素",
+    "translations": [
+      "removeAll():删除存在于指定集合中的 arraylist 里的所有元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00009",
+    "word": "remove()",
+    "phonetic": "",
+    "translation": "remove():删除 arraylist 里的单个元素",
+    "translations": [
+      "remove():删除 arraylist 里的单个元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00010",
+    "word": "size()",
+    "phonetic": "",
+    "translation": "size():返回 arraylist 里元素数量",
+    "translations": [
+      "size():返回 arraylist 里元素数量"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00011",
+    "word": "isEmpty()",
+    "phonetic": "",
+    "translation": "isEmpty():判断 arraylist 是否为空",
+    "translations": [
+      "isEmpty():判断 arraylist 是否为空"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00012",
+    "word": "subList()",
+    "phonetic": "",
+    "translation": "subList():截取部分 arraylist 的元素",
+    "translations": [
+      "subList():截取部分 arraylist 的元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00013",
+    "word": "set()",
+    "phonetic": "",
+    "translation": "set():替换 arraylist 中指定索引的元素",
+    "translations": [
+      "set():替换 arraylist 中指定索引的元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00014",
+    "word": "sort()",
+    "phonetic": "",
+    "translation": "sort():对 arraylist 元素进行排序",
+    "translations": [
+      "sort():对 arraylist 元素进行排序"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00015",
+    "word": "toArray()",
+    "phonetic": "",
+    "translation": "toArray():将 arraylist 转换为数组",
+    "translations": [
+      "toArray():将 arraylist 转换为数组"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00016",
+    "word": "toString()",
+    "phonetic": "",
+    "translation": "toString():将 arraylist 转换为字符串",
+    "translations": [
+      "toString():将 arraylist 转换为字符串"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00017",
+    "word": "ensureCapacity()",
+    "phonetic": "",
+    "translation": "ensureCapacity():设置指定容量大小的 arraylist",
+    "translations": [
+      "ensureCapacity():设置指定容量大小的 arraylist"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00018",
+    "word": "lastIndexOf()",
+    "phonetic": "",
+    "translation": "lastIndexOf():返回指定元素在 arraylist 中最后一次出现的位置",
+    "translations": [
+      "lastIndexOf():返回指定元素在 arraylist 中最后一次出现的位置"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00019",
+    "word": "retainAll()",
+    "phonetic": "",
+    "translation": "retainAll():保留 arraylist 中在指定集合中也存在的那些元素",
+    "translations": [
+      "retainAll():保留 arraylist 中在指定集合中也存在的那些元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00020",
+    "word": "containsAll()",
+    "phonetic": "",
+    "translation": "containsAll():查看 arraylist 是否包含指定集合中的所有元素",
+    "translations": [
+      "containsAll():查看 arraylist 是否包含指定集合中的所有元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00021",
+    "word": "trimToSize()",
+    "phonetic": "",
+    "translation": "trimToSize():将 arraylist 中的容量调整为数组中的元素个数",
+    "translations": [
+      "trimToSize():将 arraylist 中的容量调整为数组中的元素个数"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00022",
+    "word": "removeRange()",
+    "phonetic": "",
+    "translation": "removeRange():删除 arraylist 中指定索引之间存在的元素",
+    "translations": [
+      "removeRange():删除 arraylist 中指定索引之间存在的元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00023",
+    "word": "replaceAll()",
+    "phonetic": "",
+    "translation": "replaceAll():将给定的操作内容替换掉数组中每一个元素",
+    "translations": [
+      "replaceAll():将给定的操作内容替换掉数组中每一个元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00024",
+    "word": "removeIf()",
+    "phonetic": "",
+    "translation": "removeIf():删除所有满足特定条件的 arraylist 元素",
+    "translations": [
+      "removeIf():删除所有满足特定条件的 arraylist 元素"
+    ],
+    "domain": "qwerty_javearraylist"
+  },
+  {
+    "id": "qwerty_javearraylist_00025",
+    "word": "forEach()",
+    "phonetic": "",
+    "translation": "forEach():遍历 arraylist 中每一个元素并执行特定操作",
+    "translations": [
+      "forEach():遍历 arraylist 中每一个元素并执行特定操作"
+    ],
+    "domain": "qwerty_javearraylist"
+  }
+]

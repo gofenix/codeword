@@ -1,0 +1,6342 @@
+[
+  {
+    "id": "qwerty_japanese003_00001",
+    "word": "kaijou",
+    "phonetic": "",
+    "translation": "assembly hall or meeting place",
+    "translations": [
+      "assembly hall or meeting place"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00002",
+    "word": "ikiru",
+    "phonetic": "",
+    "translation": "to live",
+    "translations": [
+      "to live"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00003",
+    "word": "pasokon",
+    "phonetic": "",
+    "translation": "personal computer",
+    "translations": [
+      "personal computer"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00004",
+    "word": "kare",
+    "phonetic": "",
+    "translation": "he,boyfriend",
+    "translations": [
+      "he,boyfriend"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00005",
+    "word": "bikkuri/suru",
+    "phonetic": "",
+    "translation": "to be surprised",
+    "translations": [
+      "to be surprised"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00006",
+    "word": "yoshuu",
+    "phonetic": "",
+    "translation": "preparation for a lesson",
+    "translations": [
+      "preparation for a lesson"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00007",
+    "word": "dame",
+    "phonetic": "",
+    "translation": "no good",
+    "translations": [
+      "no good"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00008",
+    "word": "kagami",
+    "phonetic": "",
+    "translation": "mirror",
+    "translations": [
+      "mirror"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00009",
+    "word": "gomi",
+    "phonetic": "",
+    "translation": "rubbish",
+    "translations": [
+      "rubbish"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00010",
+    "word": "outobai",
+    "phonetic": "",
+    "translation": "motorcycle",
+    "translations": [
+      "motorcycle"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00011",
+    "word": "utsukushii",
+    "phonetic": "",
+    "translation": "beautiful",
+    "translations": [
+      "beautiful"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00012",
+    "word": "kibun",
+    "phonetic": "",
+    "translation": "mood",
+    "translations": [
+      "mood"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00013",
+    "word": "oiwai",
+    "phonetic": "",
+    "translation": "congratulation",
+    "translations": [
+      "congratulation"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00014",
+    "word": "kangofu",
+    "phonetic": "",
+    "translation": "female nurse",
+    "translations": [
+      "female nurse"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00015",
+    "word": "unten",
+    "phonetic": "",
+    "translation": "to drive",
+    "translations": [
+      "to drive"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00016",
+    "word": "hyou",
+    "phonetic": "",
+    "translation": "the front",
+    "translations": [
+      "the front"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00017",
+    "word": "kuukou",
+    "phonetic": "",
+    "translation": "airport",
+    "translations": [
+      "airport"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00018",
+    "word": "hiruma",
+    "phonetic": "",
+    "translation": "daytime,during the day",
+    "translations": [
+      "daytime,during the day"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00019",
+    "word": "koutougakkou",
+    "phonetic": "",
+    "translation": "high school",
+    "translations": [
+      "high school"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00020",
+    "word": "kayou",
+    "phonetic": "",
+    "translation": "to commute",
+    "translations": [
+      "to commute"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00021",
+    "word": "takaru",
+    "phonetic": "",
+    "translation": "to gather",
+    "translations": [
+      "to gather"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00022",
+    "word": "tsukeru",
+    "phonetic": "",
+    "translation": "to soak,to pickle",
+    "translations": [
+      "to soak,to pickle"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00023",
+    "word": "mizuumi",
+    "phonetic": "",
+    "translation": "lake",
+    "translations": [
+      "lake"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00024",
+    "word": "suberu",
+    "phonetic": "",
+    "translation": "to slide,to slip",
+    "translations": [
+      "to slide,to slip"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00025",
+    "word": "aa",
+    "phonetic": "",
+    "translation": "like that",
+    "translations": [
+      "like that"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00026",
+    "word": "tamani",
+    "phonetic": "",
+    "translation": "occasionally",
+    "translations": [
+      "occasionally"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00027",
+    "word": "keshiki",
+    "phonetic": "",
+    "translation": "scene,landscape",
+    "translations": [
+      "scene,landscape"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00028",
+    "word": "odori",
+    "phonetic": "",
+    "translation": "a dance",
+    "translations": [
+      "a dance"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00029",
+    "word": "akusesarii",
+    "phonetic": "",
+    "translation": "accessory",
+    "translations": [
+      "accessory"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00030",
+    "word": "umai",
+    "phonetic": "",
+    "translation": "delicious",
+    "translations": [
+      "delicious"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00031",
+    "word": "amerika",
+    "phonetic": "",
+    "translation": "America",
+    "translations": [
+      "America"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00032",
+    "word": "sutereo",
+    "phonetic": "",
+    "translation": "stereo",
+    "translations": [
+      "stereo"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00033",
+    "word": "yubiwa",
+    "phonetic": "",
+    "translation": "finger ring",
+    "translations": [
+      "finger ring"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00034",
+    "word": "sotsugyou",
+    "phonetic": "",
+    "translation": "graduation",
+    "translations": [
+      "graduation"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00035",
+    "word": "tadashii",
+    "phonetic": "",
+    "translation": "correct",
+    "translations": [
+      "correct"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00036",
+    "word": "sumi",
+    "phonetic": "",
+    "translation": "corner,nook",
+    "translations": [
+      "corner,nook"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00037",
+    "word": "kaigi",
+    "phonetic": "",
+    "translation": "meeting",
+    "translations": [
+      "meeting"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00038",
+    "word": "kawari",
+    "phonetic": "",
+    "translation": "substitute,alternate",
+    "translations": [
+      "substitute,alternate"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00039",
+    "word": "kisha",
+    "phonetic": "",
+    "translation": "steam train",
+    "translations": [
+      "steam train"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00040",
+    "word": "igaku",
+    "phonetic": "",
+    "translation": "medical science",
+    "translations": [
+      "medical science"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00041",
+    "word": "ashita",
+    "phonetic": "",
+    "translation": "tomorrow",
+    "translations": [
+      "tomorrow"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00042",
+    "word": "omatsuri",
+    "phonetic": "",
+    "translation": "festival",
+    "translations": [
+      "festival"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00043",
+    "word": "zuibun",
+    "phonetic": "",
+    "translation": "extremely",
+    "translations": [
+      "extremely"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00044",
+    "word": "saikin",
+    "phonetic": "",
+    "translation": "latest,nowadays",
+    "translations": [
+      "latest,nowadays"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00045",
+    "word": "tomeru",
+    "phonetic": "",
+    "translation": "to stop",
+    "translations": [
+      "to stop"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00046",
+    "word": "utsuru",
+    "phonetic": "",
+    "translation": "to move house or transfer",
+    "translations": [
+      "to move house or transfer"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00047",
+    "word": "nokoru",
+    "phonetic": "",
+    "translation": "to remain",
+    "translations": [
+      "to remain"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00048",
+    "word": "musuko",
+    "phonetic": "",
+    "translation": "(humble) son",
+    "translations": [
+      "(humble) son"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00049",
+    "word": "okuru",
+    "phonetic": "",
+    "translation": "to send",
+    "translations": [
+      "to send"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00050",
+    "word": "sangyou",
+    "phonetic": "",
+    "translation": "industry",
+    "translations": [
+      "industry"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00051",
+    "word": "ugoku",
+    "phonetic": "",
+    "translation": "to move",
+    "translations": [
+      "to move"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00052",
+    "word": "warau",
+    "phonetic": "",
+    "translation": "to laugh,to smile",
+    "translations": [
+      "to laugh,to smile"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00053",
+    "word": "keredo/keredomo",
+    "phonetic": "",
+    "translation": "however",
+    "translations": [
+      "however"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00054",
+    "word": "baai",
+    "phonetic": "",
+    "translation": "situation",
+    "translations": [
+      "situation"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00055",
+    "word": "reji",
+    "phonetic": "",
+    "translation": "register",
+    "translations": [
+      "register"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00056",
+    "word": "hieru",
+    "phonetic": "",
+    "translation": "to grow cold",
+    "translations": [
+      "to grow cold"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00057",
+    "word": "seki",
+    "phonetic": "",
+    "translation": "seat",
+    "translations": [
+      "seat"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00058",
+    "word": "ueru",
+    "phonetic": "",
+    "translation": "to plant,to grow",
+    "translations": [
+      "to plant,to grow"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00059",
+    "word": "shikaru",
+    "phonetic": "",
+    "translation": "a particular",
+    "translations": [
+      "a particular"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00060",
+    "word": "seiyou",
+    "phonetic": "",
+    "translation": "western countries",
+    "translations": [
+      "western countries"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00061",
+    "word": "shachou",
+    "phonetic": "",
+    "translation": "company president",
+    "translations": [
+      "company president"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00062",
+    "word": "rakumu",
+    "phonetic": "",
+    "translation": "to enjoy oneself",
+    "translations": [
+      "to enjoy oneself"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00063",
+    "word": "konsaato",
+    "phonetic": "",
+    "translation": "concert",
+    "translations": [
+      "concert"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00064",
+    "word": "yatto",
+    "phonetic": "",
+    "translation": "at last",
+    "translations": [
+      "at last"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00065",
+    "word": "omou",
+    "phonetic": "",
+    "translation": "to think,to feel",
+    "translations": [
+      "to think,to feel"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00066",
+    "word": "jimusho",
+    "phonetic": "",
+    "translation": "office",
+    "translations": [
+      "office"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00067",
+    "word": "sandaru",
+    "phonetic": "",
+    "translation": "sandal",
+    "translations": [
+      "sandal"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00068",
+    "word": "enryo",
+    "phonetic": "",
+    "translation": "to be reserved, to be restrained",
+    "translations": [
+      "to be reserved, to be restrained"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00069",
+    "word": "mottomo",
+    "phonetic": "",
+    "translation": "extremely",
+    "translations": [
+      "extremely"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00070",
+    "word": "shousetsu",
+    "phonetic": "",
+    "translation": "novel",
+    "translations": [
+      "novel"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00071",
+    "word": "fuben",
+    "phonetic": "",
+    "translation": "inconvenience",
+    "translations": [
+      "inconvenience"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00072",
+    "word": "kinu",
+    "phonetic": "",
+    "translation": "silk",
+    "translations": [
+      "silk"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00073",
+    "word": "naosu",
+    "phonetic": "",
+    "translation": "to fix,to repair",
+    "translations": [
+      "to fix,to repair"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00074",
+    "word": "senpai",
+    "phonetic": "",
+    "translation": "senior",
+    "translations": [
+      "senior"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00075",
+    "word": "netsu",
+    "phonetic": "",
+    "translation": "fever",
+    "translations": [
+      "fever"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00076",
+    "word": "kibishii",
+    "phonetic": "",
+    "translation": "strict",
+    "translations": [
+      "strict"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00077",
+    "word": "ningyou",
+    "phonetic": "",
+    "translation": "doll, figure",
+    "translations": [
+      "doll, figure"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00078",
+    "word": "fukuzatsu",
+    "phonetic": "",
+    "translation": "complexity,complication",
+    "translations": [
+      "complexity,complication"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00079",
+    "word": "jamu",
+    "phonetic": "",
+    "translation": "jam",
+    "translations": [
+      "jam"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00080",
+    "word": "oku",
+    "phonetic": "",
+    "translation": "one hundred million",
+    "translations": [
+      "one hundred million"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00081",
+    "word": "anshin",
+    "phonetic": "",
+    "translation": "relief",
+    "translations": [
+      "relief"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00082",
+    "word": "sekai",
+    "phonetic": "",
+    "translation": "the world",
+    "translations": [
+      "the world"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00083",
+    "word": "denpou",
+    "phonetic": "",
+    "translation": "telegram",
+    "translations": [
+      "telegram"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00084",
+    "word": "tekisuto",
+    "phonetic": "",
+    "translation": "text,text book",
+    "translations": [
+      "text,text book"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00085",
+    "word": "zannen",
+    "phonetic": "",
+    "translation": "disappointment",
+    "translations": [
+      "disappointment"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00086",
+    "word": "chekku/suru",
+    "phonetic": "",
+    "translation": "to check",
+    "translations": [
+      "to check"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00087",
+    "word": "komakai",
+    "phonetic": "",
+    "translation": "small, fine",
+    "translations": [
+      "small, fine"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00088",
+    "word": "kanashii",
+    "phonetic": "",
+    "translation": "sad",
+    "translations": [
+      "sad"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00089",
+    "word": "yaku",
+    "phonetic": "",
+    "translation": "to bake,to grill",
+    "translations": [
+      "to bake,to grill"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00090",
+    "word": "kougi",
+    "phonetic": "",
+    "translation": "lecture",
+    "translations": [
+      "lecture"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00091",
+    "word": "hakkiri",
+    "phonetic": "",
+    "translation": "clearly",
+    "translations": [
+      "clearly"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00092",
+    "word": "hikidashi",
+    "phonetic": "",
+    "translation": "drawer,drawing out",
+    "translations": [
+      "drawer,drawing out"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00093",
+    "word": "purezento",
+    "phonetic": "",
+    "translation": "present",
+    "translations": [
+      "present"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00094",
+    "word": "korekara",
+    "phonetic": "",
+    "translation": "after this",
+    "translations": [
+      "after this"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00095",
+    "word": "tenin",
+    "phonetic": "",
+    "translation": "shop assistant",
+    "translations": [
+      "shop assistant"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00096",
+    "word": "hikari",
+    "phonetic": "",
+    "translation": "light",
+    "translations": [
+      "light"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00097",
+    "word": "irassharu",
+    "phonetic": "",
+    "translation": "(respectful) to be,to come or to go",
+    "translations": [
+      "(respectful) to be,to come or to go"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00098",
+    "word": "dansei",
+    "phonetic": "",
+    "translation": "male",
+    "translations": [
+      "male"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00099",
+    "word": "nodo",
+    "phonetic": "",
+    "translation": "throat",
+    "translations": [
+      "throat"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00100",
+    "word": "otosu",
+    "phonetic": "",
+    "translation": "to drop",
+    "translations": [
+      "to drop"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00101",
+    "word": "sonnani",
+    "phonetic": "",
+    "translation": "so much,like that",
+    "translations": [
+      "so much,like that"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00102",
+    "word": "homeru",
+    "phonetic": "",
+    "translation": "to praise",
+    "translations": [
+      "to praise"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00103",
+    "word": "sawagu",
+    "phonetic": "",
+    "translation": "to make noise,to be excited",
+    "translations": [
+      "to make noise,to be excited"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00104",
+    "word": "sumu",
+    "phonetic": "",
+    "translation": "to finish",
+    "translations": [
+      "to finish"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00105",
+    "word": "ryokan",
+    "phonetic": "",
+    "translation": "Japanese hotel",
+    "translations": [
+      "Japanese hotel"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00106",
+    "word": "oyogikata",
+    "phonetic": "",
+    "translation": "way of swimming",
+    "translations": [
+      "way of swimming"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00107",
+    "word": "ude",
+    "phonetic": "",
+    "translation": "arm",
+    "translations": [
+      "arm"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00108",
+    "word": "annai",
+    "phonetic": "",
+    "translation": "to guide",
+    "translations": [
+      "to guide"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00109",
+    "word": "daigakusei",
+    "phonetic": "",
+    "translation": "university student",
+    "translations": [
+      "university student"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00110",
+    "word": "hi",
+    "phonetic": "",
+    "translation": "fire",
+    "translations": [
+      "fire"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00111",
+    "word": "kenka/suru",
+    "phonetic": "",
+    "translation": "to quarrel",
+    "translations": [
+      "to quarrel"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00112",
+    "word": "juufun",
+    "phonetic": "",
+    "translation": "enough",
+    "translations": [
+      "enough"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00113",
+    "word": "renraku",
+    "phonetic": "",
+    "translation": "contact",
+    "translations": [
+      "contact"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00114",
+    "word": "gochisou",
+    "phonetic": "",
+    "translation": "a feast",
+    "translations": [
+      "a feast"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00115",
+    "word": "nureru",
+    "phonetic": "",
+    "translation": "to get wet",
+    "translations": [
+      "to get wet"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00116",
+    "word": "kenkyuu",
+    "phonetic": "",
+    "translation": "research",
+    "translations": [
+      "research"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00117",
+    "word": "tsukamaeru",
+    "phonetic": "",
+    "translation": "to seize",
+    "translations": [
+      "to seize"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00118",
+    "word": "kimeru",
+    "phonetic": "",
+    "translation": "to decide",
+    "translations": [
+      "to decide"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00119",
+    "word": "tooru",
+    "phonetic": "",
+    "translation": "to go through",
+    "translations": [
+      "to go through"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00120",
+    "word": "ippai",
+    "phonetic": "",
+    "translation": "full",
+    "translations": [
+      "full"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00121",
+    "word": "okoru",
+    "phonetic": "",
+    "translation": "to get angry,to be angry",
+    "translations": [
+      "to get angry,to be angry"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00122",
+    "word": "suutsu",
+    "phonetic": "",
+    "translation": "suit",
+    "translations": [
+      "suit"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00123",
+    "word": "untenshu",
+    "phonetic": "",
+    "translation": "driver",
+    "translations": [
+      "driver"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00124",
+    "word": "jama",
+    "phonetic": "",
+    "translation": "hindrance,intrusion",
+    "translations": [
+      "hindrance,intrusion"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00125",
+    "word": "juudou",
+    "phonetic": "",
+    "translation": "judo",
+    "translations": [
+      "judo"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00126",
+    "word": "kureru",
+    "phonetic": "",
+    "translation": "to give",
+    "translations": [
+      "to give"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00127",
+    "word": "ma",
+    "phonetic": "",
+    "translation": "a space",
+    "translations": [
+      "a space"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00128",
+    "word": "ika",
+    "phonetic": "",
+    "translation": "less than",
+    "translations": [
+      "less than"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00129",
+    "word": "kimi",
+    "phonetic": "",
+    "translation": "(informal) You (used by men towards women)",
+    "translations": [
+      "(informal) You (used by men towards women)"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00130",
+    "word": "shima",
+    "phonetic": "",
+    "translation": "island",
+    "translations": [
+      "island"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00131",
+    "word": "kitto",
+    "phonetic": "",
+    "translation": "surely",
+    "translations": [
+      "surely"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00132",
+    "word": "ochiru",
+    "phonetic": "",
+    "translation": "to fall or drop",
+    "translations": [
+      "to fall or drop"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00133",
+    "word": "okage",
+    "phonetic": "",
+    "translation": "owing to",
+    "translations": [
+      "owing to"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00134",
+    "word": "shouchi",
+    "phonetic": "",
+    "translation": "to consent",
+    "translations": [
+      "to consent"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00135",
+    "word": "bunpou",
+    "phonetic": "",
+    "translation": "grammar",
+    "translations": [
+      "grammar"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00136",
+    "word": "shuppatsu",
+    "phonetic": "",
+    "translation": "to depart",
+    "translations": [
+      "to depart"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00137",
+    "word": "kamau",
+    "phonetic": "",
+    "translation": "to mind",
+    "translations": [
+      "to mind"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00138",
+    "word": "akanbou",
+    "phonetic": "",
+    "translation": "baby",
+    "translations": [
+      "baby"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00139",
+    "word": "kinjo",
+    "phonetic": "",
+    "translation": "neighbourhood",
+    "translations": [
+      "neighbourhood"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00140",
+    "word": "anaunsaa",
+    "phonetic": "",
+    "translation": "announcer",
+    "translations": [
+      "announcer"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00141",
+    "word": "tasu",
+    "phonetic": "",
+    "translation": "to add a number",
+    "translations": [
+      "to add a number"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00142",
+    "word": "shoukai",
+    "phonetic": "",
+    "translation": "introduction",
+    "translations": [
+      "introduction"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00143",
+    "word": "isshoukenmei",
+    "phonetic": "",
+    "translation": "with utmost effort",
+    "translations": [
+      "with utmost effort"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00144",
+    "word": "harau",
+    "phonetic": "",
+    "translation": "to pay",
+    "translations": [
+      "to pay"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00145",
+    "word": "yureru",
+    "phonetic": "",
+    "translation": "to shake,to sway",
+    "translations": [
+      "to shake,to sway"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00146",
+    "word": "to",
+    "phonetic": "",
+    "translation": "metropolitan",
+    "translations": [
+      "metropolitan"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00147",
+    "word": "oto",
+    "phonetic": "",
+    "translation": "sound,note",
+    "translations": [
+      "sound,note"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00148",
+    "word": "sorosoro",
+    "phonetic": "",
+    "translation": "gradually,soon",
+    "translations": [
+      "gradually,soon"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00149",
+    "word": "mousu",
+    "phonetic": "",
+    "translation": "(humble) to be called,to say",
+    "translations": [
+      "(humble) to be called,to say"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00150",
+    "word": "shakai",
+    "phonetic": "",
+    "translation": "society,public",
+    "translations": [
+      "society,public"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00151",
+    "word": "un",
+    "phonetic": "",
+    "translation": "(informal) yes",
+    "translations": [
+      "(informal) yes"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00152",
+    "word": "ishi",
+    "phonetic": "",
+    "translation": "stone",
+    "translations": [
+      "stone"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00153",
+    "word": "soreni",
+    "phonetic": "",
+    "translation": "moreover",
+    "translations": [
+      "moreover"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00154",
+    "word": "kaji",
+    "phonetic": "",
+    "translation": "fire",
+    "translations": [
+      "fire"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00155",
+    "word": "keshigomu",
+    "phonetic": "",
+    "translation": "eraser",
+    "translations": [
+      "eraser"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00156",
+    "word": "hodo",
+    "phonetic": "",
+    "translation": "extent",
+    "translations": [
+      "extent"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00157",
+    "word": "nikki",
+    "phonetic": "",
+    "translation": "journal",
+    "translations": [
+      "journal"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00158",
+    "word": "bungaku",
+    "phonetic": "",
+    "translation": "literature",
+    "translations": [
+      "literature"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00159",
+    "word": "sofuto",
+    "phonetic": "",
+    "translation": "soft",
+    "translations": [
+      "soft"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00160",
+    "word": "minato",
+    "phonetic": "",
+    "translation": "harbour",
+    "translations": [
+      "harbour"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00161",
+    "word": "shinbunsha",
+    "phonetic": "",
+    "translation": "newspaper company",
+    "translations": [
+      "newspaper company"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00162",
+    "word": "sarada",
+    "phonetic": "",
+    "translation": "salad",
+    "translations": [
+      "salad"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00163",
+    "word": "mannaka",
+    "phonetic": "",
+    "translation": "middle",
+    "translations": [
+      "middle"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00164",
+    "word": "mairu",
+    "phonetic": "",
+    "translation": "(humble) to go,to come",
+    "translations": [
+      "(humble) to go,to come"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00165",
+    "word": "koshou",
+    "phonetic": "",
+    "translation": "to break-down",
+    "translations": [
+      "to break-down"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00166",
+    "word": "uso",
+    "phonetic": "",
+    "translation": "a lie",
+    "translations": [
+      "a lie"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00167",
+    "word": "subarashii",
+    "phonetic": "",
+    "translation": "wonderful",
+    "translations": [
+      "wonderful"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00168",
+    "word": "katsu",
+    "phonetic": "",
+    "translation": "to win",
+    "translations": [
+      "to win"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00169",
+    "word": "wariai",
+    "phonetic": "",
+    "translation": "rate,ratio,percentage",
+    "translations": [
+      "rate,ratio,percentage"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00170",
+    "word": "kowasu",
+    "phonetic": "",
+    "translation": "to break",
+    "translations": [
+      "to break"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00171",
+    "word": "sukuriin",
+    "phonetic": "",
+    "translation": "screen",
+    "translations": [
+      "screen"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00172",
+    "word": "jiyuu",
+    "phonetic": "",
+    "translation": "freedom",
+    "translations": [
+      "freedom"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00173",
+    "word": "daiji",
+    "phonetic": "",
+    "translation": "important,valuable,serious matter",
+    "translations": [
+      "important,valuable,serious matter"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00174",
+    "word": "tsugou",
+    "phonetic": "",
+    "translation": "circumstances,convenience",
+    "translations": [
+      "circumstances,convenience"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00175",
+    "word": "kyouiku",
+    "phonetic": "",
+    "translation": "education",
+    "translations": [
+      "education"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00176",
+    "word": "chuui",
+    "phonetic": "",
+    "translation": "caution",
+    "translations": [
+      "caution"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00177",
+    "word": "sagasu",
+    "phonetic": "",
+    "translation": "to look for",
+    "translations": [
+      "to look for"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00178",
+    "word": "shusseki",
+    "phonetic": "",
+    "translation": "to attend",
+    "translations": [
+      "to attend"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00179",
+    "word": "gijutsu",
+    "phonetic": "",
+    "translation": "art,technology,skill",
+    "translations": [
+      "art,technology,skill"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00180",
+    "word": "kimono",
+    "phonetic": "",
+    "translation": "kimono",
+    "translations": [
+      "kimono"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00181",
+    "word": "jiko",
+    "phonetic": "",
+    "translation": "accident",
+    "translations": [
+      "accident"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00182",
+    "word": "oideninaru",
+    "phonetic": "",
+    "translation": "(respectful) to be",
+    "translations": [
+      "(respectful) to be"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00183",
+    "word": "uriba",
+    "phonetic": "",
+    "translation": "place where things are sold",
+    "translations": [
+      "place where things are sold"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00184",
+    "word": "kikai",
+    "phonetic": "",
+    "translation": "opportunity",
+    "translations": [
+      "opportunity"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00185",
+    "word": "futsuu",
+    "phonetic": "",
+    "translation": "usually, or a train that stops at every station",
+    "translations": [
+      "usually, or a train that stops at every station"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00186",
+    "word": "moshi",
+    "phonetic": "",
+    "translation": "if",
+    "translations": [
+      "if"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00187",
+    "word": "riyuu",
+    "phonetic": "",
+    "translation": "reason",
+    "translations": [
+      "reason"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00188",
+    "word": "arukouru",
+    "phonetic": "",
+    "translation": "alcohol",
+    "translations": [
+      "alcohol"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00189",
+    "word": "inai",
+    "phonetic": "",
+    "translation": "within",
+    "translations": [
+      "within"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00190",
+    "word": "yotei",
+    "phonetic": "",
+    "translation": "arrangement",
+    "translations": [
+      "arrangement"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00191",
+    "word": "housou",
+    "phonetic": "",
+    "translation": "to broadcast",
+    "translations": [
+      "to broadcast"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00192",
+    "word": "tashika",
+    "phonetic": "",
+    "translation": "definite",
+    "translations": [
+      "definite"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00193",
+    "word": "kyuu",
+    "phonetic": "",
+    "translation": "urgent, steep",
+    "translations": [
+      "urgent, steep"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00194",
+    "word": "kesshite",
+    "phonetic": "",
+    "translation": "never",
+    "translations": [
+      "never"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00195",
+    "word": "yorokobu",
+    "phonetic": "",
+    "translation": "to be delighted",
+    "translations": [
+      "to be delighted"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00196",
+    "word": "shuukan",
+    "phonetic": "",
+    "translation": "custom,manners",
+    "translations": [
+      "custom,manners"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00197",
+    "word": "chuugakkou",
+    "phonetic": "",
+    "translation": "junior high school,middle school",
+    "translations": [
+      "junior high school,middle school"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00198",
+    "word": "tana",
+    "phonetic": "",
+    "translation": "shelves",
+    "translations": [
+      "shelves"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00199",
+    "word": "kubi",
+    "phonetic": "",
+    "translation": "neck",
+    "translations": [
+      "neck"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00200",
+    "word": "oshiire",
+    "phonetic": "",
+    "translation": "closet",
+    "translations": [
+      "closet"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00201",
+    "word": "koukou",
+    "phonetic": "",
+    "translation": "high school",
+    "translations": [
+      "high school"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00202",
+    "word": "sou",
+    "phonetic": "",
+    "translation": "really",
+    "translations": [
+      "really"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00203",
+    "word": "kakeru",
+    "phonetic": "",
+    "translation": "to hang something",
+    "translations": [
+      "to hang something"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00204",
+    "word": "shimin",
+    "phonetic": "",
+    "translation": "citizen",
+    "translations": [
+      "citizen"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00205",
+    "word": "manga",
+    "phonetic": "",
+    "translation": "comic",
+    "translations": [
+      "comic"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00206",
+    "word": "kotae",
+    "phonetic": "",
+    "translation": "response",
+    "translations": [
+      "response"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00207",
+    "word": "futoru",
+    "phonetic": "",
+    "translation": "to become fat",
+    "translations": [
+      "to become fat"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00208",
+    "word": "okonau",
+    "phonetic": "",
+    "translation": "to do",
+    "translations": [
+      "to do"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00209",
+    "word": "kumo",
+    "phonetic": "",
+    "translation": "cloud",
+    "translations": [
+      "cloud"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00210",
+    "word": "basho",
+    "phonetic": "",
+    "translation": "location",
+    "translations": [
+      "location"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00211",
+    "word": "ryouhou",
+    "phonetic": "",
+    "translation": "both sides",
+    "translations": [
+      "both sides"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00212",
+    "word": "youji",
+    "phonetic": "",
+    "translation": "things to do",
+    "translations": [
+      "things to do"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00213",
+    "word": "kachou",
+    "phonetic": "",
+    "translation": "section manager",
+    "translations": [
+      "section manager"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00214",
+    "word": "sashiageru",
+    "phonetic": "",
+    "translation": "(polite) to give",
+    "translations": [
+      "(polite) to give"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00215",
+    "word": "konpyuuta/konpyuutaa",
+    "phonetic": "",
+    "translation": "computer",
+    "translations": [
+      "computer"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00216",
+    "word": "kokoro",
+    "phonetic": "",
+    "translation": "core,heart",
+    "translations": [
+      "core,heart"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00217",
+    "word": "piano",
+    "phonetic": "",
+    "translation": "piano",
+    "translations": [
+      "piano"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00218",
+    "word": "oya",
+    "phonetic": "",
+    "translation": "parents",
+    "translations": [
+      "parents"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00219",
+    "word": "muri",
+    "phonetic": "",
+    "translation": "impossible",
+    "translations": [
+      "impossible"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00220",
+    "word": "shiraberu",
+    "phonetic": "",
+    "translation": "to investigate",
+    "translations": [
+      "to investigate"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00221",
+    "word": "gasu",
+    "phonetic": "",
+    "translation": "petrol",
+    "translations": [
+      "petrol"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00222",
+    "word": "reibou",
+    "phonetic": "",
+    "translation": "air conditioning",
+    "translations": [
+      "air conditioning"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00223",
+    "word": "nedan",
+    "phonetic": "",
+    "translation": "price",
+    "translations": [
+      "price"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00224",
+    "word": "nakunaru",
+    "phonetic": "",
+    "translation": "to die",
+    "translations": [
+      "to die"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00225",
+    "word": "sorehodo",
+    "phonetic": "",
+    "translation": "to that extent",
+    "translations": [
+      "to that extent"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00226",
+    "word": "naoru",
+    "phonetic": "",
+    "translation": "to be cured,to heal",
+    "translations": [
+      "to be cured,to heal"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00227",
+    "word": "kenkyuushitsu",
+    "phonetic": "",
+    "translation": "study room,laboratory",
+    "translations": [
+      "study room,laboratory"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00228",
+    "word": "wake",
+    "phonetic": "",
+    "translation": "meaning,reason",
+    "translations": [
+      "meaning,reason"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00229",
+    "word": "sandoicchi",
+    "phonetic": "",
+    "translation": "sandwich",
+    "translations": [
+      "sandwich"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00230",
+    "word": "fueru",
+    "phonetic": "",
+    "translation": "to increase",
+    "translations": [
+      "to increase"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00231",
+    "word": "nemui",
+    "phonetic": "",
+    "translation": "sleepy",
+    "translations": [
+      "sleepy"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00232",
+    "word": "hikaru",
+    "phonetic": "",
+    "translation": "to shine,to glitter",
+    "translations": [
+      "to shine,to glitter"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00233",
+    "word": "arubaito",
+    "phonetic": "",
+    "translation": "part-time job",
+    "translations": [
+      "part-time job"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00234",
+    "word": "kusa",
+    "phonetic": "",
+    "translation": "grass",
+    "translations": [
+      "grass"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00235",
+    "word": "henji",
+    "phonetic": "",
+    "translation": "reply",
+    "translations": [
+      "reply"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00236",
+    "word": "sen",
+    "phonetic": "",
+    "translation": "line",
+    "translations": [
+      "line"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00237",
+    "word": "yogiru",
+    "phonetic": "",
+    "translation": "to exceed",
+    "translations": [
+      "to exceed"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00238",
+    "word": "ken/kata/katai",
+    "phonetic": "",
+    "translation": "hard",
+    "translations": [
+      "hard"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00239",
+    "word": "kuuki",
+    "phonetic": "",
+    "translation": "air,atmosphere",
+    "translations": [
+      "air,atmosphere"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00240",
+    "word": "seisan",
+    "phonetic": "",
+    "translation": "to produce",
+    "translations": [
+      "to produce"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00241",
+    "word": "kanarazu",
+    "phonetic": "",
+    "translation": "certainly,necessarily",
+    "translations": [
+      "certainly,necessarily"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00242",
+    "word": "mataha",
+    "phonetic": "",
+    "translation": "or,otherwise",
+    "translations": [
+      "or,otherwise"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00243",
+    "word": "dentou",
+    "phonetic": "",
+    "translation": "electric light",
+    "translations": [
+      "electric light"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00244",
+    "word": "hanami",
+    "phonetic": "",
+    "translation": "cherry-blossom viewing",
+    "translations": [
+      "cherry-blossom viewing"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00245",
+    "word": "senaka",
+    "phonetic": "",
+    "translation": "back of the body",
+    "translations": [
+      "back of the body"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00246",
+    "word": "inaka",
+    "phonetic": "",
+    "translation": "countryside",
+    "translations": [
+      "countryside"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00247",
+    "word": "oreru",
+    "phonetic": "",
+    "translation": "to break or be folded",
+    "translations": [
+      "to break or be folded"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00248",
+    "word": "okujou",
+    "phonetic": "",
+    "translation": "rooftop",
+    "translations": [
+      "rooftop"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00249",
+    "word": "suku",
+    "phonetic": "",
+    "translation": "to open, to become empty",
+    "translations": [
+      "to open, to become empty"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00250",
+    "word": "kondo",
+    "phonetic": "",
+    "translation": "now,next time",
+    "translations": [
+      "now,next time"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00251",
+    "word": "biru",
+    "phonetic": "",
+    "translation": "building or bill",
+    "translations": [
+      "building or bill"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00252",
+    "word": "uchi",
+    "phonetic": "",
+    "translation": "within",
+    "translations": [
+      "within"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00253",
+    "word": "haisha",
+    "phonetic": "",
+    "translation": "dentist",
+    "translations": [
+      "dentist"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00254",
+    "word": "suteru",
+    "phonetic": "",
+    "translation": "to throw away",
+    "translations": [
+      "to throw away"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00255",
+    "word": "yasashii",
+    "phonetic": "",
+    "translation": "kind",
+    "translations": [
+      "kind"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00256",
+    "word": "ijimeru",
+    "phonetic": "",
+    "translation": "to tease",
+    "translations": [
+      "to tease"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00257",
+    "word": "sabishii",
+    "phonetic": "",
+    "translation": "lonely",
+    "translations": [
+      "lonely"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00258",
+    "word": "taifuu",
+    "phonetic": "",
+    "translation": "typhoon",
+    "translations": [
+      "typhoon"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00259",
+    "word": "hakobu",
+    "phonetic": "",
+    "translation": "to transport",
+    "translations": [
+      "to transport"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00260",
+    "word": "taoreru",
+    "phonetic": "",
+    "translation": "to break down",
+    "translations": [
+      "to break down"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00261",
+    "word": "yahari/yappari",
+    "phonetic": "",
+    "translation": "as I thought,absolutely",
+    "translations": [
+      "as I thought,absolutely"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00262",
+    "word": "budou",
+    "phonetic": "",
+    "translation": "grapes",
+    "translations": [
+      "grapes"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00263",
+    "word": "omocha",
+    "phonetic": "",
+    "translation": "toy",
+    "translations": [
+      "toy"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00264",
+    "word": "youi",
+    "phonetic": "",
+    "translation": "preparation",
+    "translations": [
+      "preparation"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00265",
+    "word": "jinkou",
+    "phonetic": "",
+    "translation": "population",
+    "translations": [
+      "population"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00266",
+    "word": "suugaku",
+    "phonetic": "",
+    "translation": "mathematics,arithmetic",
+    "translations": [
+      "mathematics,arithmetic"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00267",
+    "word": "gasorin",
+    "phonetic": "",
+    "translation": "petrol",
+    "translations": [
+      "petrol"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00268",
+    "word": "kotori",
+    "phonetic": "",
+    "translation": "small bird",
+    "translations": [
+      "small bird"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00269",
+    "word": "sutto",
+    "phonetic": "",
+    "translation": "straight,all of a sudden",
+    "translations": [
+      "straight,all of a sudden"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00270",
+    "word": "norikaeru",
+    "phonetic": "",
+    "translation": "to change between buses or trains",
+    "translations": [
+      "to change between buses or trains"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00271",
+    "word": "riyou",
+    "phonetic": "",
+    "translation": "utilization",
+    "translations": [
+      "utilization"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00272",
+    "word": "atsumeru",
+    "phonetic": "",
+    "translation": "to collect something",
+    "translations": [
+      "to collect something"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00273",
+    "word": "nyuugaku",
+    "phonetic": "",
+    "translation": "to enter school or university",
+    "translations": [
+      "to enter school or university"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00274",
+    "word": "shibaraku",
+    "phonetic": "",
+    "translation": "little while",
+    "translations": [
+      "little while"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00275",
+    "word": "ossharu",
+    "phonetic": "",
+    "translation": "(respectful) to say",
+    "translations": [
+      "(respectful) to say"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00276",
+    "word": "yoroshii",
+    "phonetic": "",
+    "translation": "(respectful) OK,all right",
+    "translations": [
+      "(respectful) OK,all right"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00277",
+    "word": "majime",
+    "phonetic": "",
+    "translation": "serious",
+    "translations": [
+      "serious"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00278",
+    "word": "suidou",
+    "phonetic": "",
+    "translation": "water supply",
+    "translations": [
+      "water supply"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00279",
+    "word": "tatami",
+    "phonetic": "",
+    "translation": "Japanese straw mat",
+    "translations": [
+      "Japanese straw mat"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00280",
+    "word": "sakki",
+    "phonetic": "",
+    "translation": "some time ago",
+    "translations": [
+      "some time ago"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00281",
+    "word": "hi",
+    "phonetic": "",
+    "translation": "day, sun",
+    "translations": [
+      "day, sun"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00282",
+    "word": "hatsuon",
+    "phonetic": "",
+    "translation": "pronunciation",
+    "translations": [
+      "pronunciation"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00283",
+    "word": "honyaku",
+    "phonetic": "",
+    "translation": "translation",
+    "translations": [
+      "translation"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00284",
+    "word": "ito",
+    "phonetic": "",
+    "translation": "thread",
+    "translations": [
+      "thread"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00285",
+    "word": "kiken",
+    "phonetic": "",
+    "translation": "danger",
+    "translations": [
+      "danger"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00286",
+    "word": "narubeku",
+    "phonetic": "",
+    "translation": "as much as possible",
+    "translations": [
+      "as much as possible"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00287",
+    "word": "ura",
+    "phonetic": "",
+    "translation": "reverse side",
+    "translations": [
+      "reverse side"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00288",
+    "word": "tochuu",
+    "phonetic": "",
+    "translation": "on the way",
+    "translations": [
+      "on the way"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00289",
+    "word": "okashii",
+    "phonetic": "",
+    "translation": "strange or funny",
+    "translations": [
+      "strange or funny"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00290",
+    "word": "asai",
+    "phonetic": "",
+    "translation": "shallow,superficial",
+    "translations": [
+      "shallow,superficial"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00291",
+    "word": "hen",
+    "phonetic": "",
+    "translation": "strange",
+    "translations": [
+      "strange"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00292",
+    "word": "saisho",
+    "phonetic": "",
+    "translation": "beginning,first",
+    "translations": [
+      "beginning,first"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00293",
+    "word": "haiken",
+    "phonetic": "",
+    "translation": "(humble) to look at",
+    "translations": [
+      "(humble) to look at"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00294",
+    "word": "you",
+    "phonetic": "",
+    "translation": "use",
+    "translations": [
+      "use"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00295",
+    "word": "tsutaeru",
+    "phonetic": "",
+    "translation": "to report",
+    "translations": [
+      "to report"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00296",
+    "word": "sorede",
+    "phonetic": "",
+    "translation": "because of that",
+    "translations": [
+      "because of that"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00297",
+    "word": "mieru",
+    "phonetic": "",
+    "translation": "to be in sight",
+    "translations": [
+      "to be in sight"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00298",
+    "word": "otaku",
+    "phonetic": "",
+    "translation": "(polite) your house",
+    "translations": [
+      "(polite) your house"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00299",
+    "word": "tariru",
+    "phonetic": "",
+    "translation": "to be enough",
+    "translations": [
+      "to be enough"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00300",
+    "word": "nioi",
+    "phonetic": "",
+    "translation": "a smell",
+    "translations": [
+      "a smell"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00301",
+    "word": "otsuri",
+    "phonetic": "",
+    "translation": "change from purchase, balance",
+    "translations": [
+      "change from purchase, balance"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00302",
+    "word": "shiken",
+    "phonetic": "",
+    "translation": "examination",
+    "translations": [
+      "examination"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00303",
+    "word": "moushiageru",
+    "phonetic": "",
+    "translation": "(humble) to say,to tell",
+    "translations": [
+      "(humble) to say,to tell"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00304",
+    "word": "saraishuu",
+    "phonetic": "",
+    "translation": "the week after next",
+    "translations": [
+      "the week after next"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00305",
+    "word": "kudaru",
+    "phonetic": "",
+    "translation": "to get down,to descend",
+    "translations": [
+      "to get down,to descend"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00306",
+    "word": "hikoujou",
+    "phonetic": "",
+    "translation": "airport",
+    "translations": [
+      "airport"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00307",
+    "word": "kougyou",
+    "phonetic": "",
+    "translation": "the manufacturing industry",
+    "translations": [
+      "the manufacturing industry"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00308",
+    "word": "tera",
+    "phonetic": "",
+    "translation": "temple",
+    "translations": [
+      "temple"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00309",
+    "word": "fune",
+    "phonetic": "",
+    "translation": "ship",
+    "translations": [
+      "ship"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00310",
+    "word": "nuru",
+    "phonetic": "",
+    "translation": "to paint,to plaster",
+    "translations": [
+      "to paint,to plaster"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00311",
+    "word": "utsu",
+    "phonetic": "",
+    "translation": "to hit",
+    "translations": [
+      "to hit"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00312",
+    "word": "chikara",
+    "phonetic": "",
+    "translation": "strength,power",
+    "translations": [
+      "strength,power"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00313",
+    "word": "tokuni",
+    "phonetic": "",
+    "translation": "particularly,especially",
+    "translations": [
+      "particularly,especially"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00314",
+    "word": "ji",
+    "phonetic": "",
+    "translation": "character",
+    "translations": [
+      "character"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00315",
+    "word": "iken",
+    "phonetic": "",
+    "translation": "opinion",
+    "translations": [
+      "opinion"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00316",
+    "word": "naru",
+    "phonetic": "",
+    "translation": "to sound",
+    "translations": [
+      "to sound"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00317",
+    "word": "komu",
+    "phonetic": "",
+    "translation": "to be crowded",
+    "translations": [
+      "to be crowded"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00318",
+    "word": "katachi",
+    "phonetic": "",
+    "translation": "shape",
+    "translations": [
+      "shape"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00319",
+    "word": "hayashi",
+    "phonetic": "",
+    "translation": "woods,forester",
+    "translations": [
+      "woods,forester"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00320",
+    "word": "owari",
+    "phonetic": "",
+    "translation": "the end",
+    "translations": [
+      "the end"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00321",
+    "word": "nemuru",
+    "phonetic": "",
+    "translation": "to sleep",
+    "translations": [
+      "to sleep"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00322",
+    "word": "futon",
+    "phonetic": "",
+    "translation": "Japanese bedding, futon",
+    "translations": [
+      "Japanese bedding, futon"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00323",
+    "word": "konogoro",
+    "phonetic": "",
+    "translation": "these days,nowadays",
+    "translations": [
+      "these days,nowadays"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00324",
+    "word": "yunyuu",
+    "phonetic": "",
+    "translation": "to import",
+    "translations": [
+      "to import"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00325",
+    "word": "yogoreru",
+    "phonetic": "",
+    "translation": "to get dirty",
+    "translations": [
+      "to get dirty"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00326",
+    "word": "garasu",
+    "phonetic": "",
+    "translation": "a glass pane",
+    "translations": [
+      "a glass pane"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00327",
+    "word": "nasaru",
+    "phonetic": "",
+    "translation": "(respectful) to do",
+    "translations": [
+      "(respectful) to do"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00328",
+    "word": "kisetsu",
+    "phonetic": "",
+    "translation": "season",
+    "translations": [
+      "season"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00329",
+    "word": "tateru",
+    "phonetic": "",
+    "translation": "to stand something up",
+    "translations": [
+      "to stand something up"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00330",
+    "word": "hisashiburi",
+    "phonetic": "",
+    "translation": "after a long time",
+    "translations": [
+      "after a long time"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00331",
+    "word": "bei",
+    "phonetic": "",
+    "translation": "uncooked rice",
+    "translations": [
+      "uncooked rice"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00332",
+    "word": "keeki",
+    "phonetic": "",
+    "translation": "cake",
+    "translations": [
+      "cake"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00333",
+    "word": "seikatsu",
+    "phonetic": "",
+    "translation": "to live",
+    "translations": [
+      "to live"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00334",
+    "word": "wakareru",
+    "phonetic": "",
+    "translation": "to separate",
+    "translations": [
+      "to separate"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00335",
+    "word": "wasuremono",
+    "phonetic": "",
+    "translation": "lost article",
+    "translations": [
+      "lost article"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00336",
+    "word": "kowai",
+    "phonetic": "",
+    "translation": "frightening",
+    "translations": [
+      "frightening"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00337",
+    "word": "nyuuin",
+    "phonetic": "",
+    "translation": "to hospitalise",
+    "translations": [
+      "to hospitalise"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00338",
+    "word": "suri",
+    "phonetic": "",
+    "translation": "pickpocket",
+    "translations": [
+      "pickpocket"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00339",
+    "word": "shoutai",
+    "phonetic": "",
+    "translation": "to invite",
+    "translations": [
+      "to invite"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00340",
+    "word": "suutsukeesu",
+    "phonetic": "",
+    "translation": "suitcase",
+    "translations": [
+      "suitcase"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00341",
+    "word": "nebou",
+    "phonetic": "",
+    "translation": "sleeping in late",
+    "translations": [
+      "sleeping in late"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00342",
+    "word": "mochiron",
+    "phonetic": "",
+    "translation": "of course",
+    "translations": [
+      "of course"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00343",
+    "word": "kimi",
+    "phonetic": "",
+    "translation": "suffix for familiar young male",
+    "translations": [
+      "suffix for familiar young male"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00344",
+    "word": "rusu",
+    "phonetic": "",
+    "translation": "absence",
+    "translations": [
+      "absence"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00345",
+    "word": "suruto",
+    "phonetic": "",
+    "translation": "then",
+    "translations": [
+      "then"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00346",
+    "word": "shinamono",
+    "phonetic": "",
+    "translation": "goods",
+    "translations": [
+      "goods"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00347",
+    "word": "nageru",
+    "phonetic": "",
+    "translation": "to throw or cast away",
+    "translations": [
+      "to throw or cast away"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00348",
+    "word": "tsuma",
+    "phonetic": "",
+    "translation": "(humble) wife",
+    "translations": [
+      "(humble) wife"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00349",
+    "word": "fakkusu",
+    "phonetic": "",
+    "translation": "fax",
+    "translations": [
+      "fax"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00350",
+    "word": "odoroku",
+    "phonetic": "",
+    "translation": "to be surprised",
+    "translations": [
+      "to be surprised"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00351",
+    "word": "kawaru",
+    "phonetic": "",
+    "translation": "to change",
+    "translations": [
+      "to change"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00352",
+    "word": "tatoeba",
+    "phonetic": "",
+    "translation": "for example",
+    "translations": [
+      "for example"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00353",
+    "word": "orei",
+    "phonetic": "",
+    "translation": "expression of gratitude",
+    "translations": [
+      "expression of gratitude"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00354",
+    "word": "tsureru",
+    "phonetic": "",
+    "translation": "to lead",
+    "translations": [
+      "to lead"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00355",
+    "word": "tokoya",
+    "phonetic": "",
+    "translation": "barber",
+    "translations": [
+      "barber"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00356",
+    "word": "keizai",
+    "phonetic": "",
+    "translation": "finance,economy",
+    "translations": [
+      "finance,economy"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00357",
+    "word": "koudou",
+    "phonetic": "",
+    "translation": "auditorium",
+    "translations": [
+      "auditorium"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00358",
+    "word": "seiji",
+    "phonetic": "",
+    "translation": "politics,government",
+    "translations": [
+      "politics,government"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00359",
+    "word": "jishin",
+    "phonetic": "",
+    "translation": "earthquake",
+    "translations": [
+      "earthquake"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00360",
+    "word": "beru",
+    "phonetic": "",
+    "translation": "bell",
+    "translations": [
+      "bell"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00361",
+    "word": "mousugu",
+    "phonetic": "",
+    "translation": "soon",
+    "translations": [
+      "soon"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00362",
+    "word": "doubutsuen",
+    "phonetic": "",
+    "translation": "zoo",
+    "translations": [
+      "zoo"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00363",
+    "word": "wareru",
+    "phonetic": "",
+    "translation": "to break",
+    "translations": [
+      "to break"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00364",
+    "word": "yoru",
+    "phonetic": "",
+    "translation": "to visit",
+    "translations": [
+      "to visit"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00365",
+    "word": "ageru",
+    "phonetic": "",
+    "translation": "to give",
+    "translations": [
+      "to give"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00366",
+    "word": "paato",
+    "phonetic": "",
+    "translation": "part time",
+    "translations": [
+      "part time"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00367",
+    "word": "tazuneru",
+    "phonetic": "",
+    "translation": "to ask",
+    "translations": [
+      "to ask"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00368",
+    "word": "mou",
+    "phonetic": "",
+    "translation": "hair or fur",
+    "translations": [
+      "hair or fur"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00369",
+    "word": "sukkari",
+    "phonetic": "",
+    "translation": "completely",
+    "translations": [
+      "completely"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00370",
+    "word": "hijouni",
+    "phonetic": "",
+    "translation": "extremely",
+    "translations": [
+      "extremely"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00371",
+    "word": "tsuru",
+    "phonetic": "",
+    "translation": "to fish",
+    "translations": [
+      "to fish"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00372",
+    "word": "houritsu",
+    "phonetic": "",
+    "translation": "law",
+    "translations": [
+      "law"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00373",
+    "word": "shitaku",
+    "phonetic": "",
+    "translation": "to prepare",
+    "translations": [
+      "to prepare"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00374",
+    "word": "soudan",
+    "phonetic": "",
+    "translation": "to discuss",
+    "translations": [
+      "to discuss"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00375",
+    "word": "yakunitatsu",
+    "phonetic": "",
+    "translation": "to be helpful",
+    "translations": [
+      "to be helpful"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00376",
+    "word": "fumu",
+    "phonetic": "",
+    "translation": "to step on",
+    "translations": [
+      "to step on"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00377",
+    "word": "handobaggu",
+    "phonetic": "",
+    "translation": "handbag",
+    "translations": [
+      "handbag"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00378",
+    "word": "daitai",
+    "phonetic": "",
+    "translation": "generally",
+    "translations": [
+      "generally"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00379",
+    "word": "kangaeru",
+    "phonetic": "",
+    "translation": "to consider",
+    "translations": [
+      "to consider"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00380",
+    "word": "toutou",
+    "phonetic": "",
+    "translation": "finally, after all",
+    "translations": [
+      "finally, after all"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00381",
+    "word": "mukashi",
+    "phonetic": "",
+    "translation": "olden days, former",
+    "translations": [
+      "olden days, former"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00382",
+    "word": "oru",
+    "phonetic": "",
+    "translation": "to break or to fold",
+    "translations": [
+      "to break or to fold"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00383",
+    "word": "chittomo",
+    "phonetic": "",
+    "translation": "not at all (used with a negative verb)",
+    "translations": [
+      "not at all (used with a negative verb)"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00384",
+    "word": "kabe",
+    "phonetic": "",
+    "translation": "wall",
+    "translations": [
+      "wall"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00385",
+    "word": "tooku",
+    "phonetic": "",
+    "translation": "distant",
+    "translations": [
+      "distant"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00386",
+    "word": "kagaku",
+    "phonetic": "",
+    "translation": "science",
+    "translations": [
+      "science"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00387",
+    "word": "sobo",
+    "phonetic": "",
+    "translation": "grandmother",
+    "translations": [
+      "grandmother"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00388",
+    "word": "aisatsu-suru",
+    "phonetic": "",
+    "translation": "to greet",
+    "translations": [
+      "to greet"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00389",
+    "word": "akachan",
+    "phonetic": "",
+    "translation": "infant",
+    "translations": [
+      "infant"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00390",
+    "word": "saigo",
+    "phonetic": "",
+    "translation": "last,end",
+    "translations": [
+      "last,end"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00391",
+    "word": "uketsuke",
+    "phonetic": "",
+    "translation": "receipt",
+    "translations": [
+      "receipt"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00392",
+    "word": "tsuzuku",
+    "phonetic": "",
+    "translation": "to be continued",
+    "translations": [
+      "to be continued"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00393",
+    "word": "kyousou",
+    "phonetic": "",
+    "translation": "competition",
+    "translations": [
+      "competition"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00394",
+    "word": "yubi",
+    "phonetic": "",
+    "translation": "finger",
+    "translations": [
+      "finger"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00395",
+    "word": "todokeru",
+    "phonetic": "",
+    "translation": "to reach",
+    "translations": [
+      "to reach"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00396",
+    "word": "ijou",
+    "phonetic": "",
+    "translation": "more than,this is all",
+    "translations": [
+      "more than,this is all"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00397",
+    "word": "geshuku",
+    "phonetic": "",
+    "translation": "lodging",
+    "translations": [
+      "lodging"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00398",
+    "word": "odoru",
+    "phonetic": "",
+    "translation": "to dance",
+    "translations": [
+      "to dance"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00399",
+    "word": "hikidasu",
+    "phonetic": "",
+    "translation": "to withdraw",
+    "translations": [
+      "to withdraw"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00400",
+    "word": "dorobou",
+    "phonetic": "",
+    "translation": "thief",
+    "translations": [
+      "thief"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00401",
+    "word": "kuraberu",
+    "phonetic": "",
+    "translation": "to compare",
+    "translations": [
+      "to compare"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00402",
+    "word": "yaseru",
+    "phonetic": "",
+    "translation": "to become thin",
+    "translations": [
+      "to become thin"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00403",
+    "word": "shourai",
+    "phonetic": "",
+    "translation": "future,prospects",
+    "translations": [
+      "future,prospects"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00404",
+    "word": "tenisu",
+    "phonetic": "",
+    "translation": "tennis",
+    "translations": [
+      "tennis"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00405",
+    "word": "nusumu",
+    "phonetic": "",
+    "translation": "to steal",
+    "translations": [
+      "to steal"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00406",
+    "word": "goranninaru",
+    "phonetic": "",
+    "translation": "(respectful) to see",
+    "translations": [
+      "(respectful) to see"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00407",
+    "word": "esukareetaa",
+    "phonetic": "",
+    "translation": "escalator",
+    "translations": [
+      "escalator"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00408",
+    "word": "kokusai",
+    "phonetic": "",
+    "translation": "international",
+    "translations": [
+      "international"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00409",
+    "word": "hiruyasumi",
+    "phonetic": "",
+    "translation": "noon break",
+    "translations": [
+      "noon break"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00410",
+    "word": "kyaku",
+    "phonetic": "",
+    "translation": "guest,customer",
+    "translations": [
+      "guest,customer"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00411",
+    "word": "chiri",
+    "phonetic": "",
+    "translation": "geography",
+    "translations": [
+      "geography"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00412",
+    "word": "kowata",
+    "phonetic": "",
+    "translation": "cotton",
+    "translations": [
+      "cotton"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00413",
+    "word": "shiai",
+    "phonetic": "",
+    "translation": "match,game",
+    "translations": [
+      "match,game"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00414",
+    "word": "tenrankai",
+    "phonetic": "",
+    "translation": "exhibition",
+    "translations": [
+      "exhibition"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00415",
+    "word": "boku",
+    "phonetic": "",
+    "translation": "I (used by males)",
+    "translations": [
+      "I (used by males)"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00416",
+    "word": "kakkou",
+    "phonetic": "",
+    "translation": "appearance",
+    "translations": [
+      "appearance"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00417",
+    "word": "otto",
+    "phonetic": "",
+    "translation": "husband",
+    "translations": [
+      "husband"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00418",
+    "word": "afurika",
+    "phonetic": "",
+    "translation": "Africa",
+    "translations": [
+      "Africa"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00419",
+    "word": "anzen",
+    "phonetic": "",
+    "translation": "safety",
+    "translations": [
+      "safety"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00420",
+    "word": "kaaten",
+    "phonetic": "",
+    "translation": "curtain",
+    "translations": [
+      "curtain"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00421",
+    "word": "shinpai",
+    "phonetic": "",
+    "translation": "to worry",
+    "translations": [
+      "to worry"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00422",
+    "word": "nigeru",
+    "phonetic": "",
+    "translation": "to escape",
+    "translations": [
+      "to escape"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00423",
+    "word": "tanoshimi",
+    "phonetic": "",
+    "translation": "joy",
+    "translations": [
+      "joy"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00424",
+    "word": "kimochi",
+    "phonetic": "",
+    "translation": "feeling,mood",
+    "translations": [
+      "feeling,mood"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00425",
+    "word": "ojousan",
+    "phonetic": "",
+    "translation": "young lady",
+    "translations": [
+      "young lady"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00426",
+    "word": "rekishi",
+    "phonetic": "",
+    "translation": "history",
+    "translations": [
+      "history"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00427",
+    "word": "norimono",
+    "phonetic": "",
+    "translation": "vehicle",
+    "translations": [
+      "vehicle"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00428",
+    "word": "nesshin",
+    "phonetic": "",
+    "translation": "enthusiasm",
+    "translations": [
+      "enthusiasm"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00429",
+    "word": "hige",
+    "phonetic": "",
+    "translation": "beard",
+    "translations": [
+      "beard"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00430",
+    "word": "taitei",
+    "phonetic": "",
+    "translation": "usually",
+    "translations": [
+      "usually"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00431",
+    "word": "genin",
+    "phonetic": "",
+    "translation": "cause,source",
+    "translations": [
+      "cause,source"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00432",
+    "word": "kudasaru",
+    "phonetic": "",
+    "translation": "(respectful) to give",
+    "translations": [
+      "(respectful) to give"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00433",
+    "word": "kami",
+    "phonetic": "",
+    "translation": "hair",
+    "translations": [
+      "hair"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00434",
+    "word": "sonna",
+    "phonetic": "",
+    "translation": "that sort of",
+    "translations": [
+      "that sort of"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00435",
+    "word": "itasu",
+    "phonetic": "",
+    "translation": "(humble) to do",
+    "translations": [
+      "(humble) to do"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00436",
+    "word": "kaiwa",
+    "phonetic": "",
+    "translation": "conversation",
+    "translations": [
+      "conversation"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00437",
+    "word": "kimaru",
+    "phonetic": "",
+    "translation": "to be decided",
+    "translations": [
+      "to be decided"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00438",
+    "word": "okosu",
+    "phonetic": "",
+    "translation": "to wake",
+    "translations": [
+      "to wake"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00439",
+    "word": "zenzen",
+    "phonetic": "",
+    "translation": "not entirely (used in a negative sentence)",
+    "translations": [
+      "not entirely (used in a negative sentence)"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00440",
+    "word": "kanai",
+    "phonetic": "",
+    "translation": "housewife",
+    "translations": [
+      "housewife"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00441",
+    "word": "ten",
+    "phonetic": "",
+    "translation": "point,dot",
+    "translations": [
+      "point,dot"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00442",
+    "word": "kaeru",
+    "phonetic": "",
+    "translation": "to change",
+    "translations": [
+      "to change"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00443",
+    "word": "okurimono",
+    "phonetic": "",
+    "translation": "gift",
+    "translations": [
+      "gift"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00444",
+    "word": "chan",
+    "phonetic": "",
+    "translation": "suffix for familiar female person",
+    "translations": [
+      "suffix for familiar female person"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00445",
+    "word": "kyoumi",
+    "phonetic": "",
+    "translation": "an interest",
+    "translations": [
+      "an interest"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00446",
+    "word": "chuushajou",
+    "phonetic": "",
+    "translation": "parking lot",
+    "translations": [
+      "parking lot"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00447",
+    "word": "dougu",
+    "phonetic": "",
+    "translation": "tool,means",
+    "translations": [
+      "tool,means"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00448",
+    "word": "nareru",
+    "phonetic": "",
+    "translation": "to grow accustomed to",
+    "translations": [
+      "to grow accustomed to"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00449",
+    "word": "kega/suru",
+    "phonetic": "",
+    "translation": "to injure",
+    "translations": [
+      "to injure"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00450",
+    "word": "sawaru",
+    "phonetic": "",
+    "translation": "to touch",
+    "translations": [
+      "to touch"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00451",
+    "word": "yushutsu",
+    "phonetic": "",
+    "translation": "to export",
+    "translations": [
+      "to export"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00452",
+    "word": "keisatsu",
+    "phonetic": "",
+    "translation": "police",
+    "translations": [
+      "police"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00453",
+    "word": "utsusu",
+    "phonetic": "",
+    "translation": "to copy or photograph",
+    "translations": [
+      "to copy or photograph"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00454",
+    "word": "kankei",
+    "phonetic": "",
+    "translation": "relationship",
+    "translations": [
+      "relationship"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00455",
+    "word": "gozonji",
+    "phonetic": "",
+    "translation": "knowing,acquaintance",
+    "translations": [
+      "knowing,acquaintance"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00456",
+    "word": "hirou",
+    "phonetic": "",
+    "translation": "to pick up,to gather",
+    "translations": [
+      "to pick up,to gather"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00457",
+    "word": "yakusoku",
+    "phonetic": "",
+    "translation": "promise",
+    "translations": [
+      "promise"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00458",
+    "word": "kyuukou",
+    "phonetic": "",
+    "translation": "speedy, express",
+    "translations": [
+      "speedy, express"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00459",
+    "word": "kantan",
+    "phonetic": "",
+    "translation": "simple",
+    "translations": [
+      "simple"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00460",
+    "word": "mazu",
+    "phonetic": "",
+    "translation": "first of all",
+    "translations": [
+      "first of all"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00461",
+    "word": "josei",
+    "phonetic": "",
+    "translation": "woman",
+    "translations": [
+      "woman"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00462",
+    "word": "ukeru",
+    "phonetic": "",
+    "translation": "to take a lesson or test",
+    "translations": [
+      "to take a lesson or test"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00463",
+    "word": "ajia",
+    "phonetic": "",
+    "translation": "Asia",
+    "translations": [
+      "Asia"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00464",
+    "word": "tame",
+    "phonetic": "",
+    "translation": "in order to",
+    "translations": [
+      "in order to"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00465",
+    "word": "buchou",
+    "phonetic": "",
+    "translation": "head of a section",
+    "translations": [
+      "head of a section"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00466",
+    "word": "teinei",
+    "phonetic": "",
+    "translation": "polite",
+    "translations": [
+      "polite"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00467",
+    "word": "au",
+    "phonetic": "",
+    "translation": "to match",
+    "translations": [
+      "to match"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00468",
+    "word": "susumu",
+    "phonetic": "",
+    "translation": "to make progress",
+    "translations": [
+      "to make progress"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00469",
+    "word": "noboru",
+    "phonetic": "",
+    "translation": "to rise",
+    "translations": [
+      "to rise"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00470",
+    "word": "makeru",
+    "phonetic": "",
+    "translation": "to lose",
+    "translations": [
+      "to lose"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00471",
+    "word": "saka",
+    "phonetic": "",
+    "translation": "slope,hill",
+    "translations": [
+      "slope,hill"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00472",
+    "word": "ureshii",
+    "phonetic": "",
+    "translation": "glad",
+    "translations": [
+      "glad"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00473",
+    "word": "yoyaku",
+    "phonetic": "",
+    "translation": "reservation",
+    "translations": [
+      "reservation"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00474",
+    "word": "shitagi",
+    "phonetic": "",
+    "translation": "underwear",
+    "translations": [
+      "underwear"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00475",
+    "word": "chuusha",
+    "phonetic": "",
+    "translation": "injection",
+    "translations": [
+      "injection"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00476",
+    "word": "maniau",
+    "phonetic": "",
+    "translation": "to be in time for",
+    "translations": [
+      "to be in time for"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00477",
+    "word": "saraigetsu",
+    "phonetic": "",
+    "translation": "the month after next",
+    "translations": [
+      "the month after next"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00478",
+    "word": "suteeki",
+    "phonetic": "",
+    "translation": "steak",
+    "translations": [
+      "steak"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00479",
+    "word": "mitsukaru",
+    "phonetic": "",
+    "translation": "to be discovered",
+    "translations": [
+      "to be discovered"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00480",
+    "word": "keikaku",
+    "phonetic": "",
+    "translation": "to plan",
+    "translations": [
+      "to plan"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00481",
+    "word": "mukaeru",
+    "phonetic": "",
+    "translation": "to go out to meet",
+    "translations": [
+      "to go out to meet"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00482",
+    "word": "kanojo",
+    "phonetic": "",
+    "translation": "she,girlfriend",
+    "translations": [
+      "she,girlfriend"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00483",
+    "word": "igai",
+    "phonetic": "",
+    "translation": "with the exception of",
+    "translations": [
+      "with the exception of"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00484",
+    "word": "kamu",
+    "phonetic": "",
+    "translation": "to bite,to chew",
+    "translations": [
+      "to bite,to chew"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00485",
+    "word": "miso",
+    "phonetic": "",
+    "translation": "bean paste",
+    "translations": [
+      "bean paste"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00486",
+    "word": "ha",
+    "phonetic": "",
+    "translation": "leaf",
+    "translations": [
+      "leaf"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00487",
+    "word": "koujou",
+    "phonetic": "",
+    "translation": "factory",
+    "translations": [
+      "factory"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00488",
+    "word": "kazaru",
+    "phonetic": "",
+    "translation": "to decorate",
+    "translations": [
+      "to decorate"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00489",
+    "word": "tsuki",
+    "phonetic": "",
+    "translation": "moon",
+    "translations": [
+      "moon"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00490",
+    "word": "koumuin",
+    "phonetic": "",
+    "translation": "government worker",
+    "translations": [
+      "government worker"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00491",
+    "word": "kikoeru",
+    "phonetic": "",
+    "translation": "to be heard",
+    "translations": [
+      "to be heard"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00492",
+    "word": "naruhodo",
+    "phonetic": "",
+    "translation": "now I understand",
+    "translations": [
+      "now I understand"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00493",
+    "word": "itadaku",
+    "phonetic": "",
+    "translation": "(humble) to receive",
+    "translations": [
+      "(humble) to receive"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00494",
+    "word": "chi",
+    "phonetic": "",
+    "translation": "blood",
+    "translations": [
+      "blood"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00495",
+    "word": "tekitou",
+    "phonetic": "",
+    "translation": "suitability",
+    "translations": [
+      "suitability"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00496",
+    "word": "tsutsumu",
+    "phonetic": "",
+    "translation": "to wrap",
+    "translations": [
+      "to wrap"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00497",
+    "word": "niru",
+    "phonetic": "",
+    "translation": "to be similar",
+    "translations": [
+      "to be similar"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00498",
+    "word": "undou",
+    "phonetic": "",
+    "translation": "to exercise",
+    "translations": [
+      "to exercise"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00499",
+    "word": "mori",
+    "phonetic": "",
+    "translation": "forest",
+    "translations": [
+      "forest"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00500",
+    "word": "shinsetsu",
+    "phonetic": "",
+    "translation": "kindness",
+    "translations": [
+      "kindness"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00501",
+    "word": "tebukuro",
+    "phonetic": "",
+    "translation": "glove",
+    "translations": [
+      "glove"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00502",
+    "word": "kougai",
+    "phonetic": "",
+    "translation": "outskirts",
+    "translations": [
+      "outskirts"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00503",
+    "word": "nigai",
+    "phonetic": "",
+    "translation": "bitter",
+    "translations": [
+      "bitter"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00504",
+    "word": "hoshi",
+    "phonetic": "",
+    "translation": "star",
+    "translations": [
+      "star"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00505",
+    "word": "tsumori",
+    "phonetic": "",
+    "translation": "intention",
+    "translations": [
+      "intention"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00506",
+    "word": "dakara",
+    "phonetic": "",
+    "translation": "so,therefore",
+    "translations": [
+      "so,therefore"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00507",
+    "word": "koukousei",
+    "phonetic": "",
+    "translation": "high school student",
+    "translations": [
+      "high school student"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00508",
+    "word": "mawaru",
+    "phonetic": "",
+    "translation": "to go around",
+    "translations": [
+      "to go around"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00509",
+    "word": "ukagau",
+    "phonetic": "",
+    "translation": "to visit",
+    "translations": [
+      "to visit"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00510",
+    "word": "anna",
+    "phonetic": "",
+    "translation": "such",
+    "translations": [
+      "such"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00511",
+    "word": "katazukeru",
+    "phonetic": "",
+    "translation": "to tidy up",
+    "translations": [
+      "to tidy up"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00512",
+    "word": "shiraseru",
+    "phonetic": "",
+    "translation": "to notify",
+    "translations": [
+      "to notify"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00513",
+    "word": "juusho",
+    "phonetic": "",
+    "translation": "an address,a residence",
+    "translations": [
+      "an address,a residence"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00514",
+    "word": "kaigan",
+    "phonetic": "",
+    "translation": "coast",
+    "translations": [
+      "coast"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00515",
+    "word": "sodateru",
+    "phonetic": "",
+    "translation": "to rear,to bring up",
+    "translations": [
+      "to rear,to bring up"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00516",
+    "word": "shumi",
+    "phonetic": "",
+    "translation": "hobby",
+    "translations": [
+      "hobby"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00517",
+    "word": "tokubetsu",
+    "phonetic": "",
+    "translation": "special",
+    "translations": [
+      "special"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00518",
+    "word": "kou",
+    "phonetic": "",
+    "translation": "this way",
+    "translations": [
+      "this way"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00519",
+    "word": "mitsukeru",
+    "phonetic": "",
+    "translation": "to discover",
+    "translations": [
+      "to discover"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00520",
+    "word": "tsuku",
+    "phonetic": "",
+    "translation": "to be attached",
+    "translations": [
+      "to be attached"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00521",
+    "word": "asobi",
+    "phonetic": "",
+    "translation": "play",
+    "translations": [
+      "play"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00522",
+    "word": "sakan",
+    "phonetic": "",
+    "translation": "popularity,prosperous",
+    "translations": [
+      "popularity,prosperous"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00523",
+    "word": "shokuryouhin",
+    "phonetic": "",
+    "translation": "groceries",
+    "translations": [
+      "groceries"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00524",
+    "word": "hidoi",
+    "phonetic": "",
+    "translation": "awful",
+    "translations": [
+      "awful"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00525",
+    "word": "morau",
+    "phonetic": "",
+    "translation": "to receive",
+    "translations": [
+      "to receive"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00526",
+    "word": "gasorinsutando",
+    "phonetic": "",
+    "translation": "petrol station",
+    "translations": [
+      "petrol station"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00527",
+    "word": "nikaidate",
+    "phonetic": "",
+    "translation": "two storied",
+    "translations": [
+      "two storied"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00528",
+    "word": "yu",
+    "phonetic": "",
+    "translation": "hot water",
+    "translations": [
+      "hot water"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00529",
+    "word": "kureru",
+    "phonetic": "",
+    "translation": "to get dark,to come to an end",
+    "translations": [
+      "to get dark,to come to an end"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00530",
+    "word": "torikaeru",
+    "phonetic": "",
+    "translation": "to exchange",
+    "translations": [
+      "to exchange"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00531",
+    "word": "omimai",
+    "phonetic": "",
+    "translation": "calling on someone who is ill,enquiry",
+    "translations": [
+      "calling on someone who is ill,enquiry"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00532",
+    "word": "shokuji",
+    "phonetic": "",
+    "translation": "to have a meal",
+    "translations": [
+      "to have a meal"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00533",
+    "word": "omiyage",
+    "phonetic": "",
+    "translation": "souvenir",
+    "translations": [
+      "souvenir"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00534",
+    "word": "tomeru",
+    "phonetic": "",
+    "translation": "to stop something",
+    "translations": [
+      "to stop something"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00535",
+    "word": "nakanaka",
+    "phonetic": "",
+    "translation": "considerably",
+    "translations": [
+      "considerably"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00536",
+    "word": "karera",
+    "phonetic": "",
+    "translation": "they",
+    "translations": [
+      "they"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00537",
+    "word": "wakasu",
+    "phonetic": "",
+    "translation": "to boil,to heat",
+    "translations": [
+      "to boil,to heat"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00538",
+    "word": "shippai",
+    "phonetic": "",
+    "translation": "failure,mistake",
+    "translations": [
+      "failure,mistake"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00539",
+    "word": "waku",
+    "phonetic": "",
+    "translation": "to boil, to grow hot,to get excited",
+    "translations": [
+      "to boil, to grow hot,to get excited"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00540",
+    "word": "naku",
+    "phonetic": "",
+    "translation": "to weep",
+    "translations": [
+      "to weep"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00541",
+    "word": "junbi",
+    "phonetic": "",
+    "translation": "to prepare",
+    "translations": [
+      "to prepare"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00542",
+    "word": "tazuneru",
+    "phonetic": "",
+    "translation": "to visit",
+    "translations": [
+      "to visit"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00543",
+    "word": "omoidasu",
+    "phonetic": "",
+    "translation": "to remember",
+    "translations": [
+      "to remember"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00544",
+    "word": "keiken",
+    "phonetic": "",
+    "translation": "to experience",
+    "translations": [
+      "to experience"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00545",
+    "word": "guai",
+    "phonetic": "",
+    "translation": "condition,health",
+    "translations": [
+      "condition,health"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00546",
+    "word": "yawarakai",
+    "phonetic": "",
+    "translation": "soft",
+    "translations": [
+      "soft"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00547",
+    "word": "ko",
+    "phonetic": "",
+    "translation": "child",
+    "translations": [
+      "child"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00548",
+    "word": "naoru",
+    "phonetic": "",
+    "translation": "to be fixed,to be repaired",
+    "translations": [
+      "to be fixed,to be repaired"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00549",
+    "word": "jidai",
+    "phonetic": "",
+    "translation": "era",
+    "translations": [
+      "era"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00550",
+    "word": "kowareru",
+    "phonetic": "",
+    "translation": "to be broken",
+    "translations": [
+      "to be broken"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00551",
+    "word": "mina",
+    "phonetic": "",
+    "translation": "everybody",
+    "translations": [
+      "everybody"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00552",
+    "word": "oriru",
+    "phonetic": "",
+    "translation": "to get off",
+    "translations": [
+      "to get off"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00553",
+    "word": "ayamaru",
+    "phonetic": "",
+    "translation": "to apologize",
+    "translations": [
+      "to apologize"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00554",
+    "word": "bijutsukan",
+    "phonetic": "",
+    "translation": "art gallery",
+    "translations": [
+      "art gallery"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00555",
+    "word": "yakeru",
+    "phonetic": "",
+    "translation": "to burn,to be roasted",
+    "translations": [
+      "to burn,to be roasted"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00556",
+    "word": "shi",
+    "phonetic": "",
+    "translation": "city",
+    "translations": [
+      "city"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00557",
+    "word": "waapuro",
+    "phonetic": "",
+    "translation": "word processor",
+    "translations": [
+      "word processor"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00558",
+    "word": "mushi",
+    "phonetic": "",
+    "translation": "insect",
+    "translations": [
+      "insect"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00559",
+    "word": "tsuzukeru",
+    "phonetic": "",
+    "translation": "to continue",
+    "translations": [
+      "to continue"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00560",
+    "word": "koutsuu",
+    "phonetic": "",
+    "translation": "traffic,transportation",
+    "translations": [
+      "traffic,transportation"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00561",
+    "word": "tetsudau",
+    "phonetic": "",
+    "translation": "to assist",
+    "translations": [
+      "to assist"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00562",
+    "word": "bunka",
+    "phonetic": "",
+    "translation": "culture",
+    "translations": [
+      "culture"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00563",
+    "word": "kaeri",
+    "phonetic": "",
+    "translation": "return",
+    "translations": [
+      "return"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00564",
+    "word": "isogu",
+    "phonetic": "",
+    "translation": "to hurry",
+    "translations": [
+      "to hurry"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00565",
+    "word": "hotondo",
+    "phonetic": "",
+    "translation": "mostly",
+    "translations": [
+      "mostly"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00566",
+    "word": "hitsuyou",
+    "phonetic": "",
+    "translation": "necessary",
+    "translations": [
+      "necessary"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00567",
+    "word": "sofu",
+    "phonetic": "",
+    "translation": "grandfather",
+    "translations": [
+      "grandfather"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00568",
+    "word": "jinja",
+    "phonetic": "",
+    "translation": "Shinto shrine",
+    "translations": [
+      "Shinto shrine"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00569",
+    "word": "boueki",
+    "phonetic": "",
+    "translation": "trade",
+    "translations": [
+      "trade"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00570",
+    "word": "betsu",
+    "phonetic": "",
+    "translation": "different",
+    "translations": [
+      "different"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00571",
+    "word": "tenkiyohou",
+    "phonetic": "",
+    "translation": "weather forecast",
+    "translations": [
+      "weather forecast"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00572",
+    "word": "tokkyuu",
+    "phonetic": "",
+    "translation": "limited express train (faster than an express train)",
+    "translations": [
+      "limited express train (faster than an express train)"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00573",
+    "word": "o/kanemochi",
+    "phonetic": "",
+    "translation": "rich man",
+    "translations": [
+      "rich man"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00574",
+    "word": "hiraku",
+    "phonetic": "",
+    "translation": "to open an event",
+    "translations": [
+      "to open an event"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00575",
+    "word": "ichido",
+    "phonetic": "",
+    "translation": "once",
+    "translations": [
+      "once"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00576",
+    "word": "dekirudake",
+    "phonetic": "",
+    "translation": "as much as possible",
+    "translations": [
+      "as much as possible"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00577",
+    "word": "okureru",
+    "phonetic": "",
+    "translation": "to be late",
+    "translations": [
+      "to be late"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00578",
+    "word": "hajimeru",
+    "phonetic": "",
+    "translation": "to begin",
+    "translations": [
+      "to begin"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00579",
+    "word": "a",
+    "phonetic": "",
+    "translation": "Ah",
+    "translations": [
+      "Ah"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00580",
+    "word": "taipu",
+    "phonetic": "",
+    "translation": "type,style",
+    "translations": [
+      "type,style"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00581",
+    "word": "repouto/ripouto",
+    "phonetic": "",
+    "translation": "report",
+    "translations": [
+      "report"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00582",
+    "word": "konya",
+    "phonetic": "",
+    "translation": "tonight",
+    "translations": [
+      "tonight"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00583",
+    "word": "bai",
+    "phonetic": "",
+    "translation": "double",
+    "translations": [
+      "double"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00584",
+    "word": "furidasu",
+    "phonetic": "",
+    "translation": "to start to rain",
+    "translations": [
+      "to start to rain"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00585",
+    "word": "mawari",
+    "phonetic": "",
+    "translation": "surroundings",
+    "translations": [
+      "surroundings"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00586",
+    "word": "suku",
+    "phonetic": "",
+    "translation": "to become empty",
+    "translations": [
+      "to become empty"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00587",
+    "word": "setsumei",
+    "phonetic": "",
+    "translation": "explanation",
+    "translations": [
+      "explanation"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00588",
+    "word": "bangumi",
+    "phonetic": "",
+    "translation": "television or radio program",
+    "translations": [
+      "television or radio program"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00589",
+    "word": "kisoku",
+    "phonetic": "",
+    "translation": "regulations",
+    "translations": [
+      "regulations"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00590",
+    "word": "taiin",
+    "phonetic": "",
+    "translation": "to leave hospital",
+    "translations": [
+      "to leave hospital"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00591",
+    "word": "suiei",
+    "phonetic": "",
+    "translation": "swimming",
+    "translations": [
+      "swimming"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00592",
+    "word": "kouchou",
+    "phonetic": "",
+    "translation": "headmaster",
+    "translations": [
+      "headmaster"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00593",
+    "word": "hazukashii",
+    "phonetic": "",
+    "translation": "embarrassed",
+    "translations": [
+      "embarrassed"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00594",
+    "word": "jiten",
+    "phonetic": "",
+    "translation": "dictionary",
+    "translations": [
+      "dictionary"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00595",
+    "word": "hikkosu",
+    "phonetic": "",
+    "translation": "to move house",
+    "translations": [
+      "to move house"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00596",
+    "word": "danbou",
+    "phonetic": "",
+    "translation": "heating",
+    "translations": [
+      "heating"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00597",
+    "word": "fukushuu",
+    "phonetic": "",
+    "translation": "revision",
+    "translations": [
+      "revision"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00598",
+    "word": "meshiagaru",
+    "phonetic": "",
+    "translation": "(polite) to eat",
+    "translations": [
+      "(polite) to eat"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00599",
+    "word": "kawaku",
+    "phonetic": "",
+    "translation": "to get dry",
+    "translations": [
+      "to get dry"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00600",
+    "word": "sensou",
+    "phonetic": "",
+    "translation": "war",
+    "translations": [
+      "war"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00601",
+    "word": "tomaru",
+    "phonetic": "",
+    "translation": "to lodge at",
+    "translations": [
+      "to lodge at"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00602",
+    "word": "kenbutsu",
+    "phonetic": "",
+    "translation": "sightseeing",
+    "translations": [
+      "sightseeing"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00603",
+    "word": "kyoukai",
+    "phonetic": "",
+    "translation": "church",
+    "translations": [
+      "church"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00604",
+    "word": "sugoi",
+    "phonetic": "",
+    "translation": "terrific",
+    "translations": [
+      "terrific"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00605",
+    "word": "eda",
+    "phonetic": "",
+    "translation": "branch, twig",
+    "translations": [
+      "branch, twig"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00606",
+    "word": "mukau",
+    "phonetic": "",
+    "translation": "to face",
+    "translations": [
+      "to face"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00607",
+    "word": "yamu",
+    "phonetic": "",
+    "translation": "to stop",
+    "translations": [
+      "to stop"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00608",
+    "word": "tateru",
+    "phonetic": "",
+    "translation": "to build",
+    "translations": [
+      "to build"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00609",
+    "word": "yume",
+    "phonetic": "",
+    "translation": "dream",
+    "translations": [
+      "dream"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00610",
+    "word": "shikata",
+    "phonetic": "",
+    "translation": "method",
+    "translations": [
+      "method"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00611",
+    "word": "shikkari",
+    "phonetic": "",
+    "translation": "firmly,steadily",
+    "translations": [
+      "firmly,steadily"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00612",
+    "word": "sewa",
+    "phonetic": "",
+    "translation": "to look after",
+    "translations": [
+      "to look after"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00613",
+    "word": "fukai",
+    "phonetic": "",
+    "translation": "deep",
+    "translations": [
+      "deep"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00614",
+    "word": "mezurashii",
+    "phonetic": "",
+    "translation": "rare",
+    "translations": [
+      "rare"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00615",
+    "word": "koto",
+    "phonetic": "",
+    "translation": "thing,matter",
+    "translations": [
+      "thing,matter"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00616",
+    "word": "suna",
+    "phonetic": "",
+    "translation": "sand",
+    "translations": [
+      "sand"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00617",
+    "word": "hantai",
+    "phonetic": "",
+    "translation": "opposition",
+    "translations": [
+      "opposition"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00618",
+    "word": "ki",
+    "phonetic": "",
+    "translation": "spirit,mood",
+    "translations": [
+      "spirit,mood"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00619",
+    "word": "musume",
+    "phonetic": "",
+    "translation": "(humble) daughter",
+    "translations": [
+      "(humble) daughter"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00620",
+    "word": "kaigishitsu",
+    "phonetic": "",
+    "translation": "meeting room",
+    "translations": [
+      "meeting room"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00621",
+    "word": "ooita",
+    "phonetic": "",
+    "translation": "greatly",
+    "translations": [
+      "greatly"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00622",
+    "word": "shougakkou",
+    "phonetic": "",
+    "translation": "elementary school",
+    "translations": [
+      "elementary school"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00623",
+    "word": "nakunaru",
+    "phonetic": "",
+    "translation": "to disappear,to get lost",
+    "translations": [
+      "to disappear,to get lost"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00624",
+    "word": "inoru",
+    "phonetic": "",
+    "translation": "to pray",
+    "translations": [
+      "to pray"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00625",
+    "word": "erabu",
+    "phonetic": "",
+    "translation": "to choose",
+    "translations": [
+      "to choose"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00626",
+    "word": "aji",
+    "phonetic": "",
+    "translation": "flavour",
+    "translations": [
+      "flavour"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00627",
+    "word": "hazu",
+    "phonetic": "",
+    "translation": "it should be so",
+    "translations": [
+      "it should be so"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00628",
+    "word": "dondon",
+    "phonetic": "",
+    "translation": "more and more",
+    "translations": [
+      "more and more"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00629",
+    "word": "machigaeru",
+    "phonetic": "",
+    "translation": "to make a mistake",
+    "translations": [
+      "to make a mistake"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00630",
+    "word": "sageru",
+    "phonetic": "",
+    "translation": "to hang,to lower,to move back",
+    "translations": [
+      "to hang,to lower,to move back"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00631",
+    "word": "goshujin",
+    "phonetic": "",
+    "translation": "(honorable) your husband",
+    "translations": [
+      "(honorable) your husband"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00632",
+    "word": "konoaida",
+    "phonetic": "",
+    "translation": "the other day,recently",
+    "translations": [
+      "the other day,recently"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00633",
+    "word": "zehi",
+    "phonetic": "",
+    "translation": "without fail",
+    "translations": [
+      "without fail"
+    ],
+    "domain": "qwerty_japanese003"
+  },
+  {
+    "id": "qwerty_japanese003_00634",
+    "word": "modoru",
+    "phonetic": "",
+    "translation": "to turn back",
+    "translations": [
+      "to turn back"
+    ],
+    "domain": "qwerty_japanese003"
+  }
+]

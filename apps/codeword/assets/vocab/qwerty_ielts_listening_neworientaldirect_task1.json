@@ -1,0 +1,448 @@
+[
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00001",
+    "word": "accommodation",
+    "phonetic": "",
+    "translation": "n. 住宿",
+    "translations": [
+      "n. 住宿"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00002",
+    "word": "rent",
+    "phonetic": "",
+    "translation": "n. 租金；v. 出租；租用",
+    "translations": [
+      "n. 租金",
+      "v. 出租；租用"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00003",
+    "word": "let",
+    "phonetic": "",
+    "translation": "v. 出租；n. 租赁",
+    "translations": [
+      "v. 出租",
+      "n. 租赁"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00004",
+    "word": "hire",
+    "phonetic": "",
+    "translation": "v. 租用；聘用",
+    "translations": [
+      "v. 租用；聘用"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00005",
+    "word": "apartment",
+    "phonetic": "",
+    "translation": "n. 公寓",
+    "translations": [
+      "n. 公寓"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00006",
+    "word": "flat",
+    "phonetic": "",
+    "translation": "n. 公寓",
+    "translations": [
+      "n. 公寓"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00007",
+    "word": "house",
+    "phonetic": "",
+    "translation": "n. 住宅",
+    "translations": [
+      "n. 住宅"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00008",
+    "word": "bungalow",
+    "phonetic": "",
+    "translation": "n. 平房",
+    "translations": [
+      "n. 平房"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00009",
+    "word": "terraced house",
+    "phonetic": "",
+    "translation": "n. 连栋房屋",
+    "translations": [
+      "n. 连栋房屋"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00010",
+    "word": "homestay",
+    "phonetic": "",
+    "translation": "n. 寄宿家庭",
+    "translations": [
+      "n. 寄宿家庭"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00011",
+    "word": "host family",
+    "phonetic": "",
+    "translation": "n. 寄宿家庭",
+    "translations": [
+      "n. 寄宿家庭"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00012",
+    "word": "dormitory",
+    "phonetic": "",
+    "translation": "n. 宿舍",
+    "translations": [
+      "n. 宿舍"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00013",
+    "word": "hall of residence",
+    "phonetic": "",
+    "translation": "n. 学校公寓",
+    "translations": [
+      "n. 学校公寓"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00014",
+    "word": "en-suite facility",
+    "phonetic": "",
+    "translation": "n. 套房设施",
+    "translations": [
+      "n. 套房设施"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00015",
+    "word": "city centre",
+    "phonetic": "",
+    "translation": "n. 市中心",
+    "translations": [
+      "n. 市中心"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00016",
+    "word": "downtown",
+    "phonetic": "",
+    "translation": "adj. 市中心（的）；adv. 往市中心；在市中心；n. 市中心",
+    "translations": [
+      "adj. 市中心（的）",
+      "adv. 往市中心；在市中心",
+      "n. 市中心"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00017",
+    "word": "urban",
+    "phonetic": "",
+    "translation": "adj. 城市的",
+    "translations": [
+      "adj. 城市的"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00018",
+    "word": "outskirts",
+    "phonetic": "",
+    "translation": "n. 市郊",
+    "translations": [
+      "n. 市郊"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00019",
+    "word": "uptown",
+    "phonetic": "",
+    "translation": "adj. 市郊住宅区（的）；adv. 在市郊住宅区；n. 市郊住宅区",
+    "translations": [
+      "adj. 市郊住宅区（的）",
+      "adv. 在市郊住宅区",
+      "n. 市郊住宅区"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00020",
+    "word": "suburb",
+    "phonetic": "",
+    "translation": "n. 郊区",
+    "translations": [
+      "n. 郊区"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00021",
+    "word": "countryside",
+    "phonetic": "",
+    "translation": "n. 农村，乡下",
+    "translations": [
+      "n. 农村，乡下"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00022",
+    "word": "community",
+    "phonetic": "",
+    "translation": "n. 社区",
+    "translations": [
+      "n. 社区"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00023",
+    "word": "neighbourhood",
+    "phonetic": "",
+    "translation": "n. 邻里；周围",
+    "translations": [
+      "n. 邻里；周围"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00024",
+    "word": "surrounding",
+    "phonetic": "",
+    "translation": "adj. 周围的，附近的",
+    "translations": [
+      "adj. 周围的，附近的"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00025",
+    "word": "dining room",
+    "phonetic": "",
+    "translation": "n. 餐厅",
+    "translations": [
+      "n. 餐厅"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00026",
+    "word": "living room",
+    "phonetic": "",
+    "translation": "n. 客厅",
+    "translations": [
+      "n. 客厅"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00027",
+    "word": "study",
+    "phonetic": "",
+    "translation": "n. 书房；研究，课题",
+    "translations": [
+      "n. 书房；研究，课题"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00028",
+    "word": "laundry room",
+    "phonetic": "",
+    "translation": "n. 洗衣房",
+    "translations": [
+      "n. 洗衣房"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00029",
+    "word": "cloakroom",
+    "phonetic": "",
+    "translation": "n. 衣帽寄放处；行李寄存处",
+    "translations": [
+      "n. 衣帽寄放处；行李寄存处"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00030",
+    "word": "shared kitchen",
+    "phonetic": "",
+    "translation": "n. 共享厨房",
+    "translations": [
+      "n. 共享厨房"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00031",
+    "word": "shared bathroom",
+    "phonetic": "",
+    "translation": "n. 共享浴室",
+    "translations": [
+      "n. 共享浴室"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00032",
+    "word": "separate",
+    "phonetic": "",
+    "translation": "adj. 分开的；单独的",
+    "translations": [
+      "adj. 分开的；单独的"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00033",
+    "word": "foyer",
+    "phonetic": "",
+    "translation": "n. 休息室；大厅",
+    "translations": [
+      "n. 休息室；大厅"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00034",
+    "word": "garage",
+    "phonetic": "",
+    "translation": "n. 车库",
+    "translations": [
+      "n. 车库"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00035",
+    "word": "yard",
+    "phonetic": "",
+    "translation": "n. 院子",
+    "translations": [
+      "n. 院子"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00036",
+    "word": "garden",
+    "phonetic": "",
+    "translation": "n. 花园",
+    "translations": [
+      "n. 花园"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00037",
+    "word": "shared swimming pool",
+    "phonetic": "",
+    "translation": "n. 共享游泳池",
+    "translations": [
+      "n. 共享游泳池"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00038",
+    "word": "advisor",
+    "phonetic": "",
+    "translation": "n. 顾问",
+    "translations": [
+      "n. 顾问"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00039",
+    "word": "real estate agency",
+    "phonetic": "",
+    "translation": "n. 房地产公司",
+    "translations": [
+      "n. 房地产公司"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00040",
+    "word": "estate agency",
+    "phonetic": "",
+    "translation": "n. 房产代理处",
+    "translations": [
+      "n. 房产代理处"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00041",
+    "word": "estate agent",
+    "phonetic": "",
+    "translation": "n. 房地产经纪人",
+    "translations": [
+      "n. 房地产经纪人"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00042",
+    "word": "landlord",
+    "phonetic": "",
+    "translation": "n. 房东",
+    "translations": [
+      "n. 房东"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00043",
+    "word": "landlady",
+    "phonetic": "",
+    "translation": "n. 女房东",
+    "translations": [
+      "n. 女房东"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  },
+  {
+    "id": "qwerty_ielts_listening_neworientaldirect_task1_00044",
+    "word": "tenant",
+    "phonetic": "",
+    "translation": "n. 承租人；房客",
+    "translations": [
+      "n. 承租人；房客"
+    ],
+    "domain": "qwerty_ielts_listening_neworientaldirect_task1"
+  }
+]

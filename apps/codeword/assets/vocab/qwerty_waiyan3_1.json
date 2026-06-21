@@ -1,0 +1,1342 @@
+[
+  {
+    "id": "qwerty_waiyan3_1_00001",
+    "word": "I",
+    "phonetic": "",
+    "translation": "adv.我",
+    "translations": [
+      "adv.我"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00002",
+    "word": "am(I'm=I am)",
+    "phonetic": "",
+    "translation": "adv.是（我是）",
+    "translations": [
+      "adv.是（我是）"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00003",
+    "word": "aah",
+    "phonetic": "",
+    "translation": "adv.啊",
+    "translations": [
+      "adv.啊"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00004",
+    "word": "hello",
+    "phonetic": "",
+    "translation": "adv.你好",
+    "translations": [
+      "adv.你好"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00005",
+    "word": "ooh",
+    "phonetic": "",
+    "translation": "adv.嗬",
+    "translations": [
+      "adv.嗬"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00006",
+    "word": "goodbye",
+    "phonetic": "",
+    "translation": "adv.再见",
+    "translations": [
+      "adv.再见"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00007",
+    "word": "are",
+    "phonetic": "",
+    "translation": "adv.是",
+    "translations": [
+      "adv.是"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00008",
+    "word": "How are you? ",
+    "phonetic": "",
+    "translation": "adv.你好么？",
+    "translations": [
+      "adv.你好么？"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00009",
+    "word": "good",
+    "phonetic": "",
+    "translation": "adv.好的",
+    "translations": [
+      "adv.好的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00010",
+    "word": "morning",
+    "phonetic": "",
+    "translation": "adv.早晨，上午",
+    "translations": [
+      "adv.早晨，上午"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00011",
+    "word": "fine",
+    "phonetic": "",
+    "translation": "adv.健康的",
+    "translations": [
+      "adv.健康的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00012",
+    "word": "thank",
+    "phonetic": "",
+    "translation": "adv.谢谢",
+    "translations": [
+      "adv.谢谢"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00013",
+    "word": "you ",
+    "phonetic": "",
+    "translation": "adv.你；你们",
+    "translations": [
+      "adv.你；你们"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00014",
+    "word": "Ms",
+    "phonetic": "",
+    "translation": "adv.女士",
+    "translations": [
+      "adv.女士"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00015",
+    "word": "boy",
+    "phonetic": "",
+    "translation": "adv.男孩",
+    "translations": [
+      "adv.男孩"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00016",
+    "word": "girl",
+    "phonetic": "",
+    "translation": "adv.女孩",
+    "translations": [
+      "adv.女孩"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00017",
+    "word": "whoqps",
+    "phonetic": "",
+    "translation": "adv.哎哟",
+    "translations": [
+      "adv.哎哟"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00018",
+    "word": "and",
+    "phonetic": "",
+    "translation": "adv.那么；和",
+    "translations": [
+      "adv.那么；和"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00019",
+    "word": "too",
+    "phonetic": "",
+    "translation": "adv.也",
+    "translations": [
+      "adv.也"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00020",
+    "word": "ha ha ",
+    "phonetic": "",
+    "translation": "adv.哈哈",
+    "translations": [
+      "adv.哈哈"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00021",
+    "word": "what",
+    "phonetic": "",
+    "translation": "adv.什么",
+    "translations": [
+      "adv.什么"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00022",
+    "word": "is(what's=what is",
+    "phonetic": "",
+    "translation": "adv.是（是什么）",
+    "translations": [
+      "adv.是（是什么）"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00023",
+    "word": "your",
+    "phonetic": "",
+    "translation": "adv.你的；你们的",
+    "translations": [
+      "adv.你的；你们的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00024",
+    "word": "name",
+    "phonetic": "",
+    "translation": "adv.名字",
+    "translations": [
+      "adv.名字"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00025",
+    "word": "please",
+    "phonetic": "",
+    "translation": "adv.请",
+    "translations": [
+      "adv.请"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00026",
+    "word": "afternoon",
+    "phonetic": "",
+    "translation": "adv.下午",
+    "translations": [
+      "adv.下午"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00027",
+    "word": "Mr",
+    "phonetic": "",
+    "translation": "adv.先生",
+    "translations": [
+      "adv.先生"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00028",
+    "word": "point",
+    "phonetic": "",
+    "translation": "adv.指",
+    "translations": [
+      "adv.指"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00029",
+    "word": "to",
+    "phonetic": "",
+    "translation": "adv.向......",
+    "translations": [
+      "adv.向......"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00030",
+    "word": "the",
+    "phonetic": "",
+    "translation": "adv.这(那)个，这(那)些",
+    "translations": [
+      "adv.这(那)个，这(那)些"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00031",
+    "word": "door",
+    "phonetic": "",
+    "translation": "adv.门",
+    "translations": [
+      "adv.门"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00032",
+    "word": "sit",
+    "phonetic": "",
+    "translation": "adv.坐",
+    "translations": [
+      "adv.坐"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00033",
+    "word": "down",
+    "phonetic": "",
+    "translation": "adv.向下",
+    "translations": [
+      "adv.向下"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00034",
+    "word": "stand",
+    "phonetic": "",
+    "translation": "adv.站",
+    "translations": [
+      "adv.站"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00035",
+    "word": "up",
+    "phonetic": "",
+    "translation": "adv.向上",
+    "translations": [
+      "adv.向上"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00036",
+    "word": "window",
+    "phonetic": "",
+    "translation": "adv.窗户",
+    "translations": [
+      "adv.窗户"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00037",
+    "word": "blackboard",
+    "phonetic": "",
+    "translation": "adv.黑板",
+    "translations": [
+      "adv.黑板"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00038",
+    "word": "bird",
+    "phonetic": "",
+    "translation": "adv.鸟",
+    "translations": [
+      "adv.鸟"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00039",
+    "word": "tweet",
+    "phonetic": "",
+    "translation": "adv.鸟(啾啾的声音)",
+    "translations": [
+      "adv.鸟(啾啾的声音)"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00040",
+    "word": "desk",
+    "phonetic": "",
+    "translation": "adv.书桌",
+    "translations": [
+      "adv.书桌"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00041",
+    "word": "chair",
+    "phonetic": "",
+    "translation": "adv.椅子",
+    "translations": [
+      "adv.椅子"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00042",
+    "word": "it ",
+    "phonetic": "",
+    "translation": "adv.它",
+    "translations": [
+      "adv.它"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00043",
+    "word": "it's=it is",
+    "phonetic": "",
+    "translation": "adv.它是",
+    "translations": [
+      "adv.它是"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00044",
+    "word": "red",
+    "phonetic": "",
+    "translation": "adv.红色的",
+    "translations": [
+      "adv.红色的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00045",
+    "word": "look",
+    "phonetic": "",
+    "translation": "adv.看",
+    "translations": [
+      "adv.看"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00046",
+    "word": "wow",
+    "phonetic": "",
+    "translation": "adv.呀，哇",
+    "translations": [
+      "adv.呀，哇"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00047",
+    "word": "yellow",
+    "phonetic": "",
+    "translation": "adv.黄色的",
+    "translations": [
+      "adv.黄色的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00048",
+    "word": "blue",
+    "phonetic": "",
+    "translation": "adv.蓝色的",
+    "translations": [
+      "adv.蓝色的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00049",
+    "word": "a(an)",
+    "phonetic": "",
+    "translation": "adv.一个，一",
+    "translations": [
+      "adv.一个，一"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00050",
+    "word": "chameleon",
+    "phonetic": "",
+    "translation": "adv.变色龙",
+    "translations": [
+      "adv.变色龙"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00051",
+    "word": "my",
+    "phonetic": "",
+    "translation": "adv.我的",
+    "translations": [
+      "adv.我的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00052",
+    "word": "panda",
+    "phonetic": "",
+    "translation": "adv.熊猫",
+    "translations": [
+      "adv.熊猫"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00053",
+    "word": "now",
+    "phonetic": "",
+    "translation": "adv.现在",
+    "translations": [
+      "adv.现在"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00054",
+    "word": "green",
+    "phonetic": "",
+    "translation": "adv.绿色的",
+    "translations": [
+      "adv.绿色的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00055",
+    "word": "black",
+    "phonetic": "",
+    "translation": "adv.黑色的",
+    "translations": [
+      "adv.黑色的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00056",
+    "word": "dog",
+    "phonetic": "",
+    "translation": "adv.狗",
+    "translations": [
+      "adv.狗"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00057",
+    "word": "cat",
+    "phonetic": "",
+    "translation": "adv.猫",
+    "translations": [
+      "adv.猫"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00058",
+    "word": "cap",
+    "phonetic": "",
+    "translation": "adv.帽子",
+    "translations": [
+      "adv.帽子"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00059",
+    "word": "how many",
+    "phonetic": "",
+    "translation": "adv.多少",
+    "translations": [
+      "adv.多少"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00060",
+    "word": "one",
+    "phonetic": "",
+    "translation": "adv.一",
+    "translations": [
+      "adv.一"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00061",
+    "word": "two",
+    "phonetic": "",
+    "translation": "adv.二",
+    "translations": [
+      "adv.二"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00062",
+    "word": "three",
+    "phonetic": "",
+    "translation": "adv.三",
+    "translations": [
+      "adv.三"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00063",
+    "word": "four",
+    "phonetic": "",
+    "translation": "adv.四",
+    "translations": [
+      "adv.四"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00064",
+    "word": "five",
+    "phonetic": "",
+    "translation": "adv.五",
+    "translations": [
+      "adv.五"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00065",
+    "word": "six",
+    "phonetic": "",
+    "translation": "adv.六",
+    "translations": [
+      "adv.六"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00066",
+    "word": "seven",
+    "phonetic": "",
+    "translation": "adv.七",
+    "translations": [
+      "adv.七"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00067",
+    "word": "eight",
+    "phonetic": "",
+    "translation": "adv.八",
+    "translations": [
+      "adv.八"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00068",
+    "word": "nine",
+    "phonetic": "",
+    "translation": "adv.九",
+    "translations": [
+      "adv.九"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00069",
+    "word": "oh",
+    "phonetic": "",
+    "translation": "adv.哦，噢",
+    "translations": [
+      "adv.哦，噢"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00070",
+    "word": "ten",
+    "phonetic": "",
+    "translation": "adv.十",
+    "translations": [
+      "adv.十"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00071",
+    "word": "eleven",
+    "phonetic": "",
+    "translation": "adv.十一",
+    "translations": [
+      "adv.十一"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00072",
+    "word": "twelve",
+    "phonetic": "",
+    "translation": "adv.十二",
+    "translations": [
+      "adv.十二"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00073",
+    "word": "happy",
+    "phonetic": "",
+    "translation": "adv.快乐的",
+    "translations": [
+      "adv.快乐的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00074",
+    "word": "birthday",
+    "phonetic": "",
+    "translation": "adv.生日",
+    "translations": [
+      "adv.生日"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00075",
+    "word": "here",
+    "phonetic": "",
+    "translation": "adv.这里",
+    "translations": [
+      "adv.这里"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00076",
+    "word": "present",
+    "phonetic": "",
+    "translation": "adv.礼物",
+    "translations": [
+      "adv.礼物"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00077",
+    "word": "this",
+    "phonetic": "",
+    "translation": "adv.这个",
+    "translations": [
+      "adv.这个"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00078",
+    "word": "pencil",
+    "phonetic": "",
+    "translation": "adv.铅笔",
+    "translations": [
+      "adv.铅笔"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00079",
+    "word": "pen",
+    "phonetic": "",
+    "translation": "adv.钢笔",
+    "translations": [
+      "adv.钢笔"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00080",
+    "word": "cake",
+    "phonetic": "",
+    "translation": "adv.蛋糕",
+    "translations": [
+      "adv.蛋糕"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00081",
+    "word": "old",
+    "phonetic": "",
+    "translation": "adv.岁的",
+    "translations": [
+      "adv.岁的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00082",
+    "word": "how old",
+    "phonetic": "",
+    "translation": "adv.多大",
+    "translations": [
+      "adv.多大"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00083",
+    "word": "yes",
+    "phonetic": "",
+    "translation": "adv.是的",
+    "translations": [
+      "adv.是的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00084",
+    "word": "you're=you are",
+    "phonetic": "",
+    "translation": "adv.你是",
+    "translations": [
+      "adv.你是"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00085",
+    "word": "teacher",
+    "phonetic": "",
+    "translation": "adv.教师",
+    "translations": [
+      "adv.教师"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00086",
+    "word": "pupil",
+    "phonetic": "",
+    "translation": "adv.小学生",
+    "translations": [
+      "adv.小学生"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00087",
+    "word": "school",
+    "phonetic": "",
+    "translation": "adv.学校",
+    "translations": [
+      "adv.学校"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00088",
+    "word": "classroom",
+    "phonetic": "",
+    "translation": "adv.教室",
+    "translations": [
+      "adv.教室"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00089",
+    "word": "English",
+    "phonetic": "",
+    "translation": "adv.英语",
+    "translations": [
+      "adv.英语"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00090",
+    "word": "that",
+    "phonetic": "",
+    "translation": "adv.那个",
+    "translations": [
+      "adv.那个"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00091",
+    "word": "say",
+    "phonetic": "",
+    "translation": "adv.说",
+    "translations": [
+      "adv.说"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00092",
+    "word": "again",
+    "phonetic": "",
+    "translation": "adv.再一次",
+    "translations": [
+      "adv.再一次"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00093",
+    "word": "schoolbag",
+    "phonetic": "",
+    "translation": "adv.书包",
+    "translations": [
+      "adv.书包"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00094",
+    "word": "ball",
+    "phonetic": "",
+    "translation": "adv.球",
+    "translations": [
+      "adv.球"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00095",
+    "word": "book",
+    "phonetic": "",
+    "translation": "adv.书",
+    "translations": [
+      "adv.书"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00096",
+    "word": "monster",
+    "phonetic": "",
+    "translation": "adv.怪物",
+    "translations": [
+      "adv.怪物"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00097",
+    "word": "new",
+    "phonetic": "",
+    "translation": "adv.新的",
+    "translations": [
+      "adv.新的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00098",
+    "word": "kite",
+    "phonetic": "",
+    "translation": "adv.风筝",
+    "translations": [
+      "adv.风筝"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00099",
+    "word": "or",
+    "phonetic": "",
+    "translation": "adv.或者",
+    "translations": [
+      "adv.或者"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00100",
+    "word": "don't=do not",
+    "phonetic": "",
+    "translation": "adv.不",
+    "translations": [
+      "adv.不"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00101",
+    "word": "know",
+    "phonetic": "",
+    "translation": "adv.知道",
+    "translations": [
+      "adv.知道"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00102",
+    "word": "no",
+    "phonetic": "",
+    "translation": "adv.不",
+    "translations": [
+      "adv.不"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00103",
+    "word": "not(isn't=is not)",
+    "phonetic": "",
+    "translation": "adv.不(不是）",
+    "translations": [
+      "adv.不(不是）"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00104",
+    "word": "help",
+    "phonetic": "",
+    "translation": "adv.救命(呼救用语）",
+    "translations": [
+      "adv.救命(呼救用语）"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00105",
+    "word": "where",
+    "phonetic": "",
+    "translation": "adv.哪里",
+    "translations": [
+      "adv.哪里"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00106",
+    "word": "in",
+    "phonetic": "",
+    "translation": "adv.在......里",
+    "translations": [
+      "adv.在......里"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00107",
+    "word": "bag",
+    "phonetic": "",
+    "translation": "adv.包",
+    "translations": [
+      "adv.包"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00108",
+    "word": "mother",
+    "phonetic": "",
+    "translation": "adv.母亲",
+    "translations": [
+      "adv.母亲"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00109",
+    "word": "father",
+    "phonetic": "",
+    "translation": "adv.父亲",
+    "translations": [
+      "adv.父亲"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00110",
+    "word": "sister",
+    "phonetic": "",
+    "translation": "adv.姐妹",
+    "translations": [
+      "adv.姐妹"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00111",
+    "word": "brother",
+    "phonetic": "",
+    "translation": "adv.兄弟",
+    "translations": [
+      "adv.兄弟"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00112",
+    "word": "she",
+    "phonetic": "",
+    "translation": "adv.她",
+    "translations": [
+      "adv.她"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00113",
+    "word": "grandpa",
+    "phonetic": "",
+    "translation": "adv.祖父；外祖父",
+    "translations": [
+      "adv.祖父；外祖父"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00114",
+    "word": "grandma",
+    "phonetic": "",
+    "translation": "adv.祖母；外祖母",
+    "translations": [
+      "adv.祖母；外祖母"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00115",
+    "word": "that's=that is",
+    "phonetic": "",
+    "translation": "adv.那是",
+    "translations": [
+      "adv.那是"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00116",
+    "word": "me",
+    "phonetic": "",
+    "translation": "adv.我",
+    "translations": [
+      "adv.我"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00117",
+    "word": "he(he's=he is)",
+    "phonetic": "",
+    "translation": "adv.他(他是)",
+    "translations": [
+      "adv.他(他是)"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00118",
+    "word": "doctor",
+    "phonetic": "",
+    "translation": "adv.医生",
+    "translations": [
+      "adv.医生"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00119",
+    "word": "policeman",
+    "phonetic": "",
+    "translation": "adv.警察",
+    "translations": [
+      "adv.警察"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00120",
+    "word": "nurse",
+    "phonetic": "",
+    "translation": "adv.护士",
+    "translations": [
+      "adv.护士"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00121",
+    "word": "driver",
+    "phonetic": "",
+    "translation": "adv.司机",
+    "translations": [
+      "adv.司机"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00122",
+    "word": "farmer",
+    "phonetic": "",
+    "translation": "adv.农民",
+    "translations": [
+      "adv.农民"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00123",
+    "word": "his",
+    "phonetic": "",
+    "translation": "adv.他的",
+    "translations": [
+      "adv.他的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00124",
+    "word": "head",
+    "phonetic": "",
+    "translation": "adv.头",
+    "translations": [
+      "adv.头"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00125",
+    "word": "leg",
+    "phonetic": "",
+    "translation": "adv.腿",
+    "translations": [
+      "adv.腿"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00126",
+    "word": "foot",
+    "phonetic": "",
+    "translation": "adv.脚",
+    "translations": [
+      "adv.脚"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00127",
+    "word": "on",
+    "phonetic": "",
+    "translation": "adv.在......上",
+    "translations": [
+      "adv.在......上"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00128",
+    "word": "arm",
+    "phonetic": "",
+    "translation": "adv.胳膊",
+    "translations": [
+      "adv.胳膊"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00129",
+    "word": "hand",
+    "phonetic": "",
+    "translation": "adv.手",
+    "translations": [
+      "adv.手"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00130",
+    "word": "her",
+    "phonetic": "",
+    "translation": "adv.她的",
+    "translations": [
+      "adv.她的"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00131",
+    "word": "nose",
+    "phonetic": "",
+    "translation": "adv.鼻子",
+    "translations": [
+      "adv.鼻子"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00132",
+    "word": "eye",
+    "phonetic": "",
+    "translation": "adv.眼睛",
+    "translations": [
+      "adv.眼睛"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00133",
+    "word": "mouth",
+    "phonetic": "",
+    "translation": "adv.嘴",
+    "translations": [
+      "adv.嘴"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  },
+  {
+    "id": "qwerty_waiyan3_1_00134",
+    "word": "ear",
+    "phonetic": "",
+    "translation": "adv.耳朵",
+    "translations": [
+      "adv.耳朵"
+    ],
+    "domain": "qwerty_waiyan3_1"
+  }
+]

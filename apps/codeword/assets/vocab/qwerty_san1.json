@@ -1,0 +1,642 @@
+[
+  {
+    "id": "qwerty_san1_00001",
+    "word": "ruler",
+    "phonetic": "'rulɚ",
+    "translation": "尺子",
+    "translations": [
+      "尺子"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00002",
+    "word": "pencil",
+    "phonetic": "'pɛnsl",
+    "translation": "铅笔",
+    "translations": [
+      "铅笔"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00003",
+    "word": "eraser",
+    "phonetic": "ɪ'resɚ",
+    "translation": "橡皮",
+    "translations": [
+      "橡皮"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00004",
+    "word": "crayon",
+    "phonetic": "kreən",
+    "translation": "蜡笔",
+    "translations": [
+      "蜡笔"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00005",
+    "word": "bag",
+    "phonetic": "bæɡ",
+    "translation": "包",
+    "translations": [
+      "包"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00006",
+    "word": "pen",
+    "phonetic": "pɛn",
+    "translation": "钢笔",
+    "translations": [
+      "钢笔"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00007",
+    "word": "pencil box",
+    "phonetic": "'pɛnsl bɑks",
+    "translation": "铅笔盒",
+    "translations": [
+      "铅笔盒"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00008",
+    "word": "book",
+    "phonetic": "bʊk",
+    "translation": "书",
+    "translations": [
+      "书"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00009",
+    "word": "no",
+    "phonetic": "no",
+    "translation": "不",
+    "translations": [
+      "不"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00010",
+    "word": "your",
+    "phonetic": "jʊər; jʊr",
+    "translation": "你（们）的",
+    "translations": [
+      "你（们）的"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00011",
+    "word": "red",
+    "phonetic": "rɛd",
+    "translation": "红色；红色的",
+    "translations": [
+      "红色；红色的"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00012",
+    "word": "green",
+    "phonetic": "ɡrin",
+    "translation": "绿色；绿色的",
+    "translations": [
+      "绿色；绿色的"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00013",
+    "word": "yellow",
+    "phonetic": "ˈjɛlo",
+    "translation": "黄色；黄色的",
+    "translations": [
+      "黄色；黄色的"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00014",
+    "word": "blue",
+    "phonetic": "blu",
+    "translation": "蓝色；蓝色的",
+    "translations": [
+      "蓝色；蓝色的"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00015",
+    "word": "black",
+    "phonetic": "blæk",
+    "translation": "黑色；黑色的",
+    "translations": [
+      "黑色；黑色的"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00016",
+    "word": "brown",
+    "phonetic": "braʊn",
+    "translation": "棕色；棕色的",
+    "translations": [
+      "棕色；棕色的"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00017",
+    "word": "white",
+    "phonetic": "hwaɪt",
+    "translation": "白色；白色的",
+    "translations": [
+      "白色；白色的"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00018",
+    "word": "orange",
+    "phonetic": "'ɔrɪndʒ",
+    "translation": "橙色；橙色的",
+    "translations": [
+      "橙色；橙色的"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00019",
+    "word": "OK",
+    "phonetic": "",
+    "translation": "好；行",
+    "translations": [
+      "好；行"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00020",
+    "word": "mum",
+    "phonetic": "mʌm",
+    "translation": "妈妈",
+    "translations": [
+      "妈妈"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00021",
+    "word": "face",
+    "phonetic": "fes",
+    "translation": "脸",
+    "translations": [
+      "脸"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00022",
+    "word": "ear",
+    "phonetic": "ɪr",
+    "translation": "耳朵",
+    "translations": [
+      "耳朵"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00023",
+    "word": "eye",
+    "phonetic": "aɪ",
+    "translation": "眼睛",
+    "translations": [
+      "眼睛"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00024",
+    "word": "nose",
+    "phonetic": "noz",
+    "translation": "鼻子",
+    "translations": [
+      "鼻子"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00025",
+    "word": "mouth",
+    "phonetic": "maʊθ",
+    "translation": "嘴",
+    "translations": [
+      "嘴"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00026",
+    "word": "arm",
+    "phonetic": "ɑrm",
+    "translation": "胳膊",
+    "translations": [
+      "胳膊"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00027",
+    "word": "hand",
+    "phonetic": "hænd",
+    "translation": "手",
+    "translations": [
+      "手"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00028",
+    "word": "head",
+    "phonetic": "hɛd",
+    "translation": "头",
+    "translations": [
+      "头"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00029",
+    "word": "body",
+    "phonetic": "'bɑdi",
+    "translation": "身体",
+    "translations": [
+      "身体"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00030",
+    "word": "leg",
+    "phonetic": "lɛɡ",
+    "translation": "腿",
+    "translations": [
+      "腿"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00031",
+    "word": "foot",
+    "phonetic": "fʊt",
+    "translation": "脚",
+    "translations": [
+      "脚"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00032",
+    "word": "school",
+    "phonetic": "skul",
+    "translation": "学校",
+    "translations": [
+      "学校"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00033",
+    "word": "duck",
+    "phonetic": "dʌk",
+    "translation": "鸭子",
+    "translations": [
+      "鸭子"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00034",
+    "word": "pig",
+    "phonetic": "pɪɡ",
+    "translation": "猪",
+    "translations": [
+      "猪"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00035",
+    "word": "cat",
+    "phonetic": "kæt",
+    "translation": "猫",
+    "translations": [
+      "猫"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00036",
+    "word": "bear",
+    "phonetic": "bɛr",
+    "translation": "熊",
+    "translations": [
+      "熊"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00037",
+    "word": "dog",
+    "phonetic": "dɔɡ",
+    "translation": "狗",
+    "translations": [
+      "狗"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00038",
+    "word": "elephant",
+    "phonetic": "ˈɛləfənt",
+    "translation": "大象",
+    "translations": [
+      "大象"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00039",
+    "word": "monkey",
+    "phonetic": "'mʌŋki",
+    "translation": "猴子",
+    "translations": [
+      "猴子"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00040",
+    "word": "bird",
+    "phonetic": "bɝd",
+    "translation": "鸟",
+    "translations": [
+      "鸟"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00041",
+    "word": "tiger",
+    "phonetic": "'taɪɡɚ",
+    "translation": "老虎",
+    "translations": [
+      "老虎"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00042",
+    "word": "panda",
+    "phonetic": "'pændə",
+    "translation": "大熊猫",
+    "translations": [
+      "大熊猫"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00043",
+    "word": "zoo",
+    "phonetic": "zu",
+    "translation": "动物园",
+    "translations": [
+      "动物园"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00044",
+    "word": "funny",
+    "phonetic": "'fʌni",
+    "translation": "滑稽的；好笑的",
+    "translations": [
+      "滑稽的；好笑的"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00045",
+    "word": "bread",
+    "phonetic": "brɛd",
+    "translation": "面包",
+    "translations": [
+      "面包"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00046",
+    "word": "juice",
+    "phonetic": "dʒus",
+    "translation": "果汁",
+    "translations": [
+      "果汁"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00047",
+    "word": "egg",
+    "phonetic": "ɛɡ",
+    "translation": "蛋",
+    "translations": [
+      "蛋"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00048",
+    "word": "milk",
+    "phonetic": "mɪlk",
+    "translation": "牛奶",
+    "translations": [
+      "牛奶"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00049",
+    "word": "water",
+    "phonetic": "ˈwɔtɚ",
+    "translation": "水",
+    "translations": [
+      "水"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00050",
+    "word": "cake",
+    "phonetic": "kek",
+    "translation": "蛋糕",
+    "translations": [
+      "蛋糕"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00051",
+    "word": "fish",
+    "phonetic": "fɪʃ",
+    "translation": "鱼",
+    "translations": [
+      "鱼"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00052",
+    "word": "rice",
+    "phonetic": "raɪs",
+    "translation": "米饭",
+    "translations": [
+      "米饭"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00053",
+    "word": "one",
+    "phonetic": "wʌn",
+    "translation": "一",
+    "translations": [
+      "一"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00054",
+    "word": "two",
+    "phonetic": "tu",
+    "translation": "二",
+    "translations": [
+      "二"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00055",
+    "word": "three",
+    "phonetic": "θri",
+    "translation": "三",
+    "translations": [
+      "三"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00056",
+    "word": "four",
+    "phonetic": "fɔr",
+    "translation": "四",
+    "translations": [
+      "四"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00057",
+    "word": "five",
+    "phonetic": "faɪv",
+    "translation": "五",
+    "translations": [
+      "五"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00058",
+    "word": "six",
+    "phonetic": "sɪks",
+    "translation": "六",
+    "translations": [
+      "六"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00059",
+    "word": "seven",
+    "phonetic": "'sɛvn",
+    "translation": "七",
+    "translations": [
+      "七"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00060",
+    "word": "eight",
+    "phonetic": "et",
+    "translation": "八",
+    "translations": [
+      "八"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00061",
+    "word": "nine",
+    "phonetic": "naɪn",
+    "translation": "九",
+    "translations": [
+      "九"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00062",
+    "word": "ten",
+    "phonetic": "tɛn",
+    "translation": "十",
+    "translations": [
+      "十"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00063",
+    "word": "brother",
+    "phonetic": "'brʌðɚ",
+    "translation": "兄；弟",
+    "translations": [
+      "兄；弟"
+    ],
+    "domain": "qwerty_san1"
+  },
+  {
+    "id": "qwerty_san1_00064",
+    "word": "plate",
+    "phonetic": "pleɪt",
+    "translation": "盘子",
+    "translations": [
+      "盘子"
+    ],
+    "domain": "qwerty_san1"
+  }
+]

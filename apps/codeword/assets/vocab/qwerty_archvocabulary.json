@@ -1,0 +1,6302 @@
+[
+  {
+    "id": "qwerty_archvocabulary_00001",
+    "word": "Environmental Design",
+    "phonetic": "",
+    "translation": "环境设计",
+    "translations": [
+      "环境设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00002",
+    "word": "Architecture",
+    "phonetic": "",
+    "translation": "建筑学",
+    "translations": [
+      "建筑学"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00003",
+    "word": "Urban and Regional Planning",
+    "phonetic": "",
+    "translation": "城市和区域规划 ，社区和区域规划，城市规划",
+    "translations": [
+      "城市和区域规划 ，社区和区域规划，城市规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00004",
+    "word": "Community and Regional Planning",
+    "phonetic": "",
+    "translation": "城市和区域规划 ，社区和区域规划，城市规划",
+    "translations": [
+      "城市和区域规划 ，社区和区域规划，城市规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00005",
+    "word": "city planning",
+    "phonetic": "",
+    "translation": "城市和区域规划 ，社区和区域规划，城市规划",
+    "translations": [
+      "城市和区域规划 ，社区和区域规划，城市规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00006",
+    "word": "Landscape architecture",
+    "phonetic": "",
+    "translation": "风景园林",
+    "translations": [
+      "风景园林"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00007",
+    "word": "Urban Design",
+    "phonetic": "",
+    "translation": "城市设计",
+    "translations": [
+      "城市设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00008",
+    "word": "related consultant and engineer",
+    "phonetic": "",
+    "translation": "相关顾问和工程师",
+    "translations": [
+      "相关顾问和工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00009",
+    "word": "Architecture Aesthetics",
+    "phonetic": "",
+    "translation": "建筑美学",
+    "translations": [
+      "建筑美学"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00010",
+    "word": "Sustainable Architecture and passive solar design",
+    "phonetic": "",
+    "translation": "可持续建筑与被动式太阳能设计",
+    "translations": [
+      "可持续建筑与被动式太阳能设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00011",
+    "word": "undergraduate student",
+    "phonetic": "",
+    "translation": "本科生",
+    "translations": [
+      "本科生"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00012",
+    "word": "freshman",
+    "phonetic": "'frɛʃmən",
+    "translation": "大一学生",
+    "translations": [
+      "大一学生"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00013",
+    "word": "sophomore",
+    "phonetic": "'sɑfəmɔr",
+    "translation": "大二学生",
+    "translations": [
+      "大二学生"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00014",
+    "word": "junior",
+    "phonetic": "'dʒunɪɚ",
+    "translation": "大三学生",
+    "translations": [
+      "大三学生"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00015",
+    "word": "senior",
+    "phonetic": "'sinɪɚ",
+    "translation": "大四学生",
+    "translations": [
+      "大四学生"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00016",
+    "word": "School",
+    "phonetic": "",
+    "translation": "学院",
+    "translations": [
+      "学院"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00017",
+    "word": "Department",
+    "phonetic": "",
+    "translation": "系",
+    "translations": [
+      "系"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00018",
+    "word": "Post-graduate student",
+    "phonetic": "",
+    "translation": "研究生",
+    "translations": [
+      "研究生"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00019",
+    "word": "professor/associate professor",
+    "phonetic": "",
+    "translation": "教授/副教授",
+    "translations": [
+      "教授/副教授"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00020",
+    "word": "lecturer/senior lecturer",
+    "phonetic": "",
+    "translation": "讲师 ，高级讲师",
+    "translations": [
+      "讲师 ，高级讲师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00021",
+    "word": "assistant professor",
+    "phonetic": "",
+    "translation": "助理教授",
+    "translations": [
+      "助理教授"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00022",
+    "word": "graduate school admission",
+    "phonetic": "",
+    "translation": "研究生录取",
+    "translations": [
+      "研究生录取"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00023",
+    "word": "master's and doctoral degrees",
+    "phonetic": "",
+    "translation": "硕士和博士学位",
+    "translations": [
+      "硕士和博士学位"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00024",
+    "word": "undergraduate (bachelor's) degree",
+    "phonetic": "",
+    "translation": "本科学位",
+    "translations": [
+      "本科学位"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00025",
+    "word": "grade point average(GPA)",
+    "phonetic": "",
+    "translation": "平均绩点",
+    "translations": [
+      "平均绩点"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00026",
+    "word": "Graphic Design",
+    "phonetic": "",
+    "translation": "平面设计",
+    "translations": [
+      "平面设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00027",
+    "word": "Industrial Design",
+    "phonetic": "",
+    "translation": "工业设计",
+    "translations": [
+      "工业设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00028",
+    "word": "Interior Design",
+    "phonetic": "",
+    "translation": "室内设计",
+    "translations": [
+      "室内设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00029",
+    "word": "Architecture",
+    "phonetic": "",
+    "translation": "建筑",
+    "translations": [
+      "建筑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00030",
+    "word": "Landscape Architecture",
+    "phonetic": "",
+    "translation": "风景园林",
+    "translations": [
+      "风景园林"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00031",
+    "word": "Urban Design",
+    "phonetic": "",
+    "translation": "城市设计",
+    "translations": [
+      "城市设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00032",
+    "word": "Planning",
+    "phonetic": "",
+    "translation": "规划",
+    "translations": [
+      "规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00033",
+    "word": "term",
+    "phonetic": "tɝm",
+    "translation": "术语",
+    "translations": [
+      "术语"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00034",
+    "word": "freeway",
+    "phonetic": "'friwe",
+    "translation": "高速公路",
+    "translations": [
+      "高速公路"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00035",
+    "word": "consultants",
+    "phonetic": "",
+    "translation": "顾问 ，咨询人员",
+    "translations": [
+      "顾问 ，咨询人员"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00036",
+    "word": "profession",
+    "phonetic": "prə'fɛʃən",
+    "translation": "专业 ，行业",
+    "translations": [
+      "专业 ，行业"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00037",
+    "word": "health, safety and welfare",
+    "phonetic": "",
+    "translation": "幸福 ，福利",
+    "translations": [
+      "幸福 ，福利"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00038",
+    "word": "license",
+    "phonetic": "'laɪsns",
+    "translation": "执照",
+    "translations": [
+      "执照"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00039",
+    "word": "developers",
+    "phonetic": "",
+    "translation": "开发商",
+    "translations": [
+      "开发商"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00040",
+    "word": "studio",
+    "phonetic": "'studɪo",
+    "translation": "工作室",
+    "translations": [
+      "工作室"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00041",
+    "word": "Structural Engineer",
+    "phonetic": "",
+    "translation": "结构工程师",
+    "translations": [
+      "结构工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00042",
+    "word": "Lighting Designer",
+    "phonetic": "",
+    "translation": "灯光设计师",
+    "translations": [
+      "灯光设计师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00043",
+    "word": "Mechanical Engineer",
+    "phonetic": "",
+    "translation": "机械工程师",
+    "translations": [
+      "机械工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00044",
+    "word": "Architect",
+    "phonetic": "",
+    "translation": "建筑师",
+    "translations": [
+      "建筑师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00045",
+    "word": "Drafting Technician",
+    "phonetic": "",
+    "translation": "绘图技术员",
+    "translations": [
+      "绘图技术员"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00046",
+    "word": "Interior Designer",
+    "phonetic": "",
+    "translation": "室内设计师",
+    "translations": [
+      "室内设计师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00047",
+    "word": "Fire Protection Consultant",
+    "phonetic": "",
+    "translation": "消防顾问",
+    "translations": [
+      "消防顾问"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00048",
+    "word": "Electrical Engineer",
+    "phonetic": "",
+    "translation": "电气工程师",
+    "translations": [
+      "电气工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00049",
+    "word": "inclusive design",
+    "phonetic": "",
+    "translation": "包容性设计",
+    "translations": [
+      "包容性设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00050",
+    "word": "universal design",
+    "phonetic": "",
+    "translation": "通用设计",
+    "translations": [
+      "通用设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00051",
+    "word": "interact with the public",
+    "phonetic": "",
+    "translation": "参与公众互动",
+    "translations": [
+      "参与公众互动"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00052",
+    "word": "participatory planning",
+    "phonetic": "",
+    "translation": "参与式规划",
+    "translations": [
+      "参与式规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00053",
+    "word": "residential density",
+    "phonetic": "",
+    "translation": "居住密度",
+    "translations": [
+      "居住密度"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00054",
+    "word": "set-back of structures from the property line",
+    "phonetic": "",
+    "translation": "(用地红线) 建筑退线",
+    "translations": [
+      "(用地红线) 建筑退线"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00055",
+    "word": "land-use planning",
+    "phonetic": "",
+    "translation": "土地利用规划",
+    "translations": [
+      "土地利用规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00056",
+    "word": "environmental planning",
+    "phonetic": "",
+    "translation": "环境规划",
+    "translations": [
+      "环境规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00057",
+    "word": "transportation planning",
+    "phonetic": "",
+    "translation": "交通规划",
+    "translations": [
+      "交通规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00058",
+    "word": "comprehensive planning",
+    "phonetic": "",
+    "translation": "总体规划",
+    "translations": [
+      "总体规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00059",
+    "word": "regional planning",
+    "phonetic": "",
+    "translation": "区域规划",
+    "translations": [
+      "区域规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00060",
+    "word": "city planning",
+    "phonetic": "",
+    "translation": "城市规划",
+    "translations": [
+      "城市规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00061",
+    "word": "historic preservation",
+    "phonetic": "",
+    "translation": "保护规划",
+    "translations": [
+      "保护规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00062",
+    "word": "neighborhood planning",
+    "phonetic": "",
+    "translation": "小区规划",
+    "translations": [
+      "小区规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00063",
+    "word": "infrastructure",
+    "phonetic": "'ɪnfrə'strʌktʃɚ",
+    "translation": "基础设施",
+    "translations": [
+      "基础设施"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00064",
+    "word": "transportation hub",
+    "phonetic": "",
+    "translation": "交通枢纽",
+    "translations": [
+      "交通枢纽"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00065",
+    "word": "resilient",
+    "phonetic": "rɪ'zɪlɪənt",
+    "translation": "有弹性的",
+    "translations": [
+      "有弹性的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00066",
+    "word": "urban comprehensive planning",
+    "phonetic": "",
+    "translation": "城市总体规划",
+    "translations": [
+      "城市总体规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00067",
+    "word": "urban detailed planning",
+    "phonetic": "",
+    "translation": "城市详细规划",
+    "translations": [
+      "城市详细规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00068",
+    "word": "constructive-detailed plan",
+    "phonetic": "",
+    "translation": "修建性详细规划",
+    "translations": [
+      "修建性详细规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00069",
+    "word": "regulatory detailed planning",
+    "phonetic": "",
+    "translation": "控制性详细规划",
+    "translations": [
+      "控制性详细规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00070",
+    "word": "utility",
+    "phonetic": "ju'tɪləti",
+    "translation": "公共设施",
+    "translations": [
+      "公共设施"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00071",
+    "word": "sidewalk",
+    "phonetic": "'saɪdwɔk",
+    "translation": "人行道",
+    "translations": [
+      "人行道"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00072",
+    "word": "zoning",
+    "phonetic": "",
+    "translation": "分区",
+    "translations": [
+      "分区"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00073",
+    "word": "amenity",
+    "phonetic": "ə'mɛnəti",
+    "translation": "便利设施",
+    "translations": [
+      "便利设施"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00074",
+    "word": "pedestrian",
+    "phonetic": "pə'dɛstrɪən",
+    "translation": "行人",
+    "translations": [
+      "行人"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00075",
+    "word": "transit system",
+    "phonetic": "",
+    "translation": "交通运输线",
+    "translations": [
+      "交通运输线"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00076",
+    "word": "highway",
+    "phonetic": "'haɪwe",
+    "translation": "公路",
+    "translations": [
+      "公路"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00077",
+    "word": "bike lane",
+    "phonetic": "",
+    "translation": "自行车道",
+    "translations": [
+      "自行车道"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00078",
+    "word": "freeway",
+    "phonetic": "'friwe",
+    "translation": "高速公路",
+    "translations": [
+      "高速公路"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00079",
+    "word": "express highway",
+    "phonetic": "",
+    "translation": "高速公路",
+    "translations": [
+      "高速公路"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00080",
+    "word": "intersection",
+    "phonetic": ",ɪntɚ'sɛkʃən",
+    "translation": "交叉口",
+    "translations": [
+      "交叉口"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00081",
+    "word": "interstate highway",
+    "phonetic": "",
+    "translation": "州际公路",
+    "translations": [
+      "州际公路"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00082",
+    "word": "housing complex",
+    "phonetic": "",
+    "translation": "综合住宅区/楼",
+    "translations": [
+      "综合住宅区/楼"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00083",
+    "word": "participatory planning",
+    "phonetic": "",
+    "translation": "参与式规划",
+    "translations": [
+      "参与式规划"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00084",
+    "word": "human scale",
+    "phonetic": "",
+    "translation": "人类尺度",
+    "translations": [
+      "人类尺度"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00085",
+    "word": "context",
+    "phonetic": "'kɑntɛkst",
+    "translation": "背景",
+    "translations": [
+      "背景"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00086",
+    "word": "structure integrity",
+    "phonetic": "",
+    "translation": "结构完整性",
+    "translations": [
+      "结构完整性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00087",
+    "word": "accessible",
+    "phonetic": "ək'sɛsəbl",
+    "translation": "可进入的",
+    "translations": [
+      "可进入的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00088",
+    "word": "evacuation",
+    "phonetic": "ɪ,vækjʊ'eʃən",
+    "translation": "疏散",
+    "translations": [
+      "疏散"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00089",
+    "word": "egress",
+    "phonetic": "'iɡrɛs",
+    "translation": "安全出口",
+    "translations": [
+      "安全出口"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00090",
+    "word": "residential architecture",
+    "phonetic": "",
+    "translation": "住宅建筑",
+    "translations": [
+      "住宅建筑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00091",
+    "word": "commercial architecture",
+    "phonetic": "",
+    "translation": "商业建筑",
+    "translations": [
+      "商业建筑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00092",
+    "word": "institutional architecture",
+    "phonetic": "",
+    "translation": "公共设施类建筑",
+    "translations": [
+      "公共设施类建筑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00093",
+    "word": "industrial architecture",
+    "phonetic": "",
+    "translation": "工业建筑",
+    "translations": [
+      "工业建筑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00094",
+    "word": "single family home",
+    "phonetic": "",
+    "translation": "独栋别墅",
+    "translations": [
+      "独栋别墅"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00095",
+    "word": "client",
+    "phonetic": "'klaɪənt",
+    "translation": "客户",
+    "translations": [
+      "客户"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00096",
+    "word": "townhouse",
+    "phonetic": "",
+    "translation": "联排别墅",
+    "translations": [
+      "联排别墅"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00097",
+    "word": "downtown",
+    "phonetic": "'daʊn'taʊn",
+    "translation": "市中心",
+    "translations": [
+      "市中心"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00098",
+    "word": "suburban",
+    "phonetic": "sə'bɝbən",
+    "translation": "郊外的",
+    "translations": [
+      "郊外的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00099",
+    "word": "historic renovation",
+    "phonetic": "",
+    "translation": "历史建筑翻新",
+    "translations": [
+      "历史建筑翻新"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00100",
+    "word": "re-use/conversion",
+    "phonetic": "",
+    "translation": "转换",
+    "translations": [
+      "转换"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00101",
+    "word": "recycling",
+    "phonetic": ",ri'saɪklɪŋ",
+    "translation": "回收",
+    "translations": [
+      "回收"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00102",
+    "word": "historic preservation",
+    "phonetic": "",
+    "translation": "历史性保护",
+    "translations": [
+      "历史性保护"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00103",
+    "word": "restoration",
+    "phonetic": "'rɛstə'reʃən",
+    "translation": "修复",
+    "translations": [
+      "修复"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00104",
+    "word": "adaptive reuse",
+    "phonetic": "",
+    "translation": "适应性再利用",
+    "translations": [
+      "适应性再利用"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00105",
+    "word": "multi-family residential building",
+    "phonetic": "",
+    "translation": "多户住宅",
+    "translations": [
+      "多户住宅"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00106",
+    "word": "condominium",
+    "phonetic": ",kɑndə'mɪnɪəm",
+    "translation": "公寓 (个人财产)",
+    "translations": [
+      "公寓 (个人财产)"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00107",
+    "word": "apartment",
+    "phonetic": "ə'pɑrtmənt",
+    "translation": "公寓 (出租)",
+    "translations": [
+      "公寓 (出租)"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00108",
+    "word": "low-income housing",
+    "phonetic": "",
+    "translation": "低收入保障房",
+    "translations": [
+      "低收入保障房"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00109",
+    "word": "high-rise residential tower",
+    "phonetic": "",
+    "translation": "高层住宅",
+    "translations": [
+      "高层住宅"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00110",
+    "word": "retail store",
+    "phonetic": "",
+    "translation": "零售商店",
+    "translations": [
+      "零售商店"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00111",
+    "word": "skyscraper",
+    "phonetic": "'skaɪ'skrepɚ",
+    "translation": "摩天大楼",
+    "translations": [
+      "摩天大楼"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00112",
+    "word": "high-rise",
+    "phonetic": "'hai'raiz",
+    "translation": "高层建筑",
+    "translations": [
+      "高层建筑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00113",
+    "word": "historic restoration",
+    "phonetic": "",
+    "translation": "古建修复",
+    "translations": [
+      "古建修复"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00114",
+    "word": "concert hall",
+    "phonetic": "",
+    "translation": "音乐厅",
+    "translations": [
+      "音乐厅"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00115",
+    "word": "form, space, and order",
+    "phonetic": "",
+    "translation": "形式 ，空间和秩序",
+    "translations": [
+      "形式 ，空间和秩序"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00116",
+    "word": "architectural component",
+    "phonetic": "",
+    "translation": "建筑构件",
+    "translations": [
+      "建筑构件"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00117",
+    "word": "roof",
+    "phonetic": "ruf",
+    "translation": "屋面",
+    "translations": [
+      "屋面"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00118",
+    "word": "ceiling",
+    "phonetic": "'silɪŋ",
+    "translation": "吊顶",
+    "translations": [
+      "吊顶"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00119",
+    "word": "wall",
+    "phonetic": "wɔl",
+    "translation": "墙",
+    "translations": [
+      "墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00120",
+    "word": "window",
+    "phonetic": "'wɪndo",
+    "translation": "窗户",
+    "translations": [
+      "窗户"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00121",
+    "word": "floor",
+    "phonetic": "flɔr",
+    "translation": "地板",
+    "translations": [
+      "地板"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00122",
+    "word": "mechanical system",
+    "phonetic": "",
+    "translation": "机械系统",
+    "translations": [
+      "机械系统"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00123",
+    "word": "structure",
+    "phonetic": "'strʌktʃɚ",
+    "translation": "结构",
+    "translations": [
+      "结构"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00124",
+    "word": "foundation",
+    "phonetic": "faʊn'deʃən",
+    "translation": "基础",
+    "translations": [
+      "基础"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00125",
+    "word": "site",
+    "phonetic": "saɪt",
+    "translation": "场地",
+    "translations": [
+      "场地"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00126",
+    "word": "flat roof",
+    "phonetic": "",
+    "translation": "平屋顶",
+    "translations": [
+      "平屋顶"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00127",
+    "word": "gable wall",
+    "phonetic": "",
+    "translation": "山墙",
+    "translations": [
+      "山墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00128",
+    "word": "pitched roof",
+    "phonetic": "",
+    "translation": "坡屋面",
+    "translations": [
+      "坡屋面"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00129",
+    "word": "ridge",
+    "phonetic": "rɪdʒ",
+    "translation": "屋脊",
+    "translations": [
+      "屋脊"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00130",
+    "word": "hip",
+    "phonetic": "hɪp",
+    "translation": "斜脊",
+    "translations": [
+      "斜脊"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00131",
+    "word": "valley",
+    "phonetic": "'væli",
+    "translation": "屋面排水沟",
+    "translations": [
+      "屋面排水沟"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00132",
+    "word": "dormer",
+    "phonetic": "",
+    "translation": "老虎窗",
+    "translations": [
+      "老虎窗"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00133",
+    "word": "truss",
+    "phonetic": "",
+    "translation": "桁架",
+    "translations": [
+      "桁架"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00134",
+    "word": "bearing wall",
+    "phonetic": "",
+    "translation": "承重墙",
+    "translations": [
+      "承重墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00135",
+    "word": "pilaster",
+    "phonetic": "",
+    "translation": "壁柱",
+    "translations": [
+      "壁柱"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00136",
+    "word": "interior wall",
+    "phonetic": "",
+    "translation": "内墙",
+    "translations": [
+      "内墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00137",
+    "word": "exterior wall",
+    "phonetic": "",
+    "translation": "外墙",
+    "translations": [
+      "外墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00138",
+    "word": "party wall",
+    "phonetic": "",
+    "translation": "共用墙",
+    "translations": [
+      "共用墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00139",
+    "word": "shell",
+    "phonetic": "ʃɛl",
+    "translation": "表皮",
+    "translations": [
+      "表皮"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00140",
+    "word": "envelope",
+    "phonetic": "",
+    "translation": "表皮",
+    "translations": [
+      "表皮"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00141",
+    "word": "stud",
+    "phonetic": "stʌd",
+    "translation": "立柱",
+    "translations": [
+      "立柱"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00142",
+    "word": "curtain wall",
+    "phonetic": "",
+    "translation": "幕墙",
+    "translations": [
+      "幕墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00143",
+    "word": "panel",
+    "phonetic": "'pænl",
+    "translation": "嵌板",
+    "translations": [
+      "嵌板"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00144",
+    "word": "mullion",
+    "phonetic": "",
+    "translation": "横柜 ，竖柜",
+    "translations": [
+      "横柜 ，竖柜"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00145",
+    "word": "facade",
+    "phonetic": "",
+    "translation": "立面",
+    "translations": [
+      "立面"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00146",
+    "word": "fenestration",
+    "phonetic": "",
+    "translation": "开洞",
+    "translations": [
+      "开洞"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00147",
+    "word": "mortar",
+    "phonetic": "'mɔrtɚ",
+    "translation": "砂浆",
+    "translations": [
+      "砂浆"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00148",
+    "word": "gypsum/plaster",
+    "phonetic": "",
+    "translation": "石膏",
+    "translations": [
+      "石膏"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00149",
+    "word": "gravel",
+    "phonetic": "'ɡrævl",
+    "translation": "碎石",
+    "translations": [
+      "碎石"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00150",
+    "word": "adobe",
+    "phonetic": "'ədobɪ",
+    "translation": "土坯",
+    "translations": [
+      "土坯"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00151",
+    "word": "structural clay tile",
+    "phonetic": "",
+    "translation": "空心黏土砖",
+    "translations": [
+      "空心黏土砖"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00152",
+    "word": "cement",
+    "phonetic": "sə'mɛnt",
+    "translation": "水泥",
+    "translations": [
+      "水泥"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00153",
+    "word": "aggregate",
+    "phonetic": "'æɡrɪɡət; (for v.) æɡrɪˌɡet",
+    "translation": "骨料",
+    "translations": [
+      "骨料"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00154",
+    "word": "rammed earth",
+    "phonetic": "",
+    "translation": "夯土",
+    "translations": [
+      "夯土"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00155",
+    "word": "terra cotta",
+    "phonetic": "",
+    "translation": "陶",
+    "translations": [
+      "陶"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00156",
+    "word": "concrete",
+    "phonetic": "'kɑŋkrit",
+    "translation": "混凝土",
+    "translations": [
+      "混凝土"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00157",
+    "word": "right of way",
+    "phonetic": "",
+    "translation": "先行权/路权",
+    "translations": [
+      "先行权/路权"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00158",
+    "word": "publicly-accessible open space",
+    "phonetic": "",
+    "translation": "公共开发空间",
+    "translations": [
+      "公共开发空间"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00159",
+    "word": "civic building",
+    "phonetic": "",
+    "translation": "民用房屋",
+    "translations": [
+      "民用房屋"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00160",
+    "word": "urban sprawl",
+    "phonetic": "",
+    "translation": "城市蔓延",
+    "translations": [
+      "城市蔓延"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00161",
+    "word": "smart growth",
+    "phonetic": "",
+    "translation": "精明增长",
+    "translations": [
+      "精明增长"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00162",
+    "word": "compact city",
+    "phonetic": "",
+    "translation": "紧凑城市",
+    "translations": [
+      "紧凑城市"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00163",
+    "word": "public space",
+    "phonetic": "",
+    "translation": "公共空间",
+    "translations": [
+      "公共空间"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00164",
+    "word": "livability",
+    "phonetic": "",
+    "translation": "宜居性",
+    "translations": [
+      "宜居性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00165",
+    "word": "sense of community",
+    "phonetic": "",
+    "translation": "社区感",
+    "translations": [
+      "社区感"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00166",
+    "word": "urbanity",
+    "phonetic": "ɝ'bænəti",
+    "translation": "城市性",
+    "translations": [
+      "城市性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00167",
+    "word": "sense of place",
+    "phonetic": "",
+    "translation": "场所感",
+    "translations": [
+      "场所感"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00168",
+    "word": "typology",
+    "phonetic": "",
+    "translation": "类型",
+    "translations": [
+      "类型"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00169",
+    "word": "private space",
+    "phonetic": "",
+    "translation": "私人空间",
+    "translations": [
+      "私人空间"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00170",
+    "word": "back yard",
+    "phonetic": "",
+    "translation": "后院",
+    "translations": [
+      "后院"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00171",
+    "word": "alley",
+    "phonetic": "'æli",
+    "translation": "小巷",
+    "translations": [
+      "小巷"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00172",
+    "word": "entrance",
+    "phonetic": "'ɛntrəns",
+    "translation": "入口",
+    "translations": [
+      "入口"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00173",
+    "word": "front yard",
+    "phonetic": "",
+    "translation": "前院",
+    "translations": [
+      "前院"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00174",
+    "word": "sidewalk",
+    "phonetic": "'saɪdwɔk",
+    "translation": "人行道",
+    "translations": [
+      "人行道"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00175",
+    "word": "parking lot",
+    "phonetic": "",
+    "translation": "停车场",
+    "translations": [
+      "停车场"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00176",
+    "word": "plaza/square",
+    "phonetic": "",
+    "translation": "广场",
+    "translations": [
+      "广场"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00177",
+    "word": "pocket park",
+    "phonetic": "",
+    "translation": "街心花园",
+    "translations": [
+      "街心花园"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00178",
+    "word": "street",
+    "phonetic": "strit",
+    "translation": "街道",
+    "translations": [
+      "街道"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00179",
+    "word": "park",
+    "phonetic": "pɑrk",
+    "translation": "公园",
+    "translations": [
+      "公园"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00180",
+    "word": "neighborhood",
+    "phonetic": "'nebɚ,hʊd",
+    "translation": "邻里",
+    "translations": [
+      "邻里"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00181",
+    "word": "CBD(Central Business District)",
+    "phonetic": "",
+    "translation": "中央商务中心",
+    "translations": [
+      "中央商务中心"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00182",
+    "word": "automobile",
+    "phonetic": ",ɔtəmə'bil",
+    "translation": "汽车",
+    "translations": [
+      "汽车"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00183",
+    "word": "suburban",
+    "phonetic": "sə'bɝbən",
+    "translation": "郊区的",
+    "translations": [
+      "郊区的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00184",
+    "word": "storage",
+    "phonetic": "'stɔrɪdʒ",
+    "translation": "存储",
+    "translations": [
+      "存储"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00185",
+    "word": "walkable city/community",
+    "phonetic": "",
+    "translation": "步行城市/社区",
+    "translations": [
+      "步行城市/社区"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00186",
+    "word": "residential density",
+    "phonetic": "",
+    "translation": "居住密度",
+    "translations": [
+      "居住密度"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00187",
+    "word": "street frontage",
+    "phonetic": "",
+    "translation": "临街门面",
+    "translations": [
+      "临街门面"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00188",
+    "word": "placemaking",
+    "phonetic": "",
+    "translation": "场所营造",
+    "translations": [
+      "场所营造"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00189",
+    "word": "floor area ratio",
+    "phonetic": "",
+    "translation": "容积率",
+    "translations": [
+      "容积率"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00190",
+    "word": "urban renewal",
+    "phonetic": "",
+    "translation": "城市更新",
+    "translations": [
+      "城市更新"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00191",
+    "word": "modernist",
+    "phonetic": "",
+    "translation": "现代主义者",
+    "translations": [
+      "现代主义者"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00192",
+    "word": "architectural language",
+    "phonetic": "",
+    "translation": "建筑语言",
+    "translations": [
+      "建筑语言"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00193",
+    "word": "modernism",
+    "phonetic": "'mɑdɚnɪzəm",
+    "translation": "现代主义",
+    "translations": [
+      "现代主义"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00194",
+    "word": "physically",
+    "phonetic": "'fɪzɪkli",
+    "translation": "生理地",
+    "translations": [
+      "生理地"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00195",
+    "word": "psychologically",
+    "phonetic": "saɪkə'lɑdʒɪkli",
+    "translation": "心理地",
+    "translations": [
+      "心理地"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00196",
+    "word": "shopping mall",
+    "phonetic": "",
+    "translation": "大商场",
+    "translations": [
+      "大商场"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00197",
+    "word": "pedestrian zones/auto-free zones/car-free zones",
+    "phonetic": "",
+    "translation": "步行区",
+    "translations": [
+      "步行区"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00198",
+    "word": "morphology",
+    "phonetic": "mɔr'fɑlədʒi",
+    "translation": "形态学",
+    "translations": [
+      "形态学"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00199",
+    "word": "accessibility",
+    "phonetic": "æk,sɛsə'bɪləti",
+    "translation": "可达性",
+    "translations": [
+      "可达性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00200",
+    "word": "mixed use",
+    "phonetic": "",
+    "translation": "混合使用",
+    "translations": [
+      "混合使用"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00201",
+    "word": "city block",
+    "phonetic": "",
+    "translation": "城市街区",
+    "translations": [
+      "城市街区"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00202",
+    "word": "intimate space",
+    "phonetic": "",
+    "translation": "私密空间",
+    "translations": [
+      "私密空间"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00203",
+    "word": "sustainability",
+    "phonetic": "sə,stenə'bɪlɪti",
+    "translation": "可持续发展",
+    "translations": [
+      "可持续发展"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00204",
+    "word": "socialize",
+    "phonetic": "'soʃəlaɪz",
+    "translation": "社交",
+    "translations": [
+      "社交"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00205",
+    "word": "active participant",
+    "phonetic": "",
+    "translation": "积极参与者",
+    "translations": [
+      "积极参与者"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00206",
+    "word": "agricultural land",
+    "phonetic": "",
+    "translation": "农业用地",
+    "translations": [
+      "农业用地"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00207",
+    "word": "habitable",
+    "phonetic": "'hæbɪtəbl",
+    "translation": "宜居的",
+    "translations": [
+      "宜居的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00208",
+    "word": "natural light",
+    "phonetic": "",
+    "translation": "自然光",
+    "translations": [
+      "自然光"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00209",
+    "word": "mixed use",
+    "phonetic": "",
+    "translation": "混合使用",
+    "translations": [
+      "混合使用"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00210",
+    "word": "citizen",
+    "phonetic": "'sɪtɪzn",
+    "translation": "市民",
+    "translations": [
+      "市民"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00211",
+    "word": "single family home",
+    "phonetic": "",
+    "translation": "独栋别墅",
+    "translations": [
+      "独栋别墅"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00212",
+    "word": "pedestrian",
+    "phonetic": "pə'dɛstrɪən",
+    "translation": "行人",
+    "translations": [
+      "行人"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00213",
+    "word": "transit system",
+    "phonetic": "",
+    "translation": "公共交通",
+    "translations": [
+      "公共交通"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00214",
+    "word": "privacy",
+    "phonetic": "'praɪvəsi",
+    "translation": "私密性",
+    "translations": [
+      "私密性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00215",
+    "word": "civil engineer",
+    "phonetic": "",
+    "translation": "土木工程师",
+    "translations": [
+      "土木工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00216",
+    "word": "structural engineer",
+    "phonetic": "",
+    "translation": "结构工程师",
+    "translations": [
+      "结构工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00217",
+    "word": "mechanical engineer",
+    "phonetic": "",
+    "translation": "机械工程师",
+    "translations": [
+      "机械工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00218",
+    "word": "electrical engineer",
+    "phonetic": "",
+    "translation": "电子工程师",
+    "translations": [
+      "电子工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00219",
+    "word": "environmental engineer",
+    "phonetic": "",
+    "translation": "环境工程师",
+    "translations": [
+      "环境工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00220",
+    "word": "geotechnical engineer",
+    "phonetic": "",
+    "translation": "岩石工程师",
+    "translations": [
+      "岩石工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00221",
+    "word": "acoustical engineer",
+    "phonetic": "",
+    "translation": "声学工程师",
+    "translations": [
+      "声学工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00222",
+    "word": "civil engineering",
+    "phonetic": "",
+    "translation": "土木工程",
+    "translations": [
+      "土木工程"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00223",
+    "word": "infrastructure",
+    "phonetic": "'ɪnfrə'strʌktʃɚ",
+    "translation": "基础设施",
+    "translations": [
+      "基础设施"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00224",
+    "word": "sewer",
+    "phonetic": "'suɚ",
+    "translation": "排水 (污水)",
+    "translations": [
+      "排水 (污水)"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00225",
+    "word": "power",
+    "phonetic": "'paʊɚ",
+    "translation": "电力",
+    "translations": [
+      "电力"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00226",
+    "word": "drainage",
+    "phonetic": "'drenɪdʒ",
+    "translation": "排水 (过量的水)",
+    "translations": [
+      "排水 (过量的水)"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00227",
+    "word": "surveying",
+    "phonetic": "",
+    "translation": "测绘",
+    "translations": [
+      "测绘"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00228",
+    "word": "foundation",
+    "phonetic": "faʊn'deʃən",
+    "translation": "基础",
+    "translations": [
+      "基础"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00229",
+    "word": "shallow/deep/pile foundation",
+    "phonetic": "",
+    "translation": "浅/深/桩基础",
+    "translations": [
+      "浅/深/桩基础"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00230",
+    "word": "column",
+    "phonetic": "'kɑləm",
+    "translation": "柱子",
+    "translations": [
+      "柱子"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00231",
+    "word": "beam",
+    "phonetic": "bim",
+    "translation": "梁",
+    "translations": [
+      "梁"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00232",
+    "word": "concrete",
+    "phonetic": "'kɑŋkrit",
+    "translation": "混凝土",
+    "translations": [
+      "混凝土"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00233",
+    "word": "steel",
+    "phonetic": "stil",
+    "translation": "钢",
+    "translations": [
+      "钢"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00234",
+    "word": "wood",
+    "phonetic": "wʊd",
+    "translation": "木头",
+    "translations": [
+      "木头"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00235",
+    "word": "cantilever/overhang",
+    "phonetic": "",
+    "translation": "悬挑",
+    "translations": [
+      "悬挑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00236",
+    "word": "dead load",
+    "phonetic": "",
+    "translation": "恒载 ；静负荷",
+    "translations": [
+      "恒载 ；静负荷"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00237",
+    "word": "live load",
+    "phonetic": "",
+    "translation": "活载荷 ；活负载；动荷",
+    "translations": [
+      "活载荷 ；活负载；动荷"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00238",
+    "word": "environmental load",
+    "phonetic": "",
+    "translation": "环境负载",
+    "translations": [
+      "环境负载"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00239",
+    "word": "compression",
+    "phonetic": "kəm'prɛʃən",
+    "translation": "压",
+    "translations": [
+      "压"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00240",
+    "word": "tension",
+    "phonetic": "'tɛnʃən",
+    "translation": "拉",
+    "translations": [
+      "拉"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00241",
+    "word": "bending",
+    "phonetic": "",
+    "translation": "弯",
+    "translations": [
+      "弯"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00242",
+    "word": "torsion",
+    "phonetic": "'tɔrʃən",
+    "translation": "扭",
+    "translations": [
+      "扭"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00243",
+    "word": "shear",
+    "phonetic": "ʃɪr",
+    "translation": "剪 (shear wall) 剪力墙",
+    "translations": [
+      "剪 (shear wall) 剪力墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00244",
+    "word": "trabeated structure",
+    "phonetic": "",
+    "translation": "梁柱结构",
+    "translations": [
+      "梁柱结构"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00245",
+    "word": "post",
+    "phonetic": "post",
+    "translation": "柱子",
+    "translations": [
+      "柱子"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00246",
+    "word": "lintel",
+    "phonetic": "'lɪntl",
+    "translation": "梁",
+    "translations": [
+      "梁"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00247",
+    "word": "trabeated system",
+    "phonetic": "",
+    "translation": "横梁系统",
+    "translations": [
+      "横梁系统"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00248",
+    "word": "vertical",
+    "phonetic": "'vɝtɪkl",
+    "translation": "垂直的",
+    "translations": [
+      "垂直的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00249",
+    "word": "horizontal",
+    "phonetic": "'hɔrə'zɑntl",
+    "translation": "水平的",
+    "translations": [
+      "水平的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00250",
+    "word": "beam",
+    "phonetic": "bim",
+    "translation": "梁",
+    "translations": [
+      "梁"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00251",
+    "word": "columns,pillars,or posts",
+    "phonetic": "",
+    "translation": "柱",
+    "translations": [
+      "柱"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00252",
+    "word": "capitals",
+    "phonetic": "",
+    "translation": "柱头",
+    "translations": [
+      "柱头"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00253",
+    "word": "load",
+    "phonetic": "lod",
+    "translation": "荷载",
+    "translations": [
+      "荷载"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00254",
+    "word": "truss",
+    "phonetic": "",
+    "translation": "桁架",
+    "translations": [
+      "桁架"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00255",
+    "word": "timber framing",
+    "phonetic": "",
+    "translation": "木屋架",
+    "translations": [
+      "木屋架"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00256",
+    "word": "arcuated structure",
+    "phonetic": "",
+    "translation": "拱式结构",
+    "translations": [
+      "拱式结构"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00257",
+    "word": "tensile structure",
+    "phonetic": "",
+    "translation": "张拉结构",
+    "translations": [
+      "张拉结构"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00258",
+    "word": "arch",
+    "phonetic": "ɑrtʃ",
+    "translation": "券",
+    "translations": [
+      "券"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00259",
+    "word": "vault",
+    "phonetic": "vɔlt",
+    "translation": "拱顶",
+    "translations": [
+      "拱顶"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00260",
+    "word": "barrel vault",
+    "phonetic": "",
+    "translation": "筒形拱",
+    "translations": [
+      "筒形拱"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00261",
+    "word": "dome",
+    "phonetic": "dom",
+    "translation": "穹顶",
+    "translations": [
+      "穹顶"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00262",
+    "word": "spring line",
+    "phonetic": "",
+    "translation": "拱脚线",
+    "translations": [
+      "拱脚线"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00263",
+    "word": "key stone",
+    "phonetic": "",
+    "translation": "拱顶石",
+    "translations": [
+      "拱顶石"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00264",
+    "word": "geothermal",
+    "phonetic": ",dʒio'θɝml",
+    "translation": "地热的",
+    "translations": [
+      "地热的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00265",
+    "word": "plumbing",
+    "phonetic": "",
+    "translation": "管道工程",
+    "translations": [
+      "管道工程"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00266",
+    "word": "potable water",
+    "phonetic": "",
+    "translation": "饮用水",
+    "translations": [
+      "饮用水"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00267",
+    "word": "sewage",
+    "phonetic": "'sʊɪdʒ",
+    "translation": "污水",
+    "translations": [
+      "污水"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00268",
+    "word": "water treatment",
+    "phonetic": "",
+    "translation": "水处理",
+    "translations": [
+      "水处理"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00269",
+    "word": "heating,ventilating,air conditioning(HVAC)",
+    "phonetic": "",
+    "translation": "采暖 ，通风，空调",
+    "translations": [
+      "采暖 ，通风，空调"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00270",
+    "word": "temperature",
+    "phonetic": "ˈtemprətʃʊər; tɛmpɚ-ˌtʃʊr",
+    "translation": "温度",
+    "translations": [
+      "温度"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00271",
+    "word": "humidity",
+    "phonetic": "hju'mɪdəti",
+    "translation": "湿度",
+    "translations": [
+      "湿度"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00272",
+    "word": "exhaust pollutant",
+    "phonetic": "",
+    "translation": "排出污染物",
+    "translations": [
+      "排出污染物"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00273",
+    "word": "passive system",
+    "phonetic": "",
+    "translation": "被动系统",
+    "translations": [
+      "被动系统"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00274",
+    "word": "ventilate",
+    "phonetic": "'vɛntɪlet",
+    "translation": "通风",
+    "translations": [
+      "通风"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00275",
+    "word": "interior",
+    "phonetic": "ɪn'tɪrɪɚ",
+    "translation": "室内",
+    "translations": [
+      "室内"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00276",
+    "word": "exterior",
+    "phonetic": "ɪk'stɪrɪɚ",
+    "translation": "室外",
+    "translations": [
+      "室外"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00277",
+    "word": "active system",
+    "phonetic": "",
+    "translation": "主动式系统",
+    "translations": [
+      "主动式系统"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00278",
+    "word": "interior wall",
+    "phonetic": "",
+    "translation": "内墙",
+    "translations": [
+      "内墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00279",
+    "word": "exterior wall",
+    "phonetic": "",
+    "translation": "外墙",
+    "translations": [
+      "外墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00280",
+    "word": "natural ventilation",
+    "phonetic": "",
+    "translation": "自然通风",
+    "translations": [
+      "自然通风"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00281",
+    "word": "natural lighting",
+    "phonetic": "",
+    "translation": "自然照明",
+    "translations": [
+      "自然照明"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00282",
+    "word": "sun shading device",
+    "phonetic": "",
+    "translation": "遮阳装置",
+    "translations": [
+      "遮阳装置"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00283",
+    "word": "green roof/rain garden",
+    "phonetic": "",
+    "translation": "绿色屋面/雨水花园",
+    "translations": [
+      "绿色屋面/雨水花园"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00284",
+    "word": "sun room/greenhouse",
+    "phonetic": "",
+    "translation": "阳光房/温室",
+    "translations": [
+      "阳光房/温室"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00285",
+    "word": "building orientation/air sealing",
+    "phonetic": "",
+    "translation": "建筑朝向/气密性",
+    "translations": [
+      "建筑朝向/气密性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00286",
+    "word": "solar panel",
+    "phonetic": "",
+    "translation": "太阳能板",
+    "translations": [
+      "太阳能板"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00287",
+    "word": "wind turbine",
+    "phonetic": "",
+    "translation": "风力涡轮机",
+    "translations": [
+      "风力涡轮机"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00288",
+    "word": "south facade",
+    "phonetic": "",
+    "translation": "南立面",
+    "translations": [
+      "南立面"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00289",
+    "word": "structure engineer",
+    "phonetic": "",
+    "translation": "结构工程师",
+    "translations": [
+      "结构工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00290",
+    "word": "mechanical engineer",
+    "phonetic": "",
+    "translation": "机械工程师",
+    "translations": [
+      "机械工程师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00291",
+    "word": "elevator",
+    "phonetic": "'ɛlɪvetɚ",
+    "translation": "电梯",
+    "translations": [
+      "电梯"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00292",
+    "word": "pagoda",
+    "phonetic": "pə'ɡodə",
+    "translation": "宝塔",
+    "translations": [
+      "宝塔"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00293",
+    "word": "escalator",
+    "phonetic": "'ɛskə'letɚ",
+    "translation": "自动扶梯",
+    "translations": [
+      "自动扶梯"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00294",
+    "word": "horticultural",
+    "phonetic": ",hɔrtɪ'kʌltʃərəl",
+    "translation": "园艺",
+    "translations": [
+      "园艺"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00295",
+    "word": "orchard",
+    "phonetic": "'ɔrtʃɚd",
+    "translation": "果园",
+    "translations": [
+      "果园"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00296",
+    "word": "lodge",
+    "phonetic": "lɑdʒ",
+    "translation": "乡间小屋",
+    "translations": [
+      "乡间小屋"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00297",
+    "word": "term",
+    "phonetic": "tɝm",
+    "translation": "术语",
+    "translations": [
+      "术语"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00298",
+    "word": "client",
+    "phonetic": "'klaɪənt",
+    "translation": "客户",
+    "translations": [
+      "客户"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00299",
+    "word": "healing landscape",
+    "phonetic": "",
+    "translation": "康复性景观",
+    "translations": [
+      "康复性景观"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00300",
+    "word": "restorative landscape",
+    "phonetic": "",
+    "translation": "恢复性景观",
+    "translations": [
+      "恢复性景观"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00301",
+    "word": "sewage",
+    "phonetic": "'sʊɪdʒ",
+    "translation": "下水道",
+    "translations": [
+      "下水道"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00302",
+    "word": "cloister",
+    "phonetic": "'klɔɪstɚ",
+    "translation": "修道院回廊",
+    "translations": [
+      "修道院回廊"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00303",
+    "word": "front yard",
+    "phonetic": "",
+    "translation": "前院",
+    "translations": [
+      "前院"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00304",
+    "word": "back yard",
+    "phonetic": "",
+    "translation": "后院",
+    "translations": [
+      "后院"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00305",
+    "word": "allee",
+    "phonetic": "",
+    "translation": "林荫小径",
+    "translations": [
+      "林荫小径"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00306",
+    "word": "alley",
+    "phonetic": "'æli",
+    "translation": "小巷",
+    "translations": [
+      "小巷"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00307",
+    "word": "orchard",
+    "phonetic": "'ɔrtʃɚd",
+    "translation": "果园",
+    "translations": [
+      "果园"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00308",
+    "word": "bosque",
+    "phonetic": "",
+    "translation": "树丛",
+    "translations": [
+      "树丛"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00309",
+    "word": "trail",
+    "phonetic": "trel",
+    "translation": "足迹",
+    "translations": [
+      "足迹"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00310",
+    "word": "waterfront park",
+    "phonetic": "",
+    "translation": "滨水公园",
+    "translations": [
+      "滨水公园"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00311",
+    "word": "residence hall",
+    "phonetic": "",
+    "translation": "学生宿舍",
+    "translations": [
+      "学生宿舍"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00312",
+    "word": "courtyard",
+    "phonetic": "'kɔrtjɑrd",
+    "translation": "庭院",
+    "translations": [
+      "庭院"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00313",
+    "word": "runoff",
+    "phonetic": "'rʌnɔf",
+    "translation": "径流",
+    "translations": [
+      "径流"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00314",
+    "word": "marsh",
+    "phonetic": "mɑrʃ",
+    "translation": "湿地",
+    "translations": [
+      "湿地"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00315",
+    "word": "memorial",
+    "phonetic": "mə'morɪəl",
+    "translation": "纪念碑",
+    "translations": [
+      "纪念碑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00316",
+    "word": "axis",
+    "phonetic": "'æksɪs",
+    "translation": "市政轴线",
+    "translations": [
+      "市政轴线"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00317",
+    "word": "renovate",
+    "phonetic": "'rɛnəvet",
+    "translation": "更新",
+    "translations": [
+      "更新"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00318",
+    "word": "urban revitalization",
+    "phonetic": "",
+    "translation": "城市更新",
+    "translations": [
+      "城市更新"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00319",
+    "word": "drainage",
+    "phonetic": "'drenɪdʒ",
+    "translation": "排水",
+    "translations": [
+      "排水"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00320",
+    "word": "native material",
+    "phonetic": "",
+    "translation": "本地材料",
+    "translations": [
+      "本地材料"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00321",
+    "word": "acre",
+    "phonetic": "'ekɚ",
+    "translation": "英亩",
+    "translations": [
+      "英亩"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00322",
+    "word": "restored",
+    "phonetic": "ri'stɔ:d",
+    "translation": "恢复修复",
+    "translations": [
+      "恢复修复"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00323",
+    "word": "transportation corridor",
+    "phonetic": "",
+    "translation": "交通走廊",
+    "translations": [
+      "交通走廊"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00324",
+    "word": "linear",
+    "phonetic": "'lɪnɪɚ",
+    "translation": "线性",
+    "translations": [
+      "线性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00325",
+    "word": "master plan",
+    "phonetic": "",
+    "translation": "总平面",
+    "translations": [
+      "总平面"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00326",
+    "word": "site inventory and analysis",
+    "phonetic": "",
+    "translation": "场地清点分析",
+    "translations": [
+      "场地清点分析"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00327",
+    "word": "drainage",
+    "phonetic": "'drenɪdʒ",
+    "translation": "排水",
+    "translations": [
+      "排水"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00328",
+    "word": "existing vegetation",
+    "phonetic": "",
+    "translation": "现有植被",
+    "translations": [
+      "现有植被"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00329",
+    "word": "bubble diagram",
+    "phonetic": "",
+    "translation": "泡泡图",
+    "translations": [
+      "泡泡图"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00330",
+    "word": "topography",
+    "phonetic": "tə'pɑgrəfi",
+    "translation": "地势",
+    "translations": [
+      "地势"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00331",
+    "word": "blend with",
+    "phonetic": "",
+    "translation": "混合 ，融为一体",
+    "translations": [
+      "混合 ，融为一体"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00332",
+    "word": "integrate",
+    "phonetic": "'ɪntɪɡret",
+    "translation": "整合",
+    "translations": [
+      "整合"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00333",
+    "word": "layout",
+    "phonetic": "'leaʊt",
+    "translation": "布局",
+    "translations": [
+      "布局"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00334",
+    "word": "enclose",
+    "phonetic": "ɪn'kloz",
+    "translation": "围合",
+    "translations": [
+      "围合"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00335",
+    "word": "shelter",
+    "phonetic": "'ʃɛltɚ",
+    "translation": "庇护所",
+    "translations": [
+      "庇护所"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00336",
+    "word": "circulation",
+    "phonetic": ",sɝkjə'leʃən",
+    "translation": "流线",
+    "translations": [
+      "流线"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00337",
+    "word": "step",
+    "phonetic": "stɛp",
+    "translation": "踏步/台阶",
+    "translations": [
+      "踏步/台阶"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00338",
+    "word": "shrub/bush",
+    "phonetic": "",
+    "translation": "灌木",
+    "translations": [
+      "灌木"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00339",
+    "word": "groundcover plant",
+    "phonetic": "",
+    "translation": "地被植物",
+    "translations": [
+      "地被植物"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00340",
+    "word": "arbor",
+    "phonetic": "'ɑrbɚ",
+    "translation": "藤架",
+    "translations": [
+      "藤架"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00341",
+    "word": "retaining wall",
+    "phonetic": "",
+    "translation": "挡土墙",
+    "translations": [
+      "挡土墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00342",
+    "word": "canopy",
+    "phonetic": "'kænəpi",
+    "translation": "雨棚 ，天棚",
+    "translations": [
+      "雨棚 ，天棚"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00343",
+    "word": "shade structure",
+    "phonetic": "",
+    "translation": "遮阳构筑物",
+    "translations": [
+      "遮阳构筑物"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00344",
+    "word": "coarse, medium and fine",
+    "phonetic": "",
+    "translation": "粗糙的 ，中等的，好的",
+    "translations": [
+      "粗糙的 ，中等的，好的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00345",
+    "word": "belvedere",
+    "phonetic": "",
+    "translation": "观景台",
+    "translations": [
+      "观景台"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00346",
+    "word": "contour",
+    "phonetic": "'kɑntʊr",
+    "translation": "等高线",
+    "translations": [
+      "等高线"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00347",
+    "word": "boulevard",
+    "phonetic": "ˈbʊləˌvɑrd",
+    "translation": "林荫大道",
+    "translations": [
+      "林荫大道"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00348",
+    "word": "artificial lighting",
+    "phonetic": "",
+    "translation": "人造灯光",
+    "translations": [
+      "人造灯光"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00349",
+    "word": "land form",
+    "phonetic": "",
+    "translation": "地形地貌",
+    "translations": [
+      "地形地貌"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00350",
+    "word": "concrete",
+    "phonetic": "'kɑŋkrit",
+    "translation": "混凝土",
+    "translations": [
+      "混凝土"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00351",
+    "word": "deflection",
+    "phonetic": "dɪ'flɛkʃən",
+    "translation": "偏斜",
+    "translations": [
+      "偏斜"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00352",
+    "word": "water infiltration",
+    "phonetic": "",
+    "translation": "渗水试验",
+    "translations": [
+      "渗水试验"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00353",
+    "word": "construction managers",
+    "phonetic": "",
+    "translation": "项目经理",
+    "translations": [
+      "项目经理"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00354",
+    "word": "estimator",
+    "phonetic": "",
+    "translation": "估算师",
+    "translations": [
+      "估算师"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00355",
+    "word": "comitas (utilitas)",
+    "phonetic": "",
+    "translation": "实用",
+    "translations": [
+      "实用"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00356",
+    "word": "firmitas",
+    "phonetic": "",
+    "translation": "坚固",
+    "translations": [
+      "坚固"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00357",
+    "word": "venustas",
+    "phonetic": "",
+    "translation": "美观",
+    "translations": [
+      "美观"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00358",
+    "word": "commodity",
+    "phonetic": "kə'mɑdəti",
+    "translation": "有益 ，适用，有价值",
+    "translations": [
+      "有益 ，适用，有价值"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00359",
+    "word": "firmness",
+    "phonetic": "'fɝmnɪs",
+    "translation": "坚固",
+    "translations": [
+      "坚固"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00360",
+    "word": "delight",
+    "phonetic": "dɪ'laɪt",
+    "translation": "使 ...快乐，乐趣",
+    "translations": [
+      "使 ...快乐，乐趣"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00361",
+    "word": "problem identification",
+    "phonetic": "",
+    "translation": "问题识别",
+    "translations": [
+      "问题识别"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00362",
+    "word": "programming",
+    "phonetic": "'proɡræmɪŋ",
+    "translation": "编制任务书",
+    "translations": [
+      "编制任务书"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00363",
+    "word": "research",
+    "phonetic": "'risɝtʃ",
+    "translation": "研究",
+    "translations": [
+      "研究"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00364",
+    "word": "concept generation",
+    "phonetic": "",
+    "translation": "概念生成",
+    "translations": [
+      "概念生成"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00365",
+    "word": "schematic design",
+    "phonetic": "",
+    "translation": "方案设计",
+    "translations": [
+      "方案设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00366",
+    "word": "design development",
+    "phonetic": "",
+    "translation": "设计深化",
+    "translations": [
+      "设计深化"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00367",
+    "word": "bidding/negotiation",
+    "phonetic": "",
+    "translation": "投标/谈判",
+    "translations": [
+      "投标/谈判"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00368",
+    "word": "construction documents",
+    "phonetic": "",
+    "translation": "施工图",
+    "translations": [
+      "施工图"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00369",
+    "word": "construction",
+    "phonetic": "kən'strʌkʃən",
+    "translation": "建设",
+    "translations": [
+      "建设"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00370",
+    "word": "project evaluation",
+    "phonetic": "",
+    "translation": "项目评估",
+    "translations": [
+      "项目评估"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00371",
+    "word": "post occupation evaluation",
+    "phonetic": "",
+    "translation": "使用后评价",
+    "translations": [
+      "使用后评价"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00372",
+    "word": "building performance",
+    "phonetic": "",
+    "translation": "性能",
+    "translations": [
+      "性能"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00373",
+    "word": "interaction",
+    "phonetic": "",
+    "translation": "互动 ，交流",
+    "translations": [
+      "互动 ，交流"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00374",
+    "word": "axonometric drawing",
+    "phonetic": "",
+    "translation": "轴测图",
+    "translations": [
+      "轴测图"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00375",
+    "word": "isometric",
+    "phonetic": "",
+    "translation": "正等测",
+    "translations": [
+      "正等测"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00376",
+    "word": "site plan",
+    "phonetic": "",
+    "translation": "总平面",
+    "translations": [
+      "总平面"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00377",
+    "word": "elevation",
+    "phonetic": ",ɛlɪ'veʃən",
+    "translation": "立面图",
+    "translations": [
+      "立面图"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00378",
+    "word": "floor plan",
+    "phonetic": "",
+    "translation": "平面图",
+    "translations": [
+      "平面图"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00379",
+    "word": "section",
+    "phonetic": "'sɛkʃən",
+    "translation": "剖面图",
+    "translations": [
+      "剖面图"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00380",
+    "word": "analysis drawing",
+    "phonetic": "",
+    "translation": "分析图",
+    "translations": [
+      "分析图"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00381",
+    "word": "perspective drawing",
+    "phonetic": "",
+    "translation": "透视图",
+    "translations": [
+      "透视图"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00382",
+    "word": "two-point perspective",
+    "phonetic": "",
+    "translation": "两点透视",
+    "translations": [
+      "两点透视"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00383",
+    "word": "length, breadth, width",
+    "phonetic": "",
+    "translation": "广度 ，宽度，宽度",
+    "translations": [
+      "广度 ，宽度，宽度"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00384",
+    "word": "position",
+    "phonetic": "pə'zɪʃən",
+    "translation": "位置",
+    "translations": [
+      "位置"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00385",
+    "word": "motion",
+    "phonetic": "'moʃən",
+    "translation": "移动",
+    "translations": [
+      "移动"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00386",
+    "word": "width",
+    "phonetic": "wɪdθ",
+    "translation": "宽度 (具体)",
+    "translations": [
+      "宽度 (具体)"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00387",
+    "word": "three dimensional",
+    "phonetic": "",
+    "translation": "三维的",
+    "translations": [
+      "三维的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00388",
+    "word": "length, width, depth and height",
+    "phonetic": "",
+    "translation": "长度 、宽度、深度、高度",
+    "translations": [
+      "长度 、宽度、深度、高度"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00389",
+    "word": "non-dimensional element (point)",
+    "phonetic": "",
+    "translation": "无维度元素 (点)",
+    "translations": [
+      "无维度元素 (点)"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00390",
+    "word": "two dimensional element(line and plane)",
+    "phonetic": "",
+    "translation": "二维元素 (直线和平面)",
+    "translations": [
+      "二维元素 (直线和平面)"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00391",
+    "word": "three dimensional element (volume and space)",
+    "phonetic": "",
+    "translation": "三维元素 (体积和空间)",
+    "translations": [
+      "三维元素 (体积和空间)"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00392",
+    "word": "four dimension (time and motion)",
+    "phonetic": "",
+    "translation": "四维 (时间和运动)",
+    "translations": [
+      "四维 (时间和运动)"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00393",
+    "word": "visual focus",
+    "phonetic": "",
+    "translation": "视觉焦点",
+    "translations": [
+      "视觉焦点"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00394",
+    "word": "intersection",
+    "phonetic": ",ɪntɚ'sɛkʃən",
+    "translation": "交叉口 ，十字路口",
+    "translations": [
+      "交叉口 ，十字路口"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00395",
+    "word": "static",
+    "phonetic": "'stætɪk",
+    "translation": "静态的",
+    "translations": [
+      "静态的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00396",
+    "word": "tension",
+    "phonetic": "'tɛnʃən",
+    "translation": "张力",
+    "translations": [
+      "张力"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00397",
+    "word": "array",
+    "phonetic": "ə're",
+    "translation": "阵列",
+    "translations": [
+      "阵列"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00398",
+    "word": "straight",
+    "phonetic": "stret",
+    "translation": "直的",
+    "translations": [
+      "直的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00399",
+    "word": "curved",
+    "phonetic": "",
+    "translation": "弯曲的",
+    "translations": [
+      "弯曲的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00400",
+    "word": "bent",
+    "phonetic": "bɛnt",
+    "translation": "弯曲的",
+    "translations": [
+      "弯曲的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00401",
+    "word": "irregular",
+    "phonetic": "ɪ'rɛɡjəlɚ",
+    "translation": "不规则的",
+    "translations": [
+      "不规则的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00402",
+    "word": "horizontally",
+    "phonetic": "",
+    "translation": "水平地",
+    "translations": [
+      "水平地"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00403",
+    "word": "vertically",
+    "phonetic": "'vɝtɪkli",
+    "translation": "竖直地",
+    "translations": [
+      "竖直地"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00404",
+    "word": "perpendicular",
+    "phonetic": "'pɝpən'dɪkjəlɚ",
+    "translation": "垂直的",
+    "translations": [
+      "垂直的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00405",
+    "word": "triangle",
+    "phonetic": "'traɪæŋɡl",
+    "translation": "三角形",
+    "translations": [
+      "三角形"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00406",
+    "word": "square",
+    "phonetic": "skwɛr",
+    "translation": "正方形",
+    "translations": [
+      "正方形"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00407",
+    "word": "circle",
+    "phonetic": "'sɝkl",
+    "translation": "圆形",
+    "translations": [
+      "圆形"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00408",
+    "word": "cube",
+    "phonetic": "kjʊb",
+    "translation": "立方",
+    "translations": [
+      "立方"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00409",
+    "word": "cylinder",
+    "phonetic": "'sɪlɪndɚ",
+    "translation": "圆柱",
+    "translations": [
+      "圆柱"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00410",
+    "word": "sphere",
+    "phonetic": "sfɪr",
+    "translation": "圆球",
+    "translations": [
+      "圆球"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00411",
+    "word": "hemisphere",
+    "phonetic": "'hɛmɪsfɪr",
+    "translation": "半球",
+    "translations": [
+      "半球"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00412",
+    "word": "cone",
+    "phonetic": "kon",
+    "translation": "圆锥",
+    "translations": [
+      "圆锥"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00413",
+    "word": "pyramid",
+    "phonetic": "'pɪrəmɪd",
+    "translation": "金字塔",
+    "translations": [
+      "金字塔"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00414",
+    "word": "texture",
+    "phonetic": "'tɛkstʃɚ",
+    "translation": "纹理质地",
+    "translations": [
+      "纹理质地"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00415",
+    "word": "orientation",
+    "phonetic": "orɪɛn'teʃən",
+    "translation": "方向",
+    "translations": [
+      "方向"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00416",
+    "word": "The Forbidden City",
+    "phonetic": "",
+    "translation": "故宫",
+    "translations": [
+      "故宫"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00417",
+    "word": "axis",
+    "phonetic": "'æksɪs",
+    "translation": "轴线",
+    "translations": [
+      "轴线"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00418",
+    "word": "overcast sky",
+    "phonetic": "",
+    "translation": "阴天",
+    "translations": [
+      "阴天"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00419",
+    "word": "built environment",
+    "phonetic": "",
+    "translation": "建成环境",
+    "translations": [
+      "建成环境"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00420",
+    "word": "perspective",
+    "phonetic": "pɚ'spɛktɪv",
+    "translation": "透视图",
+    "translations": [
+      "透视图"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00421",
+    "word": "additive principle",
+    "phonetic": "",
+    "translation": "附加原则",
+    "translations": [
+      "附加原则"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00422",
+    "word": "subtractive principle",
+    "phonetic": "",
+    "translation": "减法原则",
+    "translations": [
+      "减法原则"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00423",
+    "word": "transformation principle",
+    "phonetic": "",
+    "translation": "变形原则",
+    "translations": [
+      "变形原则"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00424",
+    "word": "balance",
+    "phonetic": "'bæləns",
+    "translation": "平衡",
+    "translations": [
+      "平衡"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00425",
+    "word": "symmetry",
+    "phonetic": "'sɪmətri",
+    "translation": "对称",
+    "translations": [
+      "对称"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00426",
+    "word": "architectural composition",
+    "phonetic": "",
+    "translation": "建筑构图",
+    "translations": [
+      "建筑构图"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00427",
+    "word": "asymmetry",
+    "phonetic": "e'sɪmɪtri",
+    "translation": "不对称",
+    "translations": [
+      "不对称"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00428",
+    "word": "hierarchy",
+    "phonetic": "'haɪərɑrki",
+    "translation": "层级",
+    "translations": [
+      "层级"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00429",
+    "word": "repetition",
+    "phonetic": "'rɛpə'tɪʃən",
+    "translation": "重复",
+    "translations": [
+      "重复"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00430",
+    "word": "rhythm",
+    "phonetic": "'rɪðəm",
+    "translation": "韵律",
+    "translations": [
+      "韵律"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00431",
+    "word": "bay",
+    "phonetic": "",
+    "translation": "开间",
+    "translations": [
+      "开间"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00432",
+    "word": "layering",
+    "phonetic": "",
+    "translation": "分层",
+    "translations": [
+      "分层"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00433",
+    "word": "reinforce",
+    "phonetic": ",riɪn'fɔrs",
+    "translation": "加强",
+    "translations": [
+      "加强"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00434",
+    "word": "hallway",
+    "phonetic": "'hɔlwe",
+    "translation": "走廊",
+    "translations": [
+      "走廊"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00435",
+    "word": "form",
+    "phonetic": "fɔrm",
+    "translation": "形式",
+    "translations": [
+      "形式"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00436",
+    "word": "orientation",
+    "phonetic": "orɪɛn'teʃən",
+    "translation": "方向",
+    "translations": [
+      "方向"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00437",
+    "word": "circulation",
+    "phonetic": ",sɝkjə'leʃən",
+    "translation": "流通",
+    "translations": [
+      "流通"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00438",
+    "word": "linear",
+    "phonetic": "'lɪnɪɚ",
+    "translation": "直线的",
+    "translations": [
+      "直线的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00439",
+    "word": "topography",
+    "phonetic": "tə'pɑgrəfi",
+    "translation": "地形学",
+    "translations": [
+      "地形学"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00440",
+    "word": "slope",
+    "phonetic": "slop",
+    "translation": "斜坡",
+    "translations": [
+      "斜坡"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00441",
+    "word": "demolition = demolishment",
+    "phonetic": "",
+    "translation": "拆除",
+    "translations": [
+      "拆除"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00442",
+    "word": "proportion",
+    "phonetic": "prə'pɔrʃən",
+    "translation": "比例",
+    "translations": [
+      "比例"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00443",
+    "word": "deconstruction",
+    "phonetic": "",
+    "translation": "解构",
+    "translations": [
+      "解构"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00444",
+    "word": "postmodern",
+    "phonetic": ",post'mɑdɚn",
+    "translation": "后现代主义",
+    "translations": [
+      "后现代主义"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00445",
+    "word": "appearance",
+    "phonetic": "ə'pɪrəns",
+    "translation": "外貌",
+    "translations": [
+      "外貌"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00446",
+    "word": "proportioning",
+    "phonetic": "",
+    "translation": "使匀称",
+    "translations": [
+      "使匀称"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00447",
+    "word": "The Golden Section",
+    "phonetic": "",
+    "translation": "黄金分割",
+    "translations": [
+      "黄金分割"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00448",
+    "word": "regulating line",
+    "phonetic": "",
+    "translation": "控制线",
+    "translations": [
+      "控制线"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00449",
+    "word": "lintel",
+    "phonetic": "'lɪntl",
+    "translation": "过梁",
+    "translations": [
+      "过梁"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00450",
+    "word": "beam",
+    "phonetic": "bim",
+    "translation": "横梁",
+    "translations": [
+      "横梁"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00451",
+    "word": "vernacular design",
+    "phonetic": "",
+    "translation": "乡土设计",
+    "translations": [
+      "乡土设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00452",
+    "word": "vernacular",
+    "phonetic": "vɚ'nækjəlɚ",
+    "translation": "本地的",
+    "translations": [
+      "本地的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00453",
+    "word": "granite",
+    "phonetic": "'grænɪt",
+    "translation": "花岗岩",
+    "translations": [
+      "花岗岩"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00454",
+    "word": "limestone",
+    "phonetic": "'laɪmston",
+    "translation": "石灰岩",
+    "translations": [
+      "石灰岩"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00455",
+    "word": "mortar",
+    "phonetic": "'mɔrtɚ",
+    "translation": "砂浆",
+    "translations": [
+      "砂浆"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00456",
+    "word": "arch",
+    "phonetic": "ɑrtʃ",
+    "translation": "券",
+    "translations": [
+      "券"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00457",
+    "word": "vault",
+    "phonetic": "vɔlt",
+    "translation": "拱",
+    "translations": [
+      "拱"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00458",
+    "word": "barrel vault",
+    "phonetic": "",
+    "translation": "筒形拱",
+    "translations": [
+      "筒形拱"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00459",
+    "word": "dome",
+    "phonetic": "dom",
+    "translation": "穹顶",
+    "translations": [
+      "穹顶"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00460",
+    "word": "spring line",
+    "phonetic": "",
+    "translation": "拱脚线",
+    "translations": [
+      "拱脚线"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00461",
+    "word": "secular",
+    "phonetic": "'sɛkjəlɚ",
+    "translation": "世俗的",
+    "translations": [
+      "世俗的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00462",
+    "word": "castle",
+    "phonetic": "'kæsl",
+    "translation": "城堡",
+    "translations": [
+      "城堡"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00463",
+    "word": "cable",
+    "phonetic": "'kebl",
+    "translation": "电缆",
+    "translations": [
+      "电缆"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00464",
+    "word": "cathedral",
+    "phonetic": "kə'θidrəl",
+    "translation": "教堂",
+    "translations": [
+      "教堂"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00465",
+    "word": "Renaissance",
+    "phonetic": "",
+    "translation": "文艺复兴",
+    "translations": [
+      "文艺复兴"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00466",
+    "word": "baroque",
+    "phonetic": "",
+    "translation": "巴洛克风格",
+    "translations": [
+      "巴洛克风格"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00467",
+    "word": "Neo-Classicism",
+    "phonetic": "",
+    "translation": "新古典主义",
+    "translations": [
+      "新古典主义"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00468",
+    "word": "prefabricated",
+    "phonetic": ",pri'fæbrɪketɪd",
+    "translation": "预制的",
+    "translations": [
+      "预制的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00469",
+    "word": "parameter",
+    "phonetic": "pə'ræmɪtɚ",
+    "translation": "参数",
+    "translations": [
+      "参数"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00470",
+    "word": "axis",
+    "phonetic": "'æksɪs",
+    "translation": "轴线",
+    "translations": [
+      "轴线"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00471",
+    "word": "courtyard",
+    "phonetic": "'kɔrtjɑrd",
+    "translation": "庭院",
+    "translations": [
+      "庭院"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00472",
+    "word": "hierarchy",
+    "phonetic": "'haɪərɑrki",
+    "translation": "等级",
+    "translations": [
+      "等级"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00473",
+    "word": "site selection",
+    "phonetic": "",
+    "translation": "选址",
+    "translations": [
+      "选址"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00474",
+    "word": "pavilion",
+    "phonetic": "pə'vɪlɪən",
+    "translation": "亭",
+    "translations": [
+      "亭"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00475",
+    "word": "pagoda",
+    "phonetic": "pə'ɡodə",
+    "translation": "塔",
+    "translations": [
+      "塔"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00476",
+    "word": "scale",
+    "phonetic": "skel",
+    "translation": "规模",
+    "translations": [
+      "规模"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00477",
+    "word": "The Forbidden City",
+    "phonetic": "",
+    "translation": "紫禁城",
+    "translations": [
+      "紫禁城"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00478",
+    "word": "720,000 square meters 720000",
+    "phonetic": "",
+    "translation": "平方米",
+    "translations": [
+      "平方米"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00479",
+    "word": "secular",
+    "phonetic": "'sɛkjəlɚ",
+    "translation": "世俗的",
+    "translations": [
+      "世俗的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00480",
+    "word": "pavilion",
+    "phonetic": "pə'vɪlɪən",
+    "translation": "亭",
+    "translations": [
+      "亭"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00481",
+    "word": "square",
+    "phonetic": "skwɛr",
+    "translation": "正方形",
+    "translations": [
+      "正方形"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00482",
+    "word": "triangle",
+    "phonetic": "'traɪæŋɡl",
+    "translation": "三角形",
+    "translations": [
+      "三角形"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00483",
+    "word": "column",
+    "phonetic": "'kɑləm",
+    "translation": "圆柱",
+    "translations": [
+      "圆柱"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00484",
+    "word": "waterfront",
+    "phonetic": "'wɔtɚfrʌnt",
+    "translation": "滨水区",
+    "translations": [
+      "滨水区"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00485",
+    "word": "kiosk",
+    "phonetic": "'kiɑsk",
+    "translation": "凉亭",
+    "translations": [
+      "凉亭"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00486",
+    "word": "dormer window",
+    "phonetic": "",
+    "translation": "老虎窗",
+    "translations": [
+      "老虎窗"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00487",
+    "word": "elevated",
+    "phonetic": "'ɛlɪvetɪd",
+    "translation": "抬高的",
+    "translations": [
+      "抬高的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00488",
+    "word": "belvedere",
+    "phonetic": "",
+    "translation": "观景台",
+    "translations": [
+      "观景台"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00489",
+    "word": "ruin",
+    "phonetic": "'ruɪn",
+    "translation": "遗迹",
+    "translations": [
+      "遗迹"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00490",
+    "word": "main ridge",
+    "phonetic": "",
+    "translation": "正脊",
+    "translations": [
+      "正脊"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00491",
+    "word": "bell and drum tower",
+    "phonetic": "",
+    "translation": "钟鼓楼",
+    "translations": [
+      "钟鼓楼"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00492",
+    "word": "overhanging eave",
+    "phonetic": "",
+    "translation": "挑檐",
+    "translations": [
+      "挑檐"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00493",
+    "word": "handrail",
+    "phonetic": "",
+    "translation": "扶手/栏杆",
+    "translations": [
+      "扶手/栏杆"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00494",
+    "word": "railing",
+    "phonetic": "",
+    "translation": "扶手/栏杆",
+    "translations": [
+      "扶手/栏杆"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00495",
+    "word": "Confucius Temple",
+    "phonetic": "",
+    "translation": "孔庙",
+    "translations": [
+      "孔庙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00496",
+    "word": "pagoda",
+    "phonetic": "pə'ɡodə",
+    "translation": "宝塔",
+    "translations": [
+      "宝塔"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00497",
+    "word": "metaphor",
+    "phonetic": "'mɛtəfɚ",
+    "translation": "暗喻",
+    "translations": [
+      "暗喻"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00498",
+    "word": "cottage",
+    "phonetic": "'kɑtɪdʒ",
+    "translation": "小别墅",
+    "translations": [
+      "小别墅"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00499",
+    "word": "intimacy",
+    "phonetic": "'ɪntɪməsi",
+    "translation": "隐私",
+    "translations": [
+      "隐私"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00500",
+    "word": "permeable",
+    "phonetic": "'pɝmɪəbl",
+    "translation": "有渗透性的",
+    "translations": [
+      "有渗透性的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00501",
+    "word": "explicit",
+    "phonetic": "ɪk'splɪsɪt",
+    "translation": "明确的",
+    "translations": [
+      "明确的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00502",
+    "word": "realm",
+    "phonetic": "rɛlm",
+    "translation": "领域",
+    "translations": [
+      "领域"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00503",
+    "word": "adjacent",
+    "phonetic": "ə'dʒesnt",
+    "translation": "邻近的",
+    "translations": [
+      "邻近的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00504",
+    "word": "sidewalk",
+    "phonetic": "'saɪdwɔk",
+    "translation": "人行道",
+    "translations": [
+      "人行道"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00505",
+    "word": "awning",
+    "phonetic": "'ɔnɪŋ",
+    "translation": "遮阳棚",
+    "translations": [
+      "遮阳棚"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00506",
+    "word": "trellis",
+    "phonetic": "",
+    "translation": "植物棚架",
+    "translations": [
+      "植物棚架"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00507",
+    "word": "canopy/arbor",
+    "phonetic": "",
+    "translation": "树冠",
+    "translations": [
+      "树冠"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00508",
+    "word": "client",
+    "phonetic": "'klaɪənt",
+    "translation": "客户",
+    "translations": [
+      "客户"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00509",
+    "word": "mortar",
+    "phonetic": "'mɔrtɚ",
+    "translation": "灰浆",
+    "translations": [
+      "灰浆"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00510",
+    "word": "potted plant",
+    "phonetic": "",
+    "translation": "盆栽",
+    "translations": [
+      "盆栽"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00511",
+    "word": "transit stop",
+    "phonetic": "",
+    "translation": "公共交通停车点",
+    "translations": [
+      "公共交通停车点"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00512",
+    "word": "pedestrian",
+    "phonetic": "pə'dɛstrɪən",
+    "translation": "行人",
+    "translations": [
+      "行人"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00513",
+    "word": "kiosk",
+    "phonetic": "'kiɑsk",
+    "translation": "公用电话亭",
+    "translations": [
+      "公用电话亭"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00514",
+    "word": "linger",
+    "phonetic": "'lɪŋɡɚ",
+    "translation": "徘徊",
+    "translations": [
+      "徘徊"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00515",
+    "word": "permeable",
+    "phonetic": "'pɝmɪəbl",
+    "translation": "有渗透性",
+    "translations": [
+      "有渗透性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00516",
+    "word": "retrofit",
+    "phonetic": "",
+    "translation": "翻新",
+    "translations": [
+      "翻新"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00517",
+    "word": "townhouse",
+    "phonetic": "",
+    "translation": "联排住宅",
+    "translations": [
+      "联排住宅"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00518",
+    "word": "context",
+    "phonetic": "'kɑntɛkst",
+    "translation": "文脉",
+    "translations": [
+      "文脉"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00519",
+    "word": "permeable",
+    "phonetic": "'pɝmɪəbl",
+    "translation": "渗透的",
+    "translations": [
+      "渗透的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00520",
+    "word": "pedestrian-oriented",
+    "phonetic": "",
+    "translation": "以行人为导向",
+    "translations": [
+      "以行人为导向"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00521",
+    "word": "blind",
+    "phonetic": "blaɪnd",
+    "translation": "百叶窗",
+    "translations": [
+      "百叶窗"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00522",
+    "word": "visibility",
+    "phonetic": "'vɪzə'bɪləti",
+    "translation": "可见性",
+    "translations": [
+      "可见性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00523",
+    "word": "mixed-use building",
+    "phonetic": "",
+    "translation": "多功能住宅",
+    "translations": [
+      "多功能住宅"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00524",
+    "word": "urban arterial",
+    "phonetic": "",
+    "translation": "城市主干道",
+    "translations": [
+      "城市主干道"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00525",
+    "word": "auto-oriented",
+    "phonetic": "",
+    "translation": "汽车导向的",
+    "translations": [
+      "汽车导向的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00526",
+    "word": "contextualizm",
+    "phonetic": "",
+    "translation": "文脉主义",
+    "translations": [
+      "文脉主义"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00527",
+    "word": "traffic calming",
+    "phonetic": "",
+    "translation": "交通稳静化",
+    "translations": [
+      "交通稳静化"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00528",
+    "word": "geometry",
+    "phonetic": "dʒɪ'ɑmətri",
+    "translation": "几何学",
+    "translations": [
+      "几何学"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00529",
+    "word": "dimension",
+    "phonetic": "dəˈmɛnʃən, daɪ-",
+    "translation": "维度",
+    "translations": [
+      "维度"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00530",
+    "word": "pedestrian",
+    "phonetic": "pə'dɛstrɪən",
+    "translation": "行人",
+    "translations": [
+      "行人"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00531",
+    "word": "curd",
+    "phonetic": "kɝd",
+    "translation": "路边石",
+    "translations": [
+      "路边石"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00532",
+    "word": "street grid",
+    "phonetic": "",
+    "translation": "街道方格网",
+    "translations": [
+      "街道方格网"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00533",
+    "word": "block",
+    "phonetic": "blɑk",
+    "translation": "街区",
+    "translations": [
+      "街区"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00534",
+    "word": "short block",
+    "phonetic": "",
+    "translation": "小街区",
+    "translations": [
+      "小街区"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00535",
+    "word": "superblock",
+    "phonetic": "",
+    "translation": "超级街区",
+    "translations": [
+      "超级街区"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00536",
+    "word": "cul-de-sacs",
+    "phonetic": "",
+    "translation": "尽端路",
+    "translations": [
+      "尽端路"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00537",
+    "word": "turning radius",
+    "phonetic": "",
+    "translation": "转弯半径",
+    "translations": [
+      "转弯半径"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00538",
+    "word": "feet",
+    "phonetic": "",
+    "translation": "英尺",
+    "translations": [
+      "英尺"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00539",
+    "word": "intersection",
+    "phonetic": ",ɪntɚ'sɛkʃən",
+    "translation": "交叉口",
+    "translations": [
+      "交叉口"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00540",
+    "word": "roundabout",
+    "phonetic": "'raʊndəbaʊt",
+    "translation": "环岛",
+    "translations": [
+      "环岛"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00541",
+    "word": "crosswalk",
+    "phonetic": "",
+    "translation": "人行横道",
+    "translations": [
+      "人行横道"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00542",
+    "word": "inch",
+    "phonetic": "ɪntʃ",
+    "translation": "英寸",
+    "translations": [
+      "英寸"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00543",
+    "word": "pavement",
+    "phonetic": "'pevmənt",
+    "translation": "铺装",
+    "translations": [
+      "铺装"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00544",
+    "word": "speed hump",
+    "phonetic": "",
+    "translation": "减速丘",
+    "translations": [
+      "减速丘"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00545",
+    "word": "transportation corridor",
+    "phonetic": "",
+    "translation": "交通走廊",
+    "translations": [
+      "交通走廊"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00546",
+    "word": "on-street parking",
+    "phonetic": "",
+    "translation": "沿街停车",
+    "translations": [
+      "沿街停车"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00547",
+    "word": "vehicle",
+    "phonetic": "ˈviəkəl",
+    "translation": "车辆",
+    "translations": [
+      "车辆"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00548",
+    "word": "buffer",
+    "phonetic": "'bʌfɚ",
+    "translation": "缓冲",
+    "translations": [
+      "缓冲"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00549",
+    "word": "loading",
+    "phonetic": "",
+    "translation": "卸货",
+    "translations": [
+      "卸货"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00550",
+    "word": "steep",
+    "phonetic": "stip",
+    "translation": "陡峭的",
+    "translations": [
+      "陡峭的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00551",
+    "word": "topography",
+    "phonetic": "tə'pɑgrəfi",
+    "translation": "地形",
+    "translations": [
+      "地形"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00552",
+    "word": "mass transit",
+    "phonetic": "",
+    "translation": "公共交通",
+    "translations": [
+      "公共交通"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00553",
+    "word": "universal design",
+    "phonetic": "",
+    "translation": "通用设计",
+    "translations": [
+      "通用设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00554",
+    "word": "ramp",
+    "phonetic": "ræmp",
+    "translation": "斜坡",
+    "translations": [
+      "斜坡"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00555",
+    "word": "universal access",
+    "phonetic": "",
+    "translation": "无障碍设计",
+    "translations": [
+      "无障碍设计"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00556",
+    "word": "porch",
+    "phonetic": "pɔrtʃ",
+    "translation": "门廊",
+    "translations": [
+      "门廊"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00557",
+    "word": "street vendor",
+    "phonetic": "",
+    "translation": "街头小贩",
+    "translations": [
+      "街头小贩"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00558",
+    "word": "node",
+    "phonetic": "nod",
+    "translation": "节点",
+    "translations": [
+      "节点"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00559",
+    "word": "stairwell",
+    "phonetic": "",
+    "translation": "楼梯间",
+    "translations": [
+      "楼梯间"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00560",
+    "word": "code",
+    "phonetic": "kod",
+    "translation": "代码",
+    "translations": [
+      "代码"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00561",
+    "word": "adjacent",
+    "phonetic": "ə'dʒesnt",
+    "translation": "邻近的",
+    "translations": [
+      "邻近的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00562",
+    "word": "elevator core",
+    "phonetic": "",
+    "translation": "电梯核心",
+    "translations": [
+      "电梯核心"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00563",
+    "word": "energy efficient building",
+    "phonetic": "",
+    "translation": "节能建筑",
+    "translations": [
+      "节能建筑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00564",
+    "word": "green building",
+    "phonetic": "",
+    "translation": "绿色建筑",
+    "translations": [
+      "绿色建筑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00565",
+    "word": "sustainable building",
+    "phonetic": "",
+    "translation": "可持续建筑",
+    "translations": [
+      "可持续建筑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00566",
+    "word": "net-zero building",
+    "phonetic": "",
+    "translation": "净零建筑",
+    "translations": [
+      "净零建筑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00567",
+    "word": "passive house/building",
+    "phonetic": "",
+    "translation": "被动房屋/建筑物",
+    "translations": [
+      "被动房屋/建筑物"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00568",
+    "word": "demolition",
+    "phonetic": ",dɛmə'lɪʃən; ,dimə'lɪʃən",
+    "translation": "拆除",
+    "translations": [
+      "拆除"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00569",
+    "word": "walkable community",
+    "phonetic": "",
+    "translation": "步行社区",
+    "translations": [
+      "步行社区"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00570",
+    "word": "recreation",
+    "phonetic": ",rɛkrɪ'eʃən",
+    "translation": "娱乐",
+    "translations": [
+      "娱乐"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00571",
+    "word": "daylight",
+    "phonetic": "'delaɪt",
+    "translation": "日光",
+    "translations": [
+      "日光"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00572",
+    "word": "artificial lighting",
+    "phonetic": "",
+    "translation": "人造灯光",
+    "translations": [
+      "人造灯光"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00573",
+    "word": "natural ventilation",
+    "phonetic": "",
+    "translation": "自然通风",
+    "translations": [
+      "自然通风"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00574",
+    "word": "grey water",
+    "phonetic": "",
+    "translation": "灰水 (生活用水中污染较轻可再次利 用的水)",
+    "translations": [
+      "灰水 (生活用水中污染较轻可再次利 用的水)"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00575",
+    "word": "potable water",
+    "phonetic": "",
+    "translation": "饮用水",
+    "translations": [
+      "饮用水"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00576",
+    "word": "recycling",
+    "phonetic": ",ri'saɪklɪŋ",
+    "translation": "回收",
+    "translations": [
+      "回收"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00577",
+    "word": "historic preservation",
+    "phonetic": "",
+    "translation": "历史性保护",
+    "translations": [
+      "历史性保护"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00578",
+    "word": "restoration",
+    "phonetic": "'rɛstə'reʃən",
+    "translation": "修复",
+    "translations": [
+      "修复"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00579",
+    "word": "adaptive reuse",
+    "phonetic": "",
+    "translation": "适应性",
+    "translations": [
+      "适应性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00580",
+    "word": "intimate",
+    "phonetic": "ˈɪntəmɪt",
+    "translation": "私密性",
+    "translations": [
+      "私密性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00581",
+    "word": "human scale",
+    "phonetic": "",
+    "translation": "人体尺度",
+    "translations": [
+      "人体尺度"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00582",
+    "word": "interstate",
+    "phonetic": "'ɪntɚstet",
+    "translation": "州际的",
+    "translations": [
+      "州际的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00583",
+    "word": "convention center",
+    "phonetic": "",
+    "translation": "会展中心",
+    "translations": [
+      "会展中心"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00584",
+    "word": "air well",
+    "phonetic": "",
+    "translation": "通风井",
+    "translations": [
+      "通风井"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00585",
+    "word": "mechanical ventilation",
+    "phonetic": "",
+    "translation": "机械通风",
+    "translations": [
+      "机械通风"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00586",
+    "word": "right-of-way",
+    "phonetic": "",
+    "translation": "路权",
+    "translations": [
+      "路权"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00587",
+    "word": "backfill",
+    "phonetic": "",
+    "translation": "回填",
+    "translations": [
+      "回填"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00588",
+    "word": "insulation",
+    "phonetic": ",ɪnsə'leʃən",
+    "translation": "保温",
+    "translations": [
+      "保温"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00589",
+    "word": "R-value",
+    "phonetic": "",
+    "translation": "热阻",
+    "translations": [
+      "热阻"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00590",
+    "word": "air tightness",
+    "phonetic": "",
+    "translation": "密封性",
+    "translations": [
+      "密封性"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00591",
+    "word": "passive heating, passive cooling, passive lighting",
+    "phonetic": "",
+    "translation": "被动加热 、被动冷却、被动照明",
+    "translations": [
+      "被动加热 、被动冷却、被动照明"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00592",
+    "word": "regionalism",
+    "phonetic": "",
+    "translation": "地区主义",
+    "translations": [
+      "地区主义"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00593",
+    "word": "mild",
+    "phonetic": "maɪld",
+    "translation": "温和的",
+    "translations": [
+      "温和的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00594",
+    "word": "massive",
+    "phonetic": "'mæsɪv",
+    "translation": "厚重的",
+    "translations": [
+      "厚重的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00595",
+    "word": "time-lag effect",
+    "phonetic": "",
+    "translation": "时滞效应",
+    "translations": [
+      "时滞效应"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00596",
+    "word": "solar radiation",
+    "phonetic": "",
+    "translation": "太阳辐射",
+    "translations": [
+      "太阳辐射"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00597",
+    "word": "diffuse",
+    "phonetic": "dɪ'fjus",
+    "translation": "弥漫的",
+    "translations": [
+      "弥漫的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00598",
+    "word": "flat",
+    "phonetic": "flæt",
+    "translation": "公寓",
+    "translations": [
+      "公寓"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00599",
+    "word": "clustered",
+    "phonetic": "",
+    "translation": "组团的",
+    "translations": [
+      "组团的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00600",
+    "word": "humid",
+    "phonetic": "'hjumɪd",
+    "translation": "潮湿的",
+    "translations": [
+      "潮湿的"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00601",
+    "word": "evaporative cooling",
+    "phonetic": "",
+    "translation": "蒸发冷却",
+    "translations": [
+      "蒸发冷却"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00602",
+    "word": "direct solar radiation",
+    "phonetic": "",
+    "translation": "直接太阳辐射",
+    "translations": [
+      "直接太阳辐射"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00603",
+    "word": "ventilation",
+    "phonetic": ",vɛntl'eʃən",
+    "translation": "通风",
+    "translations": [
+      "通风"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00604",
+    "word": "winds scoop",
+    "phonetic": "",
+    "translation": "招风斗",
+    "translations": [
+      "招风斗"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00605",
+    "word": "overhang",
+    "phonetic": ",ovɚ'hæŋ",
+    "translation": "悬挑",
+    "translations": [
+      "悬挑"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00606",
+    "word": "shutter",
+    "phonetic": "'ʃʌtɚ",
+    "translation": "百叶窗",
+    "translations": [
+      "百叶窗"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00607",
+    "word": "ceiling",
+    "phonetic": "'silɪŋ",
+    "translation": "天花板",
+    "translations": [
+      "天花板"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00608",
+    "word": "clerestory window",
+    "phonetic": "",
+    "translation": "高侧窗",
+    "translations": [
+      "高侧窗"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00609",
+    "word": "gabled roof",
+    "phonetic": "",
+    "translation": "人字形坡屋顶",
+    "translations": [
+      "人字形坡屋顶"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00610",
+    "word": "bay window",
+    "phonetic": "",
+    "translation": "飘窗",
+    "translations": [
+      "飘窗"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00611",
+    "word": "surface-area-to-volume ratio",
+    "phonetic": "",
+    "translation": "体形系数",
+    "translations": [
+      "体形系数"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00612",
+    "word": "thermal resistance",
+    "phonetic": "",
+    "translation": "热阻",
+    "translations": [
+      "热阻"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00613",
+    "word": "greenhouse effect",
+    "phonetic": "",
+    "translation": "温室效应",
+    "translations": [
+      "温室效应"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00614",
+    "word": "villa",
+    "phonetic": "'vɪlə",
+    "translation": "别墅",
+    "translations": [
+      "别墅"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00615",
+    "word": "conservatory",
+    "phonetic": "kən'sɝvətɔri",
+    "translation": "温室暖房",
+    "translations": [
+      "温室暖房"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00616",
+    "word": "glazing",
+    "phonetic": "",
+    "translation": "玻璃",
+    "translations": [
+      "玻璃"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00617",
+    "word": "thermal mass",
+    "phonetic": "",
+    "translation": "蓄热体",
+    "translations": [
+      "蓄热体"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00618",
+    "word": "floor slab",
+    "phonetic": "",
+    "translation": "楼板",
+    "translations": [
+      "楼板"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00619",
+    "word": "cavity wall",
+    "phonetic": "",
+    "translation": "空心墙",
+    "translations": [
+      "空心墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00620",
+    "word": "cross-ventilation",
+    "phonetic": "",
+    "translation": "穿堂风",
+    "translations": [
+      "穿堂风"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00621",
+    "word": "active solar",
+    "phonetic": "",
+    "translation": "主动式太阳能",
+    "translations": [
+      "主动式太阳能"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00622",
+    "word": "phase change material",
+    "phonetic": "",
+    "translation": "相变材料",
+    "translations": [
+      "相变材料"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00623",
+    "word": "latent heat",
+    "phonetic": "",
+    "translation": "潜热",
+    "translations": [
+      "潜热"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00624",
+    "word": "convection",
+    "phonetic": "kən'vɛkʃən",
+    "translation": "对流",
+    "translations": [
+      "对流"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00625",
+    "word": "clerestory window",
+    "phonetic": "",
+    "translation": "天窗",
+    "translations": [
+      "天窗"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00626",
+    "word": "trombe wall",
+    "phonetic": "",
+    "translation": "龙骨墙 ，特隆布墙",
+    "translations": [
+      "龙骨墙 ，特隆布墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00627",
+    "word": "coating",
+    "phonetic": "'kotɪŋ",
+    "translation": "涂层",
+    "translations": [
+      "涂层"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00628",
+    "word": "parapet wall",
+    "phonetic": "",
+    "translation": "矮墙 ，女儿墙",
+    "translations": [
+      "矮墙 ，女儿墙"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00629",
+    "word": "awning",
+    "phonetic": "'ɔnɪŋ",
+    "translation": "遮阳棚",
+    "translations": [
+      "遮阳棚"
+    ],
+    "domain": "qwerty_archvocabulary"
+  },
+  {
+    "id": "qwerty_archvocabulary_00630",
+    "word": "operable window",
+    "phonetic": "",
+    "translation": "可操作窗口",
+    "translations": [
+      "可操作窗口"
+    ],
+    "domain": "qwerty_archvocabulary"
+  }
+]

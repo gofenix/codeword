@@ -1,0 +1,4237 @@
+[
+  {
+    "id": "qwerty_ba1_00001",
+    "word": "anyone",
+    "phonetic": "'ɛnɪ'wʌn",
+    "translation": "任何人",
+    "translations": [
+      "任何人"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00002",
+    "word": "anywhere",
+    "phonetic": "'ɛnɪwɛr",
+    "translation": "任何地方；任何(一个)地方",
+    "translations": [
+      "任何地方",
+      "任何(一个)地方"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00003",
+    "word": "wonderful",
+    "phonetic": "ˈwʌndɚfəl",
+    "translation": "精彩的；极好的",
+    "translations": [
+      "精彩的；极好的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00004",
+    "word": "few",
+    "phonetic": "fju",
+    "translation": "很少的；；少量",
+    "translations": [
+      "很少的；",
+      "少量"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00005",
+    "word": "quite a few",
+    "phonetic": "",
+    "translation": "相当多；不少(后接可数名词)",
+    "translations": [
+      "相当多；不少(后接可数名词)"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00006",
+    "word": "most",
+    "phonetic": "most",
+    "translation": "最多的；大多数的",
+    "translations": [
+      "最多的；大多数的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00007",
+    "word": "something",
+    "phonetic": "'sʌmθɪŋ",
+    "translation": "某事物",
+    "translations": [
+      "某事物"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00008",
+    "word": "nothing",
+    "phonetic": "'nʌθɪŋ",
+    "translation": "没有什么；没有",
+    "translations": [
+      "没有什么",
+      "没有"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00009",
+    "word": "everyone",
+    "phonetic": "'ɛvrɪwʌn",
+    "translation": "每人；人人",
+    "translations": [
+      "每人；人人"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00010",
+    "word": "of course",
+    "phonetic": "",
+    "translation": "当然",
+    "translations": [
+      "当然"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00011",
+    "word": "myself",
+    "phonetic": "maɪ'sɛlf",
+    "translation": "我自己",
+    "translations": [
+      "我自己"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00012",
+    "word": "yourself",
+    "phonetic": "jɔr'sɛlf",
+    "translation": "你自己；你亲自",
+    "translations": [
+      "你自己；你亲自"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00013",
+    "word": "hen",
+    "phonetic": "hɛn",
+    "translation": "母鸡；雌禽",
+    "translations": [
+      "母鸡；雌禽"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00014",
+    "word": "pig",
+    "phonetic": "pɪɡ",
+    "translation": "猪",
+    "translations": [
+      "猪"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00015",
+    "word": "seem",
+    "phonetic": "sim",
+    "translation": "似乎；好像",
+    "translations": [
+      "似乎；好像"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00016",
+    "word": "bored",
+    "phonetic": "bɔrd",
+    "translation": "无聊的；厌烦的；郁闷的",
+    "translations": [
+      "无聊的；厌烦的；郁闷的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00017",
+    "word": "someone",
+    "phonetic": "'sʌmwʌn",
+    "translation": "某人；有人",
+    "translations": [
+      "某人；有人"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00018",
+    "word": "diary",
+    "phonetic": "'daɪəri",
+    "translation": "日记；日记簿",
+    "translations": [
+      "日记；日记簿"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00019",
+    "word": "activity",
+    "phonetic": "ækˈtɪvətɪ",
+    "translation": "活动；活跃",
+    "translations": [
+      "活动；活跃"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00020",
+    "word": "decide",
+    "phonetic": "dɪ'saɪd",
+    "translation": "决定；选定(decide to do sth)",
+    "translations": [
+      "决定；选定(decide to do sth)"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00021",
+    "word": "try",
+    "phonetic": "traɪ",
+    "translation": "尝试；设法；努力  (try to do sth /try doing sth)",
+    "translations": [
+      "尝试；设法；努力  (try to do sth /try doing sth)"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00022",
+    "word": "paragliding",
+    "phonetic": "",
+    "translation": "空中滑翔跳伞",
+    "translations": [
+      "空中滑翔跳伞"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00023",
+    "word": "feel like(doing sth.)",
+    "phonetic": "",
+    "translation": "想要",
+    "translations": [
+      "想要"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00024",
+    "word": "bird",
+    "phonetic": "bɝd",
+    "translation": "鸟；禽",
+    "translations": [
+      "鸟；禽"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00025",
+    "word": "bicycle",
+    "phonetic": "'baɪsɪkl",
+    "translation": "自行车",
+    "translations": [
+      "自行车"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00026",
+    "word": "building",
+    "phonetic": "'bɪldɪŋ",
+    "translation": "建筑物",
+    "translations": [
+      "建筑物"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00027",
+    "word": "trader",
+    "phonetic": "'tredɚ",
+    "translation": "商人",
+    "translations": [
+      "商人"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00028",
+    "word": "wonder",
+    "phonetic": "'wʌndɚ",
+    "translation": "想知道；惊奇；怀疑",
+    "translations": [
+      "想知道；惊奇；怀疑"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00029",
+    "word": "difference",
+    "phonetic": "'dɪfrəns",
+    "translation": "差异；不同",
+    "translations": [
+      "差异；不同"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00030",
+    "word": "top",
+    "phonetic": "tɑp",
+    "translation": "顶部；顶",
+    "translations": [
+      "顶部；顶"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00031",
+    "word": "wait",
+    "phonetic": "wet",
+    "translation": "等；等待(wait for)",
+    "translations": [
+      "等；等待(wait for)"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00032",
+    "word": "umbrella",
+    "phonetic": "ʌm'brɛlə",
+    "translation": "伞；雨伞",
+    "translations": [
+      "伞；雨伞"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00033",
+    "word": "wet",
+    "phonetic": "wɛt",
+    "translation": "湿的；雨天的；雨天的",
+    "translations": [
+      "湿的；雨天的；雨天的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00034",
+    "word": "because of",
+    "phonetic": "",
+    "translation": "因为；由于",
+    "translations": [
+      "因为；由于"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00035",
+    "word": "below",
+    "phonetic": "bɪ'lo",
+    "translation": "低于；在...下面；在...下面",
+    "translations": [
+      "低于；在...下面",
+      "在...下面"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00036",
+    "word": "enough",
+    "phonetic": "ɪ'nʌf",
+    "translation": "足够的；足够地；充分地",
+    "translations": [
+      "足够的",
+      "足够地；充分地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00037",
+    "word": "hungry",
+    "phonetic": "ˈhʌŋgrɪ",
+    "translation": "(反full)饥饿的；渴望的",
+    "translations": [
+      "(反full)饥饿的；渴望的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00038",
+    "word": "as",
+    "phonetic": "æz; əz",
+    "translation": "如同；像一样",
+    "translations": [
+      "如同；像一样"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00039",
+    "word": "hill",
+    "phonetic": "hɪl",
+    "translation": "小山；丘陵；山冈；斜坡",
+    "translations": [
+      "小山；丘陵；山冈；斜坡"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00040",
+    "word": "duck",
+    "phonetic": "dʌk",
+    "translation": "鸭；鸭肉",
+    "translations": [
+      "鸭；鸭肉"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00041",
+    "word": "dislike",
+    "phonetic": "dɪs'laɪk",
+    "translation": "不喜欢；厌恶；不喜爱；厌恶；反感",
+    "translations": [
+      "不喜欢；厌恶",
+      "不喜爱；厌恶；反感"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00042",
+    "word": "have a good time",
+    "phonetic": "",
+    "translation": "等于enjoy oneself/have fun(doing sth)玩得痛快",
+    "translations": [
+      "等于enjoy oneself/have fun(doing sth)玩得痛快"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00043",
+    "word": "Central Park",
+    "phonetic": "",
+    "translation": "中央公园",
+    "translations": [
+      "中央公园"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00044",
+    "word": "Huangguoshu waterfall",
+    "phonetic": "",
+    "translation": "黄果树瀑布",
+    "translations": [
+      "黄果树瀑布"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00045",
+    "word": "Hong Kong",
+    "phonetic": "",
+    "translation": "香港",
+    "translations": [
+      "香港"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00046",
+    "word": "Malaysia",
+    "phonetic": "mə'leʒə",
+    "translation": "马来西亚",
+    "translations": [
+      "马来西亚"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00047",
+    "word": "Georgetown",
+    "phonetic": "'dʒɔdʒtaun",
+    "translation": "乔治城（圭亚那首都）",
+    "translations": [
+      "乔治城（圭亚那首都）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00048",
+    "word": "Weld Quay",
+    "phonetic": "",
+    "translation": "海乾街/码头, 位于马来西亚槟城岛(州)",
+    "translations": [
+      "海乾街/码头, 位于马来西亚槟城岛(州)"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00049",
+    "word": "Penang Hill",
+    "phonetic": "",
+    "translation": "马来西亚槟榔山（升旗山）",
+    "translations": [
+      "马来西亚槟榔山（升旗山）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00050",
+    "word": "tian'anmen square",
+    "phonetic": "",
+    "translation": "天安门广场",
+    "translations": [
+      "天安门广场"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00051",
+    "word": "the Palace Museum",
+    "phonetic": "",
+    "translation": "故宫博物院",
+    "translations": [
+      "故宫博物院"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00052",
+    "word": "housework",
+    "phonetic": "'haʊs'wɝk",
+    "translation": "家务劳动",
+    "translations": [
+      "家务劳动"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00053",
+    "word": "hardly",
+    "phonetic": "'hɑrdli",
+    "translation": "几乎不；简直不；刚刚",
+    "translations": [
+      "几乎不；简直不；刚刚"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00054",
+    "word": "ever",
+    "phonetic": "'ɛvɚ",
+    "translation": "在任何时候",
+    "translations": [
+      "在任何时候"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00055",
+    "word": "hardly ever",
+    "phonetic": "",
+    "translation": "很少；几乎从不；难得",
+    "translations": [
+      "很少；几乎从不；难得"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00056",
+    "word": "once",
+    "phonetic": "wʌns",
+    "translation": "一次；曾经",
+    "translations": [
+      "一次；曾经"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00057",
+    "word": "twice",
+    "phonetic": "twaɪs",
+    "translation": "两次；两倍",
+    "translations": [
+      "两次；两倍"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00058",
+    "word": "Internet",
+    "phonetic": "'ɪntɚnɛt",
+    "translation": "因特网",
+    "translations": [
+      "因特网"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00059",
+    "word": "program",
+    "phonetic": "'proɡræm",
+    "translation": "程序；节目；节目单；课程",
+    "translations": [
+      "程序；节目；节目单；课程"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00060",
+    "word": "full",
+    "phonetic": "fʊl",
+    "translation": "满的；充满的；完全的",
+    "translations": [
+      "满的；充满的；完全的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00061",
+    "word": "swing",
+    "phonetic": "swɪŋ",
+    "translation": "摇摆；秋千；摇摆；旋转",
+    "translations": [
+      "摇摆；秋千",
+      "摇摆；旋转"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00062",
+    "word": "swing dance",
+    "phonetic": "",
+    "translation": "摇摆舞",
+    "translations": [
+      "摇摆舞"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00063",
+    "word": "maybe",
+    "phonetic": "'mebi",
+    "translation": "或许；也许；可能",
+    "translations": [
+      "或许；也许；可能"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00064",
+    "word": "least",
+    "phonetic": "list",
+    "translation": "最小的；最少的",
+    "translations": [
+      "最小的；最少的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00065",
+    "word": "at least",
+    "phonetic": "",
+    "translation": "至少",
+    "translations": [
+      "至少"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00066",
+    "word": "junk",
+    "phonetic": "dʒʌŋk",
+    "translation": "垃圾；废旧杂物",
+    "translations": [
+      "垃圾；废旧杂物"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00067",
+    "word": "junk food",
+    "phonetic": "",
+    "translation": "垃圾食品；无营养食品",
+    "translations": [
+      "垃圾食品；无营养食品"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00068",
+    "word": "coffee",
+    "phonetic": "'kɔfi",
+    "translation": "咖啡；咖啡色",
+    "translations": [
+      "咖啡；咖啡色"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00069",
+    "word": "health",
+    "phonetic": "hɛlθ",
+    "translation": "健康；人的身体或精神状态",
+    "translations": [
+      "健康；人的身体或精神状态"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00070",
+    "word": "result",
+    "phonetic": "rɪ'zʌlt",
+    "translation": "结果；后果",
+    "translations": [
+      "结果；后果"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00071",
+    "word": "percent",
+    "phonetic": "pɚ'sɛnt",
+    "translation": "百分之百的",
+    "translations": [
+      "百分之百的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00072",
+    "word": "online",
+    "phonetic": "'ɑn'laɪn",
+    "translation": "在线的；在线地",
+    "translations": [
+      "在线的",
+      "在线地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00073",
+    "word": "television",
+    "phonetic": "tɛləˌvɪʒən",
+    "translation": "电视机；电视节目",
+    "translations": [
+      "电视机；电视节目"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00074",
+    "word": "although",
+    "phonetic": "ɔl'ðo",
+    "translation": "虽然；尽管；然而；可是",
+    "translations": [
+      "虽然；尽管；然而；可是"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00075",
+    "word": "through",
+    "phonetic": "θru",
+    "translation": "穿过；一直到；凭借",
+    "translations": [
+      "穿过；一直到；凭借"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00076",
+    "word": "mind",
+    "phonetic": "maɪnd",
+    "translation": "头脑；想法；意见；心思",
+    "translations": [
+      "头脑；想法；意见；心思"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00077",
+    "word": "body",
+    "phonetic": "'bɑdi",
+    "translation": "身体",
+    "translations": [
+      "身体"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00078",
+    "word": "such",
+    "phonetic": "sʌtʃ",
+    "translation": "这样的；如此的",
+    "translations": [
+      "这样的；如此的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00079",
+    "word": "such as",
+    "phonetic": "",
+    "translation": "例如；诸如",
+    "translations": [
+      "例如；诸如"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00080",
+    "word": "together",
+    "phonetic": "tə'ɡɛðɚ",
+    "translation": "共同；一起",
+    "translations": [
+      "共同；一起"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00081",
+    "word": "die",
+    "phonetic": "daɪ",
+    "translation": "死；枯竭；消失",
+    "translations": [
+      "死；枯竭；消失"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00082",
+    "word": "writer",
+    "phonetic": "'raɪtɚ",
+    "translation": "作者；作家",
+    "translations": [
+      "作者；作家"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00083",
+    "word": "dentist",
+    "phonetic": "'dɛntɪst",
+    "translation": "牙科医生",
+    "translations": [
+      "牙科医生"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00084",
+    "word": "magazine",
+    "phonetic": "'mæɡəzin",
+    "translation": "杂志",
+    "translations": [
+      "杂志"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00085",
+    "word": "however",
+    "phonetic": "haʊ'ɛvɚ",
+    "translation": "然而；无论如何；不管多么",
+    "translations": [
+      "然而；无论如何；不管多么"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00086",
+    "word": "than",
+    "phonetic": "ðæn",
+    "translation": "比",
+    "translations": [
+      "比"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00087",
+    "word": "more than",
+    "phonetic": "mɔr ðæn",
+    "translation": "超过；多于；；不仅仅；非常",
+    "translations": [
+      "超过；多于；；不仅仅；非常"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00088",
+    "word": "almost",
+    "phonetic": "'ɔlmost",
+    "translation": "几乎；差不多",
+    "translations": [
+      "几乎；差不多"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00089",
+    "word": "none",
+    "phonetic": "nʌn",
+    "translation": "没有人；没有任何东西，毫无",
+    "translations": [
+      "没有人；没有任何东西，毫无"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00090",
+    "word": "less",
+    "phonetic": "lɛs",
+    "translation": "更少的；较少的",
+    "translations": [
+      "更少的；较少的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00091",
+    "word": "less than",
+    "phonetic": "",
+    "translation": "不到；少于",
+    "translations": [
+      "不到；少于"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00092",
+    "word": "point",
+    "phonetic": "pɔɪnt",
+    "translation": "看法；要点；重点；小数点；目标；分数",
+    "translations": [
+      "看法；要点；重点；小数点；目标；分数"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00093",
+    "word": "outgoing",
+    "phonetic": "'aʊt'goɪŋ",
+    "translation": "外向的",
+    "translations": [
+      "外向的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00094",
+    "word": "better",
+    "phonetic": "'bɛtɚ",
+    "translation": "更好的；较好的；更好地",
+    "translations": [
+      "更好的；较好的",
+      "更好地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00095",
+    "word": "loudly",
+    "phonetic": "'laʊdli",
+    "translation": "大声地；高声地；花俏地",
+    "translations": [
+      "大声地；高声地；花俏地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00096",
+    "word": "quietly",
+    "phonetic": "ˈkwaɪətli",
+    "translation": "安静地；悄悄地；平静地",
+    "translations": [
+      "安静地；悄悄地；平静地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00097",
+    "word": "hard-working",
+    "phonetic": "ˈhɑːdˈwɜːkɪŋ",
+    "translation": "勤勉的；努力工作的",
+    "translations": [
+      "勤勉的；努力工作的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00098",
+    "word": "competition",
+    "phonetic": ",kɑmpə'tɪʃən",
+    "translation": "竞争；比赛",
+    "translations": [
+      "竞争；比赛"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00099",
+    "word": "fantastic",
+    "phonetic": "fæn'tæstɪk",
+    "translation": "极好的；了不起的",
+    "translations": [
+      "极好的；了不起的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00100",
+    "word": "which",
+    "phonetic": "wɪtʃ",
+    "translation": "哪一个；哪些",
+    "translations": [
+      "哪一个；哪些"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00101",
+    "word": "clearly",
+    "phonetic": "'klɪrli",
+    "translation": "清楚地；显然地",
+    "translations": [
+      "清楚地；显然地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00102",
+    "word": "win",
+    "phonetic": "wɪn",
+    "translation": "赢；赢得；获胜；获得；胜利",
+    "translations": [
+      "赢；赢得；获胜；获得",
+      "胜利"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00103",
+    "word": "though",
+    "phonetic": "ðo",
+    "translation": "虽然；尽管；；不过",
+    "translations": [
+      "虽然；尽管；",
+      "不过"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00104",
+    "word": "talented",
+    "phonetic": "'tæləntɪd",
+    "translation": "有才能的；有天赋的",
+    "translations": [
+      "有才能的；有天赋的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00105",
+    "word": "truly",
+    "phonetic": "ˈtruːli",
+    "translation": "真实地；真诚地；正确地",
+    "translations": [
+      "真实地；真诚地；正确地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00106",
+    "word": "care",
+    "phonetic": "kɛr",
+    "translation": "在乎；关心；担忧；照顾",
+    "translations": [
+      "在乎；关心；担忧；照顾"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00107",
+    "word": "care about",
+    "phonetic": "",
+    "translation": "关心",
+    "translations": [
+      "关心"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00108",
+    "word": "serious",
+    "phonetic": "'sɪrɪəs",
+    "translation": "严重的；严肃的；庄重的",
+    "translations": [
+      "严重的；严肃的；庄重的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00109",
+    "word": "mirror",
+    "phonetic": "'mɪrɚ",
+    "translation": "镜子；反映",
+    "translations": [
+      "镜子；反映"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00110",
+    "word": "kid",
+    "phonetic": "kɪd",
+    "translation": "孩子，小孩",
+    "translations": [
+      "孩子，小孩"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00111",
+    "word": "as long as",
+    "phonetic": "",
+    "translation": "只要",
+    "translations": [
+      "只要"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00112",
+    "word": "necessary",
+    "phonetic": "ˈnɛsəˌsɛri",
+    "translation": "必要的；必然的",
+    "translations": [
+      "必要的；必然的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00113",
+    "word": "be different from",
+    "phonetic": "",
+    "translation": "和...不同",
+    "translations": [
+      "和...不同"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00114",
+    "word": "both",
+    "phonetic": "boθ",
+    "translation": "两者",
+    "translations": [
+      "两者"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00115",
+    "word": "bring out",
+    "phonetic": "",
+    "translation": "拿出；推出",
+    "translations": [
+      "拿出；推出"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00116",
+    "word": "grade",
+    "phonetic": "ɡred",
+    "translation": "成绩",
+    "translations": [
+      "成绩"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00117",
+    "word": "should",
+    "phonetic": "ʃəd; strong form ʃʊd",
+    "translation": "应该；应当；可能；将要",
+    "translations": [
+      "应该；应当；可能；将要"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00118",
+    "word": "the same as",
+    "phonetic": "",
+    "translation": "与...同样的",
+    "translations": [
+      "与...同样的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00119",
+    "word": "saying",
+    "phonetic": "'seɪŋ",
+    "translation": "名言",
+    "translations": [
+      "名言"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00120",
+    "word": "reach",
+    "phonetic": "ritʃ",
+    "translation": "到达；伸出；达成；取得联系；延伸；(伸手)去够",
+    "translations": [
+      "到达；伸出；达成；取得联系；延伸；(伸手)去够"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00121",
+    "word": "hand",
+    "phonetic": "hænd",
+    "translation": "手",
+    "translations": [
+      "手"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00122",
+    "word": "touch",
+    "phonetic": "tʌtʃ",
+    "translation": "触摸；感动",
+    "translations": [
+      "触摸；感动"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00123",
+    "word": "heart",
+    "phonetic": "hɑrt",
+    "translation": "心脏；内心",
+    "translations": [
+      "心脏；内心"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00124",
+    "word": "fact",
+    "phonetic": "fækt",
+    "translation": "事实；真相；实际",
+    "translations": [
+      "事实；真相；实际"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00125",
+    "word": "in fact",
+    "phonetic": "",
+    "translation": "事实上；实际上",
+    "translations": [
+      "事实上；实际上"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00126",
+    "word": "break",
+    "phonetic": "brek",
+    "translation": "打碎；折断；违背；结束; 打破 (困难或不快的情形)",
+    "translations": [
+      "打碎；折断；违背；结束; 打破 (困难或不快的情形)"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00127",
+    "word": "arm",
+    "phonetic": "ɑrm",
+    "translation": "胳膊",
+    "translations": [
+      "胳膊"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00128",
+    "word": "laugh",
+    "phonetic": "læf",
+    "translation": "发笑；笑；笑声；笑；笑料",
+    "translations": [
+      "发笑；笑",
+      "笑声；笑；笑料"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00129",
+    "word": "share",
+    "phonetic": "ʃɛr",
+    "translation": "分享，共享；共有；分配",
+    "translations": [
+      "分享，共享；共有；分配"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00130",
+    "word": "loud",
+    "phonetic": "laʊd",
+    "translation": "大声的；大声地；响亮地",
+    "translations": [
+      "大声的",
+      "大声地；响亮地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00131",
+    "word": "similar",
+    "phonetic": "'sɪməlɚ",
+    "translation": "类似的",
+    "translations": [
+      "类似的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00132",
+    "word": "be similar to",
+    "phonetic": "",
+    "translation": "类似于；与...相似",
+    "translations": [
+      "类似于；与...相似"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00133",
+    "word": "primary",
+    "phonetic": "'praɪmɛri",
+    "translation": "小学教育的，初级教育的；原始的；最初的",
+    "translations": [
+      "小学教育的，初级教育的；原始的；最初的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00134",
+    "word": "primary school",
+    "phonetic": "",
+    "translation": "小学",
+    "translations": [
+      "小学"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00135",
+    "word": "information",
+    "phonetic": "'ɪnfɚ'meʃən",
+    "translation": "信息；情报；资料",
+    "translations": [
+      "信息；情报；资料"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00136",
+    "word": "theater",
+    "phonetic": "'θiətɚ",
+    "translation": "剧场；电影院；戏院",
+    "translations": [
+      "剧场；电影院；戏院"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00137",
+    "word": "comfortable",
+    "phonetic": "ˈkʌmfɚtəbl",
+    "translation": "舒适的；充裕的",
+    "translations": [
+      "舒适的；充裕的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00138",
+    "word": "seat",
+    "phonetic": "sit",
+    "translation": "座位",
+    "translations": [
+      "座位"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00139",
+    "word": "screen",
+    "phonetic": "skrin",
+    "translation": "屏幕；银幕",
+    "translations": [
+      "屏幕；银幕"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00140",
+    "word": "close",
+    "phonetic": "kloz",
+    "translation": "关；合拢；不开放；停业（暂时性或永久性）",
+    "translations": [
+      "关；合拢；不开放；停业（暂时性或永久性）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00141",
+    "word": "ticket",
+    "phonetic": "'tɪkɪt",
+    "translation": "票",
+    "translations": [
+      "票"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00142",
+    "word": "worst",
+    "phonetic": "wɝst",
+    "translation": "最坏的；最差的",
+    "translations": [
+      "最坏的；最差的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00143",
+    "word": "cheaply",
+    "phonetic": "",
+    "translation": "廉价地；",
+    "translations": [
+      "廉价地；"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00144",
+    "word": "song",
+    "phonetic": "sɔŋ",
+    "translation": "歌曲；歌唱",
+    "translations": [
+      "歌曲；歌唱"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00145",
+    "word": "choose",
+    "phonetic": "tʃuz",
+    "translation": "选择；决定",
+    "translations": [
+      "选择；决定"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00146",
+    "word": "carefully",
+    "phonetic": "'kɛrfəli",
+    "translation": "小心地，认真地",
+    "translations": [
+      "小心地，认真地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00147",
+    "word": "reporter",
+    "phonetic": "rɪ'pɔrtɚ",
+    "translation": "记者",
+    "translations": [
+      "记者"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00148",
+    "word": "so far",
+    "phonetic": "",
+    "translation": "到目前为止；迄今为止",
+    "translations": [
+      "到目前为止；迄今为止"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00149",
+    "word": "fresh",
+    "phonetic": "frɛʃ",
+    "translation": "新的；新做的；新增的；新鲜的；清新的",
+    "translations": [
+      "新的；新做的；新增的；新鲜的；清新的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00150",
+    "word": "comfortably",
+    "phonetic": "'kʌmftəbli",
+    "translation": "舒服地；充裕地；容易地",
+    "translations": [
+      "舒服地；充裕地；容易地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00151",
+    "word": "worse",
+    "phonetic": "wɜrs",
+    "translation": "更坏的；更差的",
+    "translations": [
+      "更坏的；更差的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00152",
+    "word": "service",
+    "phonetic": "'sɝvɪs",
+    "translation": "公共服务系统，公共服务；公共事业机构",
+    "translations": [
+      "公共服务系统，公共服务；公共事业机构"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00153",
+    "word": "pretty",
+    "phonetic": "ˈprɪtɪ",
+    "translation": "相当地；漂亮的",
+    "translations": [
+      "相当地",
+      "漂亮的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00154",
+    "word": "menu",
+    "phonetic": "'mɛnju",
+    "translation": "菜单",
+    "translations": [
+      "菜单"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00155",
+    "word": "act",
+    "phonetic": "ækt",
+    "translation": "行动；表演",
+    "translations": [
+      "行动；表演"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00156",
+    "word": "meal",
+    "phonetic": "mil",
+    "translation": "一餐；膳食",
+    "translations": [
+      "一餐；膳食"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00157",
+    "word": "creative",
+    "phonetic": "krɪ'etɪv",
+    "translation": "创造的，创造性的；",
+    "translations": [
+      "创造的，创造性的；"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00158",
+    "word": "performer",
+    "phonetic": "pɚ'fɔrmɚ",
+    "translation": "表演者；执行者",
+    "translations": [
+      "表演者；执行者"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00159",
+    "word": "talent",
+    "phonetic": "'tælənt",
+    "translation": "天赋；才能，才艺；",
+    "translations": [
+      "天赋；才能，才艺；"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00160",
+    "word": "common",
+    "phonetic": "'kɑmən",
+    "translation": "常见的；共同的；普通的",
+    "translations": [
+      "常见的；共同的；普通的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00161",
+    "word": "have...in common",
+    "phonetic": "",
+    "translation": "有相同特征",
+    "translations": [
+      "有相同特征"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00162",
+    "word": "magician",
+    "phonetic": "mə'dʒɪʃən",
+    "translation": "魔术师；术士",
+    "translations": [
+      "魔术师；术士"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00163",
+    "word": "all kinds of",
+    "phonetic": "",
+    "translation": "各种各样；各种类型",
+    "translations": [
+      "各种各样；各种类型"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00164",
+    "word": "beautifully",
+    "phonetic": "",
+    "translation": "美丽地；完美地；",
+    "translations": [
+      "美丽地；完美地；"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00165",
+    "word": "be up to",
+    "phonetic": "",
+    "translation": "是…….的职责；由…….决定",
+    "translations": [
+      "是…….的职责；由…….决定"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00166",
+    "word": "role",
+    "phonetic": "rol",
+    "translation": "作用；角色",
+    "translations": [
+      "作用；角色"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00167",
+    "word": "play a role",
+    "phonetic": "",
+    "translation": "发挥作用；有影响",
+    "translations": [
+      "发挥作用；有影响"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00168",
+    "word": "winner",
+    "phonetic": "'wɪnɚ",
+    "translation": "获胜者",
+    "translations": [
+      "获胜者"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00169",
+    "word": "prize",
+    "phonetic": "praɪz",
+    "translation": "奖品；奖金",
+    "translations": [
+      "奖品；奖金"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00170",
+    "word": "everybody",
+    "phonetic": "'ɛvrɪbɑdi",
+    "translation": "每人；人人",
+    "translations": [
+      "每人；人人"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00171",
+    "word": "make up",
+    "phonetic": "",
+    "translation": "编造",
+    "translations": [
+      "编造"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00172",
+    "word": "example",
+    "phonetic": "ɪg'zæmpl",
+    "translation": "例子；榜样",
+    "translations": [
+      "例子；榜样"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00173",
+    "word": "for example",
+    "phonetic": "fɔr ɪɡˈzæmpəl",
+    "translation": "例如",
+    "translations": [
+      "例如"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00174",
+    "word": "poor",
+    "phonetic": "pʊər; pʊr",
+    "translation": "贫穷的；可怜的",
+    "translations": [
+      "贫穷的；可怜的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00175",
+    "word": "seriously",
+    "phonetic": "'sɪrɪəsli",
+    "translation": "严重地；严肃地",
+    "translations": [
+      "严重地；严肃地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00176",
+    "word": "take...seriously",
+    "phonetic": "",
+    "translation": "认真对待......",
+    "translations": [
+      "认真对待......"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00177",
+    "word": "give",
+    "phonetic": "ɡɪv",
+    "translation": "给；赠予；送",
+    "translations": [
+      "给；赠予；送"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00178",
+    "word": "crowded",
+    "phonetic": "'kraʊdɪd",
+    "translation": "拥挤的",
+    "translations": [
+      "拥挤的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00179",
+    "word": "sitcom",
+    "phonetic": "'sɪtkɑm",
+    "translation": "情景喜剧（situation comedy的缩写）",
+    "translations": [
+      "情景喜剧（situation comedy的缩写）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00180",
+    "word": "situation comedy",
+    "phonetic": "",
+    "translation": "情景喜剧",
+    "translations": [
+      "情景喜剧"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00181",
+    "word": "news",
+    "phonetic": "nuz",
+    "translation": "消息；新闻",
+    "translations": [
+      "消息；新闻"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00182",
+    "word": "soap",
+    "phonetic": "sop",
+    "translation": "肥皂",
+    "translations": [
+      "肥皂"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00183",
+    "word": "soap opera",
+    "phonetic": "",
+    "translation": "肥皂剧",
+    "translations": [
+      "肥皂剧"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00184",
+    "word": "educational",
+    "phonetic": ",ɛdʒu'keʃənl",
+    "translation": "教育的；有教育意义的",
+    "translations": [
+      "教育的；有教育意义的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00185",
+    "word": "plan",
+    "phonetic": "plæn",
+    "translation": "计划；打算；计划",
+    "translations": [
+      "计划",
+      "打算；计划"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00186",
+    "word": "hope",
+    "phonetic": "hop",
+    "translation": "希望；期望；盼望；希望",
+    "translations": [
+      "希望；期望；盼望",
+      "希望"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00187",
+    "word": "find out",
+    "phonetic": "",
+    "translation": "查明、弄清",
+    "translations": [
+      "查明、弄清"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00188",
+    "word": "discussion",
+    "phonetic": "dɪ'skʌʃən",
+    "translation": "讨论；谈论",
+    "translations": [
+      "讨论；谈论"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00189",
+    "word": "stand",
+    "phonetic": "stænd",
+    "translation": "站立；忍受",
+    "translations": [
+      "站立；忍受"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00190",
+    "word": "happen",
+    "phonetic": "'hæpən",
+    "translation": "发生；碰巧",
+    "translations": [
+      "发生；碰巧"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00191",
+    "word": "may",
+    "phonetic": "me",
+    "translation": "可能，也许；可以，能够",
+    "translations": [
+      "可能，也许；可以，能够"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00192",
+    "word": "expect",
+    "phonetic": "ɪk'spɛkt",
+    "translation": "预期；期待；盼望",
+    "translations": [
+      "预期；期待；盼望"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00193",
+    "word": "joke",
+    "phonetic": "dʒok",
+    "translation": "笑话；玩笑；说笑话；开玩笑",
+    "translations": [
+      "笑话；玩笑",
+      "说笑话；开玩笑"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00194",
+    "word": "comedy",
+    "phonetic": "'kɑmədi",
+    "translation": "喜剧",
+    "translations": [
+      "喜剧"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00195",
+    "word": "meaningless",
+    "phonetic": "'minɪŋləs",
+    "translation": "无意义的；不重要的",
+    "translations": [
+      "无意义的；不重要的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00196",
+    "word": "action",
+    "phonetic": "'ækʃən",
+    "translation": "行动；行为",
+    "translations": [
+      "行动；行为"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00197",
+    "word": "action movie",
+    "phonetic": "",
+    "translation": "动作片",
+    "translations": [
+      "动作片"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00198",
+    "word": "cartoon",
+    "phonetic": "kɑr'tun",
+    "translation": "卡通；漫画",
+    "translations": [
+      "卡通；漫画"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00199",
+    "word": "culture",
+    "phonetic": "'kʌltʃɚ",
+    "translation": "文化",
+    "translations": [
+      "文化"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00200",
+    "word": "famous",
+    "phonetic": "'feməs",
+    "translation": "著名的；有名的",
+    "translations": [
+      "著名的；有名的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00201",
+    "word": "appear",
+    "phonetic": "ə'pɪr",
+    "translation": "似乎；显得；出现",
+    "translations": [
+      "似乎；显得；出现"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00202",
+    "word": "become",
+    "phonetic": "bɪ'kʌm",
+    "translation": "变成；成为",
+    "translations": [
+      "变成；成为"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00203",
+    "word": "rich",
+    "phonetic": "rɪtʃ",
+    "translation": "富有的；富饶的；丰富的",
+    "translations": [
+      "富有的；富饶的；丰富的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00204",
+    "word": "successful",
+    "phonetic": "sək'sɛsfl",
+    "translation": "成功的；圆满的",
+    "translations": [
+      "成功的；圆满的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00205",
+    "word": "might",
+    "phonetic": "maɪt",
+    "translation": "可能；也许；may的过去式",
+    "translations": [
+      "可能；也许；may的过去式"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00206",
+    "word": "main",
+    "phonetic": "meɪn",
+    "translation": "主要的；最重要的",
+    "translations": [
+      "主要的；最重要的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00207",
+    "word": "reason",
+    "phonetic": "ˈrizən",
+    "translation": "原因；理由",
+    "translations": [
+      "原因；理由"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00208",
+    "word": "comedy.",
+    "phonetic": "'kɑmədi",
+    "translation": "喜剧",
+    "translations": [
+      "喜剧"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00209",
+    "word": "film",
+    "phonetic": "fɪlm",
+    "translation": "电影",
+    "translations": [
+      "电影"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00210",
+    "word": "unlucky",
+    "phonetic": "ʌn'lʌki",
+    "translation": "倒霉的；不幸的；不吉利的",
+    "translations": [
+      "倒霉的；不幸的；不吉利的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00211",
+    "word": "lose",
+    "phonetic": "luz",
+    "translation": "丢失；失败",
+    "translations": [
+      "丢失；失败"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00212",
+    "word": "girlfriend",
+    "phonetic": "'ɡɝlfrɛnd",
+    "translation": "女朋友",
+    "translations": [
+      "女朋友"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00213",
+    "word": "ready",
+    "phonetic": "'rɛdi",
+    "translation": "准备好的；乐意的",
+    "translations": [
+      "准备好的；乐意的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00214",
+    "word": "be ready to",
+    "phonetic": "",
+    "translation": "愿意做某事",
+    "translations": [
+      "愿意做某事"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00215",
+    "word": "character",
+    "phonetic": "'kærɪktɚ",
+    "translation": "个性；品质；人物",
+    "translations": [
+      "个性；品质；人物"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00216",
+    "word": "simple",
+    "phonetic": "'sɪmpl",
+    "translation": "简单的；朴素的；单纯的",
+    "translations": [
+      "简单的；朴素的；单纯的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00217",
+    "word": "dress up",
+    "phonetic": "drɛs ʌp",
+    "translation": "装扮；乔装打扮",
+    "translations": [
+      "装扮；乔装打扮"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00218",
+    "word": "take sb.'s place",
+    "phonetic": "",
+    "translation": "代替；替换",
+    "translations": [
+      "代替；替换"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00219",
+    "word": "army",
+    "phonetic": "'ɑrmi",
+    "translation": "军队；陆军；一大批",
+    "translations": [
+      "军队；陆军；一大批"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00220",
+    "word": "do a good job",
+    "phonetic": "",
+    "translation": "工作干得好；做得好",
+    "translations": [
+      "工作干得好；做得好"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00221",
+    "word": "grow up",
+    "phonetic": "",
+    "translation": "长大；成长",
+    "translations": [
+      "长大；成长"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00222",
+    "word": "computer programmer",
+    "phonetic": "",
+    "translation": "计算机管理员",
+    "translations": [
+      "计算机管理员"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00223",
+    "word": "cook",
+    "phonetic": "kʊk",
+    "translation": "烹调，煮，烧，做(饭)",
+    "translations": [
+      "烹调，煮，烧，做(饭)"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00224",
+    "word": "doctor",
+    "phonetic": "'dɑktɚ",
+    "translation": "医生",
+    "translations": [
+      "医生"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00225",
+    "word": "engineer",
+    "phonetic": ",ɛndʒɪ'nɪr",
+    "translation": "工程师",
+    "translations": [
+      "工程师"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00226",
+    "word": "violinist",
+    "phonetic": ",vaɪə'lɪnɪst",
+    "translation": "小提琴手",
+    "translations": [
+      "小提琴手"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00227",
+    "word": "driver",
+    "phonetic": "'draɪvɚ",
+    "translation": "驾驶员；驱动程序",
+    "translations": [
+      "驾驶员；驱动程序"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00228",
+    "word": "pilot",
+    "phonetic": "'paɪlət",
+    "translation": "飞行员",
+    "translations": [
+      "飞行员"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00229",
+    "word": "pianist",
+    "phonetic": "'pɪənɪst",
+    "translation": "钢琴家",
+    "translations": [
+      "钢琴家"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00230",
+    "word": "scientist",
+    "phonetic": "'saɪəntɪst",
+    "translation": "科学家",
+    "translations": [
+      "科学家"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00231",
+    "word": "be sure about",
+    "phonetic": "",
+    "translation": "确信",
+    "translations": [
+      "确信"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00232",
+    "word": "make sure",
+    "phonetic": "mek ʃʊər",
+    "translation": "确保",
+    "translations": [
+      "确保"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00233",
+    "word": "college",
+    "phonetic": "'kɑlɪdʒ",
+    "translation": "大学",
+    "translations": [
+      "大学"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00234",
+    "word": "education",
+    "phonetic": ",ɛdʒu'keʃən",
+    "translation": "教育",
+    "translations": [
+      "教育"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00235",
+    "word": "medicine",
+    "phonetic": "ˈmedɪsn; mɛdəsn",
+    "translation": "药；医学",
+    "translations": [
+      "药；医学"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00236",
+    "word": "university",
+    "phonetic": ",junɪ'vɝsəti",
+    "translation": "大学，高等学府",
+    "translations": [
+      "大学，高等学府"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00237",
+    "word": "London",
+    "phonetic": "ˈlʌndən",
+    "translation": "伦敦",
+    "translations": [
+      "伦敦"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00238",
+    "word": "article",
+    "phonetic": "'ɑrtɪkl",
+    "translation": "文章，论文",
+    "translations": [
+      "文章，论文"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00239",
+    "word": "send",
+    "phonetic": "sɛnd",
+    "translation": "邮寄，发送",
+    "translations": [
+      "邮寄，发送"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00240",
+    "word": "resolution",
+    "phonetic": ",rɛzə'luʃən",
+    "translation": "决定；决心",
+    "translations": [
+      "决定；决心"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00241",
+    "word": "team",
+    "phonetic": "tim",
+    "translation": "(一)队(人)；(一)组(人)",
+    "translations": [
+      "(一)队(人)；(一)组(人)"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00242",
+    "word": "foreign",
+    "phonetic": "'fɔrən",
+    "translation": "外国的",
+    "translations": [
+      "外国的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00243",
+    "word": "able",
+    "phonetic": "'ebl",
+    "translation": "聪明能干的，能力出众的",
+    "translations": [
+      "聪明能干的，能力出众的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00244",
+    "word": "be able to",
+    "phonetic": "",
+    "translation": "能够做某事",
+    "translations": [
+      "能够做某事"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00245",
+    "word": "question",
+    "phonetic": "'kwɛstʃən",
+    "translation": "问题",
+    "translations": [
+      "问题"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00246",
+    "word": "meaning",
+    "phonetic": "'minɪŋ",
+    "translation": "意义",
+    "translations": [
+      "意义"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00247",
+    "word": "discuss",
+    "phonetic": "dɪ'skʌs",
+    "translation": "讨论，商量",
+    "translations": [
+      "讨论，商量"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00248",
+    "word": "promise",
+    "phonetic": "'prɑmɪs",
+    "translation": "承诺，诺言；诺言",
+    "translations": [
+      "承诺，诺言",
+      "诺言"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00249",
+    "word": "beginning",
+    "phonetic": "bɪ'ɡɪnɪŋ",
+    "translation": "开头，开端",
+    "translations": [
+      "开头，开端"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00250",
+    "word": "at the beginning of",
+    "phonetic": "",
+    "translation": "起初",
+    "translations": [
+      "起初"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00251",
+    "word": "improve",
+    "phonetic": "ɪm'pruv",
+    "translation": "改进，改善",
+    "translations": [
+      "改进，改善"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00252",
+    "word": "write down",
+    "phonetic": "",
+    "translation": "写下",
+    "translations": [
+      "写下"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00253",
+    "word": "physical",
+    "phonetic": "'fɪzɪkl",
+    "translation": "身体的",
+    "translations": [
+      "身体的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00254",
+    "word": "themselves",
+    "phonetic": "ðɛm'sɛlvz",
+    "translation": "他们自己",
+    "translations": [
+      "他们自己"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00255",
+    "word": "have to do with",
+    "phonetic": "",
+    "translation": "关于;与……有关系",
+    "translations": [
+      "关于;与……有关系"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00256",
+    "word": "self-improvement",
+    "phonetic": "",
+    "translation": "自我改进，自我提高",
+    "translations": [
+      "自我改进，自我提高"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00257",
+    "word": "take up",
+    "phonetic": "",
+    "translation": "学着做；开始做",
+    "translations": [
+      "学着做；开始做"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00258",
+    "word": "hobby",
+    "phonetic": "'hɑbi",
+    "translation": "业余爱好",
+    "translations": [
+      "业余爱好"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00259",
+    "word": "weekly",
+    "phonetic": "'wikli",
+    "translation": "每周的；周刊；每周一次；逐周",
+    "translations": [
+      "每周的",
+      "周刊",
+      "每周一次；逐周"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00260",
+    "word": "school work",
+    "phonetic": "",
+    "translation": "学校作业",
+    "translations": [
+      "学校作业"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00261",
+    "word": "agree",
+    "phonetic": "ə'ɡri",
+    "translation": "同意；赞成",
+    "translations": [
+      "同意；赞成"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00262",
+    "word": "agree with",
+    "phonetic": "",
+    "translation": "同意",
+    "translations": [
+      "同意"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00263",
+    "word": "own",
+    "phonetic": "on",
+    "translation": "自己的，本人的；拥有",
+    "translations": [
+      "自己的，本人的",
+      "拥有"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00264",
+    "word": "personal",
+    "phonetic": "'pɝsənl",
+    "translation": "个人的，私人的",
+    "translations": [
+      "个人的，私人的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00265",
+    "word": "relationship",
+    "phonetic": "rɪ'leʃən'ʃɪp",
+    "translation": "关系",
+    "translations": [
+      "关系"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00266",
+    "word": "paper",
+    "phonetic": "'pepɚ",
+    "translation": "纸",
+    "translations": [
+      "纸"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00267",
+    "word": "pollution",
+    "phonetic": "pə'luʃən",
+    "translation": "污染；污染物",
+    "translations": [
+      "污染；污染物"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00268",
+    "word": "prediction",
+    "phonetic": "prɪ'dɪkʃən",
+    "translation": "预测",
+    "translations": [
+      "预测"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00269",
+    "word": "future",
+    "phonetic": "ˈfjutʃɚ",
+    "translation": "未来",
+    "translations": [
+      "未来"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00270",
+    "word": "pollute",
+    "phonetic": "pə'lut",
+    "translation": "污染",
+    "translations": [
+      "污染"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00271",
+    "word": "environment",
+    "phonetic": "ɪn'vaɪrənmənt",
+    "translation": "环境",
+    "translations": [
+      "环境"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00272",
+    "word": "planet",
+    "phonetic": "'plænɪt",
+    "translation": "行星",
+    "translations": [
+      "行星"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00273",
+    "word": "earth",
+    "phonetic": "ɝθ",
+    "translation": "地球；泥土",
+    "translations": [
+      "地球；泥土"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00274",
+    "word": "plant",
+    "phonetic": "plænt",
+    "translation": "植物；种植",
+    "translations": [
+      "植物",
+      "种植"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00275",
+    "word": "part",
+    "phonetic": "pɑrt",
+    "translation": "部分；参加",
+    "translations": [
+      "部分；参加"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00276",
+    "word": "play a part",
+    "phonetic": "",
+    "translation": "参与（某事）",
+    "translations": [
+      "参与（某事）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00277",
+    "word": "peace",
+    "phonetic": "pis",
+    "translation": "和平",
+    "translations": [
+      "和平"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00278",
+    "word": "sea",
+    "phonetic": "si",
+    "translation": "海；海洋；；许多；大量（与of连用）",
+    "translations": [
+      "海；海洋；；许多；大量（与of连用）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00279",
+    "word": "sky",
+    "phonetic": "skaɪ",
+    "translation": "天空",
+    "translations": [
+      "天空"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00280",
+    "word": "astronaut",
+    "phonetic": "'æstrəˌnɔt",
+    "translation": "宇航员",
+    "translations": [
+      "宇航员"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00281",
+    "word": "apartment",
+    "phonetic": "ə'pɑrtmənt",
+    "translation": "公寓",
+    "translations": [
+      "公寓"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00282",
+    "word": "rocket",
+    "phonetic": "'rɑkɪt",
+    "translation": "火箭；",
+    "translations": [
+      "火箭；"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00283",
+    "word": "space",
+    "phonetic": "spes",
+    "translation": "空间；太空",
+    "translations": [
+      "空间；太空"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00284",
+    "word": "space station",
+    "phonetic": "",
+    "translation": "太空站",
+    "translations": [
+      "太空站"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00285",
+    "word": "human",
+    "phonetic": "'hjumən",
+    "translation": "人的；人；人类",
+    "translations": [
+      "人的",
+      "人；人类"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00286",
+    "word": "servant",
+    "phonetic": "'sɝvənt",
+    "translation": "仆人",
+    "translations": [
+      "仆人"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00287",
+    "word": "dangerous",
+    "phonetic": "'dendʒərəs",
+    "translation": "危险的",
+    "translations": [
+      "危险的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00288",
+    "word": "already",
+    "phonetic": "ɔl'rɛdi",
+    "translation": "已经",
+    "translations": [
+      "已经"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00289",
+    "word": "factory",
+    "phonetic": "'fæktri",
+    "translation": "工厂",
+    "translations": [
+      "工厂"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00290",
+    "word": "over and over again",
+    "phonetic": "",
+    "translation": "多次；反复地",
+    "translations": [
+      "多次；反复地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00291",
+    "word": "believe",
+    "phonetic": "bɪ'liv",
+    "translation": "相信",
+    "translations": [
+      "相信"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00292",
+    "word": "disagree",
+    "phonetic": ",dɪsə'ɡri",
+    "translation": "不同意",
+    "translations": [
+      "不同意"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00293",
+    "word": "even",
+    "phonetic": "'ivən",
+    "translation": "甚至；愈加",
+    "translations": [
+      "甚至；愈加"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00294",
+    "word": "hundreds of",
+    "phonetic": "",
+    "translation": "许多 ；大量； 成百上千",
+    "translations": [
+      "许多 ；大量； 成百上千"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00295",
+    "word": "shape",
+    "phonetic": "ʃep",
+    "translation": "形状",
+    "translations": [
+      "形状"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00296",
+    "word": "fall",
+    "phonetic": "fɔl",
+    "translation": "摔倒；跌倒",
+    "translations": [
+      "摔倒；跌倒"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00297",
+    "word": "fall down",
+    "phonetic": "",
+    "translation": "突然倒下；跌倒；倒塌",
+    "translations": [
+      "突然倒下；跌倒；倒塌"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00298",
+    "word": "inside",
+    "phonetic": "'ɪn'saɪd",
+    "translation": "里面；内部；内脏；里面的；内部的；秘密的；内幕的；在里面；在……之内",
+    "translations": [
+      "里面；内部；内脏",
+      "里面的；内部的；秘密的；内幕的",
+      "在里面",
+      "在……之内"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00299",
+    "word": "look for",
+    "phonetic": "",
+    "translation": "寻找；寻求",
+    "translations": [
+      "寻找；寻求"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00300",
+    "word": "possible",
+    "phonetic": "'pɑsəbl",
+    "translation": "可能的",
+    "translations": [
+      "可能的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00301",
+    "word": "impossible",
+    "phonetic": "ɪm'pɑsəbl",
+    "translation": "不可能的；不可能存在的；难以忍受的；难以忍受的；不可能；不可能的事",
+    "translations": [
+      "不可能的；不可能存在的；难以忍受的；难以忍受的",
+      "不可能；不可能的事"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00302",
+    "word": "side",
+    "phonetic": "saɪd",
+    "translation": "侧面；旁边；方面；支持；同意，支持；旁的，侧的",
+    "translations": [
+      "侧面；旁边；方面",
+      "支持；同意，支持",
+      "旁的，侧的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00303",
+    "word": "probably",
+    "phonetic": "'prɑbəbli",
+    "translation": "大概；或许；很可能",
+    "translations": [
+      "大概；或许；很可能"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00304",
+    "word": "during",
+    "phonetic": "'dʊrɪŋ",
+    "translation": "在……的时候，在……的期间",
+    "translations": [
+      "在……的时候，在……的期间"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00305",
+    "word": "holiday",
+    "phonetic": "'hɑləde",
+    "translation": "假日",
+    "translations": [
+      "假日"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00306",
+    "word": "word",
+    "phonetic": "wɝd",
+    "translation": "字；词；单词",
+    "translations": [
+      "字；词；单词"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00307",
+    "word": "shake",
+    "phonetic": "ʃek",
+    "translation": "摇动；震动；动摇；发抖；摇动；哆嗦",
+    "translations": [
+      "摇动；震动；动摇；发抖",
+      "摇动；哆嗦"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00308",
+    "word": "milk shake",
+    "phonetic": "",
+    "translation": "奶昔（牛奶和冰淇淋等的混合饮料）",
+    "translations": [
+      "奶昔（牛奶和冰淇淋等的混合饮料）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00309",
+    "word": "blender",
+    "phonetic": "'blɛndɚ",
+    "translation": "搅拌器；果汁机",
+    "translations": [
+      "搅拌器；果汁机"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00310",
+    "word": "turn on",
+    "phonetic": "tɝ​n ɑn",
+    "translation": "打开",
+    "translations": [
+      "打开"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00311",
+    "word": "peel",
+    "phonetic": "pil",
+    "translation": "削皮；剥落",
+    "translations": [
+      "削皮；剥落"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00312",
+    "word": "pour",
+    "phonetic": "pɔr",
+    "translation": "倒；倾倒",
+    "translations": [
+      "倒；倾倒"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00313",
+    "word": "yogurt",
+    "phonetic": "'joɡət",
+    "translation": "酸奶；",
+    "translations": [
+      "酸奶；"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00314",
+    "word": "honey",
+    "phonetic": "'hʌni",
+    "translation": "蜂蜜",
+    "translations": [
+      "蜂蜜"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00315",
+    "word": "watermelon",
+    "phonetic": "'wɔtɚmɛlən",
+    "translation": "西瓜",
+    "translations": [
+      "西瓜"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00316",
+    "word": "spoon",
+    "phonetic": "spun",
+    "translation": "勺，调羹",
+    "translations": [
+      "勺，调羹"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00317",
+    "word": "pot",
+    "phonetic": "pɑt",
+    "translation": "壶；盆；罐；把……装罐",
+    "translations": [
+      "壶；盆；罐",
+      "把……装罐"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00318",
+    "word": "add",
+    "phonetic": "æd",
+    "translation": "增加",
+    "translations": [
+      "增加"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00319",
+    "word": "finally",
+    "phonetic": "'faɪnlɪ",
+    "translation": "最后，最终",
+    "translations": [
+      "最后，最终"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00320",
+    "word": "salt",
+    "phonetic": "sɔlt",
+    "translation": "盐",
+    "translations": [
+      "盐"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00321",
+    "word": "sugar",
+    "phonetic": "'ʃʊgɚ",
+    "translation": "糖",
+    "translations": [
+      "糖"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00322",
+    "word": "cheese",
+    "phonetic": "tʃiz",
+    "translation": "干酪，奶酪",
+    "translations": [
+      "干酪，奶酪"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00323",
+    "word": "popcorn",
+    "phonetic": "'pɑpkɔrn",
+    "translation": "爆米花",
+    "translations": [
+      "爆米花"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00324",
+    "word": "corn",
+    "phonetic": "kɔrn",
+    "translation": "谷物；玉米",
+    "translations": [
+      "谷物；玉米"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00325",
+    "word": "machine",
+    "phonetic": "mə'ʃin",
+    "translation": "机器",
+    "translations": [
+      "机器"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00326",
+    "word": "dig",
+    "phonetic": "dɪɡ",
+    "translation": "挖，掘；探究；挖苦；刺；戳",
+    "translations": [
+      "挖，掘；探究",
+      "挖苦；刺；戳"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00327",
+    "word": "hole",
+    "phonetic": "hol",
+    "translation": "洞，孔；洞穴，穴；（高尔夫球等）进洞 凿洞",
+    "translations": [
+      "洞，孔；洞穴，穴",
+      "（高尔夫球等）进洞 凿洞"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00328",
+    "word": "sandwich",
+    "phonetic": "'sænwɪtʃ",
+    "translation": "三明治",
+    "translations": [
+      "三明治"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00329",
+    "word": "butter",
+    "phonetic": "'bʌtɚ",
+    "translation": "黄油，奶油",
+    "translations": [
+      "黄油，奶油"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00330",
+    "word": "turkey",
+    "phonetic": "'tɝki",
+    "translation": "火鸡",
+    "translations": [
+      "火鸡"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00331",
+    "word": "lettuce",
+    "phonetic": "'lɛtɪs",
+    "translation": "莴苣，生菜",
+    "translations": [
+      "莴苣，生菜"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00332",
+    "word": "piece",
+    "phonetic": "pis",
+    "translation": "件；篇；片；块；",
+    "translations": [
+      "件；篇；片；块；"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00333",
+    "word": "Thanksgiving",
+    "phonetic": "",
+    "translation": "感恩节",
+    "translations": [
+      "感恩节"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00334",
+    "word": "traditional",
+    "phonetic": "trə'dɪʃənl",
+    "translation": "传统的",
+    "translations": [
+      "传统的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00335",
+    "word": "autumn",
+    "phonetic": "'ɔtəm",
+    "translation": "秋天；秋天的，秋季的",
+    "translations": [
+      "秋天",
+      "秋天的，秋季的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00336",
+    "word": "traveler",
+    "phonetic": "'trævlɚ",
+    "translation": "旅行者",
+    "translations": [
+      "旅行者"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00337",
+    "word": "England",
+    "phonetic": "'iŋɡlənd",
+    "translation": "英格兰；英国",
+    "translations": [
+      "英格兰；英国"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00338",
+    "word": "celebrate",
+    "phonetic": "sɛləˌbret",
+    "translation": "庆祝；庆贺",
+    "translations": [
+      "庆祝；庆贺"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00339",
+    "word": "mix",
+    "phonetic": "mɪks",
+    "translation": "混淆；使混和；配制；混合；混合物；混乱",
+    "translations": [
+      "混淆；使混和；配制",
+      "混合；混合物；混乱"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00340",
+    "word": "pepper",
+    "phonetic": "'pɛpɚ",
+    "translation": "胡椒粉；椒类",
+    "translations": [
+      "胡椒粉；椒类"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00341",
+    "word": "fill",
+    "phonetic": "fɪl",
+    "translation": "装满，使充满；满足；任职",
+    "translations": [
+      "装满，使充满；满足；任职"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00342",
+    "word": "oven",
+    "phonetic": "ˈʌvən",
+    "translation": "烤箱；烤炉",
+    "translations": [
+      "烤箱；烤炉"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00343",
+    "word": "plate",
+    "phonetic": "pleɪt",
+    "translation": "碟；金属牌；金属板；镀上（金或银）",
+    "translations": [
+      "碟；金属牌；金属板",
+      "镀上（金或银）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00344",
+    "word": "cover",
+    "phonetic": "'kʌvɚ",
+    "translation": "遮盖，盖",
+    "translations": [
+      "遮盖，盖"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00345",
+    "word": "gravy",
+    "phonetic": "'ɡrevi",
+    "translation": "肉汁；肉汤",
+    "translations": [
+      "肉汁；肉汤"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00346",
+    "word": "serve",
+    "phonetic": "sɝv",
+    "translation": "接待，服务",
+    "translations": [
+      "接待，服务"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00347",
+    "word": "temperature",
+    "phonetic": "ˈtempərtʃʊər; tɛmpɚ-ˌtʃʊr",
+    "translation": "温度，气候",
+    "translations": [
+      "温度，气候"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00348",
+    "word": "prepare",
+    "phonetic": "prɪ'pɛr",
+    "translation": "预备；准备",
+    "translations": [
+      "预备；准备"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00349",
+    "word": "prepare for",
+    "phonetic": "",
+    "translation": "为……准备",
+    "translations": [
+      "为……准备"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00350",
+    "word": "exam",
+    "phonetic": "ɪg'zæm",
+    "translation": "考试",
+    "translations": [
+      "考试"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00351",
+    "word": "flu",
+    "phonetic": "flu",
+    "translation": "流感",
+    "translations": [
+      "流感"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00352",
+    "word": "available",
+    "phonetic": "ə'veləbl",
+    "translation": "可得到的；有空的",
+    "translations": [
+      "可得到的；有空的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00353",
+    "word": "another time",
+    "phonetic": "",
+    "translation": "其他时间，别的时间",
+    "translations": [
+      "其他时间，别的时间"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00354",
+    "word": "until",
+    "phonetic": "ən'tɪl",
+    "translation": "在…之前；直到…时；在…之前；到…为止",
+    "translations": [
+      "在…之前；直到…时",
+      "在…之前；到…为止"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00355",
+    "word": "hang",
+    "phonetic": "hæŋ",
+    "translation": "悬挂",
+    "translations": [
+      "悬挂"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00356",
+    "word": "hang out",
+    "phonetic": "",
+    "translation": "常去某处；泡在某处",
+    "translations": [
+      "常去某处；泡在某处"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00357",
+    "word": "catch",
+    "phonetic": "kætʃ",
+    "translation": "抓住；捕捉",
+    "translations": [
+      "抓住；捕捉"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00358",
+    "word": "invite",
+    "phonetic": "ɪn'vaɪt",
+    "translation": "邀请",
+    "translations": [
+      "邀请"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00359",
+    "word": "accept",
+    "phonetic": "əkˈsɛpt",
+    "translation": "接受；",
+    "translations": [
+      "接受；"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00360",
+    "word": "refuse",
+    "phonetic": "ri'fjʊz",
+    "translation": "拒绝",
+    "translations": [
+      "拒绝"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00361",
+    "word": "the day before yesterday",
+    "phonetic": "",
+    "translation": "前天",
+    "translations": [
+      "前天"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00362",
+    "word": "the day after tomorrow",
+    "phonetic": "",
+    "translation": "后天",
+    "translations": [
+      "后天"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00363",
+    "word": "weekday",
+    "phonetic": "'wikde",
+    "translation": "工作日",
+    "translations": [
+      "工作日"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00364",
+    "word": "look after",
+    "phonetic": "",
+    "translation": "照顾，照料",
+    "translations": [
+      "照顾，照料"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00365",
+    "word": "invitation",
+    "phonetic": "ˌɪnvɪˈteɪʃn",
+    "translation": "邀请；邀请函",
+    "translations": [
+      "邀请；邀请函"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00366",
+    "word": "turn down",
+    "phonetic": "",
+    "translation": "减小，关小，调低",
+    "translations": [
+      "减小，关小，调低"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00367",
+    "word": "reply",
+    "phonetic": "rɪ'plai",
+    "translation": "回答，回复",
+    "translations": [
+      "回答，回复"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00368",
+    "word": "forward",
+    "phonetic": "'fɔrwɚd",
+    "translation": "向前",
+    "translations": [
+      "向前"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00369",
+    "word": "delete",
+    "phonetic": "dɪ'lit",
+    "translation": "删除",
+    "translations": [
+      "删除"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00370",
+    "word": "print",
+    "phonetic": "prɪnt",
+    "translation": "印刷的文字；印花布；印刷；打印；刊载",
+    "translations": [
+      "印刷的文字；印花布",
+      "印刷；打印；刊载"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00371",
+    "word": "sad",
+    "phonetic": "sæd",
+    "translation": "难过的；悲哀的，令人悲痛的",
+    "translations": [
+      "难过的；悲哀的，令人悲痛的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00372",
+    "word": "goodbye",
+    "phonetic": "gʊd'baɪ",
+    "translation": "再见",
+    "translations": [
+      "再见"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00373",
+    "word": "take a trip",
+    "phonetic": "",
+    "translation": "去旅行",
+    "translations": [
+      "去旅行"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00374",
+    "word": "glad",
+    "phonetic": "ɡlæd",
+    "translation": "高兴的；乐意的；使...高兴",
+    "translations": [
+      "高兴的；乐意的",
+      "使...高兴"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00375",
+    "word": "preparation",
+    "phonetic": ",prɛpə'reʃən",
+    "translation": "准备；准备工作（用复数形式）",
+    "translations": [
+      "准备；准备工作（用复数形式）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00376",
+    "word": "glue",
+    "phonetic": "ɡlu",
+    "translation": "粘合；盯着某物看（后接to）；胶；各种胶合物",
+    "translations": [
+      "粘合；盯着某物看（后接to）",
+      "胶；各种胶合物"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00377",
+    "word": "without",
+    "phonetic": "wɪðˈaʊt",
+    "translation": "没有",
+    "translations": [
+      "没有"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00378",
+    "word": "surprised",
+    "phonetic": "sɚ'praɪzd",
+    "translation": "感到惊讶的；使惊奇（surprise的过去分词形式）",
+    "translations": [
+      "感到惊讶的",
+      "使惊奇（surprise的过去分词形式）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00379",
+    "word": "look forward to",
+    "phonetic": "",
+    "translation": "盼望，期待",
+    "translations": [
+      "盼望，期待"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00380",
+    "word": "hear from",
+    "phonetic": "",
+    "translation": "收到......来信",
+    "translations": [
+      "收到......来信"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00381",
+    "word": "housewarming",
+    "phonetic": "'haʊs,wɔrmɪŋ",
+    "translation": "乔迁庆宴",
+    "translations": [
+      "乔迁庆宴"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00382",
+    "word": "opening",
+    "phonetic": "'opənɪŋ",
+    "translation": "开幕式，落成典礼",
+    "translations": [
+      "开幕式，落成典礼"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00383",
+    "word": "concert",
+    "phonetic": "'kɑnsɚt",
+    "translation": "音乐会",
+    "translations": [
+      "音乐会"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00384",
+    "word": "headmaster",
+    "phonetic": ",hɛd'mæstɚ",
+    "translation": "男校长",
+    "translations": [
+      "男校长"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00385",
+    "word": "event",
+    "phonetic": "ɪ'vɛnt",
+    "translation": "大事；公开活动",
+    "translations": [
+      "大事；公开活动"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00386",
+    "word": "guest",
+    "phonetic": "ɡɛst",
+    "translation": "客人",
+    "translations": [
+      "客人"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00387",
+    "word": "calendar",
+    "phonetic": "'kæləndɚ",
+    "translation": "日历；日程表",
+    "translations": [
+      "日历；日程表"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00388",
+    "word": "daytime",
+    "phonetic": "'detaɪm",
+    "translation": "日间，白天",
+    "translations": [
+      "日间，白天"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00389",
+    "word": "meeting",
+    "phonetic": "'mitɪŋ",
+    "translation": "会议；集会；会见；会面；会合（meet的ing形式）",
+    "translations": [
+      "会议；集会；会见",
+      "会面；会合（meet的ing形式）"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00390",
+    "word": "video",
+    "phonetic": "'vɪdɪo",
+    "translation": "录像；录像带",
+    "translations": [
+      "录像；录像带"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00391",
+    "word": "potato chips",
+    "phonetic": "",
+    "translation": "马铃薯片；油炸薯片",
+    "translations": [
+      "马铃薯片；油炸薯片"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00392",
+    "word": "chocolate",
+    "phonetic": "ˈtʃɑkələt",
+    "translation": "巧克力",
+    "translations": [
+      "巧克力"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00393",
+    "word": "upset",
+    "phonetic": "ʌp'sɛt",
+    "translation": "难过的，失望的",
+    "translations": [
+      "难过的，失望的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00394",
+    "word": "taxi",
+    "phonetic": "'tæksi",
+    "translation": "滑行；乘出租车；用出租车送；出租汽车",
+    "translations": [
+      "滑行；乘出租车；用出租车送",
+      "出租汽车"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00395",
+    "word": "advice",
+    "phonetic": "ədˈvaɪs",
+    "translation": "劝告，建议",
+    "translations": [
+      "劝告，建议"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00396",
+    "word": "travel",
+    "phonetic": "'trævl",
+    "translation": "旅行；走过（某距离）；（以某速度）行进",
+    "translations": [
+      "旅行；走过（某距离）；（以某速度）行进"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00397",
+    "word": "agent",
+    "phonetic": "'edʒənt",
+    "translation": "代理人，经纪人",
+    "translations": [
+      "代理人，经纪人"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00398",
+    "word": "expert",
+    "phonetic": "'ɛkspɝt; (for adj., also) ɛksˈpɝt ; ɪkˈspɝt",
+    "translation": "专家，能手",
+    "translations": [
+      "专家，能手"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00399",
+    "word": "keep...to oneself",
+    "phonetic": "",
+    "translation": "保守秘密",
+    "translations": [
+      "保守秘密"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00400",
+    "word": "teenager",
+    "phonetic": "'tinedʒɚ",
+    "translation": "青少年",
+    "translations": [
+      "青少年"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00401",
+    "word": "normal",
+    "phonetic": "'nɔrml",
+    "translation": "正常的",
+    "translations": [
+      "正常的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00402",
+    "word": "unless",
+    "phonetic": "ən'lɛs",
+    "translation": "除非，如果不",
+    "translations": [
+      "除非，如果不"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00403",
+    "word": "certainly",
+    "phonetic": "'sɝtnli",
+    "translation": "当然，肯定",
+    "translations": [
+      "当然，肯定"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00404",
+    "word": "wallet",
+    "phonetic": "'wɑlɪt",
+    "translation": "皮夹，钱包",
+    "translations": [
+      "皮夹，钱包"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00405",
+    "word": "mile",
+    "phonetic": "maɪl",
+    "translation": "英里；较大的距离",
+    "translations": [
+      "英里；较大的距离"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00406",
+    "word": "angry",
+    "phonetic": "ˈæŋgrɪ",
+    "translation": "生气的，发怒的",
+    "translations": [
+      "生气的，发怒的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00407",
+    "word": "understanding",
+    "phonetic": ",ʌndɚ'stændɪŋ",
+    "translation": "善解人意的，体谅人的",
+    "translations": [
+      "善解人意的，体谅人的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00408",
+    "word": "careless",
+    "phonetic": "'kɛrləs",
+    "translation": "粗心的，不小心的",
+    "translations": [
+      "粗心的，不小心的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00409",
+    "word": "mistake",
+    "phonetic": "mɪ'stek",
+    "translation": "错误，失误",
+    "translations": [
+      "错误，失误"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00410",
+    "word": "himself",
+    "phonetic": "hɪm'sɛlf",
+    "translation": "他自己；他亲自，他本人",
+    "translations": [
+      "他自己；他亲自，他本人"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00411",
+    "word": "careful",
+    "phonetic": "'kɛrfl",
+    "translation": "小心的；细致的，周密的",
+    "translations": [
+      "小心的；细致的，周密的"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00412",
+    "word": "advise",
+    "phonetic": "əd'vaɪz",
+    "translation": "劝告，建议",
+    "translations": [
+      "劝告，建议"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00413",
+    "word": "solve",
+    "phonetic": "sɑlv",
+    "translation": "解决；解答",
+    "translations": [
+      "解决；解答"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00414",
+    "word": "step",
+    "phonetic": "stɛp",
+    "translation": "步，脚步；步伐；步骤；梯级；踏，踩；走；走，迈步",
+    "translations": [
+      "步，脚步；步伐；步骤；梯级",
+      "踏，踩；走；走，迈步"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00415",
+    "word": "trust",
+    "phonetic": "trʌst",
+    "translation": "相信，信任",
+    "translations": [
+      "相信，信任"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00416",
+    "word": "experience",
+    "phonetic": "ɪk'spɪrɪəns",
+    "translation": "经验；经历",
+    "translations": [
+      "经验；经历"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00417",
+    "word": "in half",
+    "phonetic": "",
+    "translation": "分成两半,一半",
+    "translations": [
+      "分成两半,一半"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00418",
+    "word": "halfway",
+    "phonetic": ",hæf'we",
+    "translation": "中途地；半路地",
+    "translations": [
+      "中途地；半路地"
+    ],
+    "domain": "qwerty_ba1"
+  },
+  {
+    "id": "qwerty_ba1_00419",
+    "word": "else",
+    "phonetic": "ɛls",
+    "translation": "别的，其他的；还能有别的……",
+    "translations": [
+      "别的，其他的",
+      "还能有别的……"
+    ],
+    "domain": "qwerty_ba1"
+  }
+]

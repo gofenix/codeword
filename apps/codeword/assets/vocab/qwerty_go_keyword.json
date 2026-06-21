@@ -1,0 +1,252 @@
+[
+  {
+    "id": "qwerty_go_keyword_00001",
+    "word": "var",
+    "phonetic": "",
+    "translation": "n. 用于声明变量",
+    "translations": [
+      "n. 用于声明变量"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00002",
+    "word": "break",
+    "phonetic": "",
+    "translation": "n. 用于提前结束循环或分支",
+    "translations": [
+      "n. 用于提前结束循环或分支"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00003",
+    "word": "default",
+    "phonetic": "",
+    "translation": "n. 用于指定默认分支",
+    "translations": [
+      "n. 用于指定默认分支"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00004",
+    "word": "func",
+    "phonetic": "",
+    "translation": "n. 用于定义函数",
+    "translations": [
+      "n. 用于定义函数"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00005",
+    "word": "interface",
+    "phonetic": "",
+    "translation": "n. 用于定义接口",
+    "translations": [
+      "n. 用于定义接口"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00006",
+    "word": "select",
+    "phonetic": "",
+    "translation": "n. 用于选择通信操作",
+    "translations": [
+      "n. 用于选择通信操作"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00007",
+    "word": "case",
+    "phonetic": "",
+    "translation": "n. 用于指定分支情况",
+    "translations": [
+      "n. 用于指定分支情况"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00008",
+    "word": "defer",
+    "phonetic": "",
+    "translation": "n. 用于延迟函数执行",
+    "translations": [
+      "n. 用于延迟函数执行"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00009",
+    "word": "go",
+    "phonetic": "",
+    "translation": "n. 用于并发执行函数",
+    "translations": [
+      "n. 用于并发执行函数"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00010",
+    "word": "map",
+    "phonetic": "",
+    "translation": "n. 用于声明映射数据结构",
+    "translations": [
+      "n. 用于声明映射数据结构"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00011",
+    "word": "struct",
+    "phonetic": "",
+    "translation": "n. 用于定义结构体",
+    "translations": [
+      "n. 用于定义结构体"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00012",
+    "word": "chan",
+    "phonetic": "",
+    "translation": "n. 用于声明通道",
+    "translations": [
+      "n. 用于声明通道"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00013",
+    "word": "else",
+    "phonetic": "",
+    "translation": "n. 用于条件不成立时执行的分支",
+    "translations": [
+      "n. 用于条件不成立时执行的分支"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00014",
+    "word": "goto",
+    "phonetic": "",
+    "translation": "n. 用于跳转到标签位置",
+    "translations": [
+      "n. 用于跳转到标签位置"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00015",
+    "word": "package",
+    "phonetic": "",
+    "translation": "n. 用于定义包",
+    "translations": [
+      "n. 用于定义包"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00016",
+    "word": "switch",
+    "phonetic": "",
+    "translation": "n. 用于多条件选择",
+    "translations": [
+      "n. 用于多条件选择"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00017",
+    "word": "const",
+    "phonetic": "",
+    "translation": "n. 用于声明常量",
+    "translations": [
+      "n. 用于声明常量"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00018",
+    "word": "fallthrough",
+    "phonetic": "",
+    "translation": "n. 用于执行下一个分支代码",
+    "translations": [
+      "n. 用于执行下一个分支代码"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00019",
+    "word": "if",
+    "phonetic": "",
+    "translation": "n. 用于条件判断",
+    "translations": [
+      "n. 用于条件判断"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00020",
+    "word": "range",
+    "phonetic": "",
+    "translation": "n. 用于在循环中迭代元素",
+    "translations": [
+      "n. 用于在循环中迭代元素"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00021",
+    "word": "type",
+    "phonetic": "",
+    "translation": "n. 用于定义自定义类型",
+    "translations": [
+      "n. 用于定义自定义类型"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00022",
+    "word": "continue",
+    "phonetic": "",
+    "translation": "n. 用于跳过当前迭代",
+    "translations": [
+      "n. 用于跳过当前迭代"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00023",
+    "word": "for",
+    "phonetic": "",
+    "translation": "n. 用于循环",
+    "translations": [
+      "n. 用于循环"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00024",
+    "word": "import",
+    "phonetic": "",
+    "translation": "n. 用于导入外部包",
+    "translations": [
+      "n. 用于导入外部包"
+    ],
+    "domain": "qwerty_go_keyword"
+  },
+  {
+    "id": "qwerty_go_keyword_00025",
+    "word": "return",
+    "phonetic": "",
+    "translation": "n. 用于从函数中返回",
+    "translations": [
+      "n. 用于从函数中返回"
+    ],
+    "domain": "qwerty_go_keyword"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "qwerty_javacharacter_00001",
+    "word": "isLetter()",
+    "phonetic": "",
+    "translation": "isLetter():是否是一个字母",
+    "translations": [
+      "isLetter():是否是一个字母"
+    ],
+    "domain": "qwerty_javacharacter"
+  },
+  {
+    "id": "qwerty_javacharacter_00002",
+    "word": "isDigit()",
+    "phonetic": "",
+    "translation": "isDigit():是否是一个数字字符",
+    "translations": [
+      "isDigit():是否是一个数字字符"
+    ],
+    "domain": "qwerty_javacharacter"
+  },
+  {
+    "id": "qwerty_javacharacter_00003",
+    "word": "isWhitespace()",
+    "phonetic": "",
+    "translation": "isWhitespace():是否是一个空白字符",
+    "translations": [
+      "isWhitespace():是否是一个空白字符"
+    ],
+    "domain": "qwerty_javacharacter"
+  },
+  {
+    "id": "qwerty_javacharacter_00004",
+    "word": "isUpperCase()",
+    "phonetic": "",
+    "translation": "isUpperCase():是否是大写字母",
+    "translations": [
+      "isUpperCase():是否是大写字母"
+    ],
+    "domain": "qwerty_javacharacter"
+  },
+  {
+    "id": "qwerty_javacharacter_00005",
+    "word": "isLowerCase()",
+    "phonetic": "",
+    "translation": "isLowerCase():是否是小写字母",
+    "translations": [
+      "isLowerCase():是否是小写字母"
+    ],
+    "domain": "qwerty_javacharacter"
+  },
+  {
+    "id": "qwerty_javacharacter_00006",
+    "word": "toUpperCase()",
+    "phonetic": "",
+    "translation": "toUpperCase():指定字母的大写形式",
+    "translations": [
+      "toUpperCase():指定字母的大写形式"
+    ],
+    "domain": "qwerty_javacharacter"
+  },
+  {
+    "id": "qwerty_javacharacter_00007",
+    "word": "toLowerCase()",
+    "phonetic": "",
+    "translation": "toLowerCase():指定字母的小写形式",
+    "translations": [
+      "toLowerCase():指定字母的小写形式"
+    ],
+    "domain": "qwerty_javacharacter"
+  },
+  {
+    "id": "qwerty_javacharacter_00008",
+    "word": "toString()",
+    "phonetic": "",
+    "translation": "toString():返回字符的字符串形式，字符串的长度仅为1",
+    "translations": [
+      "toString():返回字符的字符串形式，字符串的长度仅为1"
+    ],
+    "domain": "qwerty_javacharacter"
+  }
+]

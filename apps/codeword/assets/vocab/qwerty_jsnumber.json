@@ -1,0 +1,222 @@
+[
+  {
+    "id": "qwerty_jsnumber_00001",
+    "word": "Number.EPSILON",
+    "phonetic": "",
+    "translation": "Number.EPSILON 属性表示 1 和大于 1 的最小的浮点数（可表示为 Number）的差值。",
+    "translations": [
+      "Number.EPSILON 属性表示 1 和大于 1 的最小的浮点数（可表示为 Number）的差值。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00002",
+    "word": "Number.MAX_SAFE_INTEGER",
+    "phonetic": "",
+    "translation": "Number.MAX_SAFE_INTEGER 常量表示在 JavaScript 中最大的安全整数（maxinum safe integer)（253 - 1）。",
+    "translations": [
+      "Number.MAX_SAFE_INTEGER 常量表示在 JavaScript 中最大的安全整数（maxinum safe integer)（253 - 1）。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00003",
+    "word": "Number.MAX_VALUE",
+    "phonetic": "",
+    "translation": "Number.MAX_VALUE 属性表示在 JavaScript 里所能表示的最大数值。",
+    "translations": [
+      "Number.MAX_VALUE 属性表示在 JavaScript 里所能表示的最大数值。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00004",
+    "word": "Number.MIN_SAFE_INTEGER",
+    "phonetic": "",
+    "translation": "Number.MIN_SAFE_INTEGER 代表在 JavaScript中最小的安全的integer型数字 (-(253 - 1)).",
+    "translations": [
+      "Number.MIN_SAFE_INTEGER 代表在 JavaScript中最小的安全的integer型数字 (-(253 - 1))."
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00005",
+    "word": "Number.MIN_VALUE",
+    "phonetic": "",
+    "translation": "Number.MIN_VALUE 属性表示在 JavaScript 中所能表示的最小的正值。",
+    "translations": [
+      "Number.MIN_VALUE 属性表示在 JavaScript 中所能表示的最小的正值。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00006",
+    "word": "Number.NEGATIVE_INFINITY",
+    "phonetic": "",
+    "translation": "Number.NEGATIVE_INFINITY 属性表示负无穷大。",
+    "translations": [
+      "Number.NEGATIVE_INFINITY 属性表示负无穷大。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00007",
+    "word": "Number.NaN",
+    "phonetic": "",
+    "translation": "Number.NaN 表示“非数字”（Not-A-Number）。和 NaN 相同。",
+    "translations": [
+      "Number.NaN 表示“非数字”（Not-A-Number）。和 NaN 相同。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00008",
+    "word": "Number.POSITIVE_INFINITY",
+    "phonetic": "",
+    "translation": "Number.POSITIVE_INFINITY 属性表示正无穷大。",
+    "translations": [
+      "Number.POSITIVE_INFINITY 属性表示正无穷大。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00009",
+    "word": "Number.isFinite()",
+    "phonetic": "",
+    "translation": "Number.isFinite() 方法用来检测传入的参数是否是一个有穷数（finite number）。",
+    "translations": [
+      "Number.isFinite() 方法用来检测传入的参数是否是一个有穷数（finite number）。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00010",
+    "word": "Number.isInteger()",
+    "phonetic": "",
+    "translation": "Number.isInteger() 方法用来判断给定的参数是否为整数。",
+    "translations": [
+      "Number.isInteger() 方法用来判断给定的参数是否为整数。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00011",
+    "word": "Number.isNaN()",
+    "phonetic": "",
+    "translation": "Number.isNaN() 方法确定传递的值是否为 NaN和其类型是 Number。它是原始的全局isNaN()的更强大的版本。",
+    "translations": [
+      "Number.isNaN() 方法确定传递的值是否为 NaN和其类型是 Number。它是原始的全局isNaN()的更强大的版本。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00012",
+    "word": "Number.isSafeInteger()",
+    "phonetic": "",
+    "translation": "Number.isSafeInteger() 方法用来判断传入的参数值是否是一个“安全整数”（safe integer）。一个安全整数是一个符合下面条件的整数：",
+    "translations": [
+      "Number.isSafeInteger() 方法用来判断传入的参数值是否是一个“安全整数”（safe integer）。一个安全整数是一个符合下面条件的整数："
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00013",
+    "word": "Number.parseFloat()",
+    "phonetic": "",
+    "translation": "Number.parseFloat() 方法可以把一个字符串解析成浮点数。该方法与全局的 parseFloat() 函数相同，并且处于 ECMAScript 6 规范中（用于全局变量的模块化）。",
+    "translations": [
+      "Number.parseFloat() 方法可以把一个字符串解析成浮点数。该方法与全局的 parseFloat() 函数相同，并且处于 ECMAScript 6 规范中（用于全局变量的模块化）。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00014",
+    "word": "Number.parseInt()",
+    "phonetic": "",
+    "translation": "Number.parseInt() 方法可以根据给定的进制数把一个字符串解析成整数。",
+    "translations": [
+      "Number.parseInt() 方法可以根据给定的进制数把一个字符串解析成整数。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00015",
+    "word": "toExponential()",
+    "phonetic": "",
+    "translation": "toExponential() 方法以指数表示法返回该数值字符串表示形式。",
+    "translations": [
+      "toExponential() 方法以指数表示法返回该数值字符串表示形式。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00016",
+    "word": "toFixed()",
+    "phonetic": "",
+    "translation": "toFixed() 方法使用定点表示法来格式化一个数。",
+    "translations": [
+      "toFixed() 方法使用定点表示法来格式化一个数。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00017",
+    "word": "toLocaleString()",
+    "phonetic": "",
+    "translation": "toLocaleString() 方法返回这个数字在特定语言环境下的表示字符串。",
+    "translations": [
+      "toLocaleString() 方法返回这个数字在特定语言环境下的表示字符串。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00018",
+    "word": "toPrecision()",
+    "phonetic": "",
+    "translation": "toPrecision() 方法以指定的精度返回该数值对象的字符串表示。",
+    "translations": [
+      "toPrecision() 方法以指定的精度返回该数值对象的字符串表示。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00019",
+    "word": "toSource()",
+    "phonetic": "",
+    "translation": "toSource() 方法返回该对象源码的字符串表示。",
+    "translations": [
+      "toSource() 方法返回该对象源码的字符串表示。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00020",
+    "word": "toString()",
+    "phonetic": "",
+    "translation": "toString() 方法返回指定 Number 对象的字符串表示形式。",
+    "translations": [
+      "toString() 方法返回指定 Number 对象的字符串表示形式。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00021",
+    "word": "valueOf()",
+    "phonetic": "",
+    "translation": "valueOf() 方法返回一个被 Number 对象包装的原始值。",
+    "translations": [
+      "valueOf() 方法返回一个被 Number 对象包装的原始值。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00022",
+    "word": "Number.toInteger()",
+    "phonetic": "",
+    "translation": "Number.toInteger() 用来将参数转换成整数,但该方法的实现已被移除.",
+    "translations": [
+      "Number.toInteger() 用来将参数转换成整数,但该方法的实现已被移除."
+    ],
+    "domain": "qwerty_jsnumber"
+  }
+]

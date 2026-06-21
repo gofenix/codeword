@@ -1,0 +1,4362 @@
+[
+  {
+    "id": "qwerty_soundsfxkey_00001",
+    "word": "blow",
+    "phonetic": "",
+    "translation": "吹",
+    "translations": [
+      "吹"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00002",
+    "word": "burst",
+    "phonetic": "",
+    "translation": "爆发",
+    "translations": [
+      "爆发"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00003",
+    "word": "hiss",
+    "phonetic": "",
+    "translation": "嘶嘶声",
+    "translations": [
+      "嘶嘶声"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00004",
+    "word": "misc",
+    "phonetic": "",
+    "translation": "其它",
+    "translations": [
+      "其它"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00005",
+    "word": "suction",
+    "phonetic": "",
+    "translation": "抽吸",
+    "translations": [
+      "抽吸"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00006",
+    "word": "door",
+    "phonetic": "",
+    "translation": "门",
+    "translations": [
+      "门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00007",
+    "word": "helicopter",
+    "phonetic": "",
+    "translation": "直升机",
+    "translations": [
+      "直升机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00008",
+    "word": "interior",
+    "phonetic": "",
+    "translation": "航空舱",
+    "translations": [
+      "航空舱"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00009",
+    "word": "jet",
+    "phonetic": "",
+    "translation": "喷气式飞机",
+    "translations": [
+      "喷气式飞机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00010",
+    "word": "mechanism",
+    "phonetic": "",
+    "translation": "机械",
+    "translations": [
+      "机械"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00011",
+    "word": "military",
+    "phonetic": "",
+    "translation": "军用",
+    "translations": [
+      "军用"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00012",
+    "word": "prop",
+    "phonetic": "",
+    "translation": "螺旋桨飞机",
+    "translations": [
+      "螺旋桨飞机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00013",
+    "word": "radio controlled",
+    "phonetic": "",
+    "translation": "塔台",
+    "translations": [
+      "塔台"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00014",
+    "word": "rocket",
+    "phonetic": "",
+    "translation": "火箭",
+    "translations": [
+      "火箭"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00015",
+    "word": "bell",
+    "phonetic": "",
+    "translation": "警铃",
+    "translations": [
+      "警铃"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00016",
+    "word": "buzzer",
+    "phonetic": "",
+    "translation": "蜂鸣器",
+    "translations": [
+      "蜂鸣器"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00017",
+    "word": "clock",
+    "phonetic": "",
+    "translation": "钟表",
+    "translations": [
+      "钟表"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00018",
+    "word": "electronic",
+    "phonetic": "",
+    "translation": "电器",
+    "translations": [
+      "电器"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00019",
+    "word": "siren",
+    "phonetic": "",
+    "translation": "警报",
+    "translations": [
+      "警报"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00020",
+    "word": "air",
+    "phonetic": "",
+    "translation": "空气",
+    "translations": [
+      "空气"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00021",
+    "word": "alpine",
+    "phonetic": "",
+    "translation": "高山",
+    "translations": [
+      "高山"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00022",
+    "word": "amusement",
+    "phonetic": "",
+    "translation": "娱乐",
+    "translations": [
+      "娱乐"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00023",
+    "word": "birdsong",
+    "phonetic": "",
+    "translation": "鸟鸣",
+    "translations": [
+      "鸟鸣"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00024",
+    "word": "celebration",
+    "phonetic": "",
+    "translation": "庆典",
+    "translations": [
+      "庆典"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00025",
+    "word": "construction",
+    "phonetic": "",
+    "translation": "施工",
+    "translations": [
+      "施工"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00026",
+    "word": "desert",
+    "phonetic": "",
+    "translation": "沙漠",
+    "translations": [
+      "沙漠"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00027",
+    "word": "designed",
+    "phonetic": "",
+    "translation": "设计",
+    "translations": [
+      "设计"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00028",
+    "word": "emergency",
+    "phonetic": "",
+    "translation": "紧急",
+    "translations": [
+      "紧急"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00029",
+    "word": "fantasy",
+    "phonetic": "",
+    "translation": "奇幻",
+    "translations": [
+      "奇幻"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00030",
+    "word": "farm",
+    "phonetic": "",
+    "translation": "农场",
+    "translations": [
+      "农场"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00031",
+    "word": "forest",
+    "phonetic": "",
+    "translation": "森林",
+    "translations": [
+      "森林"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00032",
+    "word": "grassland",
+    "phonetic": "",
+    "translation": "草地",
+    "translations": [
+      "草地"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00033",
+    "word": "historical",
+    "phonetic": "",
+    "translation": "历史年代",
+    "translations": [
+      "历史年代"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00034",
+    "word": "hitech",
+    "phonetic": "",
+    "translation": "高科技",
+    "translations": [
+      "高科技"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00035",
+    "word": "hospital",
+    "phonetic": "",
+    "translation": "医院",
+    "translations": [
+      "医院"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00036",
+    "word": "industrial",
+    "phonetic": "",
+    "translation": "工业",
+    "translations": [
+      "工业"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00037",
+    "word": "insect",
+    "phonetic": "",
+    "translation": "昆虫",
+    "translations": [
+      "昆虫"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00038",
+    "word": "lakeside",
+    "phonetic": "",
+    "translation": "湖岸",
+    "translations": [
+      "湖岸"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00039",
+    "word": "market",
+    "phonetic": "",
+    "translation": "市场",
+    "translations": [
+      "市场"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00040",
+    "word": "nautical",
+    "phonetic": "",
+    "translation": "航海",
+    "translations": [
+      "航海"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00041",
+    "word": "office",
+    "phonetic": "",
+    "translation": "办公室",
+    "translations": [
+      "办公室"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00042",
+    "word": "park",
+    "phonetic": "",
+    "translation": "公园",
+    "translations": [
+      "公园"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00043",
+    "word": "prison",
+    "phonetic": "",
+    "translation": "监狱",
+    "translations": [
+      "监狱"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00044",
+    "word": "protest",
+    "phonetic": "",
+    "translation": "游行",
+    "translations": [
+      "游行"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00045",
+    "word": "public place",
+    "phonetic": "",
+    "translation": "公共场所",
+    "translations": [
+      "公共场所"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00046",
+    "word": "religious",
+    "phonetic": "",
+    "translation": "宗教场所",
+    "translations": [
+      "宗教场所"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00047",
+    "word": "residential",
+    "phonetic": "",
+    "translation": "住宅区",
+    "translations": [
+      "住宅区"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00048",
+    "word": "restaurant & bar",
+    "phonetic": "",
+    "translation": "餐馆",
+    "translations": [
+      "餐馆"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00049",
+    "word": "room tone",
+    "phonetic": "",
+    "translation": "房间底噪",
+    "translations": [
+      "房间底噪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00050",
+    "word": "rural",
+    "phonetic": "",
+    "translation": "农村",
+    "translations": [
+      "农村"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00051",
+    "word": "school",
+    "phonetic": "",
+    "translation": "校园",
+    "translations": [
+      "校园"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00052",
+    "word": "scifi",
+    "phonetic": "",
+    "translation": "科幻",
+    "translations": [
+      "科幻"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00053",
+    "word": "seaside",
+    "phonetic": "",
+    "translation": "海边",
+    "translations": [
+      "海边"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00054",
+    "word": "sport",
+    "phonetic": "",
+    "translation": "运动场",
+    "translations": [
+      "运动场"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00055",
+    "word": "suburban",
+    "phonetic": "",
+    "translation": "郊区",
+    "translations": [
+      "郊区"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00056",
+    "word": "swamp",
+    "phonetic": "",
+    "translation": "沼泽地",
+    "translations": [
+      "沼泽地"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00057",
+    "word": "town",
+    "phonetic": "",
+    "translation": "小镇",
+    "translations": [
+      "小镇"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00058",
+    "word": "traffic",
+    "phonetic": "",
+    "translation": "交通",
+    "translations": [
+      "交通"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00059",
+    "word": "transportation",
+    "phonetic": "",
+    "translation": "交通工具",
+    "translations": [
+      "交通工具"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00060",
+    "word": "tropical",
+    "phonetic": "",
+    "translation": "热带",
+    "translations": [
+      "热带"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00061",
+    "word": "tundra",
+    "phonetic": "",
+    "translation": "冻土",
+    "translations": [
+      "冻土"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00062",
+    "word": "underground",
+    "phonetic": "",
+    "translation": "地下",
+    "translations": [
+      "地下"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00063",
+    "word": "underwater",
+    "phonetic": "",
+    "translation": "水下",
+    "translations": [
+      "水下"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00064",
+    "word": "urban",
+    "phonetic": "",
+    "translation": "城市",
+    "translations": [
+      "城市"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00065",
+    "word": "warfare",
+    "phonetic": "",
+    "translation": "战争",
+    "translations": [
+      "战争"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00066",
+    "word": "amphibian",
+    "phonetic": "",
+    "translation": "两栖动物",
+    "translations": [
+      "两栖动物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00067",
+    "word": "aquatic",
+    "phonetic": "",
+    "translation": "水生动物",
+    "translations": [
+      "水生动物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00068",
+    "word": "bat",
+    "phonetic": "",
+    "translation": "蝙蝠",
+    "translations": [
+      "蝙蝠"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00069",
+    "word": "cat domestic",
+    "phonetic": "",
+    "translation": "家猫",
+    "translations": [
+      "家猫"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00070",
+    "word": "cat wild",
+    "phonetic": "",
+    "translation": "猫科动物",
+    "translations": [
+      "猫科动物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00071",
+    "word": "dog",
+    "phonetic": "",
+    "translation": "狗",
+    "translations": [
+      "狗"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00072",
+    "word": "dog wild",
+    "phonetic": "",
+    "translation": "犬科动物",
+    "translations": [
+      "犬科动物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00073",
+    "word": "horse",
+    "phonetic": "",
+    "translation": "马",
+    "translations": [
+      "马"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00074",
+    "word": "primate",
+    "phonetic": "",
+    "translation": "灵长类",
+    "translations": [
+      "灵长类"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00075",
+    "word": "reptile",
+    "phonetic": "",
+    "translation": "爬行动物",
+    "translations": [
+      "爬行动物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00076",
+    "word": "rodent",
+    "phonetic": "",
+    "translation": "啮齿动物",
+    "translations": [
+      "啮齿动物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00077",
+    "word": "wild",
+    "phonetic": "",
+    "translation": "野生动物",
+    "translations": [
+      "野生动物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00078",
+    "word": "adr",
+    "phonetic": "",
+    "translation": "ADR",
+    "translations": [
+      "ADR"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00079",
+    "word": "asset",
+    "phonetic": "",
+    "translation": "资源",
+    "translations": [
+      "资源"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00080",
+    "word": "bounce",
+    "phonetic": "",
+    "translation": "导出",
+    "translations": [
+      "导出"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00081",
+    "word": "impulse response",
+    "phonetic": "",
+    "translation": "卷积混响素材",
+    "translations": [
+      "卷积混响素材"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00082",
+    "word": "loop group",
+    "phonetic": "",
+    "translation": "循环群组",
+    "translations": [
+      "循环群组"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00083",
+    "word": "mix",
+    "phonetic": "",
+    "translation": "混音",
+    "translations": [
+      "混音"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00084",
+    "word": "pfx",
+    "phonetic": "",
+    "translation": "现场音效",
+    "translations": [
+      "现场音效"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00085",
+    "word": "production",
+    "phonetic": "",
+    "translation": "现场对白",
+    "translations": [
+      "现场对白"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00086",
+    "word": "raw",
+    "phonetic": "",
+    "translation": "原始素材",
+    "translations": [
+      "原始素材"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00087",
+    "word": "reference",
+    "phonetic": "",
+    "translation": "参考素材",
+    "translations": [
+      "参考素材"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00088",
+    "word": "scene",
+    "phonetic": "",
+    "translation": "场景素材",
+    "translations": [
+      "场景素材"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00089",
+    "word": "test tone",
+    "phonetic": "",
+    "translation": "测试音",
+    "translations": [
+      "测试音"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00090",
+    "word": "trademarked",
+    "phonetic": "",
+    "translation": "商标音",
+    "translations": [
+      "商标音"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00091",
+    "word": "work in progress",
+    "phonetic": "",
+    "translation": "过程中素材",
+    "translations": [
+      "过程中素材"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00092",
+    "word": "wtf",
+    "phonetic": "",
+    "translation": "未确认素材",
+    "translations": [
+      "未确认素材"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00093",
+    "word": "appliance",
+    "phonetic": "",
+    "translation": "电器",
+    "translations": [
+      "电器"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00094",
+    "word": "general",
+    "phonetic": "",
+    "translation": "通用",
+    "translations": [
+      "通用"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00095",
+    "word": "lofi",
+    "phonetic": "",
+    "translation": "低保真",
+    "translations": [
+      "低保真"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00096",
+    "word": "medical",
+    "phonetic": "",
+    "translation": "医疗器械",
+    "translations": [
+      "医疗器械"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00097",
+    "word": "timer",
+    "phonetic": "",
+    "translation": "计时器",
+    "translations": [
+      "计时器"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00098",
+    "word": "vehicle",
+    "phonetic": "",
+    "translation": "车辆",
+    "translations": [
+      "车辆"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00099",
+    "word": "animal",
+    "phonetic": "",
+    "translation": "动物",
+    "translations": [
+      "动物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00100",
+    "word": "doorbell",
+    "phonetic": "",
+    "translation": "门铃",
+    "translations": [
+      "门铃"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00101",
+    "word": "gong",
+    "phonetic": "",
+    "translation": "锣",
+    "translations": [
+      "锣"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00102",
+    "word": "handbell",
+    "phonetic": "",
+    "translation": "手铃",
+    "translations": [
+      "手铃"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00103",
+    "word": "large",
+    "phonetic": "",
+    "translation": "大钟",
+    "translations": [
+      "大钟"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00104",
+    "word": "bird of prey",
+    "phonetic": "",
+    "translation": "猛禽",
+    "translations": [
+      "猛禽"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00105",
+    "word": "crow",
+    "phonetic": "",
+    "translation": "乌鸦",
+    "translations": [
+      "乌鸦"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00106",
+    "word": "fowl",
+    "phonetic": "",
+    "translation": "家禽",
+    "translations": [
+      "家禽"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00107",
+    "word": "sea",
+    "phonetic": "",
+    "translation": "海鸟",
+    "translations": [
+      "海鸟"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00108",
+    "word": "songbird",
+    "phonetic": "",
+    "translation": "鸣鸟",
+    "translations": [
+      "鸣鸟"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00109",
+    "word": "tropical",
+    "phonetic": "",
+    "translation": "热带",
+    "translations": [
+      "热带"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00110",
+    "word": "wading",
+    "phonetic": "",
+    "translation": "水鸟",
+    "translations": [
+      "水鸟"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00111",
+    "word": "air boat",
+    "phonetic": "",
+    "translation": "汽艇",
+    "translations": [
+      "汽艇"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00112",
+    "word": "bow wash",
+    "phonetic": "",
+    "translation": "船浪",
+    "translations": [
+      "船浪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00113",
+    "word": "electric",
+    "phonetic": "",
+    "translation": "电动船",
+    "translations": [
+      "电动船"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00114",
+    "word": "fishing",
+    "phonetic": "",
+    "translation": "捕鱼",
+    "translations": [
+      "捕鱼"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00115",
+    "word": "horn",
+    "phonetic": "",
+    "translation": "船笛",
+    "translations": [
+      "船笛"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00116",
+    "word": "motorboat",
+    "phonetic": "",
+    "translation": "摩托艇",
+    "translations": [
+      "摩托艇"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00117",
+    "word": "racing",
+    "phonetic": "",
+    "translation": "赛艇",
+    "translations": [
+      "赛艇"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00118",
+    "word": "rowboat",
+    "phonetic": "",
+    "translation": "划艇",
+    "translations": [
+      "划艇"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00119",
+    "word": "sailboat",
+    "phonetic": "",
+    "translation": "帆船",
+    "translations": [
+      "帆船"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00120",
+    "word": "ship",
+    "phonetic": "",
+    "translation": "大船",
+    "translations": [
+      "大船"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00121",
+    "word": "steam",
+    "phonetic": "",
+    "translation": "蒸汽船",
+    "translations": [
+      "蒸汽船"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00122",
+    "word": "submarine",
+    "phonetic": "",
+    "translation": "潜艇",
+    "translations": [
+      "潜艇"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00123",
+    "word": "by",
+    "phonetic": "",
+    "translation": "飞过",
+    "translations": [
+      "飞过"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00124",
+    "word": "impact",
+    "phonetic": "",
+    "translation": "击中",
+    "translations": [
+      "击中"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00125",
+    "word": "ricochet",
+    "phonetic": "",
+    "translation": "弹跳",
+    "translations": [
+      "弹跳"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00126",
+    "word": "shell",
+    "phonetic": "",
+    "translation": "弹壳",
+    "translations": [
+      "弹壳"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00127",
+    "word": "boing",
+    "phonetic": "",
+    "translation": "弹簧音",
+    "translations": [
+      "弹簧音"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00128",
+    "word": "clang",
+    "phonetic": "",
+    "translation": "咣当",
+    "translations": [
+      "咣当"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00129",
+    "word": "creak",
+    "phonetic": "",
+    "translation": "嘎吱",
+    "translations": [
+      "嘎吱"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00130",
+    "word": "horn",
+    "phonetic": "",
+    "translation": "号",
+    "translations": [
+      "号"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00131",
+    "word": "impact",
+    "phonetic": "",
+    "translation": "打击",
+    "translations": [
+      "打击"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00132",
+    "word": "machine",
+    "phonetic": "",
+    "translation": "机器",
+    "translations": [
+      "机器"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00133",
+    "word": "musical",
+    "phonetic": "",
+    "translation": "音乐性",
+    "translations": [
+      "音乐性"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00134",
+    "word": "pluck",
+    "phonetic": "",
+    "translation": "弹拨",
+    "translations": [
+      "弹拨"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00135",
+    "word": "pop",
+    "phonetic": "",
+    "translation": "道具",
+    "translations": [
+      "道具"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00136",
+    "word": "shake",
+    "phonetic": "",
+    "translation": "摇晃",
+    "translations": [
+      "摇晃"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00137",
+    "word": "splat",
+    "phonetic": "",
+    "translation": "啪嗒",
+    "translations": [
+      "啪嗒"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00138",
+    "word": "squeak",
+    "phonetic": "",
+    "translation": "摩擦",
+    "translations": [
+      "摩擦"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00139",
+    "word": "stretch",
+    "phonetic": "",
+    "translation": "伸缩",
+    "translations": [
+      "伸缩"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00140",
+    "word": "swish",
+    "phonetic": "",
+    "translation": "嗖嗖",
+    "translations": [
+      "嗖嗖"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00141",
+    "word": "twang",
+    "phonetic": "",
+    "translation": "弹拨声",
+    "translations": [
+      "弹拨声"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00142",
+    "word": "vehicle",
+    "phonetic": "",
+    "translation": "载具",
+    "translations": [
+      "载具"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00143",
+    "word": "vocal",
+    "phonetic": "",
+    "translation": "语音",
+    "translations": [
+      "语音"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00144",
+    "word": "warble",
+    "phonetic": "",
+    "translation": "颤音",
+    "translations": [
+      "颤音"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00145",
+    "word": "whistle",
+    "phonetic": "",
+    "translation": "哨子",
+    "translations": [
+      "哨子"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00146",
+    "word": "zip",
+    "phonetic": "",
+    "translation": "拉链",
+    "translations": [
+      "拉链"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00147",
+    "word": "break",
+    "phonetic": "",
+    "translation": "打破",
+    "translations": [
+      "打破"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00148",
+    "word": "crash & debris",
+    "phonetic": "",
+    "translation": "碎片",
+    "translations": [
+      "碎片"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00149",
+    "word": "friction",
+    "phonetic": "",
+    "translation": "挤压",
+    "translations": [
+      "挤压"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00150",
+    "word": "handle",
+    "phonetic": "",
+    "translation": "抓取",
+    "translations": [
+      "抓取"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00151",
+    "word": "movement",
+    "phonetic": "",
+    "translation": "移动",
+    "translations": [
+      "移动"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00152",
+    "word": "tonal",
+    "phonetic": "",
+    "translation": "音乐性",
+    "translations": [
+      "音乐性"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00153",
+    "word": "break",
+    "phonetic": "",
+    "translation": "断裂",
+    "translations": [
+      "断裂"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00154",
+    "word": "hitech",
+    "phonetic": "",
+    "translation": "高科技",
+    "translations": [
+      "高科技"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00155",
+    "word": "acid",
+    "phonetic": "",
+    "translation": "腐蚀",
+    "translations": [
+      "腐蚀"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00156",
+    "word": "reaction",
+    "phonetic": "",
+    "translation": "反应",
+    "translations": [
+      "反应"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00157",
+    "word": "chime",
+    "phonetic": "",
+    "translation": "风铃",
+    "translations": [
+      "风铃"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00158",
+    "word": "mechanics",
+    "phonetic": "",
+    "translation": "机械",
+    "translations": [
+      "机械"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00159",
+    "word": "tick",
+    "phonetic": "",
+    "translation": "嘀嗒",
+    "translations": [
+      "嘀嗒"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00160",
+    "word": "flap",
+    "phonetic": "",
+    "translation": "抖动",
+    "translations": [
+      "抖动"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00161",
+    "word": "rip",
+    "phonetic": "",
+    "translation": "撕扯",
+    "translations": [
+      "撕扯"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00162",
+    "word": "audio visual",
+    "phonetic": "",
+    "translation": "影视设备",
+    "translations": [
+      "影视设备"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00163",
+    "word": "camera",
+    "phonetic": "",
+    "translation": "照相机",
+    "translations": [
+      "照相机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00164",
+    "word": "cellphone",
+    "phonetic": "",
+    "translation": "手机",
+    "translations": [
+      "手机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00165",
+    "word": "microphone",
+    "phonetic": "",
+    "translation": "麦克风",
+    "translations": [
+      "麦克风"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00166",
+    "word": "phonograph",
+    "phonetic": "",
+    "translation": "留声机",
+    "translations": [
+      "留声机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00167",
+    "word": "radio",
+    "phonetic": "",
+    "translation": "收音机",
+    "translations": [
+      "收音机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00168",
+    "word": "static",
+    "phonetic": "",
+    "translation": "干扰",
+    "translations": [
+      "干扰"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00169",
+    "word": "telemetry",
+    "phonetic": "",
+    "translation": "无线电",
+    "translations": [
+      "无线电"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00170",
+    "word": "telephone",
+    "phonetic": "",
+    "translation": "电话",
+    "translations": [
+      "电话"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00171",
+    "word": "television",
+    "phonetic": "",
+    "translation": "电视机",
+    "translations": [
+      "电视机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00172",
+    "word": "transceiver",
+    "phonetic": "",
+    "translation": "信号收发机",
+    "translations": [
+      "信号收发机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00173",
+    "word": "typewriter",
+    "phonetic": "",
+    "translation": "打字机",
+    "translations": [
+      "打字机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00174",
+    "word": "hard drive",
+    "phonetic": "",
+    "translation": "硬盘",
+    "translations": [
+      "硬盘"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00175",
+    "word": "keyboard & mouse",
+    "phonetic": "",
+    "translation": "键鼠",
+    "translations": [
+      "键鼠"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00176",
+    "word": "aquatic",
+    "phonetic": "",
+    "translation": "水生",
+    "translations": [
+      "水生"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00177",
+    "word": "avian",
+    "phonetic": "",
+    "translation": "奇幻禽类",
+    "translations": [
+      "奇幻禽类"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00178",
+    "word": "beast",
+    "phonetic": "",
+    "translation": "野兽",
+    "translations": [
+      "野兽"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00179",
+    "word": "blob",
+    "phonetic": "",
+    "translation": "黏体生物",
+    "translations": [
+      "黏体生物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00180",
+    "word": "dinosaur",
+    "phonetic": "",
+    "translation": "恐龙",
+    "translations": [
+      "恐龙"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00181",
+    "word": "dragon",
+    "phonetic": "",
+    "translation": "龙",
+    "translations": [
+      "龙"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00182",
+    "word": "elemental",
+    "phonetic": "",
+    "translation": "精灵生物",
+    "translations": [
+      "精灵生物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00183",
+    "word": "ethereal",
+    "phonetic": "",
+    "translation": "鬼魂",
+    "translations": [
+      "鬼魂"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00184",
+    "word": "humanoid",
+    "phonetic": "",
+    "translation": "类人动物",
+    "translations": [
+      "类人动物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00185",
+    "word": "insectoid",
+    "phonetic": "",
+    "translation": "巨型昆虫",
+    "translations": [
+      "巨型昆虫"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00186",
+    "word": "monster",
+    "phonetic": "",
+    "translation": "怪兽",
+    "translations": [
+      "怪兽"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00187",
+    "word": "reptilian",
+    "phonetic": "",
+    "translation": "巨型爬行生物",
+    "translations": [
+      "巨型爬行生物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00188",
+    "word": "small",
+    "phonetic": "",
+    "translation": "小型神话生物",
+    "translations": [
+      "小型神话生物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00189",
+    "word": "source",
+    "phonetic": "",
+    "translation": "人声包",
+    "translations": [
+      "人声包"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00190",
+    "word": "angry",
+    "phonetic": "",
+    "translation": "愤怒",
+    "translations": [
+      "愤怒"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00191",
+    "word": "applause",
+    "phonetic": "",
+    "translation": "喝彩",
+    "translations": [
+      "喝彩"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00192",
+    "word": "battle",
+    "phonetic": "",
+    "translation": "打斗",
+    "translations": [
+      "打斗"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00193",
+    "word": "celebration",
+    "phonetic": "",
+    "translation": "庆祝",
+    "translations": [
+      "庆祝"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00194",
+    "word": "cheering",
+    "phonetic": "",
+    "translation": "欢呼",
+    "translations": [
+      "欢呼"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00195",
+    "word": "children",
+    "phonetic": "",
+    "translation": "儿童",
+    "translations": [
+      "儿童"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00196",
+    "word": "conversation",
+    "phonetic": "",
+    "translation": "谈话",
+    "translations": [
+      "谈话"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00197",
+    "word": "laughter",
+    "phonetic": "",
+    "translation": "笑",
+    "translations": [
+      "笑"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00198",
+    "word": "loop group",
+    "phonetic": "",
+    "translation": "循环群杂",
+    "translations": [
+      "循环群杂"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00199",
+    "word": "panic",
+    "phonetic": "",
+    "translation": "恐惧",
+    "translations": [
+      "恐惧"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00200",
+    "word": "quiet",
+    "phonetic": "",
+    "translation": "安静",
+    "translations": [
+      "安静"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00201",
+    "word": "reaction",
+    "phonetic": "",
+    "translation": "反应",
+    "translations": [
+      "反应"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00202",
+    "word": "singing",
+    "phonetic": "",
+    "translation": "歌唱",
+    "translations": [
+      "歌唱"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00203",
+    "word": "walla",
+    "phonetic": "",
+    "translation": "群杂",
+    "translations": [
+      "群杂"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00204",
+    "word": "bass dive",
+    "phonetic": "",
+    "translation": "低频下潜",
+    "translations": [
+      "低频下潜"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00205",
+    "word": "boom",
+    "phonetic": "",
+    "translation": "低频轰鸣",
+    "translations": [
+      "低频轰鸣"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00206",
+    "word": "braam",
+    "phonetic": "",
+    "translation": "低频号角",
+    "translations": [
+      "低频号角"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00207",
+    "word": "distortion",
+    "phonetic": "",
+    "translation": "失真",
+    "translations": [
+      "失真"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00208",
+    "word": "drone",
+    "phonetic": "",
+    "translation": "低音氛围",
+    "translations": [
+      "低音氛围"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00209",
+    "word": "eerie",
+    "phonetic": "",
+    "translation": "毛骨悚然",
+    "translations": [
+      "毛骨悚然"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00210",
+    "word": "ethereal",
+    "phonetic": "",
+    "translation": "鬼魅飘渺",
+    "translations": [
+      "鬼魅飘渺"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00211",
+    "word": "granular",
+    "phonetic": "",
+    "translation": "粒状",
+    "translations": [
+      "粒状"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00212",
+    "word": "morph",
+    "phonetic": "",
+    "translation": "合成器",
+    "translations": [
+      "合成器"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00213",
+    "word": "riser",
+    "phonetic": "",
+    "translation": "渐强",
+    "translations": [
+      "渐强"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00214",
+    "word": "rumble",
+    "phonetic": "",
+    "translation": "次声波",
+    "translations": [
+      "次声波"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00215",
+    "word": "rhythmic",
+    "phonetic": "",
+    "translation": "节奏性",
+    "translations": [
+      "节奏性"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00216",
+    "word": "stinger",
+    "phonetic": "",
+    "translation": "重音强调",
+    "translations": [
+      "重音强调"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00217",
+    "word": "synthetic",
+    "phonetic": "",
+    "translation": "电子合成",
+    "translations": [
+      "电子合成"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00218",
+    "word": "vocal",
+    "phonetic": "",
+    "translation": "人声",
+    "translations": [
+      "人声"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00219",
+    "word": "whoosh",
+    "phonetic": "",
+    "translation": "呼声",
+    "translations": [
+      "呼声"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00220",
+    "word": "collapse",
+    "phonetic": "",
+    "translation": "倒塌",
+    "translations": [
+      "倒塌"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00221",
+    "word": "dust",
+    "phonetic": "",
+    "translation": "灰尘",
+    "translations": [
+      "灰尘"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00222",
+    "word": "antique",
+    "phonetic": "",
+    "translation": "古董",
+    "translations": [
+      "古董"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00223",
+    "word": "cabinet",
+    "phonetic": "",
+    "translation": "箱柜",
+    "translations": [
+      "箱柜"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00224",
+    "word": "composite",
+    "phonetic": "",
+    "translation": "特殊材料",
+    "translations": [
+      "特殊材料"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00225",
+    "word": "dungeon",
+    "phonetic": "",
+    "translation": "传统大门",
+    "translations": [
+      "传统大门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00226",
+    "word": "gate",
+    "phonetic": "",
+    "translation": "大门",
+    "translations": [
+      "大门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00227",
+    "word": "glass",
+    "phonetic": "",
+    "translation": "玻璃门",
+    "translations": [
+      "玻璃门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00228",
+    "word": "hardware",
+    "phonetic": "",
+    "translation": "锁具",
+    "translations": [
+      "锁具"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00229",
+    "word": "hydraulic & pneumatic",
+    "phonetic": "",
+    "translation": "液压与气动",
+    "translations": [
+      "液压与气动"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00230",
+    "word": "knock",
+    "phonetic": "",
+    "translation": "敲门",
+    "translations": [
+      "敲门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00231",
+    "word": "metal",
+    "phonetic": "",
+    "translation": "金属门",
+    "translations": [
+      "金属门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00232",
+    "word": "plastic",
+    "phonetic": "",
+    "translation": "塑料门",
+    "translations": [
+      "塑料门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00233",
+    "word": "prison",
+    "phonetic": "",
+    "translation": "牢门",
+    "translations": [
+      "牢门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00234",
+    "word": "revolving",
+    "phonetic": "",
+    "translation": "旋转门",
+    "translations": [
+      "旋转门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00235",
+    "word": "sliding",
+    "phonetic": "",
+    "translation": "滑动门",
+    "translations": [
+      "滑动门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00236",
+    "word": "stone",
+    "phonetic": "",
+    "translation": "石门",
+    "translations": [
+      "石门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00237",
+    "word": "swinging",
+    "phonetic": "",
+    "translation": "双开门",
+    "translations": [
+      "双开门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00238",
+    "word": "wood",
+    "phonetic": "",
+    "translation": "木门",
+    "translations": [
+      "木门"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00239",
+    "word": "arc",
+    "phonetic": "",
+    "translation": "电弧",
+    "translations": [
+      "电弧"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00240",
+    "word": "buzz & hum",
+    "phonetic": "",
+    "translation": "电流噪声",
+    "translations": [
+      "电流噪声"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00241",
+    "word": "electromagnetic",
+    "phonetic": "",
+    "translation": "电磁",
+    "translations": [
+      "电磁"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00242",
+    "word": "sparks",
+    "phonetic": "",
+    "translation": "电火花",
+    "translations": [
+      "电火花"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00243",
+    "word": "zap",
+    "phonetic": "",
+    "translation": "漏电",
+    "translations": [
+      "漏电"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00244",
+    "word": "bridle & tack",
+    "phonetic": "",
+    "translation": "挽具",
+    "translations": [
+      "挽具"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00245",
+    "word": "recreational",
+    "phonetic": "",
+    "translation": "户外装备",
+    "translations": [
+      "户外装备"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00246",
+    "word": "tactical",
+    "phonetic": "",
+    "translation": "军事装备",
+    "translations": [
+      "军事装备"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00247",
+    "word": "real",
+    "phonetic": "",
+    "translation": "真实",
+    "translations": [
+      "真实"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00248",
+    "word": "bodyfall",
+    "phonetic": "",
+    "translation": "跌倒",
+    "translations": [
+      "跌倒"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00249",
+    "word": "cloth",
+    "phonetic": "",
+    "translation": "衣服",
+    "translations": [
+      "衣服"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00250",
+    "word": "grab",
+    "phonetic": "",
+    "translation": "抓握",
+    "translations": [
+      "抓握"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00251",
+    "word": "burning",
+    "phonetic": "",
+    "translation": "燃烧",
+    "translations": [
+      "燃烧"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00252",
+    "word": "crackle",
+    "phonetic": "",
+    "translation": "爆裂",
+    "translations": [
+      "爆裂"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00253",
+    "word": "gas",
+    "phonetic": "",
+    "translation": "气体",
+    "translations": [
+      "气体"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00254",
+    "word": "ignite",
+    "phonetic": "",
+    "translation": "点火",
+    "translations": [
+      "点火"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00255",
+    "word": "sizzle",
+    "phonetic": "",
+    "translation": "滋滋声",
+    "translations": [
+      "滋滋声"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00256",
+    "word": "torch",
+    "phonetic": "",
+    "translation": "火炬",
+    "translations": [
+      "火炬"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00257",
+    "word": "turbulent",
+    "phonetic": "",
+    "translation": "汹涌火势",
+    "translations": [
+      "汹涌火势"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00258",
+    "word": "commercial",
+    "phonetic": "",
+    "translation": "商业表演",
+    "translations": [
+      "商业表演"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00259",
+    "word": "recreational",
+    "phonetic": "",
+    "translation": "自娱",
+    "translations": [
+      "自娱"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00260",
+    "word": "feet",
+    "phonetic": "",
+    "translation": "脚步",
+    "translations": [
+      "脚步"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00261",
+    "word": "hands",
+    "phonetic": "",
+    "translation": "手",
+    "translations": [
+      "手"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00262",
+    "word": "prop",
+    "phonetic": "",
+    "translation": "道具",
+    "translations": [
+      "道具"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00263",
+    "word": "cooking",
+    "phonetic": "",
+    "translation": "烹饪",
+    "translations": [
+      "烹饪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00264",
+    "word": "drinking",
+    "phonetic": "",
+    "translation": "喝",
+    "translations": [
+      "喝"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00265",
+    "word": "eating",
+    "phonetic": "",
+    "translation": "吃东西",
+    "translations": [
+      "吃东西"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00266",
+    "word": "glassware",
+    "phonetic": "",
+    "translation": "玻璃器皿",
+    "translations": [
+      "玻璃器皿"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00267",
+    "word": "ingredients",
+    "phonetic": "",
+    "translation": "食材",
+    "translations": [
+      "食材"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00268",
+    "word": "kitchenware",
+    "phonetic": "",
+    "translation": "厨具",
+    "translations": [
+      "厨具"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00269",
+    "word": "pour",
+    "phonetic": "",
+    "translation": "泼洒",
+    "translations": [
+      "泼洒"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00270",
+    "word": "tableware",
+    "phonetic": "",
+    "translation": "餐具",
+    "translations": [
+      "餐具"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00271",
+    "word": "creature",
+    "phonetic": "",
+    "translation": "怪物",
+    "translations": [
+      "怪物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00272",
+    "word": "human",
+    "phonetic": "",
+    "translation": "人类",
+    "translations": [
+      "人类"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00273",
+    "word": "arcade",
+    "phonetic": "",
+    "translation": "街机游戏",
+    "translations": [
+      "街机游戏"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00274",
+    "word": "board",
+    "phonetic": "",
+    "translation": "桌游",
+    "translations": [
+      "桌游"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00275",
+    "word": "casino",
+    "phonetic": "",
+    "translation": "赌场",
+    "translations": [
+      "赌场"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00276",
+    "word": "video",
+    "phonetic": "",
+    "translation": "单机",
+    "translations": [
+      "单机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00277",
+    "word": "fumarole",
+    "phonetic": "",
+    "translation": "热浆",
+    "translations": [
+      "热浆"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00278",
+    "word": "geyser",
+    "phonetic": "",
+    "translation": "间歇泉",
+    "translations": [
+      "间歇泉"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00279",
+    "word": "lava",
+    "phonetic": "",
+    "translation": "岩浆",
+    "translations": [
+      "岩浆"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00280",
+    "word": "mud pots",
+    "phonetic": "",
+    "translation": "泥浆",
+    "translations": [
+      "泥浆"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00281",
+    "word": "blood",
+    "phonetic": "",
+    "translation": "血流",
+    "translations": [
+      "血流"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00282",
+    "word": "bone",
+    "phonetic": "",
+    "translation": "骨头",
+    "translations": [
+      "骨头"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00283",
+    "word": "burn",
+    "phonetic": "",
+    "translation": "燃烧",
+    "translations": [
+      "燃烧"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00284",
+    "word": "flesh",
+    "phonetic": "",
+    "translation": "血肉",
+    "translations": [
+      "血肉"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00285",
+    "word": "ooze",
+    "phonetic": "",
+    "translation": "渗血",
+    "translations": [
+      "渗血"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00286",
+    "word": "splat",
+    "phonetic": "",
+    "translation": "洒溅",
+    "translations": [
+      "洒溅"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00287",
+    "word": "squish",
+    "phonetic": "",
+    "translation": "血浆",
+    "translations": [
+      "血浆"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00288",
+    "word": "stab",
+    "phonetic": "",
+    "translation": "捅",
+    "translations": [
+      "捅"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00289",
+    "word": "antique",
+    "phonetic": "",
+    "translation": "古董枪",
+    "translations": [
+      "古董枪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00290",
+    "word": "artillery",
+    "phonetic": "",
+    "translation": "火炮",
+    "translations": [
+      "火炮"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00291",
+    "word": "automatic",
+    "phonetic": "",
+    "translation": "自动化武器",
+    "translations": [
+      "自动化武器"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00292",
+    "word": "cannon",
+    "phonetic": "",
+    "translation": "加农炮",
+    "translations": [
+      "加农炮"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00293",
+    "word": "handle",
+    "phonetic": "",
+    "translation": "操作",
+    "translations": [
+      "操作"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00294",
+    "word": "mechanism",
+    "phonetic": "",
+    "translation": "机枪",
+    "translations": [
+      "机枪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00295",
+    "word": "pistol",
+    "phonetic": "",
+    "translation": "手枪",
+    "translations": [
+      "手枪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00296",
+    "word": "rifle",
+    "phonetic": "",
+    "translation": "步枪",
+    "translations": [
+      "步枪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00297",
+    "word": "shotgun",
+    "phonetic": "",
+    "translation": "霰弹枪",
+    "translations": [
+      "霰弹枪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00298",
+    "word": "suppressed",
+    "phonetic": "",
+    "translation": "消音枪",
+    "translations": [
+      "消音枪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00299",
+    "word": "air powered",
+    "phonetic": "",
+    "translation": "气压式",
+    "translations": [
+      "气压式"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00300",
+    "word": "traditional",
+    "phonetic": "",
+    "translation": "传统",
+    "translations": [
+      "传统"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00301",
+    "word": "breath",
+    "phonetic": "",
+    "translation": "呼吸",
+    "translations": [
+      "呼吸"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00302",
+    "word": "burp",
+    "phonetic": "",
+    "translation": "打嗝",
+    "translations": [
+      "打嗝"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00303",
+    "word": "cough",
+    "phonetic": "",
+    "translation": "咳嗽",
+    "translations": [
+      "咳嗽"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00304",
+    "word": "heartbeat",
+    "phonetic": "",
+    "translation": "心跳",
+    "translations": [
+      "心跳"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00305",
+    "word": "kiss",
+    "phonetic": "",
+    "translation": "接吻",
+    "translations": [
+      "接吻"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00306",
+    "word": "pee",
+    "phonetic": "",
+    "translation": "尿",
+    "translations": [
+      "尿"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00307",
+    "word": "skin",
+    "phonetic": "",
+    "translation": "皮肤",
+    "translations": [
+      "皮肤"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00308",
+    "word": "sneeze",
+    "phonetic": "",
+    "translation": "打喷嚏",
+    "translations": [
+      "打喷嚏"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00309",
+    "word": "sniff",
+    "phonetic": "",
+    "translation": "闻",
+    "translations": [
+      "闻"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00310",
+    "word": "snore",
+    "phonetic": "",
+    "translation": "打鼾",
+    "translations": [
+      "打鼾"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00311",
+    "word": "spit",
+    "phonetic": "",
+    "translation": "吐",
+    "translations": [
+      "吐"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00312",
+    "word": "vomit",
+    "phonetic": "",
+    "translation": "呕吐",
+    "translations": [
+      "呕吐"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00313",
+    "word": "beam",
+    "phonetic": "",
+    "translation": "光束",
+    "translations": [
+      "光束"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00314",
+    "word": "gun",
+    "phonetic": "",
+    "translation": "武器",
+    "translations": [
+      "武器"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00315",
+    "word": "bubbles",
+    "phonetic": "",
+    "translation": "气泡",
+    "translations": [
+      "气泡"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00316",
+    "word": "suction",
+    "phonetic": "",
+    "translation": "抽吸",
+    "translations": [
+      "抽吸"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00317",
+    "word": "elevator",
+    "phonetic": "",
+    "translation": "电梯",
+    "translations": [
+      "电梯"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00318",
+    "word": "escalator",
+    "phonetic": "",
+    "translation": "自动扶梯",
+    "translations": [
+      "自动扶梯"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00319",
+    "word": "fan",
+    "phonetic": "",
+    "translation": "风扇",
+    "translations": [
+      "风扇"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00320",
+    "word": "garden",
+    "phonetic": "",
+    "translation": "花园",
+    "translations": [
+      "花园"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00321",
+    "word": "gym",
+    "phonetic": "",
+    "translation": "健身房",
+    "translations": [
+      "健身房"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00322",
+    "word": "hvac",
+    "phonetic": "",
+    "translation": "空调",
+    "translations": [
+      "空调"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00323",
+    "word": "pump",
+    "phonetic": "",
+    "translation": "泵",
+    "translations": [
+      "泵"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00324",
+    "word": "angelic",
+    "phonetic": "",
+    "translation": "天使",
+    "translations": [
+      "天使"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00325",
+    "word": "elemental",
+    "phonetic": "",
+    "translation": "元素",
+    "translations": [
+      "元素"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00326",
+    "word": "evil",
+    "phonetic": "",
+    "translation": "邪恶",
+    "translations": [
+      "邪恶"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00327",
+    "word": "poof",
+    "phonetic": "",
+    "translation": "嘭",
+    "translations": [
+      "嘭"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00328",
+    "word": "shimmer",
+    "phonetic": "",
+    "translation": "闪耀",
+    "translations": [
+      "闪耀"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00329",
+    "word": "spell",
+    "phonetic": "",
+    "translation": "咒语",
+    "translations": [
+      "咒语"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00330",
+    "word": "click",
+    "phonetic": "",
+    "translation": "咔哒",
+    "translations": [
+      "咔哒"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00331",
+    "word": "gears",
+    "phonetic": "",
+    "translation": "齿轮",
+    "translations": [
+      "齿轮"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00332",
+    "word": "latch",
+    "phonetic": "",
+    "translation": "插销",
+    "translations": [
+      "插销"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00333",
+    "word": "lever",
+    "phonetic": "",
+    "translation": "操纵杆",
+    "translations": [
+      "操纵杆"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00334",
+    "word": "lock",
+    "phonetic": "",
+    "translation": "锁",
+    "translations": [
+      "锁"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00335",
+    "word": "pulley",
+    "phonetic": "",
+    "translation": "滑轮",
+    "translations": [
+      "滑轮"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00336",
+    "word": "ratchet",
+    "phonetic": "",
+    "translation": "棘轮",
+    "translations": [
+      "棘轮"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00337",
+    "word": "relay",
+    "phonetic": "",
+    "translation": "传动",
+    "translations": [
+      "传动"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00338",
+    "word": "roller",
+    "phonetic": "",
+    "translation": "滚筒",
+    "translations": [
+      "滚筒"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00339",
+    "word": "switch",
+    "phonetic": "",
+    "translation": "开关",
+    "translations": [
+      "开关"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00340",
+    "word": "combustion",
+    "phonetic": "",
+    "translation": "内燃机",
+    "translations": [
+      "内燃机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00341",
+    "word": "servo",
+    "phonetic": "",
+    "translation": "伺服电机",
+    "translations": [
+      "伺服电机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00342",
+    "word": "turbine",
+    "phonetic": "",
+    "translation": "涡轮",
+    "translations": [
+      "涡轮"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00343",
+    "word": "activity",
+    "phonetic": "",
+    "translation": "活动",
+    "translations": [
+      "活动"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00344",
+    "word": "presence",
+    "phonetic": "",
+    "translation": "状态",
+    "translations": [
+      "状态"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00345",
+    "word": "bells",
+    "phonetic": "",
+    "translation": "钟铃",
+    "translations": [
+      "钟铃"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00346",
+    "word": "brass",
+    "phonetic": "",
+    "translation": "铜管",
+    "translations": [
+      "铜管"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00347",
+    "word": "chime",
+    "phonetic": "",
+    "translation": "排铃",
+    "translations": [
+      "排铃"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00348",
+    "word": "choral",
+    "phonetic": "",
+    "translation": "合唱",
+    "translations": [
+      "合唱"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00349",
+    "word": "experimental",
+    "phonetic": "",
+    "translation": "实验",
+    "translations": [
+      "实验"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00350",
+    "word": "instrument",
+    "phonetic": "",
+    "translation": "器乐",
+    "translations": [
+      "器乐"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00351",
+    "word": "keyed",
+    "phonetic": "",
+    "translation": "键控",
+    "translations": [
+      "键控"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00352",
+    "word": "loop",
+    "phonetic": "",
+    "translation": "循环",
+    "translations": [
+      "循环"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00353",
+    "word": "percussion",
+    "phonetic": "",
+    "translation": "打击",
+    "translations": [
+      "打击"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00354",
+    "word": "percussion tuned",
+    "phonetic": "",
+    "translation": "打击乐",
+    "translations": [
+      "打击乐"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00355",
+    "word": "performance",
+    "phonetic": "",
+    "translation": "表演",
+    "translations": [
+      "表演"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00356",
+    "word": "plucked",
+    "phonetic": "",
+    "translation": "拨弦乐",
+    "translations": [
+      "拨弦乐"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00357",
+    "word": "sample",
+    "phonetic": "",
+    "translation": "采样",
+    "translations": [
+      "采样"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00358",
+    "word": "shaken",
+    "phonetic": "",
+    "translation": "摇动",
+    "translations": [
+      "摇动"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00359",
+    "word": "song & phrase",
+    "phonetic": "",
+    "translation": "乐句",
+    "translations": [
+      "乐句"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00360",
+    "word": "stinger",
+    "phonetic": "",
+    "translation": "重击音",
+    "translations": [
+      "重击音"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00361",
+    "word": "stringed",
+    "phonetic": "",
+    "translation": "弦乐",
+    "translations": [
+      "弦乐"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00362",
+    "word": "synthesized",
+    "phonetic": "",
+    "translation": "合成器",
+    "translations": [
+      "合成器"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00363",
+    "word": "toy",
+    "phonetic": "",
+    "translation": "玩具",
+    "translations": [
+      "玩具"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00364",
+    "word": "woodwind",
+    "phonetic": "",
+    "translation": "木管",
+    "translations": [
+      "木管"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00365",
+    "word": "avalanche",
+    "phonetic": "",
+    "translation": "雪崩",
+    "translations": [
+      "雪崩"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00366",
+    "word": "earthquake",
+    "phonetic": "",
+    "translation": "地震",
+    "translations": [
+      "地震"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00367",
+    "word": "tornado",
+    "phonetic": "",
+    "translation": "龙卷风",
+    "translations": [
+      "龙卷风"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00368",
+    "word": "tsunami",
+    "phonetic": "",
+    "translation": "热带风暴",
+    "translations": [
+      "热带风暴"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00369",
+    "word": "typhoon",
+    "phonetic": "",
+    "translation": "台风",
+    "translations": [
+      "台风"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00370",
+    "word": "volcano",
+    "phonetic": "",
+    "translation": "火山喷发",
+    "translations": [
+      "火山喷发"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00371",
+    "word": "bag",
+    "phonetic": "",
+    "translation": "袋子",
+    "translations": [
+      "袋子"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00372",
+    "word": "book",
+    "phonetic": "",
+    "translation": "书籍",
+    "translations": [
+      "书籍"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00373",
+    "word": "coin",
+    "phonetic": "",
+    "translation": "硬币",
+    "translations": [
+      "硬币"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00374",
+    "word": "container",
+    "phonetic": "",
+    "translation": "箱盒",
+    "translations": [
+      "箱盒"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00375",
+    "word": "fashion",
+    "phonetic": "",
+    "translation": "花园",
+    "translations": [
+      "花园"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00376",
+    "word": "furniture",
+    "phonetic": "",
+    "translation": "健身房",
+    "translations": [
+      "健身房"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00377",
+    "word": "household",
+    "phonetic": "",
+    "translation": "家用品",
+    "translations": [
+      "家用品"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00378",
+    "word": "jewelry",
+    "phonetic": "",
+    "translation": "珠宝首饰",
+    "translations": [
+      "珠宝首饰"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00379",
+    "word": "keys",
+    "phonetic": "",
+    "translation": "钥匙",
+    "translations": [
+      "钥匙"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00380",
+    "word": "luggage",
+    "phonetic": "",
+    "translation": "行李",
+    "translations": [
+      "行李"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00381",
+    "word": "packaging",
+    "phonetic": "",
+    "translation": "包装品",
+    "translations": [
+      "包装品"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00382",
+    "word": "tape",
+    "phonetic": "",
+    "translation": "胶带制品",
+    "translations": [
+      "胶带制品"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00383",
+    "word": "umbrella",
+    "phonetic": "",
+    "translation": "伞",
+    "translations": [
+      "伞"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00384",
+    "word": "wheeled",
+    "phonetic": "",
+    "translation": "有轮制品",
+    "translations": [
+      "有轮制品"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00385",
+    "word": "writing",
+    "phonetic": "",
+    "translation": "书写用品",
+    "translations": [
+      "书写用品"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00386",
+    "word": "zipper",
+    "phonetic": "",
+    "translation": "拉链",
+    "translations": [
+      "拉链"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00387",
+    "word": "flutter",
+    "phonetic": "",
+    "translation": "抖动",
+    "translations": [
+      "抖动"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00388",
+    "word": "friction",
+    "phonetic": "",
+    "translation": "碰撞",
+    "translations": [
+      "碰撞"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00389",
+    "word": "handle",
+    "phonetic": "",
+    "translation": "手持噪音",
+    "translations": [
+      "手持噪音"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00390",
+    "word": "impact",
+    "phonetic": "",
+    "translation": "摩擦",
+    "translations": [
+      "摩擦"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00391",
+    "word": "concrete",
+    "phonetic": "",
+    "translation": "水泥",
+    "translations": [
+      "水泥"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00392",
+    "word": "general",
+    "phonetic": "",
+    "translation": "通用",
+    "translations": [
+      "通用"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00393",
+    "word": "vegetation",
+    "phonetic": "",
+    "translation": "植物",
+    "translations": [
+      "植物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00394",
+    "word": "water",
+    "phonetic": "",
+    "translation": "水",
+    "translations": [
+      "水"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00395",
+    "word": "alien",
+    "phonetic": "",
+    "translation": "外星人",
+    "translations": [
+      "外星人"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00396",
+    "word": "baby",
+    "phonetic": "",
+    "translation": "婴儿",
+    "translations": [
+      "婴儿"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00397",
+    "word": "cheer",
+    "phonetic": "",
+    "translation": "欢呼",
+    "translations": [
+      "欢呼"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00398",
+    "word": "child",
+    "phonetic": "",
+    "translation": "儿童",
+    "translations": [
+      "儿童"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00399",
+    "word": "crying",
+    "phonetic": "",
+    "translation": "哭泣",
+    "translations": [
+      "哭泣"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00400",
+    "word": "efforts",
+    "phonetic": "",
+    "translation": "呼喝",
+    "translations": [
+      "呼喝"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00401",
+    "word": "female",
+    "phonetic": "",
+    "translation": "女性",
+    "translations": [
+      "女性"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00402",
+    "word": "futzed",
+    "phonetic": "",
+    "translation": "音响化",
+    "translations": [
+      "音响化"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00403",
+    "word": "historical",
+    "phonetic": "",
+    "translation": "历史感",
+    "translations": [
+      "历史感"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00404",
+    "word": "laugh",
+    "phonetic": "",
+    "translation": "笑",
+    "translations": [
+      "笑"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00405",
+    "word": "male",
+    "phonetic": "",
+    "translation": "男性",
+    "translations": [
+      "男性"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00406",
+    "word": "scream",
+    "phonetic": "",
+    "translation": "尖叫",
+    "translations": [
+      "尖叫"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00407",
+    "word": "whisper",
+    "phonetic": "",
+    "translation": "窃语",
+    "translations": [
+      "窃语"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00408",
+    "word": "drain",
+    "phonetic": "",
+    "translation": "排水",
+    "translations": [
+      "排水"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00409",
+    "word": "drip",
+    "phonetic": "",
+    "translation": "滴",
+    "translations": [
+      "滴"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00410",
+    "word": "fizz",
+    "phonetic": "",
+    "translation": "气泡",
+    "translations": [
+      "气泡"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00411",
+    "word": "flow",
+    "phonetic": "",
+    "translation": "水流",
+    "translations": [
+      "水流"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00412",
+    "word": "fountain",
+    "phonetic": "",
+    "translation": "喷泉",
+    "translations": [
+      "喷泉"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00413",
+    "word": "lap",
+    "phonetic": "",
+    "translation": "拍浪",
+    "translations": [
+      "拍浪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00414",
+    "word": "plumbing",
+    "phonetic": "",
+    "translation": "水管道",
+    "translations": [
+      "水管道"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00415",
+    "word": "spray",
+    "phonetic": "",
+    "translation": "水花",
+    "translations": [
+      "水花"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00416",
+    "word": "steam",
+    "phonetic": "",
+    "translation": "蒸汽",
+    "translations": [
+      "蒸汽"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00417",
+    "word": "surf",
+    "phonetic": "",
+    "translation": "浪花拍岸",
+    "translations": [
+      "浪花拍岸"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00418",
+    "word": "waterfall",
+    "phonetic": "",
+    "translation": "瀑布",
+    "translations": [
+      "瀑布"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00419",
+    "word": "wave",
+    "phonetic": "",
+    "translation": "波浪",
+    "translations": [
+      "波浪"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00420",
+    "word": "armor",
+    "phonetic": "",
+    "translation": "护甲",
+    "translations": [
+      "护甲"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00421",
+    "word": "arrow",
+    "phonetic": "",
+    "translation": "箭",
+    "translations": [
+      "箭"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00422",
+    "word": "axe",
+    "phonetic": "",
+    "translation": "斧",
+    "translations": [
+      "斧"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00423",
+    "word": "blunt",
+    "phonetic": "",
+    "translation": "钝器",
+    "translations": [
+      "钝器"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00424",
+    "word": "bow",
+    "phonetic": "",
+    "translation": "弓",
+    "translations": [
+      "弓"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00425",
+    "word": "knife",
+    "phonetic": "",
+    "translation": "刀",
+    "translations": [
+      "刀"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00426",
+    "word": "polearm",
+    "phonetic": "",
+    "translation": "矛",
+    "translations": [
+      "矛"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00427",
+    "word": "siege",
+    "phonetic": "",
+    "translation": "投石机",
+    "translations": [
+      "投石机"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00428",
+    "word": "sword",
+    "phonetic": "",
+    "translation": "剑",
+    "translations": [
+      "剑"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00429",
+    "word": "whip",
+    "phonetic": "",
+    "translation": "鞭",
+    "translations": [
+      "鞭"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00430",
+    "word": "hail",
+    "phonetic": "",
+    "translation": "冰雹",
+    "translations": [
+      "冰雹"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00431",
+    "word": "storm",
+    "phonetic": "",
+    "translation": "风暴",
+    "translations": [
+      "风暴"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00432",
+    "word": "thunder",
+    "phonetic": "",
+    "translation": "雷",
+    "translations": [
+      "雷"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00433",
+    "word": "gust",
+    "phonetic": "",
+    "translation": "阵风",
+    "translations": [
+      "阵风"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00434",
+    "word": "covering",
+    "phonetic": "",
+    "translation": "遮挡物",
+    "translations": [
+      "遮挡物"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00435",
+    "word": "hardware",
+    "phonetic": "",
+    "translation": "窗具",
+    "translations": [
+      "窗具"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  },
+  {
+    "id": "qwerty_soundsfxkey_00436",
+    "word": "knock",
+    "phonetic": "",
+    "translation": "敲窗",
+    "translations": [
+      "敲窗"
+    ],
+    "domain": "qwerty_soundsfxkey"
+  }
+]

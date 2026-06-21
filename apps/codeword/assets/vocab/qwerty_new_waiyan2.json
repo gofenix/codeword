@@ -1,0 +1,3062 @@
+[
+  {
+    "id": "qwerty_new_waiyan2_00001",
+    "word": "",
+    "phonetic": "/wɪɡ/",
+    "translation": "假发",
+    "translations": [
+      "假发"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00002",
+    "word": "smart",
+    "phonetic": "/smɑːrt/",
+    "translation": "聪颖的，机灵的; 明智的",
+    "translations": [
+      "聪颖的，机灵的; 明智的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00003",
+    "word": "smile",
+    "phonetic": "/smaɪl/",
+    "translation": "微笑",
+    "translations": [
+      "微笑"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00004",
+    "word": "line",
+    "phonetic": "/laɪn/",
+    "translation": "线",
+    "translations": [
+      "线"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00005",
+    "word": "breath",
+    "phonetic": "/brɛθ/",
+    "translation": "呼出的气; 吸入的气",
+    "translations": [
+      "呼出的气; 吸入的气"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00006",
+    "word": "hold",
+    "phonetic": "/hoʊld/",
+    "translation": "屏住呼吸; 屏息静气",
+    "translations": [
+      "屏住呼吸; 屏息静气"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00007",
+    "word": "would",
+    "phonetic": "/wʊd/",
+    "translation": "会",
+    "translations": [
+      "会"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00008",
+    "word": "confident",
+    "phonetic": "/ˈkɒnfɪdənt/",
+    "translation": "有信心的，自信的",
+    "translations": [
+      "有信心的，自信的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00009",
+    "word": "stomachache",
+    "phonetic": "/ˈstʌməkˌeɪk/",
+    "translation": "胃痛; 肚子痛",
+    "translations": [
+      "胃痛; 肚子痛"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00010",
+    "word": "shall",
+    "phonetic": "/ʃæl/",
+    "translation": "要不要......?",
+    "translations": [
+      "要不要......?"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00011",
+    "word": "either",
+    "phonetic": "/ˈiːðər/",
+    "translation": "(两者中的)任何一个",
+    "translations": [
+      "(两者中的)任何一个"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00012",
+    "word": "choice",
+    "phonetic": "/ʧɔɪs/",
+    "translation": "选择; 选择权",
+    "translations": [
+      "选择; 选择权"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00013",
+    "word": "seem",
+    "phonetic": "/siːm/",
+    "translation": "看来，似乎，好像",
+    "translations": [
+      "看来，似乎，好像"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00014",
+    "word": "someone",
+    "phonetic": "/ˈsʌmwʌn/",
+    "translation": "某人，有人",
+    "translations": [
+      "某人，有人"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00015",
+    "word": "neither",
+    "phonetic": "/ˈnaɪðər/",
+    "translation": "两者都不(的)，两者中无一的",
+    "translations": [
+      "两者都不(的)，两者中无一的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00016",
+    "word": "cheer",
+    "phonetic": "/ʧɪr/",
+    "translation": "(为......)欢呼，喝彩; (为......)加油",
+    "translations": [
+      "(为......)欢呼，喝彩; (为......)加油"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00017",
+    "word": "cross",
+    "phonetic": "/krɔːs/",
+    "translation": "穿过，越过，跑过(终点线、小径等)",
+    "translations": [
+      "穿过，越过，跑过(终点线、小径等)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00018",
+    "word": "lifelong",
+    "phonetic": "/ˈlaɪfˌlɔːŋ/",
+    "translation": "终身的，毕生的",
+    "translations": [
+      "终身的，毕生的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00019",
+    "word": "dream",
+    "phonetic": "/driːm/",
+    "translation": "梦想，愿望，理想",
+    "translations": [
+      "梦想，愿望，理想"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00020",
+    "word": "past",
+    "phonetic": "/pæst/",
+    "translation": "经过",
+    "translations": [
+      "经过"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00021",
+    "word": "record",
+    "phonetic": "/ˈrɛkərd/",
+    "translation": "记录，记载",
+    "translations": [
+      "记录，记载"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00022",
+    "word": "none",
+    "phonetic": "/nʌn/",
+    "translation": "全无，没有一点",
+    "translations": [
+      "全无，没有一点"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00023",
+    "word": "member",
+    "phonetic": "/ˈmɛmbər/",
+    "translation": "成员",
+    "translations": [
+      "成员"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00024",
+    "word": "moment",
+    "phonetic": "/ˈmoʊmənt/",
+    "translation": "某一时刻",
+    "translations": [
+      "某一时刻"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00025",
+    "word": "if",
+    "phonetic": "/ɪf/",
+    "translation": "假若，要是，如果",
+    "translations": [
+      "假若，要是，如果"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00026",
+    "word": "possible",
+    "phonetic": "/ˈpɒsəbl/",
+    "translation": "可能的，能做到的，可能实现的",
+    "translations": [
+      "可能的，能做到的，可能实现的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00027",
+    "word": "purpose",
+    "phonetic": "/ˈpɜːrpəs/",
+    "translation": "目的，意图",
+    "translations": [
+      "目的，意图"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00028",
+    "word": "raise",
+    "phonetic": "/reɪz/",
+    "translation": "筹集; 筹募",
+    "translations": [
+      "筹集; 筹募"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00029",
+    "word": "charity",
+    "phonetic": "/ˈʧærɪti/",
+    "translation": "慈善事业",
+    "translations": [
+      "慈善事业"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00030",
+    "word": "encourage",
+    "phonetic": "/ɪnˈkɜːrɪdʒ/",
+    "translation": "鼓励，激励",
+    "translations": [
+      "鼓励，激励"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00031",
+    "word": "teach",
+    "phonetic": "/tiːʧ/",
+    "translation": "教",
+    "translations": [
+      "教"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00032",
+    "word": "last but not least",
+    "phonetic": "/læst bʌt nɒt liːst/",
+    "translation": "最后但同样重要的(一点)",
+    "translations": [
+      "最后但同样重要的(一点)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00033",
+    "word": "marathon",
+    "phonetic": "/ˈmærəθən/",
+    "translation": "马拉松赛跑 (全程约26英里或42千米)",
+    "translations": [
+      "马拉松赛跑 (全程约26英里或42千米)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00034",
+    "word": "however",
+    "phonetic": "/haʊˈɛvər/",
+    "translation": "然而",
+    "translations": [
+      "然而"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00035",
+    "word": "still",
+    "phonetic": "/stɪl/",
+    "translation": "还，仍然",
+    "translations": [
+      "还，仍然"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00036",
+    "word": "metre",
+    "phonetic": "/ˈmiːtər/",
+    "translation": "米，公尺",
+    "translations": [
+      "米，公尺"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00037",
+    "word": "note",
+    "phonetic": "/noʊt/",
+    "translation": "笔记",
+    "translations": [
+      "笔记"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00038",
+    "word": "during",
+    "phonetic": "/ˈdʊrɪŋ/",
+    "translation": "在......期间",
+    "translations": [
+      "在......期间"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00039",
+    "word": "consider",
+    "phonetic": "/kənˈsɪdər/",
+    "translation": "考虑，细想",
+    "translations": [
+      "考虑，细想"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00040",
+    "word": "both",
+    "phonetic": "/boʊθ/",
+    "translation": "两者，双方，两个都",
+    "translations": [
+      "两者，双方，两个都"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00041",
+    "word": "sink",
+    "phonetic": "/sɪŋk/",
+    "translation": "下沉，沉没",
+    "translations": [
+      "下沉，沉没"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00042",
+    "word": "sink or swim",
+    "phonetic": "/sɪŋk ɔːr swɪm/",
+    "translation": "自生自灭，成败全靠自己",
+    "translations": [
+      "自生自灭，成败全靠自己"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00043",
+    "word": "as",
+    "phonetic": "/æz/",
+    "translation": "当......时; 如同",
+    "translations": [
+      "当......时; 如同"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00044",
+    "word": "surfer",
+    "phonetic": "/ˈsɜːrfər/",
+    "translation": "冲浪者",
+    "translations": [
+      "冲浪者"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00045",
+    "word": "shark",
+    "phonetic": "/ʃɑːrk/",
+    "translation": "鲨鱼",
+    "translations": [
+      "鲨鱼"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00046",
+    "word": "attack",
+    "phonetic": "/əˈtæk/",
+    "translation": "袭击，殴打，破坏",
+    "translations": [
+      "袭击，殴打，破坏"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00047",
+    "word": "nearly",
+    "phonetic": "/ˈnɪərli/",
+    "translation": "几乎，差不多，将近",
+    "translations": [
+      "几乎，差不多，将近"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00048",
+    "word": "die",
+    "phonetic": "/daɪ/",
+    "translation": "死亡",
+    "translations": [
+      "死亡"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00049",
+    "word": "surf",
+    "phonetic": "/sɜːrf/",
+    "translation": "冲浪",
+    "translations": [
+      "冲浪"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00050",
+    "word": "competition",
+    "phonetic": "/ˌkɒmpəˈtɪʃən/",
+    "translation": "比赛",
+    "translations": [
+      "比赛"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00051",
+    "word": "compare",
+    "phonetic": "/kəmˈpɛər/",
+    "translation": "相比较; 可媲美",
+    "translations": [
+      "相比较; 可媲美"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00052",
+    "word": "achievement",
+    "phonetic": "/əˈtʃiːvmənt/",
+    "translation": "成绩; 成就",
+    "translations": [
+      "成绩; 成就"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00053",
+    "word": "surfboard",
+    "phonetic": "/ˈsɜːrfbɔːrd/",
+    "translation": "冲浪板",
+    "translations": [
+      "冲浪板"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00054",
+    "word": "ride",
+    "phonetic": "/raɪd/",
+    "translation": "漂浮",
+    "translations": [
+      "漂浮"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00055",
+    "word": "lover",
+    "phonetic": "/ˈlʌvər/",
+    "translation": "爱好者",
+    "translations": [
+      "爱好者"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00056",
+    "word": "gold",
+    "phonetic": "/ɡoʊld/",
+    "translation": "金质的",
+    "translations": [
+      "金质的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00057",
+    "word": "medal",
+    "phonetic": "/ˈmɛdəl/",
+    "translation": "奖牌; 勋章",
+    "translations": [
+      "奖牌; 勋章"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00058",
+    "word": "fit",
+    "phonetic": "/fɪt/",
+    "translation": "健壮的，健康的",
+    "translations": [
+      "健壮的，健康的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00059",
+    "word": "team",
+    "phonetic": "/tiːm/",
+    "translation": "(游戏或体育比赛的)队",
+    "translations": [
+      "(游戏或体育比赛的)队"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00060",
+    "word": "even",
+    "phonetic": "/ˈiːvən/",
+    "translation": "甚至",
+    "translations": [
+      "甚至"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00061",
+    "word": "worse",
+    "phonetic": "/wɜːrs/",
+    "translation": "(badly的比较级) 更严重地; 更厉害地",
+    "translations": [
+      "(badly的比较级) 更严重地; 更厉害地"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00062",
+    "word": "pay attention",
+    "phonetic": "/peɪ əˈtɛnʃən/",
+    "translation": "认真看，仔细听，用心思考",
+    "translations": [
+      "认真看，仔细听，用心思考"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00063",
+    "word": "continue",
+    "phonetic": "/kənˈtɪnjudʒə/",
+    "translation": "(使)继续; (使)延续",
+    "translations": [
+      "(使)继续; (使)延续"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00064",
+    "word": "brave",
+    "phonetic": "/breɪv/",
+    "translation": "勇敢的，无畏的",
+    "translations": [
+      "勇敢的，无畏的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00065",
+    "word": "action",
+    "phonetic": "/ˈækʃən/",
+    "translation": "行为",
+    "translations": [
+      "行为"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00066",
+    "word": "fight",
+    "phonetic": "/faɪt/",
+    "translation": "努力争取，为......斗争",
+    "translations": [
+      "努力争取，为......斗争"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00067",
+    "word": "score",
+    "phonetic": "/skɔːr/",
+    "translation": "(在运动、比赛或考试中) 得(分)",
+    "translations": [
+      "(在运动、比赛或考试中) 得(分)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00068",
+    "word": "goal",
+    "phonetic": "/ɡoʊl/",
+    "translation": "进球; 进球得分",
+    "translations": [
+      "进球; 进球得分"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00069",
+    "word": "victory",
+    "phonetic": "/ˈvɪktəri/",
+    "translation": "胜利，成功，赢",
+    "translations": [
+      "胜利，成功，赢"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00070",
+    "word": "lead",
+    "phonetic": "/liːd/",
+    "translation": "带路，领路; 引领",
+    "translations": [
+      "带路，领路; 引领"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00071",
+    "word": "international",
+    "phonetic": "/ˌɪntəˈnæʃənl/",
+    "translation": "国际的",
+    "translations": [
+      "国际的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00072",
+    "word": "chance",
+    "phonetic": "/ʧæns/",
+    "translation": "机会",
+    "translations": [
+      "机会"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00073",
+    "word": "improve",
+    "phonetic": "/ɪmˈpruːv/",
+    "translation": "改善，改进; 变得更好",
+    "translations": [
+      "改善，改进; 变得更好"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00074",
+    "word": "create",
+    "phonetic": "/kriˈeɪt/",
+    "translation": "创造",
+    "translations": [
+      "创造"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00075",
+    "word": "wonder",
+    "phonetic": "/ˈwʌndər/",
+    "translation": "想要知道",
+    "translations": [
+      "想要知道"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00076",
+    "word": "success",
+    "phonetic": "/səkˈsɛs/",
+    "translation": "成功，成就，胜利",
+    "translations": [
+      "成功，成就，胜利"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00077",
+    "word": "explain",
+    "phonetic": "/ɪksˈpleɪn/",
+    "translation": "解释，说明",
+    "translations": [
+      "解释，说明"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00078",
+    "word": "simple",
+    "phonetic": "/ˈsɪmpl/",
+    "translation": "单纯的，纯粹的，完全的",
+    "translations": [
+      "单纯的，纯粹的，完全的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00079",
+    "word": "same",
+    "phonetic": "/seɪm/",
+    "translation": "相同的，同一个的",
+    "translations": [
+      "相同的，同一个的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00080",
+    "word": "courage",
+    "phonetic": "/ˈkʌrɪdʒ/",
+    "translation": "勇气，胆量，勇敢",
+    "translations": [
+      "勇气，胆量，勇敢"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00081",
+    "word": "ahead",
+    "phonetic": "/əˈhɛd/",
+    "translation": "在前面",
+    "translations": [
+      "在前面"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00082",
+    "word": "spirit",
+    "phonetic": "/ˈspɪrɪt/",
+    "translation": "(某一特定历史时期、地方或群体的) 精神，风气",
+    "translations": [
+      "(某一特定历史时期、地方或群体的) 精神，风气"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00083",
+    "word": "certain",
+    "phonetic": "/ˈsɜːrtən/",
+    "translation": "某个; 某些",
+    "translations": [
+      "某个; 某些"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00084",
+    "word": "mine",
+    "phonetic": "/maɪn/",
+    "translation": "我的(东西)",
+    "translations": [
+      "我的(东西)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00085",
+    "word": "beef",
+    "phonetic": "/biːf/",
+    "translation": "牛肉",
+    "translations": [
+      "牛肉"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00086",
+    "word": "carrot",
+    "phonetic": "/ˈkærət/",
+    "translation": "胡萝卜",
+    "translations": [
+      "胡萝卜"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00087",
+    "word": "mutton",
+    "phonetic": "/ˈmʌtn/",
+    "translation": "羊肉",
+    "translations": [
+      "羊肉"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00088",
+    "word": "fat",
+    "phonetic": "/fæt/",
+    "translation": "肥胖的",
+    "translations": [
+      "肥胖的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00089",
+    "word": "hen",
+    "phonetic": "/hɛn/",
+    "translation": "母鸡",
+    "translations": [
+      "母鸡"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00090",
+    "word": "pot",
+    "phonetic": "/pɒt/",
+    "translation": "(通常为金属制成的圆而深的) 锅",
+    "translations": [
+      "(通常为金属制成的圆而深的) 锅"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00091",
+    "word": "onion",
+    "phonetic": "/ˈʌnjən/",
+    "translation": "洋葱(头)",
+    "translations": [
+      "洋葱(头)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00092",
+    "word": "pancake",
+    "phonetic": "/ˈpænkeɪk/",
+    "translation": "薄煎(烤、烙)饼",
+    "translations": [
+      "薄煎(烤、烙)饼"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00093",
+    "word": "porridge",
+    "phonetic": "/ˈpɔːrɪdʒ/",
+    "translation": "粥",
+    "translations": [
+      "粥"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00094",
+    "word": "sweet",
+    "phonetic": "/swiːt/",
+    "translation": "甜的",
+    "translations": [
+      "甜的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00095",
+    "word": "plain",
+    "phonetic": "/pleɪn/",
+    "translation": "无装饰的，简单的，朴素的，单纯的",
+    "translations": [
+      "无装饰的，简单的，朴素的，单纯的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00096",
+    "word": "menu",
+    "phonetic": "/ˈmɛnjuː/",
+    "translation": "(尤指餐馆的) 菜单",
+    "translations": [
+      "(尤指餐馆的) 菜单"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00097",
+    "word": "medicine",
+    "phonetic": "/ˈmɛdɪsɪn/",
+    "translation": "药，药物(尤指口服的药水)",
+    "translations": [
+      "药，药物(尤指口服的药水)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00098",
+    "word": "than",
+    "phonetic": "/ðæn/",
+    "translation": "比",
+    "translations": [
+      "比"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00099",
+    "word": "pill",
+    "phonetic": "/pɪl/",
+    "translation": "药丸; 药片",
+    "translations": [
+      "药丸; 药片"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00100",
+    "word": "remain",
+    "phonetic": "/rɪˈmeɪn/",
+    "translation": "继续，依然(保持某种状态)",
+    "translations": [
+      "继续，依然(保持某种状态)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00101",
+    "word": "another",
+    "phonetic": "/əˈnʌðər/",
+    "translation": "另一个，别的",
+    "translations": [
+      "另一个，别的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00102",
+    "word": "connection",
+    "phonetic": "/kəˈnɛkʃən/",
+    "translation": "(两个事实、观点、事件等之间的) 联系，关联",
+    "translations": [
+      "(两个事实、观点、事件等之间的) 联系，关联"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00103",
+    "word": "prove",
+    "phonetic": "/pruːv/",
+    "translation": "证明，证实",
+    "translations": [
+      "证明，证实"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00104",
+    "word": "similar",
+    "phonetic": "/ˈsɪmɪlər/",
+    "translation": "相似的，近似的，类似的",
+    "translations": [
+      "相似的，近似的，类似的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00105",
+    "word": "special",
+    "phonetic": "/ˈspɛʃəl/",
+    "translation": "特殊的，特别的",
+    "translations": [
+      "特殊的，特别的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00106",
+    "word": "order",
+    "phonetic": "/ˈɔːdər/",
+    "translation": "顺序，次序",
+    "translations": [
+      "顺序，次序"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00107",
+    "word": "pie",
+    "phonetic": "/paɪ/",
+    "translation": "水果馅饼，派",
+    "translations": [
+      "水果馅饼，派"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00108",
+    "word": "delicious",
+    "phonetic": "/dɪˈlɪʃəs/",
+    "translation": "美味的，可口的",
+    "translations": [
+      "美味的，可口的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00109",
+    "word": "sandwich",
+    "phonetic": "/ˈsænwɪtʃ/",
+    "translation": "三明治，夹心面包",
+    "translations": [
+      "三明治，夹心面包"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00110",
+    "word": "scramble",
+    "phonetic": "/ˈskræmbəl/",
+    "translation": "(炒)蛋",
+    "translations": [
+      "(炒)蛋"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00111",
+    "word": "circle",
+    "phonetic": "/ˈsɜːrkəl/",
+    "translation": "圈出",
+    "translations": [
+      "圈出"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00112",
+    "word": "slice",
+    "phonetic": "/slaɪs/",
+    "translation": "片，薄片，切片",
+    "translations": [
+      "片，薄片，切片"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00113",
+    "word": "beat",
+    "phonetic": "/biːt/",
+    "translation": "搅拌，搅打",
+    "translations": [
+      "搅拌，搅打"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00114",
+    "word": "salt",
+    "phonetic": "/sɔːlt/",
+    "translation": "盐，食盐",
+    "translations": [
+      "盐，食盐"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00115",
+    "word": "pepper",
+    "phonetic": "/ˈpɛpər/",
+    "translation": "胡椒粉",
+    "translations": [
+      "胡椒粉"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00116",
+    "word": "oil",
+    "phonetic": "/ɔɪl/",
+    "translation": "(尤用于烹调或生产美容用品的) 植物油，动物油",
+    "translations": [
+      "(尤用于烹调或生产美容用品的) 植物油，动物油"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00117",
+    "word": "pan",
+    "phonetic": "/pæn/",
+    "translation": "(长柄有盖的) 锅，平底锅",
+    "translations": [
+      "(长柄有盖的) 锅，平底锅"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00118",
+    "word": "add",
+    "phonetic": "/æd/",
+    "translation": "添加，增加",
+    "translations": [
+      "添加，增加"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00119",
+    "word": "mixture",
+    "phonetic": "/ˈmɪkstʃər/",
+    "translation": "(尤指烹饪中的) 混合液，混合料",
+    "translations": [
+      "(尤指烹饪中的) 混合液，混合料"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00120",
+    "word": "stir",
+    "phonetic": "/stɜːr/",
+    "translation": "搅，搅拌，搅动",
+    "translations": [
+      "搅，搅拌，搅动"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00121",
+    "word": "until",
+    "phonetic": "/ənˈtɪl/",
+    "translation": "直到......为止",
+    "translations": [
+      "直到......为止"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00122",
+    "word": "golden",
+    "phonetic": "/ˈɡoʊldən/",
+    "translation": "金色的，金黄色的",
+    "translations": [
+      "金色的，金黄色的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00123",
+    "word": "plate",
+    "phonetic": "/pleɪt/",
+    "translation": "盘，碟",
+    "translations": [
+      "盘，碟"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00124",
+    "word": "loud",
+    "phonetic": "/laʊd/",
+    "translation": "大声的，喧闹的",
+    "translations": [
+      "大声的，喧闹的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00125",
+    "word": "heat",
+    "phonetic": "/hiːt/",
+    "translation": "(烹饪或加热时的) 温度",
+    "translations": [
+      "(烹饪或加热时的) 温度"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00126",
+    "word": "firm",
+    "phonetic": "/fɜːrm/",
+    "translation": "结实的，坚实的",
+    "translations": [
+      "结实的，坚实的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00127",
+    "word": "recipe",
+    "phonetic": "/ˈrɛsəpi/",
+    "translation": "烹饪法; 食谱",
+    "translations": [
+      "烹饪法; 食谱"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00128",
+    "word": "ingredient",
+    "phonetic": "/ɪnˈɡriːdiənt/",
+    "translation": "(烹饪用的) 成分，食材",
+    "translations": [
+      "(烹饪用的) 成分，食材"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00129",
+    "word": "step",
+    "phonetic": "/stɛp/",
+    "translation": "步骤",
+    "translations": [
+      "步骤"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00130",
+    "word": "diet",
+    "phonetic": "/ˈdaɪət/",
+    "translation": "节食; 规定饮食",
+    "translations": [
+      "节食; 规定饮食"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00131",
+    "word": "restaurant",
+    "phonetic": "/ˈrɛstərɑːnt/",
+    "translation": "饭店，餐厅",
+    "translations": [
+      "饭店，餐厅"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00132",
+    "word": "salad",
+    "phonetic": "/ˈsæləd/",
+    "translation": "(生吃的) 蔬菜沙拉",
+    "translations": [
+      "(生吃的) 蔬菜沙拉"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00133",
+    "word": "hamburger",
+    "phonetic": "/ˈhæmbɜːɡər/",
+    "translation": "汉堡包",
+    "translations": [
+      "汉堡包"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00134",
+    "word": "snack",
+    "phonetic": "/snæk/",
+    "translation": "(正餐以外的) 小吃，点心",
+    "translations": [
+      "(正餐以外的) 小吃，点心"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00135",
+    "word": "border",
+    "phonetic": "/ˈbɔːrdər/",
+    "translation": "边界; 边境",
+    "translations": [
+      "边界; 边境"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00136",
+    "word": "Western",
+    "phonetic": "/ˈwɛstərn/",
+    "translation": "(观念或方式) 西方的，欧美的",
+    "translations": [
+      "(观念或方式) 西方的，欧美的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00137",
+    "word": "dessert",
+    "phonetic": "/dɪˈzɜːrt/",
+    "translation": "(饭后的) 甜点，甜食，甜品",
+    "translations": [
+      "(饭后的) 甜点，甜食，甜品"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00138",
+    "word": "actually",
+    "phonetic": "/ˈæktʃuəli/",
+    "translation": "实际上，事实上",
+    "translations": [
+      "实际上，事实上"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00139",
+    "word": "dynasty",
+    "phonetic": "/ˈdɪnəsti/",
+    "translation": "朝代",
+    "translations": [
+      "朝代"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00140",
+    "word": "store",
+    "phonetic": "/stɔːr/",
+    "translation": "贮藏，贮存，积蓄",
+    "translations": [
+      "贮藏，贮存，积蓄"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00141",
+    "word": "mean",
+    "phonetic": "/miːn/",
+    "translation": "意思是",
+    "translations": [
+      "意思是"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00142",
+    "word": "modern",
+    "phonetic": "/ˈmɒdərn/",
+    "translation": "现代的，近代的",
+    "translations": [
+      "现代的，近代的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00143",
+    "word": "folk",
+    "phonetic": "/foʊk/",
+    "translation": "民间的，民俗的",
+    "translations": [
+      "民间的，民俗的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00144",
+    "word": "tale",
+    "phonetic": "/teɪl/",
+    "translation": "故事",
+    "translations": [
+      "故事"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00145",
+    "word": "emperor",
+    "phonetic": "/ˈɛmpərər/",
+    "translation": "皇帝",
+    "translations": [
+      "皇帝"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00146",
+    "word": "suffer",
+    "phonetic": "/ˈsʌfər/",
+    "translation": "(身体或精神上) 受苦，遭受(痛苦)",
+    "translations": [
+      "(身体或精神上) 受苦，遭受(痛苦)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00147",
+    "word": "stomach",
+    "phonetic": "/ˈstʌmək/",
+    "translation": "胃",
+    "translations": [
+      "胃"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00148",
+    "word": "totally",
+    "phonetic": "/ˈtoʊtəli/",
+    "translation": "完全地，彻底地",
+    "translations": [
+      "完全地，彻底地"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00149",
+    "word": "Iranian",
+    "phonetic": "/ɪˈreɪniən/",
+    "translation": "伊朗人",
+    "translations": [
+      "伊朗人"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00150",
+    "word": "flat",
+    "phonetic": "/flæt/",
+    "translation": "平的，平坦的",
+    "translations": [
+      "平的，平坦的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00151",
+    "word": "stone",
+    "phonetic": "/stoʊn/",
+    "translation": "石块，石子",
+    "translations": [
+      "石块，石子"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00152",
+    "word": "symbol",
+    "phonetic": "/ˈsɪmbəl/",
+    "translation": "(某一特性或思想的) 代表，代表性人物(事物)",
+    "translations": [
+      "(某一特性或思想的) 代表，代表性人物(事物)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00153",
+    "word": "American",
+    "phonetic": "/əˈmɛrɪkən/",
+    "translation": "美国的; 美国人的",
+    "translations": [
+      "美国的; 美国人的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00154",
+    "word": "twin",
+    "phonetic": "/twɪn/",
+    "translation": "双胞胎之一的",
+    "translations": [
+      "双胞胎之一的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00155",
+    "word": "bridge",
+    "phonetic": "/brɪdʒ/",
+    "translation": "(事物之间的) 桥梁，纽带",
+    "translations": [
+      "(事物之间的) 桥梁，纽带"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00156",
+    "word": "happen",
+    "phonetic": "/ˈhæpən/",
+    "translation": "发生",
+    "translations": [
+      "发生"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00157",
+    "word": "dull",
+    "phonetic": "/dʌl/",
+    "translation": "愚笨的，迟钝的",
+    "translations": [
+      "愚笨的，迟钝的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00158",
+    "word": "imagine",
+    "phonetic": "/ɪˈmædʒɪn/",
+    "translation": "想象",
+    "translations": [
+      "想象"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00159",
+    "word": "alone",
+    "phonetic": "/əˈloʊn/",
+    "translation": "单独，独自",
+    "translations": [
+      "单独，独自"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00160",
+    "word": "might",
+    "phonetic": "/maɪt/",
+    "translation": "也许，可能，大概",
+    "translations": [
+      "也许，可能，大概"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00161",
+    "word": "tool",
+    "phonetic": "/tuːl/",
+    "translation": "工具",
+    "translations": [
+      "工具"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00162",
+    "word": "list",
+    "phonetic": "/lɪst/",
+    "translation": "名单，清单，目录",
+    "translations": [
+      "名单，清单，目录"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00163",
+    "word": "something",
+    "phonetic": "/ˈsʌmθɪŋ/",
+    "translation": "某物，某事，某种东西",
+    "translations": [
+      "某物，某事，某种东西"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00164",
+    "word": "novel",
+    "phonetic": "/ˈnɒvəl/",
+    "translation": "(长篇) 小说",
+    "translations": [
+      "(长篇) 小说"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00165",
+    "word": "magazine",
+    "phonetic": "/ˌmæɡəˈziːn/",
+    "translation": "杂志，期刊",
+    "translations": [
+      "杂志，期刊"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00166",
+    "word": "solar",
+    "phonetic": "/ˈsoʊlər/",
+    "translation": "利用太阳能的",
+    "translations": [
+      "利用太阳能的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00167",
+    "word": "media",
+    "phonetic": "/ˈmiːdiə/",
+    "translation": "媒介物",
+    "translations": [
+      "媒介物"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00168",
+    "word": "bored",
+    "phonetic": "/bɔːrd/",
+    "translation": "厌烦的，不感兴趣的; 烦闷的",
+    "translations": [
+      "厌烦的，不感兴趣的; 烦闷的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00169",
+    "word": "feeling",
+    "phonetic": "/ˈfiːlɪŋ/",
+    "translation": "感觉",
+    "translations": [
+      "感觉"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00170",
+    "word": "lift",
+    "phonetic": "/lɪft/",
+    "translation": "抬起，提起，举起",
+    "translations": [
+      "抬起，提起，举起"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00171",
+    "word": "funny",
+    "phonetic": "/ˈfʌni/",
+    "translation": "使人发笑的，有趣的，滑稽的",
+    "translations": [
+      "使人发笑的，有趣的，滑稽的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00172",
+    "word": "youthful",
+    "phonetic": "/ˈjuːθfəl/",
+    "translation": "年轻的",
+    "translations": [
+      "年轻的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00173",
+    "word": "invite",
+    "phonetic": "/ɪnˈvaɪt/",
+    "translation": "邀请",
+    "translations": [
+      "邀请"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00174",
+    "word": "number",
+    "phonetic": "/ˈnʌmbər/",
+    "translation": "数目，数量",
+    "translations": [
+      "数目，数量"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00175",
+    "word": "a number of",
+    "phonetic": "/ə ˈnʌmbər ʌv/",
+    "translation": "一些",
+    "translations": [
+      "一些"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00176",
+    "word": "able",
+    "phonetic": "/ˈeɪbəl/",
+    "translation": "有能力做......的，会......的",
+    "translations": [
+      "有能力做......的，会......的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00177",
+    "word": "importance",
+    "phonetic": "/ɪmˈpɔːrtəns/",
+    "translation": "重要(性)",
+    "translations": [
+      "重要(性)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00178",
+    "word": "detail",
+    "phonetic": "/ˈdiːteɪl/",
+    "translation": "细节，细微之处",
+    "translations": [
+      "细节，细微之处"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00179",
+    "word": "conclusion",
+    "phonetic": "/kənˈkluːʒən/",
+    "translation": "结论",
+    "translations": [
+      "结论"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00180",
+    "word": "open-minded",
+    "phonetic": "/ˈoʊpənˌmaɪndɪd/",
+    "translation": "愿意考虑不同意见的; 思想开明的",
+    "translations": [
+      "愿意考虑不同意见的; 思想开明的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00181",
+    "word": "ourselves",
+    "phonetic": "/aʊərˈsɛlvz/",
+    "translation": "我们自己",
+    "translations": [
+      "我们自己"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00182",
+    "word": "else",
+    "phonetic": "/ɛls/",
+    "translation": "另外，其他; 别的，另外的 (用于表示不同的人、事物、地方等)",
+    "translations": [
+      "另外，其他; 别的，另外的 (用于表示不同的人、事物、地方等)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00183",
+    "word": "differently",
+    "phonetic": "/ˈdɪfərəntli/",
+    "translation": "不同地，相异地",
+    "translations": [
+      "不同地，相异地"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00184",
+    "word": "instruction",
+    "phonetic": "/ɪnˈstrʌkʃən/",
+    "translation": "命令，指示",
+    "translations": [
+      "命令，指示"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00185",
+    "word": "daily",
+    "phonetic": "/ˈdeɪli/",
+    "translation": "每日的，每天的",
+    "translations": [
+      "每日的，每天的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00186",
+    "word": "daily life",
+    "phonetic": "/ˈdeɪli laɪf/",
+    "translation": "日常生活",
+    "translations": [
+      "日常生活"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00187",
+    "word": "while",
+    "phonetic": "/waɪl/",
+    "translation": "当......时，在......时",
+    "translations": [
+      "当......时，在......时"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00188",
+    "word": "housework",
+    "phonetic": "/ˈhaʊsˌwɜːrk/",
+    "translation": "(家务)劳动",
+    "translations": [
+      "(家务)劳动"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00189",
+    "word": "explore",
+    "phonetic": "/ɪkˈsplɔːr/",
+    "translation": "探讨，探究",
+    "translations": [
+      "探讨，探究"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00190",
+    "word": "discussion",
+    "phonetic": "/dɪsˈkʌʃən/",
+    "translation": "讨论，谈论，商讨",
+    "translations": [
+      "讨论，谈论，商讨"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00191",
+    "word": "unforgettable",
+    "phonetic": "/ˌʌnfərˈɡɛtəbl/",
+    "translation": "难以忘怀的",
+    "translations": [
+      "难以忘怀的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00192",
+    "word": "discover",
+    "phonetic": "/dɪsˈkʌvər/",
+    "translation": "发现，找到",
+    "translations": [
+      "发现，找到"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00193",
+    "word": "mosquito",
+    "phonetic": "/məˈskiːtoʊ/",
+    "translation": "蚊子",
+    "translations": [
+      "蚊子"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00194",
+    "word": "insect",
+    "phonetic": "/ˈɪnsɛkt/",
+    "translation": "昆虫",
+    "translations": [
+      "昆虫"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00195",
+    "word": "butterfly",
+    "phonetic": "/ˈbʌtərflaɪ/",
+    "translation": "蝴蝶",
+    "translations": [
+      "蝴蝶"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00196",
+    "word": "prince",
+    "phonetic": "/prɪns/",
+    "translation": "王子",
+    "translations": [
+      "王子"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00197",
+    "word": "monster",
+    "phonetic": "/ˈmɒnstər/",
+    "translation": "妖怪; 怪物; 怪兽",
+    "translations": [
+      "妖怪; 怪物; 怪兽"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00198",
+    "word": "ever",
+    "phonetic": "/ˈɛvər/",
+    "translation": "在任何时候",
+    "translations": [
+      "在任何时候"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00199",
+    "word": "notice",
+    "phonetic": "/ˈnoʊtɪs/",
+    "translation": "看到; 听到; 感觉到; 注意到",
+    "translations": [
+      "看到; 听到; 感觉到; 注意到"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00200",
+    "word": "dangerous",
+    "phonetic": "/ˈdeɪndʒərəs/",
+    "translation": "危险的，有危害的",
+    "translations": [
+      "危险的，有危害的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00201",
+    "word": "social",
+    "phonetic": "/ˈsoʊʃəl/",
+    "translation": "社交的",
+    "translations": [
+      "社交的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00202",
+    "word": "screen",
+    "phonetic": "/skriːn/",
+    "translation": "屏幕",
+    "translations": [
+      "屏幕"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00203",
+    "word": "couch",
+    "phonetic": "/kaʊtʃ/",
+    "translation": "长沙发",
+    "translations": [
+      "长沙发"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00204",
+    "word": "couch potato",
+    "phonetic": "/kaʊtʃ pəˈteɪtoʊ/",
+    "translation": "老泡在电视机前的人",
+    "translations": [
+      "老泡在电视机前的人"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00205",
+    "word": "sore",
+    "phonetic": "/sɔːr/",
+    "translation": "疼痛的; 酸痛的",
+    "translations": [
+      "疼痛的; 酸痛的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00206",
+    "word": "neck",
+    "phonetic": "/nɛk/",
+    "translation": "颈，脖子",
+    "translations": [
+      "颈，脖子"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00207",
+    "word": "deaf",
+    "phonetic": "/dɛf/",
+    "translation": "不愿听的，不肯听取的",
+    "translations": [
+      "不愿听的，不肯听取的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00208",
+    "word": "real",
+    "phonetic": "/rɪəl/",
+    "translation": "实际存在的，非想象的",
+    "translations": [
+      "实际存在的，非想象的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00209",
+    "word": "balanced",
+    "phonetic": "/ˈbælənst/",
+    "translation": "均衡的",
+    "translations": [
+      "均衡的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00210",
+    "word": "outside",
+    "phonetic": "/ˌaʊtˈsaɪd/",
+    "translation": "在室外",
+    "translations": [
+      "在室外"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00211",
+    "word": "jog",
+    "phonetic": "/dʒɒɡ/",
+    "translation": "慢跑",
+    "translations": [
+      "慢跑"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00212",
+    "word": "fresh",
+    "phonetic": "/frɛʃ/",
+    "translation": "新鲜的",
+    "translations": [
+      "新鲜的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00213",
+    "word": "tennis",
+    "phonetic": "/ˈtɛnɪs/",
+    "translation": "网球(运动)",
+    "translations": [
+      "网球(运动)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00214",
+    "word": "hike",
+    "phonetic": "/haɪk/",
+    "translation": "(在...) 徒步旅行，远足",
+    "translations": [
+      "(在...) 徒步旅行，远足"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00215",
+    "word": "ours",
+    "phonetic": "/aʊərz/",
+    "translation": "(属于) 我们的",
+    "translations": [
+      "(属于) 我们的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00216",
+    "word": "plateau",
+    "phonetic": "/plæˈtoʊ/",
+    "translation": "高原",
+    "translations": [
+      "高原"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00217",
+    "word": "cloud",
+    "phonetic": "/klaʊd/",
+    "translation": "云",
+    "translations": [
+      "云"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00218",
+    "word": "soft",
+    "phonetic": "/sɔːft/",
+    "translation": "柔软的",
+    "translations": [
+      "柔软的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00219",
+    "word": "brightly",
+    "phonetic": "/ˈbraɪtli/",
+    "translation": "明亮地",
+    "translations": [
+      "明亮地"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00220",
+    "word": "lotus",
+    "phonetic": "/ˈloʊtəs/",
+    "translation": "莲花(图案)，荷花(图案)",
+    "translations": [
+      "莲花(图案)，荷花(图案)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00221",
+    "word": "sky",
+    "phonetic": "/skaɪ/",
+    "translation": "天，天空",
+    "translations": [
+      "天，天空"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00222",
+    "word": "calm",
+    "phonetic": "/kɑːm/",
+    "translation": "镇静的，沉着的; 心平气和的",
+    "translations": [
+      "镇静的，沉着的; 心平气和的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00223",
+    "word": "above",
+    "phonetic": "/əˈbʌv/",
+    "translation": "在(......)上方",
+    "translations": [
+      "在(......)上方"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00224",
+    "word": "express",
+    "phonetic": "/ɪkˈsprɛs/",
+    "translation": "表达; 表示; 表现",
+    "translations": [
+      "表达; 表示; 表现"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00225",
+    "word": "grassland",
+    "phonetic": "/ˈɡræsˌlænd/",
+    "translation": "草原",
+    "translations": [
+      "草原"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00226",
+    "word": "field",
+    "phonetic": "/fiːld/",
+    "translation": "田地，田野",
+    "translations": [
+      "田地，田野"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00227",
+    "word": "few",
+    "phonetic": "/fjuː/",
+    "translation": "很少，不多",
+    "translations": [
+      "很少，不多"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00228",
+    "word": "present",
+    "phonetic": "/ˈprɛzənt/",
+    "translation": "礼物，赠品",
+    "translations": [
+      "礼物，赠品"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00229",
+    "word": "proud",
+    "phonetic": "/praʊd/",
+    "translation": "自豪的，得意的",
+    "translations": [
+      "自豪的，得意的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00230",
+    "word": "likely",
+    "phonetic": "/ˈlaɪkli/",
+    "translation": "可能的; 可能发生的; 可能属实的",
+    "translations": [
+      "可能的; 可能发生的; 可能属实的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00231",
+    "word": "local",
+    "phonetic": "/ˈloʊkəl/",
+    "translation": "地方性的, 当地(本地)的",
+    "translations": [
+      "地方性的, 当地(本地)的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00232",
+    "word": "designer",
+    "phonetic": "/dɪˈzaɪnər/",
+    "translation": "(服装、家具、设备等的) 设计师，设计者",
+    "translations": [
+      "(服装、家具、设备等的) 设计师，设计者"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00233",
+    "word": "guide",
+    "phonetic": "/ɡaɪd/",
+    "translation": "指南，指导手册",
+    "translations": [
+      "指南，指导手册"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00234",
+    "word": "describe",
+    "phonetic": "/dɪˈskraɪb/",
+    "translation": "描述，描写",
+    "translations": [
+      "描述，描写"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00235",
+    "word": "landscape",
+    "phonetic": "/ˈlændˌskeɪp/",
+    "translation": "(陆上的) 风景，景致，景色",
+    "translations": [
+      "(陆上的) 风景，景致，景色"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00236",
+    "word": "common",
+    "phonetic": "/ˈkɒmən/",
+    "translation": "常见的，普遍的",
+    "translations": [
+      "常见的，普遍的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00237",
+    "word": "Mount",
+    "phonetic": "/maʊnt/",
+    "translation": "(书面缩写为 Mt)(用作山名的一部分) ......山，......峰",
+    "translations": [
+      "(书面缩写为 Mt)(用作山名的一部分) ......山，......峰"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00238",
+    "word": "tide",
+    "phonetic": "/taɪd/",
+    "translation": "海潮，潮汐",
+    "translations": [
+      "海潮，潮汐"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00239",
+    "word": "exhibition",
+    "phonetic": "/ˌɛksɪˈbɪʃən/",
+    "translation": "展览(会)",
+    "translations": [
+      "展览(会)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00240",
+    "word": "tour",
+    "phonetic": "/tʊr/",
+    "translation": "参观，游览",
+    "translations": [
+      "参观，游览"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00241",
+    "word": "lungfish",
+    "phonetic": "/ˈlʌŋˌfɪʃ/",
+    "translation": "肺鱼",
+    "translations": [
+      "肺鱼"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00242",
+    "word": "lung",
+    "phonetic": "/lʌŋ/",
+    "translation": "肺",
+    "translations": [
+      "肺"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00243",
+    "word": "scientist",
+    "phonetic": "/ˈsaɪəntɪst/",
+    "translation": "科学家",
+    "translations": [
+      "科学家"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00244",
+    "word": "behaviour",
+    "phonetic": "/bɪˈheɪvjər/",
+    "translation": "行为，举止",
+    "translations": [
+      "行为，举止"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00245",
+    "word": "land",
+    "phonetic": "/lænd/",
+    "translation": "陆地",
+    "translations": [
+      "陆地"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00246",
+    "word": "aloud",
+    "phonetic": "/əˈlaʊd/",
+    "translation": "出声地",
+    "translations": [
+      "出声地"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00247",
+    "word": "salty",
+    "phonetic": "/ˈsɔːlti/",
+    "translation": "咸的，含盐的",
+    "translations": [
+      "咸的，含盐的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00248",
+    "word": "lie",
+    "phonetic": "/laɪ/",
+    "translation": "躺，平卧",
+    "translations": [
+      "躺，平卧"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00249",
+    "word": "surface",
+    "phonetic": "/ˈsɜːrfɪs/",
+    "translation": "表面，面",
+    "translations": [
+      "表面，面"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00250",
+    "word": "level",
+    "phonetic": "/ˈlɛvəl/",
+    "translation": "水平高度; 相对高度",
+    "translations": [
+      "水平高度; 相对高度"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00251",
+    "word": "less",
+    "phonetic": "/lɛs/",
+    "translation": "不那么多，更(较)少",
+    "translations": [
+      "不那么多，更(较)少"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00252",
+    "word": "suggest",
+    "phonetic": "/səˈdʒɛst/",
+    "translation": "暗示，暗指",
+    "translations": [
+      "暗示，暗指"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00253",
+    "word": "such as",
+    "phonetic": "/sʌtʃ æz/",
+    "translation": "诸如，例如",
+    "translations": [
+      "诸如，例如"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00254",
+    "word": "snake",
+    "phonetic": "/sneɪk/",
+    "translation": "蛇",
+    "translations": [
+      "蛇"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00255",
+    "word": "wood",
+    "phonetic": "/wʊd/",
+    "translation": "木头; 木材，木料",
+    "translations": [
+      "木头; 木材，木料"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00256",
+    "word": "disappear",
+    "phonetic": "/ˌdɪsəˈpɪr/",
+    "translation": "消失，不见",
+    "translations": [
+      "消失，不见"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00257",
+    "word": "glacier",
+    "phonetic": "/ˈɡleɪʃər/",
+    "translation": "冰川",
+    "translations": [
+      "冰川"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00258",
+    "word": "national",
+    "phonetic": "/ˈnæʃənl/",
+    "translation": "国家(的)，全国性的",
+    "translations": [
+      "国家(的)，全国性的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00259",
+    "word": "airport",
+    "phonetic": "/ˈɛrˌpɔːrt/",
+    "translation": "机场，航空站(港)",
+    "translations": [
+      "机场，航空站(港)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00260",
+    "word": "burn",
+    "phonetic": "/bɜːrn/",
+    "translation": "(使)(身体部位)灼痛，(使)火辣辣地痛",
+    "translations": [
+      "(使)(身体部位)灼痛，(使)火辣辣地痛"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00261",
+    "word": "expect",
+    "phonetic": "/ɪkˈspɛkt/",
+    "translation": "预料，预期，预计",
+    "translations": [
+      "预料，预期，预计"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00262",
+    "word": "deep",
+    "phonetic": "/diːp/",
+    "translation": "(呼吸或叹息)深深的",
+    "translations": [
+      "(呼吸或叹息)深深的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00263",
+    "word": "lemon",
+    "phonetic": "/ˈlɛmən/",
+    "translation": "柠檬",
+    "translations": [
+      "柠檬"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00264",
+    "word": "reply",
+    "phonetic": "/rɪˈplaɪ/",
+    "translation": "回答，答复",
+    "translations": [
+      "回答，答复"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00265",
+    "word": "mouthful",
+    "phonetic": "/ˈmaʊθfʊl/",
+    "translation": "(食物或饮料的) 一口，一满口",
+    "translations": [
+      "(食物或饮料的) 一口，一满口"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00266",
+    "word": "surprisingly",
+    "phonetic": "/səˈpraɪzɪŋli/",
+    "translation": "惊人地，使人吃惊地，出人意料地",
+    "translations": [
+      "惊人地，使人吃惊地，出人意料地"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00267",
+    "word": "mask",
+    "phonetic": "/mæsk/",
+    "translation": "假面具，假面",
+    "translations": [
+      "假面具，假面"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00268",
+    "word": "normal",
+    "phonetic": "/ˈnɔːrməl/",
+    "translation": "正常",
+    "translations": [
+      "正常"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00269",
+    "word": "ancient",
+    "phonetic": "/ˈeɪnʃənt/",
+    "translation": "古代的",
+    "translations": [
+      "古代的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00270",
+    "word": "further",
+    "phonetic": "/ˈfɜːrðər/",
+    "translation": "更远",
+    "translations": [
+      "更远"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00271",
+    "word": "look forward to",
+    "phonetic": "/lʊk ˈfɔːrwərd tuː/",
+    "translation": "(兴奋地)期待，盼望",
+    "translations": [
+      "(兴奋地)期待，盼望"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00272",
+    "word": "general",
+    "phonetic": "/ˈdʒɛnərəl/",
+    "translation": "大体的，大致的; 通常，一般情况下; 普遍",
+    "translations": [
+      "大体的，大致的; 通常，一般情况下; 普遍"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00273",
+    "word": "curious",
+    "phonetic": "/ˈkjʊriəs/",
+    "translation": "好奇的，好打听的",
+    "translations": [
+      "好奇的，好打听的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00274",
+    "word": "cultural",
+    "phonetic": "/ˈkʌltʃərəl/",
+    "translation": "文化的; 文化上的",
+    "translations": [
+      "文化的; 文化上的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00275",
+    "word": "understanding",
+    "phonetic": "/ˌʌndərˈstændɪŋ/",
+    "translation": "了解; 熟悉; 某人(对某事)的理解",
+    "translations": [
+      "了解; 熟悉; 某人(对某事)的理解"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00276",
+    "word": "main",
+    "phonetic": "/meɪn/",
+    "translation": "最大的，最重要的",
+    "translations": [
+      "最大的，最重要的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00277",
+    "word": "prefer",
+    "phonetic": "/prɪˈfɜːr/",
+    "translation": "更喜欢",
+    "translations": [
+      "更喜欢"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00278",
+    "word": "interest",
+    "phonetic": "/ˈɪntrəst/",
+    "translation": "吸引力",
+    "translations": [
+      "吸引力"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00279",
+    "word": "places of interest",
+    "phonetic": "/ˈpleɪsɪz ʌv ˈɪntrəst/",
+    "translation": "名胜",
+    "translations": [
+      "名胜"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00280",
+    "word": "hotel",
+    "phonetic": "/hoʊˈtɛl/",
+    "translation": "宾馆，酒店",
+    "translations": [
+      "宾馆，酒店"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00281",
+    "word": "comfortable",
+    "phonetic": "/ˈkʌmfərtəbl/",
+    "translation": "舒适的，令人舒服的",
+    "translations": [
+      "舒适的，令人舒服的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00282",
+    "word": "postcard",
+    "phonetic": "/ˈpoʊstkɑːrd/",
+    "translation": "明信片",
+    "translations": [
+      "明信片"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00283",
+    "word": "waterfall",
+    "phonetic": "/ˈwɔːtərfɔːl/",
+    "translation": "瀑布",
+    "translations": [
+      "瀑布"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00284",
+    "word": "south",
+    "phonetic": "/saʊθ/",
+    "translation": "在南方的",
+    "translations": [
+      "在南方的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00285",
+    "word": "powerful",
+    "phonetic": "/ˈpaʊərfl/",
+    "translation": "猛烈的，有力的",
+    "translations": [
+      "猛烈的，有力的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00286",
+    "word": "thunder",
+    "phonetic": "/ˈθʌndər/",
+    "translation": "雷声",
+    "translations": [
+      "雷声"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00287",
+    "word": "painting",
+    "phonetic": "/ˈpeɪntɪŋ/",
+    "translation": "绘画(作品)",
+    "translations": [
+      "绘画(作品)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00288",
+    "word": "roller coaster",
+    "phonetic": "/ˈroʊlər ˈkoʊstər/",
+    "translation": "过山车，云霄飞车",
+    "translations": [
+      "过山车，云霄飞车"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00289",
+    "word": "huge",
+    "phonetic": "/hjuːdʒ/",
+    "translation": "巨大的，庞大的; 极大量的",
+    "translations": [
+      "巨大的，庞大的; 极大量的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00290",
+    "word": "ant",
+    "phonetic": "/ænt/",
+    "translation": "蚂蚁",
+    "translations": [
+      "蚂蚁"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00291",
+    "word": "beauty",
+    "phonetic": "/ˈbjuːti/",
+    "translation": "美，美丽，漂亮",
+    "translations": [
+      "美，美丽，漂亮"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00292",
+    "word": "discuss",
+    "phonetic": "/dɪsˈkʌs/",
+    "translation": "商讨，谈论，讨论",
+    "translations": [
+      "商讨，谈论，讨论"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00293",
+    "word": "accept",
+    "phonetic": "/əkˈsɛpt/",
+    "translation": "接受; 同意做",
+    "translations": [
+      "接受; 同意做"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00294",
+    "word": "award",
+    "phonetic": "/əˈwɔːrd/",
+    "translation": "奖，奖赏; 奖品; 奖金",
+    "translations": [
+      "奖，奖赏; 奖品; 奖金"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00295",
+    "word": "traffic",
+    "phonetic": "/ˈtræfɪk/",
+    "translation": "路上行驶的车辆，交通",
+    "translations": [
+      "路上行驶的车辆，交通"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00296",
+    "word": "unexplored",
+    "phonetic": "/ˌʌnɪksˈplɔːrd/",
+    "translation": "(地方)未曾探索的，未经勘察的",
+    "translations": [
+      "(地方)未曾探索的，未经勘察的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00297",
+    "word": "seriously",
+    "phonetic": "/ˈsɪriəsli/",
+    "translation": "严重地，非常",
+    "translations": [
+      "严重地，非常"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00298",
+    "word": "set out",
+    "phonetic": "/sɛt aʊt/",
+    "translation": "(坚决地)开始做; 使(某人)开始做",
+    "translations": [
+      "(坚决地)开始做; 使(某人)开始做"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00299",
+    "word": "set up",
+    "phonetic": "/sɛt ʌp/",
+    "translation": "动身踏上(尤指漫长的)旅途",
+    "translations": [
+      "动身踏上(尤指漫长的)旅途"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00300",
+    "word": "achieve",
+    "phonetic": "/əˈtʃiːv/",
+    "translation": "实现; (尤指经过努力)取得，达到",
+    "translations": [
+      "实现; (尤指经过努力)取得，达到"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00301",
+    "word": "geographical",
+    "phonetic": "/ˌdʒiːəˈɡræfɪkəl/",
+    "translation": "地理的，地理位置的",
+    "translations": [
+      "地理的，地理位置的"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00302",
+    "word": "discovery",
+    "phonetic": "/dɪsˈkʌvəri/",
+    "translation": "被发现的事实(事物)",
+    "translations": [
+      "被发现的事实(事物)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00303",
+    "word": "peak",
+    "phonetic": "/piːk/",
+    "translation": "山顶，山峰; 山，山岳",
+    "translations": [
+      "山顶，山峰; 山，山岳"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00304",
+    "word": "truth",
+    "phonetic": "/truːθ/",
+    "translation": "事实，真相，实情",
+    "translations": [
+      "事实，真相，实情"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00305",
+    "word": "climb",
+    "phonetic": "/klaɪm/",
+    "translation": "爬(山)，登(山)",
+    "translations": [
+      "爬(山)，登(山)"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  },
+  {
+    "id": "qwerty_new_waiyan2_00306",
+    "word": "Mount Huangshan",
+    "phonetic": "/maʊnt ˈwɑːnʃæn/",
+    "translation": "黄山",
+    "translations": [
+      "黄山"
+    ],
+    "domain": "qwerty_new_waiyan2"
+  }
+]

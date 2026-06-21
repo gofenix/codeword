@@ -1,0 +1,786 @@
+[
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00001",
+    "word": "intelligence",
+    "phonetic": "",
+    "translation": "智力",
+    "translations": [
+      "智力"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00002",
+    "word": "gene",
+    "phonetic": "",
+    "translation": "[遗]基因",
+    "translations": [
+      "[遗]基因"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00003",
+    "word": "seasonal",
+    "phonetic": "",
+    "translation": "季节的",
+    "translations": [
+      "季节的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00004",
+    "word": "science",
+    "phonetic": "",
+    "translation": "科学；技术",
+    "translations": [
+      "科学",
+      "技术"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00005",
+    "word": "crocodile",
+    "phonetic": "",
+    "translation": "鳄鱼",
+    "translations": [
+      "鳄鱼"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00006",
+    "word": "wetland",
+    "phonetic": "",
+    "translation": "湿地；沼泽地",
+    "translations": [
+      "湿地",
+      "沼泽地"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00007",
+    "word": "population",
+    "phonetic": "",
+    "translation": "人口",
+    "translations": [
+      "人口"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00008",
+    "word": "depth",
+    "phonetic": "",
+    "translation": "深度；深奥",
+    "translations": [
+      "深度",
+      "深奥"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00009",
+    "word": "cultivation",
+    "phonetic": "",
+    "translation": "培养；耕作",
+    "translations": [
+      "培养",
+      "耕作"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00010",
+    "word": "relationship",
+    "phonetic": "",
+    "translation": "关系；关联",
+    "translations": [
+      "关系",
+      "关联"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00011",
+    "word": "ingredients",
+    "phonetic": "",
+    "translation": "材料；作料",
+    "translations": [
+      "材料",
+      "作料"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00012",
+    "word": "motivation",
+    "phonetic": "",
+    "translation": "动机",
+    "translations": [
+      "动机"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00013",
+    "word": "organic",
+    "phonetic": "",
+    "translation": "有机的",
+    "translations": [
+      "有机的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00014",
+    "word": "business",
+    "phonetic": "",
+    "translation": "商人",
+    "translations": [
+      "商人"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00015",
+    "word": "preparation",
+    "phonetic": "",
+    "translation": "准备",
+    "translations": [
+      "准备"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00016",
+    "word": "senior",
+    "phonetic": "",
+    "translation": "资深的",
+    "translations": [
+      "资深的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00017",
+    "word": "outdoor",
+    "phonetic": "",
+    "translation": "户外的",
+    "translations": [
+      "户外的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00018",
+    "word": "display",
+    "phonetic": "",
+    "translation": "展示",
+    "translations": [
+      "展示"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00019",
+    "word": "merchandiser",
+    "phonetic": "",
+    "translation": "商人",
+    "translations": [
+      "商人"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00020",
+    "word": "lateral",
+    "phonetic": "",
+    "translation": "侧面的",
+    "translations": [
+      "侧面的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00021",
+    "word": "rope",
+    "phonetic": "",
+    "translation": "绳子",
+    "translations": [
+      "绳子"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00022",
+    "word": "lack",
+    "phonetic": "",
+    "translation": "缺少",
+    "translations": [
+      "缺少"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00023",
+    "word": "danger",
+    "phonetic": "",
+    "translation": "危险",
+    "translations": [
+      "危险"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00024",
+    "word": "sensitive",
+    "phonetic": "",
+    "translation": "敏感的",
+    "translations": [
+      "敏感的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00025",
+    "word": "history",
+    "phonetic": "",
+    "translation": "历史",
+    "translations": [
+      "历史"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00026",
+    "word": "lifestyle",
+    "phonetic": "",
+    "translation": "生活方式",
+    "translations": [
+      "生活方式"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00027",
+    "word": "create",
+    "phonetic": "",
+    "translation": "创造",
+    "translations": [
+      "创造"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00028",
+    "word": "social class",
+    "phonetic": "",
+    "translation": "社会地位",
+    "translations": [
+      "社会地位"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00029",
+    "word": "reason",
+    "phonetic": "",
+    "translation": "原因",
+    "translations": [
+      "原因"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00030",
+    "word": "training",
+    "phonetic": "",
+    "translation": "训练",
+    "translations": [
+      "训练"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00031",
+    "word": "fear",
+    "phonetic": "",
+    "translation": "害怕",
+    "translations": [
+      "害怕"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00032",
+    "word": "instead of",
+    "phonetic": "",
+    "translation": "代替",
+    "translations": [
+      "代替"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00033",
+    "word": "competition",
+    "phonetic": "",
+    "translation": "竞争",
+    "translations": [
+      "竞争"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00034",
+    "word": "conflict",
+    "phonetic": "",
+    "translation": "冲突",
+    "translations": [
+      "冲突"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00035",
+    "word": "a sense of community",
+    "phonetic": "",
+    "translation": "集体归属感",
+    "translations": [
+      "集体归属感"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00036",
+    "word": "inefficient",
+    "phonetic": "",
+    "translation": "无效率的",
+    "translations": [
+      "无效率的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00037",
+    "word": "rate",
+    "phonetic": "",
+    "translation": "率",
+    "translations": [
+      "率"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00038",
+    "word": "attitude",
+    "phonetic": "",
+    "translation": "态度",
+    "translations": [
+      "态度"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00039",
+    "word": "completion",
+    "phonetic": "",
+    "translation": "完成",
+    "translations": [
+      "完成"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00040",
+    "word": "psychology",
+    "phonetic": "",
+    "translation": "心理学",
+    "translations": [
+      "心理学"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00041",
+    "word": "desert",
+    "phonetic": "",
+    "translation": "遗弃",
+    "translations": [
+      "遗弃"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00042",
+    "word": "olive oil",
+    "phonetic": "",
+    "translation": "橄榄油",
+    "translations": [
+      "橄榄油"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00043",
+    "word": "vegetation",
+    "phonetic": "",
+    "translation": "植被；植物",
+    "translations": [
+      "植被",
+      "植物"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00044",
+    "word": "underground",
+    "phonetic": "",
+    "translation": "地下的；秘密的",
+    "translations": [
+      "地下的",
+      "秘密的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00045",
+    "word": "desert",
+    "phonetic": "",
+    "translation": "遗弃；沙漠",
+    "translations": [
+      "遗弃",
+      "沙漠"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00046",
+    "word": "migration",
+    "phonetic": "",
+    "translation": "迁移；移民",
+    "translations": [
+      "迁移",
+      "移民"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00047",
+    "word": "shrimp",
+    "phonetic": "",
+    "translation": "虾；小虾",
+    "translations": [
+      "虾",
+      "小虾"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00048",
+    "word": "worm",
+    "phonetic": "",
+    "translation": "虫；蠕虫",
+    "translations": [
+      "虫",
+      "蠕虫"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00049",
+    "word": "nutrition",
+    "phonetic": "",
+    "translation": "营养",
+    "translations": [
+      "营养"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00050",
+    "word": "temperature",
+    "phonetic": "",
+    "translation": "温度",
+    "translations": [
+      "温度"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00051",
+    "word": "entertainment",
+    "phonetic": "",
+    "translation": "娱乐；消遣",
+    "translations": [
+      "娱乐",
+      "消遣"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00052",
+    "word": "journalism",
+    "phonetic": "",
+    "translation": "新闻业",
+    "translations": [
+      "新闻业"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00053",
+    "word": "symbolism",
+    "phonetic": "",
+    "translation": "象征",
+    "translations": [
+      "象征"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00054",
+    "word": "castle",
+    "phonetic": "",
+    "translation": "城堡",
+    "translations": [
+      "城堡"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00055",
+    "word": "method",
+    "phonetic": "",
+    "translation": "方式",
+    "translations": [
+      "方式"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00056",
+    "word": "portrait",
+    "phonetic": "",
+    "translation": "肖像",
+    "translations": [
+      "肖像"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00057",
+    "word": "poet",
+    "phonetic": "",
+    "translation": "诗人",
+    "translations": [
+      "诗人"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00058",
+    "word": "male",
+    "phonetic": "",
+    "translation": "男性",
+    "translations": [
+      "男性"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00059",
+    "word": "female",
+    "phonetic": "",
+    "translation": "女性",
+    "translations": [
+      "女性"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00060",
+    "word": "elephant",
+    "phonetic": "",
+    "translation": "大象",
+    "translations": [
+      "大象"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00061",
+    "word": "weight",
+    "phonetic": "",
+    "translation": "重量",
+    "translations": [
+      "重量"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00062",
+    "word": "wild",
+    "phonetic": "",
+    "translation": "荒野",
+    "translations": [
+      "荒野"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00063",
+    "word": "ancient",
+    "phonetic": "",
+    "translation": "古代的",
+    "translations": [
+      "古代的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00064",
+    "word": "extreme sport",
+    "phonetic": "",
+    "translation": "极限运动",
+    "translations": [
+      "极限运动"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00065",
+    "word": "equipment",
+    "phonetic": "",
+    "translation": "设备",
+    "translations": [
+      "设备"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00066",
+    "word": "golf",
+    "phonetic": "",
+    "translation": "高尔夫球",
+    "translations": [
+      "高尔夫球"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00067",
+    "word": "regulation",
+    "phonetic": "",
+    "translation": "规则",
+    "translations": [
+      "规则"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00068",
+    "word": "restricted",
+    "phonetic": "",
+    "translation": "有受限制的",
+    "translations": [
+      "有受限制的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00069",
+    "word": "confront",
+    "phonetic": "",
+    "translation": "面对",
+    "translations": [
+      "面对"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00070",
+    "word": "entertainment",
+    "phonetic": "",
+    "translation": "娱乐节目",
+    "translations": [
+      "娱乐节目"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00071",
+    "word": "individual",
+    "phonetic": "",
+    "translation": "个人的",
+    "translations": [
+      "个人的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00072",
+    "word": "tend to",
+    "phonetic": "",
+    "translation": "倾向于",
+    "translations": [
+      "倾向于"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00073",
+    "word": "authority",
+    "phonetic": "",
+    "translation": "权威",
+    "translations": [
+      "权威"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00074",
+    "word": "lecture",
+    "phonetic": "",
+    "translation": "讲座",
+    "translations": [
+      "讲座"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00075",
+    "word": "absent",
+    "phonetic": "",
+    "translation": "缺席的",
+    "translations": [
+      "缺席的"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00076",
+    "word": "recall",
+    "phonetic": "",
+    "translation": "召回；回忆起",
+    "translations": [
+      "召回",
+      "回忆起"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  },
+  {
+    "id": "qwerty_ielts_listening_18_days_15_00077",
+    "word": "sentence",
+    "phonetic": "",
+    "translation": "句子",
+    "translations": [
+      "句子"
+    ],
+    "domain": "qwerty_ielts_listening_18_days_15"
+  }
+]

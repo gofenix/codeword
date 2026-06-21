@@ -1,0 +1,782 @@
+[
+  {
+    "id": "qwerty_childcode004_00001",
+    "word": "do",
+    "phonetic": "",
+    "translation": "做; 执行代码块",
+    "translations": [
+      "做; 执行代码块"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00002",
+    "word": "if",
+    "phonetic": "",
+    "translation": "如果; 条件语句",
+    "translations": [
+      "如果; 条件语句"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00003",
+    "word": "for",
+    "phonetic": "",
+    "translation": "循环; 循环结构",
+    "translations": [
+      "循环; 循环结构"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00004",
+    "word": "abs",
+    "phonetic": "",
+    "translation": "绝对值; 返回绝对值",
+    "translations": [
+      "绝对值; 返回绝对值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00005",
+    "word": "max",
+    "phonetic": "",
+    "translation": "最大; 返回最大值",
+    "translations": [
+      "最大; 返回最大值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00006",
+    "word": "sin",
+    "phonetic": "",
+    "translation": "正弦; 计算角度的正弦值",
+    "translations": [
+      "正弦; 计算角度的正弦值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00007",
+    "word": "int",
+    "phonetic": "",
+    "translation": "整数; 定义整数变量",
+    "translations": [
+      "整数; 定义整数变量"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00008",
+    "word": "LOW",
+    "phonetic": "",
+    "translation": "低; 低电平",
+    "translations": [
+      "低; 低电平"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00009",
+    "word": "min",
+    "phonetic": "",
+    "translation": "最小; 返回最小值",
+    "translations": [
+      "最小; 返回最小值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00010",
+    "word": "map",
+    "phonetic": "",
+    "translation": "映射; 将一个范围内的值映射到另一个范围",
+    "translations": [
+      "映射; 将一个范围内的值映射到另一个范围"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00011",
+    "word": "tan",
+    "phonetic": "",
+    "translation": "正切; 计算角度的正切值",
+    "translations": [
+      "正切; 计算角度的正切值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00012",
+    "word": "pow",
+    "phonetic": "",
+    "translation": "幂; 计算一个数的幂",
+    "translations": [
+      "幂; 计算一个数的幂"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00013",
+    "word": "bit",
+    "phonetic": "",
+    "translation": "位; 单个二进制位",
+    "translations": [
+      "位; 单个二进制位"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00014",
+    "word": "cos",
+    "phonetic": "",
+    "translation": "余弦; 计算角度的余弦值",
+    "translations": [
+      "余弦; 计算角度的余弦值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00015",
+    "word": "true",
+    "phonetic": "",
+    "translation": "真; 布尔值“真”",
+    "translations": [
+      "真; 布尔值“真”"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00016",
+    "word": "data",
+    "phonetic": "",
+    "translation": "数据; 存储在变量中的信息",
+    "translations": [
+      "数据; 存储在变量中的信息"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00017",
+    "word": "void",
+    "phonetic": "",
+    "translation": "无效; 表示无返回值",
+    "translations": [
+      "无效; 表示无返回值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00018",
+    "word": "else",
+    "phonetic": "",
+    "translation": "否则; 条件的替代分支",
+    "translations": [
+      "否则; 条件的替代分支"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00019",
+    "word": "word",
+    "phonetic": "",
+    "translation": "单词; 16位无符号数据类型",
+    "translations": [
+      "单词; 16位无符号数据类型"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00020",
+    "word": "sqrt",
+    "phonetic": "",
+    "translation": "平方根; 计算平方根",
+    "translations": [
+      "平方根; 计算平方根"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00021",
+    "word": "HIGH",
+    "phonetic": "",
+    "translation": "高; 高电平",
+    "translations": [
+      "高; 高电平"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00022",
+    "word": "case",
+    "phonetic": "",
+    "translation": "情况; switch语句中的情况",
+    "translations": [
+      "情况; switch语句中的情况"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00023",
+    "word": "long",
+    "phonetic": "",
+    "translation": "长; 定义长整数变量",
+    "translations": [
+      "长; 定义长整数变量"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00024",
+    "word": "code",
+    "phonetic": "",
+    "translation": "代码; 编程指令",
+    "translations": [
+      "代码; 编程指令"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00025",
+    "word": "tone",
+    "phonetic": "",
+    "translation": "音调; 生成音频频率",
+    "translations": [
+      "音调; 生成音频频率"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00026",
+    "word": "char",
+    "phonetic": "",
+    "translation": "字符; 定义字符变量",
+    "translations": [
+      "字符; 定义字符变量"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00027",
+    "word": "byte",
+    "phonetic": "",
+    "translation": "字节; 8位无符号数据类型",
+    "translations": [
+      "字节; 8位无符号数据类型"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00028",
+    "word": "array",
+    "phonetic": "",
+    "translation": "数组; 元素的集合",
+    "translations": [
+      "数组; 元素的集合"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00029",
+    "word": "index",
+    "phonetic": "",
+    "translation": "索引; 数组中的位置",
+    "translations": [
+      "索引; 数组中的位置"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00030",
+    "word": "const",
+    "phonetic": "",
+    "translation": "常量; 常量值",
+    "translations": [
+      "常量; 常量值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00031",
+    "word": "float",
+    "phonetic": "",
+    "translation": "浮点; 定义浮点变量",
+    "translations": [
+      "浮点; 定义浮点变量"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00032",
+    "word": "INPUT",
+    "phonetic": "",
+    "translation": "输入; 将引脚设置为输入",
+    "translations": [
+      "输入; 将引脚设置为输入"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00033",
+    "word": "maker",
+    "phonetic": "",
+    "translation": "制造者; 指制造者或创建者",
+    "translations": [
+      "制造者; 指制造者或创建者"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00034",
+    "word": "types",
+    "phonetic": "",
+    "translation": "类型; 变量的不同类型",
+    "translations": [
+      "类型; 变量的不同类型"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00035",
+    "word": "break",
+    "phonetic": "",
+    "translation": "中断; 退出循环或switch",
+    "translations": [
+      "中断; 退出循环或switch"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00036",
+    "word": "while",
+    "phonetic": "",
+    "translation": "当; 条件为真时循环",
+    "translations": [
+      "当; 条件为真时循环"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00037",
+    "word": "false",
+    "phonetic": "",
+    "translation": "假; 布尔值“假”",
+    "translations": [
+      "假; 布尔值“假”"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00038",
+    "word": "delay",
+    "phonetic": "",
+    "translation": "延迟; 暂停程序执行",
+    "translations": [
+      "延迟; 暂停程序执行"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00039",
+    "word": "sizeof",
+    "phonetic": "",
+    "translation": "大小; 返回数据类型的大小",
+    "translations": [
+      "大小; 返回数据类型的大小"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00040",
+    "word": "static",
+    "phonetic": "",
+    "translation": "静态; 在函数调用之间保留变量值",
+    "translations": [
+      "静态; 在函数调用之间保留变量值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00041",
+    "word": "noTone",
+    "phonetic": "",
+    "translation": "无音调; 停止声音生成",
+    "translations": [
+      "无音调; 停止声音生成"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00042",
+    "word": "millis",
+    "phonetic": "",
+    "translation": "毫秒; 返回经过的毫秒数",
+    "translations": [
+      "毫秒; 返回经过的毫秒数"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00043",
+    "word": "micros",
+    "phonetic": "",
+    "translation": "微秒; 返回经过的微秒数",
+    "translations": [
+      "微秒; 返回经过的微秒数"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00044",
+    "word": "switch",
+    "phonetic": "",
+    "translation": "开关; 选择要执行的代码块",
+    "translations": [
+      "开关; 选择要执行的代码块"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00045",
+    "word": "define",
+    "phonetic": "",
+    "translation": "定义; 定义宏",
+    "translations": [
+      "定义; 定义宏"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00046",
+    "word": "Stream",
+    "phonetic": "",
+    "translation": "流; 处理数据输入/输出",
+    "translations": [
+      "流; 处理数据输入/输出"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00047",
+    "word": "double",
+    "phonetic": "",
+    "translation": "双精度; 定义双精度浮点变量",
+    "translations": [
+      "双精度; 定义双精度浮点变量"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00048",
+    "word": "bitSet",
+    "phonetic": "",
+    "translation": "设置位; 在特定位置设置位",
+    "translations": [
+      "设置位; 在特定位置设置位"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00049",
+    "word": "OUTPUT",
+    "phonetic": "",
+    "translation": "输出; 将引脚设置为输出",
+    "translations": [
+      "输出; 将引脚设置为输出"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00050",
+    "word": "random",
+    "phonetic": "",
+    "translation": "随机; 生成随机数",
+    "translations": [
+      "随机; 生成随机数"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00051",
+    "word": "Serial",
+    "phonetic": "",
+    "translation": "串行; 处理串行通信",
+    "translations": [
+      "串行; 处理串行通信"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00052",
+    "word": "string",
+    "phonetic": "",
+    "translation": "字符串; 字符序列",
+    "translations": [
+      "字符串; 字符序列"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00053",
+    "word": "return",
+    "phonetic": "",
+    "translation": "返回; 退出函数并可选地返回值",
+    "translations": [
+      "返回; 退出函数并可选地返回值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00054",
+    "word": "boolean",
+    "phonetic": "",
+    "translation": "布尔值; 定义布尔变量",
+    "translations": [
+      "布尔值; 定义布尔变量"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00055",
+    "word": "pulseIn",
+    "phonetic": "",
+    "translation": "脉冲输入; 读取引脚上的脉冲宽度",
+    "translations": [
+      "脉冲输入; 读取引脚上的脉冲宽度"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00056",
+    "word": "lowByte",
+    "phonetic": "",
+    "translation": "低字节; 返回值的低字节",
+    "translations": [
+      "低字节; 返回值的低字节"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00057",
+    "word": "bitRead",
+    "phonetic": "",
+    "translation": "读取位; 读取特定位上的值",
+    "translations": [
+      "读取位; 读取特定位上的值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00058",
+    "word": "shiftIn",
+    "phonetic": "",
+    "translation": "移入; 逐位移入数据",
+    "translations": [
+      "移入; 逐位移入数据"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00059",
+    "word": "arduino",
+    "phonetic": "",
+    "translation": "arduino; 微控制器平台",
+    "translations": [
+      "arduino; 微控制器平台"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00060",
+    "word": "include",
+    "phonetic": "",
+    "translation": "包含; 在程序中包含文件",
+    "translations": [
+      "包含; 在程序中包含文件"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00061",
+    "word": "pinMode",
+    "phonetic": "",
+    "translation": "引脚模式; 将引脚配置为输入或输出",
+    "translations": [
+      "引脚模式; 将引脚配置为输入或输出"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00062",
+    "word": "shiftOut",
+    "phonetic": "",
+    "translation": "移出; 逐位移出数据",
+    "translations": [
+      "移出; 逐位移出数据"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00063",
+    "word": "volatile",
+    "phonetic": "",
+    "translation": "易变的; 表示变量可能会意外更改",
+    "translations": [
+      "易变的; 表示变量可能会意外更改"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00064",
+    "word": "bitClear",
+    "phonetic": "",
+    "translation": "清除位; 清除特定位上的值",
+    "translations": [
+      "清除位; 清除特定位上的值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00065",
+    "word": "unsigned",
+    "phonetic": "",
+    "translation": "无符号; 表示变量不能为负值",
+    "translations": [
+      "无符号; 表示变量不能为负值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00066",
+    "word": "continue",
+    "phonetic": "",
+    "translation": "继续; 跳过当前循环的剩余部分",
+    "translations": [
+      "继续; 跳过当前循环的剩余部分"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00067",
+    "word": "bitWrite",
+    "phonetic": "",
+    "translation": "写入位; 在特定位上写入值",
+    "translations": [
+      "写入位; 在特定位上写入值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00068",
+    "word": "highByte",
+    "phonetic": "",
+    "translation": "高字节; 返回值的高字节",
+    "translations": [
+      "高字节; 返回值的高字节"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00069",
+    "word": "constrain",
+    "phonetic": "",
+    "translation": "限制; 将值限制在范围内",
+    "translations": [
+      "限制; 将值限制在范围内"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00070",
+    "word": "reference",
+    "phonetic": "",
+    "translation": "参考; 指向变量或函数",
+    "translations": [
+      "参考; 指向变量或函数"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00071",
+    "word": "analogRead",
+    "phonetic": "",
+    "translation": "模拟读取; 从模拟引脚读取值",
+    "translations": [
+      "模拟读取; 从模拟引脚读取值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00072",
+    "word": "randomSeed",
+    "phonetic": "",
+    "translation": "随机种子; 设置生成随机数的起始点",
+    "translations": [
+      "随机种子; 设置生成随机数的起始点"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00073",
+    "word": "digitalRead",
+    "phonetic": "",
+    "translation": "数字读取; 从数字引脚读取值",
+    "translations": [
+      "数字读取; 从数字引脚读取值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00074",
+    "word": "analogWrite",
+    "phonetic": "",
+    "translation": "模拟写入; 向引脚写入模拟值",
+    "translations": [
+      "模拟写入; 向引脚写入模拟值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00075",
+    "word": "digitalWrite",
+    "phonetic": "",
+    "translation": "数字写入; 向引脚写入数字值",
+    "translations": [
+      "数字写入; 向引脚写入数字值"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00076",
+    "word": "detachInterrupt",
+    "phonetic": "",
+    "translation": "分离中断; 禁用引脚上的中断",
+    "translations": [
+      "分离中断; 禁用引脚上的中断"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00077",
+    "word": "attachInterrupt",
+    "phonetic": "",
+    "translation": "连接中断; 启用引脚上的中断",
+    "translations": [
+      "连接中断; 启用引脚上的中断"
+    ],
+    "domain": "qwerty_childcode004"
+  },
+  {
+    "id": "qwerty_childcode004_00078",
+    "word": "delayMicroseconds",
+    "phonetic": "",
+    "translation": "微秒延迟; 暂停程序执行几微秒",
+    "translations": [
+      "微秒延迟; 暂停程序执行几微秒"
+    ],
+    "domain": "qwerty_childcode004"
+  }
+]

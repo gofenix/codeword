@@ -44,7 +44,10 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
     try {
       final notifier = ref.read(reviewStateProvider.notifier);
       final due = await notifier.dueWords(limit: 5);
-      final fresh = await notifier.recommendedNewWords(limit: 5);
+      final fresh = await notifier.recommendedNewWords(
+        limit: 5,
+        catalog: ref.read(qwertyCatalogProvider),
+      );
       // Dedupe by word id (a "new" word can't be due; but be safe).
       final seen = <String>{};
       final combined = <PulseWordEntry>[];
@@ -83,7 +86,9 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
     });
     HapticFeedback.lightImpact();
     try {
-      final vocabName = _vocabNameFor(_pool.first.vocabId);
+      final vocabName =
+          ref.read(vocabMetaProvider)[_pool.first.vocabId]?.name ??
+              _pool.first.vocabId;
       final words = _pool.map((e) => e.word).toList();
       final system = const LlmMessage(
         role: 'system',
@@ -132,31 +137,6 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
         _generating = false;
         _error = '网络错误: $e';
       });
-    }
-  }
-
-  String _vocabNameFor(String id) {
-    switch (id) {
-      case 'ai_core':
-        return 'AI / 机器学习';
-      case 'cs_core':
-        return '计算机科学';
-      case 'python_core':
-        return 'Python 编程';
-      case 'web_core':
-        return 'Web 前端';
-      case 'llm_core':
-        return 'LLM 与 NLP';
-      case 'devops_core':
-        return '云原生 / DevOps';
-      case 'data_core':
-        return '数据工程';
-      case 'security_core':
-        return '安全';
-      case 'product_core':
-        return '产品 / 业务';
-      default:
-        return id;
     }
   }
 

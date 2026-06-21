@@ -12,7 +12,9 @@ class StatsScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // Watch the review state map so this rebuilds on every answer.
     ref.watch(reviewStateProvider);
-    final stats = ref.read(reviewStateProvider.notifier).stats();
+    final stats = ref
+        .read(reviewStateProvider.notifier)
+        .stats(catalog: ref.read(qwertyCatalogProvider));
 
     return SafeArea(
       child: SingleChildScrollView(

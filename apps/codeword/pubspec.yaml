@@ -1,8 +1,10 @@
 name: codeword
 description: "无登录极客背单词 · 程序员 / AI 行业向"
 # The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
+# pub.dev using the `flutter pub publish` command.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+resolution: workspace
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -58,9 +60,11 @@ dependencies:
   # OpenAI-compatible LLM client (BYOK — user provides base url / key / model)
   http: ^1.2.2
 
-  # Local audio playback for bundled word pronunciations
+  # Local audio playback for cached word pronunciations
   audioplayers: ^6.1.0
-  flutter_tts: ^4.2.5
+
+  # sha1 hashing for the tts_cache file keys
+  crypto: ^3.0.3
 
 dev_dependencies:
   flutter_test:
@@ -86,7 +90,6 @@ flutter:
 
   assets:
     - assets/vocab/
-    - assets/audio/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

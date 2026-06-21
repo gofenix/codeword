@@ -1,0 +1,3532 @@
+[
+  {
+    "id": "qwerty_eflevel2_00001",
+    "word": "sing",
+    "phonetic": "sɪŋ",
+    "translation": "唱歌",
+    "translations": [
+      "唱歌"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00002",
+    "word": "check",
+    "phonetic": "tʃek",
+    "translation": "检查，核对",
+    "translations": [
+      "检查，核对"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00003",
+    "word": "evening",
+    "phonetic": "ˈiːvnɪŋ",
+    "translation": "晚上",
+    "translations": [
+      "晚上"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00004",
+    "word": "excuse me",
+    "phonetic": "",
+    "translation": "used when you did not hear what sb said and you want them to repeat it",
+    "translations": [
+      "used when you did not hear what sb said and you want them to repeat it"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00005",
+    "word": "late",
+    "phonetic": "leɪt",
+    "translation": "晚的, 迟到",
+    "translations": [
+      "晚的, 迟到"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00006",
+    "word": "meeting",
+    "phonetic": "ˈmiːtɪŋ",
+    "translation": "会议, 集会, 会",
+    "translations": [
+      "会议, 集会, 会"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00007",
+    "word": "midnight",
+    "phonetic": "ˈmɪdnaɪt",
+    "translation": "半夜十二点钟, 午夜, 子夜",
+    "translations": [
+      "半夜十二点钟, 午夜, 子夜"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00008",
+    "word": "morning",
+    "phonetic": "ˈmɔːrnɪŋ",
+    "translation": "早晨, 上午",
+    "translations": [
+      "早晨, 上午"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00009",
+    "word": "noon",
+    "phonetic": "nuːn",
+    "translation": "正午, 中午",
+    "translations": [
+      "正午, 中午"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00010",
+    "word": "o'clock",
+    "phonetic": "əˈklɑːk",
+    "translation": ". 点钟",
+    "translations": [
+      ". 点钟"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00011",
+    "word": "p.m.",
+    "phonetic": "ˌpiːˈem",
+    "translation": "下午",
+    "translations": [
+      "下午"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00012",
+    "word": "study",
+    "phonetic": "ˈstʌdi",
+    "translation": "学习",
+    "translations": [
+      "学习"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00013",
+    "word": "time",
+    "phonetic": "taɪm",
+    "translation": "时间",
+    "translations": [
+      "时间"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00014",
+    "word": "work",
+    "phonetic": "wɜːrk",
+    "translation": "工作",
+    "translations": [
+      "工作"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00015",
+    "word": "internet",
+    "phonetic": "ˈɪntərnet",
+    "translation": "因特网",
+    "translations": [
+      "因特网"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00016",
+    "word": "ride",
+    "phonetic": "raɪd",
+    "translation": "骑",
+    "translations": [
+      "骑"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00017",
+    "word": "sleep",
+    "phonetic": "sliːp",
+    "translation": "睡觉",
+    "translations": [
+      "睡觉"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00018",
+    "word": "surf",
+    "phonetic": "sɜːrf",
+    "translation": "作冲浪运动",
+    "translations": [
+      "作冲浪运动"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00019",
+    "word": "tennis",
+    "phonetic": "ˈtenɪs",
+    "translation": "网球",
+    "translations": [
+      "网球"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00020",
+    "word": "Thursday",
+    "phonetic": "ˈθɜːrzdeɪ",
+    "translation": "星期四, 周四",
+    "translations": [
+      "星期四, 周四"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00021",
+    "word": "weekend",
+    "phonetic": "ˈwiːkend",
+    "translation": "周末",
+    "translations": [
+      "周末"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00022",
+    "word": "coffee break",
+    "phonetic": "",
+    "translation": "工间喝咖啡的休息时间",
+    "translations": [
+      "工间喝咖啡的休息时间"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00023",
+    "word": "company",
+    "phonetic": "ˈkʌmpəni",
+    "translation": "公司, 企业",
+    "translations": [
+      "公司, 企业"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00024",
+    "word": "read",
+    "phonetic": "riːd",
+    "translation": "阅读，读书（能力）",
+    "translations": [
+      "阅读，读书（能力）"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00025",
+    "word": "April",
+    "phonetic": "ˈeɪprəl",
+    "translation": "四月",
+    "translations": [
+      "四月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00026",
+    "word": "August",
+    "phonetic": "ˈɔːɡəst",
+    "translation": "八月",
+    "translations": [
+      "八月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00027",
+    "word": "birthday",
+    "phonetic": "ˈbɜːrθdeɪ",
+    "translation": "生日",
+    "translations": [
+      "生日"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00028",
+    "word": "computer game",
+    "phonetic": "",
+    "translation": "电脑玩具,电脑游戏",
+    "translations": [
+      "电脑玩具,电脑游戏"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00029",
+    "word": "dance",
+    "phonetic": "dæns",
+    "translation": "跳舞, 舞蹈",
+    "translations": [
+      "跳舞, 舞蹈"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00030",
+    "word": "December",
+    "phonetic": "dɪˈsembər",
+    "translation": "十二月",
+    "translations": [
+      "十二月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00031",
+    "word": "February",
+    "phonetic": "ˈfebrueri",
+    "translation": "二月",
+    "translations": [
+      "二月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00032",
+    "word": "go out",
+    "phonetic": "",
+    "translation": "外出",
+    "translations": [
+      "外出"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00033",
+    "word": "January",
+    "phonetic": "ˈdʒænjueri",
+    "translation": "一月份",
+    "translations": [
+      "一月份"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00034",
+    "word": "July",
+    "phonetic": "dʒuˈlaɪ",
+    "translation": "七月份",
+    "translations": [
+      "七月份"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00035",
+    "word": "June",
+    "phonetic": "dʒuːn",
+    "translation": "六月份",
+    "translations": [
+      "六月份"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00036",
+    "word": "March",
+    "phonetic": "mɑːrtʃ",
+    "translation": "三月",
+    "translations": [
+      "三月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00037",
+    "word": "May",
+    "phonetic": "meɪ",
+    "translation": "五月",
+    "translations": [
+      "五月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00038",
+    "word": "movie",
+    "phonetic": "ˈmuːvi",
+    "translation": "电影, 影片",
+    "translations": [
+      "电影, 影片"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00039",
+    "word": "November",
+    "phonetic": "noʊˈvembər",
+    "translation": "十一月份",
+    "translations": [
+      "十一月份"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00040",
+    "word": "October",
+    "phonetic": "ɑːkˈtoʊbər",
+    "translation": "十月",
+    "translations": [
+      "十月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00041",
+    "word": "September",
+    "phonetic": "sepˈtembər",
+    "translation": "九月",
+    "translations": [
+      "九月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00042",
+    "word": "favorite",
+    "phonetic": "ˈfeɪvərɪt",
+    "translation": "偏爱的人或事物",
+    "translations": [
+      "偏爱的人或事物"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00043",
+    "word": "hospital",
+    "phonetic": "ˈhɑːspɪtl",
+    "translation": "医院",
+    "translations": [
+      "医院"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00044",
+    "word": "housewife",
+    "phonetic": "ˈhaʊswaɪf",
+    "translation": "家庭主妇",
+    "translations": [
+      "家庭主妇"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00045",
+    "word": "in the morning",
+    "phonetic": "",
+    "translation": "during the morning of the next day; tomorrow morning",
+    "translations": [
+      "during the morning of the next day; tomorrow morning"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00046",
+    "word": "Monday",
+    "phonetic": "ˈmʌndeɪ",
+    "translation": "星期一",
+    "translations": [
+      "星期一"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00047",
+    "word": "school",
+    "phonetic": "skuːl",
+    "translation": "学校",
+    "translations": [
+      "学校"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00048",
+    "word": "Sunday",
+    "phonetic": "ˈsʌndeɪ",
+    "translation": "星期日, 周日, 礼拜天",
+    "translations": [
+      "星期日, 周日, 礼拜天"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00049",
+    "word": "police officer",
+    "phonetic": "",
+    "translation": "警官",
+    "translations": [
+      "警官"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00050",
+    "word": "police station",
+    "phonetic": "pə'lis 'steʃən",
+    "translation": "派出所,警察局",
+    "translations": [
+      "派出所,警察局"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00051",
+    "word": "Saturday",
+    "phonetic": "ˈsætərdeɪ",
+    "translation": "星期六, 周六",
+    "translations": [
+      "星期六, 周六"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00052",
+    "word": "Tuesday",
+    "phonetic": "ˈtuːzdeɪ",
+    "translation": "星期二, 周二",
+    "translations": [
+      "星期二, 周二"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00053",
+    "word": "Wednesday",
+    "phonetic": "ˈwenzdeɪ",
+    "translation": "星期三, 周三",
+    "translations": [
+      "星期三, 周三"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00054",
+    "word": "Friday",
+    "phonetic": "ˈfraɪdeɪ",
+    "translation": "星期五",
+    "translations": [
+      "星期五"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00055",
+    "word": "get up",
+    "phonetic": "",
+    "translation": "站起； 起来",
+    "translations": [
+      "站起； 起来"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00056",
+    "word": "a.m.",
+    "phonetic": "ˌeɪˈem",
+    "translation": "午前, 上午",
+    "translations": [
+      "午前, 上午"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00057",
+    "word": "afternoon",
+    "phonetic": "ˌæftərˈnuːn",
+    "translation": "下午",
+    "translations": [
+      "下午"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00058",
+    "word": "apartment",
+    "phonetic": "əˈpɑːrtmənt",
+    "translation": "公寓",
+    "translations": [
+      "公寓"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00059",
+    "word": "aunt",
+    "phonetic": "ænt",
+    "translation": "阿姨, 婶婶",
+    "translations": [
+      "阿姨, 婶婶"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00060",
+    "word": "birthday",
+    "phonetic": "ˈbɜːrθdeɪ",
+    "translation": "生日",
+    "translations": [
+      "生日"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00061",
+    "word": "brother",
+    "phonetic": "ˈbrʌðər",
+    "translation": "兄弟",
+    "translations": [
+      "兄弟"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00062",
+    "word": "celebrate",
+    "phonetic": "ˈselɪbreɪt",
+    "translation": "庆祝, 祝贺",
+    "translations": [
+      "庆祝, 祝贺"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00063",
+    "word": "chocolate",
+    "phonetic": "ˈtʃɑːklət",
+    "translation": "巧克力",
+    "translations": [
+      "巧克力"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00064",
+    "word": "dance",
+    "phonetic": "dæns",
+    "translation": "跳舞, 舞蹈",
+    "translations": [
+      "跳舞, 舞蹈"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00065",
+    "word": "invite",
+    "phonetic": "ɪnˈvaɪt",
+    "translation": "邀请, 请求",
+    "translations": [
+      "邀请, 请求"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00066",
+    "word": "March",
+    "phonetic": "mɑːrtʃ",
+    "translation": "三月",
+    "translations": [
+      "三月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00067",
+    "word": "May",
+    "phonetic": "meɪ",
+    "translation": "五月",
+    "translations": [
+      "五月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00068",
+    "word": "never",
+    "phonetic": "ˈnevər",
+    "translation": "从未, 永不, 决不",
+    "translations": [
+      "从未, 永不, 决不"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00069",
+    "word": "November",
+    "phonetic": "noʊˈvembər",
+    "translation": "十一月份",
+    "translations": [
+      "十一月份"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00070",
+    "word": "October",
+    "phonetic": "ɑːkˈtoʊbər",
+    "translation": "十月",
+    "translations": [
+      "十月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00071",
+    "word": "present",
+    "phonetic": "ˈpreznt",
+    "translation": "礼物",
+    "translations": [
+      "礼物"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00072",
+    "word": "September",
+    "phonetic": "sepˈtembər",
+    "translation": "九月",
+    "translations": [
+      "九月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00073",
+    "word": "sing",
+    "phonetic": "sɪŋ",
+    "translation": "唱歌",
+    "translations": [
+      "唱歌"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00074",
+    "word": "always",
+    "phonetic": "ˈɔːlweɪz",
+    "translation": "总是, 永远",
+    "translations": [
+      "总是, 永远"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00075",
+    "word": "April",
+    "phonetic": "ˈeɪprəl",
+    "translation": "四月",
+    "translations": [
+      "四月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00076",
+    "word": "August",
+    "phonetic": "ˈɔːɡəst",
+    "translation": "八月",
+    "translations": [
+      "八月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00077",
+    "word": "book",
+    "phonetic": "bʊk",
+    "translation": "书, 书籍",
+    "translations": [
+      "书, 书籍"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00078",
+    "word": "camera",
+    "phonetic": "ˈkæmərə",
+    "translation": "照相机",
+    "translations": [
+      "照相机"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00079",
+    "word": "card",
+    "phonetic": "kɑːrd",
+    "translation": "明信片",
+    "translations": [
+      "明信片"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00080",
+    "word": "December",
+    "phonetic": "dɪˈsembər",
+    "translation": "十二月",
+    "translations": [
+      "十二月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00081",
+    "word": "February",
+    "phonetic": "ˈfebrueri",
+    "translation": "二月",
+    "translations": [
+      "二月"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00082",
+    "word": "go out",
+    "phonetic": "",
+    "translation": "外出",
+    "translations": [
+      "外出"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00083",
+    "word": "January",
+    "phonetic": "ˈdʒænjueri",
+    "translation": "一月份",
+    "translations": [
+      "一月份"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00084",
+    "word": "July",
+    "phonetic": "dʒuˈlaɪ",
+    "translation": "七月份",
+    "translations": [
+      "七月份"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00085",
+    "word": "June",
+    "phonetic": "dʒuːn",
+    "translation": "六月份",
+    "translations": [
+      "六月份"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00086",
+    "word": "party",
+    "phonetic": "ˈpɑːrti",
+    "translation": "政党",
+    "translations": [
+      "政党"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00087",
+    "word": "perfume",
+    "phonetic": "pərˈfjuːm",
+    "translation": "香水",
+    "translations": [
+      "香水"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00088",
+    "word": "sister",
+    "phonetic": "ˈsɪstər",
+    "translation": "姐妹",
+    "translations": [
+      "姐妹"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00089",
+    "word": "uncle",
+    "phonetic": "ˈʌŋkl",
+    "translation": "伯父, 姨丈, 叔父, 舅舅",
+    "translations": [
+      "伯父, 姨丈, 叔父, 舅舅"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00090",
+    "word": "usually",
+    "phonetic": "ˈjuːʒuəli",
+    "translation": "经常, 通常",
+    "translations": [
+      "经常, 通常"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00091",
+    "word": "cloud",
+    "phonetic": "klaʊd",
+    "translation": "云",
+    "translations": [
+      "云"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00092",
+    "word": "cloudy",
+    "phonetic": "ˈklaʊdi",
+    "translation": "多云的,阴天的,愁容满面的",
+    "translations": [
+      "多云的,阴天的,愁容满面的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00093",
+    "word": "cold",
+    "phonetic": "koʊld",
+    "translation": "寒冷的, 冷的",
+    "translations": [
+      "寒冷的, 冷的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00094",
+    "word": "cool",
+    "phonetic": "kuːl",
+    "translation": "清凉的, 凉爽的, 凉快的",
+    "translations": [
+      "清凉的, 凉爽的, 凉快的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00095",
+    "word": "degree",
+    "phonetic": "dɪˈɡriː",
+    "translation": "度",
+    "translations": [
+      "度"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00096",
+    "word": "fog",
+    "phonetic": "fɔɡ",
+    "translation": "雾",
+    "translations": [
+      "雾"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00097",
+    "word": "foggy",
+    "phonetic": "ˈfɔːɡi",
+    "translation": "模糊的，有雾的",
+    "translations": [
+      "模糊的，有雾的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00098",
+    "word": "hot",
+    "phonetic": "hɑːt",
+    "translation": "热的",
+    "translations": [
+      "热的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00099",
+    "word": "minus",
+    "phonetic": "ˈmaɪnəs",
+    "translation": "减,减去",
+    "translations": [
+      "减,减去"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00100",
+    "word": "rain",
+    "phonetic": "reɪn",
+    "translation": "雨",
+    "translations": [
+      "雨"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00101",
+    "word": "rainy",
+    "phonetic": "ˈreɪni",
+    "translation": "下雨的, 含雨的, 带雨的, 多雨的",
+    "translations": [
+      "下雨的, 含雨的, 带雨的, 多雨的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00102",
+    "word": "snow",
+    "phonetic": "snoʊ",
+    "translation": "雪",
+    "translations": [
+      "雪"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00103",
+    "word": "snowy",
+    "phonetic": "ˈsnoʊi",
+    "translation": "被大雪覆盖的",
+    "translations": [
+      "被大雪覆盖的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00104",
+    "word": "sun",
+    "phonetic": "sʌn",
+    "translation": "太阳",
+    "translations": [
+      "太阳"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00105",
+    "word": "sunny",
+    "phonetic": "ˈsʌni",
+    "translation": "阳光充足的, 睛朗的, 明媚的",
+    "translations": [
+      "阳光充足的, 睛朗的, 明媚的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00106",
+    "word": "warm",
+    "phonetic": "wɔːrm",
+    "translation": "暖和的, 温暖的, 暖的",
+    "translations": [
+      "暖和的, 温暖的, 暖的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00107",
+    "word": "weather",
+    "phonetic": "ˈweðər",
+    "translation": "天气, 气候, 气象",
+    "translations": [
+      "天气, 气候, 气象"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00108",
+    "word": "wind",
+    "phonetic": "wɪnd",
+    "translation": "风, 气流",
+    "translations": [
+      "风, 气流"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00109",
+    "word": "windy",
+    "phonetic": "ˈwɪndi",
+    "translation": "多风的, 坏天气的, 风强的",
+    "translations": [
+      "多风的, 坏天气的, 风强的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00110",
+    "word": "dislike",
+    "phonetic": "dɪsˈlaɪk",
+    "translation": "不喜欢, 讨厌",
+    "translations": [
+      "不喜欢, 讨厌"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00111",
+    "word": "fall",
+    "phonetic": "fɔːl",
+    "translation": "秋天, 秋季",
+    "translations": [
+      "秋天, 秋季"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00112",
+    "word": "hate",
+    "phonetic": "heɪt",
+    "translation": "讨厌",
+    "translations": [
+      "讨厌"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00113",
+    "word": "spring",
+    "phonetic": "sprɪŋ",
+    "translation": "春天, 春季",
+    "translations": [
+      "春天, 春季"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00114",
+    "word": "summer",
+    "phonetic": "ˈsʌmər",
+    "translation": "夏天, 夏季",
+    "translations": [
+      "夏天, 夏季"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00115",
+    "word": "winter",
+    "phonetic": "ˈwɪntər",
+    "translation": "冬季, 冬天",
+    "translations": [
+      "冬季, 冬天"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00116",
+    "word": "eat out",
+    "phonetic": "",
+    "translation": "在饭馆等处吃饭（不在家中吃）",
+    "translations": [
+      "在饭馆等处吃饭（不在家中吃）"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00117",
+    "word": "TV",
+    "phonetic": "ˌtiːˈviː",
+    "translation": "电视机, 电视",
+    "translations": [
+      "电视机, 电视"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00118",
+    "word": "watch",
+    "phonetic": "wɑːtʃ",
+    "translation": "观看, 注视",
+    "translations": [
+      "观看, 注视"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00119",
+    "word": "holiday",
+    "phonetic": "ˈhɑːlədeɪ",
+    "translation": "假期",
+    "translations": [
+      "假期"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00120",
+    "word": "should",
+    "phonetic": "ʃəd",
+    "translation": "应该, 应当",
+    "translations": [
+      "应该, 应当"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00121",
+    "word": "vacation",
+    "phonetic": "vəˈkeɪʃn",
+    "translation": "假期, 休假",
+    "translations": [
+      "假期, 休假"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00122",
+    "word": "sometimes",
+    "phonetic": "ˈsʌmtaɪmz",
+    "translation": "有时, 往往, 时常",
+    "translations": [
+      "有时, 往往, 时常"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00123",
+    "word": "badminton",
+    "phonetic": "ˈbædmɪntən",
+    "translation": "羽毛球",
+    "translations": [
+      "羽毛球"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00124",
+    "word": "baseball",
+    "phonetic": "ˈbeɪsbɔːl",
+    "translation": "棒球",
+    "translations": [
+      "棒球"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00125",
+    "word": "cooking",
+    "phonetic": "ˈkʊkɪŋ",
+    "translation": "烹调",
+    "translations": [
+      "烹调"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00126",
+    "word": "dancing",
+    "phonetic": "ˈdænsɪŋ",
+    "translation": "跳舞",
+    "translations": [
+      "跳舞"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00127",
+    "word": "enjoy",
+    "phonetic": "ɪnˈdʒɔɪ",
+    "translation": "喜欢, 享受",
+    "translations": [
+      "喜欢, 享受"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00128",
+    "word": "football",
+    "phonetic": "ˈfʊtbɔːl",
+    "translation": "足球",
+    "translations": [
+      "足球"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00129",
+    "word": "ice hockey",
+    "phonetic": "",
+    "translation": "冰球",
+    "translations": [
+      "冰球"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00130",
+    "word": "karate",
+    "phonetic": "kəˈrɑːti",
+    "translation": "空手道",
+    "translations": [
+      "空手道"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00131",
+    "word": "painting",
+    "phonetic": "ˈpeɪntɪŋ",
+    "translation": "油画",
+    "translations": [
+      "油画"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00132",
+    "word": "running",
+    "phonetic": "ˈrʌnɪŋ",
+    "translation": "赛跑",
+    "translations": [
+      "赛跑"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00133",
+    "word": "soccer",
+    "phonetic": "ˈsɑːkər",
+    "translation": "足球",
+    "translations": [
+      "足球"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00134",
+    "word": "surfing",
+    "phonetic": "ˈsɜːrfɪŋ",
+    "translation": "冲浪",
+    "translations": [
+      "冲浪"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00135",
+    "word": "swimming",
+    "phonetic": "ˈswɪmɪŋ",
+    "translation": "游泳",
+    "translations": [
+      "游泳"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00136",
+    "word": "table tennis",
+    "phonetic": "",
+    "translation": "乒乓球",
+    "translations": [
+      "乒乓球"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00137",
+    "word": "volleyball",
+    "phonetic": "ˈvɑːlibɔːl",
+    "translation": "排球",
+    "translations": [
+      "排球"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00138",
+    "word": "yoga",
+    "phonetic": "ˈjoʊɡə",
+    "translation": "瑜伽",
+    "translations": [
+      "瑜伽"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00139",
+    "word": "falling",
+    "phonetic": "",
+    "translation": "掉落, 落下",
+    "translations": [
+      "掉落, 落下"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00140",
+    "word": "rise",
+    "phonetic": "raɪz",
+    "translation": "上升",
+    "translations": [
+      "上升"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00141",
+    "word": "few",
+    "phonetic": "fjuː",
+    "translation": "少数的",
+    "translations": [
+      "少数的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00142",
+    "word": "hiking",
+    "phonetic": "ˈhaɪkɪŋ",
+    "translation": "徒步旅行",
+    "translations": [
+      "徒步旅行"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00143",
+    "word": "many",
+    "phonetic": "ˈmeni",
+    "translation": "许多",
+    "translations": [
+      "许多"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00144",
+    "word": "most",
+    "phonetic": "moʊst",
+    "translation": "最大量, 最多数, 最高额",
+    "translations": [
+      "最大量, 最多数, 最高额"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00145",
+    "word": "picnic",
+    "phonetic": "ˈpɪknɪk",
+    "translation": "野餐",
+    "translations": [
+      "野餐"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00146",
+    "word": "season",
+    "phonetic": "ˈsiːzn",
+    "translation": "季节",
+    "translations": [
+      "季节"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00147",
+    "word": "summer",
+    "phonetic": "ˈsʌmər",
+    "translation": "夏天, 夏季",
+    "translations": [
+      "夏天, 夏季"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00148",
+    "word": "wear",
+    "phonetic": "wer",
+    "translation": "穿, 穿戴, 佩戴",
+    "translations": [
+      "穿, 穿戴, 佩戴"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00149",
+    "word": "where",
+    "phonetic": "wer",
+    "translation": "在哪里, 到哪里, 在 位置",
+    "translations": [
+      "在哪里, 到哪里, 在 位置"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00150",
+    "word": "cool",
+    "phonetic": "kuːl",
+    "translation": "清凉的, 凉爽的, 凉快的",
+    "translations": [
+      "清凉的, 凉爽的, 凉快的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00151",
+    "word": "eat out",
+    "phonetic": "",
+    "translation": "在饭馆等处吃饭（不在家中吃）",
+    "translations": [
+      "在饭馆等处吃饭（不在家中吃）"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00152",
+    "word": "hat",
+    "phonetic": "hæt",
+    "translation": "帽子",
+    "translations": [
+      "帽子"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00153",
+    "word": "hot",
+    "phonetic": "hɑːt",
+    "translation": "热的",
+    "translations": [
+      "热的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00154",
+    "word": "like",
+    "phonetic": "laɪk",
+    "translation": "像, 如",
+    "translations": [
+      "像, 如"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00155",
+    "word": "rain",
+    "phonetic": "reɪn",
+    "translation": "雨",
+    "translations": [
+      "雨"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00156",
+    "word": "shorts",
+    "phonetic": "ʃɔːrts",
+    "translation": "短裤",
+    "translations": [
+      "短裤"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00157",
+    "word": "skiing",
+    "phonetic": "ˈskiːɪŋ",
+    "translation": "滑雪",
+    "translations": [
+      "滑雪"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00158",
+    "word": "snow",
+    "phonetic": "snoʊ",
+    "translation": "雪",
+    "translations": [
+      "雪"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00159",
+    "word": "spring",
+    "phonetic": "sprɪŋ",
+    "translation": "春天, 春季",
+    "translations": [
+      "春天, 春季"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00160",
+    "word": "sun",
+    "phonetic": "sʌn",
+    "translation": "太阳",
+    "translations": [
+      "太阳"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00161",
+    "word": "warm",
+    "phonetic": "wɔːrm",
+    "translation": "暖和的, 温暖的, 暖的",
+    "translations": [
+      "暖和的, 温暖的, 暖的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00162",
+    "word": "what",
+    "phonetic": "wɑːt",
+    "translation": "什么, 怎么",
+    "translations": [
+      "什么, 怎么"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00163",
+    "word": "why",
+    "phonetic": "waɪ",
+    "translation": "为什么, 为何",
+    "translations": [
+      "为什么, 为何"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00164",
+    "word": "wind",
+    "phonetic": "wɪnd",
+    "translation": "风, 气流",
+    "translations": [
+      "风, 气流"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00165",
+    "word": "winter",
+    "phonetic": "ˈwɪntər",
+    "translation": "冬季, 冬天",
+    "translations": [
+      "冬季, 冬天"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00166",
+    "word": "chess",
+    "phonetic": "tʃes",
+    "translation": "国际象棋",
+    "translations": [
+      "国际象棋"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00167",
+    "word": "gymnastics",
+    "phonetic": "dʒɪmˈnæstɪks",
+    "translation": "体操",
+    "translations": [
+      "体操"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00168",
+    "word": "autumn",
+    "phonetic": "ˈɔːtəm",
+    "translation": "秋天",
+    "translations": [
+      "秋天"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00169",
+    "word": "because",
+    "phonetic": "bɪˈkɔːz",
+    "translation": "因为, 由于",
+    "translations": [
+      "因为, 由于"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00170",
+    "word": "cloud",
+    "phonetic": "klaʊd",
+    "translation": "云",
+    "translations": [
+      "云"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00171",
+    "word": "cold",
+    "phonetic": "koʊld",
+    "translation": "寒冷的, 冷的",
+    "translations": [
+      "寒冷的, 冷的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00172",
+    "word": "degree",
+    "phonetic": "dɪˈɡriː",
+    "translation": "度",
+    "translations": [
+      "度"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00173",
+    "word": "glove",
+    "phonetic": "ɡlʌv",
+    "translation": "手套",
+    "translations": [
+      "手套"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00174",
+    "word": "scarf",
+    "phonetic": "skɑːrf",
+    "translation": "围巾; 头巾; 披肩",
+    "translations": [
+      "围巾; 头巾; 披肩"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00175",
+    "word": "bored",
+    "phonetic": "bɔːrd",
+    "translation": "烦人的, 不耐烦的",
+    "translations": [
+      "烦人的, 不耐烦的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00176",
+    "word": "cigarette",
+    "phonetic": "ˈsɪɡəret",
+    "translation": "香烟",
+    "translations": [
+      "香烟"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00177",
+    "word": "exercise",
+    "phonetic": "ˈeksərsaɪz",
+    "translation": "锻炼",
+    "translations": [
+      "锻炼"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00178",
+    "word": "feel",
+    "phonetic": "fiːl",
+    "translation": "感觉",
+    "translations": [
+      "感觉"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00179",
+    "word": "flu",
+    "phonetic": "fluː",
+    "translation": "流感",
+    "translations": [
+      "流感"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00180",
+    "word": "healthy",
+    "phonetic": "ˈhelθi",
+    "translation": "健康的",
+    "translations": [
+      "健康的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00181",
+    "word": "relax",
+    "phonetic": "rɪˈlæks",
+    "translation": "放松, 休息",
+    "translations": [
+      "放松, 休息"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00182",
+    "word": "sick",
+    "phonetic": "sɪk",
+    "translation": "病的",
+    "translations": [
+      "病的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00183",
+    "word": "smell",
+    "phonetic": "smel",
+    "translation": "闻起来",
+    "translations": [
+      "闻起来"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00184",
+    "word": "smoke",
+    "phonetic": "smoʊk",
+    "translation": "抽烟, 吸烟",
+    "translations": [
+      "抽烟, 吸烟"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00185",
+    "word": "sound",
+    "phonetic": "saʊnd",
+    "translation": "听起来",
+    "translations": [
+      "听起来"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00186",
+    "word": "taste",
+    "phonetic": "teɪst",
+    "translation": "尝起来",
+    "translations": [
+      "尝起来"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00187",
+    "word": "about",
+    "phonetic": "əˈbaʊt",
+    "translation": "大约, 左右",
+    "translations": [
+      "大约, 左右"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00188",
+    "word": "day",
+    "phonetic": "deɪ",
+    "translation": "一天, 一日",
+    "translations": [
+      "一天, 一日"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00189",
+    "word": "every",
+    "phonetic": "ˈevri",
+    "translation": "每一个",
+    "translations": [
+      "每一个"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00190",
+    "word": "month",
+    "phonetic": "mʌnθ",
+    "translation": "月份",
+    "translations": [
+      "月份"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00191",
+    "word": "once",
+    "phonetic": "wʌns",
+    "translation": "一次, 一回",
+    "translations": [
+      "一次, 一回"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00192",
+    "word": "shape",
+    "phonetic": "ʃeɪp",
+    "translation": "形状",
+    "translations": [
+      "形状"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00193",
+    "word": "time",
+    "phonetic": "taɪm",
+    "translation": "次",
+    "translations": [
+      "次"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00194",
+    "word": "twice",
+    "phonetic": "twaɪs",
+    "translation": "2倍",
+    "translations": [
+      "2倍"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00195",
+    "word": "week",
+    "phonetic": "wiːk",
+    "translation": "周, 星期",
+    "translations": [
+      "周, 星期"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00196",
+    "word": "year",
+    "phonetic": "jɪr",
+    "translation": "年, 一年",
+    "translations": [
+      "年, 一年"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00197",
+    "word": "aspirin",
+    "phonetic": "ˈæsprɪn",
+    "translation": "阿司匹林",
+    "translations": [
+      "阿司匹林"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00198",
+    "word": "cough",
+    "phonetic": "kɔːf",
+    "translation": "咳嗽",
+    "translations": [
+      "咳嗽"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00199",
+    "word": "drink",
+    "phonetic": "drɪŋk",
+    "translation": "喝",
+    "translations": [
+      "喝"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00200",
+    "word": "fever",
+    "phonetic": "ˈfiːvər",
+    "translation": "发烧",
+    "translations": [
+      "发烧"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00201",
+    "word": "get",
+    "phonetic": "ɡet",
+    "translation": "得到",
+    "translations": [
+      "得到"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00202",
+    "word": "headache",
+    "phonetic": "ˈhedeɪk",
+    "translation": "头痛, 头疼",
+    "translations": [
+      "头痛, 头疼"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00203",
+    "word": "hurt",
+    "phonetic": "hɜːrt",
+    "translation": "受伤",
+    "translations": [
+      "受伤"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00204",
+    "word": "liquid",
+    "phonetic": "ˈlɪkwɪd",
+    "translation": "液体",
+    "translations": [
+      "液体"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00205",
+    "word": "sore",
+    "phonetic": "sɔːr",
+    "translation": "疼痛的",
+    "translations": [
+      "疼痛的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00206",
+    "word": "symptom",
+    "phonetic": "ˈsɪmptəm",
+    "translation": "征候,征兆",
+    "translations": [
+      "征候,征兆"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00207",
+    "word": "take",
+    "phonetic": "teɪk",
+    "translation": "放",
+    "translations": [
+      "放"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00208",
+    "word": "tired",
+    "phonetic": "ˈtaɪərd",
+    "translation": "疲劳的",
+    "translations": [
+      "疲劳的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00209",
+    "word": "wrong",
+    "phonetic": "rɔːŋ",
+    "translation": "有问题的, 出错的",
+    "translations": [
+      "有问题的, 出错的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00210",
+    "word": "no problem",
+    "phonetic": "",
+    "translation": "used after sb has thanked you or said they are sorry for sth",
+    "translations": [
+      "used after sb has thanked you or said they are sorry for sth"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00211",
+    "word": "belt",
+    "phonetic": "belt",
+    "translation": "腰带, 皮带",
+    "translations": [
+      "腰带, 皮带"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00212",
+    "word": "big",
+    "phonetic": "bɪɡ",
+    "translation": "(体积)大, (量)大, (程度)深",
+    "translations": [
+      "(体积)大, (量)大, (程度)深"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00213",
+    "word": "expensive",
+    "phonetic": "ɪkˈspensɪv",
+    "translation": "贵的",
+    "translations": [
+      "贵的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00214",
+    "word": "pound",
+    "phonetic": "paʊnd",
+    "translation": "英镑",
+    "translations": [
+      "英镑"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00215",
+    "word": "return",
+    "phonetic": "rɪˈtɜːrn",
+    "translation": "退还, 返还, 归还",
+    "translations": [
+      "退还, 返还, 归还"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00216",
+    "word": "ruble",
+    "phonetic": "",
+    "translation": "卢布(俄罗斯货币单位)",
+    "translations": [
+      "卢布(俄罗斯货币单位)"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00217",
+    "word": "UK",
+    "phonetic": "ˌjuːˈkeɪ",
+    "translation": "英国",
+    "translations": [
+      "英国"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00218",
+    "word": "watch",
+    "phonetic": "wɑːtʃ",
+    "translation": "手表",
+    "translations": [
+      "手表"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00219",
+    "word": "boot",
+    "phonetic": "buːt",
+    "translation": "靴, 长靴",
+    "translations": [
+      "靴, 长靴"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00220",
+    "word": "euro",
+    "phonetic": "ˈjʊroʊ",
+    "translation": "欧元",
+    "translations": [
+      "欧元"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00221",
+    "word": "on sale",
+    "phonetic": "",
+    "translation": "being offered at a reduced price",
+    "translations": [
+      "being offered at a reduced price"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00222",
+    "word": "peso",
+    "phonetic": "ˈpeɪsoʊ",
+    "translation": "比索(拉丁美洲国家和菲律宾的货币单位)",
+    "translations": [
+      "比索(拉丁美洲国家和菲律宾的货币单位)"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00223",
+    "word": "receipt",
+    "phonetic": "rɪˈsiːt",
+    "translation": "收据",
+    "translations": [
+      "收据"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00224",
+    "word": "small",
+    "phonetic": "smɔːl",
+    "translation": "(尺寸等)小的",
+    "translations": [
+      "(尺寸等)小的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00225",
+    "word": "sneaker",
+    "phonetic": "ˈsniːkər",
+    "translation": "运动鞋",
+    "translations": [
+      "运动鞋"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00226",
+    "word": "sunglasses",
+    "phonetic": "ˈsʌnɡlæsɪz",
+    "translation": "墨镜,太阳镜",
+    "translations": [
+      "墨镜,太阳镜"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00227",
+    "word": "US",
+    "phonetic": "ˌjuːˈes",
+    "translation": "美国,美国的",
+    "translations": [
+      "美国,美国的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00228",
+    "word": "wallet",
+    "phonetic": "ˈwɑːlɪt",
+    "translation": "钱包, 钱夹",
+    "translations": [
+      "钱包, 钱夹"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00229",
+    "word": "yen",
+    "phonetic": "jen",
+    "translation": "圆(日本的货币单位)",
+    "translations": [
+      "圆(日本的货币单位)"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00230",
+    "word": "bank",
+    "phonetic": "bæŋk",
+    "translation": "银行",
+    "translations": [
+      "银行"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00231",
+    "word": "hospital",
+    "phonetic": "ˈhɑːspɪtl",
+    "translation": "医院",
+    "translations": [
+      "医院"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00232",
+    "word": "nope",
+    "phonetic": "noʊp",
+    "translation": "不,不是,没有",
+    "translations": [
+      "不,不是,没有"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00233",
+    "word": "airport",
+    "phonetic": "ˈerpɔːrt",
+    "translation": "机场",
+    "translations": [
+      "机场"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00234",
+    "word": "between",
+    "phonetic": "bɪˈtwiːn",
+    "translation": "在......中间, 在 之间",
+    "translations": [
+      "在......中间, 在 之间"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00235",
+    "word": "bike",
+    "phonetic": "baɪk",
+    "translation": "自行车, 单车",
+    "translations": [
+      "自行车, 单车"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00236",
+    "word": "bus",
+    "phonetic": "bʌs",
+    "translation": "公共汽车",
+    "translations": [
+      "公共汽车"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00237",
+    "word": "bus station",
+    "phonetic": "",
+    "translation": "公交站,巴士站",
+    "translations": [
+      "公交站,巴士站"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00238",
+    "word": "OK",
+    "phonetic": "oʊˈkeɪ",
+    "translation": "好, 行",
+    "translations": [
+      "好, 行"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00239",
+    "word": "pool",
+    "phonetic": "puːl",
+    "translation": "游泳池",
+    "translations": [
+      "游泳池"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00240",
+    "word": "so",
+    "phonetic": "soʊ",
+    "translation": "这么, 那么, 就那样, 像这样, 多么, 非常, 如此",
+    "translations": [
+      "这么, 那么, 就那样, 像这样, 多么, 非常, 如此"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00241",
+    "word": "sure",
+    "phonetic": "ʃʊr",
+    "translation": "确信的, 有把握的, 确实的, 一定的, 必定的, 可靠的",
+    "translations": [
+      "确信的, 有把握的, 确实的, 一定的, 必定的, 可靠的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00242",
+    "word": "yeah",
+    "phonetic": "jeə",
+    "translation": "是, 好的",
+    "translations": [
+      "是, 好的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00243",
+    "word": "at",
+    "phonetic": "ət",
+    "translation": "在......",
+    "translations": [
+      "在......"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00244",
+    "word": "boat",
+    "phonetic": "boʊt",
+    "translation": "船, 小船",
+    "translations": [
+      "船, 小船"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00245",
+    "word": "by",
+    "phonetic": "baɪ",
+    "translation": "在附近, 在身旁, 靠近",
+    "translations": [
+      "在附近, 在身旁, 靠近"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00246",
+    "word": "car",
+    "phonetic": "kɑːr",
+    "translation": "车, 汽车",
+    "translations": [
+      "车, 汽车"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00247",
+    "word": "change",
+    "phonetic": "tʃeɪndʒ",
+    "translation": "换车",
+    "translations": [
+      "换车"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00248",
+    "word": "far",
+    "phonetic": "fɑːr",
+    "translation": "很远地",
+    "translations": [
+      "很远地"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00249",
+    "word": "line",
+    "phonetic": "laɪn",
+    "translation": "线路",
+    "translations": [
+      "线路"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00250",
+    "word": "near",
+    "phonetic": "nɪr",
+    "translation": "近的",
+    "translations": [
+      "近的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00251",
+    "word": "next",
+    "phonetic": "nekst",
+    "translation": "接下去, 然后",
+    "translations": [
+      "接下去, 然后"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00252",
+    "word": "number",
+    "phonetic": "ˈnʌmbər",
+    "translation": "(排名)第...号",
+    "translations": [
+      "(排名)第...号"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00253",
+    "word": "pardon me",
+    "phonetic": "",
+    "translation": "used by some people to say 'sorry' when they have accidentally made a rude noise or done sth wrong",
+    "translations": [
+      "used by some people to say 'sorry' when they have accidentally made a rude noise or done sth wrong"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00254",
+    "word": "plane",
+    "phonetic": "pleɪn",
+    "translation": "飞机",
+    "translations": [
+      "飞机"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00255",
+    "word": "stop",
+    "phonetic": "stɑːp",
+    "translation": "车站",
+    "translations": [
+      "车站"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00256",
+    "word": "take",
+    "phonetic": "teɪk",
+    "translation": "乘坐",
+    "translations": [
+      "乘坐"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00257",
+    "word": "taxi",
+    "phonetic": "ˈtæksi",
+    "translation": "出租车",
+    "translations": [
+      "出租车"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00258",
+    "word": "then",
+    "phonetic": "ðen",
+    "translation": "当时, 在那时",
+    "translations": [
+      "当时, 在那时"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00259",
+    "word": "train",
+    "phonetic": "treɪn",
+    "translation": "火车, 轨道交通",
+    "translations": [
+      "火车, 轨道交通"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00260",
+    "word": "bakery",
+    "phonetic": "ˈbeɪkəri",
+    "translation": "面包店",
+    "translations": [
+      "面包店"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00261",
+    "word": "behind",
+    "phonetic": "bɪˈhaɪnd",
+    "translation": "在 后面",
+    "translations": [
+      "在 后面"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00262",
+    "word": "bookshop",
+    "phonetic": "'bʊkʃɑp",
+    "translation": "书店",
+    "translations": [
+      "书店"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00263",
+    "word": "both",
+    "phonetic": "boʊθ",
+    "translation": "(两者)都",
+    "translations": [
+      "(两者)都"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00264",
+    "word": "bus stop",
+    "phonetic": "",
+    "translation": "公交站,巴士站",
+    "translations": [
+      "公交站,巴士站"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00265",
+    "word": "coffee shop",
+    "phonetic": "",
+    "translation": "供应甜食和简便速食的咖啡馆",
+    "translations": [
+      "供应甜食和简便速食的咖啡馆"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00266",
+    "word": "excellent",
+    "phonetic": "ˈeksələnt",
+    "translation": "出色地",
+    "translations": [
+      "出色地"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00267",
+    "word": "in front of",
+    "phonetic": "ɪn frʌnt ʌv",
+    "translation": "in a position that is further forward than sb/sth but not very far away",
+    "translations": [
+      "in a position that is further forward than sb/sth but not very far away"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00268",
+    "word": "movie theater",
+    "phonetic": "",
+    "translation": "电影院",
+    "translations": [
+      "电影院"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00269",
+    "word": "next to",
+    "phonetic": "",
+    "translation": "靠近, 贴近",
+    "translations": [
+      "靠近, 贴近"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00270",
+    "word": "parking lot",
+    "phonetic": "",
+    "translation": "停车场",
+    "translations": [
+      "停车场"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00271",
+    "word": "place",
+    "phonetic": "pleɪs",
+    "translation": "城﹑ 镇﹑ 建筑",
+    "translations": [
+      "城﹑ 镇﹑ 建筑"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00272",
+    "word": "playground",
+    "phonetic": "ˈpleɪɡraʊnd",
+    "translation": "操场,运动场,游乐场",
+    "translations": [
+      "操场,运动场,游乐场"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00273",
+    "word": "post office",
+    "phonetic": "ˈpost ɔfɪs",
+    "translation": "邮局",
+    "translations": [
+      "邮局"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00274",
+    "word": "supermarket",
+    "phonetic": "ˈsuːpərmɑːrkət",
+    "translation": "超市",
+    "translations": [
+      "超市"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00275",
+    "word": "correct",
+    "phonetic": "kəˈrekt",
+    "translation": "正确的, 准确的",
+    "translations": [
+      "正确的, 准确的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00276",
+    "word": "left",
+    "phonetic": "left",
+    "translation": "左方的, 左侧的",
+    "translations": [
+      "左方的, 左侧的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00277",
+    "word": "right",
+    "phonetic": "raɪt",
+    "translation": "右边的, 右的, 右侧的",
+    "translations": [
+      "右边的, 右的, 右侧的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00278",
+    "word": "road",
+    "phonetic": "roʊd",
+    "translation": "路, 道路, 公路",
+    "translations": [
+      "路, 道路, 公路"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00279",
+    "word": "department store",
+    "phonetic": "",
+    "translation": "百货商店",
+    "translations": [
+      "百货商店"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00280",
+    "word": "harbor",
+    "phonetic": "ˈhɑːrbər",
+    "translation": "海港",
+    "translations": [
+      "海港"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00281",
+    "word": "library",
+    "phonetic": "ˈlaɪbreri",
+    "translation": "图书馆, 藏书室, 图书室",
+    "translations": [
+      "图书馆, 藏书室, 图书室"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00282",
+    "word": "market",
+    "phonetic": "ˈmɑːrkɪt",
+    "translation": "市场, 集市",
+    "translations": [
+      "市场, 集市"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00283",
+    "word": "on",
+    "phonetic": "ɑːn",
+    "translation": "在 之上",
+    "translations": [
+      "在 之上"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00284",
+    "word": "opposite",
+    "phonetic": "ˈɑːpəzət",
+    "translation": "反面的, 相反的",
+    "translations": [
+      "反面的, 相反的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00285",
+    "word": "swimming pool",
+    "phonetic": "",
+    "translation": "游泳池",
+    "translations": [
+      "游泳池"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00286",
+    "word": "there",
+    "phonetic": "ðer",
+    "translation": "表示存在",
+    "translations": [
+      "表示存在"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00287",
+    "word": "station",
+    "phonetic": "ˈsteɪʃn",
+    "translation": "车站",
+    "translations": [
+      "车站"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00288",
+    "word": "store",
+    "phonetic": "stɔːr",
+    "translation": "商店",
+    "translations": [
+      "商店"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00289",
+    "word": "subway",
+    "phonetic": "ˈsʌbweɪ",
+    "translation": "地铁",
+    "translations": [
+      "地铁"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00290",
+    "word": "university",
+    "phonetic": "ˌjuːnɪˈvɜːrsəti",
+    "translation": "大学",
+    "translations": [
+      "大学"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00291",
+    "word": "armchair",
+    "phonetic": "ˈɑːrmtʃer",
+    "translation": "扶手椅",
+    "translations": [
+      "扶手椅"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00292",
+    "word": "at",
+    "phonetic": "ət",
+    "translation": "在......",
+    "translations": [
+      "在......"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00293",
+    "word": "balcony",
+    "phonetic": "ˈbælkəni",
+    "translation": "阳台,露台",
+    "translations": [
+      "阳台,露台"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00294",
+    "word": "bath",
+    "phonetic": "bæθ",
+    "translation": "浴盆, 浴缸",
+    "translations": [
+      "浴盆, 浴缸"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00295",
+    "word": "behind",
+    "phonetic": "bɪˈhaɪnd",
+    "translation": "在 后面",
+    "translations": [
+      "在 后面"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00296",
+    "word": "refrigerator",
+    "phonetic": "rɪˈfrɪdʒəreɪtər",
+    "translation": "冰箱",
+    "translations": [
+      "冰箱"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00297",
+    "word": "shower",
+    "phonetic": "ˈʃaʊər",
+    "translation": "淋浴",
+    "translations": [
+      "淋浴"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00298",
+    "word": "stove",
+    "phonetic": "stoʊv",
+    "translation": "炉子",
+    "translations": [
+      "炉子"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00299",
+    "word": "whose",
+    "phonetic": "huːz",
+    "translation": "谁的",
+    "translations": [
+      "谁的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00300",
+    "word": "yard",
+    "phonetic": "jɑːrd",
+    "translation": "院子",
+    "translations": [
+      "院子"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00301",
+    "word": "neighborhood",
+    "phonetic": "'nebɚ,hʊd",
+    "translation": "居住区",
+    "translations": [
+      "居住区"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00302",
+    "word": "public transportation",
+    "phonetic": "",
+    "translation": "公共交通事业,公共交通, 公共交通工具",
+    "translations": [
+      "公共交通事业,公共交通, 公共交通工具"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00303",
+    "word": "bathtub",
+    "phonetic": "bæθtʌb",
+    "translation": "浴缸",
+    "translations": [
+      "浴缸"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00304",
+    "word": "bookshelf",
+    "phonetic": "ˈbʊkʃelf",
+    "translation": "书架",
+    "translations": [
+      "书架"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00305",
+    "word": "fireplace",
+    "phonetic": "ˈfaɪərpleɪs",
+    "translation": "壁炉",
+    "translations": [
+      "壁炉"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00306",
+    "word": "fridge",
+    "phonetic": "frɪdʒ",
+    "translation": "电冰箱",
+    "translations": [
+      "电冰箱"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00307",
+    "word": "light",
+    "phonetic": "laɪt",
+    "translation": "光, 光线, 光亮",
+    "translations": [
+      "光, 光线, 光亮"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00308",
+    "word": "mailbox",
+    "phonetic": "ˈmeɪlbɑːks",
+    "translation": "邮箱,信箱",
+    "translations": [
+      "邮箱,信箱"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00309",
+    "word": "microwave",
+    "phonetic": "ˈmaɪkrəweɪv",
+    "translation": "微波",
+    "translations": [
+      "微波"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00310",
+    "word": "put",
+    "phonetic": "pʊt",
+    "translation": "放, 放置",
+    "translations": [
+      "放, 放置"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00311",
+    "word": "stairway",
+    "phonetic": "ˈsterweɪ",
+    "translation": "扶梯,楼梯",
+    "translations": [
+      "扶梯,楼梯"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00312",
+    "word": "better",
+    "phonetic": "ˈbetər",
+    "translation": "较好的, 更好的",
+    "translations": [
+      "较好的, 更好的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00313",
+    "word": "clean",
+    "phonetic": "kliːn",
+    "translation": "干净的",
+    "translations": [
+      "干净的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00314",
+    "word": "dangerous",
+    "phonetic": "ˈdeɪndʒərəs",
+    "translation": "危险的",
+    "translations": [
+      "危险的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00315",
+    "word": "dirty",
+    "phonetic": "ˈdɜːrti",
+    "translation": "脏的",
+    "translations": [
+      "脏的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00316",
+    "word": "lovely",
+    "phonetic": "ˈlʌvli",
+    "translation": "秀美动人的, 可爱的",
+    "translations": [
+      "秀美动人的, 可爱的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00317",
+    "word": "modern",
+    "phonetic": "ˈmɑːdərn",
+    "translation": "现代的, 近代的",
+    "translations": [
+      "现代的, 近代的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00318",
+    "word": "noisy",
+    "phonetic": "ˈnɔɪzi",
+    "translation": "喧闹的, 嘈杂的",
+    "translations": [
+      "喧闹的, 嘈杂的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00319",
+    "word": "old",
+    "phonetic": "oʊld",
+    "translation": "多年的, 长时间的, 旧交的",
+    "translations": [
+      "多年的, 长时间的, 旧交的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00320",
+    "word": "roommate",
+    "phonetic": "ˈruːmmeɪt",
+    "translation": "同屋,室友",
+    "translations": [
+      "同屋,室友"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00321",
+    "word": "safe",
+    "phonetic": "seɪf",
+    "translation": "安全的",
+    "translations": [
+      "安全的"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00322",
+    "word": "share",
+    "phonetic": "ʃer",
+    "translation": "分担",
+    "translations": [
+      "分担"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00323",
+    "word": "sofa",
+    "phonetic": "ˈsoʊfə",
+    "translation": "沙发",
+    "translations": [
+      "沙发"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00324",
+    "word": "toilet",
+    "phonetic": "ˈtɔɪlət",
+    "translation": "厕所",
+    "translations": [
+      "厕所"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00325",
+    "word": "under",
+    "phonetic": "ˈʌndər",
+    "translation": "在 之下, 低于",
+    "translations": [
+      "在 之下, 低于"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00326",
+    "word": "wardrobe",
+    "phonetic": "ˈwɔːrdroʊb",
+    "translation": "衣柜",
+    "translations": [
+      "衣柜"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00327",
+    "word": "closet",
+    "phonetic": "ˈklɑːzət",
+    "translation": "小房间, 储藏室",
+    "translations": [
+      "小房间, 储藏室"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00328",
+    "word": "dishwasher",
+    "phonetic": "ˈdɪʃwɔːʃər",
+    "translation": "洗碗机",
+    "translations": [
+      "洗碗机"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00329",
+    "word": "garage",
+    "phonetic": "ɡəˈrɑːʒ",
+    "translation": "车库",
+    "translations": [
+      "车库"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00330",
+    "word": "house",
+    "phonetic": "haʊs",
+    "translation": "房子, 住宅",
+    "translations": [
+      "房子, 住宅"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00331",
+    "word": "paint",
+    "phonetic": "peɪnt",
+    "translation": "油漆, 粉刷",
+    "translations": [
+      "油漆, 粉刷"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00332",
+    "word": "dining room",
+    "phonetic": "",
+    "translation": "饭厅",
+    "translations": [
+      "饭厅"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00333",
+    "word": "drawer",
+    "phonetic": "drɔːr",
+    "translation": "抽屉",
+    "translations": [
+      "抽屉"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00334",
+    "word": "duvet",
+    "phonetic": "ˈduːveɪ",
+    "translation": "羽绒被",
+    "translations": [
+      "羽绒被"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00335",
+    "word": "garden",
+    "phonetic": "ˈɡɑːrdn",
+    "translation": "花园, 庭园",
+    "translations": [
+      "花园, 庭园"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00336",
+    "word": "hall",
+    "phonetic": "hɔːl",
+    "translation": "走廊, 大厅",
+    "translations": [
+      "走廊, 大厅"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00337",
+    "word": "in front of",
+    "phonetic": "ɪn frʌnt ʌv",
+    "translation": "in a position that is further forward than sb/sth but not very far away",
+    "translations": [
+      "in a position that is further forward than sb/sth but not very far away"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00338",
+    "word": "rug",
+    "phonetic": "rʌɡ",
+    "translation": "厚地毯",
+    "translations": [
+      "厚地毯"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00339",
+    "word": "table",
+    "phonetic": "ˈteɪbl",
+    "translation": "桌子",
+    "translations": [
+      "桌子"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00340",
+    "word": "washing",
+    "phonetic": "ˈwɑːʃɪŋ",
+    "translation": "洗, 清洗, 洗涤",
+    "translations": [
+      "洗, 清洗, 洗涤"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00341",
+    "word": "bathroom",
+    "phonetic": "ˈbæθruːm",
+    "translation": "浴室, 盥洗室",
+    "translations": [
+      "浴室, 盥洗室"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00342",
+    "word": "bed",
+    "phonetic": "bed",
+    "translation": "床",
+    "translations": [
+      "床"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00343",
+    "word": "bedroom",
+    "phonetic": "ˈbedruːm",
+    "translation": "卧室",
+    "translations": [
+      "卧室"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00344",
+    "word": "cleaning",
+    "phonetic": "ˈkliːnɪŋ",
+    "translation": "清洗,清除,清洁,去污",
+    "translations": [
+      "清洗,清除,清洁,去污"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00345",
+    "word": "coffee table",
+    "phonetic": "",
+    "translation": "咖啡茶几;放咖啡及摆杂志的小而长的矮桌",
+    "translations": [
+      "咖啡茶几;放咖啡及摆杂志的小而长的矮桌"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00346",
+    "word": "decorate",
+    "phonetic": "ˈdekəreɪt",
+    "translation": "装饰",
+    "translations": [
+      "装饰"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00347",
+    "word": "in",
+    "phonetic": "ɪn",
+    "translation": "在 内",
+    "translations": [
+      "在 内"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00348",
+    "word": "lamp",
+    "phonetic": "læmp",
+    "translation": "灯, 油灯, 灯火",
+    "translations": [
+      "灯, 油灯, 灯火"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00349",
+    "word": "living room",
+    "phonetic": "'lɪvɪŋ rum",
+    "translation": "客厅,起居室",
+    "translations": [
+      "客厅,起居室"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00350",
+    "word": "picture",
+    "phonetic": "ˈpɪktʃər",
+    "translation": "图画",
+    "translations": [
+      "图画"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00351",
+    "word": "pillow",
+    "phonetic": "ˈpɪloʊ",
+    "translation": "枕头",
+    "translations": [
+      "枕头"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00352",
+    "word": "plant",
+    "phonetic": "plænt",
+    "translation": "植物",
+    "translations": [
+      "植物"
+    ],
+    "domain": "qwerty_eflevel2"
+  },
+  {
+    "id": "qwerty_eflevel2_00353",
+    "word": "sink",
+    "phonetic": "sɪŋk",
+    "translation": "洗涤槽, 水槽",
+    "translations": [
+      "洗涤槽, 水槽"
+    ],
+    "domain": "qwerty_eflevel2"
+  }
+]

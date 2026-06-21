@@ -1,0 +1,792 @@
+[
+  {
+    "id": "qwerty_csharpstring_00001",
+    "word": "Clone()",
+    "phonetic": "",
+    "translation": "Clone()创建当前字符串的浅表副本",
+    "translations": [
+      "Clone()创建当前字符串的浅表副本"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00002",
+    "word": "Compare(string, string)",
+    "phonetic": "",
+    "translation": "比较两个指定的字符串，并返回一个表示它们在字典顺序中的相对位置的整数",
+    "translations": [
+      "比较两个指定的字符串，并返回一个表示它们在字典顺序中的相对位置的整数"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00003",
+    "word": "Compare(string, string, bool)",
+    "phonetic": "",
+    "translation": "比较两个指定的字符串，并返回一个表示它们在字典顺序中的相对位置的整数，或指示是否忽略大小写的布尔值",
+    "translations": [
+      "比较两个指定的字符串，并返回一个表示它们在字典顺序中的相对位置的整数，或指示是否忽略大小写的布尔值"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00004",
+    "word": "Compare(string, int, string, int, int)",
+    "phonetic": "",
+    "translation": "比较两个指定的字符串的指定部分，并返回一个表示它们在字典顺序中的相对位置的整数",
+    "translations": [
+      "比较两个指定的字符串的指定部分，并返回一个表示它们在字典顺序中的相对位置的整数"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00005",
+    "word": "CompareOrdinal(string, string)",
+    "phonetic": "",
+    "translation": "比较两个指定的字符串，并返回一个表示它们在 Unicode 编码顺序中的相对位置的整数",
+    "translations": [
+      "比较两个指定的字符串，并返回一个表示它们在 Unicode 编码顺序中的相对位置的整数"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00006",
+    "word": "CompareTo(object)",
+    "phonetic": "",
+    "translation": "将此实例与指定的对象进行比较，并返回一个表示它们在字典顺序中的相对位置的整数",
+    "translations": [
+      "将此实例与指定的对象进行比较，并返回一个表示它们在字典顺序中的相对位置的整数"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00007",
+    "word": "CompareTo(string)",
+    "phonetic": "",
+    "translation": "将此实例与指定的字符串进行比较，并返回一个表示它们在字典顺序中的相对位置的整数",
+    "translations": [
+      "将此实例与指定的字符串进行比较，并返回一个表示它们在字典顺序中的相对位置的整数"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00008",
+    "word": "Concat(string, string)",
+    "phonetic": "",
+    "translation": "将两个指定的字符串连接到一起",
+    "translations": [
+      "将两个指定的字符串连接到一起"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00009",
+    "word": "Concat(string, string, string)",
+    "phonetic": "",
+    "translation": "将三个指定的字符串连接到一起",
+    "translations": [
+      "将三个指定的字符串连接到一起"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00010",
+    "word": "Concat(string, string, string, string)",
+    "phonetic": "",
+    "translation": "将四个指定的字符串连接到一起",
+    "translations": [
+      "将四个指定的字符串连接到一起"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00011",
+    "word": "Concat(string[])",
+    "phonetic": "",
+    "translation": "将指定数组中的所有字符串连接到一起",
+    "translations": [
+      "将指定数组中的所有字符串连接到一起"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00012",
+    "word": "Contains(string)",
+    "phonetic": "",
+    "translation": "返回一个值，该值指示指定的字符串是否出现在此字符串中",
+    "translations": [
+      "返回一个值，该值指示指定的字符串是否出现在此字符串中"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00013",
+    "word": "Copy(string)",
+    "phonetic": "",
+    "translation": "创建指定字符串的副本",
+    "translations": [
+      "创建指定字符串的副本"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00014",
+    "word": "CopyTo(int, char[], int, int)",
+    "phonetic": "",
+    "translation": "从此实例中的指定位置开始将字符复制到字符数组中的指定位置",
+    "translations": [
+      "从此实例中的指定位置开始将字符复制到字符数组中的指定位置"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00015",
+    "word": "EndsWith(string)",
+    "phonetic": "",
+    "translation": "确定此字符串实例的结尾是否与指定的字符串匹配",
+    "translations": [
+      "确定此字符串实例的结尾是否与指定的字符串匹配"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00016",
+    "word": "Equals(object)",
+    "phonetic": "",
+    "translation": "确定指定的对象是否等于当前对象",
+    "translations": [
+      "确定指定的对象是否等于当前对象"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00017",
+    "word": "Equals(string)",
+    "phonetic": "",
+    "translation": "确定此字符串实例是否与另一个字符串实例具有相同的值",
+    "translations": [
+      "确定此字符串实例是否与另一个字符串实例具有相同的值"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00018",
+    "word": "Format(IFormatProvider, string, object)",
+    "phonetic": "",
+    "translation": "使用指定的格式信息以及要格式化的对象的指定值，返回指定字符串格式的格式化字符串",
+    "translations": [
+      "使用指定的格式信息以及要格式化的对象的指定值，返回指定字符串格式的格式化字符串"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00019",
+    "word": "Format(string, object)",
+    "phonetic": "",
+    "translation": "使用指定的格式字符串和要插入到该字符串中的对象的参数数组，返回格式化的字符串",
+    "translations": [
+      "使用指定的格式字符串和要插入到该字符串中的对象的参数数组，返回格式化的字符串"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00020",
+    "word": "GetEnumerator()",
+    "phonetic": "",
+    "translation": "返回一个枚举数，该枚举数可用于迭代字符串中的字符",
+    "translations": [
+      "返回一个枚举数，该枚举数可用于迭代字符串中的字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00021",
+    "word": "GetHashCode()",
+    "phonetic": "",
+    "translation": "用作默认哈希函数",
+    "translations": [
+      "用作默认哈希函数"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00022",
+    "word": "GetType()",
+    "phonetic": "",
+    "translation": "获取当前实例的 Type",
+    "translations": [
+      "获取当前实例的 Type"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00023",
+    "word": "IndexOf(char)",
+    "phonetic": "",
+    "translation": "返回指定字符在此字符串中第一次出现的位置",
+    "translations": [
+      "返回指定字符在此字符串中第一次出现的位置"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00024",
+    "word": "IndexOf(char, int)",
+    "phonetic": "",
+    "translation": "返回指定字符在此字符串中第一次出现的位置，从指定的索引位置开始搜索",
+    "translations": [
+      "返回指定字符在此字符串中第一次出现的位置，从指定的索引位置开始搜索"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00025",
+    "word": "IndexOf(char, int, int)",
+    "phonetic": "",
+    "translation": "返回指定字符在此字符串中第一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符",
+    "translations": [
+      "返回指定字符在此字符串中第一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00026",
+    "word": "IndexOf(string)",
+    "phonetic": "",
+    "translation": "返回指定字符串在此字符串中第一次出现的位置",
+    "translations": [
+      "返回指定字符串在此字符串中第一次出现的位置"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00027",
+    "word": "IndexOf(string, int)",
+    "phonetic": "",
+    "translation": "返回指定字符串在此字符串中第一次出现的位置，从指定的索引位置开始搜索",
+    "translations": [
+      "返回指定字符串在此字符串中第一次出现的位置，从指定的索引位置开始搜索"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00028",
+    "word": "IndexOf(string, int, int)",
+    "phonetic": "",
+    "translation": "返回指定字符串在此字符串中第一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符",
+    "translations": [
+      "返回指定字符串在此字符串中第一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00029",
+    "word": "IndexOfAny(char[])",
+    "phonetic": "",
+    "translation": "返回指定数组中的任何一个字符在此字符串中第一次出现的位置",
+    "translations": [
+      "返回指定数组中的任何一个字符在此字符串中第一次出现的位置"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00030",
+    "word": "IndexOfAny(char[], int)",
+    "phonetic": "",
+    "translation": "返回指定数组中的任何一个字符在此字符串中第一次出现的位置，搜索范围从指定的索引位置开始",
+    "translations": [
+      "返回指定数组中的任何一个字符在此字符串中第一次出现的位置，搜索范围从指定的索引位置开始"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00031",
+    "word": "IndexOfAny(char[], int, int)",
+    "phonetic": "",
+    "translation": "返回指定数组中的任何一个字符在此字符串中第一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符",
+    "translations": [
+      "返回指定数组中的任何一个字符在此字符串中第一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00032",
+    "word": "Insert(int, string)",
+    "phonetic": "",
+    "translation": "返回一个新字符串，其中指定的字符串被插入到此字符串中的指定索引位置",
+    "translations": [
+      "返回一个新字符串，其中指定的字符串被插入到此字符串中的指定索引位置"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00033",
+    "word": "Intern(string)",
+    "phonetic": "",
+    "translation": "将指定的字符串添加到字符串池中，或者返回池中已存在的引用",
+    "translations": [
+      "将指定的字符串添加到字符串池中，或者返回池中已存在的引用"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00034",
+    "word": "IsInterned(string)",
+    "phonetic": "",
+    "translation": "返回在字符串池中或者作为动态分配的字符串中找到的指定字符串的引用",
+    "translations": [
+      "返回在字符串池中或者作为动态分配的字符串中找到的指定字符串的引用"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00035",
+    "word": "IsNormalized()",
+    "phonetic": "",
+    "translation": "确定此字符串是否为 Unicode 规范化形式 C",
+    "translations": [
+      "确定此字符串是否为 Unicode 规范化形式 C"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00036",
+    "word": "IsNullOrEmpty(string)",
+    "phonetic": "",
+    "translation": "指示指定的字符串是否为 null 或者是一个空字符串",
+    "translations": [
+      "指示指定的字符串是否为 null 或者是一个空字符串"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00037",
+    "word": "IsNullOrWhiteSpace(string)",
+    "phonetic": "",
+    "translation": "指示指定的字符串是否为 null、空字符串或者仅由空白字符组成",
+    "translations": [
+      "指示指定的字符串是否为 null、空字符串或者仅由空白字符组成"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00038",
+    "word": "Join(string, string[])",
+    "phonetic": "",
+    "translation": "使用指定的分隔符将指定数组中的所有字符串连接到一起",
+    "translations": [
+      "使用指定的分隔符将指定数组中的所有字符串连接到一起"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00039",
+    "word": "Join(string, string[], int, int)",
+    "phonetic": "",
+    "translation": "使用指定的分隔符将指定数组中的一个子集的所有字符串连接到一起",
+    "translations": [
+      "使用指定的分隔符将指定数组中的一个子集的所有字符串连接到一起"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00040",
+    "word": "Join<T>(string, IEnumerable<T>)",
+    "phonetic": "",
+    "translation": "将指定可枚举集合中的所有字符串连接到一起，其中这些字符串用指定的分隔符分隔",
+    "translations": [
+      "将指定可枚举集合中的所有字符串连接到一起，其中这些字符串用指定的分隔符分隔"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00041",
+    "word": "Join<T>(string, IEnumerable<T>, int, int)",
+    "phonetic": "",
+    "translation": "将指定可枚举集合中的一个子集的所有字符串连接到一起，其中这些字符串用指定的分隔符分隔",
+    "translations": [
+      "将指定可枚举集合中的一个子集的所有字符串连接到一起，其中这些字符串用指定的分隔符分隔"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00042",
+    "word": "LastIndexOf(char)",
+    "phonetic": "",
+    "translation": "返回指定字符在此字符串中最后一次出现的位置",
+    "translations": [
+      "返回指定字符在此字符串中最后一次出现的位置"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00043",
+    "word": "LastIndexOf(char, int)",
+    "phonetic": "",
+    "translation": "返回指定字符在此字符串中最后一次出现的位置，搜索范围从指定的索引位置开始",
+    "translations": [
+      "返回指定字符在此字符串中最后一次出现的位置，搜索范围从指定的索引位置开始"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00044",
+    "word": "LastIndexOf(char, int, int)",
+    "phonetic": "",
+    "translation": "返回指定字符在此字符串中最后一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符",
+    "translations": [
+      "返回指定字符在此字符串中最后一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00045",
+    "word": "LastIndexOf(string)",
+    "phonetic": "",
+    "translation": "返回指定字符串在此字符串中最后一次出现的位置",
+    "translations": [
+      "返回指定字符串在此字符串中最后一次出现的位置"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00046",
+    "word": "LastIndexOf(string, int)",
+    "phonetic": "",
+    "translation": "返回指定字符串在此字符串中最后一次出现的位置，搜索范围从指定的索引位置开始",
+    "translations": [
+      "返回指定字符串在此字符串中最后一次出现的位置，搜索范围从指定的索引位置开始"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00047",
+    "word": "LastIndexOf(string, int, int)",
+    "phonetic": "",
+    "translation": "返回指定字符串在此字符串中最后一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符",
+    "translations": [
+      "返回指定字符串在此字符串中最后一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00048",
+    "word": "LastIndexOfAny(char[])",
+    "phonetic": "",
+    "translation": "返回指定数组中的任何一个字符在此字符串中最后一次出现的位置",
+    "translations": [
+      "返回指定数组中的任何一个字符在此字符串中最后一次出现的位置"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00049",
+    "word": "LastIndexOfAny(char[], int)",
+    "phonetic": "",
+    "translation": "返回指定数组中的任何一个字符在此字符串中最后一次出现的位置，搜索范围从指定的索引位置开始",
+    "translations": [
+      "返回指定数组中的任何一个字符在此字符串中最后一次出现的位置，搜索范围从指定的索引位置开始"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00050",
+    "word": "LastIndexOfAny(char[], int, int)",
+    "phonetic": "",
+    "translation": "返回指定数组中的任何一个字符在此字符串中最后一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符",
+    "translations": [
+      "返回指定数组中的任何一个字符在此字符串中最后一次出现的位置，搜索范围从指定的索引开始，并且包括指定数量的字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00051",
+    "word": "Normalize()",
+    "phonetic": "",
+    "translation": "将此字符串转换为 Unicode 规范化形式 C",
+    "translations": [
+      "将此字符串转换为 Unicode 规范化形式 C"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00052",
+    "word": "PadLeft(int)",
+    "phonetic": "",
+    "translation": "将此字符串的开头填充到指定的总宽度，以便达到指定的对齐要求",
+    "translations": [
+      "将此字符串的开头填充到指定的总宽度，以便达到指定的对齐要求"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00053",
+    "word": "PadLeft(int, char)",
+    "phonetic": "",
+    "translation": "将此字符串的开头填充到指定的总宽度，以便达到指定的对齐要求，使用指定的填充字符填充",
+    "translations": [
+      "将此字符串的开头填充到指定的总宽度，以便达到指定的对齐要求，使用指定的填充字符填充"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00054",
+    "word": "PadRight(int)",
+    "phonetic": "",
+    "translation": "将此字符串的结尾填充到指定的总宽度，以便达到指定的对齐要求",
+    "translations": [
+      "将此字符串的结尾填充到指定的总宽度，以便达到指定的对齐要求"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00055",
+    "word": "PadRight(int, char)",
+    "phonetic": "",
+    "translation": "将此字符串的结尾填充到指定的总宽度，以便达到指定的对齐要求，使用指定的填充字符填充",
+    "translations": [
+      "将此字符串的结尾填充到指定的总宽度，以便达到指定的对齐要求，使用指定的填充字符填充"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00056",
+    "word": "Remove(int)",
+    "phonetic": "",
+    "translation": "返回一个新字符串，其中从此实例中的指定位置开始的所有字符都已被删除",
+    "translations": [
+      "返回一个新字符串，其中从此实例中的指定位置开始的所有字符都已被删除"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00057",
+    "word": "Remove(int, int)",
+    "phonetic": "",
+    "translation": "返回一个新字符串，其中从此实例中的指定位置开始且包括指定长度的字符都已被删除",
+    "translations": [
+      "返回一个新字符串，其中从此实例中的指定位置开始且包括指定长度的字符都已被删除"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00058",
+    "word": "Replace(char, char)",
+    "phonetic": "",
+    "translation": "返回一个新字符串，其中所有出现的指定字符都被替换为另一个指定的字符",
+    "translations": [
+      "返回一个新字符串，其中所有出现的指定字符都被替换为另一个指定的字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00059",
+    "word": "Replace(string, string)",
+    "phonetic": "",
+    "translation": "返回一个新字符串，其中所有匹配的指定字符串都被另一个指定的字符串替换",
+    "translations": [
+      "返回一个新字符串，其中所有匹配的指定字符串都被另一个指定的字符串替换"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00060",
+    "word": "Split(char[])",
+    "phonetic": "",
+    "translation": "使用指定的 Unicode 字符数组中的任何字符作为分隔符，将字符串分割为子字符串数组",
+    "translations": [
+      "使用指定的 Unicode 字符数组中的任何字符作为分隔符，将字符串分割为子字符串数组"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00061",
+    "word": "Split(char[], int)",
+    "phonetic": "",
+    "translation": "使用指定的 Unicode 字符数组中的任何字符作为分隔符，将字符串分割为子字符串数组，最多返回指定数目的子字符串",
+    "translations": [
+      "使用指定的 Unicode 字符数组中的任何字符作为分隔符，将字符串分割为子字符串数组，最多返回指定数目的子字符串"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00062",
+    "word": "Split(char[], StringSplitOptions)",
+    "phonetic": "",
+    "translation": "使用指定的 Unicode 字符数组中的任何字符作为分隔符，将字符串分割为子字符串数组，可选择是否移除空白项",
+    "translations": [
+      "使用指定的 Unicode 字符数组中的任何字符作为分隔符，将字符串分割为子字符串数组，可选择是否移除空白项"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00063",
+    "word": "Split(string[], StringSplitOptions)",
+    "phonetic": "",
+    "translation": "使用指定的字符串数组中的任何字符串作为分隔符，将字符串分割为子字符串数组，可选择是否移除空白项",
+    "translations": [
+      "使用指定的字符串数组中的任何字符串作为分隔符，将字符串分割为子字符串数组，可选择是否移除空白项"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00064",
+    "word": "StartsWith(string)",
+    "phonetic": "",
+    "translation": "确定此字符串实例的开头是否与指定的字符串匹配",
+    "translations": [
+      "确定此字符串实例的开头是否与指定的字符串匹配"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00065",
+    "word": "Substring(int)",
+    "phonetic": "",
+    "translation": "返回一个新字符串，其中包含此实例中从指定位置开始的所有字符",
+    "translations": [
+      "返回一个新字符串，其中包含此实例中从指定位置开始的所有字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00066",
+    "word": "Substring(int, int)",
+    "phonetic": "",
+    "translation": "返回一个新字符串，其中包含此实例中从指定位置开始的指定长度的字符",
+    "translations": [
+      "返回一个新字符串，其中包含此实例中从指定位置开始的指定长度的字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00067",
+    "word": "ToCharArray()",
+    "phonetic": "",
+    "translation": "将此字符串转换为一个字符数组",
+    "translations": [
+      "将此字符串转换为一个字符数组"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00068",
+    "word": "ToCharArray(int, int)",
+    "phonetic": "",
+    "translation": "将此实例中的指定子字符串中的字符复制到 Unicode 字符数组中",
+    "translations": [
+      "将此实例中的指定子字符串中的字符复制到 Unicode 字符数组中"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00069",
+    "word": "ToLower()",
+    "phonetic": "",
+    "translation": "将此字符串转换为小写",
+    "translations": [
+      "将此字符串转换为小写"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00070",
+    "word": "ToLowerInvariant()",
+    "phonetic": "",
+    "translation": "使用固定区域性特定的大小写规则，将字符串转换为小写",
+    "translations": [
+      "使用固定区域性特定的大小写规则，将字符串转换为小写"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00071",
+    "word": "ToString()",
+    "phonetic": "",
+    "translation": "返回此实例的字符串表示形式",
+    "translations": [
+      "返回此实例的字符串表示形式"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00072",
+    "word": "ToUpper()",
+    "phonetic": "",
+    "translation": "将此字符串转换为大写",
+    "translations": [
+      "将此字符串转换为大写"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00073",
+    "word": "ToUpperInvariant()",
+    "phonetic": "",
+    "translation": "使用固定区域性特定的大小写规则，将字符串转换为大写",
+    "translations": [
+      "使用固定区域性特定的大小写规则，将字符串转换为大写"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00074",
+    "word": "Trim()",
+    "phonetic": "",
+    "translation": "删除此字符串中指定的一组字符的所有前导和尾随出现",
+    "translations": [
+      "删除此字符串中指定的一组字符的所有前导和尾随出现"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00075",
+    "word": "Trim(char[])",
+    "phonetic": "",
+    "translation": "删除此字符串中指定的一组字符的所有前导和尾随出现",
+    "translations": [
+      "删除此字符串中指定的一组字符的所有前导和尾随出现"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00076",
+    "word": "TrimEnd()",
+    "phonetic": "",
+    "translation": "删除此字符串末尾处的所有空白字符",
+    "translations": [
+      "删除此字符串末尾处的所有空白字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00077",
+    "word": "TrimEnd(char[])",
+    "phonetic": "",
+    "translation": "删除此字符串末尾处的所有指定字符",
+    "translations": [
+      "删除此字符串末尾处的所有指定字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00078",
+    "word": "TrimStart()",
+    "phonetic": "",
+    "translation": "删除此字符串开始处的所有空白字符",
+    "translations": [
+      "删除此字符串开始处的所有空白字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  },
+  {
+    "id": "qwerty_csharpstring_00079",
+    "word": "TrimStart(char[])",
+    "phonetic": "",
+    "translation": "删除此字符串开始处的所有指定字符",
+    "translations": [
+      "删除此字符串开始处的所有指定字符"
+    ],
+    "domain": "qwerty_csharpstring"
+  }
+]

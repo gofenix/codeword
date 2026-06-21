@@ -1,0 +1,6302 @@
+[
+  {
+    "id": "qwerty_pte_read_apeuni_json_00001",
+    "word": "abolish",
+    "phonetic": "",
+    "translation": "vt. 废除，废止；取消，革除",
+    "translations": [
+      "vt. 废除，废止；取消，革除"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00002",
+    "word": "ridiculous",
+    "phonetic": "",
+    "translation": "adj. 可笑的；荒谬的",
+    "translations": [
+      "adj. 可笑的；荒谬的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00003",
+    "word": "summary",
+    "phonetic": "",
+    "translation": "n. 概要，摘要，总结",
+    "translations": [
+      "n. 概要，摘要，总结"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00004",
+    "word": "formation",
+    "phonetic": "",
+    "translation": "n. 形成；构造；编队",
+    "translations": [
+      "n. 形成；构造；编队"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00005",
+    "word": "divergent",
+    "phonetic": "",
+    "translation": "adj. 相异的，分歧的；散开的",
+    "translations": [
+      "adj. 相异的，分歧的；散开的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00006",
+    "word": "mathematics",
+    "phonetic": "",
+    "translation": "n. 数学；数学运算",
+    "translations": [
+      "n. 数学；数学运算"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00007",
+    "word": "mislead",
+    "phonetic": "",
+    "translation": "vt. 误导；带错",
+    "translations": [
+      "vt. 误导；带错"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00008",
+    "word": "rhetorical",
+    "phonetic": "",
+    "translation": "adj. 修辞的；修辞学的；夸张的",
+    "translations": [
+      "adj. 修辞的；修辞学的；夸张的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00009",
+    "word": "indigenous",
+    "phonetic": "",
+    "translation": "adj. 本土的；土著的；国产的；固有的",
+    "translations": [
+      "adj. 本土的；土著的；国产的；固有的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00010",
+    "word": "formidable",
+    "phonetic": "",
+    "translation": "adj. 强大的；可怕的；令人敬畏的；艰难的",
+    "translations": [
+      "adj. 强大的；可怕的；令人敬畏的；艰难的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00011",
+    "word": "Himalaya",
+    "phonetic": "",
+    "translation": "喜马拉雅山脉",
+    "translations": [
+      "喜马拉雅山脉"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00012",
+    "word": "Utopian",
+    "phonetic": "",
+    "translation": "n. 空想家；乌托邦的居民",
+    "translations": [
+      "n. 空想家；乌托邦的居民"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00013",
+    "word": "astrophysical",
+    "phonetic": "",
+    "translation": "天体物理学",
+    "translations": [
+      "天体物理学"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00014",
+    "word": "confusion",
+    "phonetic": "",
+    "translation": "n. 混淆，混乱；困惑",
+    "translations": [
+      "n. 混淆，混乱；困惑"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00015",
+    "word": "precision",
+    "phonetic": "",
+    "translation": "n. 精度，[数] 精密度；精确",
+    "translations": [
+      "n. 精度，[数] 精密度；精确"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00016",
+    "word": "cautionary",
+    "phonetic": "",
+    "translation": "adj. 警告的；劝诫的",
+    "translations": [
+      "adj. 警告的；劝诫的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00017",
+    "word": "cholesterol",
+    "phonetic": "",
+    "translation": "n. [生化] 胆固醇",
+    "translations": [
+      "n. [生化] 胆固醇"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00018",
+    "word": "get rid",
+    "phonetic": "",
+    "translation": "摆脱；排除；处理掉",
+    "translations": [
+      "摆脱；排除；处理掉"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00019",
+    "word": "accent",
+    "phonetic": "",
+    "translation": "n. 口音；重音；强调；特点；重音符号",
+    "translations": [
+      "n. 口音；重音；强调；特点；重音符号"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00020",
+    "word": "qualifier",
+    "phonetic": "",
+    "translation": "n. [语] 修饰语",
+    "translations": [
+      "n. [语] 修饰语"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00021",
+    "word": "civilization",
+    "phonetic": "",
+    "translation": "n. 文明；文化",
+    "translations": [
+      "n. 文明；文化"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00022",
+    "word": "thunder",
+    "phonetic": "",
+    "translation": "n. 雷；轰隆声；恐吓",
+    "translations": [
+      "n. 雷；轰隆声；恐吓"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00023",
+    "word": "monument",
+    "phonetic": "",
+    "translation": "n. 纪念碑；历史遗迹；不朽的作品",
+    "translations": [
+      "n. 纪念碑；历史遗迹；不朽的作品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00024",
+    "word": "talkative",
+    "phonetic": "",
+    "translation": "adj. 饶舌的；多话的；多嘴的；爱说话的",
+    "translations": [
+      "adj. 饶舌的；多话的；多嘴的；爱说话的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00025",
+    "word": "productivity",
+    "phonetic": "",
+    "translation": "n. 生产力；生产率；生产能力",
+    "translations": [
+      "n. 生产力；生产率；生产能力"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00026",
+    "word": "extract",
+    "phonetic": "",
+    "translation": "n. 汁；摘录；榨出物；选粹",
+    "translations": [
+      "n. 汁；摘录；榨出物；选粹"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00027",
+    "word": "mosquito",
+    "phonetic": "",
+    "translation": "n. 蚊子",
+    "translations": [
+      "n. 蚊子"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00028",
+    "word": "contraction",
+    "phonetic": "",
+    "translation": "n. 收缩，紧缩；缩写式；害病",
+    "translations": [
+      "n. 收缩，紧缩；缩写式；害病"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00029",
+    "word": "goddess",
+    "phonetic": "",
+    "translation": "n. 女神，受崇拜的女性",
+    "translations": [
+      "n. 女神，受崇拜的女性"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00030",
+    "word": "geothermal",
+    "phonetic": "",
+    "translation": "adj. [地物] 地热的；[地物] 地温的",
+    "translations": [
+      "adj. [地物] 地热的；[地物] 地温的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00031",
+    "word": "embrace",
+    "phonetic": "",
+    "translation": "n. 拥抱",
+    "translations": [
+      "n. 拥抱"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00032",
+    "word": "dissemination",
+    "phonetic": "",
+    "translation": "n. 宣传；散播；传染（病毒）",
+    "translations": [
+      "n. 宣传；散播；传染（病毒）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00033",
+    "word": "rustic",
+    "phonetic": "",
+    "translation": "adj. 乡村的；纯朴的；粗野的；手工粗糙的",
+    "translations": [
+      "adj. 乡村的；纯朴的；粗野的；手工粗糙的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00034",
+    "word": "biologist",
+    "phonetic": "",
+    "translation": "n. 生物学家",
+    "translations": [
+      "n. 生物学家"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00035",
+    "word": "decent",
+    "phonetic": "",
+    "translation": "adj. 正派的；得体的；相当好的",
+    "translations": [
+      "adj. 正派的；得体的；相当好的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00036",
+    "word": "facilitate",
+    "phonetic": "",
+    "translation": "vt. 促进；帮助；使容易",
+    "translations": [
+      "vt. 促进；帮助；使容易"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00037",
+    "word": "manipulator",
+    "phonetic": "",
+    "translation": "n. [机] 操纵器，调制器；操作者",
+    "translations": [
+      "n. [机] 操纵器，调制器；操作者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00038",
+    "word": "hardcore",
+    "phonetic": "",
+    "translation": "n. 硬核；硬底层；碎砖垫层",
+    "translations": [
+      "n. 硬核；硬底层；碎砖垫层"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00039",
+    "word": "irritate",
+    "phonetic": "",
+    "translation": "vt. 刺激，使兴奋；激怒",
+    "translations": [
+      "vt. 刺激，使兴奋；激怒"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00040",
+    "word": "completion",
+    "phonetic": "",
+    "translation": "n. 完成，结束；实现",
+    "translations": [
+      "n. 完成，结束；实现"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00041",
+    "word": "pertain",
+    "phonetic": "",
+    "translation": "vi. 属于；关于；适合",
+    "translations": [
+      "vi. 属于；关于；适合"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00042",
+    "word": "scenario",
+    "phonetic": "",
+    "translation": "n. 方案；情节；剧本；设想",
+    "translations": [
+      "n. 方案；情节；剧本；设想"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00043",
+    "word": "classify",
+    "phonetic": "",
+    "translation": "vt. 分类；分等",
+    "translations": [
+      "vt. 分类；分等"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00044",
+    "word": "nun",
+    "phonetic": "",
+    "translation": "n. 修女，尼姑",
+    "translations": [
+      "n. 修女，尼姑"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00045",
+    "word": "metabolism",
+    "phonetic": "",
+    "translation": "n. [生理] 新陈代谢",
+    "translations": [
+      "n. [生理] 新陈代谢"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00046",
+    "word": "fling",
+    "phonetic": "",
+    "translation": "n. 掷，抛；嘲弄；急冲",
+    "translations": [
+      "n. 掷，抛；嘲弄；急冲"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00047",
+    "word": "fingerprint",
+    "phonetic": "",
+    "translation": "n. 指纹；手印",
+    "translations": [
+      "n. 指纹；手印"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00048",
+    "word": "grotesque",
+    "phonetic": "",
+    "translation": "n. 奇异风格；怪异的东西",
+    "translations": [
+      "n. 奇异风格；怪异的东西"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00049",
+    "word": "pervasive",
+    "phonetic": "",
+    "translation": "adj. 普遍的；到处渗透的；流行的",
+    "translations": [
+      "adj. 普遍的；到处渗透的；流行的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00050",
+    "word": "magnetic",
+    "phonetic": "",
+    "translation": "adj. 地磁的；有磁性的；有吸引力的",
+    "translations": [
+      "adj. 地磁的；有磁性的；有吸引力的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00051",
+    "word": "exemplify",
+    "phonetic": "",
+    "translation": "vt. 例证；例示",
+    "translations": [
+      "vt. 例证；例示"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00052",
+    "word": "gradually",
+    "phonetic": "",
+    "translation": "adv. 逐步地；渐渐地",
+    "translations": [
+      "adv. 逐步地；渐渐地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00053",
+    "word": "effectively",
+    "phonetic": "",
+    "translation": "adv. 有效地，生效地；有力地；实际上",
+    "translations": [
+      "adv. 有效地，生效地；有力地；实际上"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00054",
+    "word": "impulse",
+    "phonetic": "",
+    "translation": "n. 冲动；[电子] 脉冲；刺激；神经冲动；推动力",
+    "translations": [
+      "n. 冲动；[电子] 脉冲；刺激；神经冲动；推动力"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00055",
+    "word": "reintroduce",
+    "phonetic": "",
+    "translation": "vt. 再引入；再提出；再介绍",
+    "translations": [
+      "vt. 再引入；再提出；再介绍"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00056",
+    "word": "visualize",
+    "phonetic": "",
+    "translation": "vt. 形象，形象化；想像，设想",
+    "translations": [
+      "vt. 形象，形象化；想像，设想"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00057",
+    "word": "viper",
+    "phonetic": "",
+    "translation": "n. 毒蛇；毒如蛇蝎的人，阴险的人",
+    "translations": [
+      "n. 毒蛇；毒如蛇蝎的人，阴险的人"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00058",
+    "word": "phonograph",
+    "phonetic": "",
+    "translation": "n. 留声机；[电子] 电唱机",
+    "translations": [
+      "n. 留声机；[电子] 电唱机"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00059",
+    "word": "inventor",
+    "phonetic": "",
+    "translation": "n. 发明家；[专利] 发明人；创造者",
+    "translations": [
+      "n. 发明家；[专利] 发明人；创造者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00060",
+    "word": "shunt",
+    "phonetic": "",
+    "translation": "vt. 使转轨；使分流；回避讨论；推延",
+    "translations": [
+      "vt. 使转轨；使分流；回避讨论；推延"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00061",
+    "word": "swathe",
+    "phonetic": "",
+    "translation": "n. 带子，绷带；包装品",
+    "translations": [
+      "n. 带子，绷带；包装品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00062",
+    "word": "transitional",
+    "phonetic": "",
+    "translation": "adj. 变迁的；过渡期的",
+    "translations": [
+      "adj. 变迁的；过渡期的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00063",
+    "word": "venal",
+    "phonetic": "",
+    "translation": "adj. 贪污的；用金钱买得的；贿赂的；贪赃枉法的",
+    "translations": [
+      "adj. 贪污的；用金钱买得的；贿赂的；贪赃枉法的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00064",
+    "word": "collision",
+    "phonetic": "",
+    "translation": "n. 碰撞；冲突；（意见，看法）的抵触；（政党等的）倾轧",
+    "translations": [
+      "n. 碰撞；冲突；（意见，看法）的抵触；（政党等的）倾轧"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00065",
+    "word": "transcend",
+    "phonetic": "",
+    "translation": "vt. 胜过，超越",
+    "translations": [
+      "vt. 胜过，超越"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00066",
+    "word": "methodology",
+    "phonetic": "",
+    "translation": "n. 方法学，方法论",
+    "translations": [
+      "n. 方法学，方法论"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00067",
+    "word": "mudguard",
+    "phonetic": "",
+    "translation": "挡泥板",
+    "translations": [
+      "挡泥板"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00068",
+    "word": "knot",
+    "phonetic": "",
+    "translation": "n. （绳等的）结；节瘤，疙瘩；海里/小时（航速单位）",
+    "translations": [
+      "n. （绳等的）结；节瘤，疙瘩；海里/小时（航速单位）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00069",
+    "word": "exotic",
+    "phonetic": "",
+    "translation": "adj. 异国的；外来的；异国情调的",
+    "translations": [
+      "adj. 异国的；外来的；异国情调的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00070",
+    "word": "microbe",
+    "phonetic": "",
+    "translation": "n. 细菌，微生物",
+    "translations": [
+      "n. 细菌，微生物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00071",
+    "word": "realistic",
+    "phonetic": "",
+    "translation": "adj. 现实的；现实主义的；逼真的；实在论的",
+    "translations": [
+      "adj. 现实的；现实主义的；逼真的；实在论的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00072",
+    "word": "academy",
+    "phonetic": "",
+    "translation": "n. 学院；研究院；学会；专科院校",
+    "translations": [
+      "n. 学院；研究院；学会；专科院校"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00073",
+    "word": "submit",
+    "phonetic": "",
+    "translation": "vi. 提交；服从",
+    "translations": [
+      "vi. 提交；服从"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00074",
+    "word": "imperial",
+    "phonetic": "",
+    "translation": "n. 纸张尺寸；特等品",
+    "translations": [
+      "n. 纸张尺寸；特等品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00075",
+    "word": "navigation",
+    "phonetic": "",
+    "translation": "n. 航行；航海",
+    "translations": [
+      "n. 航行；航海"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00076",
+    "word": "yellow fever",
+    "phonetic": "",
+    "translation": "n. 黄热病（热带疾病，可导致死亡）",
+    "translations": [
+      "n. 黄热病（热带疾病，可导致死亡）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00077",
+    "word": "empathy",
+    "phonetic": "",
+    "translation": "n. 神入；移情作用；执着",
+    "translations": [
+      "n. 神入；移情作用；执着"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00078",
+    "word": "horizon",
+    "phonetic": "",
+    "translation": "n. [天] 地平线；视野；眼界；范围",
+    "translations": [
+      "n. [天] 地平线；视野；眼界；范围"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00079",
+    "word": "apologize",
+    "phonetic": "",
+    "translation": "vi. 道歉；辩解；赔不是",
+    "translations": [
+      "vi. 道歉；辩解；赔不是"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00080",
+    "word": "inflammatory",
+    "phonetic": "",
+    "translation": "adj. 炎症性的；煽动性的；激动的",
+    "translations": [
+      "adj. 炎症性的；煽动性的；激动的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00081",
+    "word": "subsequently",
+    "phonetic": "",
+    "translation": "adv. 随后，其后；后来",
+    "translations": [
+      "adv. 随后，其后；后来"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00082",
+    "word": "hum",
+    "phonetic": "",
+    "translation": "n. 嗡嗡声；哼声；杂声",
+    "translations": [
+      "n. 嗡嗡声；哼声；杂声"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00083",
+    "word": "bravery",
+    "phonetic": "",
+    "translation": "n. 勇敢；勇气",
+    "translations": [
+      "n. 勇敢；勇气"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00084",
+    "word": "masonry",
+    "phonetic": "",
+    "translation": "n. 石工；石工行业；石造建筑",
+    "translations": [
+      "n. 石工；石工行业；石造建筑"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00085",
+    "word": "confess",
+    "phonetic": "",
+    "translation": "vi. 承认；坦白；忏悔；供认",
+    "translations": [
+      "vi. 承认；坦白；忏悔；供认"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00086",
+    "word": "majestic",
+    "phonetic": "",
+    "translation": "adj. 庄严的；宏伟的",
+    "translations": [
+      "adj. 庄严的；宏伟的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00087",
+    "word": "appellation",
+    "phonetic": "",
+    "translation": "n. 称呼；名称；名目",
+    "translations": [
+      "n. 称呼；名称；名目"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00088",
+    "word": "centric",
+    "phonetic": "",
+    "translation": "adj. 中央的，中心的",
+    "translations": [
+      "adj. 中央的，中心的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00089",
+    "word": "jack",
+    "phonetic": "",
+    "translation": "n. 千斤顶；[电] 插座；男人",
+    "translations": [
+      "n. 千斤顶；[电] 插座；男人"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00090",
+    "word": "rhythmical",
+    "phonetic": "",
+    "translation": "adj. 有节奏的；有韵律的",
+    "translations": [
+      "adj. 有节奏的；有韵律的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00091",
+    "word": "concoct",
+    "phonetic": "",
+    "translation": "vt. 捏造；混合而制；调合；图谋",
+    "translations": [
+      "vt. 捏造；混合而制；调合；图谋"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00092",
+    "word": "devolution",
+    "phonetic": "",
+    "translation": "n. 相传，转移；委付；依次；落下",
+    "translations": [
+      "n. 相传，转移；委付；依次；落下"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00093",
+    "word": "embarrass",
+    "phonetic": "",
+    "translation": "vt. 使局促不安；使困窘；阻碍",
+    "translations": [
+      "vt. 使局促不安；使困窘；阻碍"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00094",
+    "word": "consistency",
+    "phonetic": "",
+    "translation": "n. [计] 一致性；稠度；相容性",
+    "translations": [
+      "n. [计] 一致性；稠度；相容性"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00095",
+    "word": "variable",
+    "phonetic": "",
+    "translation": "n. [数] 变量；可变物，可变因素",
+    "translations": [
+      "n. [数] 变量；可变物，可变因素"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00096",
+    "word": "dramatically",
+    "phonetic": "",
+    "translation": "adv. 戏剧地；引人注目地",
+    "translations": [
+      "adv. 戏剧地；引人注目地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00097",
+    "word": "trivialize",
+    "phonetic": "",
+    "translation": "vt. 使平凡；使琐碎",
+    "translations": [
+      "vt. 使平凡；使琐碎"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00098",
+    "word": "tenet",
+    "phonetic": "",
+    "translation": "n. 原则；信条；教义",
+    "translations": [
+      "n. 原则；信条；教义"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00099",
+    "word": "worsen",
+    "phonetic": "",
+    "translation": "vi. 恶化；变得更坏；更坏",
+    "translations": [
+      "vi. 恶化；变得更坏；更坏"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00100",
+    "word": "engender",
+    "phonetic": "",
+    "translation": "vt. 使产生；造成",
+    "translations": [
+      "vt. 使产生；造成"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00101",
+    "word": "outbound",
+    "phonetic": "",
+    "translation": "adj. 出站；驶向外国的，向外去的",
+    "translations": [
+      "adj. 出站；驶向外国的，向外去的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00102",
+    "word": "oceanic",
+    "phonetic": "",
+    "translation": "adj. 海洋的；海洋产出的；在海洋中生活的；广阔无垠的",
+    "translations": [
+      "adj. 海洋的；海洋产出的；在海洋中生活的；广阔无垠的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00103",
+    "word": "curriculum",
+    "phonetic": "",
+    "translation": "n. 课程",
+    "translations": [
+      "n. 课程"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00104",
+    "word": "disorder",
+    "phonetic": "",
+    "translation": "n. 混乱；骚乱",
+    "translations": [
+      "n. 混乱；骚乱"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00105",
+    "word": "karat",
+    "phonetic": "",
+    "translation": "n. 开（黄金成色单位）；克拉（宝石的重量单位，等于carat）",
+    "translations": [
+      "n. 开（黄金成色单位）；克拉（宝石的重量单位，等于carat）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00106",
+    "word": "bovine",
+    "phonetic": "",
+    "translation": "n. 牛科动物",
+    "translations": [
+      "n. 牛科动物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00107",
+    "word": "saturate",
+    "phonetic": "",
+    "translation": "adj. 浸透的，饱和的；深颜色的",
+    "translations": [
+      "adj. 浸透的，饱和的；深颜色的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00108",
+    "word": "grandiose",
+    "phonetic": "",
+    "translation": "adj. 宏伟的；堂皇的；浮夸的；宏大的",
+    "translations": [
+      "adj. 宏伟的；堂皇的；浮夸的；宏大的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00109",
+    "word": "folder",
+    "phonetic": "",
+    "translation": "n. 文件夹；折叠机；折叠式印刷品",
+    "translations": [
+      "n. 文件夹；折叠机；折叠式印刷品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00110",
+    "word": "carefree",
+    "phonetic": "",
+    "translation": "adj. 无忧无虑的；不负责的",
+    "translations": [
+      "adj. 无忧无虑的；不负责的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00111",
+    "word": "helpful",
+    "phonetic": "",
+    "translation": "adj. 有帮助的；有益的",
+    "translations": [
+      "adj. 有帮助的；有益的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00112",
+    "word": "false positive",
+    "phonetic": "",
+    "translation": "误报",
+    "translations": [
+      "误报"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00113",
+    "word": "binge",
+    "phonetic": "",
+    "translation": "n. 狂欢，狂闹；放纵",
+    "translations": [
+      "n. 狂欢，狂闹；放纵"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00114",
+    "word": "mysterious",
+    "phonetic": "",
+    "translation": "adj. 神秘的；不可思议的；难解的",
+    "translations": [
+      "adj. 神秘的；不可思议的；难解的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00115",
+    "word": "colonist",
+    "phonetic": "",
+    "translation": "n. 殖民者；殖民地居民；移民",
+    "translations": [
+      "n. 殖民者；殖民地居民；移民"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00116",
+    "word": "recommendation",
+    "phonetic": "",
+    "translation": "n. 推荐；建议；推荐信",
+    "translations": [
+      "n. 推荐；建议；推荐信"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00117",
+    "word": "shove",
+    "phonetic": "",
+    "translation": "n. 推；挤",
+    "translations": [
+      "n. 推；挤"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00118",
+    "word": "herald",
+    "phonetic": "",
+    "translation": "n. 预兆，征兆；先驱；传令官；报信者",
+    "translations": [
+      "n. 预兆，征兆；先驱；传令官；报信者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00119",
+    "word": "persuasive",
+    "phonetic": "",
+    "translation": "adj. 有说服力的；劝诱的，劝说的",
+    "translations": [
+      "adj. 有说服力的；劝诱的，劝说的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00120",
+    "word": "circulation",
+    "phonetic": "",
+    "translation": "n. 流通，传播；循环；发行量",
+    "translations": [
+      "n. 流通，传播；循环；发行量"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00121",
+    "word": "surge",
+    "phonetic": "",
+    "translation": "n. 汹涌；大浪，波涛；汹涌澎湃；巨涌",
+    "translations": [
+      "n. 汹涌；大浪，波涛；汹涌澎湃；巨涌"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00122",
+    "word": "constitute",
+    "phonetic": "",
+    "translation": "vt. 组成，构成；建立；任命",
+    "translations": [
+      "vt. 组成，构成；建立；任命"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00123",
+    "word": "distortion",
+    "phonetic": "",
+    "translation": "n. 变形；[物] 失真；扭曲；曲解",
+    "translations": [
+      "n. 变形；[物] 失真；扭曲；曲解"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00124",
+    "word": "fatality",
+    "phonetic": "",
+    "translation": "n. 死亡；宿命；致命性；不幸；灾祸",
+    "translations": [
+      "n. 死亡；宿命；致命性；不幸；灾祸"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00125",
+    "word": "figurative",
+    "phonetic": "",
+    "translation": "adj. 比喻的；修饰丰富的；形容多的",
+    "translations": [
+      "adj. 比喻的；修饰丰富的；形容多的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00126",
+    "word": "riddle",
+    "phonetic": "",
+    "translation": "n. 谜语；粗筛；谜一般的人、东西、事情等",
+    "translations": [
+      "n. 谜语；粗筛；谜一般的人、东西、事情等"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00127",
+    "word": "bow",
+    "phonetic": "",
+    "translation": "n. 弓；鞠躬；船首",
+    "translations": [
+      "n. 弓；鞠躬；船首"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00128",
+    "word": "mechanics",
+    "phonetic": "",
+    "translation": "n. 力学（用作单数）；结构；技术；机械学（用作单数）",
+    "translations": [
+      "n. 力学（用作单数）；结构；技术；机械学（用作单数）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00129",
+    "word": "cowpox",
+    "phonetic": "",
+    "translation": "n. [兽医] 牛痘",
+    "translations": [
+      "n. [兽医] 牛痘"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00130",
+    "word": "trajectory",
+    "phonetic": "",
+    "translation": "n. [物] 轨道，轨线；[航][军] 弹道",
+    "translations": [
+      "n. [物] 轨道，轨线；[航][军] 弹道"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00131",
+    "word": "splash",
+    "phonetic": "",
+    "translation": "n. 飞溅的水；污点；卖弄",
+    "translations": [
+      "n. 飞溅的水；污点；卖弄"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00132",
+    "word": "formalistic",
+    "phonetic": "",
+    "translation": "形式主义",
+    "translations": [
+      "形式主义"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00133",
+    "word": "departure",
+    "phonetic": "",
+    "translation": "n. 离开；出发；违背",
+    "translations": [
+      "n. 离开；出发；违背"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00134",
+    "word": "sediment",
+    "phonetic": "",
+    "translation": "n. 沉积；沉淀物",
+    "translations": [
+      "n. 沉积；沉淀物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00135",
+    "word": "donor",
+    "phonetic": "",
+    "translation": "n. 捐赠者；供者；赠送人",
+    "translations": [
+      "n. 捐赠者；供者；赠送人"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00136",
+    "word": "conversion",
+    "phonetic": "",
+    "translation": "n. 转换；变换；[金融] 兑换；改变信仰",
+    "translations": [
+      "n. 转换；变换；[金融] 兑换；改变信仰"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00137",
+    "word": "adventurous",
+    "phonetic": "",
+    "translation": "adj. 爱冒险的；大胆的；充满危险的",
+    "translations": [
+      "adj. 爱冒险的；大胆的；充满危险的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00138",
+    "word": "ornament",
+    "phonetic": "",
+    "translation": "n. 装饰；[建][服装] 装饰物；教堂用品",
+    "translations": [
+      "n. 装饰；[建][服装] 装饰物；教堂用品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00139",
+    "word": "bibliography",
+    "phonetic": "",
+    "translation": "n. 参考书目；文献目录",
+    "translations": [
+      "n. 参考书目；文献目录"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00140",
+    "word": "urgency",
+    "phonetic": "",
+    "translation": "n. 紧急；催促；紧急的事",
+    "translations": [
+      "n. 紧急；催促；紧急的事"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00141",
+    "word": "inventive",
+    "phonetic": "",
+    "translation": "adj. 发明的；有发明才能的；独出心裁的",
+    "translations": [
+      "adj. 发明的；有发明才能的；独出心裁的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00142",
+    "word": "refurbish",
+    "phonetic": "",
+    "translation": "vt. 刷新；再磨光",
+    "translations": [
+      "vt. 刷新；再磨光"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00143",
+    "word": "habitat",
+    "phonetic": "",
+    "translation": "n. [生态] 栖息地，产地",
+    "translations": [
+      "n. [生态] 栖息地，产地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00144",
+    "word": "corollary",
+    "phonetic": "",
+    "translation": "n. 推论；必然的结果",
+    "translations": [
+      "n. 推论；必然的结果"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00145",
+    "word": "Everest",
+    "phonetic": "",
+    "translation": "n. 珠穆朗玛峰（世界最高峰）",
+    "translations": [
+      "n. 珠穆朗玛峰（世界最高峰）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00146",
+    "word": "constantly",
+    "phonetic": "",
+    "translation": "adv. 不断地；时常地",
+    "translations": [
+      "adv. 不断地；时常地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00147",
+    "word": "guru",
+    "phonetic": "",
+    "translation": "n. 古鲁（指印度教等宗教的宗师或领袖）；领袖；专家",
+    "translations": [
+      "n. 古鲁（指印度教等宗教的宗师或领袖）；领袖；专家"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00148",
+    "word": "scrutinize",
+    "phonetic": "",
+    "translation": "n. 仔细或彻底检查",
+    "translations": [
+      "n. 仔细或彻底检查"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00149",
+    "word": "strive",
+    "phonetic": "",
+    "translation": "vi. 努力；奋斗；抗争",
+    "translations": [
+      "vi. 努力；奋斗；抗争"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00150",
+    "word": "analyse",
+    "phonetic": "",
+    "translation": "vt. 分析；分解；细察",
+    "translations": [
+      "vt. 分析；分解；细察"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00151",
+    "word": "regimen",
+    "phonetic": "",
+    "translation": "n. [医] 养生法；生活规则；政体；支配",
+    "translations": [
+      "n. [医] 养生法；生活规则；政体；支配"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00152",
+    "word": "gladiator",
+    "phonetic": "",
+    "translation": "n. 斗剑者；古罗马公开表演的格斗者；争论者",
+    "translations": [
+      "n. 斗剑者；古罗马公开表演的格斗者；争论者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00153",
+    "word": "irrational",
+    "phonetic": "",
+    "translation": "n. [数] 无理数",
+    "translations": [
+      "n. [数] 无理数"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00154",
+    "word": "dissipate",
+    "phonetic": "",
+    "translation": "vi. 驱散；放荡",
+    "translations": [
+      "vi. 驱散；放荡"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00155",
+    "word": "convey",
+    "phonetic": "",
+    "translation": "vt. 传达；运输；让与",
+    "translations": [
+      "vt. 传达；运输；让与"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00156",
+    "word": "horn",
+    "phonetic": "",
+    "translation": "n. 喇叭，号角；角",
+    "translations": [
+      "n. 喇叭，号角；角"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00157",
+    "word": "pluralism",
+    "phonetic": "",
+    "translation": "n. 多元主义；多元论；兼任",
+    "translations": [
+      "n. 多元主义；多元论；兼任"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00158",
+    "word": "chef",
+    "phonetic": "",
+    "translation": "n. 厨师，大师傅",
+    "translations": [
+      "n. 厨师，大师傅"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00159",
+    "word": "nucleus",
+    "phonetic": "",
+    "translation": "n. 核，核心；原子核",
+    "translations": [
+      "n. 核，核心；原子核"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00160",
+    "word": "traumatic",
+    "phonetic": "",
+    "translation": "adj. （生理）外伤的",
+    "translations": [
+      "adj. （生理）外伤的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00161",
+    "word": "skyscraper",
+    "phonetic": "",
+    "translation": "n. 摩天楼，超高层大楼；特别高的东西",
+    "translations": [
+      "n. 摩天楼，超高层大楼；特别高的东西"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00162",
+    "word": "regurgitation",
+    "phonetic": "",
+    "translation": "n. 回流；反刍；流回",
+    "translations": [
+      "n. 回流；反刍；流回"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00163",
+    "word": "ailment",
+    "phonetic": "",
+    "translation": "n. 小病；不安",
+    "translations": [
+      "n. 小病；不安"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00164",
+    "word": "cohort",
+    "phonetic": "",
+    "translation": "n. 一群；步兵大队；支持者；同生群",
+    "translations": [
+      "n. 一群；步兵大队；支持者；同生群"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00165",
+    "word": "thaw",
+    "phonetic": "",
+    "translation": "n. 解冻；融雪",
+    "translations": [
+      "n. 解冻；融雪"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00166",
+    "word": "compost",
+    "phonetic": "",
+    "translation": "n. 堆肥；混合物",
+    "translations": [
+      "n. 堆肥；混合物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00167",
+    "word": "pathology",
+    "phonetic": "",
+    "translation": "n. 病理（学）; 〈比喻〉异常状态",
+    "translations": [
+      "n. 病理（学）; 〈比喻〉异常状态"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00168",
+    "word": "flap",
+    "phonetic": "",
+    "translation": "n. 拍打，拍打声；神经紧张；[航] 襟翼",
+    "translations": [
+      "n. 拍打，拍打声；神经紧张；[航] 襟翼"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00169",
+    "word": "partisan",
+    "phonetic": "",
+    "translation": "n. 游击队；虔诚信徒；党羽",
+    "translations": [
+      "n. 游击队；虔诚信徒；党羽"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00170",
+    "word": "reap",
+    "phonetic": "",
+    "translation": "vt. 收获，获得；收割",
+    "translations": [
+      "vt. 收获，获得；收割"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00171",
+    "word": "socioeconomic",
+    "phonetic": "",
+    "translation": "adj. 社会经济学的",
+    "translations": [
+      "adj. 社会经济学的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00172",
+    "word": "rectify",
+    "phonetic": "",
+    "translation": "vt. 改正；精馏；整流",
+    "translations": [
+      "vt. 改正；精馏；整流"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00173",
+    "word": "shortfall",
+    "phonetic": "",
+    "translation": "n. 差额；缺少",
+    "translations": [
+      "n. 差额；缺少"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00174",
+    "word": "chlorophyll",
+    "phonetic": "",
+    "translation": "n. [植][生化] 叶绿素",
+    "translations": [
+      "n. [植][生化] 叶绿素"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00175",
+    "word": "hardware",
+    "phonetic": "",
+    "translation": "n. 计算机硬件；五金器具",
+    "translations": [
+      "n. 计算机硬件；五金器具"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00176",
+    "word": "reconstruction",
+    "phonetic": "",
+    "translation": "n. 再建，重建；改造；复兴",
+    "translations": [
+      "n. 再建，重建；改造；复兴"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00177",
+    "word": "optimistic",
+    "phonetic": "",
+    "translation": "adj. 乐观的；乐观主义的",
+    "translations": [
+      "adj. 乐观的；乐观主义的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00178",
+    "word": "hormone",
+    "phonetic": "",
+    "translation": "n. [生理] 激素，荷尔蒙",
+    "translations": [
+      "n. [生理] 激素，荷尔蒙"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00179",
+    "word": "transmission",
+    "phonetic": "",
+    "translation": "n. 传动装置，[机] 变速器；传递；传送；播送",
+    "translations": [
+      "n. 传动装置，[机] 变速器；传递；传送；播送"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00180",
+    "word": "aboard",
+    "phonetic": "",
+    "translation": "prep. 在…上",
+    "translations": [
+      "prep. 在…上"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00181",
+    "word": "hubcap",
+    "phonetic": "",
+    "translation": "轮辋",
+    "translations": [
+      "轮辋"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00182",
+    "word": "tag",
+    "phonetic": "",
+    "translation": "n. 标签；名称；结束语；附属物",
+    "translations": [
+      "n. 标签；名称；结束语；附属物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00183",
+    "word": "convenient",
+    "phonetic": "",
+    "translation": "adj. 方便的；[废语]适当的；[口语]近便的；实用的",
+    "translations": [
+      "adj. 方便的；[废语]适当的；[口语]近便的；实用的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00184",
+    "word": "tornado",
+    "phonetic": "",
+    "translation": "n. [气象] 龙卷风；旋风；暴风；大雷雨",
+    "translations": [
+      "n. [气象] 龙卷风；旋风；暴风；大雷雨"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00185",
+    "word": "degradation",
+    "phonetic": "",
+    "translation": "n. 退化；降格，降级；堕落",
+    "translations": [
+      "n. 退化；降格，降级；堕落"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00186",
+    "word": "Nestle",
+    "phonetic": "",
+    "translation": "雀巢",
+    "translations": [
+      "雀巢"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00187",
+    "word": "oceanologist",
+    "phonetic": "",
+    "translation": "海洋学家",
+    "translations": [
+      "海洋学家"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00188",
+    "word": "invention",
+    "phonetic": "",
+    "translation": "n. 发明；发明物；虚构；发明才能",
+    "translations": [
+      "n. 发明；发明物；虚构；发明才能"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00189",
+    "word": "invoice",
+    "phonetic": "",
+    "translation": "n. 账单，发货单，收款请求",
+    "translations": [
+      "n. 账单，发货单，收款请求"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00190",
+    "word": "beaver",
+    "phonetic": "",
+    "translation": "n. 海狸；海狸皮毛",
+    "translations": [
+      "n. 海狸；海狸皮毛"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00191",
+    "word": "gloom",
+    "phonetic": "",
+    "translation": "n. 昏暗；阴暗",
+    "translations": [
+      "n. 昏暗；阴暗"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00192",
+    "word": "sequence",
+    "phonetic": "",
+    "translation": "n. [数][计] 序列；顺序；续发事件",
+    "translations": [
+      "n. [数][计] 序列；顺序；续发事件"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00193",
+    "word": "novelty",
+    "phonetic": "",
+    "translation": "n. 新奇；新奇的事物；新颖小巧而廉价的物品",
+    "translations": [
+      "n. 新奇；新奇的事物；新颖小巧而廉价的物品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00194",
+    "word": "spike",
+    "phonetic": "",
+    "translation": "n. 长钉，道钉；钉鞋；细高跟",
+    "translations": [
+      "n. 长钉，道钉；钉鞋；细高跟"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00195",
+    "word": "fanatic",
+    "phonetic": "",
+    "translation": "n. 狂热入迷者；盲信者；盲信",
+    "translations": [
+      "n. 狂热入迷者；盲信者；盲信"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00196",
+    "word": "binary",
+    "phonetic": "",
+    "translation": "adj. [数] 二进制的；二元的，二态的",
+    "translations": [
+      "adj. [数] 二进制的；二元的，二态的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00197",
+    "word": "ridge",
+    "phonetic": "",
+    "translation": "n. 山脊；山脉；屋脊",
+    "translations": [
+      "n. 山脊；山脉；屋脊"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00198",
+    "word": "inconceivable",
+    "phonetic": "",
+    "translation": "adj. 不可思议的；难以置信的；不能想象的；非凡的",
+    "translations": [
+      "adj. 不可思议的；难以置信的；不能想象的；非凡的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00199",
+    "word": "stagnate",
+    "phonetic": "",
+    "translation": "vt. 使淤塞；使沉滞；使萧条",
+    "translations": [
+      "vt. 使淤塞；使沉滞；使萧条"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00200",
+    "word": "noticeable",
+    "phonetic": "",
+    "translation": "adj. 显而易见的，显著的；值得注意的",
+    "translations": [
+      "adj. 显而易见的，显著的；值得注意的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00201",
+    "word": "caffeine",
+    "phonetic": "",
+    "translation": "n. [有化][药] 咖啡因；茶精（兴奋剂）",
+    "translations": [
+      "n. [有化][药] 咖啡因；茶精（兴奋剂）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00202",
+    "word": "domain",
+    "phonetic": "",
+    "translation": "n. 领域；域名；产业；地产",
+    "translations": [
+      "n. 领域；域名；产业；地产"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00203",
+    "word": "hydrogen",
+    "phonetic": "",
+    "translation": "n. [化学] 氢",
+    "translations": [
+      "n. [化学] 氢"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00204",
+    "word": "excitable",
+    "phonetic": "",
+    "translation": "adj. 易激动的；易兴奋的；易怒的",
+    "translations": [
+      "adj. 易激动的；易兴奋的；易怒的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00205",
+    "word": "succinct",
+    "phonetic": "",
+    "translation": "adj. 简洁的；简明的；紧身的",
+    "translations": [
+      "adj. 简洁的；简明的；紧身的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00206",
+    "word": "expansion",
+    "phonetic": "",
+    "translation": "n. 膨胀；阐述；扩张物",
+    "translations": [
+      "n. 膨胀；阐述；扩张物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00207",
+    "word": "inoculation",
+    "phonetic": "",
+    "translation": "n. [医] 接种；接木；接插芽",
+    "translations": [
+      "n. [医] 接种；接木；接插芽"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00208",
+    "word": "spectrum",
+    "phonetic": "",
+    "translation": "n. 光谱；频谱；范围；余象",
+    "translations": [
+      "n. 光谱；频谱；范围；余象"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00209",
+    "word": "elk",
+    "phonetic": "",
+    "translation": "n. 麋鹿；软鞣粗皮；驼鹿皮革",
+    "translations": [
+      "n. 麋鹿；软鞣粗皮；驼鹿皮革"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00210",
+    "word": "illusion",
+    "phonetic": "",
+    "translation": "n. 幻觉，错觉；错误的观念或信仰",
+    "translations": [
+      "n. 幻觉，错觉；错误的观念或信仰"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00211",
+    "word": "multigrade",
+    "phonetic": "",
+    "translation": "稠化了的",
+    "translations": [
+      "稠化了的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00212",
+    "word": "nimbus",
+    "phonetic": "",
+    "translation": "雨云",
+    "translations": [
+      "雨云"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00213",
+    "word": "alleviate",
+    "phonetic": "",
+    "translation": "vt. 减轻，缓和",
+    "translations": [
+      "vt. 减轻，缓和"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00214",
+    "word": "competent",
+    "phonetic": "",
+    "translation": "adj. 胜任的；有能力的；能干的；足够的",
+    "translations": [
+      "adj. 胜任的；有能力的；能干的；足够的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00215",
+    "word": "predictable",
+    "phonetic": "",
+    "translation": "adj. 可预言的",
+    "translations": [
+      "adj. 可预言的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00216",
+    "word": "delicacy",
+    "phonetic": "",
+    "translation": "n. 美味；佳肴；微妙；精密；精美；敏锐，敏感；世故，圆滑",
+    "translations": [
+      "n. 美味；佳肴；微妙；精密；精美；敏锐，敏感；世故，圆滑"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00217",
+    "word": "vigorous",
+    "phonetic": "",
+    "translation": "adj. 有力的；精力充沛的",
+    "translations": [
+      "adj. 有力的；精力充沛的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00218",
+    "word": "drill",
+    "phonetic": "",
+    "translation": "n. 训练；钻孔机；钻子；播种机",
+    "translations": [
+      "n. 训练；钻孔机；钻子；播种机"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00219",
+    "word": "creed",
+    "phonetic": "",
+    "translation": "n. 信条，教义",
+    "translations": [
+      "n. 信条，教义"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00220",
+    "word": "exacerbate",
+    "phonetic": "",
+    "translation": "vt. 使加剧；使恶化；激怒",
+    "translations": [
+      "vt. 使加剧；使恶化；激怒"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00221",
+    "word": "pedestrian",
+    "phonetic": "",
+    "translation": "n. 行人；步行者",
+    "translations": [
+      "n. 行人；步行者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00222",
+    "word": "logically",
+    "phonetic": "",
+    "translation": "adv. 逻辑上；合乎逻辑",
+    "translations": [
+      "adv. 逻辑上；合乎逻辑"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00223",
+    "word": "translocation",
+    "phonetic": "",
+    "translation": "n. [遗] 易位；迁移，移动；改变位置（半透明性）；置换",
+    "translations": [
+      "n. [遗] 易位；迁移，移动；改变位置（半透明性）；置换"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00224",
+    "word": "implementation",
+    "phonetic": "",
+    "translation": "n. [计] 实现；履行；安装启用",
+    "translations": [
+      "n. [计] 实现；履行；安装启用"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00225",
+    "word": "at stake",
+    "phonetic": "",
+    "translation": "na. 被赌着；在危险中；利害[生死]攸关",
+    "translations": [
+      "na. 被赌着；在危险中；利害[生死]攸关"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00226",
+    "word": "commensurate",
+    "phonetic": "",
+    "translation": "adj. 相称的；同量的；同样大小的",
+    "translations": [
+      "adj. 相称的；同量的；同样大小的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00227",
+    "word": "clinical",
+    "phonetic": "",
+    "translation": "adj. 临床的；诊所的",
+    "translations": [
+      "adj. 临床的；诊所的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00228",
+    "word": "vicious",
+    "phonetic": "",
+    "translation": "adj. 恶毒的；恶意的；堕落的；有错误的；品性不端的；剧烈的",
+    "translations": [
+      "adj. 恶毒的；恶意的；堕落的；有错误的；品性不端的；剧烈的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00229",
+    "word": "exploitative",
+    "phonetic": "",
+    "translation": "adj. 剥削的；利用的；开发资源的",
+    "translations": [
+      "adj. 剥削的；利用的；开发资源的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00230",
+    "word": "potion",
+    "phonetic": "",
+    "translation": "n. 一剂；一服；饮剂",
+    "translations": [
+      "n. 一剂；一服；饮剂"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00231",
+    "word": "benchmark",
+    "phonetic": "",
+    "translation": "n. 基准；标准检查程序",
+    "translations": [
+      "n. 基准；标准检查程序"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00232",
+    "word": "conspiracy",
+    "phonetic": "",
+    "translation": "n. 阴谋；共谋；阴谋集团",
+    "translations": [
+      "n. 阴谋；共谋；阴谋集团"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00233",
+    "word": "Kaleidoscope",
+    "phonetic": "",
+    "translation": "万花筒",
+    "translations": [
+      "万花筒"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00234",
+    "word": "rampant",
+    "phonetic": "",
+    "translation": "adj. 猖獗的；蔓延的；狂暴的；奔放的",
+    "translations": [
+      "adj. 猖獗的；蔓延的；狂暴的；奔放的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00235",
+    "word": "update",
+    "phonetic": "",
+    "translation": "n. 更新；现代化",
+    "translations": [
+      "n. 更新；现代化"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00236",
+    "word": "mountainous",
+    "phonetic": "",
+    "translation": "adj. 多山的；巨大的；山一般的",
+    "translations": [
+      "adj. 多山的；巨大的；山一般的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00237",
+    "word": "receptionist",
+    "phonetic": "",
+    "translation": "n. 接待员；传达员",
+    "translations": [
+      "n. 接待员；传达员"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00238",
+    "word": "devastate",
+    "phonetic": "",
+    "translation": "vt. 毁灭；毁坏",
+    "translations": [
+      "vt. 毁灭；毁坏"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00239",
+    "word": "disperse",
+    "phonetic": "",
+    "translation": "vt. 分散；使散开；传播",
+    "translations": [
+      "vt. 分散；使散开；传播"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00240",
+    "word": "physician",
+    "phonetic": "",
+    "translation": "n. [医] 医师；内科医师",
+    "translations": [
+      "n. [医] 医师；内科医师"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00241",
+    "word": "icon",
+    "phonetic": "",
+    "translation": "n. 图标；偶像；肖像，画像；圣像",
+    "translations": [
+      "n. 图标；偶像；肖像，画像；圣像"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00242",
+    "word": "humanitarian",
+    "phonetic": "",
+    "translation": "n. 人道主义者；慈善家；博爱主义者；基督凡人论者",
+    "translations": [
+      "n. 人道主义者；慈善家；博爱主义者；基督凡人论者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00243",
+    "word": "perception",
+    "phonetic": "",
+    "translation": "n. 知觉；[生理] 感觉；看法；洞察力；获取",
+    "translations": [
+      "n. 知觉；[生理] 感觉；看法；洞察力；获取"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00244",
+    "word": "accommodation",
+    "phonetic": "",
+    "translation": "n. 住处，膳宿；调节；和解；预订铺位",
+    "translations": [
+      "n. 住处，膳宿；调节；和解；预订铺位"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00245",
+    "word": "implicity",
+    "phonetic": "",
+    "translation": "暗示性",
+    "translations": [
+      "暗示性"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00246",
+    "word": "democratise",
+    "phonetic": "",
+    "translation": "v. <主英>（使）民主化",
+    "translations": [
+      "v. <主英>（使）民主化"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00247",
+    "word": "coordinate",
+    "phonetic": "",
+    "translation": "n. 坐标；同等的人或物",
+    "translations": [
+      "n. 坐标；同等的人或物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00248",
+    "word": "anaesthesia",
+    "phonetic": "",
+    "translation": "n. 麻醉；麻木；感觉缺失（等于anesthesia）",
+    "translations": [
+      "n. 麻醉；麻木；感觉缺失（等于anesthesia）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00249",
+    "word": "identical",
+    "phonetic": "",
+    "translation": "n. 完全相同的事物",
+    "translations": [
+      "n. 完全相同的事物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00250",
+    "word": "infer",
+    "phonetic": "",
+    "translation": "vi. 推断；作出推论",
+    "translations": [
+      "vi. 推断；作出推论"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00251",
+    "word": "occasionally",
+    "phonetic": "",
+    "translation": "adv. 偶尔；间或",
+    "translations": [
+      "adv. 偶尔；间或"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00252",
+    "word": "accumulate",
+    "phonetic": "",
+    "translation": "vt. 积攒",
+    "translations": [
+      "vt. 积攒"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00253",
+    "word": "dodge",
+    "phonetic": "",
+    "translation": "n. 躲闪；托词",
+    "translations": [
+      "n. 躲闪；托词"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00254",
+    "word": "tome",
+    "phonetic": "",
+    "translation": "n. 册；大本书",
+    "translations": [
+      "n. 册；大本书"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00255",
+    "word": "omen",
+    "phonetic": "",
+    "translation": "n. 预兆；征兆",
+    "translations": [
+      "n. 预兆；征兆"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00256",
+    "word": "gender equality",
+    "phonetic": "",
+    "translation": "性别平等",
+    "translations": [
+      "性别平等"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00257",
+    "word": "boycott",
+    "phonetic": "",
+    "translation": "n. 联合抵制",
+    "translations": [
+      "n. 联合抵制"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00258",
+    "word": "forbid",
+    "phonetic": "",
+    "translation": "vt. 禁止；不准；不允许；〈正式〉严禁",
+    "translations": [
+      "vt. 禁止；不准；不允许；〈正式〉严禁"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00259",
+    "word": "initiate",
+    "phonetic": "",
+    "translation": "n. 开始；新加入者，接受初步知识者",
+    "translations": [
+      "n. 开始；新加入者，接受初步知识者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00260",
+    "word": "locality",
+    "phonetic": "",
+    "translation": "n. 所在；位置；地点",
+    "translations": [
+      "n. 所在；位置；地点"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00261",
+    "word": "originate",
+    "phonetic": "",
+    "translation": "vt. 引起；创作",
+    "translations": [
+      "vt. 引起；创作"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00262",
+    "word": "thread",
+    "phonetic": "",
+    "translation": "n. 线；螺纹；思路；衣服；线状物；玻璃纤维；路线",
+    "translations": [
+      "n. 线；螺纹；思路；衣服；线状物；玻璃纤维；路线"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00263",
+    "word": "atmospheric",
+    "phonetic": "",
+    "translation": "adj. 大气的，大气层的",
+    "translations": [
+      "adj. 大气的，大气层的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00264",
+    "word": "blowout",
+    "phonetic": "",
+    "translation": "n. 爆裂；喷出；[电] 保险丝烧断；井中喷水或油等",
+    "translations": [
+      "n. 爆裂；喷出；[电] 保险丝烧断；井中喷水或油等"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00265",
+    "word": "informative",
+    "phonetic": "",
+    "translation": "adj. 教育性的，有益的；情报的；见闻广博的",
+    "translations": [
+      "adj. 教育性的，有益的；情报的；见闻广博的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00266",
+    "word": "free trade",
+    "phonetic": "",
+    "translation": "n. 自由贸易（制度）",
+    "translations": [
+      "n. 自由贸易（制度）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00267",
+    "word": "palette",
+    "phonetic": "",
+    "translation": "n. 调色板；颜料",
+    "translations": [
+      "n. 调色板；颜料"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00268",
+    "word": "convergence",
+    "phonetic": "",
+    "translation": "n. [数] 收敛；会聚，集合",
+    "translations": [
+      "n. [数] 收敛；会聚，集合"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00269",
+    "word": "liability",
+    "phonetic": "",
+    "translation": "n. 责任；债务；倾向；可能性；不利因素",
+    "translations": [
+      "n. 责任；债务；倾向；可能性；不利因素"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00270",
+    "word": "intermediate",
+    "phonetic": "",
+    "translation": "n. [化学] 中间物；媒介",
+    "translations": [
+      "n. [化学] 中间物；媒介"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00271",
+    "word": "scatter",
+    "phonetic": "",
+    "translation": "n. 分散；散播，撒播",
+    "translations": [
+      "n. 分散；散播，撒播"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00272",
+    "word": "honestly",
+    "phonetic": "",
+    "translation": "adv. 真诚地；公正地",
+    "translations": [
+      "adv. 真诚地；公正地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00273",
+    "word": "recoup",
+    "phonetic": "",
+    "translation": "vt. 收回；恢复；偿还；扣除",
+    "translations": [
+      "vt. 收回；恢复；偿还；扣除"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00274",
+    "word": "diameter",
+    "phonetic": "",
+    "translation": "n. 直径",
+    "translations": [
+      "n. 直径"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00275",
+    "word": "momentary",
+    "phonetic": "",
+    "translation": "adj. 瞬间的；短暂的；随时会发生的",
+    "translations": [
+      "adj. 瞬间的；短暂的；随时会发生的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00276",
+    "word": "dilemma",
+    "phonetic": "",
+    "translation": "n. 困境；进退两难；两刀论法",
+    "translations": [
+      "n. 困境；进退两难；两刀论法"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00277",
+    "word": "prerequisite",
+    "phonetic": "",
+    "translation": "n. 先决条件",
+    "translations": [
+      "n. 先决条件"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00278",
+    "word": "exclusive",
+    "phonetic": "",
+    "translation": "n. 独家新闻；独家经营的项目；排外者",
+    "translations": [
+      "n. 独家新闻；独家经营的项目；排外者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00279",
+    "word": "pedigree",
+    "phonetic": "",
+    "translation": "n. 血统；家谱",
+    "translations": [
+      "n. 血统；家谱"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00280",
+    "word": "intent",
+    "phonetic": "",
+    "translation": "n. 意图；目的；含义",
+    "translations": [
+      "n. 意图；目的；含义"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00281",
+    "word": "earnestly",
+    "phonetic": "",
+    "translation": "adv. 认真地；诚挚地",
+    "translations": [
+      "adv. 认真地；诚挚地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00282",
+    "word": "physicist",
+    "phonetic": "",
+    "translation": "n. 物理学家；唯物论者",
+    "translations": [
+      "n. 物理学家；唯物论者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00283",
+    "word": "overgrow",
+    "phonetic": "",
+    "translation": "vt. 长满于；长得超过",
+    "translations": [
+      "vt. 长满于；长得超过"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00284",
+    "word": "supplement",
+    "phonetic": "",
+    "translation": "vt. 增补，补充",
+    "translations": [
+      "vt. 增补，补充"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00285",
+    "word": "hallmark",
+    "phonetic": "",
+    "translation": "n. 特点；品质证明",
+    "translations": [
+      "n. 特点；品质证明"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00286",
+    "word": "militancy",
+    "phonetic": "",
+    "translation": "n. 战斗性；交战状态",
+    "translations": [
+      "n. 战斗性；交战状态"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00287",
+    "word": "tribute",
+    "phonetic": "",
+    "translation": "n. 礼物；[税收] 贡物；颂词；（尤指对死者的）致敬，悼念，吊唁礼物",
+    "translations": [
+      "n. 礼物；[税收] 贡物；颂词；（尤指对死者的）致敬，悼念，吊唁礼物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00288",
+    "word": "evaluation",
+    "phonetic": "",
+    "translation": "n. 评价；[审计] 评估；估价；求值",
+    "translations": [
+      "n. 评价；[审计] 评估；估价；求值"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00289",
+    "word": "personalize",
+    "phonetic": "",
+    "translation": "vt. 使个性化；把…拟人化",
+    "translations": [
+      "vt. 使个性化；把…拟人化"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00290",
+    "word": "flotilla",
+    "phonetic": "",
+    "translation": "n. 小型船队；小舰队",
+    "translations": [
+      "n. 小型船队；小舰队"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00291",
+    "word": "bestow",
+    "phonetic": "",
+    "translation": "vt. 使用；授予；放置；留宿",
+    "translations": [
+      "vt. 使用；授予；放置；留宿"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00292",
+    "word": "plague",
+    "phonetic": "",
+    "translation": "n. 瘟疫；灾祸；麻烦；讨厌的人",
+    "translations": [
+      "n. 瘟疫；灾祸；麻烦；讨厌的人"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00293",
+    "word": "underlie",
+    "phonetic": "",
+    "translation": "vt. 成为……的基础；位于……之下",
+    "translations": [
+      "vt. 成为……的基础；位于……之下"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00294",
+    "word": "toxicology",
+    "phonetic": "",
+    "translation": "n. [毒物] 毒物学，[毒物] 毒理学",
+    "translations": [
+      "n. [毒物] 毒物学，[毒物] 毒理学"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00295",
+    "word": "boyhood",
+    "phonetic": "",
+    "translation": "n. 童年，少年时代；男孩们",
+    "translations": [
+      "n. 童年，少年时代；男孩们"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00296",
+    "word": "chartered accountant",
+    "phonetic": "",
+    "translation": "n. 特许会计师；注册会计师",
+    "translations": [
+      "n. 特许会计师；注册会计师"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00297",
+    "word": "equally",
+    "phonetic": "",
+    "translation": "adv. 同样地；相等地，平等地；公平地",
+    "translations": [
+      "adv. 同样地；相等地，平等地；公平地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00298",
+    "word": "consent",
+    "phonetic": "",
+    "translation": "n. 同意；（意见等的）一致；赞成",
+    "translations": [
+      "n. 同意；（意见等的）一致；赞成"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00299",
+    "word": "identifiable",
+    "phonetic": "",
+    "translation": "adj. 可辨认的；可认明的；可证明是同一的",
+    "translations": [
+      "adj. 可辨认的；可认明的；可证明是同一的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00300",
+    "word": "heraldic",
+    "phonetic": "",
+    "translation": "纹章学的",
+    "translations": [
+      "纹章学的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00301",
+    "word": "admission",
+    "phonetic": "",
+    "translation": "n. 承认；入场费；进入许可；坦白；录用",
+    "translations": [
+      "n. 承认；入场费；进入许可；坦白；录用"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00302",
+    "word": "baffle",
+    "phonetic": "",
+    "translation": "n. 挡板；困惑",
+    "translations": [
+      "n. 挡板；困惑"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00303",
+    "word": "gale",
+    "phonetic": "",
+    "translation": "n. [气象] 大风，狂风；（突发的）一阵",
+    "translations": [
+      "n. [气象] 大风，狂风；（突发的）一阵"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00304",
+    "word": "sketch",
+    "phonetic": "",
+    "translation": "n. 素描；略图；梗概",
+    "translations": [
+      "n. 素描；略图；梗概"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00305",
+    "word": "thrive",
+    "phonetic": "",
+    "translation": "vi. 繁荣，兴旺；茁壮成长",
+    "translations": [
+      "vi. 繁荣，兴旺；茁壮成长"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00306",
+    "word": "abide",
+    "phonetic": "",
+    "translation": "vi. 持续；忍受；停留",
+    "translations": [
+      "vi. 持续；忍受；停留"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00307",
+    "word": "transaction",
+    "phonetic": "",
+    "translation": "n. 交易；事务；办理；会报，学报",
+    "translations": [
+      "n. 交易；事务；办理；会报，学报"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00308",
+    "word": "excellence",
+    "phonetic": "",
+    "translation": "n. 优秀；美德；长处",
+    "translations": [
+      "n. 优秀；美德；长处"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00309",
+    "word": "habitation",
+    "phonetic": "",
+    "translation": "n. 居住；住所",
+    "translations": [
+      "n. 居住；住所"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00310",
+    "word": "hurricane",
+    "phonetic": "",
+    "translation": "n. 飓风，暴风",
+    "translations": [
+      "n. 飓风，暴风"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00311",
+    "word": "importance",
+    "phonetic": "",
+    "translation": "n. 价值；重要；重大；傲慢",
+    "translations": [
+      "n. 价值；重要；重大；傲慢"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00312",
+    "word": "decomposition",
+    "phonetic": "",
+    "translation": "n. 分解，腐烂；变质",
+    "translations": [
+      "n. 分解，腐烂；变质"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00313",
+    "word": "chimpanzee",
+    "phonetic": "",
+    "translation": "n. [脊椎] 黑猩猩",
+    "translations": [
+      "n. [脊椎] 黑猩猩"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00314",
+    "word": "Dinosaur",
+    "phonetic": "",
+    "translation": "恐龙",
+    "translations": [
+      "恐龙"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00315",
+    "word": "scrutiny",
+    "phonetic": "",
+    "translation": "n. 详细审查；监视；细看；选票复查",
+    "translations": [
+      "n. 详细审查；监视；细看；选票复查"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00316",
+    "word": "hood",
+    "phonetic": "",
+    "translation": "n. 头巾；覆盖；兜帽",
+    "translations": [
+      "n. 头巾；覆盖；兜帽"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00317",
+    "word": "puzzle",
+    "phonetic": "",
+    "translation": "n. 谜；难题；迷惑",
+    "translations": [
+      "n. 谜；难题；迷惑"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00318",
+    "word": "frivolous",
+    "phonetic": "",
+    "translation": "adj. 无聊的；轻佻的；琐碎的",
+    "translations": [
+      "adj. 无聊的；轻佻的；琐碎的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00319",
+    "word": "propagate",
+    "phonetic": "",
+    "translation": "vt. 传播；传送；繁殖；宣传",
+    "translations": [
+      "vt. 传播；传送；繁殖；宣传"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00320",
+    "word": "identification",
+    "phonetic": "",
+    "translation": "n. 鉴定，识别；认同；身份证明",
+    "translations": [
+      "n. 鉴定，识别；认同；身份证明"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00321",
+    "word": "debris",
+    "phonetic": "",
+    "translation": "n. 碎片，残骸",
+    "translations": [
+      "n. 碎片，残骸"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00322",
+    "word": "assert",
+    "phonetic": "",
+    "translation": "vt. 维护，坚持；断言；主张；声称",
+    "translations": [
+      "vt. 维护，坚持；断言；主张；声称"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00323",
+    "word": "innovate",
+    "phonetic": "",
+    "translation": "vi. 创新；改革；革新",
+    "translations": [
+      "vi. 创新；改革；革新"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00324",
+    "word": "casual",
+    "phonetic": "",
+    "translation": "n. 便装；临时工人；待命士兵",
+    "translations": [
+      "n. 便装；临时工人；待命士兵"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00325",
+    "word": "timely",
+    "phonetic": "",
+    "translation": "adj. 及时的；适时的",
+    "translations": [
+      "adj. 及时的；适时的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00326",
+    "word": "interact",
+    "phonetic": "",
+    "translation": "n. 幕间剧；幕间休息",
+    "translations": [
+      "n. 幕间剧；幕间休息"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00327",
+    "word": "navicular",
+    "phonetic": "",
+    "translation": "舟状的",
+    "translations": [
+      "舟状的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00328",
+    "word": "parasitic",
+    "phonetic": "",
+    "translation": "adj. 寄生的（等于parasitical）",
+    "translations": [
+      "adj. 寄生的（等于parasitical）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00329",
+    "word": "coastline",
+    "phonetic": "",
+    "translation": "n. 海岸线",
+    "translations": [
+      "n. 海岸线"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00330",
+    "word": "outperform",
+    "phonetic": "",
+    "translation": "vt. 胜过；做得比……好",
+    "translations": [
+      "vt. 胜过；做得比……好"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00331",
+    "word": "surfer",
+    "phonetic": "",
+    "translation": "n. 冲浪运动员，乘冲浪板冲浪的人",
+    "translations": [
+      "n. 冲浪运动员，乘冲浪板冲浪的人"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00332",
+    "word": "consensus",
+    "phonetic": "",
+    "translation": "n. 一致；舆论；合意",
+    "translations": [
+      "n. 一致；舆论；合意"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00333",
+    "word": "consume",
+    "phonetic": "",
+    "translation": "vt. 消耗，消费；使…着迷；挥霍",
+    "translations": [
+      "vt. 消耗，消费；使…着迷；挥霍"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00334",
+    "word": "integrative",
+    "phonetic": "",
+    "translation": "adj. 综合的",
+    "translations": [
+      "adj. 综合的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00335",
+    "word": "predominate",
+    "phonetic": "",
+    "translation": "vt. 支配，主宰；在…中占优势",
+    "translations": [
+      "vt. 支配，主宰；在…中占优势"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00336",
+    "word": "suppress",
+    "phonetic": "",
+    "translation": "vt. 抑制；镇压；废止",
+    "translations": [
+      "vt. 抑制；镇压；废止"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00337",
+    "word": "steadfast",
+    "phonetic": "",
+    "translation": "adj. 坚定的；不变的",
+    "translations": [
+      "adj. 坚定的；不变的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00338",
+    "word": "external",
+    "phonetic": "",
+    "translation": "n. 外部；外观；外面",
+    "translations": [
+      "n. 外部；外观；外面"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00339",
+    "word": "dependent",
+    "phonetic": "",
+    "translation": "n. 依赖他人者；受赡养者",
+    "translations": [
+      "n. 依赖他人者；受赡养者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00340",
+    "word": "repetition",
+    "phonetic": "",
+    "translation": "n. 重复；背诵；副本",
+    "translations": [
+      "n. 重复；背诵；副本"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00341",
+    "word": "strife",
+    "phonetic": "",
+    "translation": "n. 冲突；争吵；不和",
+    "translations": [
+      "n. 冲突；争吵；不和"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00342",
+    "word": "accusation",
+    "phonetic": "",
+    "translation": "n. 控告，指控；谴责",
+    "translations": [
+      "n. 控告，指控；谴责"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00343",
+    "word": "Impressionism",
+    "phonetic": "",
+    "translation": "n. 印象派，印象主义",
+    "translations": [
+      "n. 印象派，印象主义"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00344",
+    "word": "geology",
+    "phonetic": "",
+    "translation": "n. 地质学；地质情况",
+    "translations": [
+      "n. 地质学；地质情况"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00345",
+    "word": "transient",
+    "phonetic": "",
+    "translation": "n. 瞬变现象；过往旅客；候鸟",
+    "translations": [
+      "n. 瞬变现象；过往旅客；候鸟"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00346",
+    "word": "pore over",
+    "phonetic": "",
+    "translation": "注视；钻研；凝视",
+    "translations": [
+      "注视；钻研；凝视"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00347",
+    "word": "folktale",
+    "phonetic": "",
+    "translation": "n. 民间故事；民间传说",
+    "translations": [
+      "n. 民间故事；民间传说"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00348",
+    "word": "fragment",
+    "phonetic": "",
+    "translation": "n. 碎片；片断或不完整部分",
+    "translations": [
+      "n. 碎片；片断或不完整部分"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00349",
+    "word": "diverge",
+    "phonetic": "",
+    "translation": "vt. 使偏离；使分叉",
+    "translations": [
+      "vt. 使偏离；使分叉"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00350",
+    "word": "terrestrial",
+    "phonetic": "",
+    "translation": "n. 陆地生物；地球上的人",
+    "translations": [
+      "n. 陆地生物；地球上的人"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00351",
+    "word": "preliminary",
+    "phonetic": "",
+    "translation": "n. 准备；预赛；初步措施",
+    "translations": [
+      "n. 准备；预赛；初步措施"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00352",
+    "word": "slave",
+    "phonetic": "",
+    "translation": "n. 奴隶；从动装置",
+    "translations": [
+      "n. 奴隶；从动装置"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00353",
+    "word": "modification",
+    "phonetic": "",
+    "translation": "n. 修改，修正；改变",
+    "translations": [
+      "n. 修改，修正；改变"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00354",
+    "word": "mandatory",
+    "phonetic": "",
+    "translation": "adj. 强制的；托管的；命令的",
+    "translations": [
+      "adj. 强制的；托管的；命令的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00355",
+    "word": "paradoxical",
+    "phonetic": "",
+    "translation": "adj. 矛盾的；诡论的；似非而是的",
+    "translations": [
+      "adj. 矛盾的；诡论的；似非而是的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00356",
+    "word": "existence",
+    "phonetic": "",
+    "translation": "n. 存在，实在；生存，生活；存在物，实在物",
+    "translations": [
+      "n. 存在，实在；生存，生活；存在物，实在物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00357",
+    "word": "genetic",
+    "phonetic": "",
+    "translation": "adj. 遗传的；基因的；起源的",
+    "translations": [
+      "adj. 遗传的；基因的；起源的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00358",
+    "word": "telescope",
+    "phonetic": "",
+    "translation": "n. 望远镜；缩叠式旅行袋",
+    "translations": [
+      "n. 望远镜；缩叠式旅行袋"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00359",
+    "word": "ritual",
+    "phonetic": "",
+    "translation": "n. 仪式；惯例；礼制",
+    "translations": [
+      "n. 仪式；惯例；礼制"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00360",
+    "word": "regeneration",
+    "phonetic": "",
+    "translation": "n. [生物][化学][物] 再生，重生；重建",
+    "translations": [
+      "n. [生物][化学][物] 再生，重生；重建"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00361",
+    "word": "pollination",
+    "phonetic": "",
+    "translation": "n. [农学] 授粉（作用）",
+    "translations": [
+      "n. [农学] 授粉（作用）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00362",
+    "word": "emergent",
+    "phonetic": "",
+    "translation": "adj. 紧急的；浮现的；意外的；自然发生的",
+    "translations": [
+      "adj. 紧急的；浮现的；意外的；自然发生的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00363",
+    "word": "sideline",
+    "phonetic": "",
+    "translation": "n. 副业；球场边线；局外人的观点",
+    "translations": [
+      "n. 副业；球场边线；局外人的观点"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00364",
+    "word": "royalty",
+    "phonetic": "",
+    "translation": "n. 皇室；版税；王权；专利税",
+    "translations": [
+      "n. 皇室；版税；王权；专利税"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00365",
+    "word": "elaborate",
+    "phonetic": "",
+    "translation": "adj. 精心制作的；详尽的；煞费苦心的",
+    "translations": [
+      "adj. 精心制作的；详尽的；煞费苦心的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00366",
+    "word": "dialect",
+    "phonetic": "",
+    "translation": "n. 方言，土话；同源语；行话；个人用语特征",
+    "translations": [
+      "n. 方言，土话；同源语；行话；个人用语特征"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00367",
+    "word": "ancestry",
+    "phonetic": "",
+    "translation": "n. 祖先；血统",
+    "translations": [
+      "n. 祖先；血统"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00368",
+    "word": "complementary",
+    "phonetic": "",
+    "translation": "adj. 补足的，补充的",
+    "translations": [
+      "adj. 补足的，补充的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00369",
+    "word": "underneath",
+    "phonetic": "",
+    "translation": "prep. 在…的下面；在…的形式下；在…的支配下",
+    "translations": [
+      "prep. 在…的下面；在…的形式下；在…的支配下"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00370",
+    "word": "pathological",
+    "phonetic": "",
+    "translation": "adj. 病理学的；病态的；由疾病引起的（等于pathologic）",
+    "translations": [
+      "adj. 病理学的；病态的；由疾病引起的（等于pathologic）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00371",
+    "word": "proponent",
+    "phonetic": "",
+    "translation": "n. 支持者；建议者；提出认证遗嘱者",
+    "translations": [
+      "n. 支持者；建议者；提出认证遗嘱者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00372",
+    "word": "accomplishment",
+    "phonetic": "",
+    "translation": "n. 成就；完成；技艺，技能",
+    "translations": [
+      "n. 成就；完成；技艺，技能"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00373",
+    "word": "illustrious",
+    "phonetic": "",
+    "translation": "adj. 著名的，杰出的；辉煌的",
+    "translations": [
+      "adj. 著名的，杰出的；辉煌的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00374",
+    "word": "execution",
+    "phonetic": "",
+    "translation": "n. 执行，实行；完成；死刑",
+    "translations": [
+      "n. 执行，实行；完成；死刑"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00375",
+    "word": "patent",
+    "phonetic": "",
+    "translation": "n. 专利权；执照；专利品",
+    "translations": [
+      "n. 专利权；执照；专利品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00376",
+    "word": "dull",
+    "phonetic": "",
+    "translation": "adj. 钝的；迟钝的；无趣的；呆滞的；阴暗的",
+    "translations": [
+      "adj. 钝的；迟钝的；无趣的；呆滞的；阴暗的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00377",
+    "word": "variation",
+    "phonetic": "",
+    "translation": "n. 变化；[生物] 变异，变种",
+    "translations": [
+      "n. 变化；[生物] 变异，变种"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00378",
+    "word": "terrain",
+    "phonetic": "",
+    "translation": "n. [地理] 地形，地势；领域；地带",
+    "translations": [
+      "n. [地理] 地形，地势；领域；地带"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00379",
+    "word": "stitch",
+    "phonetic": "",
+    "translation": "n. 针脚，线迹；一针",
+    "translations": [
+      "n. 针脚，线迹；一针"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00380",
+    "word": "utilize",
+    "phonetic": "",
+    "translation": "vt. 利用",
+    "translations": [
+      "vt. 利用"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00381",
+    "word": "simultaneously",
+    "phonetic": "",
+    "translation": "adv. 同时地",
+    "translations": [
+      "adv. 同时地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00382",
+    "word": "innovator",
+    "phonetic": "",
+    "translation": "n. 改革者，创新者",
+    "translations": [
+      "n. 改革者，创新者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00383",
+    "word": "stellar",
+    "phonetic": "",
+    "translation": "adj. 星的；星球的；主要的；一流的",
+    "translations": [
+      "adj. 星的；星球的；主要的；一流的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00384",
+    "word": "aggression",
+    "phonetic": "",
+    "translation": "n. 侵略；进攻；侵犯；侵害",
+    "translations": [
+      "n. 侵略；进攻；侵犯；侵害"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00385",
+    "word": "persistent",
+    "phonetic": "",
+    "translation": "adj. 固执的，坚持的；持久稳固的",
+    "translations": [
+      "adj. 固执的，坚持的；持久稳固的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00386",
+    "word": "deliberately",
+    "phonetic": "",
+    "translation": "adv. 故意地；谨慎地；慎重地",
+    "translations": [
+      "adv. 故意地；谨慎地；慎重地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00387",
+    "word": "offset",
+    "phonetic": "",
+    "translation": "n. 抵消，补偿；平版印刷；支管",
+    "translations": [
+      "n. 抵消，补偿；平版印刷；支管"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00388",
+    "word": "idyllic",
+    "phonetic": "",
+    "translation": "牧歌的",
+    "translations": [
+      "牧歌的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00389",
+    "word": "proverb",
+    "phonetic": "",
+    "translation": "n. 谚语，格言；众所周知的人或事",
+    "translations": [
+      "n. 谚语，格言；众所周知的人或事"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00390",
+    "word": "drone",
+    "phonetic": "",
+    "translation": "n. 雄蜂；嗡嗡的声音；懒惰者",
+    "translations": [
+      "n. 雄蜂；嗡嗡的声音；懒惰者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00391",
+    "word": "distrust",
+    "phonetic": "",
+    "translation": "n. 不信任",
+    "translations": [
+      "n. 不信任"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00392",
+    "word": "covet",
+    "phonetic": "",
+    "translation": "vt. 垂涎；觊觎",
+    "translations": [
+      "vt. 垂涎；觊觎"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00393",
+    "word": "salvage",
+    "phonetic": "",
+    "translation": "n. 打捞；海上救助；抢救财货；救难的奖金",
+    "translations": [
+      "n. 打捞；海上救助；抢救财货；救难的奖金"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00394",
+    "word": "watercolor",
+    "phonetic": "",
+    "translation": "n. 水彩画，水彩；水彩颜料",
+    "translations": [
+      "n. 水彩画，水彩；水彩颜料"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00395",
+    "word": "overfish",
+    "phonetic": "",
+    "translation": "vt. 对（鱼、渔场）捕捞过度",
+    "translations": [
+      "vt. 对（鱼、渔场）捕捞过度"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00396",
+    "word": "collaborative",
+    "phonetic": "",
+    "translation": "adj. 合作的，协作的",
+    "translations": [
+      "adj. 合作的，协作的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00397",
+    "word": "emission",
+    "phonetic": "",
+    "translation": "n. （光、热等的）发射，散发；喷射；发行",
+    "translations": [
+      "n. （光、热等的）发射，散发；喷射；发行"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00398",
+    "word": "statue",
+    "phonetic": "",
+    "translation": "n. 雕像，塑像",
+    "translations": [
+      "n. 雕像，塑像"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00399",
+    "word": "altitude",
+    "phonetic": "",
+    "translation": "n. 高地；高度；[数] 顶垂线；（等级和地位等的）高级；海拔",
+    "translations": [
+      "n. 高地；高度；[数] 顶垂线；（等级和地位等的）高级；海拔"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00400",
+    "word": "knit",
+    "phonetic": "",
+    "translation": "vi. 编织；结合；皱眉",
+    "translations": [
+      "vi. 编织；结合；皱眉"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00401",
+    "word": "sustainable",
+    "phonetic": "",
+    "translation": "adj. 可以忍受的；足可支撑的；养得起的；可持续的",
+    "translations": [
+      "adj. 可以忍受的；足可支撑的；养得起的；可持续的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00402",
+    "word": "universally",
+    "phonetic": "",
+    "translation": "adv. 普遍地；人人；到处",
+    "translations": [
+      "adv. 普遍地；人人；到处"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00403",
+    "word": "radiation",
+    "phonetic": "",
+    "translation": "n. 辐射；发光；放射物",
+    "translations": [
+      "n. 辐射；发光；放射物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00404",
+    "word": "pendulum",
+    "phonetic": "",
+    "translation": "n. 钟摆；摇锤；摇摆不定的事态",
+    "translations": [
+      "n. 钟摆；摇锤；摇摆不定的事态"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00405",
+    "word": "complicate",
+    "phonetic": "",
+    "translation": "vt. 使复杂化；使恶化；使卷入",
+    "translations": [
+      "vt. 使复杂化；使恶化；使卷入"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00406",
+    "word": "horrify",
+    "phonetic": "",
+    "translation": "vt. 使恐惧；惊骇；使极度厌恶",
+    "translations": [
+      "vt. 使恐惧；惊骇；使极度厌恶"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00407",
+    "word": "superstition",
+    "phonetic": "",
+    "translation": "n. 迷信",
+    "translations": [
+      "n. 迷信"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00408",
+    "word": "migration",
+    "phonetic": "",
+    "translation": "n. 迁移；移民；移动",
+    "translations": [
+      "n. 迁移；移民；移动"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00409",
+    "word": "prey",
+    "phonetic": "",
+    "translation": "n. 捕食；牺牲者；被捕食的动物",
+    "translations": [
+      "n. 捕食；牺牲者；被捕食的动物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00410",
+    "word": "surpass",
+    "phonetic": "",
+    "translation": "vt. 超越；胜过，优于；非…所能办到或理解",
+    "translations": [
+      "vt. 超越；胜过，优于；非…所能办到或理解"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00411",
+    "word": "venus",
+    "phonetic": "",
+    "translation": "金星",
+    "translations": [
+      "金星"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00412",
+    "word": "fret",
+    "phonetic": "",
+    "translation": "n. 烦躁；焦急；磨损",
+    "translations": [
+      "n. 烦躁；焦急；磨损"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00413",
+    "word": "deviance",
+    "phonetic": "",
+    "translation": "n. 异常；异常行为",
+    "translations": [
+      "n. 异常；异常行为"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00414",
+    "word": "proficiency",
+    "phonetic": "",
+    "translation": "n. 精通，熟练",
+    "translations": [
+      "n. 精通，熟练"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00415",
+    "word": "respondent",
+    "phonetic": "",
+    "translation": "n. [法] 被告；应答者",
+    "translations": [
+      "n. [法] 被告；应答者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00416",
+    "word": "apocalyptic",
+    "phonetic": "",
+    "translation": "adj. 启示录的；天启的",
+    "translations": [
+      "adj. 启示录的；天启的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00417",
+    "word": "frontier",
+    "phonetic": "",
+    "translation": "n. 前沿；边界；国境",
+    "translations": [
+      "n. 前沿；边界；国境"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00418",
+    "word": "optimize",
+    "phonetic": "",
+    "translation": "vt. 使最优化，使完善",
+    "translations": [
+      "vt. 使最优化，使完善"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00419",
+    "word": "interpretation",
+    "phonetic": "",
+    "translation": "n. 解释；翻译；演出",
+    "translations": [
+      "n. 解释；翻译；演出"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00420",
+    "word": "aspiration",
+    "phonetic": "",
+    "translation": "n. 渴望；抱负；送气；吸气；吸引术",
+    "translations": [
+      "n. 渴望；抱负；送气；吸气；吸引术"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00421",
+    "word": "pus",
+    "phonetic": "",
+    "translation": "n. 脓；脓汁",
+    "translations": [
+      "n. 脓；脓汁"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00422",
+    "word": "bind",
+    "phonetic": "",
+    "translation": "n. 捆绑；困境；讨厌的事情；植物的藤蔓",
+    "translations": [
+      "n. 捆绑；困境；讨厌的事情；植物的藤蔓"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00423",
+    "word": "non-attendance",
+    "phonetic": "",
+    "translation": "不出席",
+    "translations": [
+      "不出席"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00424",
+    "word": "seemingly",
+    "phonetic": "",
+    "translation": "adv. 看来似乎；表面上看来",
+    "translations": [
+      "adv. 看来似乎；表面上看来"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00425",
+    "word": "precise",
+    "phonetic": "",
+    "translation": "adj. 精确的；明确的；严格的",
+    "translations": [
+      "adj. 精确的；明确的；严格的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00426",
+    "word": "evaporate",
+    "phonetic": "",
+    "translation": "vt. 使……蒸发；使……脱水；使……消失",
+    "translations": [
+      "vt. 使……蒸发；使……脱水；使……消失"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00427",
+    "word": "folklore",
+    "phonetic": "",
+    "translation": "n. 民俗学；民间传说；民间风俗",
+    "translations": [
+      "n. 民俗学；民间传说；民间风俗"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00428",
+    "word": "redact",
+    "phonetic": "",
+    "translation": "修订",
+    "translations": [
+      "修订"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00429",
+    "word": "random",
+    "phonetic": "",
+    "translation": "n. 随意",
+    "translations": [
+      "n. 随意"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00430",
+    "word": "cosmetic",
+    "phonetic": "",
+    "translation": "n. 化妆品；装饰品",
+    "translations": [
+      "n. 化妆品；装饰品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00431",
+    "word": "charm",
+    "phonetic": "",
+    "translation": "n. 魅力，吸引力；魔力",
+    "translations": [
+      "n. 魅力，吸引力；魔力"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00432",
+    "word": "tong",
+    "phonetic": "",
+    "translation": "n. 帮会，堂；钳子",
+    "translations": [
+      "n. 帮会，堂；钳子"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00433",
+    "word": "awareness",
+    "phonetic": "",
+    "translation": "n. 意识，认识；明白，知道",
+    "translations": [
+      "n. 意识，认识；明白，知道"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00434",
+    "word": "encroachment",
+    "phonetic": "",
+    "translation": "n. 侵入，侵犯；侵蚀",
+    "translations": [
+      "n. 侵入，侵犯；侵蚀"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00435",
+    "word": "asteroid",
+    "phonetic": "",
+    "translation": "n. [天] 小行星；[无脊椎] 海盘车；小游星",
+    "translations": [
+      "n. [天] 小行星；[无脊椎] 海盘车；小游星"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00436",
+    "word": "hamstring",
+    "phonetic": "",
+    "translation": "n. 腿筋",
+    "translations": [
+      "n. 腿筋"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00437",
+    "word": "institutionalize",
+    "phonetic": "",
+    "translation": "vt. 使…制度化",
+    "translations": [
+      "vt. 使…制度化"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00438",
+    "word": "locust",
+    "phonetic": "",
+    "translation": "n. [植保] 蝗虫，[昆] 蚱蜢",
+    "translations": [
+      "n. [植保] 蝗虫，[昆] 蚱蜢"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00439",
+    "word": "interspecific",
+    "phonetic": "",
+    "translation": "adj. 种类间的",
+    "translations": [
+      "adj. 种类间的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00440",
+    "word": "smallpox",
+    "phonetic": "",
+    "translation": "n. [内科] 天花",
+    "translations": [
+      "n. [内科] 天花"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00441",
+    "word": "logarithmic",
+    "phonetic": "",
+    "translation": "对数",
+    "translations": [
+      "对数"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00442",
+    "word": "flourish",
+    "phonetic": "",
+    "translation": "n. 兴旺；茂盛；挥舞；炫耀；华饰",
+    "translations": [
+      "n. 兴旺；茂盛；挥舞；炫耀；华饰"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00443",
+    "word": "illustration",
+    "phonetic": "",
+    "translation": "n. 说明；插图；例证；图解",
+    "translations": [
+      "n. 说明；插图；例证；图解"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00444",
+    "word": "onset",
+    "phonetic": "",
+    "translation": "n. 开始，着手；发作；攻击，进攻",
+    "translations": [
+      "n. 开始，着手；发作；攻击，进攻"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00445",
+    "word": "prospective",
+    "phonetic": "",
+    "translation": "n. 预期；展望",
+    "translations": [
+      "n. 预期；展望"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00446",
+    "word": "torturous",
+    "phonetic": "",
+    "translation": "adj. 折磨人的，痛苦的",
+    "translations": [
+      "adj. 折磨人的，痛苦的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00447",
+    "word": "longitude",
+    "phonetic": "",
+    "translation": "n. [地理] 经度；经线",
+    "translations": [
+      "n. [地理] 经度；经线"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00448",
+    "word": "vulnerability",
+    "phonetic": "",
+    "translation": "n. 易损性；弱点",
+    "translations": [
+      "n. 易损性；弱点"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00449",
+    "word": "skeptical",
+    "phonetic": "",
+    "translation": "adj. 怀疑的；怀疑论的，不可知论的",
+    "translations": [
+      "adj. 怀疑的；怀疑论的，不可知论的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00450",
+    "word": "resemble",
+    "phonetic": "",
+    "translation": "vt. 类似，像",
+    "translations": [
+      "vt. 类似，像"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00451",
+    "word": "squirt",
+    "phonetic": "",
+    "translation": "n. 喷射；注射",
+    "translations": [
+      "n. 喷射；注射"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00452",
+    "word": "medieval",
+    "phonetic": "",
+    "translation": "adj. 中世纪的；原始的；仿中世纪的；老式的",
+    "translations": [
+      "adj. 中世纪的；原始的；仿中世纪的；老式的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00453",
+    "word": "amenity",
+    "phonetic": "",
+    "translation": "n. 舒适；礼仪；愉快；便利设施",
+    "translations": [
+      "n. 舒适；礼仪；愉快；便利设施"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00454",
+    "word": "elevation",
+    "phonetic": "",
+    "translation": "n. 高地；海拔；提高；崇高；正面图",
+    "translations": [
+      "n. 高地；海拔；提高；崇高；正面图"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00455",
+    "word": "willow",
+    "phonetic": "",
+    "translation": "n. [林] 柳树；[木] 柳木制品",
+    "translations": [
+      "n. [林] 柳树；[木] 柳木制品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00456",
+    "word": "boarding school",
+    "phonetic": "",
+    "translation": "n. 寄宿学校",
+    "translations": [
+      "n. 寄宿学校"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00457",
+    "word": "demolish",
+    "phonetic": "",
+    "translation": "vt. 拆除；破坏；毁坏；推翻；驳倒",
+    "translations": [
+      "vt. 拆除；破坏；毁坏；推翻；驳倒"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00458",
+    "word": "unconventional",
+    "phonetic": "",
+    "translation": "adj. 非常规的；非传统的；不依惯例的",
+    "translations": [
+      "adj. 非常规的；非传统的；不依惯例的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00459",
+    "word": "spectacle",
+    "phonetic": "",
+    "translation": "n. 景象；场面；奇观；壮观；公开展示；表相，假相 n.（复）眼镜",
+    "translations": [
+      "n. 景象；场面；奇观；壮观；公开展示；表相，假相 n.（复）眼镜"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00460",
+    "word": "equitable",
+    "phonetic": "",
+    "translation": "adj. 公平的，公正的；平衡法的",
+    "translations": [
+      "adj. 公平的，公正的；平衡法的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00461",
+    "word": "longhaul",
+    "phonetic": "",
+    "translation": "长途的",
+    "translations": [
+      "长途的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00462",
+    "word": "probability",
+    "phonetic": "",
+    "translation": "n. 可能性；机率；[数] 或然率",
+    "translations": [
+      "n. 可能性；机率；[数] 或然率"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00463",
+    "word": "globalization",
+    "phonetic": "",
+    "translation": "n. 全球化",
+    "translations": [
+      "n. 全球化"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00464",
+    "word": "relatively",
+    "phonetic": "",
+    "translation": "adv. 相当地；相对地，比较地",
+    "translations": [
+      "adv. 相当地；相对地，比较地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00465",
+    "word": "secular",
+    "phonetic": "",
+    "translation": "n. 修道院外的教士，(对宗教家而言的) 俗人",
+    "translations": [
+      "n. 修道院外的教士，(对宗教家而言的) 俗人"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00466",
+    "word": "spew",
+    "phonetic": "",
+    "translation": "vt. 喷出；呕吐",
+    "translations": [
+      "vt. 喷出；呕吐"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00467",
+    "word": "Termite",
+    "phonetic": "",
+    "translation": "白蚁",
+    "translations": [
+      "白蚁"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00468",
+    "word": "derive",
+    "phonetic": "",
+    "translation": "vt. 源于；得自；获得",
+    "translations": [
+      "vt. 源于；得自；获得"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00469",
+    "word": "supermassive",
+    "phonetic": "",
+    "translation": "超大质量",
+    "translations": [
+      "超大质量"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00470",
+    "word": "nickname",
+    "phonetic": "",
+    "translation": "n. 绰号；昵称",
+    "translations": [
+      "n. 绰号；昵称"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00471",
+    "word": "connotation",
+    "phonetic": "",
+    "translation": "n. 内涵；含蓄；暗示，隐含意义；储蓄的东西（词、语等）",
+    "translations": [
+      "n. 内涵；含蓄；暗示，隐含意义；储蓄的东西（词、语等）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00472",
+    "word": "introduction",
+    "phonetic": "",
+    "translation": "n. 介绍；引进；采用；入门；传入",
+    "translations": [
+      "n. 介绍；引进；采用；入门；传入"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00473",
+    "word": "educational",
+    "phonetic": "",
+    "translation": "adj. 教育的；有教育意义的",
+    "translations": [
+      "adj. 教育的；有教育意义的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00474",
+    "word": "chronic",
+    "phonetic": "",
+    "translation": "adj. 慢性的；长期的；习惯性的",
+    "translations": [
+      "adj. 慢性的；长期的；习惯性的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00475",
+    "word": "altruism",
+    "phonetic": "",
+    "translation": "n. 利他；利他主义",
+    "translations": [
+      "n. 利他；利他主义"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00476",
+    "word": "inspiration",
+    "phonetic": "",
+    "translation": "n. 灵感；鼓舞；吸气；妙计",
+    "translations": [
+      "n. 灵感；鼓舞；吸气；妙计"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00477",
+    "word": "hinder",
+    "phonetic": "",
+    "translation": "vt. 阻碍；打扰",
+    "translations": [
+      "vt. 阻碍；打扰"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00478",
+    "word": "librarian",
+    "phonetic": "",
+    "translation": "n. 图书馆员；图书管理员",
+    "translations": [
+      "n. 图书馆员；图书管理员"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00479",
+    "word": "narrative",
+    "phonetic": "",
+    "translation": "n. 叙述；故事；讲述",
+    "translations": [
+      "n. 叙述；故事；讲述"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00480",
+    "word": "rewind",
+    "phonetic": "",
+    "translation": "n. 重绕；倒带器",
+    "translations": [
+      "n. 重绕；倒带器"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00481",
+    "word": "graphically",
+    "phonetic": "",
+    "translation": "adv. 生动地；活灵活现地；用图表表示；轮廓分明地",
+    "translations": [
+      "adv. 生动地；活灵活现地；用图表表示；轮廓分明地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00482",
+    "word": "unadorned",
+    "phonetic": "",
+    "translation": "adj. 朴素的；未装饰的",
+    "translations": [
+      "adj. 朴素的；未装饰的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00483",
+    "word": "hypothesis",
+    "phonetic": "",
+    "translation": "n. 假设",
+    "translations": [
+      "n. 假设"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00484",
+    "word": "inadvertently",
+    "phonetic": "",
+    "translation": "adv. 非故意地，无心地",
+    "translations": [
+      "adv. 非故意地，无心地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00485",
+    "word": "sewage",
+    "phonetic": "",
+    "translation": "n. 污水；下水道；污物",
+    "translations": [
+      "n. 污水；下水道；污物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00486",
+    "word": "cram",
+    "phonetic": "",
+    "translation": "n. 死记硬背；极度拥挤",
+    "translations": [
+      "n. 死记硬背；极度拥挤"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00487",
+    "word": "diverse",
+    "phonetic": "",
+    "translation": "adj. 不同的；多种多样的；变化多的",
+    "translations": [
+      "adj. 不同的；多种多样的；变化多的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00488",
+    "word": "centricity",
+    "phonetic": "",
+    "translation": "中心性",
+    "translations": [
+      "中心性"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00489",
+    "word": "detect",
+    "phonetic": "",
+    "translation": "vt. 察觉；发现；探测",
+    "translations": [
+      "vt. 察觉；发现；探测"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00490",
+    "word": "overt",
+    "phonetic": "",
+    "translation": "adj. 明显的；公然的；蓄意的",
+    "translations": [
+      "adj. 明显的；公然的；蓄意的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00491",
+    "word": "investigator",
+    "phonetic": "",
+    "translation": "n. 研究者；调查者；侦查员",
+    "translations": [
+      "n. 研究者；调查者；侦查员"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00492",
+    "word": "skeleton",
+    "phonetic": "",
+    "translation": "n. 骨架，骨骼；纲要；骨瘦如柴的人",
+    "translations": [
+      "n. 骨架，骨骼；纲要；骨瘦如柴的人"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00493",
+    "word": "adultery",
+    "phonetic": "",
+    "translation": "n. 通奸，通奸行为",
+    "translations": [
+      "n. 通奸，通奸行为"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00494",
+    "word": "scurry",
+    "phonetic": "",
+    "translation": "vi. 急赶；急跑",
+    "translations": [
+      "vi. 急赶；急跑"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00495",
+    "word": "magnitude",
+    "phonetic": "",
+    "translation": "n. 大小；量级；[地震] 震级；重要；光度",
+    "translations": [
+      "n. 大小；量级；[地震] 震级；重要；光度"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00496",
+    "word": "attire",
+    "phonetic": "",
+    "translation": "n. 服装；盛装",
+    "translations": [
+      "n. 服装；盛装"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00497",
+    "word": "sleek",
+    "phonetic": "",
+    "translation": "adj. 圆滑的；井然有序的",
+    "translations": [
+      "adj. 圆滑的；井然有序的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00498",
+    "word": "polarity",
+    "phonetic": "",
+    "translation": "n. [物] 极性；两极；对立",
+    "translations": [
+      "n. [物] 极性；两极；对立"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00499",
+    "word": "administrative",
+    "phonetic": "",
+    "translation": "adj. 管理的，行政的",
+    "translations": [
+      "adj. 管理的，行政的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00500",
+    "word": "subscribe",
+    "phonetic": "",
+    "translation": "vt. 签署；赞成；捐助",
+    "translations": [
+      "vt. 签署；赞成；捐助"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00501",
+    "word": "entourage",
+    "phonetic": "",
+    "translation": "n. 随从；周围；环境",
+    "translations": [
+      "n. 随从；周围；环境"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00502",
+    "word": "nutrition",
+    "phonetic": "",
+    "translation": "n. 营养，营养学；营养品",
+    "translations": [
+      "n. 营养，营养学；营养品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00503",
+    "word": "justification",
+    "phonetic": "",
+    "translation": "n. 理由；辩护；认为有理，认为正当；释罪",
+    "translations": [
+      "n. 理由；辩护；认为有理，认为正当；释罪"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00504",
+    "word": "evident",
+    "phonetic": "",
+    "translation": "adj. 明显的；明白的",
+    "translations": [
+      "adj. 明显的；明白的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00505",
+    "word": "pun",
+    "phonetic": "",
+    "translation": "n. 双关语；俏皮话",
+    "translations": [
+      "n. 双关语；俏皮话"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00506",
+    "word": "robust",
+    "phonetic": "",
+    "translation": "adj. 强健的；健康的；粗野的；粗鲁的",
+    "translations": [
+      "adj. 强健的；健康的；粗野的；粗鲁的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00507",
+    "word": "in this regard",
+    "phonetic": "",
+    "translation": "na. 在这一点上；“in this/that regard”的变体",
+    "translations": [
+      "na. 在这一点上；“in this/that regard”的变体"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00508",
+    "word": "sensory",
+    "phonetic": "",
+    "translation": "adj. 感觉的；知觉的；传递感觉的",
+    "translations": [
+      "adj. 感觉的；知觉的；传递感觉的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00509",
+    "word": "envision",
+    "phonetic": "",
+    "translation": "vt. 想象；预想",
+    "translations": [
+      "vt. 想象；预想"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00510",
+    "word": "funerary",
+    "phonetic": "",
+    "translation": "adj. 埋葬的；葬礼的",
+    "translations": [
+      "adj. 埋葬的；葬礼的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00511",
+    "word": "consumption",
+    "phonetic": "",
+    "translation": "n. 消费；消耗；肺痨",
+    "translations": [
+      "n. 消费；消耗；肺痨"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00512",
+    "word": "unemotional",
+    "phonetic": "",
+    "translation": "adj. 不易动感情的；非感情的；无动于衷的",
+    "translations": [
+      "adj. 不易动感情的；非感情的；无动于衷的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00513",
+    "word": "resemblance",
+    "phonetic": "",
+    "translation": "n. 相似；相似之处；相似物；肖像",
+    "translations": [
+      "n. 相似；相似之处；相似物；肖像"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00514",
+    "word": "titanic",
+    "phonetic": "",
+    "translation": "adj. 巨大的；四价钛的",
+    "translations": [
+      "adj. 巨大的；四价钛的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00515",
+    "word": "luxurious",
+    "phonetic": "",
+    "translation": "adj. 奢侈的；丰富的；放纵的；特级的",
+    "translations": [
+      "adj. 奢侈的；丰富的；放纵的；特级的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00516",
+    "word": "cognitive",
+    "phonetic": "",
+    "translation": "adj. 认知的，认识的",
+    "translations": [
+      "adj. 认知的，认识的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00517",
+    "word": "bacteria",
+    "phonetic": "",
+    "translation": "n. [微] 细菌",
+    "translations": [
+      "n. [微] 细菌"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00518",
+    "word": "evolution",
+    "phonetic": "",
+    "translation": "n. 演变；进化论；进展",
+    "translations": [
+      "n. 演变；进化论；进展"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00519",
+    "word": "overview",
+    "phonetic": "",
+    "translation": "n. [图情] 综述；概观",
+    "translations": [
+      "n. [图情] 综述；概观"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00520",
+    "word": "AD",
+    "phonetic": "",
+    "translation": "n. 公元；广告（ad）",
+    "translations": [
+      "n. 公元；广告（ad）"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00521",
+    "word": "manual",
+    "phonetic": "",
+    "translation": "adj. 手工的；体力的",
+    "translations": [
+      "adj. 手工的；体力的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00522",
+    "word": "intimate",
+    "phonetic": "",
+    "translation": "n. 知己；至交",
+    "translations": [
+      "n. 知己；至交"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00523",
+    "word": "universal",
+    "phonetic": "",
+    "translation": "n. 一般概念；普通性",
+    "translations": [
+      "n. 一般概念；普通性"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00524",
+    "word": "aesthetic",
+    "phonetic": "",
+    "translation": "adj. 美的；美学的；审美的，具有审美趣味的",
+    "translations": [
+      "adj. 美的；美学的；审美的，具有审美趣味的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00525",
+    "word": "subcontinent",
+    "phonetic": "",
+    "translation": "n. 次大陆",
+    "translations": [
+      "n. 次大陆"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00526",
+    "word": "historically",
+    "phonetic": "",
+    "translation": "adv. 历史上地；从历史观点上说",
+    "translations": [
+      "adv. 历史上地；从历史观点上说"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00527",
+    "word": "taxonomist",
+    "phonetic": "",
+    "translation": "n. 分类学者",
+    "translations": [
+      "n. 分类学者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00528",
+    "word": "primacy",
+    "phonetic": "",
+    "translation": "n. 首位；卓越；大主教的职位",
+    "translations": [
+      "n. 首位；卓越；大主教的职位"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00529",
+    "word": "assignment",
+    "phonetic": "",
+    "translation": "n. 分配；任务；作业；功课",
+    "translations": [
+      "n. 分配；任务；作业；功课"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00530",
+    "word": "abusive",
+    "phonetic": "",
+    "translation": "adj. 辱骂的；滥用的；虐待的",
+    "translations": [
+      "adj. 辱骂的；滥用的；虐待的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00531",
+    "word": "gush",
+    "phonetic": "",
+    "translation": "n. 涌出；迸发",
+    "translations": [
+      "n. 涌出；迸发"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00532",
+    "word": "telegenic",
+    "phonetic": "",
+    "translation": "上镜的",
+    "translations": [
+      "上镜的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00533",
+    "word": "frequency",
+    "phonetic": "",
+    "translation": "n. 频率；频繁",
+    "translations": [
+      "n. 频率；频繁"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00534",
+    "word": "cooperation",
+    "phonetic": "",
+    "translation": "n. 合作，协作；[劳经] 协力",
+    "translations": [
+      "n. 合作，协作；[劳经] 协力"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00535",
+    "word": "midair",
+    "phonetic": "",
+    "translation": "n. 半空中",
+    "translations": [
+      "n. 半空中"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00536",
+    "word": "reorganize",
+    "phonetic": "",
+    "translation": "vt. 整理；改组；重新制定",
+    "translations": [
+      "vt. 整理；改组；重新制定"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00537",
+    "word": "habitant",
+    "phonetic": "",
+    "translation": "n. 居民，居住者",
+    "translations": [
+      "n. 居民，居住者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00538",
+    "word": "incorporate",
+    "phonetic": "",
+    "translation": "vt. 包含，吸收；体现；把……合并",
+    "translations": [
+      "vt. 包含，吸收；体现；把……合并"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00539",
+    "word": "contradict",
+    "phonetic": "",
+    "translation": "vt. 反驳；否定；与…矛盾；与…抵触",
+    "translations": [
+      "vt. 反驳；否定；与…矛盾；与…抵触"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00540",
+    "word": "problematic",
+    "phonetic": "",
+    "translation": "adj. 问题的；有疑问的；不确定的",
+    "translations": [
+      "adj. 问题的；有疑问的；不确定的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00541",
+    "word": "advancement",
+    "phonetic": "",
+    "translation": "n. 前进，进步；提升",
+    "translations": [
+      "n. 前进，进步；提升"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00542",
+    "word": "fantastically",
+    "phonetic": "",
+    "translation": "adv. 想像中地；奇特地；难以置信地",
+    "translations": [
+      "adv. 想像中地；奇特地；难以置信地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00543",
+    "word": "illustrative",
+    "phonetic": "",
+    "translation": "adj. 说明的；作例证的；解说的",
+    "translations": [
+      "adj. 说明的；作例证的；解说的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00544",
+    "word": "purposeful",
+    "phonetic": "",
+    "translation": "adj. 有目的的；有决心的",
+    "translations": [
+      "adj. 有目的的；有决心的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00545",
+    "word": "accumulation",
+    "phonetic": "",
+    "translation": "n. 积聚，累积；堆积物",
+    "translations": [
+      "n. 积聚，累积；堆积物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00546",
+    "word": "dispersal",
+    "phonetic": "",
+    "translation": "n. 分散；传播；散布；疏散；消失",
+    "translations": [
+      "n. 分散；传播；散布；疏散；消失"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00547",
+    "word": "attendance",
+    "phonetic": "",
+    "translation": "n. 出席；到场；出席人数；考勤",
+    "translations": [
+      "n. 出席；到场；出席人数；考勤"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00548",
+    "word": "entomophagy",
+    "phonetic": "",
+    "translation": "昆虫食品",
+    "translations": [
+      "昆虫食品"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00549",
+    "word": "penetrate",
+    "phonetic": "",
+    "translation": "vi. 渗透；刺入；看透",
+    "translations": [
+      "vi. 渗透；刺入；看透"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00550",
+    "word": "boundary",
+    "phonetic": "",
+    "translation": "n. 边界；范围；分界线",
+    "translations": [
+      "n. 边界；范围；分界线"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00551",
+    "word": "simulate",
+    "phonetic": "",
+    "translation": "adj. 模仿的；假装的",
+    "translations": [
+      "adj. 模仿的；假装的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00552",
+    "word": "perspiration",
+    "phonetic": "",
+    "translation": "n. 汗水；流汗；努力",
+    "translations": [
+      "n. 汗水；流汗；努力"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00553",
+    "word": "graze",
+    "phonetic": "",
+    "translation": "n. 放牧；轻擦",
+    "translations": [
+      "n. 放牧；轻擦"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00554",
+    "word": "fad",
+    "phonetic": "",
+    "translation": "n. 时尚；一时的爱好；一时流行的狂热",
+    "translations": [
+      "n. 时尚；一时的爱好；一时流行的狂热"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00555",
+    "word": "phenomenon",
+    "phonetic": "",
+    "translation": "n. 现象；奇迹；杰出的人才",
+    "translations": [
+      "n. 现象；奇迹；杰出的人才"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00556",
+    "word": "commitment",
+    "phonetic": "",
+    "translation": "n. 承诺，保证；委托；承担义务；献身",
+    "translations": [
+      "n. 承诺，保证；委托；承担义务；献身"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00557",
+    "word": "rapidly",
+    "phonetic": "",
+    "translation": "adv. 迅速地；很快地；立即",
+    "translations": [
+      "adv. 迅速地；很快地；立即"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00558",
+    "word": "trio",
+    "phonetic": "",
+    "translation": "n. 三重唱；三件一套；三个一组",
+    "translations": [
+      "n. 三重唱；三件一套；三个一组"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00559",
+    "word": "tick",
+    "phonetic": "",
+    "translation": "n. 滴答声；扁虱；记号；赊欠",
+    "translations": [
+      "n. 滴答声；扁虱；记号；赊欠"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00560",
+    "word": "phosphorus",
+    "phonetic": "",
+    "translation": "n. 磷",
+    "translations": [
+      "n. 磷"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00561",
+    "word": "swap",
+    "phonetic": "",
+    "translation": "n. 交换；交换之物",
+    "translations": [
+      "n. 交换；交换之物"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00562",
+    "word": "chancellor",
+    "phonetic": "",
+    "translation": "n. 总理（德、奥等的）；（英）大臣；校长（美国某些大学的）；（英）大法官；（美）首席法官",
+    "translations": [
+      "n. 总理（德、奥等的）；（英）大臣；校长（美国某些大学的）；（英）大法官；（美）首席法官"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00563",
+    "word": "methane",
+    "phonetic": "",
+    "translation": "n. [有化] 甲烷；[能源] 沼气",
+    "translations": [
+      "n. [有化] 甲烷；[能源] 沼气"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00564",
+    "word": "attune",
+    "phonetic": "",
+    "translation": "vt. 使协调；使合拍；为…调音；调合波长",
+    "translations": [
+      "vt. 使协调；使合拍；为…调音；调合波长"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00565",
+    "word": "automatically",
+    "phonetic": "",
+    "translation": "adj. 不经思索的",
+    "translations": [
+      "adj. 不经思索的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00566",
+    "word": "rupture",
+    "phonetic": "",
+    "translation": "n. 破裂；决裂；疝气",
+    "translations": [
+      "n. 破裂；决裂；疝气"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00567",
+    "word": "exploration",
+    "phonetic": "",
+    "translation": "n. 探测；探究；踏勘",
+    "translations": [
+      "n. 探测；探究；踏勘"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00568",
+    "word": "dim",
+    "phonetic": "",
+    "translation": "n. 笨蛋，傻子",
+    "translations": [
+      "n. 笨蛋，傻子"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00569",
+    "word": "sovereignty",
+    "phonetic": "",
+    "translation": "n. 主权；主权国家；君主；独立国",
+    "translations": [
+      "n. 主权；主权国家；君主；独立国"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00570",
+    "word": "tropical",
+    "phonetic": "",
+    "translation": "adj. 热带的；热情的；酷热的",
+    "translations": [
+      "adj. 热带的；热情的；酷热的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00571",
+    "word": "oversee",
+    "phonetic": "",
+    "translation": "vt. 监督；审查；俯瞰；偷看到，无意中看到",
+    "translations": [
+      "vt. 监督；审查；俯瞰；偷看到，无意中看到"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00572",
+    "word": "awe",
+    "phonetic": "",
+    "translation": "n. 敬畏",
+    "translations": [
+      "n. 敬畏"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00573",
+    "word": "pitiful",
+    "phonetic": "",
+    "translation": "adj. 可怜的，令人同情的",
+    "translations": [
+      "adj. 可怜的，令人同情的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00574",
+    "word": "per capita",
+    "phonetic": "",
+    "translation": "adj. 每人的；人均的",
+    "translations": [
+      "adj. 每人的；人均的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00575",
+    "word": "render",
+    "phonetic": "",
+    "translation": "n. 打底；交纳；粉刷",
+    "translations": [
+      "n. 打底；交纳；粉刷"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00576",
+    "word": "elasticity",
+    "phonetic": "",
+    "translation": "n. 弹性；弹力；灵活性",
+    "translations": [
+      "n. 弹性；弹力；灵活性"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00577",
+    "word": "restriction",
+    "phonetic": "",
+    "translation": "n. 限制；约束；束缚",
+    "translations": [
+      "n. 限制；约束；束缚"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00578",
+    "word": "milligram",
+    "phonetic": "",
+    "translation": "n. 毫克",
+    "translations": [
+      "n. 毫克"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00579",
+    "word": "overdress",
+    "phonetic": "",
+    "translation": "vt. 过度装饰；使穿著过分讲究",
+    "translations": [
+      "vt. 过度装饰；使穿著过分讲究"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00580",
+    "word": "violin",
+    "phonetic": "",
+    "translation": "n. 小提琴；小提琴手",
+    "translations": [
+      "n. 小提琴；小提琴手"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00581",
+    "word": "bedside",
+    "phonetic": "",
+    "translation": "n. 床边，床旁",
+    "translations": [
+      "n. 床边，床旁"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00582",
+    "word": "incredibly",
+    "phonetic": "",
+    "translation": "adv. 难以置信地；非常地",
+    "translations": [
+      "adv. 难以置信地；非常地"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00583",
+    "word": "peacekeeping",
+    "phonetic": "",
+    "translation": "adj. 维护和平的；执行停火协定的",
+    "translations": [
+      "adj. 维护和平的；执行停火协定的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00584",
+    "word": "unrivalled",
+    "phonetic": "",
+    "translation": "adj. 无与伦比的；无敌的",
+    "translations": [
+      "adj. 无与伦比的；无敌的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00585",
+    "word": "premise",
+    "phonetic": "",
+    "translation": "n. 前提；上述各项；房屋连地基",
+    "translations": [
+      "n. 前提；上述各项；房屋连地基"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00586",
+    "word": "beam",
+    "phonetic": "",
+    "translation": "n. 横梁；光线；电波；船宽；[计量] 秤杆",
+    "translations": [
+      "n. 横梁；光线；电波；船宽；[计量] 秤杆"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00587",
+    "word": "frigid",
+    "phonetic": "",
+    "translation": "adj. 寒冷的，严寒的；冷淡的",
+    "translations": [
+      "adj. 寒冷的，严寒的；冷淡的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00588",
+    "word": "flatten",
+    "phonetic": "",
+    "translation": "vt. 击败，摧毁；使……平坦",
+    "translations": [
+      "vt. 击败，摧毁；使……平坦"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00589",
+    "word": "geographical",
+    "phonetic": "",
+    "translation": "adj. 地理的；地理学的",
+    "translations": [
+      "adj. 地理的；地理学的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00590",
+    "word": "situational",
+    "phonetic": "",
+    "translation": "adj. 环境形成的；情形的",
+    "translations": [
+      "adj. 环境形成的；情形的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00591",
+    "word": "palaeontologist",
+    "phonetic": "",
+    "translation": "古生物学家",
+    "translations": [
+      "古生物学家"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00592",
+    "word": "acclimate",
+    "phonetic": "",
+    "translation": "vt. 使适应；使服水土",
+    "translations": [
+      "vt. 使适应；使服水土"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00593",
+    "word": "rivet",
+    "phonetic": "",
+    "translation": "n. 铆钉",
+    "translations": [
+      "n. 铆钉"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00594",
+    "word": "genius",
+    "phonetic": "",
+    "translation": "n. 天才，天赋；精神",
+    "translations": [
+      "n. 天才，天赋；精神"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00595",
+    "word": "rhetoric",
+    "phonetic": "",
+    "translation": "n. 修辞，修辞学；华丽的词藻",
+    "translations": [
+      "n. 修辞，修辞学；华丽的词藻"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00596",
+    "word": "prevention",
+    "phonetic": "",
+    "translation": "n. 预防；阻止；妨碍",
+    "translations": [
+      "n. 预防；阻止；妨碍"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00597",
+    "word": "unsettle",
+    "phonetic": "",
+    "translation": "vt. 使动摇；使不安定；使心神不宁",
+    "translations": [
+      "vt. 使动摇；使不安定；使心神不宁"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00598",
+    "word": "platinum",
+    "phonetic": "",
+    "translation": "n. [化学] 铂；白金；唱片集达100万张的销售量；银灰色",
+    "translations": [
+      "n. [化学] 铂；白金；唱片集达100万张的销售量；银灰色"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00599",
+    "word": "seduce",
+    "phonetic": "",
+    "translation": "vt. 引诱；诱惑；诱奸；怂恿",
+    "translations": [
+      "vt. 引诱；诱惑；诱奸；怂恿"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00600",
+    "word": "repaint",
+    "phonetic": "",
+    "translation": "n. 重新油漆的东西；重画的画",
+    "translations": [
+      "n. 重新油漆的东西；重画的画"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00601",
+    "word": "tidal",
+    "phonetic": "",
+    "translation": "adj. 潮汐的；潮的，有关潮水的；定时涨落的",
+    "translations": [
+      "adj. 潮汐的；潮的，有关潮水的；定时涨落的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00602",
+    "word": "linear",
+    "phonetic": "",
+    "translation": "adj. 线的，线型的；直线的，线状的；长度的",
+    "translations": [
+      "adj. 线的，线型的；直线的，线状的；长度的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00603",
+    "word": "atheistic",
+    "phonetic": "",
+    "translation": "adj. 无神论的；无神论者的",
+    "translations": [
+      "adj. 无神论的；无神论者的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00604",
+    "word": "baseline",
+    "phonetic": "",
+    "translation": "n. 基线；底线",
+    "translations": [
+      "n. 基线；底线"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00605",
+    "word": "legitimate",
+    "phonetic": "",
+    "translation": "adj. 合法的；正当的；合理的；正统的",
+    "translations": [
+      "adj. 合法的；正当的；合理的；正统的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00606",
+    "word": "droplet",
+    "phonetic": "",
+    "translation": "n. 小滴，微滴",
+    "translations": [
+      "n. 小滴，微滴"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00607",
+    "word": "orbit",
+    "phonetic": "",
+    "translation": "n. 轨道；眼眶；势力范围；生活常规",
+    "translations": [
+      "n. 轨道；眼眶；势力范围；生活常规"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00608",
+    "word": "trickery",
+    "phonetic": "",
+    "translation": "n. 欺骗；诡计；奸计",
+    "translations": [
+      "n. 欺骗；诡计；奸计"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00609",
+    "word": "rigor",
+    "phonetic": "",
+    "translation": "n. 严厉；精确；苛刻；僵硬",
+    "translations": [
+      "n. 严厉；精确；苛刻；僵硬"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00610",
+    "word": "quarantine",
+    "phonetic": "",
+    "translation": "n. 检疫；隔离；检疫期；封锁",
+    "translations": [
+      "n. 检疫；隔离；检疫期；封锁"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00611",
+    "word": "infrared",
+    "phonetic": "",
+    "translation": "n. 红外线",
+    "translations": [
+      "n. 红外线"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00612",
+    "word": "entrepreneur",
+    "phonetic": "",
+    "translation": "n. 企业家；承包人；主办者",
+    "translations": [
+      "n. 企业家；承包人；主办者"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00613",
+    "word": "deteriorate",
+    "phonetic": "",
+    "translation": "vi. 恶化，变坏",
+    "translations": [
+      "vi. 恶化，变坏"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00614",
+    "word": "illusive",
+    "phonetic": "",
+    "translation": "adj. 错觉的；幻影的；迷惑人的",
+    "translations": [
+      "adj. 错觉的；幻影的；迷惑人的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00615",
+    "word": "curb",
+    "phonetic": "",
+    "translation": "n. 抑制；路边；勒马绳",
+    "translations": [
+      "n. 抑制；路边；勒马绳"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00616",
+    "word": "occupancy",
+    "phonetic": "",
+    "translation": "n. 居住；占有；占用",
+    "translations": [
+      "n. 居住；占有；占用"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00617",
+    "word": "labour",
+    "phonetic": "",
+    "translation": "n. （英国）工党",
+    "translations": [
+      "n. （英国）工党"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00618",
+    "word": "proliferation",
+    "phonetic": "",
+    "translation": "n. 增殖，扩散；分芽繁殖",
+    "translations": [
+      "n. 增殖，扩散；分芽繁殖"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00619",
+    "word": "induce",
+    "phonetic": "",
+    "translation": "vt. 诱导；引起；引诱；感应",
+    "translations": [
+      "vt. 诱导；引起；引诱；感应"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00620",
+    "word": "burgeon",
+    "phonetic": "",
+    "translation": "vt. 萌芽, 发芽",
+    "translations": [
+      "vt. 萌芽, 发芽"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00621",
+    "word": "infinitely",
+    "phonetic": "",
+    "translation": "adv. 无限地；极其",
+    "translations": [
+      "adv. 无限地；极其"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00622",
+    "word": "proximity",
+    "phonetic": "",
+    "translation": "n. 接近，[数]邻近；接近；接近度，距离；亲近",
+    "translations": [
+      "n. 接近，[数]邻近；接近；接近度，距离；亲近"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00623",
+    "word": "outdoors",
+    "phonetic": "",
+    "translation": "adv. 在户外",
+    "translations": [
+      "adv. 在户外"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00624",
+    "word": "dwell",
+    "phonetic": "",
+    "translation": "vi. 居住；存在于；细想某事",
+    "translations": [
+      "vi. 居住；存在于；细想某事"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00625",
+    "word": "enrol",
+    "phonetic": "",
+    "translation": "vi. 注册；参军",
+    "translations": [
+      "vi. 注册；参军"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00626",
+    "word": "productive",
+    "phonetic": "",
+    "translation": "adj. 能生产的；生产的，生产性的；多产的；富有成效的",
+    "translations": [
+      "adj. 能生产的；生产的，生产性的；多产的；富有成效的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00627",
+    "word": "cyclone",
+    "phonetic": "",
+    "translation": "n. 旋风；[气象] 气旋；飓风",
+    "translations": [
+      "n. 旋风；[气象] 气旋；飓风"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00628",
+    "word": "strike a balance",
+    "phonetic": "",
+    "translation": "na. 结账；衡量得失",
+    "translations": [
+      "na. 结账；衡量得失"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00629",
+    "word": "susceptible",
+    "phonetic": "",
+    "translation": "n. 易得病的人",
+    "translations": [
+      "n. 易得病的人"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  },
+  {
+    "id": "qwerty_pte_read_apeuni_json_00630",
+    "word": "symptomatic",
+    "phonetic": "",
+    "translation": "adj. 有症状的；症候的",
+    "translations": [
+      "adj. 有症状的；症候的"
+    ],
+    "domain": "qwerty_pte_read_apeuni_json"
+  }
+]

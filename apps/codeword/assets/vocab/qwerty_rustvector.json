@@ -1,0 +1,282 @@
+[
+  {
+    "id": "qwerty_rustvector_00001",
+    "word": "Vec::new()",
+    "phonetic": "",
+    "translation": "`Vec::new()` 方法创建并返回一个新的空 `Vec`，它没有任何元素。",
+    "translations": [
+      "`Vec::new()` 方法创建并返回一个新的空 `Vec`，它没有任何元素。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00002",
+    "word": "Vec::with_capacity()",
+    "phonetic": "",
+    "translation": "`Vec::with_capacity()` 方法创建一个指定容量的空 `Vec`。容量用于优化内存分配，减少需要扩展时的内存重分配次数。",
+    "translations": [
+      "`Vec::with_capacity()` 方法创建一个指定容量的空 `Vec`。容量用于优化内存分配，减少需要扩展时的内存重分配次数。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00003",
+    "word": "Vec::push()",
+    "phonetic": "",
+    "translation": "`Vec::push()` 方法将一个元素追加到 `Vec` 的末尾。",
+    "translations": [
+      "`Vec::push()` 方法将一个元素追加到 `Vec` 的末尾。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00004",
+    "word": "Vec::pop()",
+    "phonetic": "",
+    "translation": "`Vec::pop()` 方法移除并返回 `Vec` 中的最后一个元素。如果 `Vec` 是空的，返回 `None`。",
+    "translations": [
+      "`Vec::pop()` 方法移除并返回 `Vec` 中的最后一个元素。如果 `Vec` 是空的，返回 `None`。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00005",
+    "word": "Vec::len()",
+    "phonetic": "",
+    "translation": "`Vec::len()` 方法返回 `Vec` 中元素的个数。",
+    "translations": [
+      "`Vec::len()` 方法返回 `Vec` 中元素的个数。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00006",
+    "word": "Vec::is_empty()",
+    "phonetic": "",
+    "translation": "`Vec::is_empty()` 方法返回一个布尔值，表示 `Vec` 是否为空。",
+    "translations": [
+      "`Vec::is_empty()` 方法返回一个布尔值，表示 `Vec` 是否为空。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00007",
+    "word": "Vec::clear()",
+    "phonetic": "",
+    "translation": "`Vec::clear()` 方法移除 `Vec` 中的所有元素，但不改变其容量。",
+    "translations": [
+      "`Vec::clear()` 方法移除 `Vec` 中的所有元素，但不改变其容量。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00008",
+    "word": "Vec::contains()",
+    "phonetic": "",
+    "translation": "`Vec::contains()` 方法检查 `Vec` 中是否包含指定的元素。返回一个布尔值。",
+    "translations": [
+      "`Vec::contains()` 方法检查 `Vec` 中是否包含指定的元素。返回一个布尔值。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00009",
+    "word": "Vec::remove()",
+    "phonetic": "",
+    "translation": "`Vec::remove()` 方法移除并返回 `Vec` 中指定索引处的元素，其他元素会左移。",
+    "translations": [
+      "`Vec::remove()` 方法移除并返回 `Vec` 中指定索引处的元素，其他元素会左移。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00010",
+    "word": "Vec::retain()",
+    "phonetic": "",
+    "translation": "`Vec::retain()` 方法保留符合指定条件的元素，移除不符合条件的元素。",
+    "translations": [
+      "`Vec::retain()` 方法保留符合指定条件的元素，移除不符合条件的元素。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00011",
+    "word": "Vec::swap_remove()",
+    "phonetic": "",
+    "translation": "`Vec::swap_remove()` 方法移除并返回指定位置的元素，并将该元素与 `Vec` 中最后一个元素交换，以便避免元素的移动。",
+    "translations": [
+      "`Vec::swap_remove()` 方法移除并返回指定位置的元素，并将该元素与 `Vec` 中最后一个元素交换，以便避免元素的移动。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00012",
+    "word": "Vec::resize()",
+    "phonetic": "",
+    "translation": "`Vec::resize()` 方法调整 `Vec` 的大小。如果新大小大于原大小，元素将会按指定值填充。",
+    "translations": [
+      "`Vec::resize()` 方法调整 `Vec` 的大小。如果新大小大于原大小，元素将会按指定值填充。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00013",
+    "word": "Vec::truncate()",
+    "phonetic": "",
+    "translation": "`Vec::truncate()` 方法将 `Vec` 截断到指定的长度，多余的元素会被丢弃。",
+    "translations": [
+      "`Vec::truncate()` 方法将 `Vec` 截断到指定的长度，多余的元素会被丢弃。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00014",
+    "word": "Vec::get()",
+    "phonetic": "",
+    "translation": "`Vec::get()` 方法通过索引获取 `Vec` 中的元素，返回一个 `Option`，如果索引越界，则返回 `None`。",
+    "translations": [
+      "`Vec::get()` 方法通过索引获取 `Vec` 中的元素，返回一个 `Option`，如果索引越界，则返回 `None`。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00015",
+    "word": "Vec::index()",
+    "phonetic": "",
+    "translation": "`Vec::index()` 方法与 `get()` 类似，但在越界时会引发 `panic`。",
+    "translations": [
+      "`Vec::index()` 方法与 `get()` 类似，但在越界时会引发 `panic`。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00016",
+    "word": "Vec::clone()",
+    "phonetic": "",
+    "translation": "`Vec::clone()` 方法返回一个 `Vec` 的克隆，包含相同的元素。",
+    "translations": [
+      "`Vec::clone()` 方法返回一个 `Vec` 的克隆，包含相同的元素。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00017",
+    "word": "Vec::extend()",
+    "phonetic": "",
+    "translation": "`Vec::extend()` 方法将另一个可迭代对象的元素追加到当前 `Vec` 的末尾。",
+    "translations": [
+      "`Vec::extend()` 方法将另一个可迭代对象的元素追加到当前 `Vec` 的末尾。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00018",
+    "word": "Vec::insert()",
+    "phonetic": "",
+    "translation": "`Vec::insert()` 方法在指定位置插入一个元素，后续元素会右移。",
+    "translations": [
+      "`Vec::insert()` 方法在指定位置插入一个元素，后续元素会右移。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00019",
+    "word": "Vec::insert_many()",
+    "phonetic": "",
+    "translation": "`Vec::insert_many()` 方法在指定位置插入多个元素。",
+    "translations": [
+      "`Vec::insert_many()` 方法在指定位置插入多个元素。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00020",
+    "word": "Vec::split_off()",
+    "phonetic": "",
+    "translation": "`Vec::split_off()` 方法将 `Vec` 分割为两个 `Vec`，返回包含从指定索引开始的部分，原 `Vec` 只包含从开头到指定索引的部分。",
+    "translations": [
+      "`Vec::split_off()` 方法将 `Vec` 分割为两个 `Vec`，返回包含从指定索引开始的部分，原 `Vec` 只包含从开头到指定索引的部分。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00021",
+    "word": "Vec::shrink_to_fit()",
+    "phonetic": "",
+    "translation": "`Vec::shrink_to_fit()` 方法尝试减少 `Vec` 的容量，以便释放未使用的内存。",
+    "translations": [
+      "`Vec::shrink_to_fit()` 方法尝试减少 `Vec` 的容量，以便释放未使用的内存。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00022",
+    "word": "Vec::sort()",
+    "phonetic": "",
+    "translation": "`Vec::sort()` 方法对 `Vec` 中的元素进行排序，默认按升序排列。",
+    "translations": [
+      "`Vec::sort()` 方法对 `Vec` 中的元素进行排序，默认按升序排列。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00023",
+    "word": "Vec::sort_by()",
+    "phonetic": "",
+    "translation": "`Vec::sort_by()` 方法根据指定的排序规则对 `Vec` 中的元素进行排序。",
+    "translations": [
+      "`Vec::sort_by()` 方法根据指定的排序规则对 `Vec` 中的元素进行排序。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00024",
+    "word": "Vec::sort_unstable()",
+    "phonetic": "",
+    "translation": "`Vec::sort_unstable()` 方法对 `Vec` 中的元素进行排序，但不保证稳定排序（即相等元素的顺序可能会改变）。",
+    "translations": [
+      "`Vec::sort_unstable()` 方法对 `Vec` 中的元素进行排序，但不保证稳定排序（即相等元素的顺序可能会改变）。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00025",
+    "word": "Vec::binary_search()",
+    "phonetic": "",
+    "translation": "`Vec::binary_search()` 方法对已排序的 `Vec` 进行二分查找，返回目标值的索引（如果找到）。",
+    "translations": [
+      "`Vec::binary_search()` 方法对已排序的 `Vec` 进行二分查找，返回目标值的索引（如果找到）。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00026",
+    "word": "Vec::dedup()",
+    "phonetic": "",
+    "translation": "`Vec::dedup()` 方法移除 `Vec` 中的相邻重复元素。",
+    "translations": [
+      "`Vec::dedup()` 方法移除 `Vec` 中的相邻重复元素。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00027",
+    "word": "Vec::dedup_by()",
+    "phonetic": "",
+    "translation": "`Vec::dedup_by()` 方法根据指定的闭包去重，移除不符合条件的相邻重复元素。",
+    "translations": [
+      "`Vec::dedup_by()` 方法根据指定的闭包去重，移除不符合条件的相邻重复元素。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00028",
+    "word": "Vec::into_boxed_slice()",
+    "phonetic": "",
+    "translation": "`Vec::into_boxed_slice()` 方法将 `Vec` 转换为 `Box<[T]>`，即一个堆分配的切片。",
+    "translations": [
+      "`Vec::into_boxed_slice()` 方法将 `Vec` 转换为 `Box<[T]>`，即一个堆分配的切片。"
+    ],
+    "domain": "qwerty_rustvector"
+  }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "id": "qwerty_javalinkedlist_00001",
+    "word": "offerLast()",
+    "phonetic": "",
+    "translation": "public boolean offerLast(E e):尾部插入元素，返回是否成功，成功为 true，失败为 false。",
+    "translations": [
+      "public boolean offerLast(E e):尾部插入元素，返回是否成功，成功为 true，失败为 false。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00002",
+    "word": "clear()",
+    "phonetic": "",
+    "translation": "public void clear():清空链表。",
+    "translations": [
+      "public void clear():清空链表。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00003",
+    "word": "removeFirst()",
+    "phonetic": "",
+    "translation": "public E removeFirst():删除并返回第一个元素。",
+    "translations": [
+      "public E removeFirst():删除并返回第一个元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00004",
+    "word": "removeLast()",
+    "phonetic": "",
+    "translation": "public E removeLast():删除并返回最后一个元素。",
+    "translations": [
+      "public E removeLast():删除并返回最后一个元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00005",
+    "word": "remove()",
+    "phonetic": "",
+    "translation": "public boolean remove(Object o):删除某一元素，返回是否成功，成功为 true，失败为 false。",
+    "translations": [
+      "public boolean remove(Object o):删除某一元素，返回是否成功，成功为 true，失败为 false。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00006",
+    "word": "remove()",
+    "phonetic": "",
+    "translation": "public E remove(int index):删除指定位置的元素。",
+    "translations": [
+      "public E remove(int index):删除指定位置的元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00007",
+    "word": "poll()",
+    "phonetic": "",
+    "translation": "public E poll():删除并返回第一个元素。",
+    "translations": [
+      "public E poll():删除并返回第一个元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00008",
+    "word": "remove()",
+    "phonetic": "",
+    "translation": "public E remove():删除并返回第一个元素。",
+    "translations": [
+      "public E remove():删除并返回第一个元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00009",
+    "word": "contains()",
+    "phonetic": "",
+    "translation": "public boolean contains(Object o):判断是否含有某一元素。",
+    "translations": [
+      "public boolean contains(Object o):判断是否含有某一元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00010",
+    "word": "get()",
+    "phonetic": "",
+    "translation": "public E get(int index):返回指定位置的元素。",
+    "translations": [
+      "public E get(int index):返回指定位置的元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00011",
+    "word": "getFirst()",
+    "phonetic": "",
+    "translation": "public E getFirst():返回第一个元素。",
+    "translations": [
+      "public E getFirst():返回第一个元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00012",
+    "word": "getLast()",
+    "phonetic": "",
+    "translation": "public E getLast():返回最后一个元素。",
+    "translations": [
+      "public E getLast():返回最后一个元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00013",
+    "word": "indexOf()",
+    "phonetic": "",
+    "translation": "public int indexOf(Object o):查找指定元素从前往后第一次出现的索引。",
+    "translations": [
+      "public int indexOf(Object o):查找指定元素从前往后第一次出现的索引。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00014",
+    "word": "lastIndexOf()",
+    "phonetic": "",
+    "translation": "public int lastIndexOf(Object o):查找指定元素最后一次出现的索引。",
+    "translations": [
+      "public int lastIndexOf(Object o):查找指定元素最后一次出现的索引。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00015",
+    "word": "peek()",
+    "phonetic": "",
+    "translation": "public E peek():返回第一个元素。",
+    "translations": [
+      "public E peek():返回第一个元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00016",
+    "word": "element()",
+    "phonetic": "",
+    "translation": "public E element():返回第一个元素。",
+    "translations": [
+      "public E element():返回第一个元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00017",
+    "word": "peekFirst()",
+    "phonetic": "",
+    "translation": "public E peekFirst():返回头部元素。",
+    "translations": [
+      "public E peekFirst():返回头部元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00018",
+    "word": "peekLast()",
+    "phonetic": "",
+    "translation": "public E peekLast():返回尾部元素。",
+    "translations": [
+      "public E peekLast():返回尾部元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00019",
+    "word": "set()",
+    "phonetic": "",
+    "translation": "public E set(int index, E element):设置指定位置的元素。",
+    "translations": [
+      "public E set(int index, E element):设置指定位置的元素。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00020",
+    "word": "clone()",
+    "phonetic": "",
+    "translation": "public Object clone():克隆该列表。",
+    "translations": [
+      "public Object clone():克隆该列表。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00021",
+    "word": "descendingIterator()",
+    "phonetic": "",
+    "translation": "public Iterator descendingIterator():返回倒序迭代器。",
+    "translations": [
+      "public Iterator descendingIterator():返回倒序迭代器。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00022",
+    "word": "size()",
+    "phonetic": "",
+    "translation": "public int size():返回链表元素个数。",
+    "translations": [
+      "public int size():返回链表元素个数。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00023",
+    "word": "listIterator()",
+    "phonetic": "",
+    "translation": "public ListIterator listIterator(int index):返回从指定位置开始到末尾的迭代器。",
+    "translations": [
+      "public ListIterator listIterator(int index):返回从指定位置开始到末尾的迭代器。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00024",
+    "word": "toArray()",
+    "phonetic": "",
+    "translation": "public Object[] toArray():返回一个由链表元素组成的数组。",
+    "translations": [
+      "public Object[] toArray():返回一个由链表元素组成的数组。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  },
+  {
+    "id": "qwerty_javalinkedlist_00025",
+    "word": "toArray()",
+    "phonetic": "",
+    "translation": "public  T[] toArray(T[] a):返回一个由链表元素转换类型而成的数组。",
+    "translations": [
+      "public  T[] toArray(T[] a):返回一个由链表元素转换类型而成的数组。"
+    ],
+    "domain": "qwerty_javalinkedlist"
+  }
+]

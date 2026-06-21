@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lib_content/lib_content.dart';
 import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 import 'package:path_provider/path_provider.dart';
@@ -136,24 +135,68 @@ class _SectionLabel extends StatelessWidget {
   }
 }
 
-/// 3x3 grid of vocab cards. Each one launches a learning session for
-/// that vocab.
+/// All 371 qwerty-derived lists, grouped by category. Each category
+/// renders a small section header and a 2-col grid of vocab cards.
 class _LibraryGrid extends ConsumerWidget {
   const _LibraryGrid();
+
+  /// Display order for categories. Anything not in here goes last,
+  /// sorted alphabetically.
+  static const _priority = [
+    '考试英语',
+    '编程',
+    '青少年英语',
+    '语言',
+    '词典',
+    '专业词汇',
+  ];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final meta = ref.watch(vocabMetaProvider);
-    return GridView.count(
-      crossAxisCount: 2,
-      shrinkWrap: true,
-      mainAxisSpacing: AppSpacing.x3,
-      crossAxisSpacing: AppSpacing.x3,
-      childAspectRatio: 1.6,
-      physics: const NeverScrollableScrollPhysics(),
+    final lists = ref.watch(qwertyCatalogProvider);
+    final byCategory = <String, List<VocabList>>{};
+    for (final l in lists) {
+      byCategory.putIfAbsent(l.category, () => []).add(l);
+    }
+    final categories = byCategory.keys.toList()
+      ..sort((a, b) {
+        final ai = _priority.indexOf(a);
+        final bi = _priority.indexOf(b);
+        if (ai == -1 && bi == -1) return a.compareTo(b);
+        if (ai == -1) return 1;
+        if (bi == -1) return -1;
+        return ai.compareTo(bi);
+      });
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        for (final list in kBuiltinLists)
-          _LibraryTile(list: list, available: meta.containsKey(list.id)),
+        for (final cat in categories) ...[
+          Padding(
+            padding: const EdgeInsets.only(top: AppSpacing.x3, bottom: AppSpacing.x2),
+            child: Text(
+              '$cat · ${byCategory[cat]!.length}',
+              style: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: AppColors.inkMuted,
+                letterSpacing: 0.6,
+              ),
+            ),
+          ),
+          GridView.count(
+            crossAxisCount: 2,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            mainAxisSpacing: AppSpacing.x3,
+            crossAxisSpacing: AppSpacing.x3,
+            childAspectRatio: 1.6,
+            children: [
+              for (final l in byCategory[cat]!)
+                _LibraryTile(list: l, available: meta.containsKey(l.id)),
+            ],
+          ),
+        ],
       ],
     );
   }
@@ -165,18 +208,8 @@ class _LibraryTile extends StatelessWidget {
   const _LibraryTile({required this.list, required this.available});
 
   Color _color() {
-    final palette = [
-      AppColors.domainCs,
-      AppColors.domainPython,
-      AppColors.domainAi,
-      AppColors.domainLlm,
-      AppColors.domainWeb,
-      AppColors.domainDevops,
-      AppColors.domainData,
-      AppColors.domainSecurity,
-      AppColors.domainProduct,
-    ];
-    return palette[list.id.hashCode.abs() % palette.length];
+    final h = list.id.hashCode.abs();
+    return AppColors.qwertyPalette[h % AppColors.qwertyPalette.length];
   }
 
   @override
@@ -261,11 +294,11 @@ class _AccentRow extends StatelessWidget {
   const _AccentRow();
   @override
   Widget build(BuildContext context) {
-    return const _SettingRow(
+    return _SettingRow(
       icon: Icons.volume_up_outlined,
       title: '发音',
-      subtitle: '美音',
-      color: AppColors.domainCs,
+      subtitle: '美音 · 来自有道',
+      color: AppColors.qwertyPalette[0],
     );
   }
 }

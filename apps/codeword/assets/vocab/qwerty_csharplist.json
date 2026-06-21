@@ -1,0 +1,378 @@
+[
+  {
+    "id": "qwerty_csharplist_00001",
+    "word": "Capacity",
+    "phonetic": "",
+    "translation": "Capacity:获取或设置该内部数据结构在不调整大小的情况下能够容纳的元素总数",
+    "translations": [
+      "Capacity:获取或设置该内部数据结构在不调整大小的情况下能够容纳的元素总数"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00002",
+    "word": "Count",
+    "phonetic": "",
+    "translation": "Count:获取 List<T> 中包含的元素数",
+    "translations": [
+      "Count:获取 List<T> 中包含的元素数"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00003",
+    "word": "item[]",
+    "phonetic": "",
+    "translation": "item[]:获取或设置指定索引处的元素",
+    "translations": [
+      "item[]:获取或设置指定索引处的元素"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00004",
+    "word": "Add()",
+    "phonetic": "",
+    "translation": "Add(T):将对象添加到 List<T> 的结尾处",
+    "translations": [
+      "Add(T):将对象添加到 List<T> 的结尾处"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00005",
+    "word": "AddRange()",
+    "phonetic": "",
+    "translation": "AddRange(IEnumerable<T>):将指定集合的元素添加到 List<T> 的末尾",
+    "translations": [
+      "AddRange(IEnumerable<T>):将指定集合的元素添加到 List<T> 的末尾"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00006",
+    "word": "AsReadOnly()",
+    "phonetic": "",
+    "translation": "AsReadOnly():返回当前集合的只读 ReadOnlyCollection<T> 包装器",
+    "translations": [
+      "AsReadOnly():返回当前集合的只读 ReadOnlyCollection<T> 包装器"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00007",
+    "word": "BinarySearch()",
+    "phonetic": "",
+    "translation": "BinarySearch(T):使用默认的比较器在整个已排序的 List<T> 中搜索元素，并返回该元素从零开始的索引；BinarySearch(T, IComparer<T>):删除 arraylist 里的单个元素；BinarySearch(Int32, Int32, T, IComparer<T>):使用指定的比较器在已排序的 List<T> 的某个元素范围中搜索元素，并返回该元素从零开始的索引",
+    "translations": [
+      "BinarySearch(T):使用默认的比较器在整个已排序的 List<T> 中搜索元素，并返回该元素从零开始的索引",
+      "BinarySearch(T, IComparer<T>):删除 arraylist 里的单个元素",
+      "BinarySearch(Int32, Int32, T, IComparer<T>):使用指定的比较器在已排序的 List<T> 的某个元素范围中搜索元素，并返回该元素从零开始的索引"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00008",
+    "word": "Clear()",
+    "phonetic": "",
+    "translation": "Clear():从 List<T> 中移除所有元素",
+    "translations": [
+      "Clear():从 List<T> 中移除所有元素"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00009",
+    "word": "Contains()",
+    "phonetic": "",
+    "translation": "Contains(T):确定某元素是否在 List<T> 中",
+    "translations": [
+      "Contains(T):确定某元素是否在 List<T> 中"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00010",
+    "word": "ConvertAll()",
+    "phonetic": "",
+    "translation": "ConvertAll<TOutput>(Converter<T,TOutput>):将当前 List<T> 中的元素转换为另一种类型，并返回包含已转换元素的列表",
+    "translations": [
+      "ConvertAll<TOutput>(Converter<T,TOutput>):将当前 List<T> 中的元素转换为另一种类型，并返回包含已转换元素的列表"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00011",
+    "word": "CopyTo()",
+    "phonetic": "",
+    "translation": "CopyTo(T[]):从目标数组的开头开始，将整个 List<T> 复制到兼容的一维数组；CopyTo(T[], Int32):从目标数组的指定索引处开始，将整个 List<T> 复制到兼容的一维数组；CopyTo(Int32, T[], Int32, Int32):从目标数组的指定索引处开始，将元素的范围从 List<T> 复制到兼容的一维数组",
+    "translations": [
+      "CopyTo(T[]):从目标数组的开头开始，将整个 List<T> 复制到兼容的一维数组",
+      "CopyTo(T[], Int32):从目标数组的指定索引处开始，将整个 List<T> 复制到兼容的一维数组",
+      "CopyTo(Int32, T[], Int32, Int32):从目标数组的指定索引处开始，将元素的范围从 List<T> 复制到兼容的一维数组"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00012",
+    "word": "Equals()",
+    "phonetic": "",
+    "translation": "Equals(Object):确定指定对象是否等于当前对象（继承自 Object）",
+    "translations": [
+      "Equals(Object):确定指定对象是否等于当前对象（继承自 Object）"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00013",
+    "word": "Exists()",
+    "phonetic": "",
+    "translation": "Exists(Predicate<T>):确定 List<T> 是否包含与指定谓词定义的条件匹配的元素",
+    "translations": [
+      "Exists(Predicate<T>):确定 List<T> 是否包含与指定谓词定义的条件匹配的元素"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00014",
+    "word": "Find()",
+    "phonetic": "",
+    "translation": "Find(Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回整个 List<T> 中的第一个匹配元素",
+    "translations": [
+      "Find(Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回整个 List<T> 中的第一个匹配元素"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00015",
+    "word": "FindAll()",
+    "phonetic": "",
+    "translation": "FindAll(Predicate<T>):检索与指定谓词定义的条件匹配的所有元素",
+    "translations": [
+      "FindAll(Predicate<T>):检索与指定谓词定义的条件匹配的所有元素"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00016",
+    "word": "FindIndex()",
+    "phonetic": "",
+    "translation": "FindIndex(Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回整个 List<T> 中第一个匹配元素的从零开始的索引；FindIndex(Int32, Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回 List<T> 中从指定索引到最后一个元素的元素范围内第一个匹配项的从零开始的索引；FindIndex(Int32, Int32, Predicate<T>):搜索与指定谓词所定义的条件相匹配的一个元素，并返回 List<T> 中从指定的索引开始、包含指定元素个数的元素范围内第一个匹配项的从零开始的索引",
+    "translations": [
+      "FindIndex(Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回整个 List<T> 中第一个匹配元素的从零开始的索引",
+      "FindIndex(Int32, Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回 List<T> 中从指定索引到最后一个元素的元素范围内第一个匹配项的从零开始的索引",
+      "FindIndex(Int32, Int32, Predicate<T>):搜索与指定谓词所定义的条件相匹配的一个元素，并返回 List<T> 中从指定的索引开始、包含指定元素个数的元素范围内第一个匹配项的从零开始的索引"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00017",
+    "word": "FindLast()",
+    "phonetic": "",
+    "translation": "FindLast(Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回整个 List<T> 中的最后一个匹配元素",
+    "translations": [
+      "FindLast(Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回整个 List<T> 中的最后一个匹配元素"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00018",
+    "word": "FindLastIndex()",
+    "phonetic": "",
+    "translation": "FindLastIndex(Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回整个 List<T> 中最后一个匹配元素的从零开始的索引；FindLastIndex(Int32, Predicate<T>):搜索与由指定谓词定义的条件相匹配的元素，并返回 List<T> 中从第一个元素到指定索引的元素范围内最后一个匹配项的从零开始的索引；FindLastIndex(Int32, Int32, Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回 List<T> 中包含指定元素个数、到指定索引结束的元素范围内最后一个匹配项的从零开始的索引",
+    "translations": [
+      "FindLastIndex(Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回整个 List<T> 中最后一个匹配元素的从零开始的索引",
+      "FindLastIndex(Int32, Predicate<T>):搜索与由指定谓词定义的条件相匹配的元素，并返回 List<T> 中从第一个元素到指定索引的元素范围内最后一个匹配项的从零开始的索引",
+      "FindLastIndex(Int32, Int32, Predicate<T>):搜索与指定谓词所定义的条件相匹配的元素，并返回 List<T> 中包含指定元素个数、到指定索引结束的元素范围内最后一个匹配项的从零开始的索引"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00019",
+    "word": "ForEach()",
+    "phonetic": "",
+    "translation": "ForEach(Action<T>):对 List<T> 的每个元素执行指定操作",
+    "translations": [
+      "ForEach(Action<T>):对 List<T> 的每个元素执行指定操作"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00020",
+    "word": "GetEnumerator()",
+    "phonetic": "",
+    "translation": "GetEnumerator():返回循环访问 List<T> 的枚举数",
+    "translations": [
+      "GetEnumerator():返回循环访问 List<T> 的枚举数"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00021",
+    "word": "GetHashCode()",
+    "phonetic": "",
+    "translation": "GetHashCode():作为默认哈希函数（继承自 Object）",
+    "translations": [
+      "GetHashCode():作为默认哈希函数（继承自 Object）"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00022",
+    "word": "GetRange()",
+    "phonetic": "",
+    "translation": "GetRange(Int32, Int32):在源 List<T> 中创建元素范围的浅表复制",
+    "translations": [
+      "GetRange(Int32, Int32):在源 List<T> 中创建元素范围的浅表复制"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00023",
+    "word": "GetType()",
+    "phonetic": "",
+    "translation": "GetType():获取当前实例的 Type（继承自 Object）",
+    "translations": [
+      "GetType():获取当前实例的 Type（继承自 Object）"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00024",
+    "word": "IndexOf()",
+    "phonetic": "",
+    "translation": "IndexOf(T):搜索指定的对象，并返回整个 List<T> 中第一个匹配项的从零开始的索引；IndexOf(T, Int32):搜索指定对象并返回 List<T> 中从指定索引到最后一个元素这部分元素中第一个匹配项的从零开始索引；IndexOf(T, Int32, Int32):搜索指定对象并返回 List<T> 中从指定索引开始并包含指定元素数的这部分元素中第一个匹配项的从零开始索引",
+    "translations": [
+      "IndexOf(T):搜索指定的对象，并返回整个 List<T> 中第一个匹配项的从零开始的索引",
+      "IndexOf(T, Int32):搜索指定对象并返回 List<T> 中从指定索引到最后一个元素这部分元素中第一个匹配项的从零开始索引",
+      "IndexOf(T, Int32, Int32):搜索指定对象并返回 List<T> 中从指定索引开始并包含指定元素数的这部分元素中第一个匹配项的从零开始索引"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00025",
+    "word": "Insert()",
+    "phonetic": "",
+    "translation": "Insert(Int32, T):将元素插入 List<T> 的指定索引处",
+    "translations": [
+      "Insert(Int32, T):将元素插入 List<T> 的指定索引处"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00026",
+    "word": "InsertRange()",
+    "phonetic": "",
+    "translation": "InsertRange(Int32, IEnumerable<T>):将集合中的元素插入 List<T> 的指定索引处",
+    "translations": [
+      "InsertRange(Int32, IEnumerable<T>):将集合中的元素插入 List<T> 的指定索引处"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00027",
+    "word": "LastIndexOf()",
+    "phonetic": "",
+    "translation": "LastIndexOf(T):搜索指定对象并返回整个 List<T> 中最后一个匹配项的从零开始索引；LastIndexOf(T, Int32):搜索指定对象并返回 List<T> 中从第一个元素到指定索引这部分元素中最后一个匹配项的从零开始的索引；LastIndexOf(T, Int32, Int32):搜索指定对象并返回 List<T> 中到指定索引为止包含指定元素数的这部分元素中最后一个匹配项的从零开始索引",
+    "translations": [
+      "LastIndexOf(T):搜索指定对象并返回整个 List<T> 中最后一个匹配项的从零开始索引",
+      "LastIndexOf(T, Int32):搜索指定对象并返回 List<T> 中从第一个元素到指定索引这部分元素中最后一个匹配项的从零开始的索引",
+      "LastIndexOf(T, Int32, Int32):搜索指定对象并返回 List<T> 中到指定索引为止包含指定元素数的这部分元素中最后一个匹配项的从零开始索引"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00028",
+    "word": "MemberwiseClone()",
+    "phonetic": "",
+    "translation": "MemberwiseClone():创建当前 Object 的浅表副本（继承自 Object）",
+    "translations": [
+      "MemberwiseClone():创建当前 Object 的浅表副本（继承自 Object）"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00029",
+    "word": "Remove()",
+    "phonetic": "",
+    "translation": "Remove(T):从 List<T> 中移除特定对象的第一个匹配项",
+    "translations": [
+      "Remove(T):从 List<T> 中移除特定对象的第一个匹配项"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00030",
+    "word": "RemoveAll()",
+    "phonetic": "",
+    "translation": "RemoveAll(Predicate<T>):移除与指定的谓词所定义的条件相匹配的所有元素；RemoveAt(Int32):移除 List<T> 的指定索引处的元素；RemoveRange(Int32, Int32):从 List<T> 中移除一系列元素",
+    "translations": [
+      "RemoveAll(Predicate<T>):移除与指定的谓词所定义的条件相匹配的所有元素",
+      "RemoveAt(Int32):移除 List<T> 的指定索引处的元素",
+      "RemoveRange(Int32, Int32):从 List<T> 中移除一系列元素"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00031",
+    "word": "Reverse()",
+    "phonetic": "",
+    "translation": "Reverse(Int32, Int32):将指定范围中元素的顺序反转",
+    "translations": [
+      "Reverse(Int32, Int32):将指定范围中元素的顺序反转"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00032",
+    "word": "Sort()",
+    "phonetic": "",
+    "translation": "Sort():使用默认比较器对整个 List<T> 中的元素进行排序；Sort(Comparison<T>):使用指定的 Comparison<T>，对整个 List<T> 中的元素进行排序；Sort(IComparer<T>):使用指定的比较器对整个 List<T> 中的元素进行排序",
+    "translations": [
+      "Sort():使用默认比较器对整个 List<T> 中的元素进行排序",
+      "Sort(Comparison<T>):使用指定的 Comparison<T>，对整个 List<T> 中的元素进行排序",
+      "Sort(IComparer<T>):使用指定的比较器对整个 List<T> 中的元素进行排序"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00033",
+    "word": "ToArray()",
+    "phonetic": "",
+    "translation": "将 List<T> 的元素复制到新数组中",
+    "translations": [
+      "将 List<T> 的元素复制到新数组中"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00034",
+    "word": "ToString()",
+    "phonetic": "",
+    "translation": "返回表示当前对象的字符串（继承自 Object）",
+    "translations": [
+      "返回表示当前对象的字符串（继承自 Object）"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00035",
+    "word": "TrimExcess()",
+    "phonetic": "",
+    "translation": "TrimExcess():将容量设置为 List<T> 中元素的实际数目（如果该数目小于某个阈值）",
+    "translations": [
+      "TrimExcess():将容量设置为 List<T> 中元素的实际数目（如果该数目小于某个阈值）"
+    ],
+    "domain": "qwerty_csharplist"
+  },
+  {
+    "id": "qwerty_csharplist_00036",
+    "word": "TrueForAll()",
+    "phonetic": "",
+    "translation": "TrueForAll(Predicate<T>):确定 List<T> 中的每个元素是否都与指定谓词定义的条件匹配",
+    "translations": [
+      "TrueForAll(Predicate<T>):确定 List<T> 中的每个元素是否都与指定谓词定义的条件匹配"
+    ],
+    "domain": "qwerty_csharplist"
+  }
+]

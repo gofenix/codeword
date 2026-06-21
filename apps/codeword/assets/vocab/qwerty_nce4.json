@@ -1,0 +1,7842 @@
+[
+  {
+    "id": "qwerty_nce4_00001",
+    "word": "fossil man",
+    "phonetic": "",
+    "translation": "a.化石人",
+    "translations": [
+      "a.化石人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00002",
+    "word": "recount",
+    "phonetic": "ri'kaunt",
+    "translation": "v.叙述",
+    "translations": [
+      "v.叙述"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00003",
+    "word": "saga",
+    "phonetic": "'sa:gә",
+    "translation": "n.英雄故事",
+    "translations": [
+      "n.英雄故事"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00004",
+    "word": "legend",
+    "phonetic": "'ledʒәnd",
+    "translation": "n.传说，传奇",
+    "translations": [
+      "n.传说，传奇"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00005",
+    "word": "migration",
+    "phonetic": "mai'greiʃәn",
+    "translation": "n.迁移，移居",
+    "translations": [
+      "n.迁移，移居"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00006",
+    "word": "anthropologist",
+    "phonetic": "ænθrә'pɔlәdʒist",
+    "translation": "n.人类学家",
+    "translations": [
+      "n.人类学家"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00007",
+    "word": "archaeologist",
+    "phonetic": "'a:kiә'lɔdʒist",
+    "translation": "n.考古学家",
+    "translations": [
+      "n.考古学家"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00008",
+    "word": "ancestor",
+    "phonetic": "'ænsistә",
+    "translation": "n.祖先",
+    "translations": [
+      "n.祖先"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00009",
+    "word": "Polynesian",
+    "phonetic": "pɔli'ni:zjәn",
+    "translation": "a.波利尼西亚(中太平洋之一群岛)的",
+    "translations": [
+      "a.波利尼西亚(中太平洋之一群岛)的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00010",
+    "word": "Indonesia",
+    "phonetic": "'indәu'ni:zjә",
+    "translation": "n.印度尼西亚",
+    "translations": [
+      "n.印度尼西亚"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00011",
+    "word": "flint",
+    "phonetic": "flint",
+    "translation": "n.燧石",
+    "translations": [
+      "n.燧石"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00012",
+    "word": "rot",
+    "phonetic": "rɔt",
+    "translation": "v.烂掉",
+    "translations": [
+      "v.烂掉"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00013",
+    "word": "beast",
+    "phonetic": "bi:st",
+    "translation": "n.野兽",
+    "translations": [
+      "n.野兽"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00014",
+    "word": "census",
+    "phonetic": "'sensәs",
+    "translation": "n.统计数字",
+    "translations": [
+      "n.统计数字"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00015",
+    "word": "acre",
+    "phonetic": "'eikә",
+    "translation": "n.英亩",
+    "translations": [
+      "n.英亩"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00016",
+    "word": "content",
+    "phonetic": "'kɔntent, kәn'tent",
+    "translation": "a.满足的",
+    "translations": [
+      "a.满足的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00017",
+    "word": "Matterhorn",
+    "phonetic": "['mætәhɔ:n]",
+    "translation": "n.马特霍恩峰(阿尔卑斯山峰之一)",
+    "translations": [
+      "n.马特霍恩峰(阿尔卑斯山峰之一)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00018",
+    "word": "alpinist",
+    "phonetic": "['ælpinist]",
+    "translation": "n.登山运动员",
+    "translations": [
+      "n.登山运动员"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00019",
+    "word": "pioneer",
+    "phonetic": "'paiә'niә",
+    "translation": "v.开辟，倡导;n.先锋，开辟者",
+    "translations": [
+      "v.开辟，倡导;n.先锋，开辟者"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00020",
+    "word": "summit",
+    "phonetic": "'sʌmit",
+    "translation": "n.顶峰",
+    "translations": [
+      "n.顶峰"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00021",
+    "word": "attain",
+    "phonetic": "ә'tein",
+    "translation": "v.到达",
+    "translations": [
+      "v.到达"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00022",
+    "word": "perilous",
+    "phonetic": "'perilәs",
+    "translation": "a.危险的",
+    "translations": [
+      "a.危险的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00023",
+    "word": "shudder",
+    "phonetic": "'ʃʌdә",
+    "translation": "v.不寒而栗",
+    "translations": [
+      "v.不寒而栗"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00024",
+    "word": "court",
+    "phonetic": "kɔ:t",
+    "translation": "v.追求",
+    "translations": [
+      "v.追求"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00025",
+    "word": "solitary",
+    "phonetic": "'sɔlitәri",
+    "translation": "a.唯一的",
+    "translations": [
+      "a.唯一的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00026",
+    "word": "impoverish",
+    "phonetic": "im'pɔvәriʃ",
+    "translation": "v.使贫困",
+    "translations": [
+      "v.使贫困"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00027",
+    "word": "Alpine",
+    "phonetic": "['ælpain]",
+    "translation": "a.阿尔卑斯山的",
+    "translations": [
+      "a.阿尔卑斯山的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00028",
+    "word": "flea-ridden",
+    "phonetic": "",
+    "translation": "a.布满跳蚤的",
+    "translations": [
+      "a.布满跳蚤的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00029",
+    "word": "coarse",
+    "phonetic": "kɔ:s",
+    "translation": "a.粗劣的",
+    "translations": [
+      "a.粗劣的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00030",
+    "word": "boast",
+    "phonetic": "bәust",
+    "translation": "v.自恃有",
+    "translations": [
+      "v.自恃有"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00031",
+    "word": "parishioner",
+    "phonetic": "[pә'riʃәnә]",
+    "translation": "n.教区居民",
+    "translations": [
+      "n.教区居民"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00032",
+    "word": "shepherd",
+    "phonetic": "'ʃepәd",
+    "translation": "n.牧羊人",
+    "translations": [
+      "n.牧羊人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00033",
+    "word": "linen",
+    "phonetic": "'linin",
+    "translation": "n.亚麻布",
+    "translations": [
+      "n.亚麻布"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00034",
+    "word": "solid",
+    "phonetic": "'sɔlid",
+    "translation": "a.坚实的",
+    "translations": [
+      "a.坚实的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00035",
+    "word": "safe",
+    "phonetic": "seif",
+    "translation": "n.保险柜",
+    "translations": [
+      "n.保险柜"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00036",
+    "word": "Ulyanovsk",
+    "phonetic": "[u:'lja:nɔfsk]",
+    "translation": "n.乌里扬诺夫斯克",
+    "translations": [
+      "n.乌里扬诺夫斯克"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00037",
+    "word": "commission",
+    "phonetic": "kә'miʃәn",
+    "translation": "n.委员会",
+    "translations": [
+      "n.委员会"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00038",
+    "word": "opaque",
+    "phonetic": "әu'peik",
+    "translation": "a.不透明的",
+    "translations": [
+      "a.不透明的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00039",
+    "word": "lotto",
+    "phonetic": "['lɔtou]",
+    "translation": "n.一种有编号的纸牌",
+    "translations": [
+      "n.一种有编号的纸牌"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00040",
+    "word": "slipper",
+    "phonetic": "'slipә",
+    "translation": "n.拖鞋",
+    "translations": [
+      "n.拖鞋"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00041",
+    "word": "blindfold",
+    "phonetic": "['blaindfәuld]",
+    "translation": "a..被蒙上眼睛的",
+    "translations": [
+      "a..被蒙上眼睛的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00042",
+    "word": "leave",
+    "phonetic": "li:v",
+    "translation": "n.允许",
+    "translations": [
+      "n.允许"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00043",
+    "word": "fundamentals",
+    "phonetic": "",
+    "translation": "n.基本原则",
+    "translations": [
+      "n.基本原则"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00044",
+    "word": "glorious",
+    "phonetic": "'glɔ:riәs",
+    "translation": "a.光辉灿烂的",
+    "translations": [
+      "a.光辉灿烂的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00045",
+    "word": "splendid",
+    "phonetic": "'splendid",
+    "translation": "a.灿烂的",
+    "translations": [
+      "a.灿烂的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00046",
+    "word": "rub",
+    "phonetic": "rʌb",
+    "translation": "n.难题",
+    "translations": [
+      "n.难题"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00047",
+    "word": "identity",
+    "phonetic": "ai'dentiti",
+    "translation": "n.身份",
+    "translations": [
+      "n.身份"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00048",
+    "word": "dreary",
+    "phonetic": "'driәri",
+    "translation": "a.沉郁的",
+    "translations": [
+      "a.沉郁的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00049",
+    "word": "commitment",
+    "phonetic": "kә'mitmәnt",
+    "translation": "n.信奉",
+    "translations": [
+      "n.信奉"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00050",
+    "word": "mean",
+    "phonetic": "mi:n",
+    "translation": "a.吝啬，小气",
+    "translations": [
+      "a.吝啬，小气"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00051",
+    "word": "social climber",
+    "phonetic": "",
+    "translation": "追求更高社会地位的人，向上爬的人",
+    "translations": [
+      "追求更高社会地位的人，向上爬的人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00052",
+    "word": "devotion",
+    "phonetic": "di'vәuʃәn",
+    "translation": "n.热爱",
+    "translations": [
+      "n.热爱"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00053",
+    "word": "cosmic",
+    "phonetic": "'kɔzmik",
+    "translation": "a.宇宙的",
+    "translations": [
+      "a.宇宙的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00054",
+    "word": "suburban",
+    "phonetic": "sә'bә:bәn",
+    "translation": "a.见识不广的，偏狭的",
+    "translations": [
+      "a.见识不广的，偏狭的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00055",
+    "word": "conceited",
+    "phonetic": "kәn'si:tid",
+    "translation": "a.自高自大的",
+    "translations": [
+      "a.自高自大的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00056",
+    "word": "presumptuous",
+    "phonetic": "pri'zʌmptjuәs",
+    "translation": "a.自以为是的，放肆的",
+    "translations": [
+      "a.自以为是的，放肆的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00057",
+    "word": "fatuous",
+    "phonetic": "'fætjuәs",
+    "translation": "a.愚蠢的",
+    "translations": [
+      "a.愚蠢的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00058",
+    "word": "cliche",
+    "phonetic": "['kli:ʃei]",
+    "translation": "n.陈词滥调",
+    "translations": [
+      "n.陈词滥调"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00059",
+    "word": "goodwill",
+    "phonetic": "'gʊd'wɪl",
+    "translation": "n.友好",
+    "translations": [
+      "n.友好"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00060",
+    "word": "cricket",
+    "phonetic": "'krikit",
+    "translation": "n.板球",
+    "translations": [
+      "n.板球"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00061",
+    "word": "inclination",
+    "phonetic": "'inkli'neiʃәn",
+    "translation": "n.意愿",
+    "translations": [
+      "n.意愿"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00062",
+    "word": "contest",
+    "phonetic": "kәn'test, 'kɔntest",
+    "translation": "n.比赛",
+    "translations": [
+      "n.比赛"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00063",
+    "word": "orgy",
+    "phonetic": "'ɔ:dʒi",
+    "translation": "n.无节制，放荡",
+    "translations": [
+      "n.无节制，放荡"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00064",
+    "word": "deduce",
+    "phonetic": "di'dju:s",
+    "translation": "v.推断",
+    "translations": [
+      "v.推断"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00065",
+    "word": "competitive",
+    "phonetic": "kәm'petitiv",
+    "translation": "a.竞争性的",
+    "translations": [
+      "a.竞争性的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00066",
+    "word": "patriotism",
+    "phonetic": "'pætriәtizm",
+    "translation": "n.地方观念，爱国主义",
+    "translations": [
+      "n.地方观念，爱国主义"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00067",
+    "word": "disgrace",
+    "phonetic": "dis'greis",
+    "translation": "v.使丢脸",
+    "translations": [
+      "v.使丢脸"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00068",
+    "word": "savage",
+    "phonetic": "'sævidʒ",
+    "translation": "a.野性的",
+    "translations": [
+      "a.野性的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00069",
+    "word": "combative",
+    "phonetic": "'kɔmbәtiv",
+    "translation": "a.好斗的",
+    "translations": [
+      "a.好斗的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00070",
+    "word": "mimic warfare",
+    "phonetic": "",
+    "translation": "n.模拟战争",
+    "translations": [
+      "n.模拟战争"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00071",
+    "word": "behaviour",
+    "phonetic": "bi'heivjә",
+    "translation": "n.行动，举止",
+    "translations": [
+      "n.行动，举止"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00072",
+    "word": "absurd",
+    "phonetic": "әb'sә:d",
+    "translation": "a.荒唐的",
+    "translations": [
+      "a.荒唐的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00073",
+    "word": "bat",
+    "phonetic": "bæt",
+    "translation": "n.蝙蝠",
+    "translations": [
+      "n.蝙蝠"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00074",
+    "word": "strictly",
+    "phonetic": "'striktli",
+    "translation": "ad.明确地",
+    "translations": [
+      "ad.明确地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00075",
+    "word": "utilitarian",
+    "phonetic": "'ju:tili'tєәriәn",
+    "translation": "a.实用的",
+    "translations": [
+      "a.实用的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00076",
+    "word": "appreciation",
+    "phonetic": "ә'pri:ʃi'eiʃәn",
+    "translation": "n.理解",
+    "translations": [
+      "n.理解"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00077",
+    "word": "obstruction",
+    "phonetic": "әb'strʌkʃәn",
+    "translation": "n.障碍物",
+    "translations": [
+      "n.障碍物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00078",
+    "word": "elapse",
+    "phonetic": "i'læps",
+    "translation": "v.消逝",
+    "translations": [
+      "v.消逝"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00079",
+    "word": "hull",
+    "phonetic": "[hʌl]",
+    "translation": "n.船体",
+    "translations": [
+      "n.船体"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00080",
+    "word": "interval",
+    "phonetic": "'intәvәl",
+    "translation": "n.间隔",
+    "translations": [
+      "n.间隔"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00081",
+    "word": "receipt",
+    "phonetic": "ri'si:t",
+    "translation": "n.收到",
+    "translations": [
+      "n.收到"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00082",
+    "word": "apparatus",
+    "phonetic": ",æpә'reitәs",
+    "translation": "n.仪器",
+    "translations": [
+      "n.仪器"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00083",
+    "word": "shoal",
+    "phonetic": "ʃәul",
+    "translation": "n.鱼群",
+    "translations": [
+      "n.鱼群"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00084",
+    "word": "herring",
+    "phonetic": "'heriŋ",
+    "translation": "n.鲱鱼",
+    "translations": [
+      "n.鲱鱼"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00085",
+    "word": "cod",
+    "phonetic": "kɔd",
+    "translation": "n.鳕鱼",
+    "translations": [
+      "n.鳕鱼"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00086",
+    "word": "squeak",
+    "phonetic": "kwi:k",
+    "translation": "n.尖叫声",
+    "translations": [
+      "n.尖叫声"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00087",
+    "word": "slaughter",
+    "phonetic": "slɔ:tә",
+    "translation": "v.屠宰",
+    "translations": [
+      "v.屠宰"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00088",
+    "word": "fit",
+    "phonetic": "it",
+    "translation": "a.适合",
+    "translations": [
+      "a.适合"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00089",
+    "word": "grace",
+    "phonetic": "greis",
+    "translation": "v.给…增光",
+    "translations": [
+      "v.给…增光"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00090",
+    "word": "tariff",
+    "phonetic": "'tærif",
+    "translation": "n.关税",
+    "translations": [
+      "n.关税"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00091",
+    "word": "standard",
+    "phonetic": "'stændәd",
+    "translation": "n.标准",
+    "translations": [
+      "n.标准"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00092",
+    "word": "dialysis",
+    "phonetic": "[dai'ælisis]",
+    "translation": "n.分离，分解；透析，渗析",
+    "translations": [
+      "n.分离，分解；透析，渗析"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00093",
+    "word": "electrocute",
+    "phonetic": "i'lektrәkjut",
+    "translation": "v.使触电身亡",
+    "translations": [
+      "v.使触电身亡"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00094",
+    "word": "eliminate",
+    "phonetic": "i'limineit",
+    "translation": "v.消灭",
+    "translations": [
+      "v.消灭"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00095",
+    "word": "accord",
+    "phonetic": "ә'kɔ:d",
+    "translation": "n.协议",
+    "translations": [
+      "n.协议"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00096",
+    "word": "device",
+    "phonetic": "di'vais",
+    "translation": "n.仪器，器械",
+    "translations": [
+      "n.仪器，器械"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00097",
+    "word": "hammer out",
+    "phonetic": "",
+    "translation": "v.推敲",
+    "translations": [
+      "v.推敲"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00098",
+    "word": "pact",
+    "phonetic": "pækt",
+    "translation": "n.合同，条约，公约",
+    "translations": [
+      "n.合同，条约，公约"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00099",
+    "word": "espionage(title)",
+    "phonetic": "",
+    "translation": "n.间谍活动",
+    "translations": [
+      "n.间谍活动"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00100",
+    "word": "Danish",
+    "phonetic": "'deiniʃ",
+    "translation": "a.丹麦的，丹麦人的，丹麦语的",
+    "translations": [
+      "a.丹麦的，丹麦人的，丹麦语的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00101",
+    "word": "minstrel",
+    "phonetic": "'minstrәl",
+    "translation": "n.中世纪的吟游歌手",
+    "translations": [
+      "n.中世纪的吟游歌手"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00102",
+    "word": "wandering",
+    "phonetic": "['wɔndәriŋ]",
+    "translation": "a.漫游的",
+    "translations": [
+      "a.漫游的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00103",
+    "word": "harp",
+    "phonetic": "ha:p",
+    "translation": "n.竖琴",
+    "translations": [
+      "n.竖琴"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00104",
+    "word": "ballad",
+    "phonetic": "'bælәd",
+    "translation": "n.民歌",
+    "translations": [
+      "n.民歌"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00105",
+    "word": "acrobatic",
+    "phonetic": "'ækrә'bætik",
+    "translation": "a.杂技的",
+    "translations": [
+      "a.杂技的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00106",
+    "word": "conjuring",
+    "phonetic": "['kʌndʒәriŋ]",
+    "translation": "n.魔术",
+    "translations": [
+      "n.魔术"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00107",
+    "word": "Athelney",
+    "phonetic": "",
+    "translation": "n.阿塞尔纳(英国一个小岛)",
+    "translations": [
+      "n.阿塞尔纳(英国一个小岛)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00108",
+    "word": "Chippenham",
+    "phonetic": "",
+    "translation": "n.切本哈姆(英国一城市)",
+    "translations": [
+      "n.切本哈姆(英国一城市)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00109",
+    "word": "thither",
+    "phonetic": "['ðiðә]",
+    "translation": "ad.向那里",
+    "translations": [
+      "ad.向那里"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00110",
+    "word": "Dane",
+    "phonetic": "[dein]",
+    "translation": "n.丹麦人",
+    "translations": [
+      "n.丹麦人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00111",
+    "word": "slack",
+    "phonetic": "slæk",
+    "translation": "a.涣散的",
+    "translations": [
+      "a.涣散的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00112",
+    "word": "conqueror",
+    "phonetic": "'kɔŋkәrә",
+    "translation": "n.征服者",
+    "translations": [
+      "n.征服者"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00113",
+    "word": "casual",
+    "phonetic": "'kæʒjuәl",
+    "translation": "a.马虎的，随便的",
+    "translations": [
+      "a.马虎的，随便的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00114",
+    "word": "precaution",
+    "phonetic": "pri'kɔ:ʃәn",
+    "translation": "n.预防，警惕",
+    "translations": [
+      "n.预防，警惕"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00115",
+    "word": "proceeds",
+    "phonetic": "'prosidz",
+    "translation": "n.所得",
+    "translations": [
+      "n.所得"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00116",
+    "word": "assemble",
+    "phonetic": "ә'sembl",
+    "translation": "v.集合",
+    "translations": [
+      "v.集合"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00117",
+    "word": "trivial",
+    "phonetic": "'triviәl",
+    "translation": "a.微不足道的",
+    "translations": [
+      "a.微不足道的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00118",
+    "word": "prolonged",
+    "phonetic": "pro'lɔŋd",
+    "translation": "a.持久的",
+    "translations": [
+      "a.持久的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00119",
+    "word": "commissary",
+    "phonetic": "['kɔmisәri]",
+    "translation": "n.军粮供应",
+    "translations": [
+      "n.军粮供应"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00120",
+    "word": "episode",
+    "phonetic": "'episәud",
+    "translation": "n.一个事件，片断",
+    "translations": [
+      "n.一个事件，片断"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00121",
+    "word": "epic",
+    "phonetic": "'epik",
+    "translation": "n.史诗",
+    "translations": [
+      "n.史诗"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00122",
+    "word": "harry",
+    "phonetic": "'hæri",
+    "translation": "v.骚扰",
+    "translations": [
+      "v.骚扰"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00123",
+    "word": "assail",
+    "phonetic": "ә'seil",
+    "translation": "v.袭击",
+    "translations": [
+      "v.袭击"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00124",
+    "word": "skirmish",
+    "phonetic": "'skә:miʃ",
+    "translation": "n.小规模战斗",
+    "translations": [
+      "n.小规模战斗"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00125",
+    "word": "silicon",
+    "phonetic": "'silikәn",
+    "translation": "n.硅",
+    "translations": [
+      "n.硅"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00126",
+    "word": "integrated",
+    "phonetic": "'intәgreitid",
+    "translation": "a.综合的",
+    "translations": [
+      "a.综合的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00127",
+    "word": "circuit",
+    "phonetic": "'sә:kit",
+    "translation": "n.线路，电路",
+    "translations": [
+      "n.线路，电路"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00128",
+    "word": "California",
+    "phonetic": "'kæli'fɔ:njә",
+    "translation": "n.加利福尼亚(美国州名)",
+    "translations": [
+      "n.加利福尼亚(美国州名)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00129",
+    "word": "workstation",
+    "phonetic": "",
+    "translation": "n.工作站",
+    "translations": [
+      "n.工作站"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00130",
+    "word": "chip",
+    "phonetic": "tʃip",
+    "translation": "n.芯片，集成电路片，集成块",
+    "translations": [
+      "n.芯片，集成电路片，集成块"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00131",
+    "word": "newsletter",
+    "phonetic": "nju:z'letә",
+    "translation": "n.时事通讯",
+    "translations": [
+      "n.时事通讯"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00132",
+    "word": "Macintosh",
+    "phonetic": "",
+    "translation": "n.苹果机，一种个人电脑",
+    "translations": [
+      "n.苹果机，一种个人电脑"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00133",
+    "word": "penalize",
+    "phonetic": "'pi:nlaiz",
+    "translation": "v.处罚，惩罚",
+    "translations": [
+      "v.处罚，惩罚"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00134",
+    "word": "customize",
+    "phonetic": "'kʌstəmaɪz",
+    "translation": "v.按顾客具体需要制造",
+    "translations": [
+      "v.按顾客具体需要制造"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00135",
+    "word": "spawn",
+    "phonetic": "spɔ:n",
+    "translation": "v.引起，酿成",
+    "translations": [
+      "v.引起，酿成"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00136",
+    "word": "thrive",
+    "phonetic": "θraiv",
+    "translation": "v.兴旺，繁荣",
+    "translations": [
+      "v.兴旺，繁荣"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00137",
+    "word": "anarchy",
+    "phonetic": "'ænәki",
+    "translation": "n.无政府状态，混乱",
+    "translations": [
+      "n.无政府状态，混乱"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00138",
+    "word": "oriental",
+    "phonetic": "'ɔri'entl",
+    "translation": "n.东方人",
+    "translations": [
+      "n.东方人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00139",
+    "word": "constitute",
+    "phonetic": "'kɔnstitju:t",
+    "translation": "v.构成",
+    "translations": [
+      "v.构成"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00140",
+    "word": "drove",
+    "phonetic": "drәuv",
+    "translation": "n.群",
+    "translations": [
+      "n.群"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00141",
+    "word": "innovator",
+    "phonetic": "'inouveitә",
+    "translation": "n.改革者",
+    "translations": [
+      "n.改革者"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00142",
+    "word": "forge",
+    "phonetic": "fɔ:dʒ",
+    "translation": "v.发展",
+    "translations": [
+      "v.发展"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00143",
+    "word": "memory-chip",
+    "phonetic": "",
+    "translation": "n.内存条",
+    "translations": [
+      "n.内存条"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00144",
+    "word": "Kansas",
+    "phonetic": "['kænzәs]",
+    "translation": "n.堪萨斯(美国州名)",
+    "translations": [
+      "n.堪萨斯(美国州名)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00145",
+    "word": "Missouri",
+    "phonetic": "mә'zuri",
+    "translation": "n.密苏里(美国州名)",
+    "translations": [
+      "n.密苏里(美国州名)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00146",
+    "word": "oppress",
+    "phonetic": "ә'pres",
+    "translation": "v.忧郁，压抑",
+    "translations": [
+      "v.忧郁，压抑"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00147",
+    "word": "justification",
+    "phonetic": "'dʒʌstifi'keiʃәn",
+    "translation": "n.正当理由",
+    "translations": [
+      "n.正当理由"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00148",
+    "word": "justifiably",
+    "phonetic": "[-faiәbli]",
+    "translation": "ad.无可非议地",
+    "translations": [
+      "ad.无可非议地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00149",
+    "word": "cheat",
+    "phonetic": "tʃi:t",
+    "translation": "v.欺骗",
+    "translations": [
+      "v.欺骗"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00150",
+    "word": "abject",
+    "phonetic": "'æbdʒekt",
+    "translation": "a.可怜的",
+    "translations": [
+      "a.可怜的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00151",
+    "word": "ignoble",
+    "phonetic": "ig'nәubl",
+    "translation": "a.不体面的，可耻的",
+    "translations": [
+      "a.不体面的，可耻的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00152",
+    "word": "impersonal",
+    "phonetic": "im'pә:sәnl",
+    "translation": "a.超脱个人感情影响的",
+    "translations": [
+      "a.超脱个人感情影响的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00153",
+    "word": "ego",
+    "phonetic": "'egәu",
+    "translation": "n.自我",
+    "translations": [
+      "n.自我"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00154",
+    "word": "recede",
+    "phonetic": "ri'si:d",
+    "translation": "v.退去",
+    "translations": [
+      "v.退去"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00155",
+    "word": "increasingly",
+    "phonetic": "in'kri:siŋli",
+    "translation": "ad.日益，不断",
+    "translations": [
+      "ad.日益，不断"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00156",
+    "word": "passionately",
+    "phonetic": "",
+    "translation": "a..激昂地",
+    "translations": [
+      "a..激昂地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00157",
+    "word": "painlessly",
+    "phonetic": "",
+    "translation": "a..毫无痛苦地",
+    "translations": [
+      "a..毫无痛苦地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00158",
+    "word": "vitality",
+    "phonetic": "vai'tæliti",
+    "translation": "n.精力",
+    "translations": [
+      "n.精力"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00159",
+    "word": "weariness",
+    "phonetic": "[wiәrinis]",
+    "translation": "n.疲惫感",
+    "translations": [
+      "n.疲惫感"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00160",
+    "word": "current",
+    "phonetic": "'kʌrәnt",
+    "translation": "a.通用的，流行的",
+    "translations": [
+      "a.通用的，流行的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00161",
+    "word": "account",
+    "phonetic": "ә'kaunt",
+    "translation": "n.账户",
+    "translations": [
+      "n.账户"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00162",
+    "word": "cash",
+    "phonetic": "kæʃ",
+    "translation": "n.现金",
+    "translations": [
+      "n.现金"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00163",
+    "word": "cheque",
+    "phonetic": "tʃek",
+    "translation": "n.支票",
+    "translations": [
+      "n.支票"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00164",
+    "word": "debtor",
+    "phonetic": "'detә",
+    "translation": "n.借方",
+    "translations": [
+      "n.借方"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00165",
+    "word": "creditor",
+    "phonetic": "'kreditә",
+    "translation": "n.贷方",
+    "translations": [
+      "n.贷方"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00166",
+    "word": "obligation",
+    "phonetic": "'ɔbli'geiʃәn",
+    "translation": "n.义务",
+    "translations": [
+      "n.义务"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00167",
+    "word": "complication",
+    "phonetic": "'kɔmpli'keiʃәn",
+    "translation": "n.纠纷",
+    "translations": [
+      "n.纠纷"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00168",
+    "word": "debit",
+    "phonetic": "'debit",
+    "translation": "v.把…记入借方",
+    "translations": [
+      "v.把…记入借方"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00169",
+    "word": "specimen",
+    "phonetic": "'spesimin",
+    "translation": "n.样本",
+    "translations": [
+      "n.样本"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00170",
+    "word": "forge",
+    "phonetic": "fɔ:dʒ",
+    "translation": "v.发展",
+    "translations": [
+      "v.发展"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00171",
+    "word": "forgery",
+    "phonetic": "'fɔ:dʒәri",
+    "translation": "n.伪造(文件，签名等)",
+    "translations": [
+      "n.伪造(文件，签名等)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00172",
+    "word": "adopt",
+    "phonetic": "ә'dɔpt",
+    "translation": "v.采用",
+    "translations": [
+      "v.采用"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00173",
+    "word": "facilitate",
+    "phonetic": "fә'siliteit",
+    "translation": "v.使便利",
+    "translations": [
+      "v.使便利"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00174",
+    "word": "mineral",
+    "phonetic": "'minәrәl",
+    "translation": "a.矿物的",
+    "translations": [
+      "a.矿物的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00175",
+    "word": "boring",
+    "phonetic": "'bɔ:riŋ",
+    "translation": "n.钻孔",
+    "translations": [
+      "n.钻孔"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00176",
+    "word": "derrick",
+    "phonetic": "'derik",
+    "translation": "n.井架",
+    "translations": [
+      "n.井架"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00177",
+    "word": "haul",
+    "phonetic": "hɔ:l",
+    "translation": "v.拖，拉",
+    "translations": [
+      "v.拖，拉"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00178",
+    "word": "rotate",
+    "phonetic": "rәu'teit",
+    "translation": "v.使转动",
+    "translations": [
+      "v.使转动"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00179",
+    "word": "cutting bit",
+    "phonetic": "",
+    "translation": "钻头",
+    "translations": [
+      "钻头"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00180",
+    "word": "geologist",
+    "phonetic": "dʒi'ɔlәdʒist",
+    "translation": "n.地质学家",
+    "translations": [
+      "n.地质学家"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00181",
+    "word": "coring bit",
+    "phonetic": "",
+    "translation": "取芯钻头",
+    "translations": [
+      "取芯钻头"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00182",
+    "word": "cylinder",
+    "phonetic": "'silindә",
+    "translation": "n.圆柱体",
+    "translations": [
+      "n.圆柱体"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00183",
+    "word": "strata",
+    "phonetic": "['streitә]",
+    "translation": "n.岩层［复］(［单］stratum)",
+    "translations": [
+      "n.岩层［复］(［单］stratum)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00184",
+    "word": "circulate",
+    "phonetic": "'sә:kjuleit",
+    "translation": "v.注入，环流",
+    "translations": [
+      "v.注入，环流"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00185",
+    "word": "gusher",
+    "phonetic": "'ɡʌʃɚ",
+    "translation": "n.喷油井",
+    "translations": [
+      "n.喷油井"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00186",
+    "word": "forecast",
+    "phonetic": "'fɔ:ka:st",
+    "translation": "n.预报",
+    "translations": [
+      "n.预报"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00187",
+    "word": "speculative",
+    "phonetic": "'spekjulәtiv",
+    "translation": "a.推测的",
+    "translations": [
+      "a.推测的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00188",
+    "word": "blizzard",
+    "phonetic": "'blizәd",
+    "translation": "n.暴风雪",
+    "translations": [
+      "n.暴风雪"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00189",
+    "word": "deteriorate",
+    "phonetic": "di'tiәriәreit",
+    "translation": "v.变坏，恶化",
+    "translations": [
+      "v.变坏，恶化"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00190",
+    "word": "multiply",
+    "phonetic": "'mʌltiplai",
+    "translation": "v.增加",
+    "translations": [
+      "v.增加"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00191",
+    "word": "cascade",
+    "phonetic": "kæs'keid",
+    "translation": "v.瀑布似地落下",
+    "translations": [
+      "v.瀑布似地落下"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00192",
+    "word": "turbulent",
+    "phonetic": "'tә:bjulәnt",
+    "translation": "a.狂暴的",
+    "translations": [
+      "a.狂暴的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00193",
+    "word": "dust devil",
+    "phonetic": "",
+    "translation": "小尘暴，尘旋风",
+    "translations": [
+      "小尘暴，尘旋风"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00194",
+    "word": "squall",
+    "phonetic": "skwɔ:l",
+    "translation": "n.暴风",
+    "translations": [
+      "n.暴风"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00195",
+    "word": "eddy",
+    "phonetic": "'edi",
+    "translation": "n.旋涡",
+    "translations": [
+      "n.旋涡"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00196",
+    "word": "grid",
+    "phonetic": "grid",
+    "translation": "n.坐标方格",
+    "translations": [
+      "n.坐标方格"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00197",
+    "word": "sensor",
+    "phonetic": "'sensә",
+    "translation": "n.传感器",
+    "translations": [
+      "n.传感器"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00198",
+    "word": "humidity",
+    "phonetic": "hju:'miditi",
+    "translation": "n.湿度",
+    "translations": [
+      "n.湿度"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00199",
+    "word": "meteorologist",
+    "phonetic": "'mitɪə'rɑlədʒɪst",
+    "translation": "n.气象学家",
+    "translations": [
+      "n.气象学家"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00200",
+    "word": "Princeton",
+    "phonetic": "['prinstәn]",
+    "translation": "n.普林斯顿(美国城市名)",
+    "translations": [
+      "n.普林斯顿(美国城市名)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00201",
+    "word": "Mew Jersey",
+    "phonetic": "",
+    "translation": "n.新泽西(美国州名)",
+    "translations": [
+      "n.新泽西(美国州名)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00202",
+    "word": "fluctuation",
+    "phonetic": "'flʌktju'eiʃәn",
+    "translation": "n.起伏，波动",
+    "translations": [
+      "n.起伏，波动"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00203",
+    "word": "deviation",
+    "phonetic": "'di:vi'eiʃәn",
+    "translation": "n.偏差",
+    "translations": [
+      "n.偏差"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00204",
+    "word": "secrecy (title)",
+    "phonetic": "",
+    "translation": "n.秘密",
+    "translations": [
+      "n.秘密"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00205",
+    "word": "effectiveness",
+    "phonetic": "i'fektivnis",
+    "translation": "n.成效，效力",
+    "translations": [
+      "n.成效，效力"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00206",
+    "word": "inquiry",
+    "phonetic": "in'kwaiәri",
+    "translation": "n.调查研究",
+    "translations": [
+      "n.调查研究"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00207",
+    "word": "positive",
+    "phonetic": "'pɔzәtiv",
+    "translation": "a.确实的",
+    "translations": [
+      "a.确实的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00208",
+    "word": "process",
+    "phonetic": "'prәuses",
+    "translation": "n.过程",
+    "translations": [
+      "n.过程"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00209",
+    "word": "patent",
+    "phonetic": "'peitәnt",
+    "translation": "n.专利 v.得到专利权",
+    "translations": [
+      "n.专利 v.得到专利权"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00210",
+    "word": "agent",
+    "phonetic": "'eidʒәnt",
+    "translation": "n.情报人员",
+    "translations": [
+      "n.情报人员"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00211",
+    "word": "physiological",
+    "phonetic": "'fiziә'lɔdʒikәl",
+    "translation": "a.生理的",
+    "translations": [
+      "a.生理的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00212",
+    "word": "maximum",
+    "phonetic": "'mæksimәm",
+    "translation": "a.最大限度的",
+    "translations": [
+      "a.最大限度的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00213",
+    "word": "consideration",
+    "phonetic": "kәn'sidә'reiʃәn",
+    "translation": "n.考虑",
+    "translations": [
+      "n.考虑"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00214",
+    "word": "descendant",
+    "phonetic": "di'sendәnt",
+    "translation": "n.子孙，后代",
+    "translations": [
+      "n.子孙，后代"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00215",
+    "word": "artificial",
+    "phonetic": "'a:ti'fiʃәl",
+    "translation": "a.人工的",
+    "translations": [
+      "a.人工的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00216",
+    "word": "impose",
+    "phonetic": "im'pәuz",
+    "translation": "v.强加",
+    "translations": [
+      "v.强加"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00217",
+    "word": "dimension",
+    "phonetic": "di'menʃәn",
+    "translation": "n.直径",
+    "translations": [
+      "n.直径"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00218",
+    "word": "skyscraper",
+    "phonetic": "'skai'skreipә",
+    "translation": "n.摩天大楼",
+    "translations": [
+      "n.摩天大楼"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00219",
+    "word": "tenant",
+    "phonetic": "'tenәnt",
+    "translation": "n.租户",
+    "translations": [
+      "n.租户"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00220",
+    "word": "civilized",
+    "phonetic": "'sivilaizd",
+    "translation": "a.文明的",
+    "translations": [
+      "a.文明的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00221",
+    "word": "banal",
+    "phonetic": "bә'na:l",
+    "translation": "a.平庸的",
+    "translations": [
+      "a.平庸的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00222",
+    "word": "luxury",
+    "phonetic": "'lʌkʃәri",
+    "translation": "n.豪华",
+    "translations": [
+      "n.豪华"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00223",
+    "word": "deprive",
+    "phonetic": "di'praiv",
+    "translation": "v.剥夺",
+    "translations": [
+      "v.剥夺"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00224",
+    "word": "monstrous",
+    "phonetic": "'mɔnstrәs",
+    "translation": "a.畸形的",
+    "translations": [
+      "a.畸形的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00225",
+    "word": "edifice",
+    "phonetic": "'edifis",
+    "translation": "n.大厦",
+    "translations": [
+      "n.大厦"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00226",
+    "word": "toxic",
+    "phonetic": "'tɔksik",
+    "translation": "a.有毒的",
+    "translations": [
+      "a.有毒的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00227",
+    "word": "ceaselessly",
+    "phonetic": "['si:slisli]",
+    "translation": "ad.不停地",
+    "translations": [
+      "ad.不停地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00228",
+    "word": "throng",
+    "phonetic": "θrɔŋ",
+    "translation": "v.挤满，壅塞",
+    "translations": [
+      "v.挤满，壅塞"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00229",
+    "word": "settlement",
+    "phonetic": "'setlmәnt",
+    "translation": "n.新拓居地",
+    "translations": [
+      "n.新拓居地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00230",
+    "word": "enterprising",
+    "phonetic": "'entәpraiziŋ",
+    "translation": "a.有事业心的",
+    "translations": [
+      "a.有事业心的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00231",
+    "word": "settler",
+    "phonetic": "'setlә",
+    "translation": "n.移居者",
+    "translations": [
+      "n.移居者"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00232",
+    "word": "Antipodes",
+    "phonetic": "[æn'tipәdi:z]",
+    "translation": "n.(the～)新西兰和澳大利亚(英)",
+    "translations": [
+      "n.(the～)新西兰和澳大利亚(英)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00233",
+    "word": "promiscuous",
+    "phonetic": "prә'miskjuәs",
+    "translation": "a.杂乱的",
+    "translations": [
+      "a.杂乱的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00234",
+    "word": "abandon",
+    "phonetic": "ә'bændәn",
+    "translation": "n.放任，纵情",
+    "translations": [
+      "n.放任，纵情"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00235",
+    "word": "overrun",
+    "phonetic": "әuvә'rʌn",
+    "translation": "v.蔓延，泛滥",
+    "translations": [
+      "v.蔓延，泛滥"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00236",
+    "word": "devastation",
+    "phonetic": "devә'steiʃәn",
+    "translation": "n.破坏，劫掠",
+    "translations": [
+      "n.破坏，劫掠"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00237",
+    "word": "burrow",
+    "phonetic": "'bʌrәu",
+    "translation": "v.挖、掘",
+    "translations": [
+      "v.挖、掘"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00238",
+    "word": "susceptible",
+    "phonetic": "sә'septәbl",
+    "translation": "a.易受感染的",
+    "translations": [
+      "a.易受感染的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00239",
+    "word": "virus",
+    "phonetic": "'vaiәrәs",
+    "translation": "n.病毒",
+    "translations": [
+      "n.病毒"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00240",
+    "word": "myxomatosis",
+    "phonetic": "['miksәmә'tәusis]",
+    "translation": "n.多发性粘液瘤",
+    "translations": [
+      "n.多发性粘液瘤"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00241",
+    "word": "infect",
+    "phonetic": "in'fekt",
+    "translation": "v.传染",
+    "translations": [
+      "v.传染"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00242",
+    "word": "epidemic",
+    "phonetic": "'epi'demik",
+    "translation": "n.流行病",
+    "translations": [
+      "n.流行病"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00243",
+    "word": "mosquito",
+    "phonetic": "mәs'ki:tәu",
+    "translation": "n.蚊虫",
+    "translations": [
+      "n.蚊虫"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00244",
+    "word": "carrier",
+    "phonetic": "'kæriә",
+    "translation": "n.带菌者",
+    "translations": [
+      "n.带菌者"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00245",
+    "word": "exterminate",
+    "phonetic": "eks'tә:mineit",
+    "translation": "v.消灭",
+    "translations": [
+      "v.消灭"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00246",
+    "word": "ironically",
+    "phonetic": "ai'rɔnikәli",
+    "translation": "ad.具有讽刺意味地",
+    "translations": [
+      "ad.具有讽刺意味地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00247",
+    "word": "bequeath",
+    "phonetic": "bi'kwi:ð",
+    "translation": "v.把…传给",
+    "translations": [
+      "v.把…传给"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00248",
+    "word": "pest",
+    "phonetic": "pest",
+    "translation": "n.害虫，有害动物",
+    "translations": [
+      "n.害虫，有害动物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00249",
+    "word": "pestilence",
+    "phonetic": "'pestilәns",
+    "translation": "n.瘟疫",
+    "translations": [
+      "n.瘟疫"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00250",
+    "word": "confine",
+    "phonetic": "kәn'fain",
+    "translation": "n.范围",
+    "translations": [
+      "n.范围"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00251",
+    "word": "domesticate",
+    "phonetic": "dә'mestikeit",
+    "translation": "v.驯养",
+    "translations": [
+      "v.驯养"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00252",
+    "word": "porpoise(title)",
+    "phonetic": "",
+    "translation": "n.海豚",
+    "translations": [
+      "n.海豚"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00253",
+    "word": "mariner",
+    "phonetic": "'mærinә",
+    "translation": "n.水手",
+    "translations": [
+      "n.水手"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00254",
+    "word": "shark",
+    "phonetic": "ʃa:k",
+    "translation": "n.鲨鱼",
+    "translations": [
+      "n.鲨鱼"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00255",
+    "word": "formation",
+    "phonetic": "fɔ:'meiʃәn",
+    "translation": "n.队形",
+    "translations": [
+      "n.队形"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00256",
+    "word": "dolphin",
+    "phonetic": "'dɔlfin",
+    "translation": "n.海豚科动物",
+    "translations": [
+      "n.海豚科动物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00257",
+    "word": "unconscious",
+    "phonetic": "ʌn'kɔʃәs",
+    "translation": "a.不省人事的",
+    "translations": [
+      "a.不省人事的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00258",
+    "word": "beaver",
+    "phonetic": "'bi:vә",
+    "translation": "n.海狸",
+    "translations": [
+      "n.海狸"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00259",
+    "word": "ashore",
+    "phonetic": "ә'ʃɔ:",
+    "translation": "ad.上岸",
+    "translations": [
+      "ad.上岸"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00260",
+    "word": "waterlogged",
+    "phonetic": "",
+    "translation": "a.浸满水的",
+    "translations": [
+      "a.浸满水的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00261",
+    "word": "scent",
+    "phonetic": "sent",
+    "translation": "n.香味",
+    "translations": [
+      "n.香味"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00262",
+    "word": "ensue",
+    "phonetic": "in'sju:",
+    "translation": "v.接着发生",
+    "translations": [
+      "v.接着发生"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00263",
+    "word": "intrigue",
+    "phonetic": "in'tri:g",
+    "translation": "v.引起兴趣",
+    "translations": [
+      "v.引起兴趣"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00264",
+    "word": "indignity",
+    "phonetic": "in'digniti",
+    "translation": "n.侮辱",
+    "translations": [
+      "n.侮辱"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00265",
+    "word": "snout",
+    "phonetic": "snaut",
+    "translation": "n.口鼻部",
+    "translations": [
+      "n.口鼻部"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00266",
+    "word": "shove",
+    "phonetic": "ʃʌv",
+    "translation": "v.硬推",
+    "translations": [
+      "v.硬推"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00267",
+    "word": "aquaplane",
+    "phonetic": "['ækwәplein]",
+    "translation": "n.驾浪滑水板",
+    "translations": [
+      "n.驾浪滑水板"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00268",
+    "word": "oceanarium",
+    "phonetic": "['ouʃәn'ʒәri-әm]",
+    "translation": "n.水族馆",
+    "translations": [
+      "n.水族馆"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00269",
+    "word": "swoop",
+    "phonetic": "swu:p",
+    "translation": "v.猛扑",
+    "translations": [
+      "v.猛扑"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00270",
+    "word": "belly",
+    "phonetic": "'beli",
+    "translation": "n.腹部",
+    "translations": [
+      "n.腹部"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00271",
+    "word": "equilibrium",
+    "phonetic": "i:kwi'libriәm",
+    "translation": "n.平衡",
+    "translations": [
+      "n.平衡"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00272",
+    "word": "butt",
+    "phonetic": "bʌt",
+    "translation": "v.碰撞",
+    "translations": [
+      "v.碰撞"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00273",
+    "word": "crack",
+    "phonetic": "kræk",
+    "translation": "n.重击",
+    "translations": [
+      "n.重击"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00274",
+    "word": "speculation",
+    "phonetic": "'spekju'leiʃәn",
+    "translation": "n.推测",
+    "translations": [
+      "n.推测"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00275",
+    "word": "literally",
+    "phonetic": "'litәrәli",
+    "translation": "ad.确实",
+    "translations": [
+      "ad.确实"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00276",
+    "word": "odd",
+    "phonetic": "ɔd",
+    "translation": "a.奇特的",
+    "translations": [
+      "a.奇特的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00277",
+    "word": "tissue",
+    "phonetic": "'tisju:",
+    "translation": "n.组织",
+    "translations": [
+      "n.组织"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00278",
+    "word": "plausible",
+    "phonetic": "'plɔ:zәbl",
+    "translation": "a.似乎有理的",
+    "translations": [
+      "a.似乎有理的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00279",
+    "word": "hypothesis",
+    "phonetic": "hai'pɔθisi:z",
+    "translation": "n.假说",
+    "translations": [
+      "n.假说"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00280",
+    "word": "electroencephalograph",
+    "phonetic": "",
+    "translation": "n.脑电图仪",
+    "translations": [
+      "n.脑电图仪"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00281",
+    "word": "electrode",
+    "phonetic": "i'lektrәud",
+    "translation": "n.电极",
+    "translations": [
+      "n.电极"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00282",
+    "word": "scaly",
+    "phonetic": "['skeili]",
+    "translation": "n.头发",
+    "translations": [
+      "n.头发"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00283",
+    "word": "psychiatrist",
+    "phonetic": "sai'kaiәtrist",
+    "translation": "n.精神病学家",
+    "translations": [
+      "n.精神病学家"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00284",
+    "word": "punctuate",
+    "phonetic": "'pʌŋktjueit",
+    "translation": "v.不时介入",
+    "translations": [
+      "v.不时介入"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00285",
+    "word": "jerky",
+    "phonetic": "dʒә:ki",
+    "translation": "a.急动的",
+    "translations": [
+      "a.急动的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00286",
+    "word": "disorder",
+    "phonetic": "dis'ɔ:dә",
+    "translation": "n.失调",
+    "translations": [
+      "n.失调"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00287",
+    "word": "implication",
+    "phonetic": "impli'keiʃәn",
+    "translation": "n.表明",
+    "translations": [
+      "n.表明"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00288",
+    "word": "saliva",
+    "phonetic": "sә'laivә",
+    "translation": "n.唾液",
+    "translations": [
+      "n.唾液"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00289",
+    "word": "digestive",
+    "phonetic": "di'dʒestiv",
+    "translation": "a.助消化的",
+    "translations": [
+      "a.助消化的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00290",
+    "word": "defy",
+    "phonetic": "di'fai",
+    "translation": "v.使不可能",
+    "translations": [
+      "v.使不可能"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00291",
+    "word": "analysis",
+    "phonetic": "ә'nælәsis",
+    "translation": "n.分析",
+    "translations": [
+      "n.分析"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00292",
+    "word": "prey",
+    "phonetic": "prei",
+    "translation": "n.被捕食的动物",
+    "translations": [
+      "n.被捕食的动物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00293",
+    "word": "fierce",
+    "phonetic": "fiәs",
+    "translation": "a.凶猛的",
+    "translations": [
+      "a.凶猛的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00294",
+    "word": "tussle",
+    "phonetic": "'tʌsl",
+    "translation": "n.扭打",
+    "translations": [
+      "n.扭打"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00295",
+    "word": "carnivore",
+    "phonetic": "'ka:nivɔ:",
+    "translation": "n.食肉动物",
+    "translations": [
+      "n.食肉动物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00296",
+    "word": "vertebrate",
+    "phonetic": "'vә:tibrit",
+    "translation": "n.脊椎动物",
+    "translations": [
+      "n.脊椎动物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00297",
+    "word": "lizard",
+    "phonetic": "'lizәd",
+    "translation": "n.蜥蜴",
+    "translations": [
+      "n.蜥蜴"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00298",
+    "word": "concoct",
+    "phonetic": "kәn'kɔkt",
+    "translation": "v.调制",
+    "translations": [
+      "v.调制"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00299",
+    "word": "potency",
+    "phonetic": "'pәutәnsi",
+    "translation": "n.效力",
+    "translations": [
+      "n.效力"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00300",
+    "word": "conversion",
+    "phonetic": "kәn'vә:ʃәn",
+    "translation": "n.转变",
+    "translations": [
+      "n.转变"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00301",
+    "word": "arsenic",
+    "phonetic": "'a:snik",
+    "translation": "n.砒霜",
+    "translations": [
+      "n.砒霜"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00302",
+    "word": "strychnine",
+    "phonetic": "['striknin]",
+    "translation": "n.马钱子碱",
+    "translations": [
+      "n.马钱子碱"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00303",
+    "word": "mamba",
+    "phonetic": "['mɔmbә]",
+    "translation": "n.树眼镜蛇",
+    "translations": [
+      "n.树眼镜蛇"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00304",
+    "word": "cobra",
+    "phonetic": "'kәubrә",
+    "translation": "n.眼镜蛇",
+    "translations": [
+      "n.眼镜蛇"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00305",
+    "word": "venom",
+    "phonetic": "'venәm",
+    "translation": "n.毒液",
+    "translations": [
+      "n.毒液"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00306",
+    "word": "neurotoxic",
+    "phonetic": "['njuәrou'tɔksik, 'nu-]",
+    "translation": "a.毒害神经的",
+    "translations": [
+      "a.毒害神经的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00307",
+    "word": "viper",
+    "phonetic": "['vaipә]",
+    "translation": "n.蝰蛇",
+    "translations": [
+      "n.蝰蛇"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00308",
+    "word": "rattlesnake",
+    "phonetic": "'rætlsneik",
+    "translation": "n.响尾蛇",
+    "translations": [
+      "n.响尾蛇"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00309",
+    "word": "haemolytic",
+    "phonetic": "",
+    "translation": "a.溶血性的",
+    "translations": [
+      "a.溶血性的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00310",
+    "word": "viperine",
+    "phonetic": "['vaipәrin]",
+    "translation": "a.毒蛇的",
+    "translations": [
+      "a.毒蛇的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00311",
+    "word": "supreme",
+    "phonetic": "sju:'pri:m",
+    "translation": "a.首屈一指的",
+    "translations": [
+      "a.首屈一指的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00312",
+    "word": "protagonist",
+    "phonetic": "prәu'tægәnist",
+    "translation": "n.主角",
+    "translations": [
+      "n.主角"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00313",
+    "word": "outlaw",
+    "phonetic": "'autlɔ:",
+    "translation": "n.逃犯，亡命之徒",
+    "translations": [
+      "n.逃犯，亡命之徒"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00314",
+    "word": "framed",
+    "phonetic": "",
+    "translation": "a.遭到陷害的",
+    "translations": [
+      "a.遭到陷害的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00315",
+    "word": "vicious",
+    "phonetic": "'viʃәs",
+    "translation": "a.恶毒的",
+    "translations": [
+      "a.恶毒的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00316",
+    "word": "mythology",
+    "phonetic": "mi'θɔlәdʒi",
+    "translation": "n.神话",
+    "translations": [
+      "n.神话"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00317",
+    "word": "vanished",
+    "phonetic": "",
+    "translation": "a.消失了的",
+    "translations": [
+      "a.消失了的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00318",
+    "word": "absurdly",
+    "phonetic": "[әb'sә:dli]",
+    "translation": "ad.荒诞地",
+    "translations": [
+      "ad.荒诞地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00319",
+    "word": "arena",
+    "phonetic": "ә'ri:nә",
+    "translation": "n.竞技场地",
+    "translations": [
+      "n.竞技场地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00320",
+    "word": "encroaching",
+    "phonetic": "",
+    "translation": "a.渐渐渗入的",
+    "translations": [
+      "a.渐渐渗入的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00321",
+    "word": "Indian",
+    "phonetic": "'indiәn",
+    "translation": "n.印第安人",
+    "translations": [
+      "n.印第安人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00322",
+    "word": "bewilder",
+    "phonetic": "bi'wildә",
+    "translation": "v.使手足无措",
+    "translations": [
+      "v.使手足无措"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00323",
+    "word": "alien",
+    "phonetic": "'eiljәn",
+    "translation": "a.外来的",
+    "translations": [
+      "a.外来的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00324",
+    "word": "taboo",
+    "phonetic": "tә'bu:",
+    "translation": "n.戒律",
+    "translations": [
+      "n.戒律"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00325",
+    "word": "disinherit",
+    "phonetic": "['disin'herit]",
+    "translation": "v.剥夺…继承权",
+    "translations": [
+      "v.剥夺…继承权"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00326",
+    "word": "undeclared",
+    "phonetic": "['ʌndi'klєәd]",
+    "translation": "a.未经宣布的",
+    "translations": [
+      "a.未经宣布的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00327",
+    "word": "hypocrisy",
+    "phonetic": "hi'pɔkrәsi",
+    "translation": "n.伪善",
+    "translations": [
+      "n.伪善"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00328",
+    "word": "chicanery",
+    "phonetic": "ʃi'keinәri",
+    "translation": "n.诈骗",
+    "translations": [
+      "n.诈骗"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00329",
+    "word": "impending",
+    "phonetic": "im'pendiŋ",
+    "translation": "a.迫近的，迫在眉睫的",
+    "translations": [
+      "a.迫近的，迫在眉睫的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00330",
+    "word": "immolation",
+    "phonetic": "imәu'leiʃәn",
+    "translation": "n.杀戮",
+    "translations": [
+      "n.杀戮"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00331",
+    "word": "code",
+    "phonetic": "kәud",
+    "translation": "n.准则",
+    "translations": [
+      "n.准则"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00332",
+    "word": "loom",
+    "phonetic": "lu:m",
+    "translation": "v.赫然耸起",
+    "translations": [
+      "v.赫然耸起"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00333",
+    "word": "manifest",
+    "phonetic": "'mænifest",
+    "translation": "a.明显的",
+    "translations": [
+      "a.明显的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00334",
+    "word": "morality",
+    "phonetic": "mә'ræliti",
+    "translation": "n.道德",
+    "translations": [
+      "n.道德"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00335",
+    "word": "communicate",
+    "phonetic": "kә'mju:nikeit",
+    "translation": "v.交流，交际",
+    "translations": [
+      "v.交流，交际"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00336",
+    "word": "compound",
+    "phonetic": "'kɔmpaund, kәm'paund",
+    "translation": "a.复合的",
+    "translations": [
+      "a.复合的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00337",
+    "word": "enhance",
+    "phonetic": "in'ha:ns",
+    "translation": "v.增进",
+    "translations": [
+      "v.增进"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00338",
+    "word": "tempo",
+    "phonetic": "'tempәu",
+    "translation": "n.速率",
+    "translations": [
+      "n.速率"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00339",
+    "word": "trickle",
+    "phonetic": "'trikl",
+    "translation": "n.涓涓细流",
+    "translations": [
+      "n.涓涓细流"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00340",
+    "word": "torrent",
+    "phonetic": "'tɔrәnt",
+    "translation": "n.滔滔洪流",
+    "translations": [
+      "n.滔滔洪流"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00341",
+    "word": "humanity",
+    "phonetic": "hju:'mæniti",
+    "translation": "n.人类",
+    "translations": [
+      "n.人类"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00342",
+    "word": "indifferently",
+    "phonetic": "[in'difrәntli]",
+    "translation": "ad.不在乎地",
+    "translations": [
+      "ad.不在乎地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00343",
+    "word": "grimly",
+    "phonetic": "'grimli",
+    "translation": "ad.可怖地",
+    "translations": [
+      "ad.可怖地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00344",
+    "word": "whimsical",
+    "phonetic": "'wimzikl",
+    "translation": "a.怪诞的",
+    "translations": [
+      "a.怪诞的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00345",
+    "word": "shatter",
+    "phonetic": "'ʃætә",
+    "translation": "v.毁坏",
+    "translations": [
+      "v.毁坏"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00346",
+    "word": "twofold",
+    "phonetic": "'tu:fәuld",
+    "translation": "a.双重的",
+    "translations": [
+      "a.双重的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00347",
+    "word": "albatross",
+    "phonetic": "['ælbәtrɔs]",
+    "translation": "n.信天翁",
+    "translations": [
+      "n.信天翁"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00348",
+    "word": "sustenance",
+    "phonetic": "'sʌstәnәns",
+    "translation": "n.支撑力",
+    "translations": [
+      "n.支撑力"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00349",
+    "word": "glider",
+    "phonetic": "'glaidә",
+    "translation": "n.滑翔者",
+    "translations": [
+      "n.滑翔者"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00350",
+    "word": "harness",
+    "phonetic": "'ha:nis",
+    "translation": "v.利用",
+    "translations": [
+      "v.利用"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00351",
+    "word": "endow",
+    "phonetic": "in'dau",
+    "translation": "v.赋有",
+    "translations": [
+      "v.赋有"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00352",
+    "word": "ply",
+    "phonetic": "plai",
+    "translation": "v.不断地供给",
+    "translations": [
+      "v.不断地供给"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00353",
+    "word": "gale",
+    "phonetic": "geil",
+    "translation": "n.大风",
+    "translations": [
+      "n.大风"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00354",
+    "word": "partridge",
+    "phonetic": "'pa:tridʒ",
+    "translation": "n.鹧鸪",
+    "translations": [
+      "n.鹧鸪"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00355",
+    "word": "like",
+    "phonetic": "laik",
+    "translation": "a.类似的",
+    "translations": [
+      "a.类似的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00356",
+    "word": "propulsion",
+    "phonetic": "[prә'pʌlʃәn]",
+    "translation": "n.推进力",
+    "translations": [
+      "n.推进力"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00357",
+    "word": "utter",
+    "phonetic": "'ʌtә",
+    "translation": "a.完全的",
+    "translations": [
+      "a.完全的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00358",
+    "word": "slip",
+    "phonetic": "slip",
+    "translation": "v.滑行",
+    "translations": [
+      "v.滑行"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00359",
+    "word": "adverse",
+    "phonetic": "'ædvә:s",
+    "translation": "a.逆的，相反的",
+    "translations": [
+      "a.逆的，相反的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00360",
+    "word": "omen",
+    "phonetic": "'әumen",
+    "translation": "n.预兆",
+    "translations": [
+      "n.预兆"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00361",
+    "word": "intense",
+    "phonetic": "in'tens",
+    "translation": "a.强烈的",
+    "translations": [
+      "a.强烈的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00362",
+    "word": "aesthetic",
+    "phonetic": "i:s'θetik",
+    "translation": "a.审美的",
+    "translations": [
+      "a.审美的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00363",
+    "word": "realm",
+    "phonetic": "'relm",
+    "translation": "n.世界",
+    "translations": [
+      "n.世界"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00364",
+    "word": "serenity",
+    "phonetic": "si'reniti",
+    "translation": "n.静谧",
+    "translations": [
+      "n.静谧"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00365",
+    "word": "undeniable",
+    "phonetic": "'ʌndi'naiәbl",
+    "translation": "a.不可否认的",
+    "translations": [
+      "a.不可否认的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00366",
+    "word": "indefinable",
+    "phonetic": "'indi'fainәbl",
+    "translation": "a.模糊不清的",
+    "translations": [
+      "a.模糊不清的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00367",
+    "word": "vulgar",
+    "phonetic": "'vʌlgә",
+    "translation": "a.平庸的",
+    "translations": [
+      "a.平庸的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00368",
+    "word": "radiance",
+    "phonetic": "'reidjәns",
+    "translation": "n.发光",
+    "translations": [
+      "n.发光"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00369",
+    "word": "intimation",
+    "phonetic": "inti'meiʃәn",
+    "translation": "n.暗示",
+    "translations": [
+      "n.暗示"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00370",
+    "word": "unutterable",
+    "phonetic": "[ʌn'ʌtәrәbl]",
+    "translation": "a.不可言传的",
+    "translations": [
+      "a.不可言传的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00371",
+    "word": "invest",
+    "phonetic": "in'vest",
+    "translation": "v.赋予",
+    "translations": [
+      "v.赋予"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00372",
+    "word": "auditory",
+    "phonetic": "'ɔ:ditɑ:i",
+    "translation": "a.听觉的",
+    "translations": [
+      "a.听觉的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00373",
+    "word": "inadequate",
+    "phonetic": "in'ædikwit",
+    "translation": "a.不适当的",
+    "translations": [
+      "a.不适当的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00374",
+    "word": "plea",
+    "phonetic": "pli:",
+    "translation": "n.要求",
+    "translations": [
+      "n.要求"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00375",
+    "word": "abatement",
+    "phonetic": "ә'beitmәnt",
+    "translation": "n.减少",
+    "translations": [
+      "n.减少"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00376",
+    "word": "discredit",
+    "phonetic": "dis'kredit",
+    "translation": "v.怀疑",
+    "translations": [
+      "v.怀疑"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00377",
+    "word": "allegation",
+    "phonetic": "æli'geiʃәn",
+    "translation": "n.断言",
+    "translations": [
+      "n.断言"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00378",
+    "word": "caption",
+    "phonetic": "kæpʃәn",
+    "translation": "n.插图说明",
+    "translations": [
+      "n.插图说明"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00379",
+    "word": "wreck",
+    "phonetic": "rek",
+    "translation": "n.残废人",
+    "translations": [
+      "n.残废人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00380",
+    "word": "snag",
+    "phonetic": "snæg",
+    "translation": "n.疑难之处，障碍",
+    "translations": [
+      "n.疑难之处，障碍"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00381",
+    "word": "anecdote",
+    "phonetic": "'ænikdәut",
+    "translation": "n.轶闻",
+    "translations": [
+      "n.轶闻"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00382",
+    "word": "slander",
+    "phonetic": "'sla:ndә",
+    "translation": "v.诽谤",
+    "translations": [
+      "v.诽谤"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00383",
+    "word": "persecute",
+    "phonetic": "'pә:sikju:t",
+    "translation": "v.迫害",
+    "translations": [
+      "v.迫害"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00384",
+    "word": "squadron",
+    "phonetic": "'skwɔdrәn",
+    "translation": "n.中队",
+    "translations": [
+      "n.中队"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00385",
+    "word": "psychiatric",
+    "phonetic": "'saiki'ætrik",
+    "translation": "a.精神病学的",
+    "translations": [
+      "a.精神病学的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00386",
+    "word": "diagnosis",
+    "phonetic": "'daiәg'nәusis",
+    "translation": "n.诊断",
+    "translations": [
+      "n.诊断"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00387",
+    "word": "orphanage",
+    "phonetic": "'ɔ:fәnidʒ",
+    "translation": "n.孤儿院",
+    "translations": [
+      "n.孤儿院"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00388",
+    "word": "preservation",
+    "phonetic": "'prezә(:)'veiʃәn",
+    "translation": "n.保存",
+    "translations": [
+      "n.保存"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00389",
+    "word": "silt",
+    "phonetic": "silt",
+    "translation": "n.淤泥",
+    "translations": [
+      "n.淤泥"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00390",
+    "word": "scavenger",
+    "phonetic": "'skævindʒә",
+    "translation": "n.食腐动物",
+    "translations": [
+      "n.食腐动物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00391",
+    "word": "vole",
+    "phonetic": "vәul",
+    "translation": "n.野鼠，鼹鼠",
+    "translations": [
+      "n.野鼠，鼹鼠"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00392",
+    "word": "decompose",
+    "phonetic": "'di:kәm'pәuz",
+    "translation": "v.腐烂",
+    "translations": [
+      "v.腐烂"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00393",
+    "word": "inaccessible",
+    "phonetic": "inæk'sesәbl",
+    "translation": "a.不能到达的",
+    "translations": [
+      "a.不能到达的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00394",
+    "word": "crevasse",
+    "phonetic": "[kri'væs]",
+    "translation": "n.缝隙",
+    "translations": [
+      "n.缝隙"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00395",
+    "word": "Siberian",
+    "phonetic": "[sai'biәriәn]",
+    "translation": "a.西伯利亚的",
+    "translations": [
+      "a.西伯利亚的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00396",
+    "word": "paleontological",
+    "phonetic": "",
+    "translation": "a.古生物学的",
+    "translations": [
+      "a.古生物学的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00397",
+    "word": "St.Petersbrug",
+    "phonetic": "",
+    "translation": "n.圣彼得堡",
+    "translations": [
+      "n.圣彼得堡"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00398",
+    "word": "sabre-toothed",
+    "phonetic": "",
+    "translation": "a.长着锐利的长犬牙的",
+    "translations": [
+      "a.长着锐利的长犬牙的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00399",
+    "word": "venture",
+    "phonetic": "'ventʃә",
+    "translation": "v.冒险",
+    "translations": [
+      "v.冒险"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00400",
+    "word": "bogged",
+    "phonetic": "",
+    "translation": "a.陷入泥沼的，陷于困境的",
+    "translations": [
+      "a.陷入泥沼的，陷于困境的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00401",
+    "word": "galleon",
+    "phonetic": "'gæliәn",
+    "translation": "n.大型帆船",
+    "translations": [
+      "n.大型帆船"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00402",
+    "word": "Stockholm",
+    "phonetic": "['stɔkhәum]",
+    "translation": "n.斯德哥尔摩",
+    "translations": [
+      "n.斯德哥尔摩"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00403",
+    "word": "flagship",
+    "phonetic": "'flægʃip",
+    "translation": "n.旗舰",
+    "translations": [
+      "n.旗舰"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00404",
+    "word": "imperial",
+    "phonetic": "im'piәriәl",
+    "translation": "a.帝国的",
+    "translations": [
+      "a.帝国的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00405",
+    "word": "hurricane",
+    "phonetic": "'hʌrikәn",
+    "translation": "n.飓风",
+    "translations": [
+      "n.飓风"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00406",
+    "word": "might",
+    "phonetic": "mait",
+    "translation": "n.力量",
+    "translations": [
+      "n.力量"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00407",
+    "word": "ferment",
+    "phonetic": "'fә:ment",
+    "translation": "n.激动不安",
+    "translations": [
+      "n.激动不安"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00408",
+    "word": "ornament",
+    "phonetic": "'ɔ:nәmәnt, 'ɔ:nәment",
+    "translation": "v.装饰",
+    "translations": [
+      "v.装饰"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00409",
+    "word": "riot",
+    "phonetic": "'raiәt",
+    "translation": "n.丰富",
+    "translations": [
+      "n.丰富"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00410",
+    "word": "demon",
+    "phonetic": "'di:mәn",
+    "translation": "n.恶魔",
+    "translations": [
+      "n.恶魔"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00411",
+    "word": "mermaid",
+    "phonetic": "'mә:meid",
+    "translation": "n.美人鱼",
+    "translations": [
+      "n.美人鱼"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00412",
+    "word": "cherub",
+    "phonetic": "['tʃerәb]",
+    "translation": "n.小天使",
+    "translations": [
+      "n.小天使"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00413",
+    "word": "zoomorphic",
+    "phonetic": "['zouә'mɔ:fik]",
+    "translation": "a.兽形的",
+    "translations": [
+      "a.兽形的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00414",
+    "word": "ablaze",
+    "phonetic": "ә'bleiz",
+    "translation": "a.光彩的",
+    "translations": [
+      "a.光彩的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00415",
+    "word": "portray",
+    "phonetic": "pɔ:'trei",
+    "translation": "v.绘制",
+    "translations": [
+      "v.绘制"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00416",
+    "word": "drifting",
+    "phonetic": "",
+    "translation": "a.弥漫的",
+    "translations": [
+      "a.弥漫的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00417",
+    "word": "churn",
+    "phonetic": "tʃә:n",
+    "translation": "v.翻滚",
+    "translations": [
+      "v.翻滚"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00418",
+    "word": "pennant",
+    "phonetic": "'pɛnənt",
+    "translation": "n.三角旗",
+    "translations": [
+      "n.三角旗"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00419",
+    "word": "superstructure",
+    "phonetic": "'sju:pә'strʌktʃә",
+    "translation": "n.上部结构",
+    "translations": [
+      "n.上部结构"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00420",
+    "word": "armament",
+    "phonetic": "'a:mәmәnt",
+    "translation": "n.军械",
+    "translations": [
+      "n.军械"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00421",
+    "word": "triple",
+    "phonetic": "'tripl",
+    "translation": "a.三层的",
+    "translations": [
+      "a.三层的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00422",
+    "word": "mount",
+    "phonetic": "maunt",
+    "translation": "v. 登上",
+    "translations": [
+      "v. 登上"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00423",
+    "word": "bronze",
+    "phonetic": "brɔnz",
+    "translation": "n.青铜",
+    "translations": [
+      "n.青铜"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00424",
+    "word": "cannon",
+    "phonetic": "'kænәn",
+    "translation": "n.加农炮",
+    "translations": [
+      "n.加农炮"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00425",
+    "word": "majestic",
+    "phonetic": "mә'dʒestik",
+    "translation": "a.威严的",
+    "translations": [
+      "a.威严的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00426",
+    "word": "muzzle",
+    "phonetic": "'mʌzl",
+    "translation": "n.炮口",
+    "translations": [
+      "n.炮口"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00427",
+    "word": "freshen",
+    "phonetic": "'freʃәn",
+    "translation": "v.变强",
+    "translations": [
+      "v.变强"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00428",
+    "word": "squall",
+    "phonetic": "skwɔ:l",
+    "translation": "n.暴风",
+    "translations": [
+      "n.暴风"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00429",
+    "word": "list",
+    "phonetic": "list",
+    "translation": "v.倾斜",
+    "translations": [
+      "v.倾斜"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00430",
+    "word": "port",
+    "phonetic": "pɔ:t",
+    "translation": "n.(船、飞机的)左舷",
+    "translations": [
+      "n.(船、飞机的)左舷"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00431",
+    "word": "ordnance",
+    "phonetic": "'ɔ:dnәns",
+    "translation": "n.军械",
+    "translations": [
+      "n.军械"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00432",
+    "word": "heave",
+    "phonetic": "hi:v",
+    "translation": "v.拖",
+    "translations": [
+      "v.拖"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00433",
+    "word": "starboard",
+    "phonetic": "'sta:bәd",
+    "translation": "n.(船、飞机的)右舷",
+    "translations": [
+      "n.(船、飞机的)右舷"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00434",
+    "word": "counteract",
+    "phonetic": "'kauntә'rækt",
+    "translation": "v.抵消",
+    "translations": [
+      "v.抵消"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00435",
+    "word": "steepen",
+    "phonetic": "['sti:pәn]",
+    "translation": "v.变得更陡峭",
+    "translations": [
+      "v.变得更陡峭"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00436",
+    "word": "ballast",
+    "phonetic": "'bælәst",
+    "translation": "n.压舱物",
+    "translations": [
+      "n.压舱物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00437",
+    "word": "inrush",
+    "phonetic": "['inrʌʃ]",
+    "translation": "n.水的涌入",
+    "translations": [
+      "n.水的涌入"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00438",
+    "word": "Baltic",
+    "phonetic": "'bɔ:ltik",
+    "translation": "n.波罗的海",
+    "translations": [
+      "n.波罗的海"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00439",
+    "word": "skeptical",
+    "phonetic": "'skeptikәl",
+    "translation": "a.怀疑的",
+    "translations": [
+      "a.怀疑的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00440",
+    "word": "forefathers",
+    "phonetic": "",
+    "translation": "n.祖先",
+    "translations": [
+      "n.祖先"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00441",
+    "word": "fervently",
+    "phonetic": "['fә:vәntli]",
+    "translation": "ad.热情地",
+    "translations": [
+      "ad.热情地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00442",
+    "word": "curative",
+    "phonetic": "'kjuәrәtiv",
+    "translation": "a.治病的",
+    "translations": [
+      "a.治病的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00443",
+    "word": "astronomical",
+    "phonetic": "'æstrә'nɔmikәl",
+    "translation": "a.天文学的",
+    "translations": [
+      "a.天文学的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00444",
+    "word": "tangible",
+    "phonetic": "tændʒәbl",
+    "translation": "a.实实在在的",
+    "translations": [
+      "a.实实在在的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00445",
+    "word": "remedy",
+    "phonetic": "'remidi",
+    "translation": "n.药物",
+    "translations": [
+      "n.药物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00446",
+    "word": "ointment",
+    "phonetic": "'ɔintmәnt",
+    "translation": "n.药膏",
+    "translations": [
+      "n.药膏"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00447",
+    "word": "prescribe",
+    "phonetic": "pris'kraib",
+    "translation": "v.开药方",
+    "translations": [
+      "v.开药方"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00448",
+    "word": "indisposition",
+    "phonetic": "[in'dispә'ziʃәn]",
+    "translation": "n.小病",
+    "translations": [
+      "n.小病"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00449",
+    "word": "disgusting",
+    "phonetic": "dɪs'ɡʌstɪŋ",
+    "translation": "a.令人讨厌的",
+    "translations": [
+      "a.令人讨厌的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00450",
+    "word": "inconvenience",
+    "phonetic": "'inkәn'vi:njәns",
+    "translation": "n.不便",
+    "translations": [
+      "n.不便"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00451",
+    "word": "hovercraft",
+    "phonetic": "'hɔvәkra:ft",
+    "translation": "n.气垫船",
+    "translations": [
+      "n.气垫船"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00452",
+    "word": "Norfolk Broads",
+    "phonetic": "",
+    "translation": "n.诺福克郡的湖泊地区",
+    "translations": [
+      "n.诺福克郡的湖泊地区"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00453",
+    "word": "cushion",
+    "phonetic": "'kuʃәn",
+    "translation": "n.座垫",
+    "translations": [
+      "n.座垫"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00454",
+    "word": "ring",
+    "phonetic": "riŋ",
+    "translation": "v.围",
+    "translations": [
+      "v.围"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00455",
+    "word": "Solent",
+    "phonetic": "",
+    "translation": "n.(英国的)苏伦特海峡",
+    "translations": [
+      "n.(英国的)苏伦特海峡"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00456",
+    "word": "sensation",
+    "phonetic": "sen'seiʃәn",
+    "translation": "n.轰动",
+    "translations": [
+      "n.轰动"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00457",
+    "word": "dune",
+    "phonetic": "dju:n",
+    "translation": "n.沙丘",
+    "translations": [
+      "n.沙丘"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00458",
+    "word": "plantation",
+    "phonetic": "plæn'teiʃәn",
+    "translation": "n.种植园",
+    "translations": [
+      "n.种植园"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00459",
+    "word": "hover-train",
+    "phonetic": "",
+    "translation": "n.气垫火车",
+    "translations": [
+      "n.气垫火车"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00460",
+    "word": "navigation",
+    "phonetic": "'nævi'geiʃәn",
+    "translation": "n.航海",
+    "translations": [
+      "n.航海"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00461",
+    "word": "sounding",
+    "phonetic": "",
+    "translation": "n.水深度",
+    "translations": [
+      "n.水深度"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00462",
+    "word": "porcupine",
+    "phonetic": "'pɔ:kjupain",
+    "translation": "n.箭猪",
+    "translations": [
+      "n.箭猪"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00463",
+    "word": "dredge",
+    "phonetic": "dredʒ",
+    "translation": "v.挖掘",
+    "translations": [
+      "v.挖掘"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00464",
+    "word": "expedition",
+    "phonetic": "'ekspi'diʃәn",
+    "translation": "n.远征",
+    "translations": [
+      "n.远征"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00465",
+    "word": "physicist",
+    "phonetic": "'fizisist",
+    "translation": "n.物理学家",
+    "translations": [
+      "n.物理学家"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00466",
+    "word": "magnitude",
+    "phonetic": "'mægnitju:d",
+    "translation": "n.很多",
+    "translations": [
+      "n.很多"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00467",
+    "word": "topography",
+    "phonetic": "tә'pɔgrәfi",
+    "translation": "n.地形",
+    "translations": [
+      "n.地形"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00468",
+    "word": "crust",
+    "phonetic": "krʌst",
+    "translation": "n.地壳",
+    "translations": [
+      "n.地壳"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00469",
+    "word": "rugged",
+    "phonetic": "'rʌgid",
+    "translation": "a.崎岖不平的",
+    "translations": [
+      "a.崎岖不平的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00470",
+    "word": "tableland",
+    "phonetic": "'tebllænd",
+    "translation": "n.高地",
+    "translations": [
+      "n.高地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00471",
+    "word": "sediment",
+    "phonetic": "'sedimәnt",
+    "translation": "n.沉淀物",
+    "translations": [
+      "n.沉淀物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00472",
+    "word": "terrace",
+    "phonetic": "'terәs",
+    "translation": "n.阶地",
+    "translations": [
+      "n.阶地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00473",
+    "word": "erode",
+    "phonetic": "i'rәud",
+    "translation": "v.侵蚀",
+    "translations": [
+      "v.侵蚀"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00474",
+    "word": "colour-blind",
+    "phonetic": "'kʌlə'blaind",
+    "translation": "a.色盲的",
+    "translations": [
+      "a.色盲的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00475",
+    "word": "perception",
+    "phonetic": "pә'sepʃәn",
+    "translation": "n.知觉",
+    "translations": [
+      "n.知觉"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00476",
+    "word": "comprehend",
+    "phonetic": "'kɔmpri'hend",
+    "translation": "v.理解",
+    "translations": [
+      "v.理解"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00477",
+    "word": "spatial",
+    "phonetic": "'speiʃәl",
+    "translation": "a.空间的",
+    "translations": [
+      "a.空间的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00478",
+    "word": "visualize",
+    "phonetic": "'vizjuәlaiz",
+    "translation": "v.使具形象，设想",
+    "translations": [
+      "v.使具形象，设想"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00479",
+    "word": "reminiscence",
+    "phonetic": "'remi'nisns",
+    "translation": "n.回忆，联想",
+    "translations": [
+      "n.回忆，联想"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00480",
+    "word": "tadpole",
+    "phonetic": "'tædpәul",
+    "translation": "n.蝌蚪",
+    "translations": [
+      "n.蝌蚪"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00481",
+    "word": "mushroom",
+    "phonetic": "'mʌʃrum",
+    "translation": "n.蘑菇",
+    "translations": [
+      "n.蘑菇"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00482",
+    "word": "carrot",
+    "phonetic": "'kærәt",
+    "translation": "n.胡萝卜",
+    "translations": [
+      "n.胡萝卜"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00483",
+    "word": "bud",
+    "phonetic": "bʌd",
+    "translation": "n.花蕾",
+    "translations": [
+      "n.花蕾"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00484",
+    "word": "lark",
+    "phonetic": "la:k",
+    "translation": "n.云雀",
+    "translations": [
+      "n.云雀"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00485",
+    "word": "ladybird",
+    "phonetic": "",
+    "translation": "n.瓢虫",
+    "translations": [
+      "n.瓢虫"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00486",
+    "word": "bulrush",
+    "phonetic": "['bulrʌʃ]",
+    "translation": "n.芦苇",
+    "translations": [
+      "n.芦苇"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00487",
+    "word": "controversy",
+    "phonetic": "'kɔntrәvә:si",
+    "translation": "n.争议，争论",
+    "translations": [
+      "n.争议，争论"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00488",
+    "word": "dust",
+    "phonetic": "dʌst",
+    "translation": "n.纠纷，骚动",
+    "translations": [
+      "n.纠纷，骚动"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00489",
+    "word": "clash",
+    "phonetic": "klæʃ",
+    "translation": "n.冲突",
+    "translations": [
+      "n.冲突"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00490",
+    "word": "Inquisition",
+    "phonetic": "[inkwi'ziʃәn]",
+    "translation": "n.(罗马天主教的)宗教法庭",
+    "translations": [
+      "n.(罗马天主教的)宗教法庭"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00491",
+    "word": "perspective",
+    "phonetic": "pә:'spektiv",
+    "translation": "n.观点，看法",
+    "translations": [
+      "n.观点，看法"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00492",
+    "word": "despise",
+    "phonetic": "dis'paiz",
+    "translation": "v.蔑视",
+    "translations": [
+      "v.蔑视"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00493",
+    "word": "generalize",
+    "phonetic": "'dʒenәrәlaiz",
+    "translation": "v.归纳",
+    "translations": [
+      "v.归纳"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00494",
+    "word": "undercurrent",
+    "phonetic": "['ʌndә'kʌrәnt]",
+    "translation": "n.潜流",
+    "translations": [
+      "n.潜流"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00495",
+    "word": "theoretical",
+    "phonetic": "θiә'retikl",
+    "translation": "a.理论上的",
+    "translations": [
+      "a.理论上的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00496",
+    "word": "potentiality",
+    "phonetic": "pә'tenʃi'æliti",
+    "translation": "n.潜能",
+    "translations": [
+      "n.潜能"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00497",
+    "word": "intimate",
+    "phonetic": "'intimit",
+    "translation": "a.详尽的",
+    "translations": [
+      "a.详尽的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00498",
+    "word": "familiarity",
+    "phonetic": "fә'mili'æriti",
+    "translation": "n.熟悉",
+    "translations": [
+      "n.熟悉"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00499",
+    "word": "culpable",
+    "phonetic": "'kʌlpәbl",
+    "translation": "a.应受谴责的",
+    "translations": [
+      "a.应受谴责的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00500",
+    "word": "Aristotelian",
+    "phonetic": "[æristә'ti:liәn]",
+    "translation": "n.亚里士多德学派的人",
+    "translations": [
+      "n.亚里士多德学派的人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00501",
+    "word": "Aristotle",
+    "phonetic": "['æristɔtl]",
+    "translation": "n.亚里士多德(古希腊哲学家)",
+    "translations": [
+      "n.亚里士多德(古希腊哲学家)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00502",
+    "word": "Leaning Tower Pisa",
+    "phonetic": "",
+    "translation": "比萨斜塔",
+    "translations": [
+      "比萨斜塔"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00503",
+    "word": "spiral",
+    "phonetic": "'spaiәrәl",
+    "translation": "a.螺旋状的",
+    "translations": [
+      "a.螺旋状的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00504",
+    "word": "nebula",
+    "phonetic": "'nebjulә",
+    "translation": "n.星云",
+    "translations": [
+      "n.星云"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00505",
+    "word": "scratch",
+    "phonetic": "skrætʃ",
+    "translation": "n.擦痕",
+    "translations": [
+      "n.擦痕"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00506",
+    "word": "contrivance",
+    "phonetic": "[kәn'traivәns]",
+    "translation": "n.器械",
+    "translations": [
+      "n.器械"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00507",
+    "word": "distort",
+    "phonetic": "dis'tɔ:t",
+    "translation": "v.歪曲",
+    "translations": [
+      "v.歪曲"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00508",
+    "word": "adverse",
+    "phonetic": "'ædvә:s",
+    "translation": "a.逆的，相反的",
+    "translations": [
+      "a.逆的，相反的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00509",
+    "word": "purchasable",
+    "phonetic": "['pә:tʃәsәbl]",
+    "translation": "a.可买到的",
+    "translations": [
+      "a.可买到的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00510",
+    "word": "preacher",
+    "phonetic": "['pri:tʃә]",
+    "translation": "n.传教士",
+    "translations": [
+      "n.传教士"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00511",
+    "word": "defendant",
+    "phonetic": "di'fendәnt",
+    "translation": "n.被告",
+    "translations": [
+      "n.被告"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00512",
+    "word": "outlook",
+    "phonetic": "'aut-luk",
+    "translation": "n.视野",
+    "translations": [
+      "n.视野"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00513",
+    "word": "capacity",
+    "phonetic": "kә'pæsiti",
+    "translation": "n.能力",
+    "translations": [
+      "n.能力"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00514",
+    "word": "means",
+    "phonetic": "mi:nz",
+    "translation": "n.方法，手段，财产，资力",
+    "translations": [
+      "n.方法，手段，财产，资力"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00515",
+    "word": "hamper",
+    "phonetic": "'hæmpә",
+    "translation": "v.妨碍",
+    "translations": [
+      "v.妨碍"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00516",
+    "word": "savannah",
+    "phonetic": "sә'vænә",
+    "translation": "n.大草原",
+    "translations": [
+      "n.大草原"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00517",
+    "word": "democratic",
+    "phonetic": "'demә'krætik",
+    "translation": "a.民主的",
+    "translations": [
+      "a.民主的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00518",
+    "word": "tribal",
+    "phonetic": "traibl",
+    "translation": "a.部落的",
+    "translations": [
+      "a.部落的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00519",
+    "word": "tribe",
+    "phonetic": "traib",
+    "translation": "n.部落",
+    "translations": [
+      "n.部落"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00520",
+    "word": "illiterate",
+    "phonetic": "i'litәrit",
+    "translation": "n.文盲",
+    "translations": [
+      "n.文盲"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00521",
+    "word": "compulsory",
+    "phonetic": "kәm'pʌlsәri",
+    "translation": "a.义务的",
+    "translations": [
+      "a.义务的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00522",
+    "word": "deem",
+    "phonetic": "di:m",
+    "translation": "v.认为",
+    "translations": [
+      "v.认为"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00523",
+    "word": "juvenile",
+    "phonetic": "'dʒu:vinail",
+    "translation": "a.青少年的",
+    "translations": [
+      "a.青少年的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00524",
+    "word": "delinquency",
+    "phonetic": "di'liŋkwәnsi",
+    "translation": "n.犯罪",
+    "translations": [
+      "n.犯罪"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00525",
+    "word": "adolescence",
+    "phonetic": "'ædәu'lesns",
+    "translation": "n.青春期",
+    "translations": [
+      "n.青春期"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00526",
+    "word": "slur",
+    "phonetic": "slә:",
+    "translation": "n.诋毁",
+    "translations": [
+      "n.诋毁"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00527",
+    "word": "adolescent",
+    "phonetic": "ædә'lesәnt",
+    "translation": "n.青少年(-岁)",
+    "translations": [
+      "n.青少年(-岁)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00528",
+    "word": "disloyalty",
+    "phonetic": "dis'lɔiәlti",
+    "translation": "n.不忠实",
+    "translations": [
+      "n.不忠实"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00529",
+    "word": "spiteful",
+    "phonetic": "'spaitful",
+    "translation": "a.恶意的，怀恨的",
+    "translations": [
+      "a.恶意的，怀恨的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00530",
+    "word": "disillusionment",
+    "phonetic": "-mәnt",
+    "translation": "n.幻灭感",
+    "translations": [
+      "n.幻灭感"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00531",
+    "word": "evaluation",
+    "phonetic": "i'vælju'eiʃәn",
+    "translation": "n.评价",
+    "translations": [
+      "n.评价"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00532",
+    "word": "Infallibility",
+    "phonetic": "[n'fælә'bilәti]",
+    "translation": "n.一贯正确",
+    "translations": [
+      "n.一贯正确"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00533",
+    "word": "resent",
+    "phonetic": "ri'zent",
+    "translation": "v.怨恨",
+    "translations": [
+      "v.怨恨"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00534",
+    "word": "sincerity",
+    "phonetic": "sin'seriti",
+    "translation": "n.诚挚",
+    "translations": [
+      "n.诚挚"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00535",
+    "word": "victorian",
+    "phonetic": "[vik'tɔ:riәn]",
+    "translation": "a.维多利亚式的",
+    "translations": [
+      "a.维多利亚式的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00536",
+    "word": "retreat",
+    "phonetic": "ri'tri:t",
+    "translation": "v.后退",
+    "translations": [
+      "v.后退"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00537",
+    "word": "unreasoning",
+    "phonetic": "[ʌn'ri:zәniŋ]",
+    "translation": "a.不凭理智的",
+    "translations": [
+      "a.不凭理智的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00538",
+    "word": "authoritarian",
+    "phonetic": "ɔ:'θɔri'tєәriәn",
+    "translation": "a.专制的",
+    "translations": [
+      "a.专制的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00539",
+    "word": "cow",
+    "phonetic": "kau",
+    "translation": "v.吓唬",
+    "translations": [
+      "v.吓唬"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00540",
+    "word": "hub",
+    "phonetic": "hʌb",
+    "translation": "n.(活动的)中心",
+    "translations": [
+      "n.(活动的)中心"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00541",
+    "word": "lunar",
+    "phonetic": "'lju:nә",
+    "translation": "a.月球的",
+    "translations": [
+      "a.月球的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00542",
+    "word": "oxygen",
+    "phonetic": "'ɔksidʒәn",
+    "translation": "n.氧气",
+    "translations": [
+      "n.氧气"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00543",
+    "word": "Apollo",
+    "phonetic": "[ә'pɔlәu]",
+    "translation": "n.阿波罗",
+    "translations": [
+      "n.阿波罗"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00544",
+    "word": "accelerate",
+    "phonetic": "æk'selәreit",
+    "translation": "v.加速",
+    "translations": [
+      "v.加速"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00545",
+    "word": "terrestrial",
+    "phonetic": "ti'restriәl",
+    "translation": "a.地球",
+    "translations": [
+      "a.地球"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00546",
+    "word": "ermanently",
+    "phonetic": "",
+    "translation": "ad.永远地",
+    "translations": [
+      "ad.永远地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00547",
+    "word": "fascination",
+    "phonetic": "'fæsi'neiʃәn",
+    "translation": "n.魅力",
+    "translations": [
+      "n.魅力"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00548",
+    "word": "senior",
+    "phonetic": "'si:njә",
+    "translation": "a.资历深的，年长的",
+    "translations": [
+      "a.资历深的，年长的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00549",
+    "word": "chasm",
+    "phonetic": "tʃæzәm",
+    "translation": "n.断层，裂口",
+    "translations": [
+      "n.断层，裂口"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00550",
+    "word": "canyon",
+    "phonetic": "'kænjәn",
+    "translation": "n.峡谷",
+    "translations": [
+      "n.峡谷"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00551",
+    "word": "disunited",
+    "phonetic": "",
+    "translation": "a.分裂的",
+    "translations": [
+      "a.分裂的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00552",
+    "word": "correspondingly",
+    "phonetic": ",kɔrə'spɑndɪŋli",
+    "translation": "ad.相应地",
+    "translations": [
+      "ad.相应地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00553",
+    "word": "backward",
+    "phonetic": "'bækwәd",
+    "translation": "a.落后的",
+    "translations": [
+      "a.落后的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00554",
+    "word": "incur",
+    "phonetic": "in'kә:",
+    "translation": "v.承担",
+    "translations": [
+      "v.承担"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00555",
+    "word": "administer",
+    "phonetic": "әd'ministә",
+    "translation": "v.管理",
+    "translations": [
+      "v.管理"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00556",
+    "word": "administrative",
+    "phonetic": "әd'ministrәtiv",
+    "translation": "a.行政管理的",
+    "translations": [
+      "a.行政管理的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00557",
+    "word": "analogous",
+    "phonetic": "ә'nælәgәs",
+    "translation": "a.类似的",
+    "translations": [
+      "a.类似的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00558",
+    "word": "overheads",
+    "phonetic": "",
+    "translation": "n.一般费用",
+    "translations": [
+      "n.一般费用"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00559",
+    "word": "initiative",
+    "phonetic": "i'niʃiәtiv",
+    "translation": "n.主动，积极性",
+    "translations": [
+      "n.主动，积极性"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00560",
+    "word": "checker",
+    "phonetic": "",
+    "translation": "n.检查人员",
+    "translations": [
+      "n.检查人员"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00561",
+    "word": "foreman",
+    "phonetic": "'fɔ:mәn",
+    "translation": "n.监工",
+    "translations": [
+      "n.监工"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00562",
+    "word": "dividend",
+    "phonetic": "'dividend",
+    "translation": "n.红利",
+    "translations": [
+      "n.红利"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00563",
+    "word": "unduly",
+    "phonetic": "ʌn'dju:li",
+    "translation": "ad.过度地",
+    "translations": [
+      "ad.过度地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00564",
+    "word": "likelihood",
+    "phonetic": "'laiklihud",
+    "translation": "n.可能性",
+    "translations": [
+      "n.可能性"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00565",
+    "word": "infant",
+    "phonetic": "'infәnt",
+    "translation": "n.婴儿",
+    "translations": [
+      "n.婴儿"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00566",
+    "word": "vulnerable",
+    "phonetic": "'vʌlnәrәbl",
+    "translation": "a.脆弱的",
+    "translations": [
+      "a.脆弱的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00567",
+    "word": "imperceptible",
+    "phonetic": "'impә'septәbl",
+    "translation": "a.感觉不到的",
+    "translations": [
+      "a.感觉不到的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00568",
+    "word": "robust",
+    "phonetic": "rәu'bʌst",
+    "translation": "a.强健的",
+    "translations": [
+      "a.强健的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00569",
+    "word": "organism",
+    "phonetic": "'ɔ:gәnizәm",
+    "translation": "n.有机体",
+    "translations": [
+      "n.有机体"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00570",
+    "word": "thermodynamics",
+    "phonetic": "'θә:mәudai'næmiks",
+    "translation": "n.热力学",
+    "translations": [
+      "n.热力学"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00571",
+    "word": "steep",
+    "phonetic": "sti:p",
+    "translation": "a.急转直下的",
+    "translations": [
+      "a.急转直下的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00572",
+    "word": "ageing",
+    "phonetic": "",
+    "translation": "n.老化",
+    "translations": [
+      "n.老化"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00573",
+    "word": "odds",
+    "phonetic": "ɔdz",
+    "translation": "n.可能性",
+    "translations": [
+      "n.可能性"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00574",
+    "word": "virtual",
+    "phonetic": "'vә:tjuәl",
+    "translation": "a.实际上的",
+    "translations": [
+      "a.实际上的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00575",
+    "word": "moot",
+    "phonetic": "[mu:t]",
+    "translation": "a.争论未决的",
+    "translations": [
+      "a.争论未决的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00576",
+    "word": "run-down",
+    "phonetic": "",
+    "translation": "a.破旧的",
+    "translations": [
+      "a.破旧的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00577",
+    "word": "friction",
+    "phonetic": "'frikʃәn",
+    "translation": "n.摩擦",
+    "translations": [
+      "n.摩擦"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00578",
+    "word": "contamination",
+    "phonetic": "kәntæmi'neiʃәn",
+    "translation": "n.污染",
+    "translations": [
+      "n.污染"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00579",
+    "word": "sanitation",
+    "phonetic": "'sæni'teiʃn",
+    "translation": "n.卫生，卫生设备",
+    "translations": [
+      "n.卫生，卫生设备"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00580",
+    "word": "sewage",
+    "phonetic": "'sju:idʒ",
+    "translation": "n.污水",
+    "translations": [
+      "n.污水"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00581",
+    "word": "leakage",
+    "phonetic": "'li:kidʒ",
+    "translation": "n.泄漏",
+    "translations": [
+      "n.泄漏"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00582",
+    "word": "intermittent",
+    "phonetic": "intә'mitnt",
+    "translation": "a.间歇的，断断续续的",
+    "translations": [
+      "a.间歇的，断断续续的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00583",
+    "word": "carbonated",
+    "phonetic": "",
+    "translation": "a.碳化的，碳酸的",
+    "translations": [
+      "a.碳化的，碳酸的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00584",
+    "word": "acidic",
+    "phonetic": "ә'sidik",
+    "translation": "a.酸的，酸性的",
+    "translations": [
+      "a.酸的，酸性的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00585",
+    "word": "alcohol",
+    "phonetic": "'ælkәhɔl",
+    "translation": "n.酒精",
+    "translations": [
+      "n.酒精"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00586",
+    "word": "disinfectant",
+    "phonetic": "disin'fektәnt",
+    "translation": "n.消毒剂",
+    "translations": [
+      "n.消毒剂"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00587",
+    "word": "sterilize",
+    "phonetic": "'sterilaiz",
+    "translation": "v.消毒",
+    "translations": [
+      "v.消毒"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00588",
+    "word": "ethanol",
+    "phonetic": "'eθәnoul",
+    "translation": "n.乙醇",
+    "translations": [
+      "n.乙醇"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00589",
+    "word": "bactericidal",
+    "phonetic": "[bæktirә'saidl]",
+    "translation": "a.杀菌的",
+    "translations": [
+      "a.杀菌的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00590",
+    "word": "negligible",
+    "phonetic": "'neglidʒәbl",
+    "translation": "a.可以忽略的，微不足道的",
+    "translations": [
+      "a.可以忽略的，微不足道的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00591",
+    "word": "methylated",
+    "phonetic": "",
+    "translation": "a.加入甲醇的",
+    "translations": [
+      "a.加入甲醇的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00592",
+    "word": "confess",
+    "phonetic": "kәn'fes",
+    "translation": "v.承认",
+    "translations": [
+      "v.承认"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00593",
+    "word": "inspiration",
+    "phonetic": "'inspә'reiʃәn",
+    "translation": "n.灵感",
+    "translations": [
+      "n.灵感"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00594",
+    "word": "Kashmir",
+    "phonetic": "['kæʃ'miә]",
+    "translation": "n.克什米尔",
+    "translations": [
+      "n.克什米尔"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00595",
+    "word": "interweave",
+    "phonetic": "'intә'wi:v",
+    "translation": "v.交织",
+    "translations": [
+      "v.交织"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00596",
+    "word": "afresh",
+    "phonetic": "ә'freʃ",
+    "translation": "ad.重新",
+    "translations": [
+      "ad.重新"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00597",
+    "word": "discern",
+    "phonetic": "di'sә:n",
+    "translation": "v.辨明，领悟",
+    "translations": [
+      "v.辨明，领悟"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00598",
+    "word": "indescribable",
+    "phonetic": "indis'kraibәbl",
+    "translation": "a.无法描述的",
+    "translations": [
+      "a.无法描述的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00599",
+    "word": "blur",
+    "phonetic": "blә:",
+    "translation": "v.使…模糊不清",
+    "translations": [
+      "v.使…模糊不清"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00600",
+    "word": "yeast",
+    "phonetic": "ji:st",
+    "translation": "n.激动",
+    "translations": [
+      "n.激动"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00601",
+    "word": "fathom",
+    "phonetic": "'fæðәm",
+    "translation": "n.噚（噚等于.米）",
+    "translations": [
+      "n.噚（噚等于.米）"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00602",
+    "word": "interminably",
+    "phonetic": "",
+    "translation": "a..没完没了地",
+    "translations": [
+      "a..没完没了地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00603",
+    "word": "winkle",
+    "phonetic": "'wiŋkl",
+    "translation": "v.挖掘",
+    "translations": [
+      "v.挖掘"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00604",
+    "word": "incidentally",
+    "phonetic": "'insi'dentәli",
+    "translation": "ad.顺便说一下",
+    "translations": [
+      "ad.顺便说一下"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00605",
+    "word": "pertinent",
+    "phonetic": "'pә:tinәnt",
+    "translation": "a.中肯的",
+    "translations": [
+      "a.中肯的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00606",
+    "word": "flirt",
+    "phonetic": "flә:t",
+    "translation": "v.调情",
+    "translations": [
+      "v.调情"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00607",
+    "word": "inmost",
+    "phonetic": "'inmәust",
+    "translation": "a.内心深处的",
+    "translations": [
+      "a.内心深处的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00608",
+    "word": "signature",
+    "phonetic": "'signitʃә",
+    "translation": "n.签名，标记",
+    "translations": [
+      "n.签名，标记"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00609",
+    "word": "infinity",
+    "phonetic": "in'finiti",
+    "translation": "n.无穷",
+    "translations": [
+      "n.无穷"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00610",
+    "word": "ray",
+    "phonetic": "rei",
+    "translation": "n.光线",
+    "translations": [
+      "n.光线"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00611",
+    "word": "energize",
+    "phonetic": "'enә'dʒaiz",
+    "translation": "v.给与…能量",
+    "translations": [
+      "v.给与…能量"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00612",
+    "word": "rhythm",
+    "phonetic": "'riðәm",
+    "translation": "n.节奏",
+    "translations": [
+      "n.节奏"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00613",
+    "word": "transmit",
+    "phonetic": "trænz'mit",
+    "translation": "v.传送",
+    "translations": [
+      "v.传送"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00614",
+    "word": "exquisite",
+    "phonetic": "'ekskwizit",
+    "translation": "a.高雅的",
+    "translations": [
+      "a.高雅的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00615",
+    "word": "phenomena",
+    "phonetic": "[fi'nɔminә]",
+    "translation": "n.现象",
+    "translations": [
+      "n.现象"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00616",
+    "word": "crest",
+    "phonetic": "krest",
+    "translation": "n.浪峰",
+    "translations": [
+      "n.浪峰"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00617",
+    "word": "trough",
+    "phonetic": "trɔ:f",
+    "translation": "n.波谷",
+    "translations": [
+      "n.波谷"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00618",
+    "word": "vertical",
+    "phonetic": "'vә:tikәl",
+    "translation": "a.垂直的",
+    "translations": [
+      "a.垂直的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00619",
+    "word": "horizontal",
+    "phonetic": "'hɔri'zɔntl",
+    "translation": "a.水平的",
+    "translations": [
+      "a.水平的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00620",
+    "word": "actuality",
+    "phonetic": "æktʃu'æliti",
+    "translation": "n.现实",
+    "translations": [
+      "n.现实"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00621",
+    "word": "catastrophic",
+    "phonetic": "kætә'strɔfik",
+    "translation": "a.大灾难的",
+    "translations": [
+      "a.大灾难的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00622",
+    "word": "particle",
+    "phonetic": "'pa:tikl",
+    "translation": "n.微粒",
+    "translations": [
+      "n.微粒"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00623",
+    "word": "maturity",
+    "phonetic": "mә'tjuәriti",
+    "translation": "n.成熟",
+    "translations": [
+      "n.成熟"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00624",
+    "word": "undulate",
+    "phonetic": "'ʌndjuleit",
+    "translation": "v.波动，形成波浪",
+    "translations": [
+      "v.波动，形成波浪"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00625",
+    "word": "tremor",
+    "phonetic": "'tremә",
+    "translation": "n.震颤",
+    "translations": [
+      "n.震颤"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00626",
+    "word": "gravitational",
+    "phonetic": "grævi'teiʃәnl",
+    "translation": "a.地心吸力的",
+    "translations": [
+      "a.地心吸力的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00627",
+    "word": "technique",
+    "phonetic": "tek'ni:k",
+    "translation": "n.技术",
+    "translations": [
+      "n.技术"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00628",
+    "word": "tough",
+    "phonetic": "tʌf",
+    "translation": "a.强硬的",
+    "translations": [
+      "a.强硬的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00629",
+    "word": "resentful",
+    "phonetic": "ri'zentful",
+    "translation": "a.仇恨不满的",
+    "translations": [
+      "a.仇恨不满的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00630",
+    "word": "assign",
+    "phonetic": "ә'sain",
+    "translation": "v.分配，指派",
+    "translations": [
+      "v.分配，指派"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00631",
+    "word": "mahout",
+    "phonetic": "[mә'haut]",
+    "translation": "n.驯象的人",
+    "translations": [
+      "n.驯象的人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00632",
+    "word": "calf",
+    "phonetic": "ka:f",
+    "translation": "n.幼仔",
+    "translations": [
+      "n.幼仔"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00633",
+    "word": "pine",
+    "phonetic": "pain",
+    "translation": "v.消瘦",
+    "translations": [
+      "v.消瘦"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00634",
+    "word": "underline",
+    "phonetic": "'ʌndә'lain",
+    "translation": "v.着重说明，强调",
+    "translations": [
+      "v.着重说明，强调"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00635",
+    "word": "keep",
+    "phonetic": "ki:p",
+    "translation": "n.生计",
+    "translations": [
+      "n.生计"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00636",
+    "word": "subservient",
+    "phonetic": "sәb'sә:vjәnt",
+    "translation": "a.屈从的",
+    "translations": [
+      "a.屈从的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00637",
+    "word": "plunge",
+    "phonetic": "plʌndʒ",
+    "translation": "v.向前冲",
+    "translations": [
+      "v.向前冲"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00638",
+    "word": "tame",
+    "phonetic": "teim",
+    "translation": "a.养驯服了的",
+    "translations": [
+      "a.养驯服了的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00639",
+    "word": "tether",
+    "phonetic": "'teðә",
+    "translation": "v.(用绳)拴",
+    "translations": [
+      "v.(用绳)拴"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00640",
+    "word": "ticklish",
+    "phonetic": "'tikliʃ",
+    "translation": "a.难对付的，棘手的",
+    "translations": [
+      "a.难对付的，棘手的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00641",
+    "word": "alarming",
+    "phonetic": "",
+    "translation": "a.引起惊恐的",
+    "translations": [
+      "a.引起惊恐的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00642",
+    "word": "accompaniment",
+    "phonetic": "ә'kʌmpәnimәnt",
+    "translation": "n.伴奏",
+    "translations": [
+      "n.伴奏"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00643",
+    "word": "soothe",
+    "phonetic": "su:ð",
+    "translation": "v.镇定",
+    "translations": [
+      "v.镇定"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00644",
+    "word": "chant",
+    "phonetic": "tʃa:nt",
+    "translation": "n.单调的歌",
+    "translations": [
+      "n.单调的歌"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00645",
+    "word": "reinforce",
+    "phonetic": "'ri:in'fɔ:s",
+    "translation": "v.加强",
+    "translations": [
+      "v.加强"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00646",
+    "word": "endearing",
+    "phonetic": "in'diәriŋ",
+    "translation": "a.惹人喜爱的",
+    "translations": [
+      "a.惹人喜爱的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00647",
+    "word": "epithet",
+    "phonetic": "'epiθet",
+    "translation": "n.称呼",
+    "translations": [
+      "n.称呼"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00648",
+    "word": "susceptible",
+    "phonetic": "sә'septәbl",
+    "translation": "a.易受感染的",
+    "translations": [
+      "a.易受感染的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00649",
+    "word": "blandishment",
+    "phonetic": "'blændiʃmәnt",
+    "translation": "n.奉承",
+    "translations": [
+      "n.奉承"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00650",
+    "word": "lash",
+    "phonetic": "læʃ",
+    "translation": "v.猛烈地甩",
+    "translations": [
+      "v.猛烈地甩"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00651",
+    "word": "curl",
+    "phonetic": "kә:l",
+    "translation": "v.使卷曲",
+    "translations": [
+      "v.使卷曲"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00652",
+    "word": "earthquake",
+    "phonetic": "'ә:θkweik",
+    "translation": "n.地震",
+    "translations": [
+      "n.地震"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00653",
+    "word": "slumber",
+    "phonetic": "'slʌmbә",
+    "translation": "v.睡眠",
+    "translations": [
+      "v.睡眠"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00654",
+    "word": "ninepin",
+    "phonetic": "",
+    "translation": "n.九柱戏中的木柱",
+    "translations": [
+      "n.九柱戏中的木柱"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00655",
+    "word": "rigid",
+    "phonetic": "'ridʒid",
+    "translation": "a.坚硬的",
+    "translations": [
+      "a.坚硬的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00656",
+    "word": "delicate",
+    "phonetic": "'delikit",
+    "translation": "a.灵敏的",
+    "translations": [
+      "a.灵敏的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00657",
+    "word": "seismometer",
+    "phonetic": "[saiz'mɔmitә]",
+    "translation": "n.地震仪",
+    "translations": [
+      "n.地震仪"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00658",
+    "word": "penholder",
+    "phonetic": "",
+    "translation": "n.笔杆",
+    "translations": [
+      "n.笔杆"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00659",
+    "word": "legibly",
+    "phonetic": "['ledʒәbli]",
+    "translation": "ad.字迹清楚地",
+    "translations": [
+      "ad.字迹清楚地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00660",
+    "word": "drum",
+    "phonetic": "drʌm",
+    "translation": "n.鼓状物",
+    "translations": [
+      "n.鼓状物"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00661",
+    "word": "wriggle",
+    "phonetic": "'rigl",
+    "translation": "v.扭动",
+    "translations": [
+      "v.扭动"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00662",
+    "word": "bluebottle",
+    "phonetic": "['blu:bɔtl]",
+    "translation": "n.绿头苍蝇",
+    "translations": [
+      "n.绿头苍蝇"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00663",
+    "word": "graph",
+    "phonetic": "græf",
+    "translation": "n.图表",
+    "translations": [
+      "n.图表"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00664",
+    "word": "graphic",
+    "phonetic": "'græfik",
+    "translation": "a.图示的",
+    "translations": [
+      "a.图示的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00665",
+    "word": "longitudinal",
+    "phonetic": "'lɔndʒi'tju:dinl",
+    "translation": "a.纵向的",
+    "translations": [
+      "a.纵向的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00666",
+    "word": "transverse",
+    "phonetic": "'trænzvә:s",
+    "translation": "a.横向的",
+    "translations": [
+      "a.横向的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00667",
+    "word": "Mercury",
+    "phonetic": "['mә:kjuri]",
+    "translation": "n.水星",
+    "translations": [
+      "n.水星"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00668",
+    "word": "hydrogen",
+    "phonetic": "'haidridʒәn",
+    "translation": "n.氢气",
+    "translations": [
+      "n.氢气"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00669",
+    "word": "prevailing",
+    "phonetic": "pri'veiliŋ",
+    "translation": "a.普遍的",
+    "translations": [
+      "a.普遍的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00670",
+    "word": "uniquely",
+    "phonetic": "ju:'ni:kli",
+    "translation": "a..唯一地",
+    "translations": [
+      "a..唯一地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00671",
+    "word": "rational",
+    "phonetic": "'ræʃәnl",
+    "translation": "a.合理的",
+    "translations": [
+      "a.合理的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00672",
+    "word": "radio frequency",
+    "phonetic": "",
+    "translation": "n.无线电频率",
+    "translations": [
+      "n.无线电频率"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00673",
+    "word": "cm",
+    "phonetic": "",
+    "translation": "n.厘米(=centimetre)",
+    "translations": [
+      "n.厘米(=centimetre)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00674",
+    "word": "megacycle",
+    "phonetic": "['megәsaikl]",
+    "translation": "n.兆周",
+    "translations": [
+      "n.兆周"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00675",
+    "word": "emission",
+    "phonetic": "i'miʃәn",
+    "translation": "n.散发",
+    "translations": [
+      "n.散发"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00676",
+    "word": "interstellar",
+    "phonetic": "'intә'stelә",
+    "translation": "a.星际的",
+    "translations": [
+      "a.星际的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00677",
+    "word": "rendezvous",
+    "phonetic": "'rɔndәvu:",
+    "translation": "n.约会地点",
+    "translations": [
+      "n.约会地点"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00678",
+    "word": "encounter",
+    "phonetic": "in'kauntә",
+    "translation": "n.相遇",
+    "translations": [
+      "n.相遇"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00679",
+    "word": "commonplace",
+    "phonetic": "'kɔmәnpleis",
+    "translation": "a.平凡的",
+    "translations": [
+      "a.平凡的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00680",
+    "word": "aberrant",
+    "phonetic": "æ'berәnt",
+    "translation": "a.脱离常轨的，异常的",
+    "translations": [
+      "a.脱离常轨的，异常的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00681",
+    "word": "trivial",
+    "phonetic": "'triviәl",
+    "translation": "a.微不足道的",
+    "translations": [
+      "a.微不足道的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00682",
+    "word": "predominant",
+    "phonetic": "pri'dɔminәnt",
+    "translation": "a.占优势的，起支配作用的",
+    "translations": [
+      "a.占优势的，起支配作用的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00683",
+    "word": "manifest",
+    "phonetic": "'mænifest",
+    "translation": "a.明显的",
+    "translations": [
+      "a.明显的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00684",
+    "word": "pristine",
+    "phonetic": "'pristain",
+    "translation": "a.纯洁的，质朴的",
+    "translations": [
+      "a.纯洁的，质朴的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00685",
+    "word": "stereotype",
+    "phonetic": "stiәriәtaip",
+    "translation": "n.陈规",
+    "translations": [
+      "n.陈规"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00686",
+    "word": "vernacular",
+    "phonetic": "vә'nækjulә",
+    "translation": "n.方言",
+    "translations": [
+      "n.方言"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00687",
+    "word": "accommodation",
+    "phonetic": "ә,kɔmә'deiʃәn",
+    "translation": "n.适应",
+    "translations": [
+      "n.适应"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00688",
+    "word": "incumbent",
+    "phonetic": "in'kʌmbәnt",
+    "translation": "a.义不容辞的，有责任的",
+    "translations": [
+      "a.义不容辞的，有责任的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00689",
+    "word": "preliminary",
+    "phonetic": "pri'liminәri",
+    "translation": "a.初步的",
+    "translations": [
+      "a.初步的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00690",
+    "word": "proposition",
+    "phonetic": "'prɔpә'ziʃәn",
+    "translation": "n.主张",
+    "translations": [
+      "n.主张"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00691",
+    "word": "preferential",
+    "phonetic": "prefә'renʃәl",
+    "translation": "a.优先的",
+    "translations": [
+      "a.优先的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00692",
+    "word": "controversial",
+    "phonetic": "'kɔntrә'vә:ʃәl",
+    "translation": "a.引起争论的",
+    "translations": [
+      "a.引起争论的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00693",
+    "word": "cactus",
+    "phonetic": "'kæktәs",
+    "translation": "n.仙人掌",
+    "translations": [
+      "n.仙人掌"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00694",
+    "word": "termite",
+    "phonetic": "'tә:mait",
+    "translation": "n.白蚁",
+    "translations": [
+      "n.白蚁"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00695",
+    "word": "nebula",
+    "phonetic": "'nebjulә",
+    "translation": "n.星云",
+    "translations": [
+      "n.星云"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00696",
+    "word": "variant",
+    "phonetic": "'vєәriәnt",
+    "translation": "a.不同的",
+    "translations": [
+      "a.不同的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00697",
+    "word": "barbarian",
+    "phonetic": "ba:'bєәriәn",
+    "translation": "n.野蛮人",
+    "translations": [
+      "n.野蛮人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00698",
+    "word": "pagan",
+    "phonetic": "'peigәn",
+    "translation": "n.异教徒",
+    "translations": [
+      "n.异教徒"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00699",
+    "word": "sophistication",
+    "phonetic": "sә'fisti'keiʃәn",
+    "translation": "n.老练",
+    "translations": [
+      "n.老练"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00700",
+    "word": "premise",
+    "phonetic": "'premis, pri'maiz",
+    "translation": "n.前提",
+    "translations": [
+      "n.前提"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00701",
+    "word": "supernatural",
+    "phonetic": "'sju:pә'nætʃәrәl",
+    "translation": "a.超自然的",
+    "translations": [
+      "a.超自然的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00702",
+    "word": "dispute",
+    "phonetic": "dis'pju:t",
+    "translation": "v.争夺",
+    "translations": [
+      "v.争夺"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00703",
+    "word": "mosquito",
+    "phonetic": "mәs'ki:tәu",
+    "translation": "n.蚊虫",
+    "translations": [
+      "n.蚊虫"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00704",
+    "word": "subdue",
+    "phonetic": "sʌb'dju:",
+    "translation": "v.征服",
+    "translations": [
+      "v.征服"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00705",
+    "word": "drainage",
+    "phonetic": "'dreinidʒ",
+    "translation": "n.下水系统",
+    "translations": [
+      "n.下水系统"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00706",
+    "word": "envision",
+    "phonetic": "en'viʒәn",
+    "translation": "n.预想",
+    "translations": [
+      "n.预想"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00707",
+    "word": "Morocco",
+    "phonetic": "[mә'rɔkәu]",
+    "translation": "n.摩洛哥",
+    "translations": [
+      "n.摩洛哥"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00708",
+    "word": "latitude",
+    "phonetic": "'lætitju:d",
+    "translation": "n.纬度",
+    "translations": [
+      "n.纬度"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00709",
+    "word": "heretic",
+    "phonetic": "'herәtik",
+    "translation": "n.异教徒，异端邪说",
+    "translations": [
+      "n.异教徒，异端邪说"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00710",
+    "word": "conceive",
+    "phonetic": "kәn'si:v",
+    "translation": "v.想像",
+    "translations": [
+      "v.想像"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00711",
+    "word": "suffice",
+    "phonetic": "sә'fais",
+    "translation": "v.足够",
+    "translations": [
+      "v.足够"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00712",
+    "word": "nuclear",
+    "phonetic": "'nju:kliә",
+    "translation": "a.原子弹的",
+    "translations": [
+      "a.原子弹的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00713",
+    "word": "original",
+    "phonetic": "ә'ridʒәnәl",
+    "translation": "a.有独到见解的",
+    "translations": [
+      "a.有独到见解的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00714",
+    "word": "gifted",
+    "phonetic": "'giftid",
+    "translation": "a.有天才的",
+    "translations": [
+      "a.有天才的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00715",
+    "word": "psychologist",
+    "phonetic": "sai'kɔlәdʒist",
+    "translation": "n.心理学家",
+    "translations": [
+      "n.心理学家"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00716",
+    "word": "spasm",
+    "phonetic": "'spæzәm",
+    "translation": "n.一阵(感情)发作",
+    "translations": [
+      "n.一阵(感情)发作"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00717",
+    "word": "futile",
+    "phonetic": "'fju:tail",
+    "translation": "a.无用的",
+    "translations": [
+      "a.无用的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00718",
+    "word": "insinuate",
+    "phonetic": "in'sinjueit",
+    "translation": "v.使潜入，暗示",
+    "translations": [
+      "v.使潜入，暗示"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00719",
+    "word": "convulsive",
+    "phonetic": "[kәn'vʌlsiv]",
+    "translation": "a.起痉挛的",
+    "translations": [
+      "a.起痉挛的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00720",
+    "word": "illumination",
+    "phonetic": "i'lju:mi'neiʃәn",
+    "translation": "n.启发，照明",
+    "translations": [
+      "n.启发，照明"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00721",
+    "word": "undue",
+    "phonetic": "'ʌn'dju:",
+    "translation": "a.不适当的",
+    "translations": [
+      "a.不适当的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00722",
+    "word": "grip",
+    "phonetic": "grip",
+    "translation": "n.紧张",
+    "translations": [
+      "n.紧张"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00723",
+    "word": "recuperation",
+    "phonetic": "[ri'kju:pә'reiʃәn]",
+    "translation": "n.休息",
+    "translations": [
+      "n.休息"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00724",
+    "word": "improvise",
+    "phonetic": "'imprәvaiz",
+    "translation": "v.临时作成",
+    "translations": [
+      "v.临时作成"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00725",
+    "word": "sedulously",
+    "phonetic": "",
+    "translation": "ad.孜孜不倦地",
+    "translations": [
+      "ad.孜孜不倦地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00726",
+    "word": "vivify",
+    "phonetic": "'vivifai",
+    "translation": "v.使生气勃勃",
+    "translations": [
+      "v.使生气勃勃"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00727",
+    "word": "aggravate",
+    "phonetic": "'ægrәveit",
+    "translation": "v.加剧",
+    "translations": [
+      "v.加剧"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00728",
+    "word": "trifling",
+    "phonetic": "['traifliŋ]",
+    "translation": "a.微小的",
+    "translations": [
+      "a.微小的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00729",
+    "word": "gratify",
+    "phonetic": "'grætifai",
+    "translation": "v.使满意",
+    "translations": [
+      "v.使满意"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00730",
+    "word": "caprice",
+    "phonetic": "kә'pri:s",
+    "translation": "n.任性",
+    "translations": [
+      "n.任性"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00731",
+    "word": "satiation",
+    "phonetic": "'seiʃi'eiʃәn",
+    "translation": "n.满足",
+    "translations": [
+      "n.满足"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00732",
+    "word": "frantically",
+    "phonetic": "'fræntikәli",
+    "translation": "ad.狂乱地",
+    "translations": [
+      "ad.狂乱地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00733",
+    "word": "avenge",
+    "phonetic": "ә'vendʒ",
+    "translation": "v.替…报复",
+    "translations": [
+      "v.替…报复"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00734",
+    "word": "boredom",
+    "phonetic": "'bɔ:dәm",
+    "translation": "n.厌烦",
+    "translations": [
+      "n.厌烦"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00735",
+    "word": "clatter",
+    "phonetic": "'klætә",
+    "translation": "n.喧闹的谈话",
+    "translations": [
+      "n.喧闹的谈话"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00736",
+    "word": "sustenance",
+    "phonetic": "'sʌstәnәns",
+    "translation": "n.支撑力",
+    "translations": [
+      "n.支撑力"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00737",
+    "word": "appetite",
+    "phonetic": "'æpitait",
+    "translation": "n.欲望",
+    "translations": [
+      "n.欲望"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00738",
+    "word": "grudge",
+    "phonetic": "grʌdʒ",
+    "translation": "v.怨恨",
+    "translations": [
+      "v.怨恨"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00739",
+    "word": "absorbing",
+    "phonetic": "[әb'sɔ:biŋ]",
+    "translation": "a.引人入胜的",
+    "translations": [
+      "a.引人入胜的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00740",
+    "word": "banish",
+    "phonetic": "'bæniʃ",
+    "translation": "v.排除，放弃",
+    "translations": [
+      "v.排除，放弃"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00741",
+    "word": "assumption",
+    "phonetic": "ә'sʌmpʃәn",
+    "translation": "n.假定",
+    "translations": [
+      "n.假定"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00742",
+    "word": "manoeuvre",
+    "phonetic": "mә'nu:vә",
+    "translation": "v.(驱车)移动",
+    "translations": [
+      "v.(驱车)移动"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00743",
+    "word": "myriad",
+    "phonetic": "'miriәd",
+    "translation": "a.无数的",
+    "translations": [
+      "a.无数的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00744",
+    "word": "paradox",
+    "phonetic": "'pærәdɔks",
+    "translation": "n.自相矛盾的事",
+    "translations": [
+      "n.自相矛盾的事"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00745",
+    "word": "cynic",
+    "phonetic": "'sinik",
+    "translation": "n.愤世嫉俗者",
+    "translations": [
+      "n.愤世嫉俗者"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00746",
+    "word": "sociologist",
+    "phonetic": "'sәusi'ɔlәdʒist",
+    "translation": "n.社会学家",
+    "translations": [
+      "n.社会学家"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00747",
+    "word": "shun",
+    "phonetic": "ʃʌn",
+    "translation": "v.避开",
+    "translations": [
+      "v.避开"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00748",
+    "word": "affluent",
+    "phonetic": "'æfluәnt",
+    "translation": "a.富有的",
+    "translations": [
+      "a.富有的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00749",
+    "word": "chambermaid",
+    "phonetic": "",
+    "translation": "n.女招待员",
+    "translations": [
+      "n.女招待员"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00750",
+    "word": "boo",
+    "phonetic": "bu:",
+    "translation": "n.呸的一声",
+    "translations": [
+      "n.呸的一声"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00751",
+    "word": "maitre d'hotel",
+    "phonetic": "",
+    "translation": "n.［法语］总管",
+    "translations": [
+      "n.［法语］总管"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00752",
+    "word": "snobbery",
+    "phonetic": "'snɔbәri",
+    "translation": "n.势利",
+    "translations": [
+      "n.势利"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00753",
+    "word": "hierarchy",
+    "phonetic": "'haiәra:ki",
+    "translation": "n.等级制度",
+    "translations": [
+      "n.等级制度"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00754",
+    "word": "entail",
+    "phonetic": "in'teil",
+    "translation": "v.使成为必要",
+    "translations": [
+      "v.使成为必要"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00755",
+    "word": "inclement",
+    "phonetic": "in'klemәnt",
+    "translation": "a.险恶的",
+    "translations": [
+      "a.险恶的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00756",
+    "word": "package tour",
+    "phonetic": "",
+    "translation": "n.由旅行社安排一切的一揽子旅游",
+    "translations": [
+      "n.由旅行社安排一切的一揽子旅游"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00757",
+    "word": "insularity",
+    "phonetic": "'insju'læriti",
+    "translation": "n.偏狭",
+    "translations": [
+      "n.偏狭"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00758",
+    "word": "cater",
+    "phonetic": "'keitә",
+    "translation": "v.迎合",
+    "translations": [
+      "v.迎合"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00759",
+    "word": "cosmopolitan",
+    "phonetic": "'kɔzmә'pɔlitәn",
+    "translation": "a.世界的",
+    "translations": [
+      "a.世界的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00760",
+    "word": "preponderance",
+    "phonetic": "pri'pɔndәrәns",
+    "translation": "n.优势",
+    "translations": [
+      "n.优势"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00761",
+    "word": "overwhelmingly",
+    "phonetic": "'әuvә'hwelmiŋli",
+    "translation": "ad.以压倒优势地，清一色地",
+    "translations": [
+      "ad.以压倒优势地，清一色地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00762",
+    "word": "patronage",
+    "phonetic": "'pætrәnidʒ",
+    "translation": "n.恩惠，惠顾",
+    "translations": [
+      "n.恩惠，惠顾"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00763",
+    "word": "sauerkraut",
+    "phonetic": "['sauәkraut]",
+    "translation": "n.泡菜",
+    "translations": [
+      "n.泡菜"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00764",
+    "word": "vie",
+    "phonetic": "vai",
+    "translation": "v.竞争",
+    "translations": [
+      "v.竞争"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00765",
+    "word": "municipality",
+    "phonetic": "mju:'nisi'pæliti",
+    "translation": "n.市政当局",
+    "translations": [
+      "n.市政当局"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00766",
+    "word": "itinerant",
+    "phonetic": "i'tinәrәnt",
+    "translation": "n.巡回者",
+    "translations": [
+      "n.巡回者"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00767",
+    "word": "heath",
+    "phonetic": "hi:θ",
+    "translation": "n.荒地",
+    "translations": [
+      "n.荒地"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00768",
+    "word": "alienate",
+    "phonetic": "'eiljәneit",
+    "translation": "v.使疏远",
+    "translations": [
+      "v.使疏远"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00769",
+    "word": "eternal",
+    "phonetic": "i'tә:nl",
+    "translation": "a.永久的",
+    "translations": [
+      "a.永久的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00770",
+    "word": "portfolio",
+    "phonetic": "pɔ:t'fouljou",
+    "translation": "n.投资组合",
+    "translations": [
+      "n.投资组合"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00771",
+    "word": "tipster",
+    "phonetic": "['tipstә]",
+    "translation": "n.(提供证券投机等消息为生的)情报贩子",
+    "translations": [
+      "n.(提供证券投机等消息为生的)情报贩子"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00772",
+    "word": "fritter",
+    "phonetic": "'fritә",
+    "translation": "v.挥霍，浪费",
+    "translations": [
+      "v.挥霍，浪费"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00773",
+    "word": "reputable",
+    "phonetic": "'repjutәbl",
+    "translation": "a.享有声望的",
+    "translations": [
+      "a.享有声望的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00774",
+    "word": "broker",
+    "phonetic": "'brәukә",
+    "translation": "n.经纪人",
+    "translations": [
+      "n.经纪人"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00775",
+    "word": "finance",
+    "phonetic": "fai'næns, fi-",
+    "translation": "n.资金，财源",
+    "translations": [
+      "n.资金，财源"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00776",
+    "word": "mortgage",
+    "phonetic": "'mɔ:gidʒ",
+    "translation": "n.抵押贷款",
+    "translations": [
+      "n.抵押贷款"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00777",
+    "word": "pension",
+    "phonetic": "'penʃәn",
+    "translation": "n.养老金",
+    "translations": [
+      "n.养老金"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00778",
+    "word": "priority",
+    "phonetic": "prai'ɔriti",
+    "translation": "n.优先权",
+    "translations": [
+      "n.优先权"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00779",
+    "word": "gilt",
+    "phonetic": "gilt",
+    "translation": "n.金边证券(高度可靠的证券)",
+    "translations": [
+      "n.金边证券(高度可靠的证券)"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00780",
+    "word": "convertible",
+    "phonetic": "kәn'vә:tәbl",
+    "translation": "n.可换证券",
+    "translations": [
+      "n.可换证券"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00781",
+    "word": "sanguine",
+    "phonetic": "'sæŋgwin",
+    "translation": "a.乐观的",
+    "translations": [
+      "a.乐观的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00782",
+    "word": "heady",
+    "phonetic": "['hedi]",
+    "translation": "a.令人陶醉的",
+    "translations": [
+      "a.令人陶醉的"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00783",
+    "word": "alongside",
+    "phonetic": "ә'lɔŋ'said",
+    "translation": "prep.在…旁边，和…一起",
+    "translations": [
+      "prep.在…旁边，和…一起"
+    ],
+    "domain": "qwerty_nce4"
+  },
+  {
+    "id": "qwerty_nce4_00784",
+    "word": "pedestrian",
+    "phonetic": "pi'destriәn",
+    "translation": "a.平淡无奇的，乏味的",
+    "translations": [
+      "a.平淡无奇的，乏味的"
+    ],
+    "domain": "qwerty_nce4"
+  }
+]

@@ -1,0 +1,652 @@
+[
+  {
+    "id": "qwerty_python_builtin_00001",
+    "word": "abs",
+    "phonetic": "",
+    "translation": "返回一个数的绝对值",
+    "translations": [
+      "返回一个数的绝对值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00002",
+    "word": "all",
+    "phonetic": "",
+    "translation": "如果 iterable对象 的所有元素均为真值则返回 True",
+    "translations": [
+      "如果 iterable对象 的所有元素均为真值则返回 True"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00003",
+    "word": "any",
+    "phonetic": "",
+    "translation": "如果 iterable对象 的任一元素为真值则返回 True",
+    "translations": [
+      "如果 iterable对象 的任一元素为真值则返回 True"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00004",
+    "word": "ascii",
+    "phonetic": "",
+    "translation": "返回一个包含对象的可打印表示形式的字符串",
+    "translations": [
+      "返回一个包含对象的可打印表示形式的字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00005",
+    "word": "bin",
+    "phonetic": "",
+    "translation": "将一个整数转变为二进制字符串",
+    "translations": [
+      "将一个整数转变为二进制字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00006",
+    "word": "bool",
+    "phonetic": "",
+    "translation": "布尔",
+    "translations": [
+      "布尔"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00007",
+    "word": "breakpoint",
+    "phonetic": "",
+    "translation": "此函数会在调用时将你陷入调试器中",
+    "translations": [
+      "此函数会在调用时将你陷入调试器中"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00008",
+    "word": "bytearray",
+    "phonetic": "",
+    "translation": "返回一个新的 bytes 数组",
+    "translations": [
+      "返回一个新的 bytes 数组"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00009",
+    "word": "bytes",
+    "phonetic": "",
+    "translation": "返回一个新的 bytes 对象",
+    "translations": [
+      "返回一个新的 bytes 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00010",
+    "word": "callable",
+    "phonetic": "",
+    "translation": "检测对象是否可调用",
+    "translations": [
+      "检测对象是否可调用"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00011",
+    "word": "chr",
+    "phonetic": "",
+    "translation": "返回 Unicode 码位为整数 i 的字符的字符串格式",
+    "translations": [
+      "返回 Unicode 码位为整数 i 的字符的字符串格式"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00012",
+    "word": "complex",
+    "phonetic": "",
+    "translation": "返回值为 real + imag*1j 的复数",
+    "translations": [
+      "返回值为 real + imag*1j 的复数"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00013",
+    "word": "delattr",
+    "phonetic": "",
+    "translation": "删除对象指定的属性",
+    "translations": [
+      "删除对象指定的属性"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00014",
+    "word": "dict",
+    "phonetic": "",
+    "translation": "创建一个新的字典",
+    "translations": [
+      "创建一个新的字典"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00015",
+    "word": "dir",
+    "phonetic": "",
+    "translation": "如果没有实参，则返回当前本地作用域中的名称列表。如果有实参，它会尝试返回该对象的有效属性列表。",
+    "translations": [
+      "如果没有实参，则返回当前本地作用域中的名称列表。如果有实参，它会尝试返回该对象的有效属性列表。"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00016",
+    "word": "divmod",
+    "phonetic": "",
+    "translation": "执行整数除法时返回一对商和余数",
+    "translations": [
+      "执行整数除法时返回一对商和余数"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00017",
+    "word": "enumerate",
+    "phonetic": "",
+    "translation": "返回一个枚举对象",
+    "translations": [
+      "返回一个枚举对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00018",
+    "word": "eval",
+    "phonetic": "",
+    "translation": "解析并求值一个 Python 表达式",
+    "translations": [
+      "解析并求值一个 Python 表达式"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00019",
+    "word": "exec",
+    "phonetic": "",
+    "translation": "执行 Python 代码",
+    "translations": [
+      "执行 Python 代码"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00020",
+    "word": "filter",
+    "phonetic": "",
+    "translation": "用 iterable 中函数 function 返回真的那些元素",
+    "translations": [
+      "用 iterable 中函数 function 返回真的那些元素"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00021",
+    "word": "float",
+    "phonetic": "",
+    "translation": "返回从数字或字符串 x 生成的浮点数",
+    "translations": [
+      "返回从数字或字符串 x 生成的浮点数"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00022",
+    "word": "format",
+    "phonetic": "",
+    "translation": "将 value 转换为 format_spec 控制的 格式化 表示",
+    "translations": [
+      "将 value 转换为 format_spec 控制的 格式化 表示"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00023",
+    "word": "frozenset",
+    "phonetic": "",
+    "translation": "返回一个新的 不可变集合 对象",
+    "translations": [
+      "返回一个新的 不可变集合 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00024",
+    "word": "getattr",
+    "phonetic": "",
+    "translation": "返回对象命名属性的值",
+    "translations": [
+      "返回对象命名属性的值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00025",
+    "word": "globals",
+    "phonetic": "",
+    "translation": "返回表示当前全局符号表的字典",
+    "translations": [
+      "返回表示当前全局符号表的字典"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00026",
+    "word": "hasattr",
+    "phonetic": "",
+    "translation": "检测对象是否含有指定属性",
+    "translations": [
+      "检测对象是否含有指定属性"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00027",
+    "word": "hash",
+    "phonetic": "",
+    "translation": "返回该对象的哈希值",
+    "translations": [
+      "返回该对象的哈希值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00028",
+    "word": "help",
+    "phonetic": "",
+    "translation": "启动内置的帮助系统",
+    "translations": [
+      "启动内置的帮助系统"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00029",
+    "word": "hex",
+    "phonetic": "",
+    "translation": "将整数转换为以 0x 为前缀的小写十六进制字符串",
+    "translations": [
+      "将整数转换为以 0x 为前缀的小写十六进制字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00030",
+    "word": "id",
+    "phonetic": "",
+    "translation": "返回对象的 标识值",
+    "translations": [
+      "返回对象的 标识值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00031",
+    "word": "input",
+    "phonetic": "",
+    "translation": "从输入中读取一行",
+    "translations": [
+      "从输入中读取一行"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00032",
+    "word": "int",
+    "phonetic": "",
+    "translation": "返回一个基于数字或字符串 x 构造的整数对象",
+    "translations": [
+      "返回一个基于数字或字符串 x 构造的整数对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00033",
+    "word": "isinstance",
+    "phonetic": "",
+    "translation": "检测对象是否为类的实例",
+    "translations": [
+      "检测对象是否为类的实例"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00034",
+    "word": "issubclass",
+    "phonetic": "",
+    "translation": "检测类是否为类的子类",
+    "translations": [
+      "检测类是否为类的子类"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00035",
+    "word": "iter",
+    "phonetic": "",
+    "translation": "返回一个 iterable 对象",
+    "translations": [
+      "返回一个 iterable 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00036",
+    "word": "len",
+    "phonetic": "",
+    "translation": "返回对象的长度（元素个数）",
+    "translations": [
+      "返回对象的长度（元素个数）"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00037",
+    "word": "list",
+    "phonetic": "",
+    "translation": "创建一个新的列表",
+    "translations": [
+      "创建一个新的列表"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00038",
+    "word": "locals",
+    "phonetic": "",
+    "translation": "更新并返回表示当前本地符号表的字典",
+    "translations": [
+      "更新并返回表示当前本地符号表的字典"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00039",
+    "word": "map",
+    "phonetic": "",
+    "translation": "返回一个将 function 应用于 iterable 中每一项并输出其结果的迭代器",
+    "translations": [
+      "返回一个将 function 应用于 iterable 中每一项并输出其结果的迭代器"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00040",
+    "word": "max",
+    "phonetic": "",
+    "translation": "返回可迭代对象中最大的元素",
+    "translations": [
+      "返回可迭代对象中最大的元素"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00041",
+    "word": "memoryview",
+    "phonetic": "",
+    "translation": "返回由给定实参创建的 内存视图 对象",
+    "translations": [
+      "返回由给定实参创建的 内存视图 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00042",
+    "word": "min",
+    "phonetic": "",
+    "translation": "返回可迭代对象中最小的元素",
+    "translations": [
+      "返回可迭代对象中最小的元素"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00043",
+    "word": "next",
+    "phonetic": "",
+    "translation": "通过调用 iterator 的 __next__() 方法获取下一个元素",
+    "translations": [
+      "通过调用 iterator 的 __next__() 方法获取下一个元素"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00044",
+    "word": "object",
+    "phonetic": "",
+    "translation": "返回一个没有特征的新对象",
+    "translations": [
+      "返回一个没有特征的新对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00045",
+    "word": "oct",
+    "phonetic": "",
+    "translation": "将一个整数转变为一个前缀为 0o 的八进制字符串",
+    "translations": [
+      "将一个整数转变为一个前缀为 0o 的八进制字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00046",
+    "word": "open",
+    "phonetic": "",
+    "translation": "打开 file 并返回对应的 file object",
+    "translations": [
+      "打开 file 并返回对应的 file object"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00047",
+    "word": "ord",
+    "phonetic": "",
+    "translation": "对表示单个 Unicode 字符的字符串",
+    "translations": [
+      "对表示单个 Unicode 字符的字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00048",
+    "word": "pow",
+    "phonetic": "",
+    "translation": "返回 base 的 exp 次幂",
+    "translations": [
+      "返回 base 的 exp 次幂"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00049",
+    "word": "print",
+    "phonetic": "",
+    "translation": "将 objects 打印到 file 指定的文本流",
+    "translations": [
+      "将 objects 打印到 file 指定的文本流"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00050",
+    "word": "property",
+    "phonetic": "",
+    "translation": "返回 property 属性",
+    "translations": [
+      "返回 property 属性"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00051",
+    "word": "range",
+    "phonetic": "",
+    "translation": "创建一个整数列表",
+    "translations": [
+      "创建一个整数列表"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00052",
+    "word": "repr",
+    "phonetic": "",
+    "translation": "返回包含一个对象的可打印表示形式的字符串",
+    "translations": [
+      "返回包含一个对象的可打印表示形式的字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00053",
+    "word": "reversed",
+    "phonetic": "",
+    "translation": "返回一个反向的 iterator",
+    "translations": [
+      "返回一个反向的 iterator"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00054",
+    "word": "round",
+    "phonetic": "",
+    "translation": "回 number 舍入到小数点后 ndigits 位精度的值",
+    "translations": [
+      "回 number 舍入到小数点后 ndigits 位精度的值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00055",
+    "word": "set",
+    "phonetic": "",
+    "translation": "返回一个新的 set 对象",
+    "translations": [
+      "返回一个新的 set 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00056",
+    "word": "setattr",
+    "phonetic": "",
+    "translation": "设置对象属性",
+    "translations": [
+      "设置对象属性"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00057",
+    "word": "slice",
+    "phonetic": "",
+    "translation": "返回一个指定索引集的 slice 对象",
+    "translations": [
+      "返回一个指定索引集的 slice 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00058",
+    "word": "sorted",
+    "phonetic": "",
+    "translation": "根据 iterable 中的项返回一个新的已排序列表",
+    "translations": [
+      "根据 iterable 中的项返回一个新的已排序列表"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00059",
+    "word": "str",
+    "phonetic": "",
+    "translation": "返回一个 str 版本的 object",
+    "translations": [
+      "返回一个 str 版本的 object"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00060",
+    "word": "sum",
+    "phonetic": "",
+    "translation": "自左向右对 iterable 的项求和并返回总计值",
+    "translations": [
+      "自左向右对 iterable 的项求和并返回总计值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00061",
+    "word": "super",
+    "phonetic": "",
+    "translation": "返回一个代理对象",
+    "translations": [
+      "返回一个代理对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00062",
+    "word": "tuple",
+    "phonetic": "",
+    "translation": "返回一个新的 元组 对象",
+    "translations": [
+      "返回一个新的 元组 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00063",
+    "word": "type",
+    "phonetic": "",
+    "translation": "返回 object 的类型",
+    "translations": [
+      "返回 object 的类型"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00064",
+    "word": "vars",
+    "phonetic": "",
+    "translation": "返回模块、类、实例或任何其它具有 __dict__ 属性的对象的 __dict__ 属性",
+    "translations": [
+      "返回模块、类、实例或任何其它具有 __dict__ 属性的对象的 __dict__ 属性"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00065",
+    "word": "zip",
+    "phonetic": "",
+    "translation": "创建一个聚合了来自每个可迭代对象中的元素的迭代器",
+    "translations": [
+      "创建一个聚合了来自每个可迭代对象中的元素的迭代器"
+    ],
+    "domain": "qwerty_python_builtin"
+  }
+]

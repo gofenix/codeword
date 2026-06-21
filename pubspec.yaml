@@ -1,0 +1,32 @@
+name: codeword_workspace
+publish_to: 'none'
+
+environment:
+  sdk: ^3.10.0
+
+workspace:
+  - apps/codeword
+  - packages/lib_core
+  - packages/lib_content
+  - packages/lib_ui
+
+dev_dependencies:
+  melos: ^7.8.2
+
+melos:
+  scripts:
+    build:macos:
+      description: Build the macOS app in debug mode.
+      run: melos exec -c 1 --dir-exists="macos" -- "flutter build macos --debug"
+
+    build:android:
+      description: Build the Android debug APK.
+      run: melos exec -c 1 --dir-exists="android" -- "flutter build apk --debug"
+
+    analyze:
+      description: Run flutter analyze across the workspace.
+      run: melos exec -c 1 -- "flutter analyze"
+
+    test:
+      description: Run flutter test across the workspace.
+      run: melos exec -c 1 --dir-exists="test" -- "flutter test"

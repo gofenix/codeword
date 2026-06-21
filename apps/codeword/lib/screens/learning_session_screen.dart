@@ -103,10 +103,12 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
                 ),
                 SessionPhase.asking => _AskingView(
                   session: session,
+                  vocabId: widget.vocabId,
                   key: const ValueKey('asking'),
                 ),
                 SessionPhase.wrongDetail => _WrongDetailView(
                   session: session,
+                  vocabId: widget.vocabId,
                   key: const ValueKey('wrong'),
                 ),
                 SessionPhase.finished => _FinishedView(
@@ -124,23 +126,59 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
   }
 }
 
-class _AskingView extends ConsumerWidget {
+class _AskingView extends ConsumerStatefulWidget {
   final LearningSessionState session;
-  const _AskingView({required this.session, super.key});
+  final String vocabId;
+  const _AskingView({required this.session, required this.vocabId, super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<_AskingView> createState() => _AskingViewState();
+}
+
+class _AskingViewState extends ConsumerState<_AskingView> {
+  String? _lastWordId;
+
+  @override
+  void initState() {
+    super.initState();
+    // Auto-play on mount. Slight delay so the question card animates in
+    // before audio starts (a touch less jarring than a simultaneous
+    // flash + bang).
+    WidgetsBinding.instance.addPostFrameCallback((_) => _maybeAutoPlay());
+  }
+
+  @override
+  void didUpdateWidget(covariant _AskingView old) {
+    super.didUpdateWidget(old);
+    if (widget.session.currentIndex != old.session.currentIndex) {
+      _maybeAutoPlay();
+    }
+  }
+
+  void _maybeAutoPlay() {
+    final q = widget.session.currentQuestion;
+    if (q == null) return;
+    if (q.word.id == _lastWordId) return;
+    _lastWordId = q.word.id;
+    // Only auto-play when audio IS the prompt (listening question).
+    // For the other two question types, auto-playing would either
+    // give away the answer (seeMeaningPickWord) or distract from
+    // the written text the user is supposed to read
+    // (seeWordPickMeaning). The audio button is still on screen so
+    // the user can opt in to hear pronunciation as a hint.
+    if (q.type != QuestionType.listenPickMeaning) return;
+    TtsService.instance.speak(text: q.word.word);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final session = widget.session;
     final q = session.currentQuestion!;
     final notifier = ref.read(learningSessionProvider.notifier);
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Progress bar is hoisted to the Scaffold body so the
-          // AnimatedSwitcher doesn't render two of them at once.
-          // Scrollable top region: prompt card + audio button.
-          // The options below are NOT in this scroll area, so they stay
-          // anchored to the bottom regardless of prompt length.
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
@@ -155,17 +193,16 @@ class _AskingView extends ConsumerWidget {
                     questionCount: session.questions.length,
                     currentIndex: session.currentIndex,
                   ),
-                  if (q.type == QuestionType.listenPickMeaning) ...[
-                    const SizedBox(height: AppSpacing.x3),
-                    _AudioButton(word: q.word),
-                  ],
+                  const SizedBox(height: AppSpacing.x3),
+                  // Always show the audio control — for the
+                  // listenPickMeaning question it's the primary play
+                  // button; for the other two it's a "replay" button
+                  // after the auto-play on entry.
+                  _AudioButton(word: q.word),
                 ],
               ),
             ),
           ),
-          // Fixed options anchored to the bottom of the screen.
-          // Their Y position never changes between questions, so the
-          // user's tap position stays consistent (good for muscle memory).
           Padding(
             padding: EdgeInsets.fromLTRB(
               AppSpacing.x6,
@@ -202,7 +239,12 @@ class _AskingView extends ConsumerWidget {
 
 class _WrongDetailView extends ConsumerStatefulWidget {
   final LearningSessionState session;
-  const _WrongDetailView({required this.session, super.key});
+  final String vocabId;
+  const _WrongDetailView({
+    required this.session,
+    required this.vocabId,
+    super.key,
+  });
 
   @override
   ConsumerState<_WrongDetailView> createState() => _WrongDetailViewState();
@@ -210,6 +252,7 @@ class _WrongDetailView extends ConsumerStatefulWidget {
 
 class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
   bool _isFavorite = false;
+  String? _lastWordId;
 
   @override
   void initState() {
@@ -220,6 +263,25 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
         widget.session.currentQuestion!.word.id,
       );
     } catch (_) {}
+    // Auto-play the word on entry so the user hears the correct
+    // pronunciation for the one they got wrong.
+    WidgetsBinding.instance.addPostFrameCallback((_) => _maybeAutoPlay());
+  }
+
+  @override
+  void didUpdateWidget(covariant _WrongDetailView old) {
+    super.didUpdateWidget(old);
+    if (widget.session.currentIndex != old.session.currentIndex) {
+      _maybeAutoPlay();
+    }
+  }
+
+  void _maybeAutoPlay() {
+    final q = widget.session.currentQuestion;
+    if (q == null) return;
+    if (q.word.id == _lastWordId) return;
+    _lastWordId = q.word.id;
+    TtsService.instance.speak(text: q.word.word);
   }
 
   Future<void> _toggleFavorite() async {
@@ -289,7 +351,7 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
               ],
             ),
             const SizedBox(height: AppSpacing.x4),
-            _HeroWordDetail(word: w),
+            _HeroWordDetail(word: w, vocabId: widget.vocabId),
             const SizedBox(height: AppSpacing.x4),
             SizedBox(
               width: double.infinity,
@@ -394,12 +456,14 @@ class _FavoriteChip extends StatelessWidget {
   }
 }
 
-class _HeroWordDetail extends StatelessWidget {
+class _HeroWordDetail extends ConsumerWidget {
   final VocabWord word;
-  const _HeroWordDetail({required this.word});
+  final String vocabId;
+  const _HeroWordDetail({required this.word, required this.vocabId});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final meta = ref.watch(vocabMetaProvider)[vocabId];
     return SizedBox(
       // Force the card to stretch the full width of the parent.
       // Without this, the card sizes to its content's intrinsic width
@@ -416,7 +480,7 @@ class _HeroWordDetail extends StatelessWidget {
             Row(
               children: [
                 PillTag.domain(
-                  word.domain.toUpperCase(),
+                  meta?.name ?? vocabId,
                   color: _domainColor(word.domain),
                   icon: Icons.bolt,
                 ),
@@ -472,18 +536,8 @@ class _HeroWordDetail extends StatelessWidget {
   }
 
   Color _domainColor(String domain) {
-    switch (domain) {
-      case 'cs':
-        return AppColors.domainCs;
-      case 'python':
-        return AppColors.domainPython;
-      case 'ai':
-        return AppColors.domainAi;
-      case 'web':
-        return AppColors.domainWeb;
-      default:
-        return AppColors.primary;
-    }
+    final h = domain.hashCode.abs();
+    return AppColors.qwertyPalette[h % AppColors.qwertyPalette.length];
   }
 }
 
@@ -528,60 +582,14 @@ class _AudioButton extends StatefulWidget {
 }
 
 class _AudioButtonState extends State<_AudioButton> {
-  bool _warned = false;
-  StreamSubscription<bool>? _availabilitySub;
-
-  @override
-  void initState() {
-    super.initState();
-    // If the bundled audio asset is missing for this word, surface a
-    // single short toast per session. No dev-talk about v0.4.5 history.
-    _availabilitySub = TtsService.instance.availabilityStream.listen((ok) {
-      if (!ok && mounted && !_warned) {
-        _warned = true;
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('音频缺失 · 重新安装 app 可恢复'),
-            duration: Duration(seconds: 3),
-          ),
-        );
-      }
-    });
-  }
-
-  @override
-  void dispose() {
-    _availabilitySub?.cancel();
-    super.dispose();
-  }
-
-  Future<void> _onTap() async {
-    HapticFeedback.lightImpact();
-    final ok = await TtsService.instance.speak(widget.word.id);
-    if (!ok && mounted) {
-      // No toast for missing audio — the once-per-session toast above
-      // already covers it. This keeps the learning flow quiet.
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 40,
-      height: 40,
-      decoration: BoxDecoration(
-        color: AppColors.primary.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(AppRadii.sm),
-      ),
-      child: IconButton(
-        icon: const Icon(
-          Icons.volume_up_rounded,
-          size: 20,
-          color: AppColors.primary,
-        ),
-        onPressed: _onTap,
-        padding: EdgeInsets.zero,
-      ),
+    return IconButton(
+      icon: const Icon(Icons.volume_up_outlined),
+      onPressed: () async {
+        HapticFeedback.lightImpact();
+        await TtsService.instance.speak(text: widget.word.word);
+      },
     );
   }
 }
@@ -607,7 +615,6 @@ class _QuestionPrompt extends StatelessWidget {
       QuestionType.seeWordPickMeaning => '看词选义',
       QuestionType.seeMeaningPickWord => '看义选词',
       QuestionType.listenPickMeaning => '听音选义',
-      QuestionType.seeContextPickWord => '语境选词',
     };
     return SizedBox(
       width: double.infinity,
@@ -667,8 +674,6 @@ class _QuestionPrompt extends StatelessWidget {
         );
       case QuestionType.listenPickMeaning:
         return _WordPrompt(word: prompt, wordObj: word);
-      case QuestionType.seeContextPickWord:
-        return _ContextPrompt(sentence: prompt);
     }
   }
 }
@@ -692,58 +697,6 @@ class _WordPrompt extends StatelessWidget {
         ),
         const SizedBox(height: 2),
         Text(wordObj.phonetic, style: AppTheme.phonetic()),
-      ],
-    );
-  }
-}
-
-class _ContextPrompt extends StatelessWidget {
-  final String sentence;
-  const _ContextPrompt({required this.sentence});
-
-  /// Returns the substring after the first space, or the full sentence
-  /// if there is no space (defensive: avoids indexOf -1 bug).
-  static String _afterFirstSpace(String s) {
-    final idx = s.indexOf(' ');
-    return idx >= 0 ? s.substring(idx + 1) : s;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          '选择划线词的正确意思:',
-          style: TextStyle(
-            fontSize: 12,
-            color: AppColors.inkMuted,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        const SizedBox(height: AppSpacing.x3),
-        RichText(
-          text: TextSpan(
-            style: const TextStyle(
-              fontSize: 16,
-              color: AppColors.ink,
-              height: 1.6,
-            ),
-            children: [
-              const TextSpan(text: '...'),
-              TextSpan(
-                text: ' ___ ',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: AppColors.primary,
-                  fontWeight: FontWeight.w700,
-                  backgroundColor: AppColors.primary.withValues(alpha: 0.1),
-                ),
-              ),
-              TextSpan(text: _afterFirstSpace(sentence)),
-            ],
-          ),
-        ),
       ],
     );
   }
