@@ -28,7 +28,7 @@ class StatsScreen extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              '统计',
+              '图表',
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.w700,

@@ -137,6 +137,8 @@ class _AskingView extends ConsumerStatefulWidget {
 
 class _AskingViewState extends ConsumerState<_AskingView> {
   String? _lastWordId;
+  int? _selectedIndex;
+  bool _locked = false;
 
   @override
   void initState() {
@@ -151,6 +153,9 @@ class _AskingViewState extends ConsumerState<_AskingView> {
   void didUpdateWidget(covariant _AskingView old) {
     super.didUpdateWidget(old);
     if (widget.session.currentIndex != old.session.currentIndex) {
+      // New question — reset feedback state.
+      _selectedIndex = null;
+      _locked = false;
       _maybeAutoPlay();
     }
   }
@@ -170,11 +175,44 @@ class _AskingViewState extends ConsumerState<_AskingView> {
     TtsService.instance.speak(text: q.word.word);
   }
 
+  void _onOptionTap(int i) {
+    if (_locked) return;
+    final q = widget.session.currentQuestion!;
+    final correct = i == q.correctIndex;
+    setState(() {
+      _selectedIndex = i;
+      _locked = true;
+    });
+    if (correct) {
+      HapticFeedback.lightImpact();
+      // Positive reinforcement: play the word on every correct answer.
+      TtsService.instance.speak(text: q.word.word);
+      Future.delayed(const Duration(milliseconds: 750), () {
+        if (!mounted) return;
+        ref.read(learningSessionProvider.notifier).answer(i);
+      });
+    } else {
+      HapticFeedback.heavyImpact();
+      // Brief pause so the user sees the red highlight before the
+      // immersive wrong-answer card takes over.
+      Future.delayed(const Duration(milliseconds: 250), () {
+        if (!mounted) return;
+        ref.read(learningSessionProvider.notifier).answer(i);
+      });
+    }
+  }
+
+  _OptionState _optionState(int i, int correctIndex) {
+    if (_selectedIndex == null) return _OptionState.normal;
+    if (i == correctIndex) return _OptionState.correct;
+    if (i == _selectedIndex) return _OptionState.wrong;
+    return _OptionState.dimmed;
+  }
+
   @override
   Widget build(BuildContext context) {
     final session = widget.session;
     final q = session.currentQuestion!;
-    final notifier = ref.read(learningSessionProvider.notifier);
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -217,15 +255,8 @@ class _AskingViewState extends ConsumerState<_AskingView> {
                   _OptionTile(
                     label: String.fromCharCode(65 + i),
                     text: q.options[i],
-                    onTap: () {
-                      final correct = i == q.correctIndex;
-                      if (correct) {
-                        HapticFeedback.lightImpact();
-                      } else {
-                        HapticFeedback.heavyImpact();
-                      }
-                      notifier.answer(i);
-                    },
+                    state: _optionState(i, q.correctIndex),
+                    onTap: () => _onOptionTap(i),
                   ),
                 ],
               ],
@@ -325,18 +356,33 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
             const SizedBox(height: AppSpacing.x2),
             Row(
               children: [
-                const Icon(
-                  Icons.cancel_rounded,
-                  color: AppColors.danger,
-                  size: 20,
-                ),
-                const SizedBox(width: 6),
-                const Text(
-                  '答错了',
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.danger,
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppSpacing.x3,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: AppColors.danger.withValues(alpha: 0.12),
+                    borderRadius: BorderRadius.circular(AppRadii.pill),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Icon(
+                        Icons.cancel_rounded,
+                        color: AppColors.danger,
+                        size: 16,
+                      ),
+                      SizedBox(width: 6),
+                      Text(
+                        '答错了',
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.danger,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 const Spacer(),
@@ -351,8 +397,8 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
               ],
             ),
             const SizedBox(height: AppSpacing.x4),
-            _HeroWordDetail(word: w, vocabId: widget.vocabId),
-            const SizedBox(height: AppSpacing.x4),
+            _ContextCard(word: w, vocabId: widget.vocabId),
+            const SizedBox(height: AppSpacing.x5),
             SizedBox(
               width: double.infinity,
               child: FilledButton(
@@ -360,11 +406,11 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
                     ref.read(learningSessionProvider.notifier).next(),
                 style: FilledButton.styleFrom(
                   backgroundColor: AppColors.danger,
-                  minimumSize: const Size.fromHeight(48),
+                  minimumSize: const Size.fromHeight(52),
                 ),
                 child: const Text(
-                  '继续，稍后再测 →',
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+                  '继续，稍后再测',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                 ),
               ),
             ),
@@ -456,21 +502,22 @@ class _FavoriteChip extends StatelessWidget {
   }
 }
 
-class _HeroWordDetail extends ConsumerWidget {
+/// Immersive wrong-answer context card.
+///
+/// Shows the word, then the example sentence above the definition so the
+/// user can learn from context. Whole-sentence TTS is available when an
+/// English example exists.
+class _ContextCard extends ConsumerWidget {
   final VocabWord word;
   final String vocabId;
-  const _HeroWordDetail({required this.word, required this.vocabId});
+
+  const _ContextCard({required this.word, required this.vocabId});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final meta = ref.watch(vocabMetaProvider)[vocabId];
+    final hasExample = word.exampleEn.trim().isNotEmpty;
     return SizedBox(
-      // Force the card to stretch the full width of the parent.
-      // Without this, the card sizes to its content's intrinsic width
-      // (the Row with Expanded inside Column(crossAxis: start) can't
-      // resolve a width, so the whole card collapses to fit just the
-      // audio button + the non-Expanded text) — which made the wrong-
-      // detail card appear pinned to the left edge.
       width: double.infinity,
       child: AppCard(
         padding: const EdgeInsets.all(AppSpacing.x5),
@@ -492,14 +539,44 @@ class _HeroWordDetail extends ConsumerWidget {
             Row(
               children: [
                 Expanded(
-                  child: Text(word.word, style: AppTheme.wordDisplay(size: 28)),
+                  child: Text(
+                    word.word,
+                    style: AppTheme.wordDisplay(size: 32),
+                  ),
                 ),
                 _AudioButton(word: word),
               ],
             ),
             const SizedBox(height: 2),
             Text('${word.phonetic}  ${word.pos}', style: AppTheme.phonetic()),
-            const SizedBox(height: AppSpacing.x4),
+            if (hasExample) ...[
+              const SizedBox(height: AppSpacing.x5),
+              _SectionTitle(icon: Icons.format_quote_rounded, label: '例句'),
+              const SizedBox(height: AppSpacing.x3),
+              Text(
+                word.exampleEn,
+                style: const TextStyle(
+                  fontSize: 17,
+                  color: AppColors.ink,
+                  fontWeight: FontWeight.w600,
+                  height: 1.6,
+                ),
+              ),
+              const SizedBox(height: AppSpacing.x2),
+              Text(
+                word.exampleCn,
+                style: const TextStyle(
+                  fontSize: 14,
+                  color: AppColors.inkMuted,
+                  height: 1.5,
+                ),
+              ),
+              const SizedBox(height: AppSpacing.x3),
+              _SentenceAudioButton(word: word),
+            ],
+            const SizedBox(height: AppSpacing.x5),
+            _SectionTitle(icon: Icons.translate_rounded, label: '释义'),
+            const SizedBox(height: AppSpacing.x3),
             Text(
               word.translation,
               style: const TextStyle(
@@ -509,20 +586,8 @@ class _HeroWordDetail extends ConsumerWidget {
                 height: 1.5,
               ),
             ),
-            if (word.exampleEn.isNotEmpty) ...[
-              const SizedBox(height: AppSpacing.x4),
-              _DetailRow(label: '例句', content: word.exampleEn),
-              Text(
-                word.exampleCn,
-                style: const TextStyle(
-                  fontSize: 13,
-                  color: AppColors.inkMuted,
-                  height: 1.5,
-                ),
-              ),
-            ],
             if (word.synonyms.isNotEmpty) ...[
-              const SizedBox(height: AppSpacing.x3),
+              const SizedBox(height: AppSpacing.x4),
               _DetailRow(label: '同义', content: word.synonyms.join(' · ')),
             ],
             if (word.antonyms.isNotEmpty) ...[
@@ -538,6 +603,78 @@ class _HeroWordDetail extends ConsumerWidget {
   Color _domainColor(String domain) {
     final h = domain.hashCode.abs();
     return AppColors.qwertyPalette[h % AppColors.qwertyPalette.length];
+  }
+}
+
+class _SectionTitle extends StatelessWidget {
+  final IconData icon;
+  final String label;
+
+  const _SectionTitle({required this.icon, required this.label});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Icon(icon, size: 16, color: AppColors.primary),
+        const SizedBox(width: 6),
+        Text(
+          label,
+          style: const TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w700,
+            color: AppColors.primary,
+            letterSpacing: 0.8,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _SentenceAudioButton extends StatelessWidget {
+  final VocabWord word;
+
+  const _SentenceAudioButton({required this.word});
+
+  @override
+  Widget build(BuildContext context) {
+    return PressableScale(
+      scaleFactor: 0.96,
+      onTap: () {
+        HapticFeedback.lightImpact();
+        TtsService.instance.speak(text: word.exampleEn);
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: AppSpacing.x3,
+          vertical: 8,
+        ),
+        decoration: BoxDecoration(
+          color: AppColors.primarySoft,
+          borderRadius: BorderRadius.circular(AppRadii.pill),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: const [
+            Icon(
+              Icons.volume_up_rounded,
+              size: 16,
+              color: AppColors.primary,
+            ),
+            SizedBox(width: 6),
+            Text(
+              '播放例句',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: AppColors.primary,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -585,6 +722,7 @@ class _AudioButtonState extends State<_AudioButton> {
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      tooltip: '播放发音',
       icon: const Icon(Icons.volume_up_outlined),
       onPressed: () async {
         HapticFeedback.lightImpact();
@@ -702,30 +840,41 @@ class _WordPrompt extends StatelessWidget {
   }
 }
 
+enum _OptionState { normal, correct, wrong, dimmed }
+
 class _OptionTile extends StatelessWidget {
   final String label;
   final String text;
+  final _OptionState state;
   final VoidCallback? onTap;
 
-  const _OptionTile({required this.label, required this.text, this.onTap});
+  const _OptionTile({
+    required this.label,
+    required this.text,
+    required this.state,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final colors = _colors();
     return PressableScale(
-      scaleFactor: 0.97,
-      onTap: onTap,
+      scaleFactor: state == _OptionState.normal ? 0.97 : 1.0,
+      onTap: state == _OptionState.normal ? onTap : null,
       child: ConstrainedBox(
         constraints: const BoxConstraints(minHeight: 56),
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 220),
+          curve: Curves.easeOutCubic,
           padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.x4,
             vertical: AppSpacing.x3,
           ),
           decoration: BoxDecoration(
-            color: AppColors.surface,
+            color: colors.background,
             borderRadius: BorderRadius.circular(AppRadii.md),
             border: Border.all(
-              color: AppColors.inkSubtle.withValues(alpha: 0.2),
+              color: colors.border,
               width: 1.5,
             ),
           ),
@@ -736,14 +885,14 @@ class _OptionTile extends StatelessWidget {
                 height: 32,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: AppColors.primary.withValues(alpha: 0.1),
+                  color: colors.badgeBg,
                   borderRadius: BorderRadius.circular(AppRadii.sm),
                 ),
                 child: Text(
                   label,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.w700,
-                    color: AppColors.primary,
+                    color: colors.badgeText,
                     fontSize: 14,
                   ),
                 ),
@@ -752,20 +901,77 @@ class _OptionTile extends StatelessWidget {
               Expanded(
                 child: Text(
                   text,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 15,
-                    color: AppColors.ink,
+                    color: colors.text,
                     fontWeight: FontWeight.w500,
                     height: 1.4,
                   ),
                 ),
               ),
+              if (state == _OptionState.correct)
+                const Icon(Icons.check_circle_rounded, color: AppColors.success),
+              if (state == _OptionState.wrong)
+                const Icon(Icons.cancel_rounded, color: AppColors.danger),
             ],
           ),
         ),
       ),
     );
   }
+
+  _OptionColors _colors() {
+    switch (state) {
+      case _OptionState.correct:
+        return _OptionColors(
+          background: AppColors.success.withValues(alpha: 0.1),
+          border: AppColors.success.withValues(alpha: 0.4),
+          badgeBg: AppColors.success.withValues(alpha: 0.15),
+          badgeText: AppColors.success,
+          text: AppColors.success,
+        );
+      case _OptionState.wrong:
+        return _OptionColors(
+          background: AppColors.danger.withValues(alpha: 0.1),
+          border: AppColors.danger.withValues(alpha: 0.4),
+          badgeBg: AppColors.danger.withValues(alpha: 0.15),
+          badgeText: AppColors.danger,
+          text: AppColors.danger,
+        );
+      case _OptionState.dimmed:
+        return _OptionColors(
+          background: AppColors.surface,
+          border: AppColors.inkSubtle.withValues(alpha: 0.15),
+          badgeBg: AppColors.surfaceMuted,
+          badgeText: AppColors.inkSubtle,
+          text: AppColors.inkSubtle,
+        );
+      case _OptionState.normal:
+        return _OptionColors(
+          background: AppColors.surface,
+          border: AppColors.inkSubtle.withValues(alpha: 0.2),
+          badgeBg: AppColors.primary.withValues(alpha: 0.1),
+          badgeText: AppColors.primary,
+          text: AppColors.ink,
+        );
+    }
+  }
+}
+
+class _OptionColors {
+  final Color background;
+  final Color border;
+  final Color badgeBg;
+  final Color badgeText;
+  final Color text;
+
+  const _OptionColors({
+    required this.background,
+    required this.border,
+    required this.badgeBg,
+    required this.badgeText,
+    required this.text,
+  });
 }
 
 class _ProgressBar extends StatelessWidget {

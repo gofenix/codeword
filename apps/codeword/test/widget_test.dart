@@ -19,9 +19,9 @@ void main() {
     await tester.pump();
     expect(find.text('单词'), findsWidgets);
     expect(find.text('阅读'), findsOneWidget);
-    expect(find.text('Pulse'), findsOneWidget);
-    expect(find.text('统计'), findsOneWidget);
-    expect(find.text('我的'), findsOneWidget);
+    expect(find.text('发现'), findsOneWidget);
+    expect(find.text('图表'), findsOneWidget);
+    expect(find.text('设置'), findsOneWidget);
   });
 
   testWidgets('HomeShell keeps tab state mounted while switching tabs', (
@@ -39,10 +39,10 @@ void main() {
     final readingStack = tester.widget<IndexedStack>(find.byType(IndexedStack));
     expect(readingStack.index, 1);
 
-    await tester.tap(find.text('Pulse'));
+    await tester.tap(find.text('发现'));
     await tester.pump();
-    final pulseStack = tester.widget<IndexedStack>(find.byType(IndexedStack));
-    expect(pulseStack.index, 2);
+    final discoveryStack = tester.widget<IndexedStack>(find.byType(IndexedStack));
+    expect(discoveryStack.index, 2);
   });
 
   test('SM-2 round-trip through notifier records answer', () {

@@ -2,17 +2,18 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 import 'package:path_provider/path_provider.dart';
 
-import '../state/learning_session.dart';
 import '../state/llm_config.dart';
 import 'ai_settings_screen.dart';
-import 'learning_session_screen.dart';
 
-class MeScreen extends ConsumerWidget {
-  const MeScreen({super.key});
+/// 设置 — profile, preferences, AI config and local-data info.
+///
+/// The library/catalog moved to the 发现 tab; this screen is intentionally
+/// smaller and focused on configuration.
+class SettingsScreen extends ConsumerWidget {
+  const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -28,7 +29,7 @@ class MeScreen extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text(
-              '我的',
+              '设置',
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.w700,
@@ -39,23 +40,21 @@ class MeScreen extends ConsumerWidget {
             SizedBox(height: AppSpacing.x5),
             _ProfileCard(),
             SizedBox(height: AppSpacing.x5),
-            // 词库: integrated here as a section, not a tab.
-            _SectionLabel('词库'),
+            _SectionLabel('学习'),
             SizedBox(height: AppSpacing.x3),
-            _LibraryGrid(),
-            SizedBox(height: AppSpacing.x5),
-            // Settings + storage info.
-            _SectionLabel('设置'),
-            SizedBox(height: AppSpacing.x3),
-            _AiSettingsRow(),
-            SizedBox(height: AppSpacing.x2),
             _DailyGoalRow(),
             SizedBox(height: AppSpacing.x2),
             _AccentRow(),
-            SizedBox(height: AppSpacing.x2),
-            _AboutRow(),
+            SizedBox(height: AppSpacing.x5),
+            _SectionLabel('AI 与数据'),
+            SizedBox(height: AppSpacing.x3),
+            _AiSettingsRow(),
             SizedBox(height: AppSpacing.x2),
             _StorageRow(),
+            SizedBox(height: AppSpacing.x5),
+            _SectionLabel('关于'),
+            SizedBox(height: AppSpacing.x3),
+            _AboutRow(),
             SizedBox(height: AppSpacing.x4),
           ],
         ),
@@ -66,6 +65,7 @@ class MeScreen extends ConsumerWidget {
 
 class _ProfileCard extends StatelessWidget {
   const _ProfileCard();
+
   @override
   Widget build(BuildContext context) {
     return AppCard(
@@ -73,14 +73,14 @@ class _ProfileCard extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 48,
-            height: 48,
+            width: 52,
+            height: 52,
             alignment: Alignment.center,
             decoration: BoxDecoration(
               color: AppColors.primarySoft,
               borderRadius: BorderRadius.circular(AppRadii.md),
             ),
-            child: const Text('🥷', style: TextStyle(fontSize: 24)),
+            child: const Text('🥷', style: TextStyle(fontSize: 26)),
           ),
           const SizedBox(width: AppSpacing.x4),
           const Expanded(
@@ -90,7 +90,7 @@ class _ProfileCard extends StatelessWidget {
                 Text(
                   '极客',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 17,
                     fontWeight: FontWeight.w700,
                     color: AppColors.ink,
                   ),
@@ -121,6 +121,7 @@ class _ProfileCard extends StatelessWidget {
 class _SectionLabel extends StatelessWidget {
   final String text;
   const _SectionLabel(this.text);
+
   @override
   Widget build(BuildContext context) {
     return Text(
@@ -135,150 +136,9 @@ class _SectionLabel extends StatelessWidget {
   }
 }
 
-/// All 371 qwerty-derived lists, grouped by category. Each category
-/// renders a small section header and a 2-col grid of vocab cards.
-class _LibraryGrid extends ConsumerWidget {
-  const _LibraryGrid();
-
-  /// Display order for categories. Anything not in here goes last,
-  /// sorted alphabetically.
-  static const _priority = [
-    '考试英语',
-    '编程',
-    '青少年英语',
-    '语言',
-    '词典',
-    '专业词汇',
-  ];
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final meta = ref.watch(vocabMetaProvider);
-    final lists = ref.watch(qwertyCatalogProvider);
-    final byCategory = <String, List<VocabList>>{};
-    for (final l in lists) {
-      byCategory.putIfAbsent(l.category, () => []).add(l);
-    }
-    final categories = byCategory.keys.toList()
-      ..sort((a, b) {
-        final ai = _priority.indexOf(a);
-        final bi = _priority.indexOf(b);
-        if (ai == -1 && bi == -1) return a.compareTo(b);
-        if (ai == -1) return 1;
-        if (bi == -1) return -1;
-        return ai.compareTo(bi);
-      });
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        for (final cat in categories) ...[
-          Padding(
-            padding: const EdgeInsets.only(top: AppSpacing.x3, bottom: AppSpacing.x2),
-            child: Text(
-              '$cat · ${byCategory[cat]!.length}',
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-                color: AppColors.inkMuted,
-                letterSpacing: 0.6,
-              ),
-            ),
-          ),
-          GridView.count(
-            crossAxisCount: 2,
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            mainAxisSpacing: AppSpacing.x3,
-            crossAxisSpacing: AppSpacing.x3,
-            childAspectRatio: 1.6,
-            children: [
-              for (final l in byCategory[cat]!)
-                _LibraryTile(list: l, available: meta.containsKey(l.id)),
-            ],
-          ),
-        ],
-      ],
-    );
-  }
-}
-
-class _LibraryTile extends StatelessWidget {
-  final VocabList list;
-  final bool available;
-  const _LibraryTile({required this.list, required this.available});
-
-  Color _color() {
-    final h = list.id.hashCode.abs();
-    return AppColors.qwertyPalette[h % AppColors.qwertyPalette.length];
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final color = _color();
-    return AppCard(
-      onTap: available
-          ? () => Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) =>
-                      LearningSessionScreen(vocabId: list.id),
-                ),
-              )
-          : null,
-      padding: const EdgeInsets.all(AppSpacing.x3),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(list.emoji, style: const TextStyle(fontSize: 18)),
-              if (available)
-                PillTag(
-                  label: 'Lv ${list.level}',
-                  color: color,
-                  variant: PillVariant.soft,
-                )
-              else
-                const PillTag(
-                  label: '即将推出',
-                  color: AppColors.inkSubtle,
-                  variant: PillVariant.soft,
-                ),
-            ],
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                list.name,
-                style: const TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.ink,
-                ),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-              Text(
-                list.description,
-                style: const TextStyle(
-                  fontSize: 10,
-                  color: AppColors.inkMuted,
-                ),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 class _DailyGoalRow extends StatelessWidget {
   const _DailyGoalRow();
+
   @override
   Widget build(BuildContext context) {
     return const _SettingRow(
@@ -292,19 +152,18 @@ class _DailyGoalRow extends StatelessWidget {
 
 class _AccentRow extends StatelessWidget {
   const _AccentRow();
+
   @override
   Widget build(BuildContext context) {
-    return _SettingRow(
+    return const _SettingRow(
       icon: Icons.volume_up_outlined,
       title: '发音',
       subtitle: '美音 · 来自有道',
-      color: AppColors.qwertyPalette[0],
+      color: AppColors.primary,
     );
   }
 }
 
-/// AI 接入 — opens AiSettingsScreen. Subtitle reflects whether
-/// the user has configured a key.
 class _AiSettingsRow extends ConsumerWidget {
   const _AiSettingsRow();
 
@@ -325,8 +184,8 @@ class _AiSettingsRow extends ConsumerWidget {
       child: Row(
         children: [
           Container(
-            width: 32,
-            height: 32,
+            width: 36,
+            height: 36,
             alignment: Alignment.center,
             decoration: BoxDecoration(
               color: cfg.isConfigured
@@ -336,10 +195,8 @@ class _AiSettingsRow extends ConsumerWidget {
             ),
             child: Icon(
               cfg.isConfigured ? Icons.bolt : Icons.bolt_outlined,
-              color: cfg.isConfigured
-                  ? AppColors.primary
-                  : AppColors.inkMuted,
-              size: 18,
+              color: cfg.isConfigured ? AppColors.primary : AppColors.inkMuted,
+              size: 20,
             ),
           ),
           const SizedBox(width: AppSpacing.x3),
@@ -394,12 +251,13 @@ class _AiSettingsRow extends ConsumerWidget {
 
 class _AboutRow extends StatelessWidget {
   const _AboutRow();
+
   @override
   Widget build(BuildContext context) {
     return const _SettingRow(
       icon: Icons.info_outline,
       title: '关于',
-      subtitle: 'CodeWord',
+      subtitle: 'CodeWord · 本地优先背单词',
       color: AppColors.inkMuted,
     );
   }
@@ -407,6 +265,7 @@ class _AboutRow extends StatelessWidget {
 
 class _StorageRow extends StatefulWidget {
   const _StorageRow();
+
   @override
   State<_StorageRow> createState() => _StorageRowState();
 }
@@ -424,7 +283,6 @@ class _StorageRowState extends State<_StorageRow> {
   Future<void> _load() async {
     try {
       final dir = await getApplicationDocumentsDirectory();
-      // Verify it's actually writable (we just stat the dir).
       if (Platform.isMacOS || Platform.isLinux) {
         _writable = await Directory(dir.path).stat().then((_) => true)
             .catchError((_) => false);
@@ -443,7 +301,7 @@ class _StorageRowState extends State<_StorageRow> {
       subtitle: _path == null
           ? '加载中…'
           : (_writable ? _path! : '$_path (只读)'),
-      color: AppColors.primary,
+      color: AppColors.info,
     );
   }
 }
@@ -453,12 +311,14 @@ class _SettingRow extends StatelessWidget {
   final String title;
   final String subtitle;
   final Color color;
+
   const _SettingRow({
     required this.icon,
     required this.title,
     required this.subtitle,
     required this.color,
   });
+
   @override
   Widget build(BuildContext context) {
     return AppCard(
@@ -469,14 +329,14 @@ class _SettingRow extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 32,
-            height: 32,
+            width: 36,
+            height: 36,
             alignment: Alignment.center,
             decoration: BoxDecoration(
               color: color.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(AppRadii.sm),
             ),
-            child: Icon(icon, color: color, size: 18),
+            child: Icon(icon, color: color, size: 20),
           ),
           const SizedBox(width: AppSpacing.x3),
           Expanded(
