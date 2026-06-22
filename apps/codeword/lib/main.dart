@@ -86,47 +86,67 @@ class _HomeShellState extends State<HomeShell> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: IndexedStack(index: _index, children: _pages),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _index,
-        onDestinationSelected: (i) {
+      body: IndexedStack(
+        index: _index,
+        children: _pages,
+      ),
+      bottomNavigationBar: _DeskBottomNav(
+        index: _index,
+        onTap: (i) {
           HapticFeedback.selectionClick();
           setState(() => _index = i);
         },
-        backgroundColor: AppColors.surface,
-        indicatorColor: AppColors.primarySoft,
-        surfaceTintColor: Colors.transparent,
-        elevation: 1,
-        height: 64,
-        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-        destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.style_outlined),
-            selectedIcon: Icon(Icons.style, color: AppColors.primary),
-            label: '单词',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.menu_book_outlined),
-            selectedIcon: Icon(Icons.menu_book, color: AppColors.primary),
-            label: '阅读',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.explore_outlined),
-            selectedIcon: Icon(Icons.explore, color: AppColors.primary),
-            label: '发现',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.insert_chart_outlined),
-            selectedIcon: Icon(Icons.insert_chart, color: AppColors.primary),
-            label: '图表',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.settings_outlined),
-            selectedIcon: Icon(Icons.settings, color: AppColors.primary),
-            label: '设置',
-          ),
-        ],
       ),
+    );
+  }
+}
+
+/// Bottom navigation. Full window width, tall enough to feel like a
+/// real desktop app shelf rather than a phone bar.
+class _DeskBottomNav extends StatelessWidget {
+  final int index;
+  final ValueChanged<int> onTap;
+
+  const _DeskBottomNav({required this.index, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return NavigationBar(
+      selectedIndex: index,
+      onDestinationSelected: onTap,
+      backgroundColor: AppColors.surface,
+      indicatorColor: AppColors.primarySoft,
+      surfaceTintColor: Colors.transparent,
+      elevation: 1,
+      height: 72,
+      labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
+      destinations: const [
+        NavigationDestination(
+          icon: Icon(Icons.style_outlined, size: 26),
+          selectedIcon: Icon(Icons.style, color: AppColors.primary, size: 26),
+          label: '单词',
+        ),
+        NavigationDestination(
+          icon: Icon(Icons.menu_book_outlined, size: 26),
+          selectedIcon: Icon(Icons.menu_book, color: AppColors.primary, size: 26),
+          label: '阅读',
+        ),
+        NavigationDestination(
+          icon: Icon(Icons.explore_outlined, size: 26),
+          selectedIcon: Icon(Icons.explore, color: AppColors.primary, size: 26),
+          label: '发现',
+        ),
+        NavigationDestination(
+          icon: Icon(Icons.insert_chart_outlined, size: 26),
+          selectedIcon: Icon(Icons.insert_chart, color: AppColors.primary, size: 26),
+          label: '图表',
+        ),
+        NavigationDestination(
+          icon: Icon(Icons.settings_outlined, size: 26),
+          selectedIcon: Icon(Icons.settings, color: AppColors.primary, size: 26),
+          label: '设置',
+        ),
+      ],
     );
   }
 }
@@ -170,20 +190,25 @@ class TodayPage extends ConsumerWidget {
           catalog: ref.watch(qwertyCatalogProvider),
         );
     return SafeArea(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(
-          AppSpacing.x5,
-          AppSpacing.x4,
-          AppSpacing.x5,
-          AppSpacing.x8,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _Greeting(newToday: stats.newToday),
-            const SizedBox(height: AppSpacing.x5),
-            _TodayTaskCard(stats: stats),
-          ],
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 720),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.x8,
+              AppSpacing.x6,
+              AppSpacing.x8,
+              AppSpacing.x10,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _Greeting(newToday: stats.newToday),
+                const SizedBox(height: AppSpacing.x6),
+                _TodayTaskCard(stats: stats),
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -202,19 +227,20 @@ class _Greeting extends StatelessWidget {
         const Text(
           'Hi, 极客 👋',
           style: TextStyle(
-            fontSize: 14,
+            fontSize: 18,
             color: AppColors.inkMuted,
             fontWeight: FontWeight.w500,
           ),
         ),
-        const SizedBox(height: 2),
+        const SizedBox(height: AppSpacing.x2),
         Text(
           newToday == 0 ? '今天还没开始' : '今天学了 $newToday 个新词',
           style: const TextStyle(
-            fontSize: 28,
+            fontSize: 44,
             color: AppColors.ink,
-            fontWeight: FontWeight.w700,
-            height: 1.2,
+            fontWeight: FontWeight.w800,
+            height: 1.15,
+            letterSpacing: -1,
           ),
         ),
       ],
@@ -232,7 +258,7 @@ class _TodayTaskCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final allDone = stats.totalDue == 0 && stats.newToday == 0;
     return AppCard(
-      padding: const EdgeInsets.all(AppSpacing.x5),
+      padding: const EdgeInsets.all(AppSpacing.x6),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -241,8 +267,8 @@ class _TodayTaskCard extends StatelessWidget {
               const Text(
                 '今日任务',
                 style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w800,
                   color: AppColors.ink,
                 ),
               ),
@@ -260,7 +286,7 @@ class _TodayTaskCard extends StatelessWidget {
                   color: AppColors.info,
                 ),
               ),
-              const SizedBox(width: AppSpacing.x3),
+              const SizedBox(width: AppSpacing.x4),
               Expanded(
                 child: _MiniStat(
                   label: '今日新词',
@@ -274,12 +300,12 @@ class _TodayTaskCard extends StatelessWidget {
           Text(
             allDone ? '今天已经完成啦，明天见 👋' : '优先复习到期的词，再学新词',
             style: const TextStyle(
-              fontSize: 13,
+              fontSize: 14,
               color: AppColors.inkMuted,
               fontWeight: FontWeight.w500,
             ),
           ),
-          const SizedBox(height: AppSpacing.x4),
+          const SizedBox(height: AppSpacing.x5),
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
@@ -295,12 +321,12 @@ class _TodayTaskCard extends StatelessWidget {
                         ),
                       );
                     },
-              icon: const Icon(Icons.play_arrow_rounded, size: 22),
+              icon: const Icon(Icons.play_arrow_rounded, size: 24),
               label: const Text('开始学习'),
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
                 textStyle: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -318,7 +344,7 @@ class _TodayTaskCard extends StatelessWidget {
               child: const Text(
                 '选择其他词书',
                 style: TextStyle(
-                  fontSize: 13,
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -344,26 +370,26 @@ class _MiniStat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
+      padding: const EdgeInsets.symmetric(vertical: AppSpacing.x5),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(AppRadii.md),
+        borderRadius: BorderRadius.circular(AppRadii.lg),
       ),
       child: Column(
         children: [
           Text(
             value,
             style: AppTheme.wordDisplay(
-              size: 26,
+              size: 44,
               color: color,
-              weight: FontWeight.w700,
+              weight: FontWeight.w800,
             ),
           ),
-          const SizedBox(height: 2),
+          const SizedBox(height: 4),
           Text(
             label,
             style: TextStyle(
-              fontSize: 12,
+              fontSize: 14,
               color: color.withValues(alpha: 0.85),
               fontWeight: FontWeight.w600,
             ),

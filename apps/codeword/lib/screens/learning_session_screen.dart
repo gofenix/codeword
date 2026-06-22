@@ -61,8 +61,7 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
   @override
   Widget build(BuildContext context) {
     final session = ref.watch(learningSessionProvider);
-    final meta = ref.watch(vocabMetaProvider)[widget.vocabId];
-    final name = meta?.name ?? widget.vocabId;
+    ref.watch(vocabMetaProvider)[widget.vocabId];
 
     final progress = session.phase == SessionPhase.finished
         ? 1.0
@@ -73,22 +72,33 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text(name),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        scrolledUnderElevation: 0,
+        title: const SizedBox.shrink(),
         leading: IconButton(
           icon: const Icon(Icons.close_rounded),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
+      extendBodyBehindAppBar: true,
       body: Column(
         children: [
+          // Thin progress bar pinned to the very top, behind the AppBar.
           Padding(
             padding: const EdgeInsets.fromLTRB(
               AppSpacing.x6,
-              AppSpacing.x3,
+              0,
               AppSpacing.x6,
-              AppSpacing.x4,
+              0,
             ),
-            child: _ProgressBar(progress: progress),
+            child: SafeArea(
+              bottom: false,
+              child: Padding(
+                padding: const EdgeInsets.only(top: AppSpacing.x10),
+                child: _ProgressBar(progress: progress),
+              ),
+            ),
           ),
           Expanded(
             child: AnimatedSwitcher(
@@ -216,38 +226,51 @@ class _AskingViewState extends ConsumerState<_AskingView> {
     final q = session.currentQuestion!;
     return SafeArea(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(height: AppSpacing.x2),
-                  _QuestionPrompt(
-                    type: q.type,
-                    prompt: q.prompt,
-                    word: q.word,
-                    questionCount: session.questions.length,
-                    currentIndex: session.currentIndex,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.x6,
+              AppSpacing.x4,
+              AppSpacing.x6,
+              0,
+            ),
+            child: Row(
+              children: [
+                _QuestionTypeChip(type: q.type),
+                const Spacer(),
+                Text(
+                  '${session.currentIndex + 1} / ${session.questions.length}',
+                  style: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.inkMuted,
                   ),
-                  const SizedBox(height: AppSpacing.x3),
-                  // Always show the audio control — for the
-                  // listenPickMeaning question it's the primary play
-                  // button; for the other two it's a "replay" button
-                  // after the auto-play on entry.
-                  _AudioButton(word: q.word),
-                ],
+                ),
+              ],
+            ),
+          ),
+          // Center stage: the big word (or meaning) the user has to
+          // resolve. Everything else fades behind it.
+          Expanded(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpacing.x6,
+                ),
+                child: _QuestionStage(
+                  type: q.type,
+                  prompt: q.prompt,
+                  word: q.word,
+                ),
               ),
             ),
           ),
           Padding(
             padding: EdgeInsets.fromLTRB(
-              AppSpacing.x6,
+              AppSpacing.x5,
               AppSpacing.x3,
-              AppSpacing.x6,
-              AppSpacing.x5 + MediaQuery.of(context).padding.bottom,
+              AppSpacing.x5,
+              AppSpacing.x4 + MediaQuery.of(context).padding.bottom,
             ),
             child: Column(
               children: [
@@ -733,20 +756,9 @@ class _AudioButtonState extends State<_AudioButton> {
   }
 }
 
-class _QuestionPrompt extends StatelessWidget {
+class _QuestionTypeChip extends StatelessWidget {
   final QuestionType type;
-  final String prompt;
-  final VocabWord word;
-  final int questionCount;
-  final int currentIndex;
-
-  const _QuestionPrompt({
-    required this.type,
-    required this.prompt,
-    required this.word,
-    required this.questionCount,
-    required this.currentIndex,
-  });
+  const _QuestionTypeChip({required this.type});
 
   @override
   Widget build(BuildContext context) {
@@ -755,88 +767,169 @@ class _QuestionPrompt extends StatelessWidget {
       QuestionType.seeMeaningPickWord => '看义选词',
       QuestionType.listenPickMeaning => '听音选义',
     };
-    return SizedBox(
-      width: double.infinity,
-      child: AppCard(
-        padding: const EdgeInsets.fromLTRB(
-          AppSpacing.x5,
-          AppSpacing.x4,
-          AppSpacing.x5,
-          AppSpacing.x5,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  label,
-                  style: const TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.inkMuted,
-                    letterSpacing: 1.2,
-                  ),
-                ),
-                Text(
-                  '${currentIndex + 1} / $questionCount',
-                  style: const TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.inkMuted,
-                  ),
-                ),
-              ],
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppSpacing.x3,
+        vertical: 6,
+      ),
+      decoration: BoxDecoration(
+        color: AppColors.primarySoft,
+        borderRadius: BorderRadius.circular(AppRadii.pill),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Icon(
+            Icons.bolt_rounded,
+            size: 14,
+            color: AppColors.primary,
+          ),
+          const SizedBox(width: 4),
+          Text(
+            label,
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w700,
+              color: AppColors.primary,
+              letterSpacing: 0.4,
             ),
-            const SizedBox(height: AppSpacing.x4),
-            _promptContent(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
+}
 
-  Widget _promptContent() {
+/// The big, centered prompt — this is what the user is solving right
+/// now. Word, meaning, or "tap to hear" depending on question type.
+class _QuestionStage extends StatelessWidget {
+  final QuestionType type;
+  final String prompt;
+  final VocabWord word;
+
+  const _QuestionStage({
+    required this.type,
+    required this.prompt,
+    required this.word,
+  });
+
+  @override
+  Widget build(BuildContext context) {
     switch (type) {
       case QuestionType.seeWordPickMeaning:
-        return _WordPrompt(word: prompt, wordObj: word);
+        return _WordStage(word: word);
       case QuestionType.seeMeaningPickWord:
-        return Text(
-          prompt,
-          style: const TextStyle(
-            fontSize: 18,
-            color: AppColors.ink,
-            fontWeight: FontWeight.w600,
-            height: 1.5,
-          ),
-        );
+        return _MeaningStage(meaning: prompt, word: word);
       case QuestionType.listenPickMeaning:
-        return _WordPrompt(word: prompt, wordObj: word);
+        return _ListenStage(word: word);
     }
   }
 }
 
-class _WordPrompt extends StatelessWidget {
-  final String word;
-  final VocabWord wordObj;
-  const _WordPrompt({required this.word, required this.wordObj});
+class _WordStage extends StatelessWidget {
+  final VocabWord word;
+  const _WordStage({required this.word});
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Row(
-          children: [
-            Text(word, style: AppTheme.wordDisplay(size: 28)),
-            const SizedBox(width: AppSpacing.x2),
-            _AudioButton(word: wordObj),
-          ],
+        Text(
+          word.word,
+          textAlign: TextAlign.center,
+          style: AppTheme.wordDisplay(size: 56, weight: FontWeight.w700),
         ),
-        const SizedBox(height: 2),
-        Text(wordObj.phonetic, style: AppTheme.phonetic()),
+        const SizedBox(height: AppSpacing.x3),
+        Text(word.phonetic, style: AppTheme.phonetic(fontSize: 16)),
       ],
+    );
+  }
+}
+
+class _MeaningStage extends StatelessWidget {
+  final String meaning;
+  final VocabWord word;
+  const _MeaningStage({required this.meaning, required this.word});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          meaning,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontSize: 28,
+            fontWeight: FontWeight.w700,
+            color: AppColors.ink,
+            height: 1.4,
+          ),
+        ),
+        const SizedBox(height: AppSpacing.x3),
+        Text(
+          '选择对应的英文',
+          style: TextStyle(
+            fontSize: 13,
+            color: AppColors.inkSubtle,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _ListenStage extends StatelessWidget {
+  final VocabWord word;
+  const _ListenStage({required this.word});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        _LargePlayButton(word: word),
+        const SizedBox(height: AppSpacing.x4),
+        Text(
+          '点击播放发音',
+          style: TextStyle(
+            fontSize: 13,
+            color: AppColors.inkSubtle,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _LargePlayButton extends StatelessWidget {
+  final VocabWord word;
+  const _LargePlayButton({required this.word});
+
+  @override
+  Widget build(BuildContext context) {
+    return PressableScale(
+      scaleFactor: 0.95,
+      onTap: () {
+        HapticFeedback.lightImpact();
+        TtsService.instance.speak(text: word.word);
+      },
+      child: Container(
+        width: 120,
+        height: 120,
+        decoration: BoxDecoration(
+          color: AppColors.primarySoft,
+          shape: BoxShape.circle,
+        ),
+        child: const Icon(
+          Icons.volume_up_rounded,
+          size: 56,
+          color: AppColors.primary,
+        ),
+      ),
     );
   }
 }

@@ -154,9 +154,12 @@ class AppTheme {
   }
 
   /// Phonetic style (small grey text like /əˈbændən/).
-  static TextStyle phonetic({Color color = AppColors.inkMuted}) {
+  static TextStyle phonetic({
+    Color color = AppColors.inkMuted,
+    double fontSize = 14,
+  }) {
     return GoogleFonts.notoSansSc(
-      fontSize: 14,
+      fontSize: fontSize,
       fontWeight: FontWeight.w400,
       color: color,
       letterSpacing: 0.2,

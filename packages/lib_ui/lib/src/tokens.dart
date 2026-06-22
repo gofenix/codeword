@@ -11,6 +11,9 @@ class AppColors {
   static const Color background = Color(0xFFFAFAF5);
   static const Color surface = Color(0xFFFFFFFF);
   static const Color surfaceMuted = Color(0xFFF5F2EA);
+  // Darker bezel color painted around the phone-shaped column when the
+  // app runs in a desktop window.
+  static const Color bezel = Color(0xFFE8E4D8);
 
   // Text
   static const Color ink = Color(0xFF1F2421);
