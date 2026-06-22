@@ -1,10 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_ui/lib_ui.dart';
-import 'package:path_provider/path_provider.dart';
 
+import '../services/storage_path.dart';
 import '../state/llm_config.dart';
 import 'ai_settings_screen.dart';
 
@@ -272,7 +270,6 @@ class _StorageRow extends StatefulWidget {
 
 class _StorageRowState extends State<_StorageRow> {
   String? _path;
-  bool _writable = true;
 
   @override
   void initState() {
@@ -281,16 +278,9 @@ class _StorageRowState extends State<_StorageRow> {
   }
 
   Future<void> _load() async {
-    try {
-      final dir = await getApplicationDocumentsDirectory();
-      if (Platform.isMacOS || Platform.isLinux) {
-        _writable = await Directory(dir.path).stat().then((_) => true)
-            .catchError((_) => false);
-      }
-      if (mounted) setState(() => _path = dir.path);
-    } catch (_) {
-      if (mounted) setState(() => _path = '—');
-    }
+    final result = await resolveStoragePath();
+    if (!mounted) return;
+    setState(() => _path = result ?? '—');
   }
 
   @override
@@ -298,9 +288,7 @@ class _StorageRowState extends State<_StorageRow> {
     return _SettingRow(
       icon: Icons.folder_outlined,
       title: '本地数据',
-      subtitle: _path == null
-          ? '加载中…'
-          : (_writable ? _path! : '$_path (只读)'),
+      subtitle: _path ?? '加载中…',
       color: AppColors.info,
     );
   }

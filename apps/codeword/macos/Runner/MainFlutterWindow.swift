@@ -10,9 +10,10 @@ class MainFlutterWindow: NSWindow {
 
     RegisterGeneratedPlugins(registry: flutterViewController)
 
-    // Cap how small the window can shrink — anything narrower than
-    // 900px and the phone-shaped content starts looking broken.
-    self.minSize = NSSize(width: 900, height: 640)
+    // The window itself is phone-shaped (430×860). Lock the min size so
+    // the user can't shrink it into a useless sliver and keep the
+    // phone aspect roughly.
+    self.minSize = NSSize(width: 400, height: 720)
 
     super.awakeFromNib()
   }

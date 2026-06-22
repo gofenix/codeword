@@ -85,52 +85,20 @@ class _HomeShellState extends State<HomeShell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.bezel,
-      body: Center(
-        child: Container(
-          width: _phoneWidth,
-          constraints: BoxConstraints(
-            maxHeight: MediaQuery.of(context).size.height,
-          ),
-          decoration: BoxDecoration(
-            color: AppColors.background,
-            borderRadius: BorderRadius.circular(36),
-            boxShadow: const [
-              BoxShadow(
-                color: Color(0x33000000),
-                blurRadius: 24,
-                offset: Offset(0, 8),
-              ),
-            ],
-          ),
-          clipBehavior: Clip.antiAlias,
-          child: Column(
-            children: [
-              Expanded(
-                child: IndexedStack(
-                  index: _index,
-                  children: _pages,
-                ),
-              ),
-              _PhoneBottomNav(
-                index: _index,
-                onTap: (i) {
-                  HapticFeedback.selectionClick();
-                  setState(() => _index = i);
-                },
-              ),
-            ],
-          ),
-        ),
+      backgroundColor: AppColors.background,
+      body: IndexedStack(
+        index: _index,
+        children: _pages,
+      ),
+      bottomNavigationBar: _PhoneBottomNav(
+        index: _index,
+        onTap: (i) {
+          HapticFeedback.selectionClick();
+          setState(() => _index = i);
+        },
       ),
     );
   }
-
-  /// Phone-shaped column width. Big enough to read like a real app on
-  /// a 1280×800 window without leaving vast bezel voids. iPhone Pro Max
-  /// logical width is 430; we use a hair more (520) so the typography
-  /// has room to breathe and the content feels substantial.
-  static const double _phoneWidth = 520;
 }
 
 /// 5-tab bottom navigation. Sits inside the phone bezel.

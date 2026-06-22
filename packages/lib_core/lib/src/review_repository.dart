@@ -1,19 +1,14 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
-
-import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
 
 import 'models/vocab_list.dart';
+import 'storage_backend.dart';
+import 'storage_backend_factory.dart';
 
 /// Local-first persistence for the user's review state and daily
-/// activity counts. Three files in the app documents directory:
-///   - codeword_review_state.json   (per-word SM-2 state)
-///   - codeword_activity.json       (per-day review count for heatmap/streak)
-///   - codeword_user_data.json      (favorites / removed / open counts / study minutes)
-///
-/// Everything stays on disk; nothing is synced anywhere.
+/// activity counts. The actual file vs. localStorage plumbing lives
+/// in [StorageBackend]; this class is just the in-memory cache plus
+/// the debounced write logic.
 class ReviewRepository {
   static ReviewRepository? _instance;
   static Completer<ReviewRepository>? _initCompleter;
@@ -24,17 +19,9 @@ class ReviewRepository {
   final Set<String> _removed;
   final Map<String, int> _openCounts;
   final Map<String, int> _studyMinutes;
+  final StorageBackend _backend;
 
-  late final String _filePath;
-  late final String _activityFilePath;
-  late final String _userDataFilePath;
-
-  /// Debounce timer for batched disk writes. Cancels and reschedules on
-  /// each mutation so rapid-fire calls (e.g. fast answering) coalesce
-  /// into a single disk write.
   Timer? _saveDebounce;
-
-  /// Which files need to be flushed on the next debounce tick.
   bool _dirtyReview = false;
   bool _dirtyActivity = false;
   bool _dirtyUserData = false;
@@ -46,21 +33,34 @@ class ReviewRepository {
     this._removed,
     this._openCounts,
     this._studyMinutes,
+    this._backend,
   );
 
   static Future<ReviewRepository> init() async {
     if (_instance != null) return _instance!;
-    // If init is already in progress, await the same completer.
     if (_initCompleter != null) return _initCompleter!.future;
     _initCompleter = Completer<ReviewRepository>();
     try {
-      final dir = await getApplicationDocumentsDirectory();
-      final filePath = p.join(dir.path, 'codeword_review_state.json');
-      final activityPath = p.join(dir.path, 'codeword_activity.json');
-      final userDataPath = p.join(dir.path, 'codeword_user_data.json');
-      final cache = await _loadFromFile(filePath);
-      final activity = await _loadActivityFromFile(activityPath);
-      final userData = await _loadUserDataFromFile(userDataPath);
+      final backend = createStorageBackend();
+      final reviewRaw = await backend.loadReviewState();
+      final activityRaw = await backend.loadActivity();
+      final userDataRaw = await backend.loadUserData();
+
+      final cache = reviewRaw == null
+          ? <String, ReviewState>{}
+          : reviewRaw.map(
+              (k, v) => MapEntry(
+                k,
+                ReviewState.fromJson(v as Map<String, dynamic>),
+              ),
+            );
+      final activity = activityRaw == null
+          ? <String, int>{}
+          : activityRaw.map(
+              (k, v) => MapEntry(k, (v as num).toInt()),
+            );
+      final userData = userDataRaw ?? const <String, dynamic>{};
+
       _instance = ReviewRepository._(
         cache,
         activity,
@@ -72,15 +72,10 @@ class ReviewRepository {
         ((userData['studyMinutes'] as Map?) ?? {}).map(
           (k, v) => MapEntry(k.toString(), (v as num).toInt()),
         ),
+        backend,
       );
-      _instance!._filePath = filePath;
-      _instance!._activityFilePath = activityPath;
-      _instance!._userDataFilePath = userDataPath;
-      // One-shot migration: anything below schemaVersion 2 belongs to
-      // the pre-qwerty era (wordIds like cs_001 / ai_022 that no longer
-      // exist in any list). Wipe the three files and start fresh.
       await _instance!._enforceSchemaVersion();
-      _initCompleter!.complete(_instance!);
+      _initCompleter!.complete(_instance);
       _initCompleter = null;
       return _instance!;
     } catch (e) {
@@ -95,26 +90,12 @@ class ReviewRepository {
   static const int _schemaVersion = 2;
 
   Future<void> _enforceSchemaVersion() async {
-    final file = File(_userDataFilePath);
-    int present = 0;
-    if (file.existsSync()) {
-      try {
-        final raw = jsonDecode(await file.readAsString());
-        if (raw is Map<String, dynamic>) {
-          present = (raw['schemaVersion'] as int?) ?? 0;
-        }
-      } catch (_) {
-        present = 0;
-      }
-    }
+    final raw = await _backend.loadUserData();
+    final present = (raw?['schemaVersion'] as int?) ?? 0;
     if (present >= _schemaVersion) return;
 
-    // Legacy data — wipe the three JSONs and reset in-memory state.
-    for (final p in [_filePath, _activityFilePath, _userDataFilePath]) {
-      try {
-        await File(p).delete();
-      } catch (_) {}
-    }
+    // Legacy data — wipe the three stores and reset in-memory state.
+    await _backend.wipeAll();
     _cache.clear();
     _activity.clear();
     _favorites.clear();
@@ -124,7 +105,7 @@ class ReviewRepository {
     _dirtyReview = false;
     _dirtyActivity = false;
     _dirtyUserData = false;
-    // Write a fresh user-data file carrying the new schemaVersion header.
+    // Write a fresh user-data store carrying the new schemaVersion header.
     await _saveUserData();
   }
 
@@ -133,70 +114,6 @@ class ReviewRepository {
       throw StateError('ReviewRepository not initialized. Call init() first.');
     }
     return _instance!;
-  }
-
-  static Future<Map<String, ReviewState>> _loadFromFile(String path) async {
-    try {
-      final file = File(path);
-      if (!await file.exists()) return {};
-      final raw = await file.readAsString();
-      if (raw.isEmpty) return {};
-      final map = jsonDecode(raw) as Map<String, dynamic>;
-      return map.map((k, v) => MapEntry(k, ReviewState.fromJson(v as Map<String, dynamic>)));
-    } catch (_) {
-      return {};
-    }
-  }
-
-  static Future<Map<String, int>> _loadActivityFromFile(String path) async {
-    try {
-      final file = File(path);
-      if (!await file.exists()) return {};
-      final raw = await file.readAsString();
-      if (raw.isEmpty) return {};
-      final map = jsonDecode(raw) as Map<String, dynamic>;
-      return map.map((k, v) => MapEntry(k, (v as num).toInt()));
-    } catch (_) {
-      return {};
-    }
-  }
-
-  static Future<Map<String, dynamic>> _loadUserDataFromFile(String path) async {
-    try {
-      final file = File(path);
-      if (!await file.exists()) return {};
-      final raw = await file.readAsString();
-      if (raw.isEmpty) return {};
-      return jsonDecode(raw) as Map<String, dynamic>;
-    } catch (_) {
-      return {};
-    }
-  }
-
-  Future<void> _save() async {
-    final json = _cache.map((k, v) => MapEntry(k, v.toJson()));
-    final file = File(_filePath);
-    await file.parent.create(recursive: true);
-    await file.writeAsString(jsonEncode(json));
-  }
-
-  Future<void> _saveActivity() async {
-    final file = File(_activityFilePath);
-    await file.parent.create(recursive: true);
-    await file.writeAsString(jsonEncode(_activity));
-  }
-
-  Future<void> _saveUserData() async {
-    final file = File(_userDataFilePath);
-    await file.parent.create(recursive: true);
-    final json = {
-      'schemaVersion': _schemaVersion,
-      'favorites': _favorites.toList(),
-      'removed': _removed.toList(),
-      'openCounts': _openCounts,
-      'studyMinutes': _studyMinutes,
-    };
-    await file.writeAsString(jsonEncode(json));
   }
 
   // --- Per-word review state (SM-2) -------------------------------
@@ -332,13 +249,13 @@ class ReviewRepository {
   // --- Debounced save -----------------------------------------------
 
   /// Schedule a batched save. Multiple mutations within 300ms coalesce
-  /// into a single disk write. Call [flush] to force immediate write.
+  /// into a single write. Call [flush] to force immediate write.
   void _scheduleSave() {
     _saveDebounce?.cancel();
     _saveDebounce = Timer(const Duration(milliseconds: 300), _flushInternal);
   }
 
-  /// Force-write any pending dirty state to disk immediately.
+  /// Force-write any pending dirty state immediately.
   Future<void> flush() async {
     _saveDebounce?.cancel();
     _saveDebounce = null;
@@ -346,10 +263,6 @@ class ReviewRepository {
   }
 
   Future<void> _flushInternal() async {
-    // Capture and clear flags atomically before any await, so
-    // mutations that happen *during* our I/O (e.g. a put() call
-    // between _save() and _saveActivity()) set the flag again and
-    // re-schedule their own flush instead of being silently wiped.
     final doReview = _dirtyReview;
     _dirtyReview = false;
     final doActivity = _dirtyActivity;
@@ -357,9 +270,27 @@ class ReviewRepository {
     final doUserData = _dirtyUserData;
     _dirtyUserData = false;
 
-    if (doReview) await _save();
-    if (doActivity) await _saveActivity();
-    if (doUserData) await _saveUserData();
+    if (doReview) {
+      final json = _cache.map((k, v) => MapEntry(k, v.toJson()));
+      await _backend.saveReviewState(Map<String, dynamic>.from(json));
+    }
+    if (doActivity) {
+      await _backend.saveActivity(Map<String, dynamic>.from(_activity));
+    }
+    if (doUserData) {
+      await _saveUserData();
+    }
+  }
+
+  Future<void> _saveUserData() async {
+    final json = <String, dynamic>{
+      'schemaVersion': _schemaVersion,
+      'favorites': _favorites.toList(),
+      'removed': _removed.toList(),
+      'openCounts': _openCounts,
+      'studyMinutes': _studyMinutes,
+    };
+    await _backend.saveUserData(json);
   }
 
   // --- date helpers ----------------------------------------------
