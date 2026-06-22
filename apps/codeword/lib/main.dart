@@ -85,29 +85,60 @@ class _HomeShellState extends State<HomeShell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
-      body: IndexedStack(
-        index: _index,
-        children: _pages,
-      ),
-      bottomNavigationBar: _DeskBottomNav(
-        index: _index,
-        onTap: (i) {
-          HapticFeedback.selectionClick();
-          setState(() => _index = i);
-        },
+      backgroundColor: AppColors.bezel,
+      body: Center(
+        child: Container(
+          width: _phoneWidth,
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(context).size.height,
+          ),
+          decoration: BoxDecoration(
+            color: AppColors.background,
+            borderRadius: BorderRadius.circular(36),
+            boxShadow: const [
+              BoxShadow(
+                color: Color(0x33000000),
+                blurRadius: 24,
+                offset: Offset(0, 8),
+              ),
+            ],
+          ),
+          clipBehavior: Clip.antiAlias,
+          child: Column(
+            children: [
+              Expanded(
+                child: IndexedStack(
+                  index: _index,
+                  children: _pages,
+                ),
+              ),
+              _PhoneBottomNav(
+                index: _index,
+                onTap: (i) {
+                  HapticFeedback.selectionClick();
+                  setState(() => _index = i);
+                },
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
+
+  /// iPhone-ish phone width (412 logical px, matches a Pixel 6 / iPhone
+  /// 14 Pro width in Flutter logical pixels). Window is 1280×800 so the
+  /// bezel takes the surrounding real estate and the phone floats in
+  /// the middle.
+  static const double _phoneWidth = 412;
 }
 
-/// Bottom navigation. Full window width, tall enough to feel like a
-/// real desktop app shelf rather than a phone bar.
-class _DeskBottomNav extends StatelessWidget {
+/// 5-tab bottom navigation. Sits inside the phone bezel.
+class _PhoneBottomNav extends StatelessWidget {
   final int index;
   final ValueChanged<int> onTap;
 
-  const _DeskBottomNav({required this.index, required this.onTap});
+  const _PhoneBottomNav({required this.index, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -117,33 +148,33 @@ class _DeskBottomNav extends StatelessWidget {
       backgroundColor: AppColors.surface,
       indicatorColor: AppColors.primarySoft,
       surfaceTintColor: Colors.transparent,
-      elevation: 1,
-      height: 72,
+      elevation: 0,
+      height: 68,
       labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
       destinations: const [
         NavigationDestination(
-          icon: Icon(Icons.style_outlined, size: 26),
-          selectedIcon: Icon(Icons.style, color: AppColors.primary, size: 26),
+          icon: Icon(Icons.style_outlined),
+          selectedIcon: Icon(Icons.style, color: AppColors.primary),
           label: '单词',
         ),
         NavigationDestination(
-          icon: Icon(Icons.menu_book_outlined, size: 26),
-          selectedIcon: Icon(Icons.menu_book, color: AppColors.primary, size: 26),
+          icon: Icon(Icons.menu_book_outlined),
+          selectedIcon: Icon(Icons.menu_book, color: AppColors.primary),
           label: '阅读',
         ),
         NavigationDestination(
-          icon: Icon(Icons.explore_outlined, size: 26),
-          selectedIcon: Icon(Icons.explore, color: AppColors.primary, size: 26),
+          icon: Icon(Icons.explore_outlined),
+          selectedIcon: Icon(Icons.explore, color: AppColors.primary),
           label: '发现',
         ),
         NavigationDestination(
-          icon: Icon(Icons.insert_chart_outlined, size: 26),
-          selectedIcon: Icon(Icons.insert_chart, color: AppColors.primary, size: 26),
+          icon: Icon(Icons.insert_chart_outlined),
+          selectedIcon: Icon(Icons.insert_chart, color: AppColors.primary),
           label: '图表',
         ),
         NavigationDestination(
-          icon: Icon(Icons.settings_outlined, size: 26),
-          selectedIcon: Icon(Icons.settings, color: AppColors.primary, size: 26),
+          icon: Icon(Icons.settings_outlined),
+          selectedIcon: Icon(Icons.settings, color: AppColors.primary),
           label: '设置',
         ),
       ],
@@ -190,25 +221,20 @@ class TodayPage extends ConsumerWidget {
           catalog: ref.watch(qwertyCatalogProvider),
         );
     return SafeArea(
-      child: Center(
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 720),
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x8,
-              AppSpacing.x6,
-              AppSpacing.x8,
-              AppSpacing.x10,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _Greeting(newToday: stats.newToday),
-                const SizedBox(height: AppSpacing.x6),
-                _TodayTaskCard(stats: stats),
-              ],
-            ),
-          ),
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(
+          AppSpacing.x5,
+          AppSpacing.x4,
+          AppSpacing.x5,
+          AppSpacing.x8,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _Greeting(newToday: stats.newToday),
+            const SizedBox(height: AppSpacing.x5),
+            _TodayTaskCard(stats: stats),
+          ],
         ),
       ),
     );
@@ -227,20 +253,20 @@ class _Greeting extends StatelessWidget {
         const Text(
           'Hi, 极客 👋',
           style: TextStyle(
-            fontSize: 18,
+            fontSize: 14,
             color: AppColors.inkMuted,
             fontWeight: FontWeight.w500,
           ),
         ),
-        const SizedBox(height: AppSpacing.x2),
+        const SizedBox(height: 2),
         Text(
           newToday == 0 ? '今天还没开始' : '今天学了 $newToday 个新词',
           style: const TextStyle(
-            fontSize: 44,
+            fontSize: 30,
             color: AppColors.ink,
             fontWeight: FontWeight.w800,
             height: 1.15,
-            letterSpacing: -1,
+            letterSpacing: -0.5,
           ),
         ),
       ],
@@ -258,7 +284,7 @@ class _TodayTaskCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final allDone = stats.totalDue == 0 && stats.newToday == 0;
     return AppCard(
-      padding: const EdgeInsets.all(AppSpacing.x6),
+      padding: const EdgeInsets.all(AppSpacing.x5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -267,7 +293,7 @@ class _TodayTaskCard extends StatelessWidget {
               const Text(
                 '今日任务',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 17,
                   fontWeight: FontWeight.w800,
                   color: AppColors.ink,
                 ),
@@ -286,7 +312,7 @@ class _TodayTaskCard extends StatelessWidget {
                   color: AppColors.info,
                 ),
               ),
-              const SizedBox(width: AppSpacing.x4),
+              const SizedBox(width: AppSpacing.x3),
               Expanded(
                 child: _MiniStat(
                   label: '今日新词',
@@ -300,12 +326,12 @@ class _TodayTaskCard extends StatelessWidget {
           Text(
             allDone ? '今天已经完成啦，明天见 👋' : '优先复习到期的词，再学新词',
             style: const TextStyle(
-              fontSize: 14,
+              fontSize: 13,
               color: AppColors.inkMuted,
               fontWeight: FontWeight.w500,
             ),
           ),
-          const SizedBox(height: AppSpacing.x5),
+          const SizedBox(height: AppSpacing.x4),
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
@@ -370,26 +396,26 @@ class _MiniStat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: AppSpacing.x5),
+      padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(AppRadii.lg),
+        borderRadius: BorderRadius.circular(AppRadii.md),
       ),
       child: Column(
         children: [
           Text(
             value,
             style: AppTheme.wordDisplay(
-              size: 44,
+              size: 32,
               color: color,
               weight: FontWeight.w800,
             ),
           ),
-          const SizedBox(height: 4),
+          const SizedBox(height: 2),
           Text(
             label,
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 13,
               color: color.withValues(alpha: 0.85),
               fontWeight: FontWeight.w600,
             ),
