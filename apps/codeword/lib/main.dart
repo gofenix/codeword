@@ -126,11 +126,11 @@ class _HomeShellState extends State<HomeShell> {
     );
   }
 
-  /// iPhone-ish phone width (412 logical px, matches a Pixel 6 / iPhone
-  /// 14 Pro width in Flutter logical pixels). Window is 1280×800 so the
-  /// bezel takes the surrounding real estate and the phone floats in
-  /// the middle.
-  static const double _phoneWidth = 412;
+  /// Phone-shaped column width. Big enough to read like a real app on
+  /// a 1280×800 window without leaving vast bezel voids. iPhone Pro Max
+  /// logical width is 430; we use a hair more (520) so the typography
+  /// has room to breathe and the content feels substantial.
+  static const double _phoneWidth = 520;
 }
 
 /// 5-tab bottom navigation. Sits inside the phone bezel.
