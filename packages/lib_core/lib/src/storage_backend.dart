@@ -26,6 +26,18 @@ abstract class StorageBackend {
   /// Save the user-data JSON.
   Future<void> saveUserData(Map<String, dynamic> json);
 
-  /// Wipe all three keys/files (used by the schema-version migration).
+  /// Wipe ONLY the two legacy stores (review state + activity).
+  ///
+  /// MUST NOT touch user-data — that store carries the
+  /// `schemaVersion` header that prevents infinite re-migration on
+  /// every launch. Used by [ReviewRepository] during schema upgrades.
+  ///
+  /// Default implementation throws [UnsupportedError] so callers can
+  /// fall back to writing empty payloads.
+  Future<void> wipeReviewAndActivity() async {
+    throw UnsupportedError('wipeReviewAndActivity is not implemented by this backend');
+  }
+
+  /// Wipe all three keys/files. Only used by testing / full-reset flows.
   Future<void> wipeAll();
 }

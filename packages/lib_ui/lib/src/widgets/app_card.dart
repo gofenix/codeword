@@ -6,15 +6,19 @@ import 'pressable_scale.dart';
 /// Soft, elevated card with the v5 cream/shadow-md feel.
 ///
 /// Tappable cards ([onTap] != null) wrap themselves in a [PressableScale]
-/// so the entire card breathes a little on press. The card's own color
-/// and shadow still animate via [AnimatedContainer] for cheap property
-/// transitions.
+/// for tactile press feedback and announce themselves as buttons to the
+/// accessibility tree via [Semantics].
+///
+/// The container is `antiAlias`-clipped to its rounded border so any
+/// child content (images, colored rows, etc.) that exceeds the corners
+/// is properly masked instead of bleeding outside the rounded radius.
 class AppCard extends StatelessWidget {
   final Widget child;
   final EdgeInsets padding;
   final VoidCallback? onTap;
   final Color? color;
   final List<BoxShadow>? shadow;
+  final String? semanticLabel;
 
   const AppCard({
     super.key,
@@ -23,14 +27,14 @@ class AppCard extends StatelessWidget {
     this.onTap,
     this.color,
     this.shadow,
+    this.semanticLabel,
   });
 
   @override
   Widget build(BuildContext context) {
-    final card = AnimatedContainer(
-      duration: const Duration(milliseconds: 180),
-      curve: Curves.easeOutCubic,
+    final card = Container(
       padding: padding,
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: color ?? AppColors.surface,
         borderRadius: BorderRadius.circular(AppRadii.lg),
@@ -40,10 +44,18 @@ class AppCard extends StatelessWidget {
     );
 
     if (onTap == null) return card;
-    return PressableScale(
-      scaleFactor: 0.98,
-      onTap: onTap,
-      child: card,
+
+    // Wrap the tappable card with a button semantics node so screen
+    // readers announce it as interactive. [excludeSemantics: true]
+    // prevents duplicate "button" semantics from the PressableScale.
+    return Semantics(
+      button: true,
+      label: semanticLabel,
+      child: PressableScale(
+        scaleFactor: 0.98,
+        onTap: onTap,
+        child: card,
+      ),
     );
   }
 }

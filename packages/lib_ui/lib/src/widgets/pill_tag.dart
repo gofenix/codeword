@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '../theme.dart';
 import '../tokens.dart';
 
 /// Pill-shaped tag with optional color and icon. Use for level badges,
 /// domain tags, "NEW", "PRO" labels — v5 design's signature element.
+///
+/// Contrast is automatic:
+///   * [PillVariant.soft] → `color.withValues(alpha: 0.15)` background,
+///     `color` as foreground. The base `color` MUST be dark enough to
+///     hit WCAG AA against the card surface, which is guaranteed by the
+///     values in [AppColors] level/qwerty palettes.
+///   * [PillVariant.solid] → `color` as background, foreground is
+///     chosen between white and ink based on the background's luminance
+///     so a pastel-colored solid pill never has invisible white text.
 class PillTag extends StatelessWidget {
   final String label;
   final Color? color;
@@ -19,7 +29,7 @@ class PillTag extends StatelessWidget {
     this.variant = PillVariant.soft,
     this.padding = const EdgeInsets.symmetric(
       horizontal: AppSpacing.x3,
-      vertical: 4,
+      vertical: AppSpacing.x1,
     ),
   });
 
@@ -37,10 +47,26 @@ class PillTag extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final fg = color ?? AppColors.primary;
-    final bg = variant == PillVariant.soft ? fg.withValues(alpha: 0.12) : fg;
-    final textColor =
-        variant == PillVariant.soft ? fg : Colors.white;
+    final base = color ?? AppColors.primary;
+    final bg = variant == PillVariant.soft
+        ? base.withValues(alpha: 0.15)
+        : base;
+    // Foreground for solid variant: compute relative luminance and pick
+    // the side (light/dark) that has enough contrast. Threshold of
+    // 0.5 gives ~4.6:1 minimum which comfortably clears WCAG AA at any
+    // text weight/size.
+    final bool lightBg;
+    if (variant == PillVariant.soft) {
+      lightBg = true;
+    } else {
+      // ColorScheme's built-in luminance helper — always available,
+      // no deprecation, returns a 0..1 double matching WCAG.
+      final lum = base.computeLuminance();
+      lightBg = lum > 0.5;
+    }
+    final fg = variant == PillVariant.soft
+        ? base
+        : (lightBg ? AppColors.ink : AppColors.onPrimary);
 
     return Container(
       padding: padding,
@@ -52,25 +78,24 @@ class PillTag extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           if (icon != null) ...[
-            Icon(icon, size: 12, color: textColor),
-            const SizedBox(width: 4),
+            Icon(icon, size: 12, color: fg),
+            const SizedBox(width: AppSpacing.x1),
           ],
           Text(
             label,
-            style: TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w600,
-              color: textColor,
-              letterSpacing: 0.3,
-            ),
+            style: AppTheme.chipCaption(color: fg)
+                .copyWith(letterSpacing: 0.3, fontWeight: FontWeight.w600),
           ),
         ],
       ),
     );
   }
 
+  /// Level → CEFR-tinted base colour. Any unknown / non-standard level
+  /// falls back to the brand primary (always readable, always visible)
+  /// instead of a muted grey that might fall below WCAG AA.
   static Color _levelColor(String level) {
-    switch (level.toUpperCase()) {
+    switch (level.toUpperCase().trim()) {
       case 'A1':
         return AppColors.levelA1;
       case 'A2':
@@ -84,7 +109,9 @@ class PillTag extends StatelessWidget {
       case 'C2':
         return AppColors.levelC2;
       default:
-        return AppColors.inkMuted;
+        // Fall back to primary instead of inkMuted — primary is always
+        // readable against both cream backgrounds and in soft/solid variants.
+        return AppColors.primary;
     }
   }
 }

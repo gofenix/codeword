@@ -35,6 +35,12 @@ class WebLocalStorageBackend implements StorageBackend {
       _write(_kUserData, json);
 
   @override
+  Future<void> wipeReviewAndActivity() async {
+    html.window.localStorage.remove(_kReview);
+    html.window.localStorage.remove(_kActivity);
+  }
+
+  @override
   Future<void> wipeAll() async {
     html.window.localStorage.remove(_kReview);
     html.window.localStorage.remove(_kActivity);

@@ -536,4 +536,7 @@ class _CapturingTransport implements LlmTransport {
   }) async {
     return _handler(url, headers, body);
   }
+
+  @override
+  void close() {}
 }

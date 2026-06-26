@@ -15,28 +15,19 @@ class MasteryDistribution extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final total = buckets.fold<int>(0, (a, b) => a + b.count);
+    final unseenCount = buckets.isEmpty ? 0 : buckets.last.count;
+    final positiveBuckets = buckets.where((b) => b.count > 0).toList();
     return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            '掌握分布',
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w700,
-              color: AppColors.ink,
-            ),
-          ),
+          Text('掌握分布', style: AppTheme.cardTitle()),
           const SizedBox(height: AppSpacing.x2),
           Text(
             total == 0
                 ? '— · —'
-                : '已学 ${total - (buckets.last.count)} · 总量 $total',
-            style: const TextStyle(
-              fontSize: 12,
-              color: AppColors.inkMuted,
-              fontWeight: FontWeight.w500,
-            ),
+                : '已学 ${total - unseenCount} · 总量 $total',
+            style: AppTheme.mutedCaption(),
           ),
           const SizedBox(height: AppSpacing.x4),
           // Stacked bar
@@ -44,16 +35,15 @@ class MasteryDistribution extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppRadii.pill),
             child: SizedBox(
               height: 14,
-              child: total == 0
+              child: total == 0 || positiveBuckets.isEmpty
                   ? Container(color: AppColors.surfaceMuted)
                   : Row(
                       children: [
-                        for (final b in buckets)
-                          if (b.count > 0)
-                            Expanded(
-                              flex: b.count,
-                              child: Container(color: _colorFor(b.level)),
-                            ),
+                        for (final b in positiveBuckets)
+                          Expanded(
+                            flex: b.count,
+                            child: Container(color: _colorFor(b.level)),
+                          ),
                       ],
                     ),
             ),
@@ -62,7 +52,7 @@ class MasteryDistribution extends StatelessWidget {
           // Legend
           Wrap(
             spacing: AppSpacing.x3,
-            runSpacing: 6,
+            runSpacing: AppSpacing.x1_5,
             children: [
               for (final b in buckets)
                 _LegendChip(
@@ -101,17 +91,13 @@ class _LegendChip extends StatelessWidget {
           height: 10,
           decoration: BoxDecoration(
             color: color,
-            borderRadius: BorderRadius.circular(3),
+            borderRadius: BorderRadius.circular(AppRadii.xxs),
           ),
         ),
-        const SizedBox(width: 4),
+        const SizedBox(width: AppSpacing.x1),
         Text(
           '$label $count',
-          style: const TextStyle(
-            fontSize: 11,
-            color: AppColors.ink,
-            fontWeight: FontWeight.w500,
-          ),
+          style: AppTheme.mutedCaption(size: 11, color: AppColors.ink),
         ),
       ],
     );
@@ -129,14 +115,7 @@ class VocabProgressList extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            '词库进度',
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w700,
-              color: AppColors.ink,
-            ),
-          ),
+          Text('词库进度', style: AppTheme.cardTitle()),
           const SizedBox(height: AppSpacing.x4),
           for (final r in rows) ...[
             _VocabRow(row: r),
@@ -169,10 +148,19 @@ class _VocabRow extends StatelessWidget {
           height: 32,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: color.withValues(alpha: 0.12),
+            color: color.withValues(alpha: 0.18),
             borderRadius: BorderRadius.circular(AppRadii.sm),
           ),
-          child: Text(row.emoji, style: const TextStyle(fontSize: 16)),
+          child: Builder(
+            builder: (context) {
+              final chars = row.name.characters;
+              final firstChar = chars.isEmpty ? '·' : chars.first;
+              return Text(
+                firstChar,
+                style: AppTheme.cardTitle().copyWith(fontSize: 14, color: color),
+              );
+            },
+          ),
         ),
         const SizedBox(width: AppSpacing.x3),
         Expanded(
@@ -183,29 +171,22 @@ class _VocabRow extends StatelessWidget {
                 children: [
                   Text(
                     row.name,
-                    style: const TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.ink,
-                    ),
+                    style: AppTheme.rowTitle().copyWith(fontSize: 13),
                   ),
                   const Spacer(),
                   Text(
                     '${row.learned} / ${row.totalWords}',
-                    style: const TextStyle(
-                      fontSize: 11,
-                      color: AppColors.inkMuted,
-                      fontWeight: FontWeight.w600,
-                    ),
+                    style: AppTheme.mutedCaption(size: 11)
+                        .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
-              const SizedBox(height: 6),
+              const SizedBox(height: AppSpacing.x1_5),
               ClipRRect(
                 borderRadius: BorderRadius.circular(AppRadii.pill),
                 child: LinearProgressIndicator(
                   value: coverage,
-                  minHeight: 6,
+                  minHeight: AppSpacing.x1_5,
                   backgroundColor: AppColors.surfaceMuted,
                   valueColor: AlwaysStoppedAnimation(color),
                 ),
@@ -242,14 +223,7 @@ class TodayActivityGrid extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            '今天',
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w700,
-              color: AppColors.ink,
-            ),
-          ),
+          Text('今天', style: AppTheme.cardTitle()),
           const SizedBox(height: AppSpacing.x4),
           GridView.count(
             crossAxisCount: 3,
@@ -299,16 +273,13 @@ class _Cell extends StatelessWidget {
             children: [
               Text(
                 label,
-                style: const TextStyle(
-                  fontSize: 11,
-                  color: AppColors.inkMuted,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: AppTheme.rowTitle()
+                    .copyWith(fontSize: 11, color: AppColors.inkMuted),
               ),
               Icon(icon, size: 14, color: color),
             ],
           ),
-          const SizedBox(height: 4),
+          const SizedBox(height: AppSpacing.x1),
           Text(
             value,
             style: AppTheme.wordDisplay(size: 20, color: color),
@@ -340,22 +311,11 @@ class StreakSchedule extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            '连续记录',
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w700,
-              color: AppColors.ink,
-            ),
-          ),
+          Text('连续记录', style: AppTheme.cardTitle()),
           const SizedBox(height: AppSpacing.x2),
-          const Text(
+          Text(
             '过去 90 天 · 每天一个方格,绿色=有学习',
-            style: TextStyle(
-              fontSize: 12,
-              color: AppColors.inkMuted,
-              fontWeight: FontWeight.w500,
-            ),
+            style: AppTheme.mutedCaption(),
           ),
           const SizedBox(height: AppSpacing.x4),
           // 7 rows × 13 cols
@@ -411,22 +371,11 @@ class DailyTrendsChart extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Text(
-                '每日趋势',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.ink,
-                ),
-              ),
+              Text('每日趋势', style: AppTheme.cardTitle()),
               const Spacer(),
               Text(
                 '近 14 天 · 峰值 $maxV',
-                style: const TextStyle(
-                  fontSize: 12,
-                  color: AppColors.inkMuted,
-                  fontWeight: FontWeight.w500,
-                ),
+                style: AppTheme.mutedCaption(),
               ),
             ],
           ),
@@ -463,22 +412,11 @@ class DailyStudyTimeChart extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Text(
-                '每日学习时长',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.ink,
-                ),
-              ),
+              Text('每日学习时长', style: AppTheme.cardTitle()),
               const Spacer(),
               Text(
                 '近 14 天 · 合计 ${total}m',
-                style: const TextStyle(
-                  fontSize: 12,
-                  color: AppColors.inkMuted,
-                  fontWeight: FontWeight.w500,
-                ),
+                style: AppTheme.mutedCaption(),
               ),
             ],
           ),
@@ -492,15 +430,8 @@ class DailyStudyTimeChart extends StatelessWidget {
             ),
           ),
           if (maxV == 0) ...[
-            const SizedBox(height: 4),
-            const Text(
-              '—',
-              style: TextStyle(
-                fontSize: 11,
-                color: AppColors.inkMuted,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
+            const SizedBox(height: AppSpacing.x1),
+            Text('—', style: AppTheme.mutedCaption(size: 11)),
           ],
         ],
       ),
@@ -541,7 +472,7 @@ class _Bars extends StatelessWidget {
                         : (v == 0
                             ? AppColors.surfaceMuted
                             : color.withValues(alpha: 0.55)),
-                    borderRadius: BorderRadius.circular(3),
+                    borderRadius: BorderRadius.circular(AppRadii.xxs),
                   ),
                 ),
               ],

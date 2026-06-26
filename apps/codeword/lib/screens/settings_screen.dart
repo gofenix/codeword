@@ -25,35 +25,27 @@ class SettingsScreen extends ConsumerWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              '设置',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.w700,
-                color: AppColors.ink,
-                height: 1.2,
-              ),
-            ),
-            SizedBox(height: AppSpacing.x5),
-            _ProfileCard(),
-            SizedBox(height: AppSpacing.x5),
-            _SectionLabel('学习'),
-            SizedBox(height: AppSpacing.x3),
-            _DailyGoalRow(),
-            SizedBox(height: AppSpacing.x2),
-            _AccentRow(),
-            SizedBox(height: AppSpacing.x5),
-            _SectionLabel('AI 与数据'),
-            SizedBox(height: AppSpacing.x3),
-            _AiSettingsRow(),
-            SizedBox(height: AppSpacing.x2),
-            _StorageRow(),
-            SizedBox(height: AppSpacing.x5),
-            _SectionLabel('关于'),
-            SizedBox(height: AppSpacing.x3),
-            _AboutRow(),
-            SizedBox(height: AppSpacing.x4),
+          children: [
+            Text('设置', style: AppTheme.screenHeader()),
+            const SizedBox(height: AppSpacing.x5),
+            const _ProfileCard(),
+            const SizedBox(height: AppSpacing.x5),
+            const _SectionLabel('学习'),
+            const SizedBox(height: AppSpacing.x3),
+            const _DailyGoalRow(),
+            const SizedBox(height: AppSpacing.x2),
+            const _AccentRow(),
+            const SizedBox(height: AppSpacing.x5),
+            const _SectionLabel('AI 与数据'),
+            const SizedBox(height: AppSpacing.x3),
+            const _AiSettingsRow(),
+            const SizedBox(height: AppSpacing.x2),
+            const _StorageRow(),
+            const SizedBox(height: AppSpacing.x5),
+            const _SectionLabel('关于'),
+            const SizedBox(height: AppSpacing.x3),
+            const _AboutRow(),
+            const SizedBox(height: AppSpacing.x4),
           ],
         ),
       ),
@@ -75,32 +67,31 @@ class _ProfileCard extends StatelessWidget {
             height: 52,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: AppColors.primarySoft,
+              color: AppColors.primary,
               borderRadius: BorderRadius.circular(AppRadii.md),
             ),
-            child: const Text('🥷', style: TextStyle(fontSize: 26)),
+            child: Text(
+              'C',
+              style: AppTheme.wordDisplay(
+                size: 26,
+                color: AppColors.onPrimary,
+                weight: FontWeight.w700,
+              ),
+            ),
           ),
           const SizedBox(width: AppSpacing.x4),
-          const Expanded(
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   '极客',
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.ink,
-                  ),
+                  style: AppTheme.cardTitle().copyWith(fontSize: 17),
                 ),
-                SizedBox(height: 2),
+                const SizedBox(height: 2),
                 Text(
                   '本地用户 · 无需登录',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: AppColors.inkMuted,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: AppTheme.mutedCaption(),
                 ),
               ],
             ),
@@ -122,15 +113,7 @@ class _SectionLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: const TextStyle(
-        fontSize: 12,
-        color: AppColors.inkMuted,
-        fontWeight: FontWeight.w700,
-        letterSpacing: 1.2,
-      ),
-    );
+    return Text(text, style: AppTheme.sectionLabel());
   }
 }
 
@@ -204,16 +187,9 @@ class _AiSettingsRow extends ConsumerWidget {
               children: [
                 Row(
                   children: [
-                    const Text(
-                      'AI 接入',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.ink,
-                      ),
-                    ),
+                    Text('AI 接入', style: AppTheme.rowTitle()),
                     if (cfg.isConfigured) ...[
-                      const SizedBox(width: 6),
+                      const SizedBox(width: AppSpacing.x1_5),
                       const PillTag(
                         label: '已配置',
                         color: AppColors.success,
@@ -224,12 +200,7 @@ class _AiSettingsRow extends ConsumerWidget {
                 ),
                 Text(
                   subtitle,
-                  style: const TextStyle(
-                    fontSize: 11,
-                    color: AppColors.inkMuted,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'monospace',
-                  ),
+                  style: AppTheme.code(size: 11),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -331,21 +302,10 @@ class _SettingRow extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.ink,
-                  ),
-                ),
+                Text(title, style: AppTheme.rowTitle()),
                 Text(
                   subtitle,
-                  style: const TextStyle(
-                    fontSize: 11,
-                    color: AppColors.inkMuted,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: AppTheme.mutedCaption(size: 11),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),

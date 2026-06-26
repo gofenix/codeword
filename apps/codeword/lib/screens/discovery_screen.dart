@@ -62,24 +62,12 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
                 children: [
                   Row(
                     children: [
-                      const Expanded(
-                        child: Text(
-                          '发现',
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.ink,
-                            height: 1.2,
-                          ),
-                        ),
+                      Expanded(
+                        child: Text('发现', style: AppTheme.screenHeader()),
                       ),
                       Text(
                         '${lists.length} 本词书',
-                        style: const TextStyle(
-                          fontSize: 13,
-                          color: AppColors.inkMuted,
-                          fontWeight: FontWeight.w500,
-                        ),
+                        style: AppTheme.mutedCaption(size: 13),
                       ),
                     ],
                   ),
@@ -189,11 +177,7 @@ class _SearchField extends StatelessWidget {
       textAlignVertical: TextAlignVertical.center,
       decoration: InputDecoration(
         hintText: '搜索词书、分类…',
-        hintStyle: const TextStyle(
-          fontSize: 14,
-          color: AppColors.inkSubtle,
-          fontWeight: FontWeight.w500,
-        ),
+        hintStyle: AppTheme.mutedCaption(size: 14, color: AppColors.inkSubtle),
         prefixIcon: const Icon(Icons.search, color: AppColors.inkSubtle, size: 20),
         suffixIcon: ValueListenableBuilder<TextEditingValue>(
           valueListenable: controller,
@@ -233,38 +217,42 @@ class _CategoryChips extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 36,
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        itemCount: categories.length,
-        separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.x2),
-        itemBuilder: (context, index) {
-          final cat = categories[index];
-          final isSelected = (cat == '全部' && selected == null) || cat == selected;
-          return ChoiceChip(
-            label: Text(cat),
-            selected: isSelected,
-            onSelected: (_) => onSelected(cat),
-            labelStyle: TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-              color: isSelected ? AppColors.primary : AppColors.inkMuted,
-            ),
-            selectedColor: AppColors.primarySoft,
-            backgroundColor: AppColors.surface,
-            side: BorderSide(
-              color: isSelected ? AppColors.primarySoft : AppColors.inkSubtle.withValues(alpha: 0.2),
-            ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(AppRadii.pill),
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x2),
-            showCheckmark: false,
-            visualDensity: VisualDensity.compact,
-          );
-        },
+    // Use MediaQuery.textScalerOf to respect user's system text size,
+    // and size the chip row to fit. Fixed 36px heights clip the text on
+    // textScaleFactor > 1.2 (accessibility / large-font users).
+    return ListView.separated(
+      scrollDirection: Axis.horizontal,
+      padding: EdgeInsets.symmetric(
+        vertical: Theme.of(context).chipTheme.labelPadding?.vertical ?? 4,
       ),
+      itemCount: categories.length,
+      separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.x2),
+      itemBuilder: (context, index) {
+        final cat = categories[index];
+        final isSelected = (cat == '全部' && selected == null) || cat == selected;
+        return ChoiceChip(
+          label: Text(cat),
+          selected: isSelected,
+          onSelected: (_) => onSelected(cat),
+          labelStyle: AppTheme.rowTitle().copyWith(
+            fontSize: 13,
+            color: isSelected ? AppColors.primary : AppColors.inkMuted,
+          ),
+          selectedColor: AppColors.primarySoft,
+          backgroundColor: AppColors.surface,
+          side: BorderSide(
+            color: isSelected
+                ? AppColors.primarySoft
+                : AppColors.inkSubtle.withValues(alpha: 0.2),
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppRadii.pill),
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x2),
+          showCheckmark: false,
+          visualDensity: VisualDensity.compact,
+        );
+      },
     );
   }
 }
@@ -292,10 +280,8 @@ class _CategorySection extends StatelessWidget {
           ),
           child: Text(
             '$category · ${lists.length}',
-            style: const TextStyle(
+            style: AppTheme.sectionLabel().copyWith(
               fontSize: 13,
-              fontWeight: FontWeight.w700,
-              color: AppColors.inkMuted,
               letterSpacing: 0.6,
             ),
           ),
@@ -317,24 +303,32 @@ class _CategorySection extends StatelessWidget {
   }
 }
 
-class _LibraryTile extends StatelessWidget {
+class _LibraryTile extends ConsumerWidget {
   final VocabList list;
   final bool available;
 
   const _LibraryTile({required this.list, required this.available});
 
   Color _color() {
-    final h = list.id.hashCode.abs();
-    return AppColors.qwertyPalette[h % AppColors.qwertyPalette.length];
+    final h = list.id.hashCode.abs() % AppColors.qwertyPalette.length;
+    return AppColors.qwertyPalette[h >= 0 ? h : 0];
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final color = _color();
+    final selectedVocab = ref.watch(selectedVocabProvider);
+    final isCurrent = selectedVocab == list.id;
     return AppCard(
       onTap: available
-          ? () {
+          ? () async {
               HapticFeedback.selectionClick();
+              // Persist the selection so the home tab uses this book.
+              ref.read(selectedVocabProvider.notifier).state = list.id;
+              try {
+                await ReviewRepository.instance.setSelectedVocabId(list.id);
+              } catch (_) {}
+              if (!context.mounted) return;
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (_) => LearningSessionScreen(vocabId: list.id),
@@ -350,8 +344,31 @@ class _LibraryTile extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(list.emoji, style: const TextStyle(fontSize: 20)),
-              if (available)
+              Container(
+                width: AppSpacing.x5,
+                height: AppSpacing.x5,
+                decoration: BoxDecoration(
+                  color: color.withValues(alpha: 0.18),
+                  borderRadius: BorderRadius.circular(AppRadii.sm),
+                ),
+                alignment: Alignment.center,
+                child: Builder(
+                  builder: (context) {
+                    final chars = list.name.characters;
+                    return Text(
+                      chars.isEmpty ? '·' : chars.first,
+                      style: AppTheme.cardTitle().copyWith(
+                        fontSize: 16,
+                        color: color,
+                      ),
+                    );
+                  },
+                ),
+              ),
+              if (isCurrent)
+                const Icon(Icons.check_circle_rounded,
+                    color: AppColors.primary, size: 18)
+              else if (available)
                 PillTag(
                   label: 'Lv ${list.level}',
                   color: color,
@@ -370,10 +387,8 @@ class _LibraryTile extends StatelessWidget {
             children: [
               Text(
                 list.name,
-                style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.ink,
+                style: AppTheme.rowTitle(
+                  color: isCurrent ? AppColors.primary : null,
                 ),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
@@ -381,11 +396,7 @@ class _LibraryTile extends StatelessWidget {
               const SizedBox(height: 2),
               Text(
                 list.description,
-                style: const TextStyle(
-                  fontSize: 11,
-                  color: AppColors.inkMuted,
-                  height: 1.3,
-                ),
+                style: AppTheme.mutedCaption(size: 11).copyWith(height: 1.3),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
               ),

@@ -6,9 +6,17 @@
 	<true/>
 	<key>com.apple.security.cs.allow-jit</key>
 	<true/>
-	<key>com.apple.security.network.server</key>
-	<true/>
 	<key>com.apple.security.network.client</key>
 	<true/>
+	<!-- Allow reading/writing user-selected files (import vocabularies,
+	     export learning data) via the standard NSOpenPanel / NSSavePanel.
+	     Without this entitlement, the file picker returns URLs that our
+	     sandbox is not allowed to read. -->
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+	<key>com.apple.security.keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)$(CFBundleIdentifier)</string>
+	</array>
 </dict>
 </plist>

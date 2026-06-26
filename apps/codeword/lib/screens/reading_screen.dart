@@ -71,13 +71,14 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
   Future<void> _generate() async {
     final cfg = ref.read(llmConfigProvider);
     if (!cfg.isConfigured) {
+      if (!mounted) return;
       Navigator.of(context).push(
         MaterialPageRoute(builder: (_) => const AiSettingsScreen()),
       );
       return;
     }
     if (_pool.isEmpty) {
-      setState(() => _error = '没有可用的词。先去学几轮。');
+      if (mounted) setState(() => _error = '没有可用的词。先去学几轮。');
       return;
     }
     setState(() {
@@ -194,24 +195,12 @@ class _ReadingHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
-        Text(
-          '阅读',
-          style: TextStyle(
-            fontSize: 28,
-            fontWeight: FontWeight.w700,
-            color: AppColors.ink,
-            height: 1.2,
-          ),
-        ),
-        SizedBox(height: 2),
+      children: [
+        Text('阅读', style: AppTheme.screenHeader()),
+        const SizedBox(height: 2),
         Text(
           'AI 用今天要学的词写一篇短文',
-          style: TextStyle(
-            fontSize: 13,
-            color: AppColors.inkMuted,
-            fontWeight: FontWeight.w500,
-          ),
+          style: AppTheme.mutedCaption(size: 13),
         ),
       ],
     );
@@ -228,19 +217,19 @@ class _PoolLoading extends StatelessWidget {
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              SizedBox(
+            children: [
+              const SizedBox(
                 width: 16,
                 height: 16,
-                child: CircularProgressIndicator(strokeWidth: 2),
+                child: CircularProgressIndicator(
+                  strokeWidth: 2,
+                  color: AppColors.primary,
+                ),
               ),
-              SizedBox(width: AppSpacing.x3),
+              const SizedBox(width: AppSpacing.x3),
               Text(
                 '加载今日词表…',
-                style: TextStyle(
-                  fontSize: 13,
-                  color: AppColors.inkMuted,
-                ),
+                style: AppTheme.mutedCaption(size: 13),
               ),
             ],
           ),
@@ -265,20 +254,17 @@ class _PoolCard extends StatelessWidget {
             children: [
               const Icon(Icons.local_library_outlined,
                   color: AppColors.primary, size: 18),
-              const SizedBox(width: 6),
-              const Text(
-                '今日词表',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.ink,
-                ),
-              ),
+              const SizedBox(width: AppSpacing.x1_5),
+              Text('今日词表', style: AppTheme.cardTitle()),
               const Spacer(),
-              GestureDetector(
-                onTap: onRefresh,
-                child: const Icon(Icons.refresh,
+              IconButton(
+                tooltip: '换一批',
+                onPressed: onRefresh,
+                icon: const Icon(Icons.refresh,
                     color: AppColors.inkMuted, size: 18),
+                visualDensity: VisualDensity.compact,
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(),
               ),
             ],
           ),
@@ -290,14 +276,14 @@ class _PoolCard extends StatelessWidget {
             )
           else
             Wrap(
-              spacing: 6,
-              runSpacing: 6,
+              spacing: AppSpacing.x1_5,
+              runSpacing: AppSpacing.x1_5,
               children: [
                 for (final e in pool)
                   Container(
                     padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 6,
+                      horizontal: AppSpacing.x2 + 2,
+                      vertical: AppSpacing.x1_5,
                     ),
                     decoration: BoxDecoration(
                       color: AppColors.primarySoft,
@@ -305,11 +291,10 @@ class _PoolCard extends StatelessWidget {
                     ),
                     child: Text(
                       e.word,
-                      style: const TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w700,
+                      style: AppTheme.wordDisplay(
+                        size: 13,
                         color: AppColors.primaryDark,
-                        fontFamily: 'serif',
+                        weight: FontWeight.w700,
                       ),
                     ),
                   ),
@@ -328,7 +313,7 @@ class _ErrorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       color: AppColors.danger.withValues(alpha: 0.08),
-      shadow: const [],
+      shadow: AppShadows.none,
       padding: const EdgeInsets.all(AppSpacing.x4),
       child: Row(
         children: [
@@ -338,11 +323,8 @@ class _ErrorCard extends StatelessWidget {
           Expanded(
             child: Text(
               message,
-              style: const TextStyle(
-                fontSize: 13,
-                color: AppColors.danger,
-                fontWeight: FontWeight.w600,
-              ),
+              style: AppTheme.rowTitle()
+                  .copyWith(fontSize: 13, color: AppColors.danger),
             ),
           ),
         ],
@@ -375,7 +357,7 @@ class _GenerateButton extends StatelessWidget {
                 height: 16,
                 child: CircularProgressIndicator(
                   strokeWidth: 2,
-                  color: Colors.white,
+                  color: AppColors.onPrimary,
                 ),
               )
             : Icon(
@@ -385,10 +367,7 @@ class _GenerateButton extends StatelessWidget {
         label: Text(label),
         style: FilledButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
-          textStyle: const TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w700,
-          ),
+          textStyle: AppTheme.cardTitle().copyWith(fontSize: 15),
         ),
       ),
     );
@@ -420,37 +399,30 @@ class _ArticleCard extends StatelessWidget {
             children: [
               const Icon(Icons.menu_book_rounded,
                   color: AppColors.primary, size: 18),
-              const SizedBox(width: 6),
-              const Text(
-                '今日阅读',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.ink,
-                ),
-              ),
+              const SizedBox(width: AppSpacing.x1_5),
+              Text('今日阅读', style: AppTheme.cardTitle()),
               const Spacer(),
-              GestureDetector(
-                onTap: regenerating ? null : onRegenerate,
-                child: Icon(
+              IconButton(
+                tooltip: '重新生成',
+                onPressed: regenerating ? null : onRegenerate,
+                icon: Icon(
                   Icons.refresh,
                   color: regenerating
                       ? AppColors.inkSubtle
                       : AppColors.inkMuted,
                   size: 18,
                 ),
+                visualDensity: VisualDensity.compact,
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(),
               ),
             ],
           ),
           const SizedBox(height: AppSpacing.x4),
           SelectableText.rich(
             highlighted,
-            style: const TextStyle(
-              fontSize: 16,
-              color: AppColors.ink,
-              height: 1.7,
-              fontFamily: 'serif',
-            ),
+            style: AppTheme.wordDisplay(size: 16, color: AppColors.ink)
+                .copyWith(height: 1.7),
           ),
           const SizedBox(height: AppSpacing.x4),
           if (pool.isNotEmpty) _Glossary(pool: pool),
@@ -530,26 +502,14 @@ class _Glossary extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            '词表',
-            style: TextStyle(
-              fontSize: 11,
-              color: AppColors.inkMuted,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 1.2,
-            ),
-          ),
-          const SizedBox(height: 6),
+          Text('词表', style: AppTheme.sectionLabel().copyWith(fontSize: 11)),
+          const SizedBox(height: AppSpacing.x1_5),
           for (final e in pool)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 2),
               child: RichText(
                 text: TextSpan(
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: AppColors.ink,
-                    fontFamily: 'serif',
-                  ),
+                  style: AppTheme.wordDisplay(size: 12, color: AppColors.ink),
                   children: [
                     TextSpan(
                       text: '${e.word}  ',

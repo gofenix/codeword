@@ -12,9 +12,12 @@ class StatsScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // Watch the review state map so this rebuilds on every answer.
     ref.watch(reviewStateProvider);
+    // Watch the catalog so a dynamic reload doesn't leave us with stale
+    // per-vocab statistics.
+    final catalog = ref.watch(qwertyCatalogProvider);
     final stats = ref
         .read(reviewStateProvider.notifier)
-        .stats(catalog: ref.read(qwertyCatalogProvider));
+        .stats(catalog: catalog);
 
     return SafeArea(
       child: SingleChildScrollView(
@@ -27,15 +30,7 @@ class StatsScreen extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              '图表',
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.w700,
-                color: AppColors.ink,
-                height: 1.2,
-              ),
-            ),
+            Text('图表', style: AppTheme.screenHeader()),
             const SizedBox(height: AppSpacing.x5),
 
             // 1) Top-line overview (existing, but smaller now).
@@ -118,11 +113,7 @@ class StatsScreen extends ConsumerWidget {
                 children: [
                   Text(
                     '累计 ${stats.totalStudyMinutes} 分钟',
-                    style: const TextStyle(
-                      fontSize: 12,
-                      color: AppColors.inkMuted,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: AppTheme.mutedCaption(),
                   ),
                 ],
               ),
@@ -163,11 +154,7 @@ class _Stat extends StatelessWidget {
         ),
         Text(
           label,
-          style: const TextStyle(
-            fontSize: 12,
-            color: AppColors.inkMuted,
-            fontWeight: FontWeight.w500,
-          ),
+          style: AppTheme.mutedCaption(),
         ),
       ],
     );

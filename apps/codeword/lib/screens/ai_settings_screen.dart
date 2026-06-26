@@ -40,13 +40,31 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
     _baseUrlCtl.addListener(_markDirty);
     _apiKeyCtl.addListener(_markDirty);
     _modelCtl.addListener(_markDirty);
+    // Sync form fields when the async config load completes (fired from
+    // LlmConfigNotifier._load via secure storage). Registered from
+    // initState so we get exactly ONE listener per widget lifetime —
+    // registering it inside build() would add a new subscriber on every
+    // rebuild and leak memory + fire duplicate callbacks.
+    ref.listenManual<LlmConfig>(llmConfigProvider, (prev, next) {
+      if (!_dirty && _apiKeyCtl.text.isEmpty && next.apiKey.isNotEmpty) {
+        _baseUrlCtl.text = next.baseUrl;
+        _apiKeyCtl.text = next.apiKey;
+        _modelCtl.text = next.model;
+      }
+    });
   }
 
   @override
   void dispose() {
-    _baseUrlCtl.dispose();
-    _apiKeyCtl.dispose();
-    _modelCtl.dispose();
+    _baseUrlCtl
+      ..removeListener(_markDirty)
+      ..dispose();
+    _apiKeyCtl
+      ..removeListener(_markDirty)
+      ..dispose();
+    _modelCtl
+      ..removeListener(_markDirty)
+      ..dispose();
     super.dispose();
   }
 
@@ -57,10 +75,19 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
   Future<void> _save() async {
     setState(() => _saving = true);
     HapticFeedback.lightImpact();
+    // If the key field is empty, keep the provider's current key
+    // (e.g. the fallback key) instead of wiping it.
+    final providerCfg = ref.read(llmConfigProvider);
     final cfg = LlmConfig(
-      baseUrl: _baseUrlCtl.text.trim(),
-      apiKey: _apiKeyCtl.text.trim(),
-      model: _modelCtl.text.trim(),
+      baseUrl: _baseUrlCtl.text.trim().isNotEmpty
+          ? _baseUrlCtl.text.trim()
+          : providerCfg.baseUrl,
+      apiKey: _apiKeyCtl.text.trim().isNotEmpty
+          ? _apiKeyCtl.text.trim()
+          : providerCfg.apiKey,
+      model: _modelCtl.text.trim().isNotEmpty
+          ? _modelCtl.text.trim()
+          : providerCfg.model,
     );
     try {
       await ref.read(llmConfigProvider.notifier).save(cfg);
@@ -82,10 +109,17 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
   }
 
   Future<void> _test() async {
+    final providerCfg = ref.read(llmConfigProvider);
     final cfg = LlmConfig(
-      baseUrl: _baseUrlCtl.text.trim(),
-      apiKey: _apiKeyCtl.text.trim(),
-      model: _modelCtl.text.trim(),
+      baseUrl: _baseUrlCtl.text.trim().isNotEmpty
+          ? _baseUrlCtl.text.trim()
+          : providerCfg.baseUrl,
+      apiKey: _apiKeyCtl.text.trim().isNotEmpty
+          ? _apiKeyCtl.text.trim()
+          : providerCfg.apiKey,
+      model: _modelCtl.text.trim().isNotEmpty
+          ? _modelCtl.text.trim()
+          : providerCfg.model,
     );
     if (!cfg.isConfigured) {
       setState(() {
@@ -111,7 +145,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
       if (!mounted) return;
       setState(() {
         _testing = false;
-        _testResult = '连接成功 ✓  返回 ${resp.content.length} 字符';
+        _testResult = '连接成功 · 返回 ${resp.content.length} 字符';
         _testOk = true;
       });
       HapticFeedback.mediumImpact();
@@ -133,6 +167,11 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
         _testResult = '网络错误: $e';
         _testOk = false;
       });
+    } finally {
+      // Always release the underlying HTTP connection pool — the test
+      // client is short-lived. Swallow errors because a failing close
+      // shouldn't mask the real test result.
+      try { client.close(); } catch (_) {}
     }
   }
 
@@ -171,7 +210,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: const Text('AI 接入'),
+        title: Text('AI 接入', style: AppTheme.screenHeader().copyWith(fontSize: 20)),
         actions: [
           if (_dirty)
             TextButton(
@@ -180,7 +219,10 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
                   ? const SizedBox(
                       width: 16,
                       height: 16,
-                      child: CircularProgressIndicator(strokeWidth: 2),
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        color: AppColors.primary,
+                      ),
                     )
                   : const Text('保存'),
             ),
@@ -203,7 +245,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
               const SizedBox(height: AppSpacing.x2),
               _Field(
                 controller: _baseUrlCtl,
-                hint: 'https://api.openai.com/v1',
+                hint: 'https://api.minimaxi.com/anthropic',
                 keyboardType: TextInputType.url,
                 autocorrect: false,
                 enableSuggestions: false,
@@ -229,11 +271,11 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
                 ),
               ),
               const SizedBox(height: AppSpacing.x4),
-              _Label('Model', hint: '默认 gpt-4o-mini，可改'),
+              _Label('Model', hint: '默认 MiniMax-M3，可改'),
               const SizedBox(height: AppSpacing.x2),
               _Field(
                 controller: _modelCtl,
-                hint: 'gpt-4o-mini',
+                hint: 'MiniMax-M3',
                 autocorrect: false,
                 enableSuggestions: false,
               ),
@@ -249,7 +291,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
                               height: 16,
                               child: CircularProgressIndicator(
                                 strokeWidth: 2,
-                                color: Colors.white,
+                                color: AppColors.onPrimary,
                               ),
                             )
                           : const Icon(Icons.wifi_tethering, size: 18),
@@ -298,21 +340,17 @@ class _IntroCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       color: AppColors.primarySoft,
-      shadow: const [],
+      shadow: AppShadows.none,
       padding: const EdgeInsets.all(AppSpacing.x4),
       child: Row(
         children: [
           const Icon(Icons.shield_outlined, color: AppColors.primary, size: 20),
           const SizedBox(width: AppSpacing.x3),
-          const Expanded(
+          Expanded(
             child: Text(
               'Key 只存本机加密存储，不上传服务器。请求直发到 Base URL。',
-              style: TextStyle(
-                fontSize: 13,
-                color: AppColors.ink,
-                fontWeight: FontWeight.w500,
-                height: 1.4,
-              ),
+              style: AppTheme.mutedCaption(size: 13, color: AppColors.ink)
+                  .copyWith(height: 1.4),
             ),
           ),
         ],
@@ -332,18 +370,14 @@ class _Label extends StatelessWidget {
       children: [
         Text(
           text,
-          style: const TextStyle(
-            fontSize: 13,
-            fontWeight: FontWeight.w700,
-            color: AppColors.ink,
-            letterSpacing: 0.3,
-          ),
+          style: AppTheme.cardTitle()
+              .copyWith(fontSize: 13, letterSpacing: 0.3),
         ),
         if (hint != null) ...[
           const SizedBox(height: 2),
           Text(
             hint!,
-            style: const TextStyle(fontSize: 11, color: AppColors.inkMuted),
+            style: AppTheme.mutedCaption(size: 11),
           ),
         ],
       ],
@@ -378,18 +412,11 @@ class _Field extends StatelessWidget {
       keyboardType: keyboardType,
       autocorrect: autocorrect,
       enableSuggestions: enableSuggestions,
-      style: const TextStyle(
-        fontSize: 15,
-        color: AppColors.ink,
-        fontWeight: FontWeight.w500,
-        fontFamily: 'monospace',
-      ),
+      style: AppTheme.code(size: 15, color: AppColors.ink),
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: const TextStyle(
-          color: AppColors.inkSubtle,
-          fontFamily: 'monospace',
-        ),
+        hintStyle: AppTheme.code(size: 15, color: AppColors.inkSubtle)
+            .copyWith(fontWeight: FontWeight.w400),
         filled: true,
         fillColor: AppColors.surface,
         contentPadding: const EdgeInsets.symmetric(
@@ -429,7 +456,7 @@ class _TestResultCard extends StatelessWidget {
       color: ok
           ? AppColors.success.withValues(alpha: 0.10)
           : AppColors.danger.withValues(alpha: 0.08),
-      shadow: const [],
+      shadow: AppShadows.none,
       padding: const EdgeInsets.all(AppSpacing.x4),
       child: Row(
         children: [
@@ -442,10 +469,9 @@ class _TestResultCard extends StatelessWidget {
           Expanded(
             child: Text(
               message,
-              style: TextStyle(
+              style: AppTheme.rowTitle().copyWith(
                 fontSize: 13,
                 color: ok ? AppColors.success : AppColors.danger,
-                fontWeight: FontWeight.w600,
               ),
             ),
           ),
@@ -461,15 +487,7 @@ class _CompatList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          '兼容',
-          style: TextStyle(
-            fontSize: 12,
-            color: AppColors.inkMuted,
-            fontWeight: FontWeight.w700,
-            letterSpacing: 1.2,
-          ),
-        ),
+        Text('兼容', style: AppTheme.sectionLabel()),
         const SizedBox(height: AppSpacing.x2),
         ..._compatRows.map((r) => _CompatRow(name: r.$1, base: r.$2)),
       ],
@@ -480,7 +498,7 @@ class _CompatList extends StatelessWidget {
     ('OpenAI', 'https://api.openai.com/v1'),
     ('OpenRouter', 'https://openrouter.ai/api/v1'),
     ('DeepSeek', 'https://api.deepseek.com/v1'),
-    ('MiniMax', 'https://api.minimax.io/v1'),
+    ('MiniMax', 'https://api.minimaxi.com/anthropic'),
     ('智谱 BigModel', 'https://open.bigmodel.cn/api/paas/v4'),
     ('月之暗面 Moonshot', 'https://api.moonshot.cn/v1'),
     ('Ollama (本地)', 'http://localhost:11434/v1'),
@@ -495,28 +513,20 @@ class _CompatRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4),
+      padding: const EdgeInsets.symmetric(vertical: AppSpacing.x1),
       child: Row(
         children: [
           SizedBox(
             width: 90,
             child: Text(
               name,
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-                color: AppColors.ink,
-              ),
+              style: AppTheme.rowTitle().copyWith(fontSize: 12),
             ),
           ),
           Expanded(
             child: Text(
               base,
-              style: const TextStyle(
-                fontSize: 11,
-                color: AppColors.inkMuted,
-                fontFamily: 'monospace',
-              ),
+              style: AppTheme.code(size: 11, color: AppColors.inkMuted),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),

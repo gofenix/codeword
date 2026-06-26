@@ -13,13 +13,50 @@ import 'screens/reading_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/stats_screen.dart';
 import 'state/learning_session.dart';
+import 'state/llm_config.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await ReviewRepository.init();
+  // Initialise persistence. The storage backend will quarantine any
+  // corrupt JSON files (rename to *.corrupted) and return null for
+  // those stores; init() itself can still throw on unrecoverable
+  // errors from the underlying filesystem (e.g. no documents dir
+  // available). Catch that so we never crash the user with a red
+  // screen on launch — we simply run against an in-memory repo and
+  // log loudly.
+  try {
+    await ReviewRepository.init();
+  } catch (e, st) {
+    developer.log(
+      'ReviewRepository.init() failed; starting without persisted state: $e',
+      name: 'main',
+      error: e,
+      stackTrace: st,
+    );
+    try {
+      // Second attempt: the failure may have been during schema
+      // enforcement with the first write succeeding (header written)
+      // and a subsequent wipe partial; re-running init with a now
+      // up-to-date schema header may succeed.
+      await ReviewRepository.init();
+    } catch (e2, st2) {
+      developer.log(
+        'Second ReviewRepository.init() attempt also failed: $e2',
+        name: 'main',
+        error: e2,
+        stackTrace: st2,
+      );
+    }
+  }
   try {
     await ReviewRepository.instance.recordOpen(DateTime.now());
-  } catch (_) {}
+  } catch (_) {
+    // Missing ReviewRepository is fine — we logged the failure above.
+  }
+  // Read the bundled local LLM API key (from assets/local/llm_key.txt,
+  // gitignored). Used as a fallback when secure storage has no key —
+  // works in debug and release builds without Keychain entitlements.
+  final fallbackKey = await _readLocalLlmKey();
   // Pre-load the qwerty catalog so all consumers (me screen, learning
   // session, stats) can read vocabMetaProvider synchronously. If the
   // manifest asset is missing or corrupt, fall back to an empty list
@@ -35,10 +72,23 @@ void main() async {
     ProviderScope(
       overrides: [
         qwertyCatalogProvider.overrideWithValue(catalog),
+        if (fallbackKey != null)
+          llmFallbackKeyProvider.overrideWithValue(fallbackKey),
       ],
       child: const CodewordApp(),
     ),
   );
+}
+
+/// Read the API key from the bundled asset `assets/local/llm_key.txt`
+/// (gitignored). Returns null if the file is missing or empty.
+Future<String?> _readLocalLlmKey() async {
+  try {
+    final key = (await rootBundle.loadString('assets/local/llm_key.txt')).trim();
+    return key.isEmpty ? null : key;
+  } catch (_) {
+    return null;
+  }
 }
 
 class CodewordApp extends StatelessWidget {
@@ -50,6 +100,11 @@ class CodewordApp extends StatelessWidget {
       title: 'CodeWord · 码词',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
+      darkTheme: AppTheme.dark(),
+      // Default to the system's brightness choice — the user can
+      // override in the OS settings. Both themes ship a full
+      // Material-3 ColorScheme so we never get a half-themed app.
+      themeMode: ThemeMode.system,
       home: const HomeShell(),
     );
   }
@@ -74,12 +129,15 @@ class _HomeShellState extends State<HomeShell> {
   // 发现 (library search + catalog) | 图表 (stats) | 设置.
   // 复习 is intentionally removed — due-for-review words are folded
   // into the learning flow itself.
+  //
+  // Each tab gets a unique PageStorageKey so its scroll position and
+  // transient state is preserved across IndexedStack switches.
   static const _pages = <Widget>[
-    TodayPage(),        // 单词
-    ReadingScreen(),    // 阅读
-    DiscoveryScreen(),  // 发现
-    StatsScreen(),      // 图表
-    SettingsScreen(),   // 设置
+    TodayPage(key: PageStorageKey('tab-today')),
+    ReadingScreen(key: PageStorageKey('tab-reading')),
+    DiscoveryScreen(key: PageStorageKey('tab-discovery')),
+    StatsScreen(key: PageStorageKey('tab-stats')),
+    SettingsScreen(key: PageStorageKey('tab-settings')),
   ];
 
   @override
@@ -92,10 +150,9 @@ class _HomeShellState extends State<HomeShell> {
       ),
       bottomNavigationBar: _PhoneBottomNav(
         index: _index,
-        onTap: (i) {
-          HapticFeedback.selectionClick();
-          setState(() => _index = i);
-        },
+        // Delegate to _goToTab so the haptic feedback path is
+        // centralised — two tactile clicks per tap feels like a bug.
+        onTap: _goToTab,
       ),
     );
   }
@@ -185,9 +242,13 @@ class TodayPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final stats = ref.watch(reviewStateProvider.notifier).stats(
-          catalog: ref.watch(qwertyCatalogProvider),
-        );
+    // Watch the state (not just .notifier) so this rebuilds when
+    // review state changes — e.g. after completing a learning session.
+    ref.watch(reviewStateProvider);
+    // Watch the catalog (not read) so dynamic catalog changes in the
+    // future (reload after download) propagate correctly.
+    final catalog = ref.watch(qwertyCatalogProvider);
+    final stats = ref.read(reviewStateProvider.notifier).stats(catalog: catalog);
     return SafeArea(
       child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(
@@ -218,20 +279,15 @@ class _Greeting extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Hi, 极客 👋',
-          style: TextStyle(
-            fontSize: 14,
-            color: AppColors.inkMuted,
-            fontWeight: FontWeight.w500,
-          ),
+        Text(
+          'Hi, 极客',
+          style: AppTheme.mutedCaption(size: 14),
         ),
         const SizedBox(height: 2),
         Text(
           newToday == 0 ? '今天还没开始' : '今天学了 $newToday 个新词',
-          style: const TextStyle(
+          style: AppTheme.screenHeader().copyWith(
             fontSize: 30,
-            color: AppColors.ink,
             fontWeight: FontWeight.w800,
             height: 1.15,
             letterSpacing: -0.5,
@@ -244,12 +300,15 @@ class _Greeting extends StatelessWidget {
 
 /// The single today-task card: one clear action and the two numbers
 /// that matter (due + new). Nothing else competes for attention.
-class _TodayTaskCard extends StatelessWidget {
+class _TodayTaskCard extends ConsumerWidget {
   final ReviewStats stats;
   const _TodayTaskCard({required this.stats});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final vocabId = ref.watch(selectedVocabProvider);
+    final vocabName =
+        ref.watch(vocabMetaProvider)[vocabId]?.name ?? vocabId;
     final allDone = stats.totalDue == 0 && stats.newToday == 0;
     return AppCard(
       padding: const EdgeInsets.all(AppSpacing.x5),
@@ -258,48 +317,30 @@ class _TodayTaskCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Text(
+              Text(
                 '今日任务',
-                style: TextStyle(
+                style: AppTheme.cardTitle().copyWith(
                   fontSize: 17,
                   fontWeight: FontWeight.w800,
-                  color: AppColors.ink,
                 ),
               ),
               const Spacer(),
-              _StreakPill(streak: stats.streakDays),
-            ],
-          ),
-          const SizedBox(height: AppSpacing.x5),
-          Row(
-            children: [
-              Expanded(
-                child: _MiniStat(
-                  label: '待复习',
-                  value: '${stats.totalDue}',
-                  color: AppColors.info,
-                ),
-              ),
-              const SizedBox(width: AppSpacing.x3),
-              Expanded(
-                child: _MiniStat(
-                  label: '今日新词',
-                  value: '${stats.newToday}',
-                  color: AppColors.primary,
-                ),
+              Text(
+                vocabName,
+                style: AppTheme.mutedCaption(size: 12),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
               ),
             ],
           ),
-          const SizedBox(height: AppSpacing.x5),
+          const SizedBox(height: AppSpacing.x3),
           Text(
-            allDone ? '今天已经完成啦，明天见 👋' : '优先复习到期的词，再学新词',
-            style: const TextStyle(
-              fontSize: 13,
-              color: AppColors.inkMuted,
-              fontWeight: FontWeight.w500,
-            ),
+            allDone
+                ? '今天已经完成啦，明天见'
+                : '待复习 ${stats.totalDue} · 今日新词 ${stats.newToday}',
+            style: AppTheme.mutedCaption(size: 14),
           ),
-          const SizedBox(height: AppSpacing.x4),
+          const SizedBox(height: AppSpacing.x5),
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
@@ -309,8 +350,8 @@ class _TodayTaskCard extends StatelessWidget {
                       HapticFeedback.lightImpact();
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (_) => const LearningSessionScreen(
-                            vocabId: kDefaultVocabId,
+                          builder: (_) => LearningSessionScreen(
+                            vocabId: vocabId,
                           ),
                         ),
                       );
@@ -319,7 +360,7 @@ class _TodayTaskCard extends StatelessWidget {
               label: const Text('开始学习'),
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
-                textStyle: const TextStyle(
+                textStyle: AppTheme.cardTitle().copyWith(
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                 ),
@@ -335,99 +376,10 @@ class _TodayTaskCard extends StatelessWidget {
                 final shell = context.findAncestorStateOfType<_HomeShellState>();
                 shell?._goToTab(2); // 发现
               },
-              child: const Text(
+              child: Text(
                 '选择其他词书',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: AppTheme.rowTitle(),
               ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _MiniStat extends StatelessWidget {
-  final String label;
-  final String value;
-  final Color color;
-
-  const _MiniStat({
-    required this.label,
-    required this.value,
-    required this.color,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
-      decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(AppRadii.md),
-      ),
-      child: Column(
-        children: [
-          Text(
-            value,
-            style: AppTheme.wordDisplay(
-              size: 32,
-              color: color,
-              weight: FontWeight.w800,
-            ),
-          ),
-          const SizedBox(height: 2),
-          Text(
-            label,
-            style: TextStyle(
-              fontSize: 13,
-              color: color.withValues(alpha: 0.85),
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _StreakPill extends StatelessWidget {
-  final int streak;
-  const _StreakPill({required this.streak});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.x3,
-        vertical: 6,
-      ),
-      decoration: BoxDecoration(
-        color: streak > 0
-            ? AppColors.warning.withValues(alpha: 0.12)
-            : AppColors.surfaceMuted,
-        borderRadius: BorderRadius.circular(AppRadii.pill),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(
-            streak > 0
-                ? Icons.local_fire_department
-                : Icons.local_fire_department_outlined,
-            size: 16,
-            color: streak > 0 ? AppColors.warning : AppColors.inkSubtle,
-          ),
-          const SizedBox(width: 4),
-          Text(
-            streak == 0 ? '开始连续' : '连续 $streak 天',
-            style: TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w700,
-              color: streak > 0 ? AppColors.warning : AppColors.inkSubtle,
             ),
           ),
         ],

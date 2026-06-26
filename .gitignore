@@ -6,7 +6,11 @@
 .pub-cache/
 .pub/
 build/
-pubspec.lock
+
+# Applications commit their lockfile so builds are reproducible across
+# developers and CI. Package libraries intentionally do NOT commit the
+# lockfile so downstream consumers can resolve independently.
+packages/*/pubspec.lock
 
 # IDE
 .idea/
@@ -14,11 +18,19 @@ pubspec.lock
 *.iml
 .DS_Store
 
-# macOS
-apps/*/macos/Pods/
-apps/*/macos/.symlinks/
-apps/*/macos/Flutter/ephemeral/
-apps/*/macos/Flutter/Generated.xcconfig
+# macOS (shared between apps and packages)
+**/macos/Pods/
+**/macos/.symlinks/
+**/macos/Flutter/ephemeral/
+**/macos/Flutter/Generated.xcconfig
+**/macos/**/xcuserdata/
+
+# iOS (shared between apps and packages)
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/Generated.xcconfig
+**/ios/**/xcuserdata/
 
 # Android
 apps/*/android/.gradle/
@@ -43,5 +55,16 @@ coverage/
 *.ipa
 release/
 
+# Python tooling (used by the qwerty import script)
+__pycache__/
+*.pyc
+*.pyo
+
 # Qwerty-learner source — cloned at conversion time by tools/import_qwerty_dict.py
-tools/_qwerty_src/
+tools/_qwerty_src/**
+
+# Local assets with credentials / bundled secrets — never commit.
+# A .gitkeep placeholder should live alongside the asset folder so it
+# exists on a fresh clone (rootBundle requires the folder to exist).
+apps/*/assets/local/**
+!apps/*/assets/local/.gitkeep

@@ -6,5 +6,14 @@
 	<true/>
 	<key>com.apple.security.network.client</key>
 	<true/>
+	<!-- Allow reading/writing user-selected files (import vocabularies,
+	     export learning data). Required in release builds as well — the
+	     sandbox enforces the same rules regardless of build mode. -->
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+	<key>com.apple.security.keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)$(CFBundleIdentifier)</string>
+	</array>
 </dict>
 </plist>

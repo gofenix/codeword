@@ -43,9 +43,9 @@ class LlmConfig {
     );
   }
 
-  /// Default endpoint for OpenAI. The user is free to swap it out.
-  static const defaultBaseUrl = 'https://api.openai.com/v1';
-  static const defaultModel = 'gpt-4o-mini';
+  /// Default endpoint for MiniMax (Anthropic-compatible format).
+  static const defaultBaseUrl = 'https://api.minimaxi.com/anthropic';
+  static const defaultModel = 'MiniMax-M3';
 
   /// Convenience factory for a "first time" config (no key yet).
   static LlmConfig defaults() =>
@@ -95,6 +95,11 @@ class InMemoryLlmConfigBackend implements LlmConfigBackend {
 /// Persists [LlmConfig] under namespaced keys. Storage keys are
 /// prefixed with `codeword_llm_` to avoid collisions with the review-
 /// state keys.
+///
+/// Reads and writes are serial — `read()` is called once per notifier
+/// lifetime, so this is not a perf concern. Serialising avoids the
+/// "baseUrl written successfully, apiKey written half-way → partial
+/// state on restart" tearing that `Future.wait([x, y, z])` would cause.
 class LlmConfigStore {
   static const _kBaseUrl = 'codeword_llm_baseUrl';
   static const _kApiKey = 'codeword_llm_apiKey';
@@ -105,45 +110,42 @@ class LlmConfigStore {
     : _backend = backend ?? _FlutterSecureStorageBackend();
 
   Future<LlmConfig> read() async {
-    try {
-      final baseUrl = await _backend.read(_kBaseUrl);
-      final apiKey = await _backend.read(_kApiKey);
-      final model = await _backend.read(_kModel);
-      // If everything is empty/missing, return defaults (preset baseUrl
-      // + model so the user just needs to type a key).
-      if ((baseUrl == null || baseUrl.isEmpty) &&
-          (apiKey == null || apiKey.isEmpty) &&
-          (model == null || model.isEmpty)) {
-        return LlmConfig.defaults();
-      }
-      return LlmConfig(
-        baseUrl: (baseUrl == null || baseUrl.isEmpty)
-            ? LlmConfig.defaultBaseUrl
-            : baseUrl,
-        apiKey: apiKey ?? '',
-        model: (model == null || model.isEmpty)
-            ? LlmConfig.defaultModel
-            : model,
-      );
-    } catch (_) {
+    // Serial reads so a backend-level error surfaces early.
+    final baseUrl = await _backend.read(_kBaseUrl);
+    final apiKey = await _backend.read(_kApiKey);
+    final model = await _backend.read(_kModel);
+    // If everything is empty/missing, return defaults (preset baseUrl
+    // + model so the user just needs to type a key).
+    if ((baseUrl == null || baseUrl.isEmpty) &&
+        (apiKey == null || apiKey.isEmpty) &&
+        (model == null || model.isEmpty)) {
       return LlmConfig.defaults();
     }
+    return LlmConfig(
+      baseUrl: (baseUrl == null || baseUrl.isEmpty)
+          ? LlmConfig.defaultBaseUrl
+          : baseUrl,
+      apiKey: apiKey ?? '',
+      model: (model == null || model.isEmpty) ? LlmConfig.defaultModel : model,
+    );
   }
 
+  /// Serial writes — on failure, none/some of the writes may have
+  /// succeeded. The calling [LlmConfigNotifier.save] treats ANY
+  /// failure as a full failure and does not update the in-memory
+  /// state, so on restart storage and memory will re-converge via
+  /// [read] (at worst a partial write at the storage level is
+  /// normalised back into sensible defaults by the logic above).
   Future<void> write(LlmConfig config) async {
-    await Future.wait([
-      _backend.write(_kBaseUrl, config.baseUrl),
-      _backend.write(_kApiKey, config.apiKey),
-      _backend.write(_kModel, config.model),
-    ]);
+    await _backend.write(_kBaseUrl, config.baseUrl);
+    await _backend.write(_kApiKey, config.apiKey);
+    await _backend.write(_kModel, config.model);
   }
 
   Future<void> clear() async {
-    await Future.wait([
-      _backend.delete(_kBaseUrl),
-      _backend.delete(_kApiKey),
-      _backend.delete(_kModel),
-    ]);
+    await _backend.delete(_kBaseUrl);
+    await _backend.delete(_kApiKey);
+    await _backend.delete(_kModel);
   }
 }
 
@@ -212,12 +214,27 @@ abstract class LlmTransport {
     required Map<String, String> headers,
     required String body,
   });
+
+  /// Release any held resources (e.g. an HTTP client pool). Must be
+  /// synchronous — Riverpod's `ref.onDispose` callback takes a
+  /// `void Function()`, so any async close would have its Future
+  /// silently dropped. Idempotent.
+  void close();
 }
 
 /// `package:http` backed transport. Default for production builds.
+///
+/// All requests have a hard [timeout] (default 30s) so a hung endpoint
+/// can never freeze the UI; callers can (and should) also cancel via
+/// their own timeout. The underlying [http.Client] is closed via
+/// [close] so frequent LLM client rebuilds don't leak socket pools.
 class HttpLlmTransport implements LlmTransport {
   final http.Client _client;
-  HttpLlmTransport([http.Client? client]) : _client = client ?? http.Client();
+  final Duration timeout;
+  HttpLlmTransport({
+    http.Client? client,
+    this.timeout = const Duration(seconds: 30),
+  }) : _client = client ?? http.Client();
 
   @override
   Future<String> postJson({
@@ -225,11 +242,13 @@ class HttpLlmTransport implements LlmTransport {
     required Map<String, String> headers,
     required String body,
   }) async {
-    final response = await _client.post(
-      Uri.parse(url),
-      headers: headers,
-      body: body,
-    );
+    final response = await _client
+        .post(
+          Uri.parse(url),
+          headers: headers,
+          body: body,
+        )
+        .timeout(timeout);
     if (response.statusCode < 200 || response.statusCode >= 300) {
       throw LlmException(
         'HTTP ${response.statusCode}: ${response.body}',
@@ -238,9 +257,19 @@ class HttpLlmTransport implements LlmTransport {
     }
     return response.body;
   }
+
+  @override
+  void close() => _client.close();
 }
 
 /// LLM client. Send a [LlmChatRequest], get a [LlmChatResponse] back.
+///
+/// Auto-detects Anthropic vs OpenAI message format based on the base
+/// URL when [LlmConfig.format] is left unspecified.
+///
+/// Call [close] when discarding a client instance to release the
+/// underlying HTTP connection pool. The Riverpod provider wires this
+/// up via `ref.onDispose`.
 class LlmClient {
   final LlmConfig config;
   final LlmTransport transport;
@@ -248,9 +277,46 @@ class LlmClient {
   LlmClient({required this.config, LlmTransport? transport})
     : transport = transport ?? HttpLlmTransport();
 
+  /// Release any held resources (HTTP connection pool etc.). Safe to
+  /// call multiple times; implementations must be idempotent. Synchronous
+  /// so callers in dispose / onDispose callbacks (which take `void Function()`)
+  /// can invoke it without fire-and-forget concerns.
+  void close() => transport.close();
+
   /// Sends a chat completion request and returns the assistant text.
   /// Throws [LlmException] on any non-2xx response or malformed JSON.
+  /// Auto-detects Anthropic vs OpenAI format based on the base URL.
   Future<LlmChatResponse> chat(LlmChatRequest request) async {
+    if (!config.isConfigured) {
+      throw LlmException(
+        'LLM not configured — please set baseUrl, apiKey, and model',
+      );
+    }
+    if (_isAnthropic(config.baseUrl)) {
+      return _chatAnthropic(request);
+    }
+    return _chatOpenAi(request);
+  }
+
+  /// True when the base URL clearly points at an Anthropic-compatible
+  /// endpoint. The heuristics are conservative to avoid mis-formatting
+  /// requests against a proxy that happens to contain the substring
+  /// "anthropic" in a path fragment.
+  bool _isAnthropic(String baseUrl) {
+    final u = baseUrl.toLowerCase().trim();
+    if (u.isEmpty) return false;
+    // Explicit known hosts.
+    if (u.contains('api.anthropic.com')) return true;
+    if (u.contains('api.minimaxi.com')) return true;
+    // Path ending in /anthropic or /anthropic/ — user has literally
+    // opted in to the format by setting the endpoint suffix.
+    if (u.endsWith('/anthropic')) return true;
+    if (u.endsWith('/anthropic/')) return true;
+    return false;
+  }
+
+  // ── OpenAI-compatible format ──────────────────────────────────────
+  Future<LlmChatResponse> _chatOpenAi(LlmChatRequest request) async {
     final url = _chatCompletionsUrl(config.baseUrl);
     final model = request.model.isEmpty ? config.model : request.model;
     final body = jsonEncode({
@@ -262,33 +328,113 @@ class LlmClient {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ${config.apiKey}',
     };
-    final raw = await transport.postJson(
-      url: url,
-      headers: headers,
-      body: body,
-    );
-    final dynamic decoded;
-    try {
-      decoded = jsonDecode(raw);
-    } on FormatException catch (e) {
-      throw LlmException('Malformed JSON: ${e.message}');
-    }
-    if (decoded is! Map<String, dynamic>) {
-      throw LlmException('Unexpected response shape: $raw');
-    }
-    final choices = decoded['choices'] as List?;
-    if (choices == null || choices.isEmpty) {
+    final raw = await transport.postJson(url: url, headers: headers, body: body);
+    final dynamic decoded = _decodeJsonObject(raw);
+    final choices = decoded['choices'];
+    if (choices is! List || choices.isEmpty) {
       throw LlmException('No choices in response: $raw');
     }
-    final first = choices.first as Map<String, dynamic>;
-    final message = first['message'] as Map<String, dynamic>?;
+    final first = choices.first;
+    if (first is! Map<String, dynamic>) {
+      throw LlmException('Unexpected choice type in response: $raw');
+    }
+    final message = first['message'];
     final content = _visibleContent(message);
-    final usage = decoded['usage'] as Map<String, dynamic>?;
+    final usage = decoded['usage'];
+    int? _readInt(dynamic n) {
+      if (n is num) return n.toInt();
+      if (n is String) return int.tryParse(n);
+      return null;
+    }
+    String? reason;
+    if (first['finish_reason'] is String) reason = first['finish_reason'] as String;
     return LlmChatResponse(
       content: content,
-      promptTokens: (usage?['prompt_tokens'] as num?)?.toInt(),
-      completionTokens: (usage?['completion_tokens'] as num?)?.toInt(),
-      finishReason: first['finish_reason'] as String?,
+      promptTokens: usage is Map<String, dynamic>
+          ? _readInt(usage['prompt_tokens'])
+          : null,
+      completionTokens: usage is Map<String, dynamic>
+          ? _readInt(usage['completion_tokens'])
+          : null,
+      finishReason: reason,
+    );
+  }
+
+  // ── Anthropic-compatible format (MiniMax /anthropic) ──────────────
+  Future<LlmChatResponse> _chatAnthropic(LlmChatRequest request) async {
+    var base = _normalizeBaseUrl(config.baseUrl);
+    final url = '$base/v1/messages';
+    final model = request.model.isEmpty ? config.model : request.model;
+    String? system;
+    final msgs = <Map<String, dynamic>>[];
+    for (final m in request.messages) {
+      if (m.role == 'system') {
+        system = m.content;
+      } else {
+        msgs.add({'role': m.role, 'content': m.content});
+      }
+    }
+    final body = jsonEncode({
+      'model': model,
+      'max_tokens': request.maxTokens ?? 1024,
+      'temperature': request.temperature,
+      'messages': msgs,
+      if (system != null) 'system': system,
+      'stream': false,
+      ..._providerOptions(model),
+    });
+    final headers = {
+      'Content-Type': 'application/json',
+      'x-api-key': config.apiKey,
+      'anthropic-version': '2023-06-01',
+    };
+    final raw = await transport.postJson(url: url, headers: headers, body: body);
+    final dynamic decoded = _decodeJsonObject(raw);
+    // Anthropic response: content is a list of blocks [{type:"text",text:"..."}]
+    final contentList = decoded['content'];
+    if (contentList is! List || contentList.isEmpty) {
+      // Some providers return a non-empty message even with no text
+      // blocks (e.g. a tool_use). Surface a clear error instead of the
+      // empty string we'd get from joining zero blocks.
+      final err = decoded['error'];
+      if (err is Map && err['message'] is String) {
+        throw LlmException('Upstream error: ${err['message']}');
+      }
+      throw LlmException('No content in response: $raw');
+    }
+    final textParts = <String>[];
+    for (final block in contentList) {
+      if (block is Map<String, dynamic>) {
+        if (block['type'] == 'text' && block['text'] is String) {
+          textParts.add(block['text'] as String);
+        } else if (block['type'] == 'thinking' && block['thinking'] is String) {
+          // Ignore: reasoning blocks aren't user-facing.
+        } else if (block['type'] == 'tool_use') {
+          // Surface a hint instead of silently dropping it.
+          textParts.add('[tool_use: ${block['name']}]');
+        }
+      }
+    }
+    if (textParts.isEmpty) {
+      throw LlmException('Model returned non-text content only — try a different model');
+    }
+    int? _readInt(dynamic n) {
+      if (n is num) return n.toInt();
+      if (n is String) return int.tryParse(n);
+      return null;
+    }
+    final usage = decoded['usage'];
+    String? reason;
+    if (decoded['stop_reason'] is String) reason = decoded['stop_reason'] as String;
+    return LlmChatResponse(
+      content: textParts.join().trim(),
+      promptTokens: usage is Map<String, dynamic>
+          ? _readInt(usage['input_tokens'])
+          : null,
+      completionTokens: usage is Map<String, dynamic>
+          ? _readInt(usage['output_tokens'])
+          : null,
+      finishReason: reason,
     );
   }
 
@@ -300,12 +446,11 @@ class LlmClient {
   ///   - https://open.bigmodel.cn/api/paas/v4 → /chat/completions (no /v1)
   ///   - https://example.com                  → /v1/chat/completions
   static String _chatCompletionsUrl(String baseUrl) {
-    var b = baseUrl.trim();
-    while (b.endsWith('/')) b = b.substring(0, b.length - 1);
+    var b = _normalizeBaseUrl(baseUrl);
     if (b.toLowerCase().endsWith('/chat/completions')) return b;
-    // If URL already ends with a /vN style path segment (v1, v2, v4, etc.),
-    // don't append /v1 — the user has already specified the API version.
-    if (!RegExp(r'/v\d+$').hasMatch(b)) b = '$b/v1';
+    // If URL already ends with a /vN style path segment (v1, v2, v4,
+    // v1beta, v2-preview etc.) don't append /v1.
+    if (!RegExp(r'/v\d+[a-zA-Z0-9_-]*$').hasMatch(b)) b = '$b/v1';
     return '$b/chat/completions';
   }
 
@@ -316,11 +461,34 @@ class LlmClient {
     };
   }
 
-  static String _visibleContent(Map<String, dynamic>? message) {
-    final raw = message?['content'];
+  /// Shared decoder gate: parse JSON, enforce the top-level shape,
+  /// throw a typed [LlmException] on any failure so callers only have
+  /// to catch one exception class.
+  static Map<String, dynamic> _decodeJsonObject(String raw) {
+    dynamic decoded;
+    try {
+      decoded = jsonDecode(raw);
+    } on FormatException catch (e) {
+      throw LlmException('Malformed JSON: ${e.message}');
+    }
+    if (decoded is! Map<String, dynamic>) {
+      throw LlmException('Unexpected response shape (expected JSON object): $raw');
+    }
+    return decoded;
+  }
+
+  static String _visibleContent(dynamic message) {
+    if (message is! Map<String, dynamic>) return '';
+    final raw = message['content'];
     if (raw is! String) return '';
     return raw
         .replaceAll(RegExp(r'<think>.*?</think>', dotAll: true), '')
         .trim();
+  }
+
+  static String _normalizeBaseUrl(String baseUrl) {
+    var b = baseUrl.trim();
+    while (b.endsWith('/')) b = b.substring(0, b.length - 1);
+    return b;
   }
 }

@@ -41,8 +41,7 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
 
   @override
   void dispose() {
-    // Persist the accumulated study time for today. Minimum 1 minute
-    // granularity — anything less rounds to 0.
+    // Accumulate study time (minimum 1 minute granularity).
     _accumulated += DateTime.now().difference(_sessionStart);
     final minutes = (_accumulated.inSeconds / 60).round();
     if (minutes > 0) {
@@ -50,10 +49,17 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
         ReviewRepository.instance.addStudyMinutes(DateTime.now(), minutes);
       } catch (_) {}
     }
-    // Flush any pending debounced writes (review state, activity) so
-    // data isn't lost if the user kills the app right after answering.
+    // Best-effort flush: dispose can't await, so we fire the flush in
+    // a detached Future. In practice Flutter keeps the process alive
+    // long enough for a single file write to complete. We also force
+    // an eager flush after every answer (below) so dispose only has
+    // to drain the "final click" delta.
     try {
-      ReviewRepository.instance.flush();
+      unawaited(Future.microtask(() async {
+        try {
+          await ReviewRepository.instance.flush();
+        } catch (_) {}
+      }));
     } catch (_) {}
     super.dispose();
   }
@@ -63,11 +69,12 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
     final session = ref.watch(learningSessionProvider);
     ref.watch(vocabMetaProvider)[widget.vocabId];
 
+    final qCount = session.questions.length;
     final progress = session.phase == SessionPhase.finished
         ? 1.0
-        : (session.phase == SessionPhase.wrongDetail
-              ? (session.currentIndex + 1) / session.questions.length
-              : session.progress);
+        : (session.phase == SessionPhase.wrongDetail && qCount > 0
+              ? ((session.currentIndex + 1) / qCount).clamp(0.0, 1.0)
+              : session.progress.clamp(0.0, 1.0));
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -101,34 +108,23 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
             ),
           ),
           Expanded(
-            child: AnimatedSwitcher(
-              duration: const Duration(milliseconds: 250),
-              switchInCurve: Curves.easeOutCubic,
-              switchOutCurve: Curves.easeIn,
-              transitionBuilder: (child, anim) =>
-                  FadeTransition(opacity: anim, child: child),
-              child: switch (session.phase) {
-                SessionPhase.loading => const Center(
-                  child: CircularProgressIndicator(),
-                ),
-                SessionPhase.asking => _AskingView(
-                  session: session,
-                  vocabId: widget.vocabId,
-                  key: const ValueKey('asking'),
-                ),
-                SessionPhase.wrongDetail => _WrongDetailView(
-                  session: session,
-                  vocabId: widget.vocabId,
-                  key: const ValueKey('wrong'),
-                ),
-                SessionPhase.finished => _FinishedView(
-                  key: const ValueKey('finished'),
-                  total: session.questions.length,
-                  correct: session.correctCount,
-                  onClose: () => Navigator.of(context).pop(),
-                ),
-              },
-            ),
+            child: switch (session.phase) {
+              SessionPhase.loading => const Center(
+                child: CircularProgressIndicator(color: AppColors.primary),
+              ),
+              SessionPhase.asking => _AskingView(
+                session: session,
+                key: const ValueKey('asking'),
+              ),
+              SessionPhase.wrongDetail => _WrongDetailView(
+                session: session,
+                key: const ValueKey('wrong'),
+              ),
+              SessionPhase.finished => _FinishedView(
+                key: const ValueKey('finished'),
+                onClose: () => Navigator.of(context).pop(),
+              ),
+            },
           ),
         ],
       ),
@@ -138,8 +134,7 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
 
 class _AskingView extends ConsumerStatefulWidget {
   final LearningSessionState session;
-  final String vocabId;
-  const _AskingView({required this.session, required this.vocabId, super.key});
+  const _AskingView({required this.session, super.key});
 
   @override
   ConsumerState<_AskingView> createState() => _AskingViewState();
@@ -187,7 +182,8 @@ class _AskingViewState extends ConsumerState<_AskingView> {
 
   void _onOptionTap(int i) {
     if (_locked) return;
-    final q = widget.session.currentQuestion!;
+    final q = widget.session.currentQuestion;
+    if (q == null) return;
     final correct = i == q.correctIndex;
     setState(() {
       _selectedIndex = i;
@@ -195,9 +191,12 @@ class _AskingViewState extends ConsumerState<_AskingView> {
     });
     if (correct) {
       HapticFeedback.lightImpact();
-      // Positive reinforcement: play the word on every correct answer.
-      TtsService.instance.speak(text: q.word.word);
-      Future.delayed(const Duration(milliseconds: 750), () {
+      // No auto-play on correct — the user already knows the word.
+      // Audio is reserved for: (1) listening questions where audio IS
+      // the prompt, (2) the wrong-answer detail card where hearing the
+      // correct pronunciation helps learning. Playing here just makes
+      // the flow feel laggy.
+      Future.delayed(const Duration(milliseconds: 320), () {
         if (!mounted) return;
         ref.read(learningSessionProvider.notifier).answer(i);
       });
@@ -223,7 +222,12 @@ class _AskingViewState extends ConsumerState<_AskingView> {
   @override
   Widget build(BuildContext context) {
     final session = widget.session;
-    final q = session.currentQuestion!;
+    final q = session.currentQuestion;
+    if (q == null) {
+      return const Center(
+        child: CircularProgressIndicator(color: AppColors.primary),
+      );
+    }
     return SafeArea(
       child: Column(
         children: [
@@ -240,11 +244,8 @@ class _AskingViewState extends ConsumerState<_AskingView> {
                 const Spacer(),
                 Text(
                   '${session.currentIndex + 1} / ${session.questions.length}',
-                  style: const TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.inkMuted,
-                  ),
+                  style: AppTheme.rowTitle()
+                      .copyWith(fontSize: 13, color: AppColors.inkMuted),
                 ),
               ],
             ),
@@ -265,25 +266,27 @@ class _AskingViewState extends ConsumerState<_AskingView> {
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(
-              AppSpacing.x5,
-              AppSpacing.x3,
-              AppSpacing.x5,
-              AppSpacing.x4 + MediaQuery.of(context).padding.bottom,
-            ),
-            child: Column(
-              children: [
-                for (var i = 0; i < q.options.length; i++) ...[
-                  if (i > 0) const SizedBox(height: AppSpacing.x2),
-                  _OptionTile(
-                    label: String.fromCharCode(65 + i),
-                    text: q.options[i],
-                    state: _optionState(i, q.correctIndex),
-                    onTap: () => _onOptionTap(i),
-                  ),
+          Expanded(
+            flex: 2,
+            child: SingleChildScrollView(
+              padding: EdgeInsets.fromLTRB(
+                AppSpacing.x5,
+                AppSpacing.x3,
+                AppSpacing.x5,
+                AppSpacing.x4 + MediaQuery.of(context).padding.bottom,
+              ),
+              child: Column(
+                children: [
+                  for (var i = 0; i < q.options.length; i++) ...[
+                    if (i > 0) const SizedBox(height: AppSpacing.x2),
+                    _OptionTile(
+                      text: q.options[i],
+                      state: _optionState(i, q.correctIndex),
+                      onTap: () => _onOptionTap(i),
+                    ),
+                  ],
                 ],
-              ],
+              ),
             ),
           ),
         ],
@@ -294,10 +297,8 @@ class _AskingViewState extends ConsumerState<_AskingView> {
 
 class _WrongDetailView extends ConsumerStatefulWidget {
   final LearningSessionState session;
-  final String vocabId;
   const _WrongDetailView({
     required this.session,
-    required this.vocabId,
     super.key,
   });
 
@@ -313,20 +314,37 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
   void initState() {
     super.initState();
     // Read the persisted favorite state for this word.
-    try {
-      _isFavorite = ReviewRepository.instance.favorites.contains(
-        widget.session.currentQuestion!.word.id,
-      );
-    } catch (_) {}
+    _refreshFavorite();
     // Auto-play the word on entry so the user hears the correct
     // pronunciation for the one they got wrong.
     WidgetsBinding.instance.addPostFrameCallback((_) => _maybeAutoPlay());
   }
 
+  void _refreshFavorite() {
+    final q = widget.session.currentQuestion;
+    if (q == null) {
+      _isFavorite = false;
+      return;
+    }
+    try {
+      _isFavorite = ReviewRepository.instance.favorites.contains(q.word.id);
+    } catch (_) {
+      _isFavorite = false;
+    }
+  }
+
   @override
   void didUpdateWidget(covariant _WrongDetailView old) {
     super.didUpdateWidget(old);
-    if (widget.session.currentIndex != old.session.currentIndex) {
+    // Reset whenever the question *identity* changes, not just the
+    // index. This guards against future refactors where the same
+    // index might host a different word (e.g. hot-reload of the
+    // catalog, swap of the questions list mid-retry build).
+    final newId = widget.session.currentQuestion?.word.id;
+    final oldId = old.session.currentQuestion?.word.id;
+    if (widget.session.currentIndex != old.session.currentIndex ||
+        newId != oldId) {
+      _refreshFavorite();
       _maybeAutoPlay();
     }
   }
@@ -340,7 +358,9 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
   }
 
   Future<void> _toggleFavorite() async {
-    final wordId = widget.session.currentQuestion!.word.id;
+    final q = widget.session.currentQuestion;
+    if (q == null) return;
+    final wordId = q.word.id;
     bool nowFav;
     try {
       nowFav = await ReviewRepository.instance.toggleFavorite(wordId);
@@ -351,7 +371,9 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
   }
 
   Future<void> _markRemoved() async {
-    final wordId = widget.session.currentQuestion!.word.id;
+    final q = widget.session.currentQuestion;
+    if (q == null) return;
+    final wordId = q.word.id;
     try {
       await ReviewRepository.instance.markRemoved(wordId);
     } catch (_) {}
@@ -364,7 +386,12 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
 
   @override
   Widget build(BuildContext context) {
-    final q = widget.session.currentQuestion!;
+    final q = widget.session.currentQuestion;
+    if (q == null) {
+      return const Center(
+        child: CircularProgressIndicator(color: AppColors.primary),
+      );
+    }
     final w = q.word;
     return SafeArea(
       child: SingleChildScrollView(
@@ -380,48 +407,47 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
             const SizedBox(height: AppSpacing.x2),
             Row(
               children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: AppSpacing.x3,
-                    vertical: 6,
-                  ),
-                  decoration: BoxDecoration(
-                    color: AppColors.danger.withValues(alpha: 0.12),
-                    borderRadius: BorderRadius.circular(AppRadii.pill),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Icon(
-                        Icons.cancel_rounded,
-                        color: AppColors.danger,
-                        size: 16,
-                      ),
-                      SizedBox(width: 6),
-                      Text(
-                        '答错了',
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w700,
-                          color: AppColors.danger,
-                        ),
-                      ),
-                    ],
+                Text(
+                  '答错了',
+                  style: AppTheme.mutedCaption(
+                    size: 13,
+                    color: AppColors.danger,
                   ),
                 ),
                 const Spacer(),
-                _FavoriteChip(filled: _isFavorite, onTap: _toggleFavorite),
-                const SizedBox(width: 8),
-                _SmallIconButton(
-                  icon: Icons.remove_circle_outline,
-                  label: '移除',
-                  color: AppColors.danger,
-                  onTap: _markRemoved,
+                IconButton(
+                  tooltip: _isFavorite ? '取消收藏' : '收藏',
+                  onPressed: _toggleFavorite,
+                  icon: Icon(
+                    _isFavorite
+                        ? Icons.star_rounded
+                        : Icons.star_outline_rounded,
+                    color: _isFavorite
+                        ? AppColors.warning
+                        : AppColors.inkSubtle,
+                    size: 20,
+                  ),
+                  visualDensity: VisualDensity.compact,
+                  padding: EdgeInsets.zero,
+                  constraints: const BoxConstraints(),
+                ),
+                const SizedBox(width: AppSpacing.x3),
+                IconButton(
+                  tooltip: '移除',
+                  onPressed: _markRemoved,
+                  icon: const Icon(
+                    Icons.delete_outline,
+                    color: AppColors.inkSubtle,
+                    size: 20,
+                  ),
+                  visualDensity: VisualDensity.compact,
+                  padding: EdgeInsets.zero,
+                  constraints: const BoxConstraints(),
                 ),
               ],
             ),
             const SizedBox(height: AppSpacing.x4),
-            _ContextCard(word: w, vocabId: widget.vocabId),
+            _ContextCard(word: w),
             const SizedBox(height: AppSpacing.x5),
             SizedBox(
               width: double.infinity,
@@ -432,91 +458,11 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
                   backgroundColor: AppColors.danger,
                   minimumSize: const Size.fromHeight(52),
                 ),
-                child: const Text(
+                child: Text(
                   '继续，稍后再测',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+                  style: AppTheme.cardTitle()
+                      .copyWith(fontSize: 16, color: AppColors.onPrimary),
                 ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _SmallIconButton extends StatelessWidget {
-  final IconData icon;
-  final String label;
-  final Color color;
-  final VoidCallback onTap;
-  const _SmallIconButton({
-    required this.icon,
-    required this.label,
-    required this.color,
-    required this.onTap,
-  });
-  @override
-  Widget build(BuildContext context) {
-    return PressableScale(
-      scaleFactor: 0.94,
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-        decoration: BoxDecoration(
-          color: color.withValues(alpha: 0.12),
-          borderRadius: BorderRadius.circular(AppRadii.pill),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(icon, size: 14, color: color),
-            const SizedBox(width: 4),
-            Text(
-              label,
-              style: TextStyle(
-                fontSize: 12,
-                color: color,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/// Star-shaped chip: filled = gold star, outlined = grey.
-/// Uses [FavoriteStar] for a small rotate+scale transition on toggle.
-class _FavoriteChip extends StatelessWidget {
-  final bool filled;
-  final VoidCallback onTap;
-  const _FavoriteChip({required this.filled, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    final color = filled ? AppColors.warning : AppColors.inkMuted;
-    return PressableScale(
-      scaleFactor: 0.94,
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-        decoration: BoxDecoration(
-          color: color.withValues(alpha: 0.12),
-          borderRadius: BorderRadius.circular(AppRadii.pill),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            FavoriteStar(filled: filled, color: color, size: 14),
-            const SizedBox(width: 4),
-            Text(
-              filled ? '已收藏' : '收藏',
-              style: TextStyle(
-                fontSize: 12,
-                color: color,
-                fontWeight: FontWeight.w600,
               ),
             ),
           ],
@@ -528,18 +474,17 @@ class _FavoriteChip extends StatelessWidget {
 
 /// Immersive wrong-answer context card.
 ///
-/// Shows the word, then the example sentence above the definition so the
-/// user can learn from context. Whole-sentence TTS is available when an
-/// English example exists.
-class _ContextCard extends ConsumerWidget {
+/// Content order follows 无痛单词's English-first layout:
+/// word + phonetic (small header) → English example (hero) →
+/// Chinese translation → Chinese example → synonyms/antonyms.
+/// No section labels — content flows naturally.
+class _ContextCard extends StatelessWidget {
   final VocabWord word;
-  final String vocabId;
 
-  const _ContextCard({required this.word, required this.vocabId});
+  const _ContextCard({required this.word});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final meta = ref.watch(vocabMetaProvider)[vocabId];
+  Widget build(BuildContext context) {
     final hasExample = word.exampleEn.trim().isNotEmpty;
     return SizedBox(
       width: double.infinity,
@@ -548,68 +493,58 @@ class _ContextCard extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Word + phonetic as a compact header, not the hero.
             Row(
               children: [
-                PillTag.domain(
-                  meta?.name ?? vocabId,
-                  color: _domainColor(word.domain),
-                  icon: Icons.bolt,
-                ),
-                const SizedBox(width: 6),
-                PillTag.level(word.level),
-              ],
-            ),
-            const SizedBox(height: AppSpacing.x4),
-            Row(
-              children: [
-                Expanded(
+                Flexible(
                   child: Text(
                     word.word,
-                    style: AppTheme.wordDisplay(size: 32),
+                    style: AppTheme.wordDisplay(size: 20),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
                   ),
                 ),
+                const SizedBox(width: AppSpacing.x2),
+                Flexible(
+                  child: Text(
+                    '${word.phonetic}  ${word.pos}',
+                    style: AppTheme.phonetic(fontSize: 13),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
+                ),
+                const Spacer(),
                 _AudioButton(word: word),
               ],
             ),
-            const SizedBox(height: 2),
-            Text('${word.phonetic}  ${word.pos}', style: AppTheme.phonetic()),
+            // English example as the hero — largest text on the card.
             if (hasExample) ...[
               const SizedBox(height: AppSpacing.x5),
-              _SectionTitle(icon: Icons.format_quote_rounded, label: '例句'),
-              const SizedBox(height: AppSpacing.x3),
               Text(
                 word.exampleEn,
-                style: const TextStyle(
-                  fontSize: 17,
+                style: AppTheme.wordDisplay(
+                  size: 20,
                   color: AppColors.ink,
-                  fontWeight: FontWeight.w600,
-                  height: 1.6,
-                ),
-              ),
-              const SizedBox(height: AppSpacing.x2),
-              Text(
-                word.exampleCn,
-                style: const TextStyle(
-                  fontSize: 14,
-                  color: AppColors.inkMuted,
-                  height: 1.5,
-                ),
+                  weight: FontWeight.w400,
+                ).copyWith(height: 1.6),
               ),
               const SizedBox(height: AppSpacing.x3),
               _SentenceAudioButton(word: word),
             ],
+            // Chinese translation — the answer the user got wrong.
             const SizedBox(height: AppSpacing.x5),
-            _SectionTitle(icon: Icons.translate_rounded, label: '释义'),
-            const SizedBox(height: AppSpacing.x3),
             Text(
               word.translation,
-              style: const TextStyle(
-                fontSize: 16,
-                color: AppColors.ink,
-                fontWeight: FontWeight.w600,
-                height: 1.5,
-              ),
+              style: AppTheme.cardTitle().copyWith(fontSize: 16, height: 1.5),
             ),
+            // Chinese example translation (muted, supplementary).
+            if (hasExample && word.exampleCn.trim().isNotEmpty) ...[
+              const SizedBox(height: AppSpacing.x2),
+              Text(
+                word.exampleCn,
+                style: AppTheme.mutedCaption(size: 14).copyWith(height: 1.5),
+              ),
+            ],
             if (word.synonyms.isNotEmpty) ...[
               const SizedBox(height: AppSpacing.x4),
               _DetailRow(label: '同义', content: word.synonyms.join(' · ')),
@@ -621,37 +556,6 @@ class _ContextCard extends ConsumerWidget {
           ],
         ),
       ),
-    );
-  }
-
-  Color _domainColor(String domain) {
-    final h = domain.hashCode.abs();
-    return AppColors.qwertyPalette[h % AppColors.qwertyPalette.length];
-  }
-}
-
-class _SectionTitle extends StatelessWidget {
-  final IconData icon;
-  final String label;
-
-  const _SectionTitle({required this.icon, required this.label});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(icon, size: 16, color: AppColors.primary),
-        const SizedBox(width: 6),
-        Text(
-          label,
-          style: const TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w700,
-            color: AppColors.primary,
-            letterSpacing: 0.8,
-          ),
-        ),
-      ],
     );
   }
 }
@@ -672,7 +576,7 @@ class _SentenceAudioButton extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: AppSpacing.x3,
-          vertical: 8,
+          vertical: AppSpacing.x2,
         ),
         decoration: BoxDecoration(
           color: AppColors.primarySoft,
@@ -680,20 +584,16 @@ class _SentenceAudioButton extends StatelessWidget {
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
-          children: const [
-            Icon(
+          children: [
+            const Icon(
               Icons.volume_up_rounded,
               size: 16,
               color: AppColors.primary,
             ),
-            SizedBox(width: 6),
+            const SizedBox(width: AppSpacing.x1_5),
             Text(
               '播放例句',
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-                color: AppColors.primary,
-              ),
+              style: AppTheme.chipCaption(),
             ),
           ],
         ),
@@ -713,20 +613,13 @@ class _DetailRow extends StatelessWidget {
       children: [
         Text(
           '$label  ',
-          style: const TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w700,
-            color: AppColors.inkSubtle,
-          ),
+          style: AppTheme.chipCaption(color: AppColors.inkSubtle),
         ),
         Expanded(
           child: Text(
             content,
-            style: const TextStyle(
-              fontSize: 13,
-              color: AppColors.ink,
-              height: 1.5,
-            ),
+            style: AppTheme.mutedCaption(size: 13, color: AppColors.ink)
+                .copyWith(height: 1.5),
           ),
         ),
       ],
@@ -770,7 +663,7 @@ class _QuestionTypeChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: AppSpacing.x3,
-        vertical: 6,
+        vertical: AppSpacing.x1_5,
       ),
       decoration: BoxDecoration(
         color: AppColors.primarySoft,
@@ -784,15 +677,10 @@ class _QuestionTypeChip extends StatelessWidget {
             size: 14,
             color: AppColors.primary,
           ),
-          const SizedBox(width: 4),
+          const SizedBox(width: AppSpacing.x1),
           Text(
             label,
-            style: const TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w700,
-              color: AppColors.primary,
-              letterSpacing: 0.4,
-            ),
+            style: AppTheme.chipCaption(),
           ),
         ],
       ),
@@ -860,21 +748,15 @@ class _MeaningStage extends StatelessWidget {
         Text(
           meaning,
           textAlign: TextAlign.center,
-          style: const TextStyle(
+          style: AppTheme.screenHeader().copyWith(
             fontSize: 28,
-            fontWeight: FontWeight.w700,
-            color: AppColors.ink,
             height: 1.4,
           ),
         ),
         const SizedBox(height: AppSpacing.x3),
         Text(
           '选择对应的英文',
-          style: TextStyle(
-            fontSize: 13,
-            color: AppColors.inkSubtle,
-            fontWeight: FontWeight.w500,
-          ),
+          style: AppTheme.mutedCaption(size: 13, color: AppColors.inkSubtle),
         ),
       ],
     );
@@ -894,11 +776,7 @@ class _ListenStage extends StatelessWidget {
         const SizedBox(height: AppSpacing.x4),
         Text(
           '点击播放发音',
-          style: TextStyle(
-            fontSize: 13,
-            color: AppColors.inkSubtle,
-            fontWeight: FontWeight.w500,
-          ),
+          style: AppTheme.mutedCaption(size: 13, color: AppColors.inkSubtle),
         ),
       ],
     );
@@ -937,13 +815,11 @@ class _LargePlayButton extends StatelessWidget {
 enum _OptionState { normal, correct, wrong, dimmed }
 
 class _OptionTile extends StatelessWidget {
-  final String label;
   final String text;
   final _OptionState state;
   final VoidCallback? onTap;
 
   const _OptionTile({
-    required this.label,
     required this.text,
     required this.state,
     this.onTap,
@@ -957,11 +833,9 @@ class _OptionTile extends StatelessWidget {
       onTap: state == _OptionState.normal ? onTap : null,
       child: ConstrainedBox(
         constraints: const BoxConstraints(minHeight: 56),
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 220),
-          curve: Curves.easeOutCubic,
+        child: Container(
           padding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.x4,
+            horizontal: AppSpacing.x5,
             vertical: AppSpacing.x3,
           ),
           decoration: BoxDecoration(
@@ -974,39 +848,18 @@ class _OptionTile extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Container(
-                width: 32,
-                height: 32,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: colors.badgeBg,
-                  borderRadius: BorderRadius.circular(AppRadii.sm),
-                ),
-                child: Text(
-                  label,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    color: colors.badgeText,
-                    fontSize: 14,
-                  ),
-                ),
-              ),
-              const SizedBox(width: AppSpacing.x3),
               Expanded(
                 child: Text(
                   text,
-                  style: TextStyle(
-                    fontSize: 15,
+                  style: AppTheme.mutedCaption(
+                    size: 15,
                     color: colors.text,
-                    fontWeight: FontWeight.w500,
-                    height: 1.4,
-                  ),
+                  ).copyWith(fontWeight: FontWeight.w500, height: 1.4),
                 ),
               ),
               if (state == _OptionState.correct)
-                const Icon(Icons.check_circle_rounded, color: AppColors.success),
-              if (state == _OptionState.wrong)
-                const Icon(Icons.cancel_rounded, color: AppColors.danger),
+                const Icon(Icons.check_circle_rounded,
+                    color: AppColors.primary, size: 20),
             ],
           ),
         ),
@@ -1018,34 +871,26 @@ class _OptionTile extends StatelessWidget {
     switch (state) {
       case _OptionState.correct:
         return _OptionColors(
-          background: AppColors.success.withValues(alpha: 0.1),
-          border: AppColors.success.withValues(alpha: 0.4),
-          badgeBg: AppColors.success.withValues(alpha: 0.15),
-          badgeText: AppColors.success,
-          text: AppColors.success,
+          background: AppColors.surface,
+          border: AppColors.primary,
+          text: AppColors.primary,
         );
       case _OptionState.wrong:
         return _OptionColors(
-          background: AppColors.danger.withValues(alpha: 0.1),
-          border: AppColors.danger.withValues(alpha: 0.4),
-          badgeBg: AppColors.danger.withValues(alpha: 0.15),
-          badgeText: AppColors.danger,
-          text: AppColors.danger,
+          background: AppColors.surface,
+          border: AppColors.inkSubtle.withValues(alpha: 0.15),
+          text: AppColors.inkSubtle,
         );
       case _OptionState.dimmed:
         return _OptionColors(
-          background: AppColors.surface,
-          border: AppColors.inkSubtle.withValues(alpha: 0.15),
-          badgeBg: AppColors.surfaceMuted,
-          badgeText: AppColors.inkSubtle,
+          background: AppColors.surfaceMuted,
+          border: AppColors.inkSubtle.withValues(alpha: 0.1),
           text: AppColors.inkSubtle,
         );
       case _OptionState.normal:
         return _OptionColors(
           background: AppColors.surface,
           border: AppColors.inkSubtle.withValues(alpha: 0.2),
-          badgeBg: AppColors.primary.withValues(alpha: 0.1),
-          badgeText: AppColors.primary,
           text: AppColors.ink,
         );
     }
@@ -1055,15 +900,11 @@ class _OptionTile extends StatelessWidget {
 class _OptionColors {
   final Color background;
   final Color border;
-  final Color badgeBg;
-  final Color badgeText;
   final Color text;
 
   const _OptionColors({
     required this.background,
     required this.border,
-    required this.badgeBg,
-    required this.badgeText,
     required this.text,
   });
 }
@@ -1073,52 +914,38 @@ class _ProgressBar extends StatelessWidget {
   const _ProgressBar({required this.progress});
   @override
   Widget build(BuildContext context) {
-    return TweenAnimationBuilder<double>(
-      tween: Tween<double>(begin: 0.0, end: progress),
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeOutCubic,
-      builder: (context, value, _) => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            '${(value * 100).round()}%',
-            style: const TextStyle(
-              fontSize: 12,
-              color: AppColors.inkMuted,
-              fontWeight: FontWeight.w600,
-            ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          '${(progress * 100).round()}%',
+          style: AppTheme.rowTitle()
+              .copyWith(fontSize: 12, color: AppColors.inkMuted),
+        ),
+        const SizedBox(height: AppSpacing.x1),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(AppRadii.pill),
+          child: LinearProgressIndicator(
+            value: progress,
+            minHeight: AppSpacing.x1_5,
+            backgroundColor: AppColors.surfaceMuted,
+            valueColor: const AlwaysStoppedAnimation(AppColors.primary),
           ),
-          const SizedBox(height: 4),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(AppRadii.pill),
-            child: LinearProgressIndicator(
-              value: value,
-              minHeight: 6,
-              backgroundColor: AppColors.surfaceMuted,
-              valueColor: const AlwaysStoppedAnimation(AppColors.primary),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
 
-class _FinishedView extends ConsumerWidget {
-  final int total;
-  final int correct;
+class _FinishedView extends StatelessWidget {
   final VoidCallback onClose;
   const _FinishedView({
-    required this.total,
-    required this.correct,
     required this.onClose,
     super.key,
   });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final pct = total == 0 ? 0 : (correct * 100 / total).round();
-    final passed = pct >= 60;
+  Widget build(BuildContext context) {
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(AppSpacing.x6),
@@ -1127,25 +954,16 @@ class _FinishedView extends ConsumerWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(passed ? '🎉' : '💪', style: const TextStyle(fontSize: 48)),
-              const SizedBox(height: AppSpacing.x4),
               Text(
-                passed ? '本组完成' : '继续加油',
+                '本组完成',
                 style: AppTheme.wordDisplay(size: 24, color: AppColors.ink),
-              ),
-              const SizedBox(height: AppSpacing.x2),
-              Text(
-                '$correct / $total  ·  正确率 $pct%',
-                style: const TextStyle(
-                  fontSize: 14,
-                  color: AppColors.inkMuted,
-                  fontWeight: FontWeight.w500,
-                ),
               ),
               const SizedBox(height: AppSpacing.x6),
               FilledButton(
                 onPressed: onClose,
-                style: FilledButton.styleFrom(minimumSize: const Size(180, 48)),
+                style: FilledButton.styleFrom(
+                  minimumSize: const Size.fromHeight(48),
+                ),
                 child: const Text('完成'),
               ),
             ],

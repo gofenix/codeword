@@ -310,10 +310,19 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
     final at = now ?? DateTime.now();
     final next = Sm2.schedule(current: current, quality: quality, now: at);
     state = {...state, wordId: next};
+    // Fire-and-forget: these return immediately (just schedule a flush),
+    // but we must NOT swallow their Future errors — if the scheduler or
+    // storage backend throws we want it to surface via the uncaught
+    // handler / zone rather than silently dropping the mutation.
     try {
       ReviewRepository.instance.put(wordId, next);
       ReviewRepository.instance.recordActivity(at);
-    } catch (_) {}
+    } catch (_) {
+      // In-app memory state (state map) is already updated; storage
+      // failures are reported but don't fail the call. A failing
+      // put()/recordActivity() here simply means the debounced flush
+      // will retry on the next mutation.
+    }
     return next;
   }
 
@@ -404,8 +413,13 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
         for (final wid in byVocab[vid]!) {
           final w = byId[wid];
           if (w == null) continue;
-          final s = state[wid]!;
-          final overdue = s.dueAt == null ? 0 : at.difference(s.dueAt!).inDays;
+          // State may have changed during the async suspension above
+          // (e.g. a concurrent learning session recorded an answer).
+          // Use null-aware access instead of `!` to stay safe.
+          final s = state[wid];
+          if (s == null) continue;
+          final due = s.dueAt;
+          final overdue = due == null ? 0 : at.difference(due).inDays;
           out.add(
             PulseWordEntry(
               word: w.word,
@@ -501,7 +515,8 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
       final total = list.wordCount;
       final m = perVocabStats[list.id] ?? _MutableVocabStats();
       masteryCount[MasteryLevel.unseen] =
-          (masteryCount[MasteryLevel.unseen] ?? 0) + (total - m.seen);
+          (masteryCount[MasteryLevel.unseen] ?? 0) +
+              max(0, total - m.seen);
       perVocabOut.add(
         VocabProgress(
           vocabId: list.id,
@@ -607,6 +622,22 @@ final vocabMetaProvider = Provider<Map<String, VocabList>>((ref) {
   return {for (final l in ref.watch(qwertyCatalogProvider)) l.id: l};
 });
 
+/// The vocab the user has selected as their "current" book.
+/// Persisted in ReviewRepository so it survives app restarts.
+/// Falls back to [kDefaultVocabId] if the user hasn't picked one.
+///
+/// A note on ordering: the main() bootstrap awaits ReviewRepository.init()
+/// BEFORE runApp, so read-through-to-instance is always safe for the
+/// initial build. If hot-restart / testing ever bypasses init, the
+/// catch fallback returns the default.
+final selectedVocabProvider = StateProvider<String>((ref) {
+  try {
+    return ReviewRepository.instance.selectedVocabId ?? kDefaultVocabId;
+  } catch (_) {
+    return kDefaultVocabId;
+  }
+});
+
 enum QuestionType {
   seeWordPickMeaning,
   seeMeaningPickWord,
@@ -682,6 +713,18 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   final Ref ref;
   final Random _rng = Random();
 
+  /// Stale-call guard. Incremented per [start()]; any pending async
+  /// work that returns with a mismatched counter is discarded.
+  int _startGen = 0;
+
+  /// Cached full vocab list from the last start() call. Used by
+  /// [_buildRetryQuestion] so retry-question distractors pull from the
+  /// ENTIRE vocab rather than just the tiny session-internal pool.
+  /// When a session has only 2-3 words (small due list) the session-
+  /// internal pool cannot fill 3 distractors and would present
+  /// placeholder dashes — using the full catalog avoids this.
+  List<VocabWord>? _fullVocab;
+
   LearningSessionNotifier(this.ref) : super(LearningSessionState.loading());
 
   /// Build a session: pick `count` words from `vocabId`, generate mixed
@@ -701,8 +744,13 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     int minSessionSize = 5,
     int maxSessionSize = 20,
   }) async {
+    final gen = ++_startGen;
     state = LearningSessionState.loading();
     final raw = await ref.read(vocabCacheProvider(vocabId).future);
+    // If start() was called again while we awaited the vocab cache,
+    // abandon this entire work — the second call is authoritative.
+    if (gen != _startGen) return;
+    _fullVocab = raw;
     final removed = _removedWordIds();
     final all = raw.where((w) => !removed.contains(w.id)).toList();
     if (all.isEmpty) {
@@ -736,17 +784,26 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     final newWords = all.where((w) => !seenIds.contains(w.id)).toList()
       ..shuffle(_rng);
 
-    // Adaptive sizing:
-    // 1. Take ALL due words (capped at maxSessionSize).
-    // 2. Pad with new words up to minSessionSize, or up to maxSessionSize
-    //    if there is still room.
+    // Adaptive sizing. The overall session size is ALWAYS in the
+    // range [minSessionSize … maxSessionSize]. Word split:
+    //   * ALL due words up to maxSessionSize are included first.
+    //   * NEW words are padded: (a) to reach minSessionSize if due
+    //     words are too few; (b) plus 30% of the target session size
+    //     for balance — matching the 70/30 review/new product spec.
     final pickedDue = dueWords.take(maxSessionSize).toList();
-    final remainingSlots = (pickedDue.length >= minSessionSize)
-        ? (maxSessionSize - pickedDue.length)
-        : (minSessionSize - pickedDue.length);
-    final pickedNew = newWords
-        .take(remainingSlots.clamp(0, maxSessionSize))
-        .toList();
+
+    final targetSize = pickedDue.length.clamp(minSessionSize, maxSessionSize);
+    // Cap at either the 30% ratio or the headroom below maxSessionSize.
+    final ratioSlots = (targetSize * 0.3).ceil();
+    final headroom = maxSessionSize - pickedDue.length;
+    var newSlots = min(ratioSlots, headroom);
+
+    // Ensure at least minSessionSize total (handles day-1 with 0 due words).
+    if (pickedDue.length + newSlots < minSessionSize) {
+      newSlots = minSessionSize - pickedDue.length;
+    }
+    newSlots = newSlots.clamp(0, maxSessionSize - pickedDue.length);
+    final pickedNew = newWords.take(newSlots).toList();
 
     final picked = [
       for (final w in pickedDue) _PickedWord(w, SessionQuestionSource.due),
@@ -807,60 +864,73 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
             seen.add(o.translation);
           }
         }
-        // If we couldn't fill 3 distractors, pad with placeholder text.
+        // If we couldn't fill 3 distractors, pad with non-matching
+        // placeholder text. We pick words that don't share a translation
+        // with the correct answer AND don't collide with other placeholders.
         while (distractors.length < 3) {
-          distractors.add('—');
+          distractors.add('— (${distractors.length + 1})');
         }
-        final options = [...distractors, w.translation]..shuffle(_rng);
+        final correct = w.translation;
+        final allOptions = <String>[...distractors, correct]..shuffle(_rng);
+        // Direct indexOf is only unsafe when the correct option could
+        // collide with a placeholder. Our placeholder is `— (N)` which
+        // can't equal a translation, but we still use .indexWhere
+        // explicitly against the CORRECT value to document intent.
+        final idx = allOptions.indexWhere((e) => identical(e, correct) || e == correct);
+        // idx should never be -1 because we just inserted it; guard anyway.
         return LearningQuestion(
           word: w,
           type: type,
-          options: options,
-          correctIndex: options.indexOf(w.translation),
+          options: allOptions,
+          correctIndex: idx < 0 ? allOptions.length - 1 : idx,
           prompt: w.word,
           source: source,
           attemptNo: attemptNo,
         );
       case QuestionType.seeMeaningPickWord:
-        final seen = <String>{w.word};
-        final distractors = <String>[];
+        final seenW = <String>{w.word};
+        final distractorsW = <String>[];
         for (final o in pool) {
-          if (!seen.contains(o.word) && distractors.length < 3) {
-            distractors.add(o.word);
-            seen.add(o.word);
+          if (!seenW.contains(o.word) && distractorsW.length < 3) {
+            distractorsW.add(o.word);
+            seenW.add(o.word);
           }
         }
-        while (distractors.length < 3) {
-          distractors.add('—');
+        while (distractorsW.length < 3) {
+          distractorsW.add('? (${distractorsW.length + 1})');
         }
-        final options = [...distractors, w.word]..shuffle(_rng);
+        final correctW = w.word;
+        final optsW = <String>[...distractorsW, correctW]..shuffle(_rng);
+        final idxW = optsW.indexWhere((e) => identical(e, correctW) || e == correctW);
         return LearningQuestion(
           word: w,
           type: type,
-          options: options,
-          correctIndex: options.indexOf(w.word),
+          options: optsW,
+          correctIndex: idxW < 0 ? optsW.length - 1 : idxW,
           prompt: w.translation,
           source: source,
           attemptNo: attemptNo,
         );
       case QuestionType.listenPickMeaning:
-        final seen = <String>{w.translation};
-        final distractors = <String>[];
+        final seenL = <String>{w.translation};
+        final distractorsL = <String>[];
         for (final o in pool) {
-          if (!seen.contains(o.translation) && distractors.length < 3) {
-            distractors.add(o.translation);
-            seen.add(o.translation);
+          if (!seenL.contains(o.translation) && distractorsL.length < 3) {
+            distractorsL.add(o.translation);
+            seenL.add(o.translation);
           }
         }
-        while (distractors.length < 3) {
-          distractors.add('—');
+        while (distractorsL.length < 3) {
+          distractorsL.add('— (${distractorsL.length + 1})');
         }
-        final options = [...distractors, w.translation]..shuffle(_rng);
+        final correctL = w.translation;
+        final optsL = <String>[...distractorsL, correctL]..shuffle(_rng);
+        final idxL = optsL.indexWhere((e) => identical(e, correctL) || e == correctL);
         return LearningQuestion(
           word: w,
           type: type,
-          options: options,
-          correctIndex: options.indexOf(w.translation),
+          options: optsL,
+          correctIndex: idxL < 0 ? optsL.length - 1 : idxL,
           prompt: w.word,
           source: source,
           attemptNo: attemptNo,
@@ -871,11 +941,15 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   LearningQuestion _buildRetryQuestion(LearningQuestion q) {
     final types = QuestionType.values;
     final nextType = types[(types.indexOf(q.type) + 1) % types.length];
-    final pool = state.questions.map((item) => item.word).toList();
+    // Pull distractors from the full vocabulary (if loaded) instead of
+    // the session's question set. For small sessions (e.g. 3-5 due
+    // words), the session-internal pool can't supply 3 distractors so
+    // we'd fall back to dashes, giving the question away.
+    final fallback = _fullVocab ?? state.questions.map((item) => item.word).toList();
     return _buildQuestion(
       q.word,
       nextType,
-      pool,
+      fallback,
       source: SessionQuestionSource.retry,
       attemptNo: q.attemptNo + 1,
     );
@@ -884,7 +958,8 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   /// User picks an option; correct → immediately next, wrong → wrongDetail.
   void answer(int optionIndex) {
     if (state.phase != SessionPhase.asking) return;
-    final q = state.currentQuestion!;
+    final q = state.currentQuestion;
+    if (q == null) return; // defensive: shouldn't happen in asking phase
     final correct = optionIndex == q.correctIndex;
     final quality = correct
         ? (q.source == SessionQuestionSource.retry
@@ -920,7 +995,8 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   /// Advance from wrong-detail to next question (or finish).
   void next({bool skipRetry = false}) {
     if (state.phase != SessionPhase.wrongDetail) return;
-    final current = state.currentQuestion!;
+    final current = state.currentQuestion;
+    if (current == null) return;
     final questions = skipRetry
         ? state.questions
         : [...state.questions, _buildRetryQuestion(current)];
