@@ -255,7 +255,7 @@ void main() {
   });
 
   test(
-    'answer persists review state and flush succeeds when repo is ready',
+    'answer eager-flush persists without an explicit flush call',
     () async {
       TestWidgetsFlutterBinding.ensureInitialized();
       ReviewRepository.resetForTesting();
@@ -280,16 +280,95 @@ void main() {
         maxSessionSize: 1,
       );
       final q = container.read(learningSessionProvider).currentQuestion!;
+      expect(backend.review, isNull);
+
       notifier.answer(q.correctIndex);
 
-      await ReviewRepository.instance.flush();
-      final persisted = ReviewRepository.instance.get(word.id);
-      expect(persisted, isNotNull);
-      expect(persisted!.repetitions, 1);
-      expect(backend.review, isNotNull);
-      expect(backend.review!.containsKey(word.id), isTrue);
+      // Drain the event loop until _eagerFlush()'s unawaited flush lands.
+      // Do NOT call ReviewRepository.instance.flush() here.
+      var drained = false;
+      for (var i = 0; i < 100; i++) {
+        await pumpEventQueue();
+        if (backend.review != null && backend.review!.containsKey(word.id)) {
+          drained = true;
+          break;
+        }
+      }
+      expect(drained, isTrue, reason: '_eagerFlush should write to backend');
+      expect(
+        ReviewRepository.instance.get(word.id)?.repetitions,
+        1,
+      );
     },
   );
+
+  test('canStartLearningForVocab ignores removed due words', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    ReviewRepository.resetForTesting();
+    await ReviewRepository.initWithBackend(InMemoryStorageBackend());
+    addTearDown(ReviewRepository.resetForTesting);
+
+    final now = DateTime(2026, 6, 8, 10);
+    const wordId = 'qwerty_test_00001';
+    await ReviewRepository.instance.put(
+      wordId,
+      ReviewState(
+        wordId: wordId,
+        easiness: 250,
+        interval: 0,
+        repetitions: 1,
+        dueAt: now,
+        lastReviewedAt: now.subtract(const Duration(days: 1)),
+      ),
+    );
+    await ReviewRepository.instance.markRemoved(wordId);
+
+    final notifier = ReviewStateNotifier(ReviewRepository.instance.all);
+    final catalog = <VocabList>[
+      const VocabList(
+        id: 'qwerty_test',
+        name: 'Test',
+        description: '',
+        emoji: '📘',
+        domainColor: '#000',
+        level: 1,
+        wordCount: 1,
+      ),
+    ];
+    final stats = notifier.stats(now: now, catalog: catalog);
+    expect(stats.perVocab.single.due, 0);
+    expect(stats.totalDue, 0);
+    expect(canStartLearningForVocab(stats, 'qwerty_test'), isFalse);
+  });
+
+  test('start finishes when every word in the vocab is removed', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    ReviewRepository.resetForTesting();
+    await ReviewRepository.initWithBackend(InMemoryStorageBackend());
+    addTearDown(ReviewRepository.resetForTesting);
+
+    final word = _word('qwerty_test_00001', 'latency', '延迟');
+    await ReviewRepository.instance.markRemoved(word.id);
+
+    final container = ProviderContainer(
+      overrides: [
+        vocabCacheProvider('qwerty_test').overrideWith(
+          (ref) async => [word],
+        ),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    final notifier = container.read(learningSessionProvider.notifier);
+    await notifier.start(
+      vocabId: 'qwerty_test',
+      minSessionSize: 1,
+      maxSessionSize: 1,
+    );
+    final session = container.read(learningSessionProvider);
+    expect(session.phase, SessionPhase.finished);
+    expect(session.questions, isEmpty);
+  });
 
   test(
     'Wrong answer queues the same word for retry later in the session',

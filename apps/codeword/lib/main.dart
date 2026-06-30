@@ -260,11 +260,41 @@ class TodayPage extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            if (!ReviewRepository.isReady) ...[
+              const _PersistenceWarning(),
+              const SizedBox(height: AppSpacing.x4),
+            ],
             _Greeting(newToday: stats.newToday),
             const SizedBox(height: AppSpacing.x5),
             _TodayTaskCard(stats: stats),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class _PersistenceWarning extends StatelessWidget {
+  const _PersistenceWarning();
+
+  @override
+  Widget build(BuildContext context) {
+    return AppCard(
+      padding: const EdgeInsets.all(AppSpacing.x4),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Icon(Icons.warning_amber_rounded, color: AppColors.warning),
+          const SizedBox(width: AppSpacing.x3),
+          Expanded(
+            child: Text(
+              '学习进度无法保存到本地。请重启应用；若问题持续，检查磁盘空间与权限。',
+              style: AppTheme.mutedCaption(size: 13).copyWith(
+                color: AppColors.warning,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -309,7 +339,11 @@ class _TodayTaskCard extends ConsumerWidget {
     final vocabId = ref.watch(selectedVocabProvider);
     final vocabName =
         ref.watch(vocabMetaProvider)[vocabId]?.name ?? vocabId;
-    final allDone = stats.totalDue == 0 && stats.newToday == 0;
+    final vocab = vocabProgressFor(stats, vocabId);
+    final vocabDue = vocab?.due ?? 0;
+    final unseenInVocab = vocab?.unseenWords ?? 0;
+    final canStart = canStartLearningForVocab(stats, vocabId);
+    final allDone = !canStart;
     return AppCard(
       padding: const EdgeInsets.all(AppSpacing.x5),
       child: Column(
@@ -336,8 +370,8 @@ class _TodayTaskCard extends ConsumerWidget {
           const SizedBox(height: AppSpacing.x3),
           Text(
             allDone
-                ? '今天已经完成啦，明天见'
-                : '待复习 ${stats.totalDue} · 今日新词 ${stats.newToday}',
+                ? '这本词书已经学完啦'
+                : '待复习 $vocabDue · 剩余新词 $unseenInVocab · 今日已学 ${stats.newToday}',
             style: AppTheme.mutedCaption(size: 14),
           ),
           const SizedBox(height: AppSpacing.x5),

@@ -22,12 +22,13 @@ String _extractVocabIdFromWordId(String wid) {
 }
 
 /// Whether the selected vocab still has words to study (due or unseen).
-/// Mirrors [LearningSessionNotifier.start] — a vocab is "done" only when
-/// every word has been seen AND nothing is currently due.
+/// Mirrors [LearningSessionNotifier.start] — excludes removed words and
+/// treats a vocab as done only when every non-removed word is seen and
+/// nothing eligible is currently due.
 bool canStartLearningForVocab(ReviewStats stats, String vocabId) {
   for (final v in stats.perVocab) {
     if (v.vocabId == vocabId) {
-      return v.due > 0 || v.seen < v.totalWords;
+      return v.due > 0 || v.unseenWords > 0;
     }
   }
   return false;
@@ -76,9 +77,10 @@ class VocabProgress {
   final String name;
   final String emoji;
   final int totalWords; // words in the bundled JSON
-  final int seen; // words with a review state
+  final int removedWords; // user-marked removed in this list
+  final int seen; // non-removed words with a review state
   final int learned; // words with repetitions >= 1
-  final int due; // words due for review
+  final int due; // non-removed words due for review
   final double averageEasiness;
 
   const VocabProgress({
@@ -86,13 +88,19 @@ class VocabProgress {
     required this.name,
     required this.emoji,
     required this.totalWords,
+    this.removedWords = 0,
     required this.seen,
     required this.learned,
     required this.due,
     required this.averageEasiness,
   });
 
-  double get coverage => totalWords == 0 ? 0 : learned / totalWords;
+  int get availableWords => max(0, totalWords - removedWords);
+
+  int get unseenWords => max(0, availableWords - seen);
+
+  double get coverage =>
+      availableWords == 0 ? 0 : learned / availableWords;
 }
 
 /// Computed stats derived from the review state + activity log.
@@ -474,12 +482,22 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
     int newToday = 0;
     int due = 0;
     int sumEf = 0;
+    int activeSeen = 0;
+    int activeLearned = 0;
     final masteryCount = <MasteryLevel, int>{
       for (final l in MasteryLevel.values) l: 0,
     };
     final perVocabStats = <String, _MutableVocabStats>{};
+    var removedIds = <String>{};
+    try {
+      removedIds = ReviewRepository.instance.removed;
+    } catch (_) {
+      // Repository not initialised — treat as no removals.
+    }
 
-    void accumulate(String vocabId, ReviewState s) {
+    void accumulate(String wordId, String vocabId, ReviewState s) {
+      if (removedIds.contains(wordId)) return;
+      activeSeen++;
       sumEf += s.easiness;
       if (s.dueAt != null && !s.dueAt!.isAfter(at)) due++;
       if (s.lastReviewedAt != null &&
@@ -494,16 +512,19 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
       final v = perVocabStats.putIfAbsent(vocabId, () => _MutableVocabStats());
       v.seen++;
       v.sumEf += s.easiness;
-      if (s.repetitions >= 1) v.learned++;
+      if (s.repetitions >= 1) {
+        v.learned++;
+        activeLearned++;
+      }
       if (s.dueAt != null && !s.dueAt!.isAfter(at)) v.due++;
     }
 
     for (final entry in state.entries) {
       final vocabId = _extractVocabIdFromWordId(entry.key);
-      accumulate(vocabId, entry.value);
+      accumulate(entry.key, vocabId, entry.value);
     }
 
-    final avg = state.isEmpty ? 0.0 : sumEf / state.length / 100.0;
+    final avg = activeSeen == 0 ? 0.0 : sumEf / activeSeen / 100.0;
 
     int streak = 0;
     List<int> last7 = const [0, 0, 0, 0, 0, 0, 0];
@@ -531,20 +552,29 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
       // Repository not initialized (test env). Use zeros / empty.
     }
 
+    final removedPerVocab = <String, int>{};
+    for (final id in removedIds) {
+      final vid = _extractVocabIdFromWordId(id);
+      removedPerVocab[vid] = (removedPerVocab[vid] ?? 0) + 1;
+    }
+
     final meta = catalog;
     final perVocabOut = <VocabProgress>[];
     for (final list in meta) {
       final total = list.wordCount;
+      final removedInVocab = removedPerVocab[list.id] ?? 0;
+      final available = max(0, total - removedInVocab);
       final m = perVocabStats[list.id] ?? _MutableVocabStats();
       masteryCount[MasteryLevel.unseen] =
           (masteryCount[MasteryLevel.unseen] ?? 0) +
-              max(0, total - m.seen);
+              max(0, available - m.seen);
       perVocabOut.add(
         VocabProgress(
           vocabId: list.id,
           name: list.name,
           emoji: list.emoji,
           totalWords: total,
+          removedWords: removedInVocab,
           seen: m.seen,
           learned: m.learned,
           due: m.due,
@@ -558,8 +588,8 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
     ];
 
     return ReviewStats(
-      totalSeen: state.length,
-      totalLearned: totalLearned,
+      totalSeen: activeSeen,
+      totalLearned: activeLearned,
       totalDue: due,
       newToday: newToday,
       reviewsToday: reviewsToday,
@@ -980,9 +1010,9 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   /// Best-effort durable write after each answer. Complements the
   /// 300 ms debounce in [ReviewRepository.put] so a force-quit right
   /// after answering still lands progress on disk.
-  void _eagerFlush() {
+  Future<void> _eagerFlush() async {
     try {
-      unawaited(ReviewRepository.instance.flush());
+      await ReviewRepository.instance.flush();
     } catch (_) {
       // Repository not initialised (tests / degraded launch).
     }
@@ -1002,7 +1032,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     ref
         .read(reviewStateProvider.notifier)
         .recordAnswer(wordId: q.word.id, quality: quality.toSm2Quality());
-    _eagerFlush();
+    unawaited(_eagerFlush());
     if (correct) {
       final nextIndex = state.currentIndex + 1;
       state = LearningSessionState(
@@ -1042,7 +1072,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
         currentIndex: nextIndex,
         correctCount: state.correctCount,
       );
-      _eagerFlush();
+      unawaited(_eagerFlush());
       return;
     }
     state = LearningSessionState(
@@ -1051,7 +1081,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       currentIndex: nextIndex,
       correctCount: state.correctCount,
     );
-    _eagerFlush();
+    unawaited(_eagerFlush());
   }
 }
 
