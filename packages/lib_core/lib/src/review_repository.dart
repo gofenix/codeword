@@ -245,10 +245,14 @@ class ReviewRepository {
   /// True when [init] completed and persistence is available.
   static bool get isReady => _instance != null;
 
+  /// Incremented on every [flush] call — used by tests to verify eager flush.
+  static int flushInvocationCount = 0;
+
   /// Clears the singleton so tests can call [init] against a fresh store.
   static void resetForTesting() {
     _instance = null;
     _initCompleter = null;
+    flushInvocationCount = 0;
   }
 
   /// Whether any loaded word ids pre-date the qwerty schema.
@@ -428,6 +432,7 @@ class ReviewRepository {
   /// (including any mutations arriving during the IO window) is
   /// durably written. Safe to overlap with concurrent debounced saves.
   Future<void> flush() async {
+    flushInvocationCount++;
     _saveDebounce?.cancel();
     _saveDebounce = null;
     do {

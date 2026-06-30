@@ -356,11 +356,23 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
     return next;
   }
 
-  int get totalLearned => state.values.where((s) => s.repetitions >= 1).length;
+  int get totalLearned {
+    final removed = _removedWordIds();
+    return state.entries
+        .where((e) => !removed.contains(e.key) && e.value.repetitions >= 1)
+        .length;
+  }
+
   int get totalDue {
     final now = DateTime.now();
-    return state.values
-        .where((s) => s.dueAt != null && !s.dueAt!.isAfter(now))
+    final removed = _removedWordIds();
+    return state.entries
+        .where(
+          (e) =>
+              !removed.contains(e.key) &&
+              e.value.dueAt != null &&
+              !e.value.dueAt!.isAfter(now),
+        )
         .length;
   }
 
@@ -400,7 +412,7 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
     String? targetId;
     double lowestCoverage = double.infinity;
     for (final v in stats.perVocab) {
-      final unseen = v.totalWords - v.seen;
+      final unseen = v.unseenWords;
       if (unseen > 0 && v.coverage < lowestCoverage) {
         lowestCoverage = v.coverage;
         targetId = v.vocabId;

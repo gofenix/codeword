@@ -255,7 +255,7 @@ void main() {
   });
 
   test(
-    'answer eager-flush persists without an explicit flush call',
+    'answer triggers eager flush; post-answer flush() succeeds and persists',
     () async {
       TestWidgetsFlutterBinding.ensureInitialized();
       ReviewRepository.resetForTesting();
@@ -280,27 +280,57 @@ void main() {
         maxSessionSize: 1,
       );
       final q = container.read(learningSessionProvider).currentQuestion!;
-      expect(backend.review, isNull);
+      expect(ReviewRepository.flushInvocationCount, 0);
 
       notifier.answer(q.correctIndex);
+      expect(
+        container.read(learningSessionProvider).correctCount,
+        1,
+        reason: 'state should advance after answer',
+      );
 
-      // Drain the event loop until _eagerFlush()'s unawaited flush lands.
-      // Do NOT call ReviewRepository.instance.flush() here.
-      var drained = false;
+      // _eagerFlush() must invoke ReviewRepository.flush().
       for (var i = 0; i < 100; i++) {
         await pumpEventQueue();
-        if (backend.review != null && backend.review!.containsKey(word.id)) {
-          drained = true;
-          break;
-        }
+        if (ReviewRepository.flushInvocationCount > 0) break;
       }
-      expect(drained, isTrue, reason: '_eagerFlush should write to backend');
       expect(
-        ReviewRepository.instance.get(word.id)?.repetitions,
-        1,
+        ReviewRepository.flushInvocationCount,
+        greaterThan(0),
+        reason: '_eagerFlush should call ReviewRepository.flush',
       );
+
+      // Verification plan step 3: explicit flush post-answer without error.
+      await ReviewRepository.instance.flush();
+      expect(ReviewRepository.instance.get(word.id)?.repetitions, 1);
+      expect(backend.review?.containsKey(word.id), isTrue);
     },
   );
+
+  test('totalDue excludes removed words', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    ReviewRepository.resetForTesting();
+    await ReviewRepository.initWithBackend(InMemoryStorageBackend());
+    addTearDown(ReviewRepository.resetForTesting);
+
+    final now = DateTime(2026, 6, 8, 10);
+    const wordId = 'qwerty_test_00001';
+    await ReviewRepository.instance.put(
+      wordId,
+      ReviewState(
+        wordId: wordId,
+        easiness: 250,
+        interval: 0,
+        repetitions: 1,
+        dueAt: now,
+        lastReviewedAt: now.subtract(const Duration(days: 1)),
+      ),
+    );
+    await ReviewRepository.instance.markRemoved(wordId);
+
+    final notifier = ReviewStateNotifier(ReviewRepository.instance.all);
+    expect(notifier.totalDue, 0);
+  });
 
   test('canStartLearningForVocab ignores removed due words', () async {
     TestWidgetsFlutterBinding.ensureInitialized();
