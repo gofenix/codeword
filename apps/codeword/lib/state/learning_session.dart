@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,6 +19,27 @@ String _extractVocabIdFromWordId(String wid) {
   final parts = wid.split('_');
   if (parts.length < 3 || parts[0] != 'qwerty') return wid;
   return 'qwerty_${parts.sublist(1, parts.length - 1).join('_')}';
+}
+
+/// Whether the selected vocab still has words to study (due or unseen).
+/// Mirrors [LearningSessionNotifier.start] — a vocab is "done" only when
+/// every word has been seen AND nothing is currently due.
+bool canStartLearningForVocab(ReviewStats stats, String vocabId) {
+  for (final v in stats.perVocab) {
+    if (v.vocabId == vocabId) {
+      return v.due > 0 || v.seen < v.totalWords;
+    }
+  }
+  return false;
+}
+
+/// Vocab-scoped progress for the home card. Returns null when [vocabId]
+/// is absent from [stats.perVocab] (e.g. empty catalog in tests).
+VocabProgress? vocabProgressFor(ReviewStats stats, String vocabId) {
+  for (final v in stats.perVocab) {
+    if (v.vocabId == vocabId) return v;
+  }
+  return null;
 }
 
 /// Mastery bucket for the distribution chart.
@@ -955,6 +977,17 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     );
   }
 
+  /// Best-effort durable write after each answer. Complements the
+  /// 300 ms debounce in [ReviewRepository.put] so a force-quit right
+  /// after answering still lands progress on disk.
+  void _eagerFlush() {
+    try {
+      unawaited(ReviewRepository.instance.flush());
+    } catch (_) {
+      // Repository not initialised (tests / degraded launch).
+    }
+  }
+
   /// User picks an option; correct → immediately next, wrong → wrongDetail.
   void answer(int optionIndex) {
     if (state.phase != SessionPhase.asking) return;
@@ -969,6 +1002,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     ref
         .read(reviewStateProvider.notifier)
         .recordAnswer(wordId: q.word.id, quality: quality.toSm2Quality());
+    _eagerFlush();
     if (correct) {
       final nextIndex = state.currentIndex + 1;
       state = LearningSessionState(
@@ -1008,6 +1042,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
         currentIndex: nextIndex,
         correctCount: state.correctCount,
       );
+      _eagerFlush();
       return;
     }
     state = LearningSessionState(
@@ -1016,6 +1051,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       currentIndex: nextIndex,
       correctCount: state.correctCount,
     );
+    _eagerFlush();
   }
 }
 

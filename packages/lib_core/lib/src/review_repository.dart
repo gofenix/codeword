@@ -81,13 +81,18 @@ class ReviewRepository {
   /// Failures are rethrown — main() should catch and degrade
   /// gracefully (empty data, logged error). Never returns a
   /// half-initialised singleton.
-  static Future<ReviewRepository> init() async {
+  static Future<ReviewRepository> init() => _initImpl(createStorageBackend());
+
+  /// Initialise against an injected backend (unit tests only).
+  static Future<ReviewRepository> initWithBackend(StorageBackend backend) =>
+      _initImpl(backend);
+
+  static Future<ReviewRepository> _initImpl(StorageBackend backend) async {
     if (_instance != null) return _instance!;
     if (_initCompleter != null) return _initCompleter!.future;
     final completer = Completer<ReviewRepository>();
     _initCompleter = completer;
     try {
-      final backend = createStorageBackend();
       // Three independent reads — parallelise.
       final results = await Future.wait<Map<String, dynamic>?>([
         backend.loadReviewState(),
@@ -152,6 +157,7 @@ class ReviewRepository {
       // Run schema enforcement BEFORE publishing the instance via
       // _instance assignment — never expose a partially-migrated repo.
       await instance._enforceSchemaVersion(schemaPresent);
+      await instance._purgeLegacyReviewDataIfNeeded();
 
       _instance = instance;
       completer.complete(instance);
@@ -221,6 +227,33 @@ class ReviewRepository {
     _dirtyReview = false;
     _dirtyActivity = false;
     _dirtyUserData = false;
+  }
+
+  /// Drop pre-qwerty word IDs that survived a partial v1→v2 migration.
+  ///
+  /// If Phase 1 of [_enforceSchemaVersion] committed `schemaVersion: 2`
+  /// but Phase 2 failed, the next launch skips migration yet still loads
+  /// legacy `cs_001`-style keys from disk. Purge them here.
+  Future<void> _purgeLegacyReviewDataIfNeeded() async {
+    if (!containsLegacyWordIds(_cache.keys)) return;
+
+    _cache.removeWhere((k, _) => !k.startsWith('qwerty_'));
+    _dirtyReview = true;
+    await flush();
+  }
+
+  /// True when [init] completed and persistence is available.
+  static bool get isReady => _instance != null;
+
+  /// Clears the singleton so tests can call [init] against a fresh store.
+  static void resetForTesting() {
+    _instance = null;
+    _initCompleter = null;
+  }
+
+  /// Whether any loaded word ids pre-date the qwerty schema.
+  static bool containsLegacyWordIds(Iterable<String> wordIds) {
+    return wordIds.any((k) => !k.startsWith('qwerty_'));
   }
 
   static ReviewRepository get instance {

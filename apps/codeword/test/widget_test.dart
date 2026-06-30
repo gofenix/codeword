@@ -1,9 +1,10 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:lib_core/lib_core.dart';
 
 import 'package:codeword/main.dart';
+import 'package:codeword/screens/learning_session_screen.dart';
 import 'package:codeword/state/learning_session.dart';
 
 void main() {
@@ -140,6 +141,53 @@ void main() {
     );
   });
 
+  test('canStartLearningForVocab is true when vocab still has unseen words', () {
+    final notifier = ReviewStateNotifier();
+    final catalog = <VocabList>[
+      const VocabList(
+        id: 'qwerty_test',
+        name: 'Test',
+        description: '',
+        emoji: '📘',
+        domainColor: '#000',
+        level: 1,
+        wordCount: 50,
+      ),
+    ];
+    final stats = notifier.stats(catalog: catalog);
+    expect(canStartLearningForVocab(stats, 'qwerty_test'), isTrue);
+  });
+
+  test(
+    'canStartLearningForVocab is false when vocab is fully learned and not due',
+    () {
+      final notifier = ReviewStateNotifier();
+      final now = DateTime(2026, 6, 8, 14);
+      notifier.recordAnswer(
+        wordId: 'qwerty_test_00001',
+        quality: 5,
+        now: now,
+      );
+      final catalog = <VocabList>[
+        const VocabList(
+          id: 'qwerty_test',
+          name: 'Test',
+          description: '',
+          emoji: '📘',
+          domainColor: '#000',
+          level: 1,
+          wordCount: 1,
+        ),
+      ];
+      // Same afternoon — interval is 1 day so the word is not due yet.
+      final stats = notifier.stats(
+        now: now.add(const Duration(hours: 6)),
+        catalog: catalog,
+      );
+      expect(canStartLearningForVocab(stats, 'qwerty_test'), isFalse);
+    },
+  );
+
   test('Per-vocab progress surfaces catalog vocabs even with 0 progress', () {
     final notifier = ReviewStateNotifier();
     final catalog = <VocabList>[
@@ -173,6 +221,73 @@ void main() {
         isNot(contains('feedback')),
         reason: 'No standalone feedback phase — should be removed',
       );
+    },
+  );
+
+  testWidgets('LearningSessionScreen builds with vocabId only', (tester) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          qwertyCatalogProvider.overrideWithValue(const [
+            VocabList(
+              id: 'qwerty_biomedical_terms',
+              name: 'Biomedical',
+              description: '',
+              emoji: '🧬',
+              domainColor: '#000',
+              level: 1,
+              wordCount: 1,
+            ),
+          ]),
+          vocabCacheProvider('qwerty_biomedical_terms').overrideWith(
+            (ref) async => [
+              _word('qwerty_biomedical_terms_00001', 'cell', '细胞'),
+            ],
+          ),
+        ],
+        child: const MaterialApp(
+          home: LearningSessionScreen(vocabId: 'qwerty_biomedical_terms'),
+        ),
+      ),
+    );
+    await tester.pump();
+    expect(find.byType(LearningSessionScreen), findsOneWidget);
+  });
+
+  test(
+    'answer persists review state and flush succeeds when repo is ready',
+    () async {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      ReviewRepository.resetForTesting();
+      final backend = InMemoryStorageBackend();
+      await ReviewRepository.initWithBackend(backend);
+      addTearDown(ReviewRepository.resetForTesting);
+
+      final word = _word('qwerty_flush_00001', 'latency', '延迟');
+      final container = ProviderContainer(
+        overrides: [
+          vocabCacheProvider('qwerty_flush').overrideWith(
+            (ref) async => [word],
+          ),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      final notifier = container.read(learningSessionProvider.notifier);
+      await notifier.start(
+        vocabId: 'qwerty_flush',
+        minSessionSize: 1,
+        maxSessionSize: 1,
+      );
+      final q = container.read(learningSessionProvider).currentQuestion!;
+      notifier.answer(q.correctIndex);
+
+      await ReviewRepository.instance.flush();
+      final persisted = ReviewRepository.instance.get(word.id);
+      expect(persisted, isNotNull);
+      expect(persisted!.repetitions, 1);
+      expect(backend.review, isNotNull);
+      expect(backend.review!.containsKey(word.id), isTrue);
     },
   );
 

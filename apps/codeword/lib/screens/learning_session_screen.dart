@@ -12,13 +12,9 @@ import '../state/learning_session.dart';
 class LearningSessionScreen extends ConsumerStatefulWidget {
   final String vocabId;
 
-  /// Legacy alias for total session size. Kept so existing call sites
-  /// still compile. Split 70/30 between new and review slots.
-  final int count;
   const LearningSessionScreen({
     super.key,
     required this.vocabId,
-    this.count = 10,
   });
 
   @override
@@ -49,11 +45,10 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
         ReviewRepository.instance.addStudyMinutes(DateTime.now(), minutes);
       } catch (_) {}
     }
-    // Best-effort flush: dispose can't await, so we fire the flush in
-    // a detached Future. In practice Flutter keeps the process alive
-    // long enough for a single file write to complete. We also force
-    // an eager flush after every answer (below) so dispose only has
-    // to drain the "final click" delta.
+    // Best-effort flush on exit: dispose can't await, so schedule one
+    // final flush. Each answer already triggers an eager flush via
+    // [LearningSessionNotifier.answer] / [next]; this pass drains any
+    // study-minute write queued above plus the debounced tail.
     try {
       unawaited(Future.microtask(() async {
         try {
