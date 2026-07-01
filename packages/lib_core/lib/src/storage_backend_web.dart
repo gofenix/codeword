@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html;
+
+import 'package:web/web.dart' as web;
 
 import 'storage_backend.dart';
 
@@ -36,19 +36,19 @@ class WebLocalStorageBackend implements StorageBackend {
 
   @override
   Future<void> wipeReviewAndActivity() async {
-    html.window.localStorage.remove(_kReview);
-    html.window.localStorage.remove(_kActivity);
+    web.window.localStorage.removeItem(_kReview);
+    web.window.localStorage.removeItem(_kActivity);
   }
 
   @override
   Future<void> wipeAll() async {
-    html.window.localStorage.remove(_kReview);
-    html.window.localStorage.remove(_kActivity);
-    html.window.localStorage.remove(_kUserData);
+    web.window.localStorage.removeItem(_kReview);
+    web.window.localStorage.removeItem(_kActivity);
+    web.window.localStorage.removeItem(_kUserData);
   }
 
   Future<Map<String, dynamic>?> _read(String key) async {
-    final raw = html.window.localStorage[key];
+    final raw = web.window.localStorage.getItem(key);
     if (raw == null || raw.isEmpty) return null;
     try {
       return jsonDecode(raw) as Map<String, dynamic>;
@@ -58,7 +58,7 @@ class WebLocalStorageBackend implements StorageBackend {
   }
 
   Future<void> _write(String key, Map<String, dynamic> json) async {
-    html.window.localStorage[key] = jsonEncode(json);
+    web.window.localStorage.setItem(key, jsonEncode(json));
   }
 }
 

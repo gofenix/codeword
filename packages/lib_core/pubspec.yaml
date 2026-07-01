@@ -19,6 +19,9 @@ dependencies:
   # OpenAI-compatible LLM transport
   http: ^1.2.2
 
+  # Browser APIs for Flutter web storage backend
+  web: ^1.1.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

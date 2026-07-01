@@ -217,14 +217,18 @@ class _CategoryChips extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Use MediaQuery.textScalerOf to respect user's system text size,
-    // and size the chip row to fit. Fixed 36px heights clip the text on
-    // textScaleFactor > 1.2 (accessibility / large-font users).
-    return ListView.separated(
+    // Horizontal ListView inside a Column needs a bounded cross-axis height.
+    // IndexedStack keeps every tab mounted, so an unbounded chip row would
+    // crash layout for the whole shell — not just the Discovery tab.
+    final textScale = MediaQuery.textScalerOf(context).scale(1);
+    final verticalPad =
+        Theme.of(context).chipTheme.labelPadding?.vertical ?? 4;
+    final rowHeight = (36 * textScale).clamp(36.0, 56.0) + verticalPad * 2;
+    return SizedBox(
+      height: rowHeight,
+      child: ListView.separated(
       scrollDirection: Axis.horizontal,
-      padding: EdgeInsets.symmetric(
-        vertical: Theme.of(context).chipTheme.labelPadding?.vertical ?? 4,
-      ),
+      padding: EdgeInsets.symmetric(vertical: verticalPad),
       itemCount: categories.length,
       separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.x2),
       itemBuilder: (context, index) {
@@ -253,6 +257,7 @@ class _CategoryChips extends StatelessWidget {
           visualDensity: VisualDensity.compact,
         );
       },
+      ),
     );
   }
 }

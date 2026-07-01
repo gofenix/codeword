@@ -92,4 +92,13 @@ void main() {
       expect(restored.antonyms, original.antonyms);
     });
   });
+
+  test('containsLegacyWordIds flags pre-qwerty review keys', () {
+    expect(ReviewRepository.containsLegacyWordIds(['cs_001', 'ai_022']), isTrue);
+    expect(
+      ReviewRepository.containsLegacyWordIds(['qwerty_cet4_00001']),
+      isFalse,
+    );
+    expect(ReviewRepository.containsLegacyWordIds(const []), isFalse);
+  });
 }

@@ -52,7 +52,7 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
       final seen = <String>{};
       final combined = <PulseWordEntry>[];
       for (final e in [...due, ...fresh]) {
-        if (seen.add(e.word)) combined.add(e);
+        if (seen.add('${e.vocabId}:${e.word}')) combined.add(e);
       }
       if (!mounted) return;
       setState(() {
@@ -107,8 +107,7 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
             'No headings. Tone: a senior engineer explaining a concept to '
             'a junior over coffee.',
       );
-      final client = LlmClient(config: cfg);
-      final resp = await client.chat(
+      final resp = await ref.read(llmClientProvider).chat(
         LlmChatRequest(
           model: cfg.model,
           temperature: 0.7,

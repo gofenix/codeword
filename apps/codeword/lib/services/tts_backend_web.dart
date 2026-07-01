@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:developer' as developer;
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html;
+
+import 'package:web/web.dart' as web;
 
 import 'tts_backend.dart';
 
@@ -13,10 +13,9 @@ class WebTtsBackend implements TtsBackend {
   @override
   Future<bool> speak({required String text, String lang = 'us'}) async {
     try {
-      final synth = html.window.speechSynthesis;
-      if (synth == null) return false;
+      final synth = web.window.speechSynthesis;
       synth.cancel();
-      final utter = html.SpeechSynthesisUtterance(text);
+      final utter = web.SpeechSynthesisUtterance(text);
       // Map our `us`/`uk` codes onto BCP-47-ish locales the browser
       // is likely to understand. Browsers vary wildly here, so we
       // just pass the bare language code and let the engine pick.
@@ -27,8 +26,12 @@ class WebTtsBackend implements TtsBackend {
       developer.log('TTS web speak $text ($lang)', name: 'TtsService');
       return true;
     } catch (e, st) {
-      developer.log('TTS web speak failed: $e\n$st',
-          name: 'TtsService', error: e, stackTrace: st);
+      developer.log(
+        'TTS web speak failed: $e\n$st',
+        name: 'TtsService',
+        error: e,
+        stackTrace: st,
+      );
       return false;
     }
   }
