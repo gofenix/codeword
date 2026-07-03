@@ -65,8 +65,12 @@ void main() async {
   try {
     catalog = await loadQwertyCatalog();
   } catch (e, st) {
-    developer.log('Failed to load qwerty catalog: $e\n$st',
-        name: 'main', error: e, stackTrace: st);
+    developer.log(
+      'Failed to load qwerty catalog: $e\n$st',
+      name: 'main',
+      error: e,
+      stackTrace: st,
+    );
   }
   runApp(
     ProviderScope(
@@ -84,7 +88,9 @@ void main() async {
 /// (gitignored). Returns null if the file is missing or empty.
 Future<String?> _readLocalLlmKey() async {
   try {
-    final key = (await rootBundle.loadString('assets/local/llm_key.txt')).trim();
+    final key = (await rootBundle.loadString(
+      'assets/local/llm_key.txt',
+    )).trim();
     return key.isEmpty ? null : key;
   } catch (_) {
     return null;
@@ -143,11 +149,8 @@ class _HomeShellState extends State<HomeShell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
-      body: IndexedStack(
-        index: _index,
-        children: _pages,
-      ),
+      backgroundColor: AppColors.of(context).background,
+      body: IndexedStack(index: _index, children: _pages),
       bottomNavigationBar: _PhoneBottomNav(
         index: _index,
         // Delegate to _goToTab so the haptic feedback path is
@@ -167,11 +170,14 @@ class _PhoneBottomNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return NavigationBar(
       selectedIndex: index,
       onDestinationSelected: onTap,
-      backgroundColor: AppColors.surface,
-      indicatorColor: AppColors.primarySoft,
+      backgroundColor: AppColors.of(context).surface,
+      indicatorColor: isDark
+          ? AppColors.primary.withValues(alpha: 0.20)
+          : AppColors.primarySoft,
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       height: 68,
@@ -219,7 +225,7 @@ class _ComingSoonPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.of(context).background,
       body: SafeArea(
         child: Center(
           child: AppCard(
@@ -227,7 +233,11 @@ class _ComingSoonPage extends StatelessWidget {
               width: 240,
               height: 180,
               child: Center(
-                child: Icon(icon, size: 56, color: AppColors.inkSubtle),
+                child: Icon(
+                  icon,
+                  size: 56,
+                  color: AppColors.of(context).inkSubtle,
+                ),
               ),
             ),
           ),
@@ -248,7 +258,9 @@ class TodayPage extends ConsumerWidget {
     // Watch the catalog (not read) so dynamic catalog changes in the
     // future (reload after download) propagate correctly.
     final catalog = ref.watch(qwertyCatalogProvider);
-    final stats = ref.read(reviewStateProvider.notifier).stats(catalog: catalog);
+    final stats = ref
+        .read(reviewStateProvider.notifier)
+        .stats(catalog: catalog);
     return SafeArea(
       child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(
@@ -289,9 +301,9 @@ class _PersistenceWarning extends StatelessWidget {
           Expanded(
             child: Text(
               '学习进度无法保存到本地。请重启应用；若问题持续，检查磁盘空间与权限。',
-              style: AppTheme.mutedCaption(size: 13).copyWith(
-                color: AppColors.warning,
-              ),
+              style: AppTheme.mutedCaption(
+                size: 13,
+              ).copyWith(color: AppColors.warning),
             ),
           ),
         ],
@@ -311,12 +323,12 @@ class _Greeting extends StatelessWidget {
       children: [
         Text(
           'Hi, 极客',
-          style: AppTheme.mutedCaption(size: 14),
+          style: AppTheme.mutedCaption(size: 14, context: context),
         ),
         const SizedBox(height: 2),
         Text(
           newToday == 0 ? '今天还没开始' : '今天学了 $newToday 个新词',
-          style: AppTheme.screenHeader().copyWith(
+          style: AppTheme.screenHeader(context: context).copyWith(
             fontSize: 30,
             fontWeight: FontWeight.w800,
             height: 1.15,
@@ -337,8 +349,7 @@ class _TodayTaskCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final vocabId = ref.watch(selectedVocabProvider);
-    final vocabName =
-        ref.watch(vocabMetaProvider)[vocabId]?.name ?? vocabId;
+    final vocabName = ref.watch(vocabMetaProvider)[vocabId]?.name ?? vocabId;
     final vocab = vocabProgressFor(stats, vocabId);
     final vocabDue = vocab?.due ?? 0;
     final unseenInVocab = vocab?.unseenWords ?? 0;
@@ -353,15 +364,14 @@ class _TodayTaskCard extends ConsumerWidget {
             children: [
               Text(
                 '今日任务',
-                style: AppTheme.cardTitle().copyWith(
-                  fontSize: 17,
-                  fontWeight: FontWeight.w800,
-                ),
+                style: AppTheme.cardTitle(
+                  context: context,
+                ).copyWith(fontSize: 17, fontWeight: FontWeight.w800),
               ),
               const Spacer(),
               Text(
                 vocabName,
-                style: AppTheme.mutedCaption(size: 12),
+                style: AppTheme.mutedCaption(size: 12, context: context),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -372,7 +382,7 @@ class _TodayTaskCard extends ConsumerWidget {
             allDone
                 ? '这本词书已经学完啦'
                 : '待复习 $vocabDue · 剩余新词 $unseenInVocab · 今日已学 ${stats.newToday}',
-            style: AppTheme.mutedCaption(size: 14),
+            style: AppTheme.mutedCaption(size: 14, context: context),
           ),
           const SizedBox(height: AppSpacing.x5),
           SizedBox(
@@ -384,9 +394,8 @@ class _TodayTaskCard extends ConsumerWidget {
                       HapticFeedback.lightImpact();
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (_) => LearningSessionScreen(
-                            vocabId: vocabId,
-                          ),
+                          builder: (_) =>
+                              LearningSessionScreen(vocabId: vocabId),
                         ),
                       );
                     },
@@ -407,13 +416,11 @@ class _TodayTaskCard extends ConsumerWidget {
             child: TextButton(
               onPressed: () {
                 HapticFeedback.selectionClick();
-                final shell = context.findAncestorStateOfType<_HomeShellState>();
+                final shell = context
+                    .findAncestorStateOfType<_HomeShellState>();
                 shell?._goToTab(2); // 发现
               },
-              child: Text(
-                '选择其他词书',
-                style: AppTheme.rowTitle(),
-              ),
+              child: Text('选择其他词书', style: AppTheme.rowTitle(context: context)),
             ),
           ),
         ],

@@ -21,13 +21,11 @@ class MasteryDistribution extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('掌握分布', style: AppTheme.cardTitle()),
+          Text('掌握分布', style: AppTheme.cardTitle(context: context)),
           const SizedBox(height: AppSpacing.x2),
           Text(
-            total == 0
-                ? '— · —'
-                : '已学 ${total - unseenCount} · 总量 $total',
-            style: AppTheme.mutedCaption(),
+            total == 0 ? '— · —' : '已学 ${total - unseenCount} · 总量 $total',
+            style: AppTheme.mutedCaption(context: context),
           ),
           const SizedBox(height: AppSpacing.x4),
           // Stacked bar
@@ -36,7 +34,7 @@ class MasteryDistribution extends StatelessWidget {
             child: SizedBox(
               height: 14,
               child: total == 0 || positiveBuckets.isEmpty
-                  ? Container(color: AppColors.surfaceMuted)
+                  ? Container(color: AppColors.of(context).surfaceMuted)
                   : Row(
                       children: [
                         for (final b in positiveBuckets)
@@ -68,19 +66,23 @@ class MasteryDistribution extends StatelessWidget {
   }
 
   static Color _colorFor(MasteryLevel l) => switch (l) {
-        MasteryLevel.familiar => AppColors.masteryFamiliar,
-        MasteryLevel.recognized => AppColors.masteryRecognized,
-        MasteryLevel.vague => AppColors.masteryVague,
-        MasteryLevel.unfamiliar => AppColors.masteryUnfamiliar,
-        MasteryLevel.unseen => AppColors.masteryUnseen,
-      };
+    MasteryLevel.familiar => AppColors.masteryFamiliar,
+    MasteryLevel.recognized => AppColors.masteryRecognized,
+    MasteryLevel.vague => AppColors.masteryVague,
+    MasteryLevel.unfamiliar => AppColors.masteryUnfamiliar,
+    MasteryLevel.unseen => AppColors.masteryUnseen,
+  };
 }
 
 class _LegendChip extends StatelessWidget {
   final Color color;
   final String label;
   final int count;
-  const _LegendChip({required this.color, required this.label, required this.count});
+  const _LegendChip({
+    required this.color,
+    required this.label,
+    required this.count,
+  });
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -97,7 +99,10 @@ class _LegendChip extends StatelessWidget {
         const SizedBox(width: AppSpacing.x1),
         Text(
           '$label $count',
-          style: AppTheme.mutedCaption(size: 11, color: AppColors.ink),
+          style: AppTheme.mutedCaption(
+            size: 11,
+            color: AppColors.of(context).ink,
+          ),
         ),
       ],
     );
@@ -115,7 +120,7 @@ class VocabProgressList extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('词库进度', style: AppTheme.cardTitle()),
+          Text('词库进度', style: AppTheme.cardTitle(context: context)),
           const SizedBox(height: AppSpacing.x4),
           for (final r in rows) ...[
             _VocabRow(row: r),
@@ -157,7 +162,10 @@ class _VocabRow extends StatelessWidget {
               final firstChar = chars.isEmpty ? '·' : chars.first;
               return Text(
                 firstChar,
-                style: AppTheme.cardTitle().copyWith(fontSize: 14, color: color),
+                style: AppTheme.cardTitle().copyWith(
+                  fontSize: 14,
+                  color: color,
+                ),
               );
             },
           ),
@@ -171,13 +179,17 @@ class _VocabRow extends StatelessWidget {
                 children: [
                   Text(
                     row.name,
-                    style: AppTheme.rowTitle().copyWith(fontSize: 13),
+                    style: AppTheme.rowTitle(
+                      context: context,
+                    ).copyWith(fontSize: 13),
                   ),
                   const Spacer(),
                   Text(
                     '${row.learned} / ${row.totalWords}',
-                    style: AppTheme.mutedCaption(size: 11)
-                        .copyWith(fontWeight: FontWeight.w600),
+                    style: AppTheme.mutedCaption(
+                      size: 11,
+                      context: context,
+                    ).copyWith(fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -187,7 +199,7 @@ class _VocabRow extends StatelessWidget {
                 child: LinearProgressIndicator(
                   value: coverage,
                   minHeight: AppSpacing.x1_5,
-                  backgroundColor: AppColors.surfaceMuted,
+                  backgroundColor: AppColors.of(context).surfaceMuted,
                   valueColor: AlwaysStoppedAnimation(color),
                 ),
               ),
@@ -223,23 +235,70 @@ class TodayActivityGrid extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('今天', style: AppTheme.cardTitle()),
+          Text('今天', style: AppTheme.cardTitle(context: context)),
           const SizedBox(height: AppSpacing.x4),
-          GridView.count(
-            crossAxisCount: 3,
-            shrinkWrap: true,
-            mainAxisSpacing: AppSpacing.x3,
-            crossAxisSpacing: AppSpacing.x3,
-            childAspectRatio: 1.4,
-            physics: const NeverScrollableScrollPhysics(),
-            children: [
-              _Cell(label: '复习', value: '$reviews', color: AppColors.primary, icon: Icons.refresh),
-              _Cell(label: '新学', value: '$newWords', color: AppColors.info, icon: Icons.auto_awesome),
-              _Cell(label: '收藏', value: '$favorites', color: AppColors.warning, icon: Icons.star_rounded),
-              _Cell(label: '移除', value: '$removed', color: AppColors.danger, icon: Icons.remove_circle_outline),
-              _Cell(label: '分钟', value: '$minutes', color: AppColors.qwertyPalette[1], icon: Icons.schedule),
-              _Cell(label: '打开', value: '$opens', color: AppColors.qwertyPalette[5], icon: Icons.bolt),
-            ],
+          // Content-sized 3-column grid. A fixed childAspectRatio would
+          // clip the value text once the OS text scale grows; sizing the
+          // cells by width only and letting height follow content keeps
+          // every cell intact at any accessibility scale.
+          LayoutBuilder(
+            builder: (context, constraints) {
+              const gap = AppSpacing.x3;
+              final cellWidth = (constraints.maxWidth - gap * 2) / 3;
+              return Wrap(
+                spacing: gap,
+                runSpacing: gap,
+                children: [
+                  for (final cell in [
+                    (
+                      label: '复习',
+                      value: '$reviews',
+                      color: AppColors.primary,
+                      icon: Icons.refresh,
+                    ),
+                    (
+                      label: '新学',
+                      value: '$newWords',
+                      color: AppColors.info,
+                      icon: Icons.auto_awesome,
+                    ),
+                    (
+                      label: '收藏',
+                      value: '$favorites',
+                      color: AppColors.warning,
+                      icon: Icons.star_rounded,
+                    ),
+                    (
+                      label: '移除',
+                      value: '$removed',
+                      color: AppColors.danger,
+                      icon: Icons.remove_circle_outline,
+                    ),
+                    (
+                      label: '分钟',
+                      value: '$minutes',
+                      color: AppColors.qwertyPalette[1],
+                      icon: Icons.schedule,
+                    ),
+                    (
+                      label: '打开',
+                      value: '$opens',
+                      color: AppColors.qwertyPalette[5],
+                      icon: Icons.bolt,
+                    ),
+                  ])
+                    SizedBox(
+                      width: cellWidth,
+                      child: _Cell(
+                        label: cell.label,
+                        value: cell.value,
+                        color: cell.color,
+                        icon: cell.icon,
+                      ),
+                    ),
+                ],
+              );
+            },
           ),
         ],
       ),
@@ -252,7 +311,12 @@ class _Cell extends StatelessWidget {
   final String value;
   final Color color;
   final IconData icon;
-  const _Cell({required this.label, required this.value, required this.color, required this.icon});
+  const _Cell({
+    required this.label,
+    required this.value,
+    required this.color,
+    required this.icon,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -273,17 +337,16 @@ class _Cell extends StatelessWidget {
             children: [
               Text(
                 label,
-                style: AppTheme.rowTitle()
-                    .copyWith(fontSize: 11, color: AppColors.inkMuted),
+                style: AppTheme.rowTitle().copyWith(
+                  fontSize: 11,
+                  color: AppColors.of(context).inkMuted,
+                ),
               ),
               Icon(icon, size: 14, color: color),
             ],
           ),
           const SizedBox(height: AppSpacing.x1),
-          Text(
-            value,
-            style: AppTheme.wordDisplay(size: 20, color: color),
-          ),
+          Text(value, style: AppTheme.wordDisplay(size: 20, color: color)),
         ],
       ),
     );
@@ -311,11 +374,11 @@ class StreakSchedule extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('连续记录', style: AppTheme.cardTitle()),
+          Text('连续记录', style: AppTheme.cardTitle(context: context)),
           const SizedBox(height: AppSpacing.x2),
           Text(
             '过去 90 天 · 每天一个方格,绿色=有学习',
-            style: AppTheme.mutedCaption(),
+            style: AppTheme.mutedCaption(context: context),
           ),
           const SizedBox(height: AppSpacing.x4),
           // 7 rows × 13 cols
@@ -333,10 +396,12 @@ class StreakSchedule extends StatelessWidget {
                           margin: const EdgeInsets.all(1.5),
                           decoration: BoxDecoration(
                             color: v == null
-                                ? AppColors.surfaceMuted.withValues(alpha: 0.2)
+                                ? AppColors.of(
+                                    context,
+                                  ).surfaceMuted.withValues(alpha: 0.2)
                                 : (v
-                                    ? AppColors.primary
-                                    : AppColors.surfaceMuted),
+                                      ? AppColors.primary
+                                      : AppColors.of(context).surfaceMuted),
                             borderRadius: BorderRadius.circular(AppRadii.xs),
                           ),
                         ),
@@ -361,9 +426,7 @@ class DailyTrendsChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Show last 14 days for the chart.
-    final xs = daily.length <= 14
-        ? daily
-        : daily.sublist(daily.length - 14);
+    final xs = daily.length <= 14 ? daily : daily.sublist(daily.length - 14);
     final maxV = xs.fold<int>(0, (a, b) => a > b ? a : b);
     return AppCard(
       child: Column(
@@ -371,11 +434,11 @@ class DailyTrendsChart extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text('每日趋势', style: AppTheme.cardTitle()),
+              Text('每日趋势', style: AppTheme.cardTitle(context: context)),
               const Spacer(),
               Text(
                 '近 14 天 · 峰值 $maxV',
-                style: AppTheme.mutedCaption(),
+                style: AppTheme.mutedCaption(context: context),
               ),
             ],
           ),
@@ -412,11 +475,11 @@ class DailyStudyTimeChart extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text('每日学习时长', style: AppTheme.cardTitle()),
+              Text('每日学习时长', style: AppTheme.cardTitle(context: context)),
               const Spacer(),
               Text(
                 '近 14 天 · 合计 ${total}m',
-                style: AppTheme.mutedCaption(),
+                style: AppTheme.mutedCaption(context: context),
               ),
             ],
           ),
@@ -431,7 +494,7 @@ class DailyStudyTimeChart extends StatelessWidget {
           ),
           if (maxV == 0) ...[
             const SizedBox(height: AppSpacing.x1),
-            Text('—', style: AppTheme.mutedCaption(size: 11)),
+            Text('—', style: AppTheme.mutedCaption(size: 11, context: context)),
           ],
         ],
       ),
@@ -470,8 +533,8 @@ class _Bars extends StatelessWidget {
                     color: isLast
                         ? color
                         : (v == 0
-                            ? AppColors.surfaceMuted
-                            : color.withValues(alpha: 0.55)),
+                              ? AppColors.of(context).surfaceMuted
+                              : color.withValues(alpha: 0.55)),
                     borderRadius: BorderRadius.circular(AppRadii.xxs),
                   ),
                 ),

@@ -33,7 +33,7 @@ class EmptyHint extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(icon, size: 40, color: AppColors.inkSubtle),
+              Icon(icon, size: 40, color: AppColors.of(context).inkSubtle),
               const SizedBox(height: AppSpacing.x3),
               Text(
                 message,

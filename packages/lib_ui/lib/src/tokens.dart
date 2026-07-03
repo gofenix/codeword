@@ -105,6 +105,70 @@ class AppColors {
   static const Color masteryVague = Color(0xFFD97706);
   static const Color masteryUnfamiliar = Color(0xFFEA580C);
   static const Color masteryUnseen = Color(0xFFD1D5DB);
+
+  // Idle star for the dark theme (paired with [starIdle]).
+  static const Color starIdleDark = Color(0xFF3A4042);
+
+  // ── Brightness-aware resolution ──────────────────────────────────
+  //
+  // Widgets historically referenced the light constants directly
+  // (`AppColors.ink`, `AppColors.surface`, …), which broke dark mode:
+  // white cards + near-black text rendered on the dark scaffold. Use
+  // [AppColors.of] to pull the surface/text tokens that match the
+  // current [Theme]'s brightness. Brand/semantic colours (primary,
+  // danger, palette …) are intentionally NOT resolved — they read
+  // correctly on both backgrounds.
+  static const AppPalette _light = AppPalette(
+    ink: ink,
+    inkMuted: inkMuted,
+    inkSubtle: inkSubtle,
+    surface: surface,
+    surfaceMuted: surfaceMuted,
+    background: background,
+    divider: divider,
+    starIdle: starIdle,
+  );
+
+  static const AppPalette _dark = AppPalette(
+    ink: inkDark,
+    inkMuted: inkMutedDark,
+    inkSubtle: inkSubtleDark,
+    surface: surfaceDark,
+    surfaceMuted: surfaceMutedDark,
+    background: backgroundDark,
+    divider: dividerDark,
+    starIdle: starIdleDark,
+  );
+
+  /// Resolve the brightness-dependent surface/text palette for [context].
+  static AppPalette of(BuildContext context) =>
+      Theme.of(context).brightness == Brightness.dark ? _dark : _light;
+}
+
+/// Brightness-resolved surface/text tokens returned by [AppColors.of].
+///
+/// Only the tokens that must flip between light and dark live here.
+/// Brand and status colours stay on [AppColors] as flat constants.
+class AppPalette {
+  final Color ink;
+  final Color inkMuted;
+  final Color inkSubtle;
+  final Color surface;
+  final Color surfaceMuted;
+  final Color background;
+  final Color divider;
+  final Color starIdle;
+
+  const AppPalette({
+    required this.ink,
+    required this.inkMuted,
+    required this.inkSubtle,
+    required this.surface,
+    required this.surfaceMuted,
+    required this.background,
+    required this.divider,
+    required this.starIdle,
+  });
 }
 
 class AppRadii {

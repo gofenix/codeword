@@ -26,7 +26,7 @@ class SettingsScreen extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('设置', style: AppTheme.screenHeader()),
+            Text('设置', style: AppTheme.screenHeader(context: context)),
             const SizedBox(height: AppSpacing.x5),
             const _ProfileCard(),
             const SizedBox(height: AppSpacing.x5),
@@ -86,21 +86,19 @@ class _ProfileCard extends StatelessWidget {
               children: [
                 Text(
                   '极客',
-                  style: AppTheme.cardTitle().copyWith(fontSize: 17),
+                  style: AppTheme.cardTitle(
+                    context: context,
+                  ).copyWith(fontSize: 17),
                 ),
                 const SizedBox(height: 2),
                 Text(
                   '本地用户 · 无需登录',
-                  style: AppTheme.mutedCaption(),
+                  style: AppTheme.mutedCaption(context: context),
                 ),
               ],
             ),
           ),
-          PillTag(
-            label: '已激活',
-            color: AppColors.success,
-            icon: Icons.verified,
-          ),
+          PillTag(label: '已激活', color: AppColors.success, icon: Icons.verified),
         ],
       ),
     );
@@ -113,7 +111,7 @@ class _SectionLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: AppTheme.sectionLabel());
+    return Text(text, style: AppTheme.sectionLabel(context: context));
   }
 }
 
@@ -155,9 +153,9 @@ class _AiSettingsRow extends ConsumerWidget {
         ? '${cfg.model} · ${cfg.maskedKey}'
         : 'OpenAI 兼容 · Base URL / Key / Model';
     return AppCard(
-      onTap: () => Navigator.of(context).push(
-        MaterialPageRoute(builder: (_) => const AiSettingsScreen()),
-      ),
+      onTap: () => Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (_) => const AiSettingsScreen())),
       padding: const EdgeInsets.symmetric(
         horizontal: AppSpacing.x4,
         vertical: AppSpacing.x3,
@@ -171,12 +169,14 @@ class _AiSettingsRow extends ConsumerWidget {
             decoration: BoxDecoration(
               color: cfg.isConfigured
                   ? AppColors.primary.withValues(alpha: 0.12)
-                  : AppColors.inkSubtle.withValues(alpha: 0.12),
+                  : AppColors.of(context).inkSubtle.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(AppRadii.sm),
             ),
             child: Icon(
               cfg.isConfigured ? Icons.bolt : Icons.bolt_outlined,
-              color: cfg.isConfigured ? AppColors.primary : AppColors.inkMuted,
+              color: cfg.isConfigured
+                  ? AppColors.primary
+                  : AppColors.of(context).inkMuted,
               size: 20,
             ),
           ),
@@ -187,7 +187,7 @@ class _AiSettingsRow extends ConsumerWidget {
               children: [
                 Row(
                   children: [
-                    Text('AI 接入', style: AppTheme.rowTitle()),
+                    Text('AI 接入', style: AppTheme.rowTitle(context: context)),
                     if (cfg.isConfigured) ...[
                       const SizedBox(width: AppSpacing.x1_5),
                       const PillTag(
@@ -200,16 +200,16 @@ class _AiSettingsRow extends ConsumerWidget {
                 ),
                 Text(
                   subtitle,
-                  style: AppTheme.code(size: 11),
+                  style: AppTheme.code(size: 11, context: context),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
           ),
-          const Icon(
+          Icon(
             Icons.chevron_right,
-            color: AppColors.inkSubtle,
+            color: AppColors.of(context).inkSubtle,
             size: 20,
           ),
         ],
@@ -302,10 +302,10 @@ class _SettingRow extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: AppTheme.rowTitle()),
+                Text(title, style: AppTheme.rowTitle(context: context)),
                 Text(
                   subtitle,
-                  style: AppTheme.mutedCaption(size: 11),
+                  style: AppTheme.mutedCaption(size: 11, context: context),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),

@@ -72,9 +72,9 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
     final cfg = ref.read(llmConfigProvider);
     if (!cfg.isConfigured) {
       if (!mounted) return;
-      Navigator.of(context).push(
-        MaterialPageRoute(builder: (_) => const AiSettingsScreen()),
-      );
+      Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (_) => const AiSettingsScreen()));
       return;
     }
     if (_pool.isEmpty) {
@@ -89,32 +89,36 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
     try {
       final vocabName =
           ref.read(vocabMetaProvider)[_pool.first.vocabId]?.name ??
-              _pool.first.vocabId;
+          _pool.first.vocabId;
       final words = _pool.map((e) => e.word).toList();
       final system = const LlmMessage(
         role: 'system',
-        content: 'You are a writing assistant for a vocabulary app. '
+        content:
+            'You are a writing assistant for a vocabulary app. '
             'Write short, engaging English articles for programmers and '
             'AI practitioners. Use the supplied target words naturally. '
             'No preamble, no markdown — just the article text.',
       );
       final user = LlmMessage(
         role: 'user',
-        content: 'Theme: $vocabName.\n'
+        content:
+            'Theme: $vocabName.\n'
             'Target words (use each at least once, naturally): '
             '${words.join(", ")}.\n'
             'Constraints: 180-260 words. One paragraph. No bullet points. '
             'No headings. Tone: a senior engineer explaining a concept to '
             'a junior over coffee.',
       );
-      final resp = await ref.read(llmClientProvider).chat(
-        LlmChatRequest(
-          model: cfg.model,
-          temperature: 0.7,
-          maxTokens: 600,
-          messages: [system, user],
-        ),
-      );
+      final resp = await ref
+          .read(llmClientProvider)
+          .chat(
+            LlmChatRequest(
+              model: cfg.model,
+              temperature: 0.7,
+              maxTokens: 600,
+              messages: [system, user],
+            ),
+          );
       if (!mounted) return;
       setState(() {
         _article = resp.content.trim();
@@ -128,8 +132,8 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
         _error = e.statusCode == 401
             ? '鉴权失败 (401) · 检查 API Key'
             : e.statusCode == 404
-                ? '路径错误 (404) · 检查 Base URL'
-                : 'AI 调用失败 (${e.statusCode ?? '-'}): ${e.message}';
+            ? '路径错误 (404) · 检查 Base URL'
+            : 'AI 调用失败 (${e.statusCode ?? '-'}): ${e.message}';
       });
     } catch (e) {
       if (!mounted) return;
@@ -143,7 +147,7 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.of(context).background,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(
@@ -195,11 +199,11 @@ class _ReadingHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('阅读', style: AppTheme.screenHeader()),
+        Text('阅读', style: AppTheme.screenHeader(context: context)),
         const SizedBox(height: 2),
         Text(
           'AI 用今天要学的词写一篇短文',
-          style: AppTheme.mutedCaption(size: 13),
+          style: AppTheme.mutedCaption(size: 13, context: context),
         ),
       ],
     );
@@ -228,7 +232,7 @@ class _PoolLoading extends StatelessWidget {
               const SizedBox(width: AppSpacing.x3),
               Text(
                 '加载今日词表…',
-                style: AppTheme.mutedCaption(size: 13),
+                style: AppTheme.mutedCaption(size: 13, context: context),
               ),
             ],
           ),
@@ -251,19 +255,24 @@ class _PoolCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(Icons.local_library_outlined,
-                  color: AppColors.primary, size: 18),
+              const Icon(
+                Icons.local_library_outlined,
+                color: AppColors.primary,
+                size: 18,
+              ),
               const SizedBox(width: AppSpacing.x1_5),
-              Text('今日词表', style: AppTheme.cardTitle()),
+              Text('今日词表', style: AppTheme.cardTitle(context: context)),
               const Spacer(),
               IconButton(
                 tooltip: '换一批',
                 onPressed: onRefresh,
-                icon: const Icon(Icons.refresh,
-                    color: AppColors.inkMuted, size: 18),
-                visualDensity: VisualDensity.compact,
+                icon: Icon(
+                  Icons.refresh,
+                  color: AppColors.of(context).inkMuted,
+                  size: 18,
+                ),
                 padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(),
+                constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
               ),
             ],
           ),
@@ -316,14 +325,15 @@ class _ErrorCard extends StatelessWidget {
       padding: const EdgeInsets.all(AppSpacing.x4),
       child: Row(
         children: [
-          const Icon(Icons.error_outline,
-              color: AppColors.danger, size: 20),
+          const Icon(Icons.error_outline, color: AppColors.danger, size: 20),
           const SizedBox(width: AppSpacing.x3),
           Expanded(
             child: Text(
               message,
-              style: AppTheme.rowTitle()
-                  .copyWith(fontSize: 13, color: AppColors.danger),
+              style: AppTheme.rowTitle().copyWith(
+                fontSize: 13,
+                color: AppColors.danger,
+              ),
             ),
           ),
         ],
@@ -343,9 +353,7 @@ class _GenerateButton extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    final label = generating
-        ? '生成中…'
-        : (isConfigured ? '生成文章' : '去设置 AI');
+    final label = generating ? '生成中…' : (isConfigured ? '生成文章' : '去设置 AI');
     return SizedBox(
       width: double.infinity,
       child: FilledButton.icon(
@@ -359,10 +367,7 @@ class _GenerateButton extends StatelessWidget {
                   color: AppColors.onPrimary,
                 ),
               )
-            : Icon(
-                isConfigured ? Icons.auto_awesome : Icons.bolt,
-                size: 18,
-              ),
+            : Icon(isConfigured ? Icons.auto_awesome : Icons.bolt, size: 18),
         label: Text(label),
         style: FilledButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
@@ -396,10 +401,13 @@ class _ArticleCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(Icons.menu_book_rounded,
-                  color: AppColors.primary, size: 18),
+              const Icon(
+                Icons.menu_book_rounded,
+                color: AppColors.primary,
+                size: 18,
+              ),
               const SizedBox(width: AppSpacing.x1_5),
-              Text('今日阅读', style: AppTheme.cardTitle()),
+              Text('今日阅读', style: AppTheme.cardTitle(context: context)),
               const Spacer(),
               IconButton(
                 tooltip: '重新生成',
@@ -407,21 +415,22 @@ class _ArticleCard extends StatelessWidget {
                 icon: Icon(
                   Icons.refresh,
                   color: regenerating
-                      ? AppColors.inkSubtle
-                      : AppColors.inkMuted,
+                      ? AppColors.of(context).inkSubtle
+                      : AppColors.of(context).inkMuted,
                   size: 18,
                 ),
-                visualDensity: VisualDensity.compact,
                 padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(),
+                constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
               ),
             ],
           ),
           const SizedBox(height: AppSpacing.x4),
           SelectableText.rich(
             highlighted,
-            style: AppTheme.wordDisplay(size: 16, color: AppColors.ink)
-                .copyWith(height: 1.7),
+            style: AppTheme.wordDisplay(
+              size: 16,
+              color: AppColors.of(context).ink,
+            ).copyWith(height: 1.7),
           ),
           const SizedBox(height: AppSpacing.x4),
           if (pool.isNotEmpty) _Glossary(pool: pool),
@@ -470,14 +479,16 @@ class _ArticleCard extends StatelessWidget {
       if (m.start > idx) {
         spans.add(TextSpan(text: text.substring(idx, m.start)));
       }
-      spans.add(TextSpan(
-        text: text.substring(m.start, m.end),
-        style: TextStyle(
-          color: AppColors.primaryDark,
-          fontWeight: FontWeight.w700,
-          backgroundColor: AppColors.primarySoft.withValues(alpha: 0.2),
+      spans.add(
+        TextSpan(
+          text: text.substring(m.start, m.end),
+          style: TextStyle(
+            color: AppColors.primaryDark,
+            fontWeight: FontWeight.w700,
+            backgroundColor: AppColors.primarySoft.withValues(alpha: 0.2),
+          ),
         ),
-      ));
+      );
       idx = m.end;
     }
     if (idx < text.length) {
@@ -495,20 +506,28 @@ class _Glossary extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(AppSpacing.x3),
       decoration: BoxDecoration(
-        color: AppColors.surfaceMuted,
+        color: AppColors.of(context).surfaceMuted,
         borderRadius: BorderRadius.circular(AppRadii.md),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('词表', style: AppTheme.sectionLabel().copyWith(fontSize: 11)),
+          Text(
+            '词表',
+            style: AppTheme.sectionLabel(
+              context: context,
+            ).copyWith(fontSize: 11),
+          ),
           const SizedBox(height: AppSpacing.x1_5),
           for (final e in pool)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 2),
               child: RichText(
                 text: TextSpan(
-                  style: AppTheme.wordDisplay(size: 12, color: AppColors.ink),
+                  style: AppTheme.wordDisplay(
+                    size: 12,
+                    color: AppColors.of(context).ink,
+                  ),
                   children: [
                     TextSpan(
                       text: '${e.word}  ',
@@ -519,8 +538,8 @@ class _Glossary extends StatelessWidget {
                     ),
                     TextSpan(
                       text: e.translation,
-                      style: const TextStyle(
-                        color: AppColors.inkMuted,
+                      style: TextStyle(
+                        color: AppColors.of(context).inkMuted,
                         fontWeight: FontWeight.w500,
                       ),
                     ),

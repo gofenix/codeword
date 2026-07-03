@@ -90,7 +90,8 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
         constraints: const BoxConstraints(maxWidth: 640),
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(AppRadii.lg)),
+          borderRadius:
+              BorderRadius.vertical(top: Radius.circular(AppRadii.lg)),
         ),
       ),
       snackBarTheme: SnackBarThemeData(
@@ -225,7 +226,8 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
         constraints: const BoxConstraints(maxWidth: 640),
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(AppRadii.lg)),
+          borderRadius:
+              BorderRadius.vertical(top: Radius.circular(AppRadii.lg)),
         ),
       ),
       snackBarTheme: SnackBarThemeData(
@@ -423,20 +425,23 @@ class AppTheme {
 
   // ── Per-style convenience constructors ────────────────────────────
   //
-  // These are intentionally brightness-agnostic; callers that need
-  // dark-mode aware colours should pass [context] and use the
-  // Theme.of(context).colorScheme lookups (or the helper below).
+  // Each ink-defaulting helper accepts an optional [context]. When passed,
+  // the default text colour resolves to the brightness-correct ink via
+  // [AppColors.of] so the same call renders readably in dark mode. When
+  // omitted (or when an explicit [color] is given) behaviour is unchanged,
+  // keeping every existing light-theme call site pixel-identical.
 
   /// Serif style for displaying a vocabulary word (Lora).
   static TextStyle wordDisplay({
     double size = 36,
     FontWeight weight = FontWeight.w700,
-    Color color = AppColors.ink,
+    Color? color,
+    BuildContext? context,
   }) {
     return GoogleFonts.lora(
       fontSize: size,
       fontWeight: weight,
-      color: color,
+      color: color ?? _ink(context),
       height: 1.2,
       letterSpacing: -0.5,
     );
@@ -444,53 +449,58 @@ class AppTheme {
 
   /// Phonetic style (small grey text like /əˈbændən/).
   static TextStyle phonetic({
-    Color color = AppColors.inkMuted,
+    Color? color,
     double fontSize = 14,
+    BuildContext? context,
   }) {
     return GoogleFonts.notoSansSc(
       fontSize: fontSize,
       fontWeight: FontWeight.w400,
-      color: color,
+      color: color ?? _inkMuted(context),
       letterSpacing: 0.2,
     );
   }
 
   /// Big screen header (e.g. "发现", "设置", "图表").
-  static TextStyle screenHeader({Color? color}) {
+  static TextStyle screenHeader({Color? color, BuildContext? context}) {
     return GoogleFonts.notoSansSc(
       fontSize: 28,
       fontWeight: FontWeight.w700,
       height: 1.2,
       letterSpacing: -0.3,
-      color: color ?? AppColors.ink,
+      color: color ?? _ink(context),
     );
   }
 
   /// Card title (e.g. "今日任务", stats section titles).
-  static TextStyle cardTitle({Color? color}) {
+  static TextStyle cardTitle({Color? color, BuildContext? context}) {
     return GoogleFonts.notoSansSc(
       fontSize: 15,
       fontWeight: FontWeight.w700,
-      color: color ?? AppColors.ink,
+      color: color ?? _ink(context),
     );
   }
 
   /// Small uppercase section label (e.g. "PROFILE", "AI").
-  static TextStyle sectionLabel({Color? color}) {
+  static TextStyle sectionLabel({Color? color, BuildContext? context}) {
     return GoogleFonts.notoSansSc(
       fontSize: 12,
       fontWeight: FontWeight.w700,
       letterSpacing: 1.2,
-      color: color ?? AppColors.inkMuted,
+      color: color ?? _inkMuted(context),
     );
   }
 
   /// Muted caption (descriptive body under titles).
-  static TextStyle mutedCaption({double size = 12, Color? color}) {
+  static TextStyle mutedCaption({
+    double size = 12,
+    Color? color,
+    BuildContext? context,
+  }) {
     return GoogleFonts.notoSansSc(
       fontSize: size,
       fontWeight: FontWeight.w500,
-      color: color ?? AppColors.inkMuted,
+      color: color ?? _inkMuted(context),
     );
   }
 
@@ -505,21 +515,29 @@ class AppTheme {
   }
 
   /// Setting row title (e.g. "AI 服务商", "清除所有数据").
-  static TextStyle rowTitle({Color? color}) {
+  static TextStyle rowTitle({Color? color, BuildContext? context}) {
     return GoogleFonts.notoSansSc(
       fontSize: 14,
       fontWeight: FontWeight.w600,
-      color: color ?? AppColors.ink,
+      color: color ?? _ink(context),
     );
   }
 
   /// Monospace text for API keys / code-like strings.
-  static TextStyle code({double size = 11, Color? color}) {
+  static TextStyle code(
+      {double size = 11, Color? color, BuildContext? context}) {
     return TextStyle(
       fontFamily: 'monospace',
       fontSize: size,
       fontWeight: FontWeight.w500,
-      color: color ?? AppColors.inkMuted,
+      color: color ?? _inkMuted(context),
     );
   }
+
+  // Resolve ink / muted defaults: brightness-aware when [context] is
+  // supplied, otherwise the light constant (unchanged legacy behaviour).
+  static Color _ink(BuildContext? context) =>
+      context == null ? AppColors.ink : AppColors.of(context).ink;
+  static Color _inkMuted(BuildContext? context) =>
+      context == null ? AppColors.inkMuted : AppColors.of(context).inkMuted;
 }

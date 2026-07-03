@@ -171,7 +171,9 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
       // Always release the underlying HTTP connection pool — the test
       // client is short-lived. Swallow errors because a failing close
       // shouldn't mask the real test result.
-      try { client.close(); } catch (_) {}
+      try {
+        client.close();
+      } catch (_) {}
     }
   }
 
@@ -208,9 +210,12 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.of(context).background,
       appBar: AppBar(
-        title: Text('AI 接入', style: AppTheme.screenHeader().copyWith(fontSize: 20)),
+        title: Text(
+          'AI 接入',
+          style: AppTheme.screenHeader(context: context).copyWith(fontSize: 20),
+        ),
         actions: [
           if (_dirty)
             TextButton(
@@ -264,7 +269,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
                     _obscureKey
                         ? Icons.visibility_outlined
                         : Icons.visibility_off_outlined,
-                    color: AppColors.inkMuted,
+                    color: AppColors.of(context).inkMuted,
                     size: 20,
                   ),
                   onPressed: () => setState(() => _obscureKey = !_obscureKey),
@@ -349,8 +354,10 @@ class _IntroCard extends StatelessWidget {
           Expanded(
             child: Text(
               'Key 只存本机加密存储，不上传服务器。请求直发到 Base URL。',
-              style: AppTheme.mutedCaption(size: 13, color: AppColors.ink)
-                  .copyWith(height: 1.4),
+              style: AppTheme.mutedCaption(
+                size: 13,
+                color: AppColors.ink,
+              ).copyWith(height: 1.4),
             ),
           ),
         ],
@@ -370,15 +377,13 @@ class _Label extends StatelessWidget {
       children: [
         Text(
           text,
-          style: AppTheme.cardTitle()
-              .copyWith(fontSize: 13, letterSpacing: 0.3),
+          style: AppTheme.cardTitle(
+            context: context,
+          ).copyWith(fontSize: 13, letterSpacing: 0.3),
         ),
         if (hint != null) ...[
           const SizedBox(height: 2),
-          Text(
-            hint!,
-            style: AppTheme.mutedCaption(size: 11),
-          ),
+          Text(hint!, style: AppTheme.mutedCaption(size: 11, context: context)),
         ],
       ],
     );
@@ -412,13 +417,15 @@ class _Field extends StatelessWidget {
       keyboardType: keyboardType,
       autocorrect: autocorrect,
       enableSuggestions: enableSuggestions,
-      style: AppTheme.code(size: 15, color: AppColors.ink),
+      style: AppTheme.code(size: 15, color: AppColors.of(context).ink),
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: AppTheme.code(size: 15, color: AppColors.inkSubtle)
-            .copyWith(fontWeight: FontWeight.w400),
+        hintStyle: AppTheme.code(
+          size: 15,
+          color: AppColors.of(context).inkSubtle,
+        ).copyWith(fontWeight: FontWeight.w400),
         filled: true,
-        fillColor: AppColors.surface,
+        fillColor: AppColors.of(context).surface,
         contentPadding: const EdgeInsets.symmetric(
           horizontal: AppSpacing.x4,
           vertical: AppSpacing.x3,
@@ -426,13 +433,13 @@ class _Field extends StatelessWidget {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppRadii.md),
           borderSide: BorderSide(
-            color: AppColors.inkSubtle.withValues(alpha: 0.2),
+            color: AppColors.of(context).inkSubtle.withValues(alpha: 0.2),
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppRadii.md),
           borderSide: BorderSide(
-            color: AppColors.inkSubtle.withValues(alpha: 0.2),
+            color: AppColors.of(context).inkSubtle.withValues(alpha: 0.2),
           ),
         ),
         focusedBorder: OutlineInputBorder(
@@ -487,7 +494,7 @@ class _CompatList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('兼容', style: AppTheme.sectionLabel()),
+        Text('兼容', style: AppTheme.sectionLabel(context: context)),
         const SizedBox(height: AppSpacing.x2),
         ..._compatRows.map((r) => _CompatRow(name: r.$1, base: r.$2)),
       ],
@@ -520,13 +527,16 @@ class _CompatRow extends StatelessWidget {
             width: 90,
             child: Text(
               name,
-              style: AppTheme.rowTitle().copyWith(fontSize: 12),
+              style: AppTheme.rowTitle(context: context).copyWith(fontSize: 12),
             ),
           ),
           Expanded(
             child: Text(
               base,
-              style: AppTheme.code(size: 11, color: AppColors.inkMuted),
+              style: AppTheme.code(
+                size: 11,
+                color: AppColors.of(context).inkMuted,
+              ),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),

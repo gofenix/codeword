@@ -12,10 +12,7 @@ import '../state/learning_session.dart';
 class LearningSessionScreen extends ConsumerStatefulWidget {
   final String vocabId;
 
-  const LearningSessionScreen({
-    super.key,
-    required this.vocabId,
-  });
+  const LearningSessionScreen({super.key, required this.vocabId});
 
   @override
   ConsumerState<LearningSessionScreen> createState() =>
@@ -50,11 +47,13 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
     // [LearningSessionNotifier.answer] / [next]; this pass drains any
     // study-minute write queued above plus the debounced tail.
     try {
-      unawaited(Future.microtask(() async {
-        try {
-          await ReviewRepository.instance.flush();
-        } catch (_) {}
-      }));
+      unawaited(
+        Future.microtask(() async {
+          try {
+            await ReviewRepository.instance.flush();
+          } catch (_) {}
+        }),
+      );
     } catch (_) {}
     super.dispose();
   }
@@ -72,7 +71,7 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
               : session.progress.clamp(0.0, 1.0));
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.of(context).background,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -239,8 +238,10 @@ class _AskingViewState extends ConsumerState<_AskingView> {
                 const Spacer(),
                 Text(
                   '${session.currentIndex + 1} / ${session.questions.length}',
-                  style: AppTheme.rowTitle()
-                      .copyWith(fontSize: 13, color: AppColors.inkMuted),
+                  style: AppTheme.rowTitle().copyWith(
+                    fontSize: 13,
+                    color: AppColors.of(context).inkMuted,
+                  ),
                 ),
               ],
             ),
@@ -250,9 +251,7 @@ class _AskingViewState extends ConsumerState<_AskingView> {
           Expanded(
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppSpacing.x6,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
                 child: _QuestionStage(
                   type: q.type,
                   prompt: q.prompt,
@@ -292,10 +291,7 @@ class _AskingViewState extends ConsumerState<_AskingView> {
 
 class _WrongDetailView extends ConsumerStatefulWidget {
   final LearningSessionState session;
-  const _WrongDetailView({
-    required this.session,
-    super.key,
-  });
+  const _WrongDetailView({required this.session, super.key});
 
   @override
   ConsumerState<_WrongDetailView> createState() => _WrongDetailViewState();
@@ -419,25 +415,35 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
                         : Icons.star_outline_rounded,
                     color: _isFavorite
                         ? AppColors.warning
-                        : AppColors.inkSubtle,
+                        : AppColors.of(context).inkSubtle,
                     size: 20,
                   ),
-                  visualDensity: VisualDensity.compact,
                   padding: EdgeInsets.zero,
-                  constraints: const BoxConstraints(),
+                  // Full 48px tap target (Material min). VisualDensity.compact
+                  // would subtract 8px and drop us to 40px, so it is omitted
+                  // here on purpose for these frequently-tapped actions.
+                  constraints: const BoxConstraints(
+                    minWidth: 48,
+                    minHeight: 48,
+                  ),
                 ),
                 const SizedBox(width: AppSpacing.x3),
                 IconButton(
                   tooltip: '移除',
                   onPressed: _markRemoved,
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.delete_outline,
-                    color: AppColors.inkSubtle,
+                    color: AppColors.of(context).inkSubtle,
                     size: 20,
                   ),
-                  visualDensity: VisualDensity.compact,
                   padding: EdgeInsets.zero,
-                  constraints: const BoxConstraints(),
+                  // Full 48px tap target (Material min). VisualDensity.compact
+                  // would subtract 8px and drop us to 40px, so it is omitted
+                  // here on purpose for these frequently-tapped actions.
+                  constraints: const BoxConstraints(
+                    minWidth: 48,
+                    minHeight: 48,
+                  ),
                 ),
               ],
             ),
@@ -455,8 +461,10 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
                 ),
                 child: Text(
                   '继续，稍后再测',
-                  style: AppTheme.cardTitle()
-                      .copyWith(fontSize: 16, color: AppColors.onPrimary),
+                  style: AppTheme.cardTitle().copyWith(
+                    fontSize: 16,
+                    color: AppColors.onPrimary,
+                  ),
                 ),
               ),
             ),
@@ -494,7 +502,7 @@ class _ContextCard extends StatelessWidget {
                 Flexible(
                   child: Text(
                     word.word,
-                    style: AppTheme.wordDisplay(size: 20),
+                    style: AppTheme.wordDisplay(size: 20, context: context),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),
@@ -503,7 +511,7 @@ class _ContextCard extends StatelessWidget {
                 Flexible(
                   child: Text(
                     '${word.phonetic}  ${word.pos}',
-                    style: AppTheme.phonetic(fontSize: 13),
+                    style: AppTheme.phonetic(fontSize: 13, context: context),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),
@@ -519,7 +527,7 @@ class _ContextCard extends StatelessWidget {
                 word.exampleEn,
                 style: AppTheme.wordDisplay(
                   size: 20,
-                  color: AppColors.ink,
+                  color: AppColors.of(context).ink,
                   weight: FontWeight.w400,
                 ).copyWith(height: 1.6),
               ),
@@ -530,14 +538,19 @@ class _ContextCard extends StatelessWidget {
             const SizedBox(height: AppSpacing.x5),
             Text(
               word.translation,
-              style: AppTheme.cardTitle().copyWith(fontSize: 16, height: 1.5),
+              style: AppTheme.cardTitle(
+                context: context,
+              ).copyWith(fontSize: 16, height: 1.5),
             ),
             // Chinese example translation (muted, supplementary).
             if (hasExample && word.exampleCn.trim().isNotEmpty) ...[
               const SizedBox(height: AppSpacing.x2),
               Text(
                 word.exampleCn,
-                style: AppTheme.mutedCaption(size: 14).copyWith(height: 1.5),
+                style: AppTheme.mutedCaption(
+                  size: 14,
+                  context: context,
+                ).copyWith(height: 1.5),
               ),
             ],
             if (word.synonyms.isNotEmpty) ...[
@@ -586,10 +599,7 @@ class _SentenceAudioButton extends StatelessWidget {
               color: AppColors.primary,
             ),
             const SizedBox(width: AppSpacing.x1_5),
-            Text(
-              '播放例句',
-              style: AppTheme.chipCaption(),
-            ),
+            Text('播放例句', style: AppTheme.chipCaption()),
           ],
         ),
       ),
@@ -608,13 +618,15 @@ class _DetailRow extends StatelessWidget {
       children: [
         Text(
           '$label  ',
-          style: AppTheme.chipCaption(color: AppColors.inkSubtle),
+          style: AppTheme.chipCaption(color: AppColors.of(context).inkSubtle),
         ),
         Expanded(
           child: Text(
             content,
-            style: AppTheme.mutedCaption(size: 13, color: AppColors.ink)
-                .copyWith(height: 1.5),
+            style: AppTheme.mutedCaption(
+              size: 13,
+              color: AppColors.of(context).ink,
+            ).copyWith(height: 1.5),
           ),
         ),
       ],
@@ -667,16 +679,9 @@ class _QuestionTypeChip extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(
-            Icons.bolt_rounded,
-            size: 14,
-            color: AppColors.primary,
-          ),
+          const Icon(Icons.bolt_rounded, size: 14, color: AppColors.primary),
           const SizedBox(width: AppSpacing.x1),
-          Text(
-            label,
-            style: AppTheme.chipCaption(),
-          ),
+          Text(label, style: AppTheme.chipCaption()),
         ],
       ),
     );
@@ -715,17 +720,38 @@ class _WordStage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          word.word,
-          textAlign: TextAlign.center,
-          style: AppTheme.wordDisplay(size: 56, weight: FontWeight.w700),
-        ),
-        const SizedBox(height: AppSpacing.x3),
-        Text(word.phonetic, style: AppTheme.phonetic(fontSize: 16)),
-      ],
+    // Long phrases (e.g. "take something for granted") wrap to the column
+    // width first, then the whole block scales down to fit the available
+    // height. Without this the 56pt text overflows the centered slot and
+    // bleeds into the options below. Short words stay at full size.
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return FittedBox(
+          fit: BoxFit.scaleDown,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: constraints.maxWidth),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  word.word,
+                  textAlign: TextAlign.center,
+                  style: AppTheme.wordDisplay(
+                    size: 56,
+                    weight: FontWeight.w700,
+                    context: context,
+                  ),
+                ),
+                const SizedBox(height: AppSpacing.x3),
+                Text(
+                  word.phonetic,
+                  style: AppTheme.phonetic(fontSize: 16, context: context),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }
@@ -737,23 +763,37 @@ class _MeaningStage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          meaning,
-          textAlign: TextAlign.center,
-          style: AppTheme.screenHeader().copyWith(
-            fontSize: 28,
-            height: 1.4,
+    // Meanings can be long ("使…相形见绌；使黯然失色"). Wrap to width then
+    // scale-to-fit so the prompt never overflows into the options below.
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return FittedBox(
+          fit: BoxFit.scaleDown,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: constraints.maxWidth),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  meaning,
+                  textAlign: TextAlign.center,
+                  style: AppTheme.screenHeader(
+                    context: context,
+                  ).copyWith(fontSize: 28, height: 1.4),
+                ),
+                const SizedBox(height: AppSpacing.x3),
+                Text(
+                  '选择对应的英文',
+                  style: AppTheme.mutedCaption(
+                    size: 13,
+                    color: AppColors.of(context).inkSubtle,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-        const SizedBox(height: AppSpacing.x3),
-        Text(
-          '选择对应的英文',
-          style: AppTheme.mutedCaption(size: 13, color: AppColors.inkSubtle),
-        ),
-      ],
+        );
+      },
     );
   }
 }
@@ -771,7 +811,10 @@ class _ListenStage extends StatelessWidget {
         const SizedBox(height: AppSpacing.x4),
         Text(
           '点击播放发音',
-          style: AppTheme.mutedCaption(size: 13, color: AppColors.inkSubtle),
+          style: AppTheme.mutedCaption(
+            size: 13,
+            color: AppColors.of(context).inkSubtle,
+          ),
         ),
       ],
     );
@@ -814,15 +857,11 @@ class _OptionTile extends StatelessWidget {
   final _OptionState state;
   final VoidCallback? onTap;
 
-  const _OptionTile({
-    required this.text,
-    required this.state,
-    this.onTap,
-  });
+  const _OptionTile({required this.text, required this.state, this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    final colors = _colors();
+    final colors = _colors(context);
     return PressableScale(
       scaleFactor: state == _OptionState.normal ? 0.97 : 1.0,
       onTap: state == _OptionState.normal ? onTap : null,
@@ -836,10 +875,7 @@ class _OptionTile extends StatelessWidget {
           decoration: BoxDecoration(
             color: colors.background,
             borderRadius: BorderRadius.circular(AppRadii.md),
-            border: Border.all(
-              color: colors.border,
-              width: 1.5,
-            ),
+            border: Border.all(color: colors.border, width: 1.5),
           ),
           child: Row(
             children: [
@@ -853,8 +889,11 @@ class _OptionTile extends StatelessWidget {
                 ),
               ),
               if (state == _OptionState.correct)
-                const Icon(Icons.check_circle_rounded,
-                    color: AppColors.primary, size: 20),
+                const Icon(
+                  Icons.check_circle_rounded,
+                  color: AppColors.primary,
+                  size: 20,
+                ),
             ],
           ),
         ),
@@ -862,31 +901,32 @@ class _OptionTile extends StatelessWidget {
     );
   }
 
-  _OptionColors _colors() {
+  _OptionColors _colors(BuildContext context) {
+    final palette = AppColors.of(context);
     switch (state) {
       case _OptionState.correct:
         return _OptionColors(
-          background: AppColors.surface,
+          background: palette.surface,
           border: AppColors.primary,
           text: AppColors.primary,
         );
       case _OptionState.wrong:
         return _OptionColors(
-          background: AppColors.surface,
-          border: AppColors.inkSubtle.withValues(alpha: 0.15),
-          text: AppColors.inkSubtle,
+          background: palette.surface,
+          border: palette.inkSubtle.withValues(alpha: 0.15),
+          text: palette.inkSubtle,
         );
       case _OptionState.dimmed:
         return _OptionColors(
-          background: AppColors.surfaceMuted,
-          border: AppColors.inkSubtle.withValues(alpha: 0.1),
-          text: AppColors.inkSubtle,
+          background: palette.surfaceMuted,
+          border: palette.inkSubtle.withValues(alpha: 0.1),
+          text: palette.inkSubtle,
         );
       case _OptionState.normal:
         return _OptionColors(
-          background: AppColors.surface,
-          border: AppColors.inkSubtle.withValues(alpha: 0.2),
-          text: AppColors.ink,
+          background: palette.surface,
+          border: palette.inkSubtle.withValues(alpha: 0.2),
+          text: palette.ink,
         );
     }
   }
@@ -914,8 +954,10 @@ class _ProgressBar extends StatelessWidget {
       children: [
         Text(
           '${(progress * 100).round()}%',
-          style: AppTheme.rowTitle()
-              .copyWith(fontSize: 12, color: AppColors.inkMuted),
+          style: AppTheme.rowTitle().copyWith(
+            fontSize: 12,
+            color: AppColors.of(context).inkMuted,
+          ),
         ),
         const SizedBox(height: AppSpacing.x1),
         ClipRRect(
@@ -923,7 +965,7 @@ class _ProgressBar extends StatelessWidget {
           child: LinearProgressIndicator(
             value: progress,
             minHeight: AppSpacing.x1_5,
-            backgroundColor: AppColors.surfaceMuted,
+            backgroundColor: AppColors.of(context).surfaceMuted,
             valueColor: const AlwaysStoppedAnimation(AppColors.primary),
           ),
         ),
@@ -934,10 +976,7 @@ class _ProgressBar extends StatelessWidget {
 
 class _FinishedView extends StatelessWidget {
   final VoidCallback onClose;
-  const _FinishedView({
-    required this.onClose,
-    super.key,
-  });
+  const _FinishedView({required this.onClose, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -951,7 +990,10 @@ class _FinishedView extends StatelessWidget {
             children: [
               Text(
                 '本组完成',
-                style: AppTheme.wordDisplay(size: 24, color: AppColors.ink),
+                style: AppTheme.wordDisplay(
+                  size: 24,
+                  color: AppColors.of(context).ink,
+                ),
               ),
               const SizedBox(height: AppSpacing.x6),
               FilledButton(

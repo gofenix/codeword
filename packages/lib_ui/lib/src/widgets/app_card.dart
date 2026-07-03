@@ -36,7 +36,7 @@ class AppCard extends StatelessWidget {
       padding: padding,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        color: color ?? AppColors.surface,
+        color: color ?? AppColors.of(context).surface,
         borderRadius: BorderRadius.circular(AppRadii.lg),
         boxShadow: shadow ?? AppShadows.md,
       ),

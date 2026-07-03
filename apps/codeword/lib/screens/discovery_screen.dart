@@ -63,18 +63,25 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
                   Row(
                     children: [
                       Expanded(
-                        child: Text('发现', style: AppTheme.screenHeader()),
+                        child: Text(
+                          '发现',
+                          style: AppTheme.screenHeader(context: context),
+                        ),
                       ),
                       Text(
                         '${lists.length} 本词书',
-                        style: AppTheme.mutedCaption(size: 13),
+                        style: AppTheme.mutedCaption(
+                          size: 13,
+                          context: context,
+                        ),
                       ),
                     ],
                   ),
                   const SizedBox(height: AppSpacing.x4),
                   _SearchField(
                     controller: _searchController,
-                    onChanged: (v) => setState(() => _query = v.trim().toLowerCase()),
+                    onChanged: (v) =>
+                        setState(() => _query = v.trim().toLowerCase()),
                     onClear: () {
                       _searchController.clear();
                       setState(() => _query = '');
@@ -113,17 +120,14 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
                 AppSpacing.x8,
               ),
               sliver: SliverList(
-                delegate: SliverChildBuilderDelegate(
-                  (context, index) {
-                    final cat = categories[index];
-                    return _CategorySection(
-                      category: cat,
-                      lists: grouped[cat]!,
-                      available: meta,
-                    );
-                  },
-                  childCount: categories.length,
-                ),
+                delegate: SliverChildBuilderDelegate((context, index) {
+                  final cat = categories[index];
+                  return _CategorySection(
+                    category: cat,
+                    lists: grouped[cat]!,
+                    available: meta,
+                  );
+                }, childCount: categories.length),
               ),
             ),
         ],
@@ -132,21 +136,17 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
   }
 
   /// Display order for categories. Anything not in here goes last.
-  static const _categoryPriority = [
-    '考试英语',
-    '编程',
-    '青少年英语',
-    '语言',
-    '词典',
-    '专业词汇',
-  ];
+  static const _categoryPriority = ['考试英语', '编程', '青少年英语', '语言', '词典', '专业词汇'];
 
   Map<String, List<VocabList>> _groupAndFilter(List<VocabList> lists) {
     final byCategory = <String, List<VocabList>>{};
     for (final l in lists) {
-      if (_selectedCategory != null && l.category != _selectedCategory) continue;
+      if (_selectedCategory != null && l.category != _selectedCategory) {
+        continue;
+      }
       if (_query.isNotEmpty) {
-        final haystack = '${l.name} ${l.description} ${l.category}'.toLowerCase();
+        final haystack = '${l.name} ${l.description} ${l.category}'
+            .toLowerCase();
         if (!haystack.contains(_query)) continue;
       }
       byCategory.putIfAbsent(l.category, () => []).add(l);
@@ -177,20 +177,31 @@ class _SearchField extends StatelessWidget {
       textAlignVertical: TextAlignVertical.center,
       decoration: InputDecoration(
         hintText: '搜索词书、分类…',
-        hintStyle: AppTheme.mutedCaption(size: 14, color: AppColors.inkSubtle),
-        prefixIcon: const Icon(Icons.search, color: AppColors.inkSubtle, size: 20),
+        hintStyle: AppTheme.mutedCaption(
+          size: 14,
+          color: AppColors.of(context).inkSubtle,
+        ),
+        prefixIcon: Icon(
+          Icons.search,
+          color: AppColors.of(context).inkSubtle,
+          size: 20,
+        ),
         suffixIcon: ValueListenableBuilder<TextEditingValue>(
           valueListenable: controller,
           builder: (context, value, child) {
             if (value.text.isEmpty) return const SizedBox.shrink();
             return IconButton(
-              icon: const Icon(Icons.close_rounded, color: AppColors.inkSubtle, size: 18),
+              icon: Icon(
+                Icons.close_rounded,
+                color: AppColors.of(context).inkSubtle,
+                size: 18,
+              ),
               onPressed: onClear,
             );
           },
         ),
         filled: true,
-        fillColor: AppColors.surface,
+        fillColor: AppColors.of(context).surface,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppRadii.lg),
           borderSide: BorderSide.none,
@@ -221,42 +232,44 @@ class _CategoryChips extends StatelessWidget {
     // IndexedStack keeps every tab mounted, so an unbounded chip row would
     // crash layout for the whole shell — not just the Discovery tab.
     final textScale = MediaQuery.textScalerOf(context).scale(1);
-    final verticalPad =
-        Theme.of(context).chipTheme.labelPadding?.vertical ?? 4;
+    final verticalPad = Theme.of(context).chipTheme.labelPadding?.vertical ?? 4;
     final rowHeight = (36 * textScale).clamp(36.0, 56.0) + verticalPad * 2;
     return SizedBox(
       height: rowHeight,
       child: ListView.separated(
-      scrollDirection: Axis.horizontal,
-      padding: EdgeInsets.symmetric(vertical: verticalPad),
-      itemCount: categories.length,
-      separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.x2),
-      itemBuilder: (context, index) {
-        final cat = categories[index];
-        final isSelected = (cat == '全部' && selected == null) || cat == selected;
-        return ChoiceChip(
-          label: Text(cat),
-          selected: isSelected,
-          onSelected: (_) => onSelected(cat),
-          labelStyle: AppTheme.rowTitle().copyWith(
-            fontSize: 13,
-            color: isSelected ? AppColors.primary : AppColors.inkMuted,
-          ),
-          selectedColor: AppColors.primarySoft,
-          backgroundColor: AppColors.surface,
-          side: BorderSide(
-            color: isSelected
-                ? AppColors.primarySoft
-                : AppColors.inkSubtle.withValues(alpha: 0.2),
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.pill),
-          ),
-          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x2),
-          showCheckmark: false,
-          visualDensity: VisualDensity.compact,
-        );
-      },
+        scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.symmetric(vertical: verticalPad),
+        itemCount: categories.length,
+        separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.x2),
+        itemBuilder: (context, index) {
+          final cat = categories[index];
+          final isSelected =
+              (cat == '全部' && selected == null) || cat == selected;
+          return ChoiceChip(
+            label: Text(cat),
+            selected: isSelected,
+            onSelected: (_) => onSelected(cat),
+            labelStyle: AppTheme.rowTitle().copyWith(
+              fontSize: 13,
+              color: isSelected
+                  ? AppColors.primary
+                  : AppColors.of(context).inkMuted,
+            ),
+            selectedColor: AppColors.primarySoft,
+            backgroundColor: AppColors.of(context).surface,
+            side: BorderSide(
+              color: isSelected
+                  ? AppColors.primarySoft
+                  : AppColors.of(context).inkSubtle.withValues(alpha: 0.2),
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(AppRadii.pill),
+            ),
+            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x2),
+            showCheckmark: false,
+            visualDensity: VisualDensity.compact,
+          );
+        },
       ),
     );
   }
@@ -285,10 +298,9 @@ class _CategorySection extends StatelessWidget {
           ),
           child: Text(
             '$category · ${lists.length}',
-            style: AppTheme.sectionLabel().copyWith(
-              fontSize: 13,
-              letterSpacing: 0.6,
-            ),
+            style: AppTheme.sectionLabel(
+              context: context,
+            ).copyWith(fontSize: 13, letterSpacing: 0.6),
           ),
         ),
         GridView.count(
@@ -371,8 +383,11 @@ class _LibraryTile extends ConsumerWidget {
                 ),
               ),
               if (isCurrent)
-                const Icon(Icons.check_circle_rounded,
-                    color: AppColors.primary, size: 18)
+                const Icon(
+                  Icons.check_circle_rounded,
+                  color: AppColors.primary,
+                  size: 18,
+                )
               else if (available)
                 PillTag(
                   label: 'Lv ${list.level}',
@@ -389,21 +404,31 @@ class _LibraryTile extends ConsumerWidget {
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
               Text(
                 list.name,
                 style: AppTheme.rowTitle(
                   color: isCurrent ? AppColors.primary : null,
+                  context: context,
                 ),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: 2),
-              Text(
-                list.description,
-                style: AppTheme.mutedCaption(size: 11).copyWith(height: 1.3),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
+              // Flexible so the description yields inside the fixed-height
+              // grid cell instead of forcing a vertical overflow when the
+              // OS text scale grows.
+              Flexible(
+                child: Text(
+                  list.description,
+                  style: AppTheme.mutedCaption(
+                    size: 11,
+                    context: context,
+                  ).copyWith(height: 1.3),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ],
           ),

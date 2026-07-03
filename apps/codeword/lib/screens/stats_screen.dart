@@ -30,7 +30,7 @@ class StatsScreen extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('图表', style: AppTheme.screenHeader()),
+            Text('图表', style: AppTheme.screenHeader(context: context)),
             const SizedBox(height: AppSpacing.x5),
 
             // 1) Top-line overview (existing, but smaller now).
@@ -44,7 +44,7 @@ class StatsScreen extends ConsumerWidget {
                       color: AppColors.primary,
                     ),
                   ),
-                  _vDiv(),
+                  _vDiv(context),
                   Expanded(
                     child: _Stat(
                       label: '看过',
@@ -52,7 +52,7 @@ class StatsScreen extends ConsumerWidget {
                       color: AppColors.info,
                     ),
                   ),
-                  _vDiv(),
+                  _vDiv(context),
                   Expanded(
                     child: _Stat(
                       label: '平均 EF',
@@ -113,7 +113,7 @@ class StatsScreen extends ConsumerWidget {
                 children: [
                   Text(
                     '累计 ${stats.totalStudyMinutes} 分钟',
-                    style: AppTheme.mutedCaption(),
+                    style: AppTheme.mutedCaption(context: context),
                   ),
                 ],
               ),
@@ -124,22 +124,18 @@ class StatsScreen extends ConsumerWidget {
     );
   }
 
-  Widget _vDiv() => Container(
-        width: 1,
-        height: 36,
-        color: AppColors.inkSubtle.withValues(alpha: 0.2),
-      );
+  Widget _vDiv(BuildContext context) => Container(
+    width: 1,
+    height: 36,
+    color: AppColors.of(context).inkSubtle.withValues(alpha: 0.2),
+  );
 }
 
 class _Stat extends StatelessWidget {
   final String label;
   final String value;
   final Color color;
-  const _Stat({
-    required this.label,
-    required this.value,
-    required this.color,
-  });
+  const _Stat({required this.label, required this.value, required this.color});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -152,10 +148,7 @@ class _Stat extends StatelessWidget {
             weight: FontWeight.w700,
           ),
         ),
-        Text(
-          label,
-          style: AppTheme.mutedCaption(),
-        ),
+        Text(label, style: AppTheme.mutedCaption(context: context)),
       ],
     );
   }
