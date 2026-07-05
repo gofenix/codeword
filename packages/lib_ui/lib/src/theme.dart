@@ -24,15 +24,15 @@ class AppTheme {
     return base.copyWith(
       textTheme: _uiTextTheme(base.textTheme, Brightness.light),
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.background,
+        backgroundColor: AppColors.background.withValues(alpha: 0.7),
         foregroundColor: AppColors.ink,
         elevation: 0,
         scrolledUnderElevation: 0,
         surfaceTintColor: Colors.transparent,
-        centerTitle: false,
+        centerTitle: true,
         titleTextStyle: GoogleFonts.notoSansSc(
-          fontSize: 20,
-          fontWeight: FontWeight.w700,
+          fontSize: 17,
+          fontWeight: FontWeight.w600,
           color: AppColors.ink,
         ),
       ),
@@ -42,25 +42,23 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppRadii.lg),
+          borderRadius: BorderRadius.circular(AppRadii.md),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.surface,
           foregroundColor: AppColors.ink,
-          elevation: 1,
+          elevation: 0,
           surfaceTintColor: Colors.transparent,
-          shadowColor: const Color(0x0F000000),
+          shadowColor: Colors.transparent,
           padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.md),
-          ),
+          shape: const StadiumBorder(),
           textStyle: GoogleFonts.notoSansSc(
-            fontSize: 15,
+            fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -73,16 +71,21 @@ class AppTheme {
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
-          minimumSize: const Size.fromHeight(48),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.md),
-          ),
+          minimumSize: const Size.fromHeight(50),
+          shape: const StadiumBorder(),
         ),
+      ),
+      pageTransitionsTheme: const PageTransitionsTheme(
+        builders: {
+          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.macOS: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+        },
       ),
       dividerTheme: const DividerThemeData(
         color: AppColors.divider,
-        thickness: 1,
-        space: 1,
+        thickness: 0.5,
+        space: 0.5,
       ),
       bottomSheetTheme: BottomSheetThemeData(
         backgroundColor: AppColors.surface,
@@ -95,9 +98,6 @@ class AppTheme {
         ),
       ),
       snackBarTheme: SnackBarThemeData(
-        // Use the semantic inverseSurface / onInverseSurface so SnackBars
-        // automatically adapt to the current brightness when we switch
-        // to dark mode.
         backgroundColor: AppColors.inverseSurface,
         contentTextStyle: TextStyle(
           color: AppColors.onInverseSurface,
@@ -106,10 +106,10 @@ class AppTheme {
           fontFamily: GoogleFonts.notoSansSc().fontFamily,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppRadii.md),
+          borderRadius: BorderRadius.circular(AppRadii.pill),
         ),
         behavior: SnackBarBehavior.floating,
-        elevation: 4,
+        elevation: 0,
       ),
       dialogTheme: DialogThemeData(
         backgroundColor: AppColors.surface,
@@ -118,9 +118,6 @@ class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppRadii.lg),
         ),
-        // Use GoogleFonts directly so fallback chains, package references,
-        // and font-variation settings are preserved (copyWith(fontFamily:)
-        // on TextStyle drops them).
         titleTextStyle: GoogleFonts.notoSansSc(
           fontSize: 18,
           fontWeight: FontWeight.w700,
@@ -133,17 +130,17 @@ class AppTheme {
         ),
       ),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: AppColors.surface,
+        backgroundColor: AppColors.surface.withValues(alpha: 0.7),
         surfaceTintColor: Colors.transparent,
-        indicatorColor: AppColors.primarySoft,
+        indicatorColor: Colors.transparent,
         labelTextStyle: WidgetStatePropertyAll(
           GoogleFonts.notoSansSc(
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
+            fontSize: 10,
+            fontWeight: FontWeight.w500,
           ),
         ),
         iconTheme: const WidgetStatePropertyAll(
-          IconThemeData(size: 22),
+          IconThemeData(size: 24),
         ),
       ),
     );
@@ -160,15 +157,15 @@ class AppTheme {
     return base.copyWith(
       textTheme: _uiTextTheme(base.textTheme, Brightness.dark),
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.backgroundDark,
+        backgroundColor: AppColors.backgroundDark.withValues(alpha: 0.7),
         foregroundColor: AppColors.inkDark,
         elevation: 0,
         scrolledUnderElevation: 0,
         surfaceTintColor: Colors.transparent,
-        centerTitle: false,
+        centerTitle: true,
         titleTextStyle: GoogleFonts.notoSansSc(
-          fontSize: 20,
-          fontWeight: FontWeight.w700,
+          fontSize: 17,
+          fontWeight: FontWeight.w600,
           color: AppColors.inkDark,
         ),
       ),
@@ -178,25 +175,23 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppRadii.lg),
+          borderRadius: BorderRadius.circular(AppRadii.md),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.surfaceDark,
           foregroundColor: AppColors.inkDark,
-          elevation: 1,
-          shadowColor: const Color(0x30000000),
+          elevation: 0,
+          shadowColor: Colors.transparent,
           surfaceTintColor: Colors.transparent,
           padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.md),
-          ),
+          shape: const StadiumBorder(),
           textStyle: GoogleFonts.notoSansSc(
-            fontSize: 15,
+            fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -209,16 +204,21 @@ class AppTheme {
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
-          minimumSize: const Size.fromHeight(48),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.md),
-          ),
+          minimumSize: const Size.fromHeight(50),
+          shape: const StadiumBorder(),
         ),
+      ),
+      pageTransitionsTheme: const PageTransitionsTheme(
+        builders: {
+          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.macOS: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+        },
       ),
       dividerTheme: const DividerThemeData(
         color: AppColors.dividerDark,
-        thickness: 1,
-        space: 1,
+        thickness: 0.5,
+        space: 0.5,
       ),
       bottomSheetTheme: BottomSheetThemeData(
         backgroundColor: AppColors.surfaceDark,
@@ -239,10 +239,10 @@ class AppTheme {
           fontFamily: GoogleFonts.notoSansSc().fontFamily,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppRadii.md),
+          borderRadius: BorderRadius.circular(AppRadii.pill),
         ),
         behavior: SnackBarBehavior.floating,
-        elevation: 4,
+        elevation: 0,
       ),
       dialogTheme: DialogThemeData(
         backgroundColor: AppColors.surfaceDark,
@@ -263,16 +263,18 @@ class AppTheme {
         ),
       ),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: AppColors.surfaceDark,
+        backgroundColor: AppColors.surfaceDark.withValues(alpha: 0.7),
         surfaceTintColor: Colors.transparent,
-        indicatorColor: AppColors.primary.withValues(alpha: 0.20),
+        indicatorColor: Colors.transparent,
         labelTextStyle: WidgetStatePropertyAll(
           GoogleFonts.notoSansSc(
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
+            fontSize: 10,
+            fontWeight: FontWeight.w500,
           ),
         ),
-        iconTheme: const WidgetStatePropertyAll(IconThemeData(size: 22)),
+        iconTheme: const WidgetStatePropertyAll(
+          IconThemeData(size: 24),
+        ),
       ),
     );
   }
@@ -464,7 +466,7 @@ class AppTheme {
   /// Big screen header (e.g. "发现", "设置", "图表").
   static TextStyle screenHeader({Color? color, BuildContext? context}) {
     return GoogleFonts.notoSansSc(
-      fontSize: 28,
+      fontSize: 34,
       fontWeight: FontWeight.w700,
       height: 1.2,
       letterSpacing: -0.3,
@@ -475,7 +477,7 @@ class AppTheme {
   /// Card title (e.g. "今日任务", stats section titles).
   static TextStyle cardTitle({Color? color, BuildContext? context}) {
     return GoogleFonts.notoSansSc(
-      fontSize: 15,
+      fontSize: 17,
       fontWeight: FontWeight.w700,
       color: color ?? _ink(context),
     );
@@ -484,7 +486,7 @@ class AppTheme {
   /// Small uppercase section label (e.g. "PROFILE", "AI").
   static TextStyle sectionLabel({Color? color, BuildContext? context}) {
     return GoogleFonts.notoSansSc(
-      fontSize: 12,
+      fontSize: 13,
       fontWeight: FontWeight.w700,
       letterSpacing: 1.2,
       color: color ?? _inkMuted(context),
@@ -493,7 +495,7 @@ class AppTheme {
 
   /// Muted caption (descriptive body under titles).
   static TextStyle mutedCaption({
-    double size = 12,
+    double size = 13,
     Color? color,
     BuildContext? context,
   }) {
@@ -507,7 +509,7 @@ class AppTheme {
   /// Chip caption (small bold label on pills / option tags).
   static TextStyle chipCaption({Color color = AppColors.primary}) {
     return GoogleFonts.notoSansSc(
-      fontSize: 12,
+      fontSize: 13,
       fontWeight: FontWeight.w700,
       letterSpacing: 0.4,
       color: color,
@@ -517,7 +519,7 @@ class AppTheme {
   /// Setting row title (e.g. "AI 服务商", "清除所有数据").
   static TextStyle rowTitle({Color? color, BuildContext? context}) {
     return GoogleFonts.notoSansSc(
-      fontSize: 14,
+      fontSize: 16,
       fontWeight: FontWeight.w600,
       color: color ?? _ink(context),
     );

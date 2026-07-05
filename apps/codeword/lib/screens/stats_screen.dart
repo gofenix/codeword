@@ -19,108 +19,122 @@ class StatsScreen extends ConsumerWidget {
         .read(reviewStateProvider.notifier)
         .stats(catalog: catalog);
 
-    return SafeArea(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(
-          AppSpacing.x5,
-          AppSpacing.x4,
-          AppSpacing.x5,
-          AppSpacing.x8,
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar.large(
+          backgroundColor: AppColors.of(context).background,
+          surfaceTintColor: Colors.transparent,
+          elevation: 0,
+          scrolledUnderElevation: 0,
+          floating: false,
+          pinned: true,
+          title: Text(
+            '图表',
+            style: AppTheme.screenHeader(context: context),
+          ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('图表', style: AppTheme.screenHeader(context: context)),
-            const SizedBox(height: AppSpacing.x5),
-
-            // 1) Top-line overview (existing, but smaller now).
-            AppCard(
-              child: Row(
-                children: [
-                  Expanded(
-                    child: _Stat(
-                      label: '已学过',
-                      value: '${stats.totalLearned}',
-                      color: AppColors.primary,
-                    ),
-                  ),
-                  _vDiv(context),
-                  Expanded(
-                    child: _Stat(
-                      label: '看过',
-                      value: '${stats.totalSeen}',
-                      color: AppColors.info,
-                    ),
-                  ),
-                  _vDiv(context),
-                  Expanded(
-                    child: _Stat(
-                      label: '平均 EF',
-                      value: stats.averageEasiness == 0
-                          ? '—'
-                          : stats.averageEasiness.toStringAsFixed(2),
-                      color: AppColors.warning,
-                    ),
-                  ),
-                ],
-              ),
+        SliverSafeArea(
+          top: false,
+          sliver: SliverPadding(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.x6,
+              AppSpacing.x4,
+              AppSpacing.x6,
+              AppSpacing.x8,
             ),
-
-            const SizedBox(height: AppSpacing.x4),
-
-            // 2) Mastery distribution
-            MasteryDistribution(buckets: stats.mastery),
-
-            const SizedBox(height: AppSpacing.x4),
-
-            // 3) Per-vocab progress
-            VocabProgressList(rows: stats.perVocab),
-
-            const SizedBox(height: AppSpacing.x4),
-
-            // 4) Today snapshot (6 cells)
-            TodayActivityGrid(
-              reviews: stats.reviewsToday,
-              newWords: stats.newToday,
-              favorites: stats.favorites,
-              removed: stats.removed,
-              minutes: stats.studyMinutesToday,
-              opens: stats.openCountToday,
-            ),
-
-            const SizedBox(height: AppSpacing.x4),
-
-            // 5) Streak schedule
-            StreakSchedule(activity: stats.last90DaysActivity),
-
-            const SizedBox(height: AppSpacing.x4),
-
-            // 6) Daily trends
-            DailyTrendsChart(daily: stats.last30Days),
-
-            const SizedBox(height: AppSpacing.x4),
-
-            // 7) Daily study time
-            DailyStudyTimeChart(minutes: stats.last30DaysMinutes),
-
-            const SizedBox(height: AppSpacing.x4),
-
-            // 8) Cumulative — a single, quiet line at the very end.
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: AppSpacing.x3),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '累计 ${stats.totalStudyMinutes} 分钟',
-                    style: AppTheme.mutedCaption(context: context),
+            sliver: SliverList.list(
+              children: [
+                // 1) Top-line overview (existing, but smaller now).
+                AppCard(
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: _Stat(
+                          label: '已学过',
+                          value: '${stats.totalLearned}',
+                          color: AppColors.primary,
+                        ),
+                      ),
+                      _vDiv(context),
+                      Expanded(
+                        child: _Stat(
+                          label: '看过',
+                          value: '${stats.totalSeen}',
+                          color: AppColors.info,
+                        ),
+                      ),
+                      _vDiv(context),
+                      Expanded(
+                        child: _Stat(
+                          label: '平均 EF',
+                          value: stats.averageEasiness == 0
+                              ? '—'
+                              : stats.averageEasiness.toStringAsFixed(2),
+                          color: AppColors.warning,
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+
+                const SizedBox(height: AppSpacing.x4),
+
+                // 2) Mastery distribution
+                MasteryDistribution(buckets: stats.mastery),
+
+                const SizedBox(height: AppSpacing.x4),
+
+                // 3) Per-vocab progress
+                VocabProgressList(rows: stats.perVocab),
+
+                const SizedBox(height: AppSpacing.x4),
+
+                // 4) Today snapshot (6 cells)
+                TodayActivityGrid(
+                  reviews: stats.reviewsToday,
+                  newWords: stats.newToday,
+                  favorites: stats.favorites,
+                  removed: stats.removed,
+                  minutes: stats.studyMinutesToday,
+                  opens: stats.openCountToday,
+                ),
+
+                const SizedBox(height: AppSpacing.x4),
+
+                // 5) Streak schedule
+                StreakSchedule(activity: stats.last90DaysActivity),
+
+                const SizedBox(height: AppSpacing.x4),
+
+                // 6) Daily trends
+                DailyTrendsChart(daily: stats.last30Days),
+
+                const SizedBox(height: AppSpacing.x4),
+
+                // 7) Daily study time
+                DailyStudyTimeChart(minutes: stats.last30DaysMinutes),
+
+                const SizedBox(height: AppSpacing.x4),
+
+                // 8) Cumulative — a single, quiet line at the very end.
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: AppSpacing.x3),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '累计 ${stats.totalStudyMinutes} 分钟',
+                        style: AppTheme.mutedCaption(context: context),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
-      ),
+      ],
     );
   }
 

@@ -46,38 +46,41 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
         return ai.compareTo(bi);
       });
 
-    return SafeArea(
-      child: CustomScrollView(
-        slivers: [
-          SliverPadding(
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar.large(
+          backgroundColor: AppColors.of(context).background,
+          surfaceTintColor: Colors.transparent,
+          elevation: 0,
+          scrolledUnderElevation: 0,
+          floating: false,
+          pinned: true,
+          title: Text(
+            '发现',
+            style: AppTheme.screenHeader(context: context),
+          ),
+        ),
+        SliverSafeArea(
+          top: false,
+          sliver: SliverPadding(
             padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x5,
-              AppSpacing.x4,
-              AppSpacing.x5,
+              AppSpacing.x6,
+              AppSpacing.x3,
+              AppSpacing.x6,
               AppSpacing.x3,
             ),
             sliver: SliverToBoxAdapter(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          '发现',
-                          style: AppTheme.screenHeader(context: context),
-                        ),
-                      ),
-                      Text(
-                        '${lists.length} 本词书',
-                        style: AppTheme.mutedCaption(
-                          size: 13,
-                          context: context,
-                        ),
-                      ),
-                    ],
+                  Text(
+                    '${lists.length} 本词书',
+                    style: AppTheme.mutedCaption(
+                      size: 13,
+                      context: context,
+                    ),
                   ),
-                  const SizedBox(height: AppSpacing.x4),
+                  const SizedBox(height: AppSpacing.x3),
                   _SearchField(
                     controller: _searchController,
                     onChanged: (v) =>
@@ -102,36 +105,36 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
               ),
             ),
           ),
-          if (categories.isEmpty)
-            const SliverFillRemaining(
-              child: Center(
-                child: EmptyHint(
-                  icon: Icons.search_off_outlined,
-                  message: '没有找到相关词书',
-                ),
-              ),
-            )
-          else
-            SliverPadding(
-              padding: const EdgeInsets.fromLTRB(
-                AppSpacing.x5,
-                0,
-                AppSpacing.x5,
-                AppSpacing.x8,
-              ),
-              sliver: SliverList(
-                delegate: SliverChildBuilderDelegate((context, index) {
-                  final cat = categories[index];
-                  return _CategorySection(
-                    category: cat,
-                    lists: grouped[cat]!,
-                    available: meta,
-                  );
-                }, childCount: categories.length),
+        ),
+        if (categories.isEmpty)
+          const SliverFillRemaining(
+            child: Center(
+              child: EmptyHint(
+                icon: Icons.search_off_outlined,
+                message: '没有找到相关词书',
               ),
             ),
-        ],
-      ),
+          )
+        else
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.x6,
+              AppSpacing.x2,
+              AppSpacing.x6,
+              AppSpacing.x8,
+            ),
+            sliver: SliverList(
+              delegate: SliverChildBuilderDelegate((context, index) {
+                final cat = categories[index];
+                return _CategorySection(
+                  category: cat,
+                  lists: grouped[cat]!,
+                  available: meta,
+                );
+              }, childCount: categories.length),
+            ),
+          ),
+      ],
     );
   }
 

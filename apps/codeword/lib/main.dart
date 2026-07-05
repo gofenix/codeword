@@ -1,4 +1,5 @@
 import 'dart:developer' as developer;
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -161,7 +162,7 @@ class _HomeShellState extends State<HomeShell> {
   }
 }
 
-/// 5-tab bottom navigation. Sits inside the phone bezel.
+/// 5-tab bottom navigation with iOS-style frosted glass effect.
 class _PhoneBottomNav extends StatelessWidget {
   final int index;
   final ValueChanged<int> onTap;
@@ -170,45 +171,67 @@ class _PhoneBottomNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return NavigationBar(
-      selectedIndex: index,
-      onDestinationSelected: onTap,
-      backgroundColor: AppColors.of(context).surface,
-      indicatorColor: isDark
-          ? AppColors.primary.withValues(alpha: 0.20)
-          : AppColors.primarySoft,
-      surfaceTintColor: Colors.transparent,
-      elevation: 0,
-      height: 68,
-      labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-      destinations: const [
-        NavigationDestination(
-          icon: Icon(Icons.style_outlined),
-          selectedIcon: Icon(Icons.style, color: AppColors.primary),
-          label: '单词',
+    final palette = AppColors.of(context);
+    return ClipRect(
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
+        child: Container(
+          decoration: BoxDecoration(
+            color: palette.surface.withValues(alpha: 0.7),
+            border: Border(
+              top: BorderSide(
+                color: palette.divider.withValues(alpha: 0.3),
+                width: 0.5,
+              ),
+            ),
+          ),
+          child: SafeArea(
+            top: false,
+            child: NavigationBar(
+              selectedIndex: index,
+              onDestinationSelected: onTap,
+              backgroundColor: Colors.transparent,
+              indicatorColor: Colors.transparent,
+              surfaceTintColor: Colors.transparent,
+              elevation: 0,
+              height: 56,
+              labelBehavior:
+                  NavigationDestinationLabelBehavior.onlyShowSelected,
+              destinations: const [
+                NavigationDestination(
+                  icon: Icon(Icons.style_outlined),
+                  selectedIcon: Icon(Icons.style, color: AppColors.primary),
+                  label: '单词',
+                ),
+                NavigationDestination(
+                  icon: Icon(Icons.menu_book_outlined),
+                  selectedIcon:
+                      Icon(Icons.menu_book, color: AppColors.primary),
+                  label: '阅读',
+                ),
+                NavigationDestination(
+                  icon: Icon(Icons.explore_outlined),
+                  selectedIcon:
+                      Icon(Icons.explore, color: AppColors.primary),
+                  label: '发现',
+                ),
+                NavigationDestination(
+                  icon: Icon(Icons.insert_chart_outlined),
+                  selectedIcon:
+                      Icon(Icons.insert_chart, color: AppColors.primary),
+                  label: '图表',
+                ),
+                NavigationDestination(
+                  icon: Icon(Icons.settings_outlined),
+                  selectedIcon:
+                      Icon(Icons.settings, color: AppColors.primary),
+                  label: '设置',
+                ),
+              ],
+            ),
+          ),
         ),
-        NavigationDestination(
-          icon: Icon(Icons.menu_book_outlined),
-          selectedIcon: Icon(Icons.menu_book, color: AppColors.primary),
-          label: '阅读',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.explore_outlined),
-          selectedIcon: Icon(Icons.explore, color: AppColors.primary),
-          label: '发现',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.insert_chart_outlined),
-          selectedIcon: Icon(Icons.insert_chart, color: AppColors.primary),
-          label: '图表',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.settings_outlined),
-          selectedIcon: Icon(Icons.settings, color: AppColors.primary),
-          label: '设置',
-        ),
-      ],
+      ),
     );
   }
 }
@@ -247,40 +270,299 @@ class _ComingSoonPage extends StatelessWidget {
   }
 }
 
-class TodayPage extends ConsumerWidget {
+class TodayPage extends ConsumerStatefulWidget {
   const TodayPage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    // Watch the state (not just .notifier) so this rebuilds when
-    // review state changes — e.g. after completing a learning session.
+  ConsumerState<TodayPage> createState() => _TodayPageState();
+}
+
+class _TodayPageState extends ConsumerState<TodayPage> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _maybeStart());
+  }
+
+  void _maybeStart() {
+    final session = ref.read(learningSessionProvider);
+    if (session.phase == SessionPhase.loading &&
+        session.questions.isEmpty) {
+      final vocabId = ref.read(selectedVocabProvider);
+      ref.read(learningSessionProvider.notifier).start(vocabId: vocabId);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final session = ref.watch(learningSessionProvider);
     ref.watch(reviewStateProvider);
-    // Watch the catalog (not read) so dynamic catalog changes in the
-    // future (reload after download) propagate correctly.
     final catalog = ref.watch(qwertyCatalogProvider);
-    final stats = ref
-        .read(reviewStateProvider.notifier)
-        .stats(catalog: catalog);
+    final stats =
+        ref.read(reviewStateProvider.notifier).stats(catalog: catalog);
+    final vocabId = ref.watch(selectedVocabProvider);
+    final vocabName =
+        ref.watch(vocabMetaProvider)[vocabId]?.name ?? vocabId;
+
+    ref.listen(learningSessionProvider, (prev, next) {
+      if (next.phase == SessionPhase.loading && next.questions.isEmpty) {
+        Future.microtask(_maybeStart);
+      }
+    });
+
     return SafeArea(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(
-          AppSpacing.x5,
-          AppSpacing.x4,
-          AppSpacing.x5,
-          AppSpacing.x8,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            if (!ReviewRepository.isReady) ...[
-              const _PersistenceWarning(),
-              const SizedBox(height: AppSpacing.x4),
-            ],
-            _Greeting(newToday: stats.newToday),
-            const SizedBox(height: AppSpacing.x5),
-            _TodayTaskCard(stats: stats),
+      child: Column(
+        children: [
+          if (!ReviewRepository.isReady) ...[
+            const _PersistenceWarning(),
+            const SizedBox(height: AppSpacing.x2),
           ],
-        ),
+          _SessionStatusBar(
+            streak: stats.streakDays,
+            current: session.currentIndex,
+            total: session.initialQuestionCount,
+            vocabName: vocabName,
+            phase: session.phase,
+          ),
+          Expanded(
+            child: switch (session.phase) {
+              SessionPhase.loading => const Center(
+                  child:
+                      CircularProgressIndicator(color: AppColors.primary),
+                ),
+              SessionPhase.asking => AskingView(session: session),
+              SessionPhase.wrongDetail =>
+                WrongDetailView(session: session),
+              SessionPhase.finished => _CompletionDashboard(
+                  stats: stats,
+                  vocabId: vocabId,
+                  onRestart: () {
+                    HapticFeedback.lightImpact();
+                    ref
+                        .read(learningSessionProvider.notifier)
+                        .start(vocabId: vocabId);
+                  },
+                  onGoDiscovery: () {
+                    HapticFeedback.selectionClick();
+                    context
+                        .findAncestorStateOfType<_HomeShellState>()
+                        ?._goToTab(2);
+                  },
+                ),
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _SessionStatusBar extends StatelessWidget {
+  final int streak;
+  final int current;
+  final int total;
+  final String vocabName;
+  final SessionPhase phase;
+
+  const _SessionStatusBar({
+    required this.streak,
+    required this.current,
+    required this.total,
+    required this.vocabName,
+    required this.phase,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    if (phase == SessionPhase.finished ||
+        phase == SessionPhase.loading) {
+      return const SizedBox.shrink();
+    }
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppSpacing.x6,
+        vertical: AppSpacing.x2,
+      ),
+      child: Row(
+        children: [
+          if (streak > 0) ...[
+            const Text('🔥', style: TextStyle(fontSize: 14)),
+            const SizedBox(width: 3),
+            Text(
+              '$streak',
+              style: AppTheme.mutedCaption(
+                size: 13,
+                context: context,
+              ).copyWith(fontWeight: FontWeight.w700),
+            ),
+          ] else
+            const SizedBox(width: 20),
+          Expanded(
+            child: Center(
+              child: Text(
+                total > 0
+                    ? '${(current + 1).clamp(1, total)} / $total'
+                    : '',
+                style: AppTheme.mutedCaption(
+                  size: 13,
+                  context: context,
+                ).copyWith(
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.5,
+                ),
+              ),
+            ),
+          ),
+          Flexible(
+            child: Text(
+              vocabName,
+              style: AppTheme.mutedCaption(size: 12, context: context),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.right,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _CompletionDashboard extends StatelessWidget {
+  final ReviewStats stats;
+  final String vocabId;
+  final VoidCallback onRestart;
+  final VoidCallback onGoDiscovery;
+
+  const _CompletionDashboard({
+    required this.stats,
+    required this.vocabId,
+    required this.onRestart,
+    required this.onGoDiscovery,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final vocab = vocabProgressFor(stats, vocabId);
+    final allDone =
+        vocab == null || (vocab.due == 0 && vocab.unseenWords == 0);
+    return SingleChildScrollView(
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
+      child: Column(
+        children: [
+          const SizedBox(height: AppSpacing.x8),
+          const Text('🎉', style: TextStyle(fontSize: 48)),
+          const SizedBox(height: AppSpacing.x3),
+          Text(
+            allDone ? '这本词书学完啦' : '今日完成',
+            style: AppTheme.screenHeader(context: context)
+                .copyWith(fontSize: 28),
+          ),
+          const SizedBox(height: AppSpacing.x2),
+          Text(
+            '连续 ${stats.streakDays} 天',
+            style: AppTheme.mutedCaption(size: 14, context: context),
+          ),
+          const SizedBox(height: AppSpacing.x6),
+          Row(
+            children: [
+              Expanded(
+                child: _StatTile(
+                  label: '今日新词',
+                  value: '${stats.newToday}',
+                  color: AppColors.primary,
+                ),
+              ),
+              const SizedBox(width: AppSpacing.x3),
+              Expanded(
+                child: _StatTile(
+                  label: '复习',
+                  value: '${stats.reviewsToday}',
+                  color: AppColors.info,
+                ),
+              ),
+              const SizedBox(width: AppSpacing.x3),
+              Expanded(
+                child: _StatTile(
+                  label: '用时',
+                  value: '${stats.studyMinutesToday}分',
+                  color: AppColors.warning,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.x6),
+          if (!allDone)
+            SizedBox(
+              width: double.infinity,
+              child: FilledButton(
+                onPressed: onRestart,
+                style: FilledButton.styleFrom(
+                  minimumSize: const Size.fromHeight(50),
+                ),
+                child: Text(
+                  '再来一轮',
+                  style: AppTheme.cardTitle(context: context)
+                      .copyWith(color: AppColors.onPrimary),
+                ),
+              ),
+            ),
+          if (allDone)
+            SizedBox(
+              width: double.infinity,
+              child: FilledButton(
+                onPressed: onGoDiscovery,
+                child: const Text('去发现页选新词书'),
+              ),
+            ),
+          const SizedBox(height: AppSpacing.x2),
+          SizedBox(
+            width: double.infinity,
+            child: TextButton(
+              onPressed: onGoDiscovery,
+              child: Text(
+                '选择其他词书',
+                style: AppTheme.rowTitle(context: context),
+              ),
+            ),
+          ),
+          const SizedBox(height: AppSpacing.x4),
+        ],
+      ),
+    );
+  }
+}
+
+class _StatTile extends StatelessWidget {
+  final String label;
+  final String value;
+  final Color color;
+  const _StatTile({
+    required this.label,
+    required this.value,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AppCard(
+      padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
+      child: Column(
+        children: [
+          Text(
+            value,
+            style: AppTheme.wordDisplay(
+              size: 22,
+              color: color,
+              weight: FontWeight.w700,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            label,
+            style: AppTheme.mutedCaption(size: 12, context: context),
+          ),
+        ],
       ),
     );
   }
@@ -304,123 +586,6 @@ class _PersistenceWarning extends StatelessWidget {
               style: AppTheme.mutedCaption(
                 size: 13,
               ).copyWith(color: AppColors.warning),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _Greeting extends StatelessWidget {
-  final int newToday;
-  const _Greeting({required this.newToday});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Hi, 极客',
-          style: AppTheme.mutedCaption(size: 14, context: context),
-        ),
-        const SizedBox(height: 2),
-        Text(
-          newToday == 0 ? '今天还没开始' : '今天学了 $newToday 个新词',
-          style: AppTheme.screenHeader(context: context).copyWith(
-            fontSize: 30,
-            fontWeight: FontWeight.w800,
-            height: 1.15,
-            letterSpacing: -0.5,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-/// The single today-task card: one clear action and the two numbers
-/// that matter (due + new). Nothing else competes for attention.
-class _TodayTaskCard extends ConsumerWidget {
-  final ReviewStats stats;
-  const _TodayTaskCard({required this.stats});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final vocabId = ref.watch(selectedVocabProvider);
-    final vocabName = ref.watch(vocabMetaProvider)[vocabId]?.name ?? vocabId;
-    final vocab = vocabProgressFor(stats, vocabId);
-    final vocabDue = vocab?.due ?? 0;
-    final unseenInVocab = vocab?.unseenWords ?? 0;
-    final canStart = canStartLearningForVocab(stats, vocabId);
-    final allDone = !canStart;
-    return AppCard(
-      padding: const EdgeInsets.all(AppSpacing.x5),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Text(
-                '今日任务',
-                style: AppTheme.cardTitle(
-                  context: context,
-                ).copyWith(fontSize: 17, fontWeight: FontWeight.w800),
-              ),
-              const Spacer(),
-              Text(
-                vocabName,
-                style: AppTheme.mutedCaption(size: 12, context: context),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
-          ),
-          const SizedBox(height: AppSpacing.x3),
-          Text(
-            allDone
-                ? '这本词书已经学完啦'
-                : '待复习 $vocabDue · 剩余新词 $unseenInVocab · 今日已学 ${stats.newToday}',
-            style: AppTheme.mutedCaption(size: 14, context: context),
-          ),
-          const SizedBox(height: AppSpacing.x5),
-          SizedBox(
-            width: double.infinity,
-            child: FilledButton.icon(
-              onPressed: allDone
-                  ? null
-                  : () {
-                      HapticFeedback.lightImpact();
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) =>
-                              LearningSessionScreen(vocabId: vocabId),
-                        ),
-                      );
-                    },
-              icon: const Icon(Icons.play_arrow_rounded, size: 24),
-              label: const Text('开始学习'),
-              style: FilledButton.styleFrom(
-                padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
-                textStyle: AppTheme.cardTitle().copyWith(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(height: AppSpacing.x2),
-          SizedBox(
-            width: double.infinity,
-            child: TextButton(
-              onPressed: () {
-                HapticFeedback.selectionClick();
-                final shell = context
-                    .findAncestorStateOfType<_HomeShellState>();
-                shell?._goToTab(2); // 发现
-              },
-              child: Text('选择其他词书', style: AppTheme.rowTitle(context: context)),
             ),
           ),
         ],

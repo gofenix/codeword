@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,6 +9,14 @@ import 'package:lib_ui/lib_ui.dart';
 
 import '../services/tts_service.dart';
 import '../state/learning_session.dart';
+
+/// Compute a font size for [text] that fits within a phone-width budget.
+/// [maxSize] is used for short text; longer text scales down proportionally.
+double fitFontSize(String text, double maxSize, {int referenceChars = 10}) {
+  final len = text.characters.length;
+  if (len <= referenceChars) return maxSize;
+  return (maxSize * referenceChars / len).clamp(18.0, maxSize);
+}
 
 class LearningSessionScreen extends ConsumerStatefulWidget {
   final String vocabId;
@@ -63,78 +72,74 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
     final session = ref.watch(learningSessionProvider);
     ref.watch(vocabMetaProvider)[widget.vocabId];
 
-    final qCount = session.questions.length;
-    final progress = session.phase == SessionPhase.finished
-        ? 1.0
-        : (session.phase == SessionPhase.wrongDetail && qCount > 0
-              ? ((session.currentIndex + 1) / qCount).clamp(0.0, 1.0)
-              : session.progress.clamp(0.0, 1.0));
-
     return Scaffold(
       backgroundColor: AppColors.of(context).background,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: AppColors.of(context).surface.withValues(alpha: 0.7),
         elevation: 0,
         scrolledUnderElevation: 0,
-        title: const SizedBox.shrink(),
+        surfaceTintColor: Colors.transparent,
+        flexibleSpace: ClipRect(
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
+            child: Container(color: Colors.transparent),
+          ),
+        ),
+        title: session.phase == SessionPhase.wrongDetail
+            ? Text(
+                '答错了',
+                style: AppTheme.mutedCaption(
+                  size: 13,
+                  color: AppColors.danger,
+                  context: context,
+                ),
+              )
+            : (session.phase == SessionPhase.asking
+                  ? Text(
+                      '${(session.currentIndex + 1).clamp(1, session.initialQuestionCount)} / ${session.initialQuestionCount}',
+                      style: AppTheme.mutedCaption(
+                        size: 13,
+                        context: context,
+                      ),
+                    )
+                  : const SizedBox.shrink()),
+        centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.close_rounded),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      extendBodyBehindAppBar: true,
-      body: Column(
-        children: [
-          // Thin progress bar pinned to the very top, behind the AppBar.
-          Padding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x6,
-              0,
-              AppSpacing.x6,
-              0,
-            ),
-            child: SafeArea(
-              bottom: false,
-              child: Padding(
-                padding: const EdgeInsets.only(top: AppSpacing.x10),
-                child: _ProgressBar(progress: progress),
-              ),
-            ),
-          ),
-          Expanded(
-            child: switch (session.phase) {
-              SessionPhase.loading => const Center(
-                child: CircularProgressIndicator(color: AppColors.primary),
-              ),
-              SessionPhase.asking => _AskingView(
-                session: session,
-                key: const ValueKey('asking'),
-              ),
-              SessionPhase.wrongDetail => _WrongDetailView(
-                session: session,
-                key: const ValueKey('wrong'),
-              ),
-              SessionPhase.finished => _FinishedView(
-                key: const ValueKey('finished'),
-                onClose: () => Navigator.of(context).pop(),
-              ),
-            },
-          ),
-        ],
-      ),
+      body: switch (session.phase) {
+        SessionPhase.loading => const Center(
+          child: CircularProgressIndicator(color: AppColors.primary),
+        ),
+        SessionPhase.asking => AskingView(
+          session: session,
+          key: const ValueKey('asking'),
+        ),
+        SessionPhase.wrongDetail => WrongDetailView(
+          session: session,
+          key: const ValueKey('wrong'),
+        ),
+        SessionPhase.finished => _FinishedView(
+          key: const ValueKey('finished'),
+          onClose: () => Navigator.of(context).pop(),
+        ),
+      },
     );
   }
 }
 
-class _AskingView extends ConsumerStatefulWidget {
+class AskingView extends ConsumerStatefulWidget {
   final LearningSessionState session;
-  const _AskingView({required this.session, super.key});
+  const AskingView({required this.session, super.key});
 
   @override
-  ConsumerState<_AskingView> createState() => _AskingViewState();
+  ConsumerState<AskingView> createState() => _AskingViewState();
 }
 
-class _AskingViewState extends ConsumerState<_AskingView> {
+class _AskingViewState extends ConsumerState<AskingView> {
   String? _lastWordId;
   int? _selectedIndex;
   bool _locked = false;
@@ -149,7 +154,7 @@ class _AskingViewState extends ConsumerState<_AskingView> {
   }
 
   @override
-  void didUpdateWidget(covariant _AskingView old) {
+  void didUpdateWidget(covariant AskingView old) {
     super.didUpdateWidget(old);
     if (widget.session.currentIndex != old.session.currentIndex) {
       // New question — reset feedback state.
@@ -222,65 +227,37 @@ class _AskingViewState extends ConsumerState<_AskingView> {
         child: CircularProgressIndicator(color: AppColors.primary),
       );
     }
-    return SafeArea(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x6,
-              AppSpacing.x4,
-              AppSpacing.x6,
-              0,
-            ),
-            child: Row(
-              children: [
-                _QuestionTypeChip(type: q.type),
-                const Spacer(),
-                Text(
-                  '${session.currentIndex + 1} / ${session.questions.length}',
-                  style: AppTheme.rowTitle().copyWith(
-                    fontSize: 13,
-                    color: AppColors.of(context).inkMuted,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          // Center stage: the big word (or meaning) the user has to
-          // resolve. Everything else fades behind it.
+          // The word / meaning — the only thing the user should look at.
           Expanded(
             child: Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
-                child: _QuestionStage(
-                  type: q.type,
-                  prompt: q.prompt,
-                  word: q.word,
-                ),
+              child: _QuestionStage(
+                type: q.type,
+                prompt: q.prompt,
+                word: q.word,
               ),
             ),
           ),
-          Expanded(
-            flex: 2,
-            child: SingleChildScrollView(
-              padding: EdgeInsets.fromLTRB(
-                AppSpacing.x5,
-                AppSpacing.x3,
-                AppSpacing.x5,
-                AppSpacing.x4 + MediaQuery.of(context).padding.bottom,
-              ),
-              child: Column(
-                children: [
-                  for (var i = 0; i < q.options.length; i++) ...[
-                    if (i > 0) const SizedBox(height: AppSpacing.x2),
-                    _OptionTile(
-                      text: q.options[i],
-                      state: _optionState(i, q.correctIndex),
-                      onTap: () => _onOptionTap(i),
-                    ),
-                  ],
+          // Options sit right below, no gap.
+          Padding(
+            padding: EdgeInsets.only(
+              bottom: AppSpacing.x6 +
+                  MediaQuery.of(context).padding.bottom,
+            ),
+            child: Column(
+              children: [
+                for (var i = 0; i < q.options.length; i++) ...[
+                  if (i > 0) const SizedBox(height: AppSpacing.x2),
+                  _OptionTile(
+                    text: q.options[i],
+                    state: _optionState(i, q.correctIndex),
+                    onTap: () => _onOptionTap(i),
+                  ),
                 ],
-              ),
+              ],
             ),
           ),
         ],
@@ -289,15 +266,15 @@ class _AskingViewState extends ConsumerState<_AskingView> {
   }
 }
 
-class _WrongDetailView extends ConsumerStatefulWidget {
+class WrongDetailView extends ConsumerStatefulWidget {
   final LearningSessionState session;
-  const _WrongDetailView({required this.session, super.key});
+  const WrongDetailView({required this.session, super.key});
 
   @override
-  ConsumerState<_WrongDetailView> createState() => _WrongDetailViewState();
+  ConsumerState<WrongDetailView> createState() => _WrongDetailViewState();
 }
 
-class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
+class _WrongDetailViewState extends ConsumerState<WrongDetailView> {
   bool _isFavorite = false;
   String? _lastWordId;
 
@@ -325,7 +302,7 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
   }
 
   @override
-  void didUpdateWidget(covariant _WrongDetailView old) {
+  void didUpdateWidget(covariant WrongDetailView old) {
     super.didUpdateWidget(old);
     // Reset whenever the question *identity* changes, not just the
     // index. This guards against future refactors where the same
@@ -384,305 +361,152 @@ class _WrongDetailViewState extends ConsumerState<_WrongDetailView> {
       );
     }
     final w = q.word;
+    final hasExample = w.exampleEn.trim().isNotEmpty;
     return SafeArea(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(
-          AppSpacing.x6,
-          AppSpacing.x3,
-          AppSpacing.x6,
-          AppSpacing.x6,
-        ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: AppSpacing.x2),
-            Row(
-              children: [
-                Text(
-                  '答错了',
-                  style: AppTheme.mutedCaption(
-                    size: 13,
-                    color: AppColors.danger,
-                  ),
-                ),
-                const Spacer(),
-                IconButton(
-                  tooltip: _isFavorite ? '取消收藏' : '收藏',
-                  onPressed: _toggleFavorite,
-                  icon: Icon(
-                    _isFavorite
-                        ? Icons.star_rounded
-                        : Icons.star_outline_rounded,
-                    color: _isFavorite
-                        ? AppColors.warning
-                        : AppColors.of(context).inkSubtle,
-                    size: 20,
-                  ),
-                  padding: EdgeInsets.zero,
-                  // Full 48px tap target (Material min). VisualDensity.compact
-                  // would subtract 8px and drop us to 40px, so it is omitted
-                  // here on purpose for these frequently-tapped actions.
-                  constraints: const BoxConstraints(
-                    minWidth: 48,
-                    minHeight: 48,
-                  ),
-                ),
-                const SizedBox(width: AppSpacing.x3),
-                IconButton(
-                  tooltip: '移除',
-                  onPressed: _markRemoved,
-                  icon: Icon(
-                    Icons.delete_outline,
-                    color: AppColors.of(context).inkSubtle,
-                    size: 20,
-                  ),
-                  padding: EdgeInsets.zero,
-                  // Full 48px tap target (Material min). VisualDensity.compact
-                  // would subtract 8px and drop us to 40px, so it is omitted
-                  // here on purpose for these frequently-tapped actions.
-                  constraints: const BoxConstraints(
-                    minWidth: 48,
-                    minHeight: 48,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: AppSpacing.x4),
-            _ContextCard(word: w),
-            const SizedBox(height: AppSpacing.x5),
-            SizedBox(
-              width: double.infinity,
-              child: FilledButton(
-                onPressed: () =>
-                    ref.read(learningSessionProvider.notifier).next(),
-                style: FilledButton.styleFrom(
-                  backgroundColor: AppColors.danger,
-                  minimumSize: const Size.fromHeight(52),
-                ),
-                child: Text(
-                  '继续，稍后再测',
-                  style: AppTheme.cardTitle().copyWith(
-                    fontSize: 16,
-                    color: AppColors.onPrimary,
-                  ),
+            // Word as the hero — same treatment as _AskingView.
+            Expanded(
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      w.word,
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      softWrap: false,
+                      overflow: TextOverflow.visible,
+                      style: AppTheme.wordDisplay(
+                        size: fitFontSize(w.word, 40),
+                        weight: FontWeight.w700,
+                        context: context,
+                      ),
+                    ),
+                    const SizedBox(height: AppSpacing.x2),
+                    Text(
+                      '${w.phonetic}  ${w.pos}',
+                      style: AppTheme.phonetic(
+                        fontSize: 15,
+                        context: context,
+                      ),
+                    ),
+                    const SizedBox(height: AppSpacing.x2),
+                    IconButton(
+                      tooltip: '播放发音',
+                      icon: const Icon(
+                        Icons.volume_up_outlined,
+                        size: 22,
+                      ),
+                      color: AppColors.of(context).inkMuted,
+                      onPressed: () {
+                        HapticFeedback.lightImpact();
+                        TtsService.instance.speak(text: w.word);
+                      },
+                    ),
+                    const SizedBox(height: AppSpacing.x6),
+                    Text(
+                      w.translation,
+                      textAlign: TextAlign.center,
+                      style: AppTheme.cardTitle(
+                        context: context,
+                      ).copyWith(fontSize: 18, height: 1.5),
+                    ),
+                    if (hasExample) ...[
+                      const SizedBox(height: AppSpacing.x6),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: AppSpacing.x4,
+                        ),
+                        child: Text(
+                          w.exampleEn,
+                          textAlign: TextAlign.center,
+                          style: AppTheme.mutedCaption(
+                            size: 15,
+                            color: AppColors.of(context).ink,
+                            context: context,
+                          ).copyWith(height: 1.6),
+                        ),
+                      ),
+                      if (w.exampleCn.trim().isNotEmpty) ...[
+                        const SizedBox(height: AppSpacing.x2),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.x4,
+                          ),
+                          child: Text(
+                            w.exampleCn,
+                            textAlign: TextAlign.center,
+                            style: AppTheme.mutedCaption(
+                              size: 13,
+                              context: context,
+                            ).copyWith(height: 1.5),
+                          ),
+                        ),
+                      ],
+                    ],
+                    const SizedBox(height: AppSpacing.x4),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          tooltip: _isFavorite ? '取消收藏' : '收藏',
+                          onPressed: _toggleFavorite,
+                          icon: Icon(
+                            _isFavorite
+                                ? Icons.star_rounded
+                                : Icons.star_outline_rounded,
+                            color: _isFavorite
+                                ? AppColors.warning
+                                : AppColors.of(context).inkSubtle,
+                            size: 22,
+                          ),
+                        ),
+                        const SizedBox(width: AppSpacing.x2),
+                        IconButton(
+                          tooltip: '移除该词',
+                          onPressed: _markRemoved,
+                          icon: Icon(
+                            Icons.delete_outline,
+                            color: AppColors.of(context).inkSubtle,
+                            size: 22,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/// Immersive wrong-answer context card.
-///
-/// Content order follows 无痛单词's English-first layout:
-/// word + phonetic (small header) → English example (hero) →
-/// Chinese translation → Chinese example → synonyms/antonyms.
-/// No section labels — content flows naturally.
-class _ContextCard extends StatelessWidget {
-  final VocabWord word;
-
-  const _ContextCard({required this.word});
-
-  @override
-  Widget build(BuildContext context) {
-    final hasExample = word.exampleEn.trim().isNotEmpty;
-    return SizedBox(
-      width: double.infinity,
-      child: AppCard(
-        padding: const EdgeInsets.all(AppSpacing.x5),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Word + phonetic as a compact header, not the hero.
-            Row(
-              children: [
-                Flexible(
+            // Continue button at the bottom.
+            Padding(
+              padding: EdgeInsets.only(
+                bottom: AppSpacing.x6 +
+                    MediaQuery.of(context).padding.bottom,
+              ),
+              child: SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () =>
+                      ref.read(learningSessionProvider.notifier).next(),
+                  style: FilledButton.styleFrom(
+                    backgroundColor: AppColors.danger,
+                    minimumSize: const Size.fromHeight(52),
+                  ),
                   child: Text(
-                    word.word,
-                    style: AppTheme.wordDisplay(size: 20, context: context),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
+                    '继续，稍后再测',
+                    style: AppTheme.cardTitle().copyWith(
+                      fontSize: 16,
+                      color: AppColors.onPrimary,
+                    ),
                   ),
                 ),
-                const SizedBox(width: AppSpacing.x2),
-                Flexible(
-                  child: Text(
-                    '${word.phonetic}  ${word.pos}',
-                    style: AppTheme.phonetic(fontSize: 13, context: context),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-                const Spacer(),
-                _AudioButton(word: word),
-              ],
-            ),
-            // English example as the hero — largest text on the card.
-            if (hasExample) ...[
-              const SizedBox(height: AppSpacing.x5),
-              Text(
-                word.exampleEn,
-                style: AppTheme.wordDisplay(
-                  size: 20,
-                  color: AppColors.of(context).ink,
-                  weight: FontWeight.w400,
-                ).copyWith(height: 1.6),
               ),
-              const SizedBox(height: AppSpacing.x3),
-              _SentenceAudioButton(word: word),
-            ],
-            // Chinese translation — the answer the user got wrong.
-            const SizedBox(height: AppSpacing.x5),
-            Text(
-              word.translation,
-              style: AppTheme.cardTitle(
-                context: context,
-              ).copyWith(fontSize: 16, height: 1.5),
             ),
-            // Chinese example translation (muted, supplementary).
-            if (hasExample && word.exampleCn.trim().isNotEmpty) ...[
-              const SizedBox(height: AppSpacing.x2),
-              Text(
-                word.exampleCn,
-                style: AppTheme.mutedCaption(
-                  size: 14,
-                  context: context,
-                ).copyWith(height: 1.5),
-              ),
-            ],
-            if (word.synonyms.isNotEmpty) ...[
-              const SizedBox(height: AppSpacing.x4),
-              _DetailRow(label: '同义', content: word.synonyms.join(' · ')),
-            ],
-            if (word.antonyms.isNotEmpty) ...[
-              const SizedBox(height: AppSpacing.x2),
-              _DetailRow(label: '反义', content: word.antonyms.join(' · ')),
-            ],
           ],
         ),
-      ),
-    );
-  }
-}
-
-class _SentenceAudioButton extends StatelessWidget {
-  final VocabWord word;
-
-  const _SentenceAudioButton({required this.word});
-
-  @override
-  Widget build(BuildContext context) {
-    return PressableScale(
-      scaleFactor: 0.96,
-      onTap: () {
-        HapticFeedback.lightImpact();
-        TtsService.instance.speak(text: word.exampleEn);
-      },
-      child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSpacing.x3,
-          vertical: AppSpacing.x2,
-        ),
-        decoration: BoxDecoration(
-          color: AppColors.primarySoft,
-          borderRadius: BorderRadius.circular(AppRadii.pill),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Icon(
-              Icons.volume_up_rounded,
-              size: 16,
-              color: AppColors.primary,
-            ),
-            const SizedBox(width: AppSpacing.x1_5),
-            Text('播放例句', style: AppTheme.chipCaption()),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _DetailRow extends StatelessWidget {
-  final String label;
-  final String content;
-  const _DetailRow({required this.label, required this.content});
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          '$label  ',
-          style: AppTheme.chipCaption(color: AppColors.of(context).inkSubtle),
-        ),
-        Expanded(
-          child: Text(
-            content,
-            style: AppTheme.mutedCaption(
-              size: 13,
-              color: AppColors.of(context).ink,
-            ).copyWith(height: 1.5),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _AudioButton extends StatefulWidget {
-  final VocabWord word;
-  const _AudioButton({required this.word});
-
-  @override
-  State<_AudioButton> createState() => _AudioButtonState();
-}
-
-class _AudioButtonState extends State<_AudioButton> {
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      tooltip: '播放发音',
-      icon: const Icon(Icons.volume_up_outlined),
-      onPressed: () async {
-        HapticFeedback.lightImpact();
-        await TtsService.instance.speak(text: widget.word.word);
-      },
-    );
-  }
-}
-
-class _QuestionTypeChip extends StatelessWidget {
-  final QuestionType type;
-  const _QuestionTypeChip({required this.type});
-
-  @override
-  Widget build(BuildContext context) {
-    final label = switch (type) {
-      QuestionType.seeWordPickMeaning => '看词选义',
-      QuestionType.seeMeaningPickWord => '看义选词',
-      QuestionType.listenPickMeaning => '听音选义',
-    };
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.x3,
-        vertical: AppSpacing.x1_5,
-      ),
-      decoration: BoxDecoration(
-        color: AppColors.primarySoft,
-        borderRadius: BorderRadius.circular(AppRadii.pill),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Icon(Icons.bolt_rounded, size: 14, color: AppColors.primary),
-          const SizedBox(width: AppSpacing.x1),
-          Text(label, style: AppTheme.chipCaption()),
-        ],
       ),
     );
   }
@@ -720,38 +544,31 @@ class _WordStage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Long phrases (e.g. "take something for granted") wrap to the column
-    // width first, then the whole block scales down to fit the available
-    // height. Without this the 56pt text overflows the centered slot and
-    // bleeds into the options below. Short words stay at full size.
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        return FittedBox(
-          fit: BoxFit.scaleDown,
-          child: ConstrainedBox(
-            constraints: BoxConstraints(maxWidth: constraints.maxWidth),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  word.word,
-                  textAlign: TextAlign.center,
-                  style: AppTheme.wordDisplay(
-                    size: 56,
-                    weight: FontWeight.w700,
-                    context: context,
-                  ),
-                ),
-                const SizedBox(height: AppSpacing.x3),
-                Text(
-                  word.phonetic,
-                  style: AppTheme.phonetic(fontSize: 16, context: context),
-                ),
-              ],
-            ),
+    final wordSize = fitFontSize(word.word, 56);
+    final phoneticSize = (wordSize * 0.28).clamp(12.0, 16.0);
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          word.word,
+          textAlign: TextAlign.center,
+          maxLines: 1,
+          softWrap: false,
+          overflow: TextOverflow.visible,
+          style: AppTheme.wordDisplay(
+            size: wordSize,
+            weight: FontWeight.w700,
+            context: context,
           ),
-        );
-      },
+        ),
+        const SizedBox(height: AppSpacing.x3),
+        Text(
+          word.phonetic,
+          softWrap: false,
+          overflow: TextOverflow.visible,
+          style: AppTheme.phonetic(fontSize: phoneticSize, context: context),
+        ),
+      ],
     );
   }
 }
@@ -763,37 +580,32 @@ class _MeaningStage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Meanings can be long ("使…相形见绌；使黯然失色"). Wrap to width then
-    // scale-to-fit so the prompt never overflows into the options below.
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        return FittedBox(
-          fit: BoxFit.scaleDown,
-          child: ConstrainedBox(
-            constraints: BoxConstraints(maxWidth: constraints.maxWidth),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  meaning,
-                  textAlign: TextAlign.center,
-                  style: AppTheme.screenHeader(
-                    context: context,
-                  ).copyWith(fontSize: 28, height: 1.4),
-                ),
-                const SizedBox(height: AppSpacing.x3),
-                Text(
-                  '选择对应的英文',
-                  style: AppTheme.mutedCaption(
-                    size: 13,
-                    color: AppColors.of(context).inkSubtle,
-                  ),
-                ),
-              ],
-            ),
+    final meaningSize = fitFontSize(meaning, 28, referenceChars: 12);
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x4),
+          child: Text(
+            meaning,
+            textAlign: TextAlign.center,
+            maxLines: 3,
+            softWrap: true,
+            overflow: TextOverflow.visible,
+            style: AppTheme.screenHeader(
+              context: context,
+            ).copyWith(fontSize: meaningSize, height: 1.4),
           ),
-        );
-      },
+        ),
+        const SizedBox(height: AppSpacing.x3),
+        Text(
+          '选择对应的英文',
+          style: AppTheme.mutedCaption(
+            size: 13,
+            color: AppColors.of(context).inkSubtle,
+          ),
+        ),
+      ],
     );
   }
 }
@@ -942,36 +754,6 @@ class _OptionColors {
     required this.border,
     required this.text,
   });
-}
-
-class _ProgressBar extends StatelessWidget {
-  final double progress;
-  const _ProgressBar({required this.progress});
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          '${(progress * 100).round()}%',
-          style: AppTheme.rowTitle().copyWith(
-            fontSize: 12,
-            color: AppColors.of(context).inkMuted,
-          ),
-        ),
-        const SizedBox(height: AppSpacing.x1),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(AppRadii.pill),
-          child: LinearProgressIndicator(
-            value: progress,
-            minHeight: AppSpacing.x1_5,
-            backgroundColor: AppColors.of(context).surfaceMuted,
-            valueColor: const AlwaysStoppedAnimation(AppColors.primary),
-          ),
-        ),
-      ],
-    );
-  }
 }
 
 class _FinishedView extends StatelessWidget {

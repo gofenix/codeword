@@ -15,40 +15,84 @@ class SettingsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return SafeArea(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.fromLTRB(
-          AppSpacing.x5,
-          AppSpacing.x4,
-          AppSpacing.x5,
-          AppSpacing.x8,
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar.large(
+          backgroundColor: AppColors.of(context).background,
+          surfaceTintColor: Colors.transparent,
+          elevation: 0,
+          scrolledUnderElevation: 0,
+          floating: false,
+          pinned: true,
+          title: Text(
+            '设置',
+            style: AppTheme.screenHeader(context: context),
+          ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('设置', style: AppTheme.screenHeader(context: context)),
-            const SizedBox(height: AppSpacing.x5),
-            const _ProfileCard(),
-            const SizedBox(height: AppSpacing.x5),
-            const _SectionLabel('学习'),
-            const SizedBox(height: AppSpacing.x3),
-            const _DailyGoalRow(),
-            const SizedBox(height: AppSpacing.x2),
-            const _AccentRow(),
-            const SizedBox(height: AppSpacing.x5),
-            const _SectionLabel('AI 与数据'),
-            const SizedBox(height: AppSpacing.x3),
-            const _AiSettingsRow(),
-            const SizedBox(height: AppSpacing.x2),
-            const _StorageRow(),
-            const SizedBox(height: AppSpacing.x5),
-            const _SectionLabel('关于'),
-            const SizedBox(height: AppSpacing.x3),
-            const _AboutRow(),
-            const SizedBox(height: AppSpacing.x4),
-          ],
+        SliverSafeArea(
+          top: false,
+          sliver: SliverList.list(
+            children: [
+              const Padding(
+                padding: EdgeInsets.fromLTRB(
+                  AppSpacing.x6,
+                  AppSpacing.x4,
+                  AppSpacing.x6,
+                  0,
+                ),
+                child: _ProfileCard(),
+              ),
+              const SizedBox(height: AppSpacing.x5),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpacing.x6,
+                ),
+                child: Text('学习', style: AppTheme.sectionLabel(context: context)),
+              ),
+              const SizedBox(height: AppSpacing.x3),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: AppSpacing.x6),
+                child: _DailyGoalRow(),
+              ),
+              const SizedBox(height: AppSpacing.x2),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: AppSpacing.x6),
+                child: _AccentRow(),
+              ),
+              const SizedBox(height: AppSpacing.x5),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpacing.x6,
+                ),
+                child: Text('AI 与数据', style: AppTheme.sectionLabel(context: context)),
+              ),
+              const SizedBox(height: AppSpacing.x3),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: AppSpacing.x6),
+                child: _AiSettingsRow(),
+              ),
+              const SizedBox(height: AppSpacing.x2),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: AppSpacing.x6),
+                child: _StorageRow(),
+              ),
+              const SizedBox(height: AppSpacing.x5),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpacing.x6,
+                ),
+                child: Text('关于', style: AppTheme.sectionLabel(context: context)),
+              ),
+              const SizedBox(height: AppSpacing.x3),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: AppSpacing.x6),
+                child: _AboutRow(),
+              ),
+              const SizedBox(height: AppSpacing.x8),
+            ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }
@@ -102,16 +146,6 @@ class _ProfileCard extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class _SectionLabel extends StatelessWidget {
-  final String text;
-  const _SectionLabel(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(text, style: AppTheme.sectionLabel(context: context));
   }
 }
 

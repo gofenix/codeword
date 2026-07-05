@@ -747,6 +747,12 @@ class LearningSessionState {
   final int? lastSelectedIndex;
   final bool lastQuestionQueuedForRetry;
 
+  /// Number of questions the session started with. Used as the stable
+  /// denominator for progress — wrong answers append retry questions to
+  /// [questions], so using [questions.length] would make the progress bar
+  /// regress after a mistake.
+  final int initialQuestionCount;
+
   const LearningSessionState({
     required this.phase,
     required this.questions,
@@ -755,6 +761,7 @@ class LearningSessionState {
     this.lastAnswer,
     this.lastSelectedIndex,
     this.lastQuestionQueuedForRetry = false,
+    this.initialQuestionCount = 0,
   });
 
   factory LearningSessionState.loading() => const LearningSessionState(
@@ -767,8 +774,14 @@ class LearningSessionState {
   LearningQuestion? get currentQuestion =>
       (currentIndex < questions.length) ? questions[currentIndex] : null;
 
-  double get progress =>
-      questions.isEmpty ? 0 : currentIndex / questions.length;
+  double get progress {
+    if (initialQuestionCount <= 0) return 0;
+    // Treat retry questions (appended after the initial batch) as
+    // "still working on the current word" — clamp to just under 1.0
+    // so the bar never reaches 100% before the finished phase.
+    final p = currentIndex / initialQuestionCount;
+    return p.clamp(0.0, 0.9999);
+  }
 
   bool get isCorrect => lastAnswer != null && lastAnswer != AnswerQuality.again;
 }
@@ -805,8 +818,8 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   ///   - New words are only added when there is room after due words.
   Future<void> start({
     required String vocabId,
-    int minSessionSize = 5,
-    int maxSessionSize = 20,
+    int minSessionSize = 20,
+    int maxSessionSize = 40,
   }) async {
     final gen = ++_startGen;
     state = LearningSessionState.loading();
@@ -897,6 +910,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       questions: questions,
       currentIndex: 0,
       correctCount: 0,
+      initialQuestionCount: questions.length,
     );
   }
 
@@ -1054,6 +1068,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
         questions: state.questions,
         currentIndex: nextIndex,
         correctCount: state.correctCount + 1,
+        initialQuestionCount: state.initialQuestionCount,
       );
     } else {
       state = LearningSessionState(
@@ -1064,6 +1079,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
         lastAnswer: quality,
         lastSelectedIndex: optionIndex,
         lastQuestionQueuedForRetry: true,
+        initialQuestionCount: state.initialQuestionCount,
       );
     }
   }
@@ -1083,6 +1099,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
         questions: questions,
         currentIndex: nextIndex,
         correctCount: state.correctCount,
+        initialQuestionCount: state.initialQuestionCount,
       );
       unawaited(_eagerFlush());
       return;
@@ -1092,6 +1109,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       questions: questions,
       currentIndex: nextIndex,
       correctCount: state.correctCount,
+      initialQuestionCount: state.initialQuestionCount,
     );
     unawaited(_eagerFlush());
   }
