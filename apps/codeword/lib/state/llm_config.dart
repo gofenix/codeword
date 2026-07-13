@@ -1,14 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_core/lib_core.dart';
 
-/// Optional fallback API key (e.g. bundled from a local asset).
-/// When the user hasn't configured a key via secure storage, this
-/// fallback is used so the app works out of the box.
-final llmFallbackKeyProvider = Provider<String?>((ref) => null);
-
 /// Riverpod provider for the current [LlmConfig]. Auto-loads from
 /// secure storage on first read; mutations are persisted transparently.
-/// If secure storage has no key, falls back to [llmFallbackKeyProvider].
 ///
 /// Concurrency: the [_load] and [save] operations are mutexed via
 /// [_loadedOrAssigned] so a user who pastes an API key and taps
@@ -16,7 +10,6 @@ final llmFallbackKeyProvider = Provider<String?>((ref) => null);
 /// their input overwritten by the stale result of that read.
 class LlmConfigNotifier extends StateNotifier<LlmConfig> {
   final LlmConfigStore _store;
-  final String? _fallbackKey;
 
   /// Set to `true` as soon as the user calls [save]/[clear], OR as
   /// soon as the initial [_load] finishes writing to [state]. Guards
@@ -24,8 +17,7 @@ class LlmConfigNotifier extends StateNotifier<LlmConfig> {
   /// awaiting its storage read.
   bool _loadedOrAssigned = false;
 
-  LlmConfigNotifier(this._store, this._fallbackKey)
-      : super(LlmConfig.defaults()) {
+  LlmConfigNotifier(this._store) : super(LlmConfig.defaults()) {
     _load();
   }
 
@@ -41,43 +33,18 @@ class LlmConfigNotifier extends StateNotifier<LlmConfig> {
     try {
       stored = await _store.read();
     } catch (_) {
-      // Read failure. Fall back to either the bundled fallback key or
-      // true defaults — but ONLY if save() hasn't already been called
-      // while we were awaiting.
+      // Read failure. Keep true defaults, but only if save() hasn't
+      // already been called while we were awaiting.
       if (_loadedOrAssigned) return;
       _loadedOrAssigned = true;
-      final fbk = _fallbackKey;
-      if (fbk != null && fbk.isNotEmpty) {
-        state = LlmConfig(
-          baseUrl: LlmConfig.defaultBaseUrl,
-          apiKey: fbk,
-          model: LlmConfig.defaultModel,
-        );
-      } else {
-        state = LlmConfig.defaults();
-      }
+      state = LlmConfig.defaults();
       return;
     }
 
     if (_loadedOrAssigned) return;
     _loadedOrAssigned = true;
 
-    if (stored.apiKey.isNotEmpty) {
-      state = stored;
-    } else {
-      final fbk = _fallbackKey;
-      if (fbk != null && fbk.isNotEmpty) {
-        // Storage has no key but a local fallback exists — keep the
-        // user's stored baseUrl / model (if any) and only inject the key.
-        state = LlmConfig(
-          baseUrl: stored.baseUrl.isEmpty ? LlmConfig.defaultBaseUrl : stored.baseUrl,
-          apiKey: fbk,
-          model: stored.model.isEmpty ? LlmConfig.defaultModel : stored.model,
-        );
-      } else {
-        state = stored;
-      }
-    }
+    state = stored;
   }
 
   /// Persist a new config.
@@ -108,12 +75,10 @@ class LlmConfigNotifier extends StateNotifier<LlmConfig> {
   }
 }
 
-final llmConfigProvider =
-    StateNotifierProvider<LlmConfigNotifier, LlmConfig>((ref) {
-  return LlmConfigNotifier(
-    LlmConfigStore(),
-    ref.watch(llmFallbackKeyProvider),
-  );
+final llmConfigProvider = StateNotifierProvider<LlmConfigNotifier, LlmConfig>((
+  ref,
+) {
+  return LlmConfigNotifier(LlmConfigStore());
 });
 
 /// An LLM client bound to the current config. Re-builds whenever the

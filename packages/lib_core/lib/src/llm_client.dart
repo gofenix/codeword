@@ -28,6 +28,17 @@ class LlmConfig {
   bool get isConfigured =>
       baseUrl.isNotEmpty && apiKey.isNotEmpty && model.isNotEmpty;
 
+  /// API keys may only travel over TLS. Plain HTTP is allowed solely for a
+  /// loopback model such as Ollama running on the same device.
+  bool get hasSafeEndpoint {
+    final uri = Uri.tryParse(baseUrl.trim());
+    if (uri == null || !uri.hasScheme || uri.host.isEmpty) return false;
+    if (uri.scheme.toLowerCase() == 'https') return true;
+    if (uri.scheme.toLowerCase() != 'http') return false;
+    final host = uri.host.toLowerCase();
+    return host == 'localhost' || host == '127.0.0.1' || host == '::1';
+  }
+
   /// Show only the first 4 + last 4 of the key, e.g. `sk-a…xyz1`.
   /// Returns the empty string for too-short keys.
   String get maskedKey {
@@ -64,11 +75,10 @@ abstract class LlmConfigBackend {
 class _FlutterSecureStorageBackend implements LlmConfigBackend {
   final FlutterSecureStorage _storage;
   _FlutterSecureStorageBackend([FlutterSecureStorage? storage])
-    : _storage =
-          storage ??
-          const FlutterSecureStorage(
-            aOptions: AndroidOptions(encryptedSharedPreferences: true),
-          );
+      : _storage = storage ??
+            const FlutterSecureStorage(
+              aOptions: AndroidOptions(encryptedSharedPreferences: true),
+            );
 
   @override
   Future<String?> read(String key) => _storage.read(key: key);
@@ -107,7 +117,7 @@ class LlmConfigStore {
 
   final LlmConfigBackend _backend;
   LlmConfigStore([LlmConfigBackend? backend])
-    : _backend = backend ?? _FlutterSecureStorageBackend();
+      : _backend = backend ?? _FlutterSecureStorageBackend();
 
   Future<LlmConfig> read() async {
     // Serial reads so a backend-level error surfaces early.
@@ -175,12 +185,12 @@ class LlmChatRequest {
   });
 
   Map<String, dynamic> toJson() => {
-    'model': model,
-    'messages': [for (final m in messages) m.toJson()],
-    'temperature': temperature,
-    if (maxTokens != null) 'max_tokens': maxTokens,
-    'stream': false,
-  };
+        'model': model,
+        'messages': [for (final m in messages) m.toJson()],
+        'temperature': temperature,
+        if (maxTokens != null) 'max_tokens': maxTokens,
+        'stream': false,
+      };
 }
 
 class LlmChatResponse {
@@ -275,7 +285,7 @@ class LlmClient {
   final LlmTransport transport;
 
   LlmClient({required this.config, LlmTransport? transport})
-    : transport = transport ?? HttpLlmTransport();
+      : transport = transport ?? HttpLlmTransport();
 
   /// Release any held resources (HTTP connection pool etc.). Safe to
   /// call multiple times; implementations must be idempotent. Synchronous
@@ -290,6 +300,11 @@ class LlmClient {
     if (!config.isConfigured) {
       throw LlmException(
         'LLM not configured — please set baseUrl, apiKey, and model',
+      );
+    }
+    if (!config.hasSafeEndpoint) {
+      throw LlmException(
+        'Remote LLM endpoints must use HTTPS; HTTP is allowed only on localhost',
       );
     }
     if (_isAnthropic(config.baseUrl)) {
@@ -328,7 +343,8 @@ class LlmClient {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ${config.apiKey}',
     };
-    final raw = await transport.postJson(url: url, headers: headers, body: body);
+    final raw =
+        await transport.postJson(url: url, headers: headers, body: body);
     final dynamic decoded = _decodeJsonObject(raw);
     final choices = decoded['choices'];
     if (choices is! List || choices.isEmpty) {
@@ -346,8 +362,10 @@ class LlmClient {
       if (n is String) return int.tryParse(n);
       return null;
     }
+
     String? reason;
-    if (first['finish_reason'] is String) reason = first['finish_reason'] as String;
+    if (first['finish_reason'] is String)
+      reason = first['finish_reason'] as String;
     return LlmChatResponse(
       content: content,
       promptTokens: usage is Map<String, dynamic>
@@ -388,7 +406,8 @@ class LlmClient {
       'x-api-key': config.apiKey,
       'anthropic-version': '2023-06-01',
     };
-    final raw = await transport.postJson(url: url, headers: headers, body: body);
+    final raw =
+        await transport.postJson(url: url, headers: headers, body: body);
     final dynamic decoded = _decodeJsonObject(raw);
     // Anthropic response: content is a list of blocks [{type:"text",text:"..."}]
     final contentList = decoded['content'];
@@ -416,16 +435,19 @@ class LlmClient {
       }
     }
     if (textParts.isEmpty) {
-      throw LlmException('Model returned non-text content only — try a different model');
+      throw LlmException(
+          'Model returned non-text content only — try a different model');
     }
     int? _readInt(dynamic n) {
       if (n is num) return n.toInt();
       if (n is String) return int.tryParse(n);
       return null;
     }
+
     final usage = decoded['usage'];
     String? reason;
-    if (decoded['stop_reason'] is String) reason = decoded['stop_reason'] as String;
+    if (decoded['stop_reason'] is String)
+      reason = decoded['stop_reason'] as String;
     return LlmChatResponse(
       content: textParts.join().trim(),
       promptTokens: usage is Map<String, dynamic>
@@ -472,7 +494,8 @@ class LlmClient {
       throw LlmException('Malformed JSON: ${e.message}');
     }
     if (decoded is! Map<String, dynamic>) {
-      throw LlmException('Unexpected response shape (expected JSON object): $raw');
+      throw LlmException(
+          'Unexpected response shape (expected JSON object): $raw');
     }
     return decoded;
   }

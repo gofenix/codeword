@@ -39,6 +39,7 @@ apps/*/android/app/release/
 apps/*/android/.idea/
 apps/*/android/key.properties
 apps/*/*.jks
+apps/*/~/**
 
 # Coverage
 coverage/
@@ -61,7 +62,7 @@ __pycache__/
 *.pyo
 
 # Qwerty-learner source — cloned at conversion time by tools/import_qwerty_dict.py
-tools/_qwerty_src/**
+tools/_qwerty_src/
 
 # Local assets with credentials / bundled secrets — never commit.
 # A .gitkeep placeholder should live alongside the asset folder so it

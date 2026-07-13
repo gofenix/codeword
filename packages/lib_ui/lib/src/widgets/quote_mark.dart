@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../tokens.dart';
 
@@ -30,7 +29,8 @@ class QuoteMark extends StatelessWidget {
         child: Text(
           '“',
           textAlign: align,
-          style: GoogleFonts.lora(
+          style: TextStyle(
+            fontFamily: 'serif',
             fontSize: size,
             // 0.85 keeps the glyph fully inside the Text's line box while
             // still letting us use negative offset / Stack positioning

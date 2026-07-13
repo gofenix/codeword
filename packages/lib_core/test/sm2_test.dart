@@ -65,6 +65,27 @@ void main() {
       }
       expect(state.easiness, greaterThanOrEqualTo(130));
     });
+
+    test('firstReviewedAt is set once and survives later reviews + JSON', () {
+      final first = DateTime(2026, 6, 7, 10);
+      final second = first.add(const Duration(days: 1));
+      var state = Sm2.schedule(
+        current: ReviewState.fresh('w1'),
+        quality: 0,
+        now: first,
+      );
+      state = Sm2.schedule(current: state, quality: 4, now: second);
+
+      expect(state.firstReviewedAt, first);
+      expect(ReviewState.fromJson(state.toJson()).firstReviewedAt, first);
+
+      final legacy = Map<String, dynamic>.from(state.toJson())
+        ..remove('firstReviewedAt');
+      expect(
+        ReviewState.fromJson(legacy).firstReviewedAt,
+        DateTime.fromMillisecondsSinceEpoch(0),
+      );
+    });
   });
 
   group('VocabWord JSON round-trip', () {
@@ -94,7 +115,8 @@ void main() {
   });
 
   test('containsLegacyWordIds flags pre-qwerty review keys', () {
-    expect(ReviewRepository.containsLegacyWordIds(['cs_001', 'ai_022']), isTrue);
+    expect(
+        ReviewRepository.containsLegacyWordIds(['cs_001', 'ai_022']), isTrue);
     expect(
       ReviewRepository.containsLegacyWordIds(['qwerty_cet4_00001']),
       isFalse,

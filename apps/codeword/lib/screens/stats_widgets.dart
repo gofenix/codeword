@@ -24,7 +24,9 @@ class MasteryDistribution extends StatelessWidget {
           Text('掌握分布', style: AppTheme.cardTitle(context: context)),
           const SizedBox(height: AppSpacing.x2),
           Text(
-            total == 0 ? '— · —' : '已学 ${total - unseenCount} · 总量 $total',
+            total == 0
+                ? '— · —'
+                : '已学 ${_compactCount(total - unseenCount)} · 总量 ${_compactCount(total)}',
             style: AppTheme.mutedCaption(context: context),
           ),
           const SizedBox(height: AppSpacing.x4),
@@ -98,7 +100,7 @@ class _LegendChip extends StatelessWidget {
         ),
         const SizedBox(width: AppSpacing.x1),
         Text(
-          '$label $count',
+          '$label ${_compactCount(count)}',
           style: AppTheme.mutedCaption(
             size: 11,
             color: AppColors.of(context).ink,
@@ -177,13 +179,17 @@ class _VocabRow extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(
-                    row.name,
-                    style: AppTheme.rowTitle(
-                      context: context,
-                    ).copyWith(fontSize: 13),
+                  Expanded(
+                    child: Text(
+                      row.name,
+                      style: AppTheme.rowTitle(
+                        context: context,
+                      ).copyWith(fontSize: 13),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
-                  const Spacer(),
+                  const SizedBox(width: AppSpacing.x2),
                   Text(
                     '${row.learned} / ${row.totalWords}',
                     style: AppTheme.mutedCaption(
@@ -209,6 +215,16 @@ class _VocabRow extends StatelessWidget {
       ],
     );
   }
+}
+
+String _compactCount(int value) {
+  if (value >= 10000) {
+    final wan = value / 10000;
+    return wan >= 100
+        ? '${wan.toStringAsFixed(0)}万'
+        : '${wan.toStringAsFixed(1)}万';
+  }
+  return '$value';
 }
 
 /// Today's snapshot: 6-cell grid (review / new / favs / removed / minutes / opens).

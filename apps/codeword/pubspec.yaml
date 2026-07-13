@@ -18,7 +18,7 @@ resolution: workspace
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 0.6.12+17
+version: 1.0.0+18
 
 environment:
   sdk: ^3.10.0
@@ -48,7 +48,6 @@ dependencies:
   # Routing & state
   go_router: ^14.6.2
   flutter_riverpod: ^2.5.1
-  google_fonts: ^6.2.1
 
   # Local file storage (review state JSON in app docs dir)
   path_provider: ^2.1.4
@@ -72,6 +71,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  integration_test:
+    sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -93,7 +94,6 @@ flutter:
 
   assets:
     - assets/vocab/
-    - assets/local/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

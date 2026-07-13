@@ -43,9 +43,7 @@ class Sm2 {
       }
     }
 
-    final dueAt = interval == 0
-        ? now
-        : now.add(Duration(days: interval));
+    final dueAt = interval == 0 ? now : now.add(Duration(days: interval));
 
     return ReviewState(
       wordId: current.wordId,
@@ -54,6 +52,7 @@ class Sm2 {
       repetitions: repetitions,
       dueAt: dueAt,
       lastReviewedAt: now,
+      firstReviewedAt: current.firstReviewedAt ?? now,
     );
   }
 }

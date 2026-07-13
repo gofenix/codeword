@@ -19,7 +19,18 @@ melos run build:macos
 
 **Local-first, no cloud, no login, no sync.**
 
-All word data and progress data stays on the device. AI features
-(planned) are BYOK — the user's API key is stored locally with
-platform-encrypted storage (Keychain on macOS, EncryptedSharedPreferences
-on Android) and never leaves the device.
+All word data and progress data stays on the device. AI Reading is optional
+BYOK: the user's API key is stored with platform-encrypted storage and is sent
+only to the provider selected by the user. No developer API key is bundled.
+
+## Release checks
+
+```bash
+cd apps/codeword
+flutter analyze
+flutter test
+../../tools/check_release_secrets.sh
+```
+
+For a built IPA or AAB, pass the artifact path to
+`tools/check_release_secrets.sh` to inspect the archive before upload.

@@ -1,0 +1,5 @@
+# Copy to android/key.properties and fill values locally. Never commit secrets.
+storePassword=CHANGE_ME
+keyPassword=CHANGE_ME
+keyAlias=codeword
+storeFile=/absolute/path/to/codeword-release.jks

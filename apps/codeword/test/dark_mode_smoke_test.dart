@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:codeword/models/saved_article.dart';
 import 'package:codeword/screens/reading_screen.dart';
+import 'package:codeword/screens/stats_screen.dart';
 import 'package:codeword/state/learning_session.dart';
+import 'package:codeword/state/llm_config.dart';
 import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
@@ -95,7 +98,7 @@ void main() {
     expect(size.height, greaterThanOrEqualTo(44));
   });
 
-  testWidgets('ReadingScreen refresh button keeps a >=44px tap target', (
+  testWidgets('ReadingScreen BYOK setup keeps a >=44px tap target', (
     tester,
   ) async {
     await tester.pumpWidget(
@@ -114,24 +117,178 @@ void main() {
         ),
       ),
     );
-    final refreshIcon = find.byTooltip('换一批');
-    for (var i = 0; i < 100 && refreshIcon.evaluate().isEmpty; i++) {
-      await tester.pump(const Duration(milliseconds: 50));
-    }
-    expect(refreshIcon, findsOneWidget);
-
-    final refreshButton = find.ancestor(
-      of: refreshIcon,
-      matching: find.byType(IconButton),
-    );
-    final size = tester.getSize(refreshButton);
-    expect(size.width, greaterThanOrEqualTo(44));
+    await tester.pumpAndSettle();
+    final configureButton = find.widgetWithText(FilledButton, '配置 AI 阅读');
+    expect(configureButton, findsOneWidget);
+    final size = tester.getSize(configureButton);
     expect(size.height, greaterThanOrEqualTo(44));
+  });
+
+  testWidgets('configured ReadingScreen shows the contextual reading flow', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(393, 852));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          llmConfiguredProvider.overrideWithValue(true),
+          qwertyCatalogProvider.overrideWithValue(const []),
+          reviewStateProvider.overrideWith(
+            (ref) => _ReadingSmokeReviewNotifier(),
+          ),
+        ],
+        child: MaterialApp(
+          theme: AppTheme.light(),
+          home: const ReadingScreen(),
+        ),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.text('AI 今日阅读'), findsOneWidget);
+    expect(find.textContaining('真正看得懂的文章'), findsOneWidget);
+    expect(find.text('选择 3 个词生成'), findsOneWidget);
+    expect(find.text('阅读记录'), findsOneWidget);
+
+    await tester.tap(find.text('选择 3 个词生成'));
+    await tester.pumpAndSettle();
+    expect(find.text('生成阅读'), findsOneWidget);
+    expect(find.text('用这 3 个词生成文章'), findsOneWidget);
+  });
+
+  testWidgets('article detail exposes translation and target word list', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(393, 852));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    final article = SavedArticle(
+      id: 'preview',
+      createdAt: DateTime(2026, 7, 11),
+      title: 'The Cache That Saved Friday',
+      articleText: 'A cache reduced latency while the queue recovered.',
+      translationText: '缓存降低了延迟，同时队列逐渐恢复。',
+      level: 'B1',
+      vocabId: kDefaultVocabId,
+      vocabName: 'Coder Core',
+      wordPool: const [
+        {
+          'word': 'cache',
+          'translation': '缓存',
+          'phonetic': '/kæʃ/',
+          'level': 'B1',
+        },
+      ],
+    );
+
+    await tester.pumpWidget(
+      ProviderScope(
+        child: MaterialApp(
+          theme: AppTheme.light(),
+          home: ArticleDetailScreen(article: article),
+        ),
+      ),
+    );
+    await tester.pump();
+
+    expect(find.text('The Cache That Saved Friday'), findsOneWidget);
+    expect(find.text('朗读'), findsOneWidget);
+    expect(find.text('生词表'), findsOneWidget);
+    expect(find.text('翻译'), findsOneWidget);
+
+    await tester.tap(find.text('翻译'));
+    await tester.pumpAndSettle();
+    expect(find.text('缓存降低了延迟，同时队列逐渐恢复。'), findsOneWidget);
+
+    await tester.tap(find.text('生词表'));
+    await tester.pumpAndSettle();
+    expect(find.text('本篇生词'), findsOneWidget);
+    expect(find.text('缓存'), findsOneWidget);
+  });
+
+  test('SavedArticle keeps old local JSON readable', () {
+    final article = SavedArticle.fromJson({
+      'id': 'old',
+      'createdAt': '2026-07-11T00:00:00.000',
+      'articleText': 'Old article.',
+      'vocabId': kDefaultVocabId,
+      'vocabName': 'Coder Core',
+      'wordPool': <Map<String, String>>[],
+    });
+    expect(article.title, isEmpty);
+    expect(article.translationText, isEmpty);
+    expect(article.level, isEmpty);
+  });
+
+  test('AI reading payload parses article and valid quiz in one response', () {
+    final payload = parseGeneratedReadingPayload(
+      '{"title":"Cache Story","article":"A cache helped.",'
+      '"translation":"缓存提供了帮助。","questions":['
+      '{"q":"发生了什么？","options":["A","B","C","D"],"correct":1},'
+      '{"q":"坏数据","options":["A"],"correct":9}]}',
+    );
+    expect(payload.title, 'Cache Story');
+    expect(payload.article, 'A cache helped.');
+    expect(payload.translation, '缓存提供了帮助。');
+    expect(payload.questions, hasLength(1));
+    expect(payload.questions.single.correctIndex, 1);
+  });
+
+  test('learning rhythm aligns today to the real weekday', () {
+    final grid = buildRhythmCalendar(
+      activity: const [false, false, false, false, false, false, true],
+      now: DateTime(2026, 7, 8), // Wednesday
+    );
+    const currentWeek = 6;
+    expect(grid[currentWeek * 7 + 0], isFalse); // Monday
+    expect(grid[currentWeek * 7 + 1], isFalse); // Tuesday
+    expect(grid[currentWeek * 7 + 2], isTrue); // Today
+    expect(grid[currentWeek * 7 + 3], isNull); // Future Thursday
+    expect(grid[currentWeek * 7 + 6], isNull); // Future Sunday
+  });
+
+  test('weekly activity excludes days from the previous week', () {
+    final activeDays = activeDaysInCurrentWeek(
+      const [true, true, true, true, true, false, true],
+      DateTime(2026, 7, 8), // Wednesday
+    );
+    expect(activeDays, 2);
   });
 }
 
 class _ReadingSmokeReviewNotifier extends ReviewStateNotifier {
   _ReadingSmokeReviewNotifier() : super(const {});
+
+  @override
+  Future<List<PulseWordEntry>> reviewedTodayWords({
+    int limit = 10,
+    DateTime? now,
+  }) async {
+    return const [
+      PulseWordEntry(
+        word: 'cache',
+        translation: '缓存',
+        phonetic: '/kæʃ/',
+        level: 'B1',
+        vocabId: kDefaultVocabId,
+      ),
+      PulseWordEntry(
+        word: 'latency',
+        translation: '延迟',
+        phonetic: '/ˈleɪtənsi/',
+        level: 'B1',
+        vocabId: kDefaultVocabId,
+      ),
+      PulseWordEntry(
+        word: 'queue',
+        translation: '队列',
+        phonetic: '/kjuː/',
+        level: 'B1',
+        vocabId: kDefaultVocabId,
+      ),
+    ];
+  }
 
   @override
   Future<List<PulseWordEntry>> dueWords({int limit = 3, DateTime? now}) async {

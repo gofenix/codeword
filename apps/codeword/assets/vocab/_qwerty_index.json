@@ -1,5 +1,16 @@
 [
   {
+    "id": "qwerty_coder_core",
+    "name": "Coder Core",
+    "description": "程序员核心英语 500 词",
+    "category": "精选词书",
+    "emoji": "💻",
+    "domainColor": "#10B981",
+    "level": 1,
+    "wordCount": 500,
+    "source": "codeword-candidate"
+  },
+  {
     "id": "qwerty_biomedical_terms",
     "name": "生物医学专业英语词汇",
     "description": "生物医学专业英语词汇",

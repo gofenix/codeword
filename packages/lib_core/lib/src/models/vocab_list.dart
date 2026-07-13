@@ -51,6 +51,7 @@ class ReviewState {
   final int repetitions;
   final DateTime? dueAt;
   final DateTime? lastReviewedAt;
+  final DateTime? firstReviewedAt;
 
   const ReviewState({
     required this.wordId,
@@ -59,6 +60,7 @@ class ReviewState {
     required this.repetitions,
     this.dueAt,
     this.lastReviewedAt,
+    this.firstReviewedAt,
   });
 
   factory ReviewState.fresh(String wordId) => ReviewState(
@@ -75,6 +77,7 @@ class ReviewState {
         'repetitions': repetitions,
         'dueAt': dueAt?.toIso8601String(),
         'lastReviewedAt': lastReviewedAt?.toIso8601String(),
+        'firstReviewedAt': firstReviewedAt?.toIso8601String(),
       };
 
   factory ReviewState.fromJson(Map<String, dynamic> json) => ReviewState(
@@ -86,5 +89,10 @@ class ReviewState {
         lastReviewedAt: json['lastReviewedAt'] != null
             ? DateTime.parse(json['lastReviewedAt'])
             : null,
+        firstReviewedAt: json['firstReviewedAt'] != null
+            ? DateTime.parse(json['firstReviewedAt'])
+            : (json['lastReviewedAt'] != null
+                ? DateTime.fromMillisecondsSinceEpoch(0)
+                : null),
       );
 }

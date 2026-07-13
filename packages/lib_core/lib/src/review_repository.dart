@@ -13,9 +13,8 @@ import 'storage_backend_factory.dart';
 ///
 ///  * [init] is safe to call concurrently — only the first call runs
 ///    the work; all concurrent callers wait on the same Future.
-///  * [_flushInternal] serialises overlapping calls: if a write is in
-///    flight when a second call lands, the second is queued via
-///    [_needsAnotherFlush] so dirty state is always drained.
+///  * [_flushSerialized] serialises overlapping calls. A second caller
+///    waits for the in-flight Future, then drains anything that became dirty.
 ///  * Dirty flags are cleared ONLY when the generation counter at
 ///    START of the write matches the counter at END. Any mutation
 ///    that arrives during the IO window increments the counter,
@@ -42,6 +41,7 @@ class ReviewRepository {
   final Map<String, int> _openCounts;
   final Map<String, int> _studyMinutes;
   String? _selectedVocabId;
+  bool _pendingLearningDataClear = false;
   final StorageBackend _backend;
 
   // --- Debouncing / flushing ------------------------------------
@@ -51,15 +51,14 @@ class ReviewRepository {
   bool _dirtyUserData = false;
 
   // Generation counters bumped on every mutation so
-  // _flushInternal can tell whether a concurrent write arrived
+  // _drainDirtyState can tell whether a concurrent write arrived
   // DURING the IO window and therefore must NOT clear the flag.
   int _genReview = 0;
   int _genActivity = 0;
   int _genUserData = 0;
 
-  // Serialise overlapping flush calls.
-  bool _isFlushing = false;
-  bool _needsAnotherFlush = false;
+  // Serialise overlapping flush calls without polling the event loop.
+  Future<void>? _inFlightFlush;
 
   // Bump schema version whenever the on-disk format changes. Any
   // data without the current header is treated as legacy and wiped.
@@ -151,13 +150,22 @@ class ReviewRepository {
       final schemaPresent = (ud['schemaVersion'] as int?) ?? 0;
 
       final instance = ReviewRepository._(
-        cache, activity, favs, rems, openCounts, studyMins,
-        selectedVocab, backend,
+        cache,
+        activity,
+        favs,
+        rems,
+        openCounts,
+        studyMins,
+        selectedVocab,
+        backend,
       );
       // Run schema enforcement BEFORE publishing the instance via
       // _instance assignment — never expose a partially-migrated repo.
       await instance._enforceSchemaVersion(schemaPresent);
       await instance._purgeLegacyReviewDataIfNeeded();
+      if (ud['pendingLearningDataClear'] == true) {
+        await instance._resumePendingLearningDataClear();
+      }
 
       _instance = instance;
       completer.complete(instance);
@@ -250,6 +258,7 @@ class ReviewRepository {
 
   /// Clears the singleton so tests can call [init] against a fresh store.
   static void resetForTesting() {
+    _instance?._saveDebounce?.cancel();
     _instance = null;
     _initCompleter = null;
     flushInvocationCount = 0;
@@ -271,6 +280,8 @@ class ReviewRepository {
 
   ReviewState? get(String wordId) => _cache[wordId];
 
+  bool get pendingLearningDataClear => _pendingLearningDataClear;
+
   Future<void> put(String wordId, ReviewState state) async {
     _cache[wordId] = state;
     _dirtyReview = true;
@@ -280,11 +291,11 @@ class ReviewRepository {
 
   Map<String, ReviewState> get all => Map.unmodifiable(_cache);
 
-  int get totalLearned =>
-      _cache.values.where((s) => s.repetitions >= 1).length;
+  int get totalLearned => _cache.values.where((s) => s.repetitions >= 1).length;
 
-  int totalDue(DateTime now) =>
-      _cache.values.where((s) => s.dueAt != null && !s.dueAt!.isAfter(now)).length;
+  int totalDue(DateTime now) => _cache.values
+      .where((s) => s.dueAt != null && !s.dueAt!.isAfter(now))
+      .length;
 
   // --- Daily activity (review count for streak / heatmap) --------
 
@@ -365,8 +376,7 @@ class ReviewRepository {
   int openCountOn(DateTime when) => _openCounts[_dateKey(when)] ?? 0;
   int studyMinutesOn(DateTime when) => _studyMinutes[_dateKey(when)] ?? 0;
 
-  int get totalStudyMinutes =>
-      _studyMinutes.values.fold(0, (a, b) => a + b);
+  int get totalStudyMinutes => _studyMinutes.values.fold(0, (a, b) => a + b);
 
   Future<void> recordOpen(DateTime when) async {
     final key = _dateKey(when);
@@ -404,6 +414,64 @@ class ReviewRepository {
     _scheduleSave();
   }
 
+  /// Clear learning history while preserving durable configuration such
+  /// as the selected vocabulary. This intentionally does not touch AI
+  /// credentials, app settings, or cached pronunciation audio, which live
+  /// outside this repository.
+  Future<void> clearLearningData() async {
+    // Drain older writes first so no pre-clear user-data write can land after
+    // the intent marker.
+    await flush();
+
+    // Commit a durable intent marker before touching any learning data.
+    // If the process dies between the independent file writes, init() sees
+    // this marker and resumes the clear instead of loading partial old data.
+    _pendingLearningDataClear = true;
+    try {
+      await _saveUserDataInternal();
+    } catch (_) {
+      _pendingLearningDataClear = false;
+      rethrow;
+    }
+
+    await _resumePendingLearningDataClear();
+  }
+
+  Future<void> _resumePendingLearningDataClear() async {
+    _pendingLearningDataClear = true;
+    _cache.clear();
+    _activity.clear();
+    _favorites.clear();
+    _removed.clear();
+    _openCounts.clear();
+    _studyMinutes.clear();
+    _dirtyReview = true;
+    _dirtyActivity = true;
+    _dirtyUserData = true;
+    _genReview++;
+    _genActivity++;
+    _genUserData++;
+    await flush();
+  }
+
+  /// Remove the durable clear marker after every app-owned learning store,
+  /// including article history, has been cleared successfully.
+  Future<void> completeLearningDataClear() async {
+    if (!_pendingLearningDataClear) return;
+    _pendingLearningDataClear = false;
+    _dirtyUserData = true;
+    _genUserData++;
+    try {
+      await flush();
+    } catch (_) {
+      _pendingLearningDataClear = true;
+      _dirtyUserData = true;
+      _genUserData++;
+      _scheduleSave();
+      rethrow;
+    }
+  }
+
   // --- Debounced save -------------------------------------------
   // Retry backoff for failed flushes. Starts at 250 ms and doubles up
   // to a ceiling of 8 s. Reset on successful flush. This guarantees
@@ -414,14 +482,17 @@ class ReviewRepository {
 
   void _scheduleSave() {
     _saveDebounce?.cancel();
-    _saveDebounce = Timer(const Duration(milliseconds: 300), _flushInternal);
+    _saveDebounce = Timer(
+      const Duration(milliseconds: 300),
+      _startBackgroundFlush,
+    );
   }
 
   /// Schedule a retry timer after a failed flush. The backoff doubles
   /// each retry so a stuck disk doesn't burn CPU; reset on success.
   void _scheduleRetryFlush() {
     _saveDebounce?.cancel();
-    _saveDebounce = Timer(_retryDelay, _flushInternal);
+    _saveDebounce = Timer(_retryDelay, _startBackgroundFlush);
     if (_retryDelay < _maxRetryDelay) {
       _retryDelay = Duration(milliseconds: _retryDelay.inMilliseconds * 2);
       if (_retryDelay > _maxRetryDelay) _retryDelay = _maxRetryDelay;
@@ -431,17 +502,40 @@ class ReviewRepository {
   /// Force an immediate write. Repeats until all pending dirty state
   /// (including any mutations arriving during the IO window) is
   /// durably written. Safe to overlap with concurrent debounced saves.
-  Future<void> flush() async {
+  Future<void> flush() {
     flushInvocationCount++;
     _saveDebounce?.cancel();
     _saveDebounce = null;
-    do {
-      _needsAnotherFlush = false;
-      await _flushInternal();
-    } while (_needsAnotherFlush);
+    return _flushSerialized();
   }
 
-  /// Core flush. Serialised via [_isFlushing].
+  void _startBackgroundFlush() {
+    unawaited(_flushBestEffort());
+  }
+
+  Future<void> _flushBestEffort() async {
+    try {
+      await flush();
+    } catch (_) {
+      // [_drainDirtyState] keeps the dirty flags and schedules a retry.
+    }
+  }
+
+  Future<void> _flushSerialized() {
+    final current = _inFlightFlush;
+    if (current != null) {
+      return current.then((_) => _flushSerialized());
+    }
+
+    late final Future<void> tracked;
+    tracked = _drainDirtyState().whenComplete(() {
+      if (identical(_inFlightFlush, tracked)) _inFlightFlush = null;
+    });
+    _inFlightFlush = tracked;
+    return tracked;
+  }
+
+  /// Core flush. Only called by [_flushSerialized].
   ///
   /// Correctness:
   ///   * Snapshot the generation counters alongside the dirty flags.
@@ -454,12 +548,7 @@ class ReviewRepository {
   ///   * On ANY exception: do NOT lose the dirty state. Clear the
   ///     in-flight mutex so subsequent calls can enter, and schedule
   ///     an exponential-backoff retry via Timer.
-  Future<void> _flushInternal() async {
-    if (_isFlushing) {
-      _needsAnotherFlush = true;
-      return;
-    }
-    _isFlushing = true;
+  Future<void> _drainDirtyState() async {
     bool success = false;
     try {
       while (true) {
@@ -477,8 +566,7 @@ class ReviewRepository {
         final gUserData = _genUserData;
 
         if (doReview) {
-          final payload =
-              _cache.map((k, v) => MapEntry(k, v.toJson()));
+          final payload = _cache.map((k, v) => MapEntry(k, v.toJson()));
           await _backend.saveReviewState(
             Map<String, dynamic>.from(payload),
           );
@@ -504,7 +592,6 @@ class ReviewRepository {
         }
       }
     } finally {
-      _isFlushing = false;
       // Reset retry backoff on success, schedule a retry on failure.
       if (success) {
         _retryDelay = const Duration(milliseconds: 250);
@@ -514,11 +601,6 @@ class ReviewRepository {
         // backoff timer. The 300ms debounce was cancelled when the
         // original flush was entered, so we must explicitly re-arm.
         _scheduleRetryFlush();
-      }
-      // Concurrent flush caller is waiting: dispatch a microtask pass.
-      if (_needsAnotherFlush) {
-        _needsAnotherFlush = false;
-        scheduleMicrotask(_flushInternal);
       }
     }
   }
@@ -534,14 +616,14 @@ class ReviewRepository {
       'openCounts': _openCounts,
       'studyMinutes': _studyMinutes,
       if (_selectedVocabId != null) 'selectedVocabId': _selectedVocabId,
+      if (_pendingLearningDataClear) 'pendingLearningDataClear': true,
     };
     await _backend.saveUserData(json);
   }
 
   // --- date helpers ----------------------------------------------
 
-  static String _dateKey(DateTime t) =>
-      '${t.year.toString().padLeft(4, '0')}-'
+  static String _dateKey(DateTime t) => '${t.year.toString().padLeft(4, '0')}-'
       '${t.month.toString().padLeft(2, '0')}-'
       '${t.day.toString().padLeft(2, '0')}';
 

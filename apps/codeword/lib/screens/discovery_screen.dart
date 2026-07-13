@@ -5,15 +5,18 @@ import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
 import '../state/learning_session.dart';
-import 'learning_session_screen.dart';
+import '../state/app_settings.dart';
+import 'settings_screen.dart';
 
-/// 发现 — search and browse the full qwerty-derived catalog.
+/// 词书 — search and browse the full qwerty-derived catalog.
 ///
 /// The library is grouped by category and can be filtered via the search
 /// bar or the category chip row. Tapping a card launches its learning
-/// session directly.
+/// session directly. Settings remains a secondary page from this tab.
 class DiscoveryScreen extends ConsumerStatefulWidget {
-  const DiscoveryScreen({super.key});
+  final VoidCallback onGoWords;
+
+  const DiscoveryScreen({super.key, required this.onGoWords});
 
   @override
   ConsumerState<DiscoveryScreen> createState() => _DiscoveryScreenState();
@@ -34,6 +37,11 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
   Widget build(BuildContext context) {
     final meta = ref.watch(vocabMetaProvider);
     final lists = ref.watch(qwertyCatalogProvider);
+    ref.watch(reviewStateProvider);
+    final stats = ref.read(reviewStateProvider.notifier).stats(catalog: lists);
+    final selectedVocab = ref.watch(selectedVocabProvider);
+    final current = meta[selectedVocab];
+    final currentProgress = vocabProgressFor(stats, selectedVocab);
 
     final grouped = _groupAndFilter(lists);
     final categories = grouped.keys.toList()
@@ -48,24 +56,11 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
 
     return CustomScrollView(
       slivers: [
-        SliverAppBar.large(
-          backgroundColor: AppColors.of(context).background,
-          surfaceTintColor: Colors.transparent,
-          elevation: 0,
-          scrolledUnderElevation: 0,
-          floating: false,
-          pinned: true,
-          title: Text(
-            '发现',
-            style: AppTheme.screenHeader(context: context),
-          ),
-        ),
         SliverSafeArea(
-          top: false,
           sliver: SliverPadding(
             padding: const EdgeInsets.fromLTRB(
               AppSpacing.x6,
-              AppSpacing.x3,
+              AppSpacing.x4,
               AppSpacing.x6,
               AppSpacing.x3,
             ),
@@ -73,14 +68,17 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    '${lists.length} 本词书',
-                    style: AppTheme.mutedCaption(
-                      size: 13,
-                      context: context,
-                    ),
+                  _LibraryHeader(
+                    onSettings: () {
+                      HapticFeedback.selectionClick();
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const SettingsScreen(),
+                        ),
+                      );
+                    },
                   ),
-                  const SizedBox(height: AppSpacing.x3),
+                  const SizedBox(height: AppSpacing.x4),
                   _SearchField(
                     controller: _searchController,
                     onChanged: (v) =>
@@ -101,17 +99,39 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
                       () => _selectedCategory = cat == '全部' ? null : cat,
                     ),
                   ),
+                  const SizedBox(height: AppSpacing.x4),
+                  _CurrentBookCard(
+                    current: current,
+                    progress: currentProgress,
+                    totalBooks: lists.length,
+                    onContinue: current == null
+                        ? null
+                        : () => _startBook(current.id),
+                  ),
                 ],
               ),
             ),
           ),
         ),
         if (categories.isEmpty)
-          const SliverFillRemaining(
-            child: Center(
-              child: EmptyHint(
-                icon: Icons.search_off_outlined,
-                message: '没有找到相关词书',
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.x6,
+              AppSpacing.x2,
+              AppSpacing.x6,
+              AppSpacing.x8,
+            ),
+            sliver: SliverToBoxAdapter(
+              child: AppCard(
+                child: const SizedBox(
+                  height: 160,
+                  child: Center(
+                    child: EmptyHint(
+                      icon: Icons.search_off_outlined,
+                      message: '没有找到相关词书',
+                    ),
+                  ),
+                ),
               ),
             ),
           )
@@ -130,6 +150,8 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
                   category: cat,
                   lists: grouped[cat]!,
                   available: meta,
+                  onSelect: _selectBook,
+                  onStart: _startBook,
                 );
               }, childCount: categories.length),
             ),
@@ -158,6 +180,73 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
       entry.sort((a, b) => a.name.compareTo(b.name));
     }
     return byCategory;
+  }
+
+  Future<void> _selectBook(String vocabId, {bool resetSession = true}) async {
+    HapticFeedback.selectionClick();
+    final changed = ref.read(selectedVocabProvider) != vocabId;
+    ref.read(selectedVocabProvider.notifier).state = vocabId;
+    try {
+      await ReviewRepository.instance.setSelectedVocabId(vocabId);
+    } catch (_) {}
+    if (changed && resetSession) await _loadSession(vocabId);
+  }
+
+  Future<void> _startBook(String vocabId) async {
+    await _selectBook(vocabId, resetSession: false);
+    await _loadSession(vocabId);
+    if (mounted) widget.onGoWords();
+  }
+
+  Future<void> _loadSession(String vocabId) async {
+    await ref.read(appSettingsProvider.notifier).ready;
+    if (!mounted) return;
+    final settings = ref.read(appSettingsProvider);
+    await ref
+        .read(learningSessionProvider.notifier)
+        .start(
+          vocabId: vocabId,
+          dailyNewWordLimit: settings.dailyNewWords,
+          maxSessionSize: settings.dailyNewWords + 20,
+        );
+  }
+}
+
+class _LibraryHeader extends StatelessWidget {
+  final VoidCallback onSettings;
+
+  const _LibraryHeader({required this.onSettings});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('词书库', style: AppTheme.screenHeader(context: context)),
+              const SizedBox(height: AppSpacing.x2),
+              Text(
+                '搜索、选择并管理当前词书',
+                style: AppTheme.mutedCaption(size: 14, context: context),
+              ),
+            ],
+          ),
+        ),
+        IconButton.filledTonal(
+          tooltip: '设置',
+          onPressed: onSettings,
+          icon: const Icon(Icons.settings_outlined, size: 20),
+          style: IconButton.styleFrom(
+            backgroundColor: AppColors.of(context).surface,
+            foregroundColor: AppColors.of(context).inkMuted,
+            minimumSize: const Size(44, 44),
+          ),
+        ),
+      ],
+    );
   }
 }
 
@@ -213,6 +302,102 @@ class _SearchField extends StatelessWidget {
           horizontal: AppSpacing.x4,
           vertical: AppSpacing.x3,
         ),
+      ),
+    );
+  }
+}
+
+class _CurrentBookCard extends StatelessWidget {
+  final VocabList? current;
+  final VocabProgress? progress;
+  final int totalBooks;
+  final VoidCallback? onContinue;
+
+  const _CurrentBookCard({
+    required this.current,
+    required this.progress,
+    required this.totalBooks,
+    required this.onContinue,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = AppColors.of(context);
+    final total = progress?.availableWords ?? current?.wordCount ?? 0;
+    final learned = progress?.learned ?? 0;
+    final due = progress?.due ?? 0;
+    final pct = total == 0 ? 0.0 : (learned / total).clamp(0.0, 1.0);
+
+    return AppCard(
+      padding: const EdgeInsets.all(AppSpacing.x5),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 42,
+                height: 42,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: AppColors.primarySoft,
+                  borderRadius: BorderRadius.circular(AppRadii.md),
+                ),
+                child: const Icon(
+                  Icons.library_books,
+                  color: AppColors.primary,
+                  size: 22,
+                ),
+              ),
+              const SizedBox(width: AppSpacing.x3),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      current?.name ?? '选择一本词书',
+                      style: AppTheme.cardTitle(context: context),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      '$totalBooks 本词书 · ${due > 0 ? "待复习 $due" : "继续积累"}',
+                      style: AppTheme.mutedCaption(size: 12, context: context),
+                    ),
+                  ],
+                ),
+              ),
+              FilledButton(
+                onPressed: onContinue,
+                style: FilledButton.styleFrom(
+                  minimumSize: const Size(88, 40),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppSpacing.x4,
+                  ),
+                ),
+                child: const Text('继续学习'),
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.x4),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(AppRadii.pill),
+            child: LinearProgressIndicator(
+              value: pct,
+              minHeight: 7,
+              backgroundColor: palette.surfaceMuted,
+              valueColor: const AlwaysStoppedAnimation<Color>(
+                AppColors.primary,
+              ),
+            ),
+          ),
+          const SizedBox(height: AppSpacing.x2),
+          Text(
+            total == 0 ? '先选择词书开始学习' : '已学 $learned / $total',
+            style: AppTheme.mutedCaption(size: 12, context: context),
+          ),
+        ],
       ),
     );
   }
@@ -282,11 +467,15 @@ class _CategorySection extends StatelessWidget {
   final String category;
   final List<VocabList> lists;
   final Map<String, VocabList> available;
+  final ValueChanged<String> onSelect;
+  final ValueChanged<String> onStart;
 
   const _CategorySection({
     required this.category,
     required this.lists,
     required this.available,
+    required this.onSelect,
+    required this.onStart,
   });
 
   @override
@@ -312,10 +501,15 @@ class _CategorySection extends StatelessWidget {
           physics: const NeverScrollableScrollPhysics(),
           mainAxisSpacing: AppSpacing.x3,
           crossAxisSpacing: AppSpacing.x3,
-          childAspectRatio: 1.55,
+          childAspectRatio: 1.0,
           children: [
             for (final l in lists)
-              _LibraryTile(list: l, available: available.containsKey(l.id)),
+              _LibraryTile(
+                list: l,
+                available: available.containsKey(l.id),
+                onSelect: onSelect,
+                onStart: onStart,
+              ),
           ],
         ),
       ],
@@ -326,8 +520,15 @@ class _CategorySection extends StatelessWidget {
 class _LibraryTile extends ConsumerWidget {
   final VocabList list;
   final bool available;
+  final ValueChanged<String> onSelect;
+  final ValueChanged<String> onStart;
 
-  const _LibraryTile({required this.list, required this.available});
+  const _LibraryTile({
+    required this.list,
+    required this.available,
+    required this.onSelect,
+    required this.onStart,
+  });
 
   Color _color() {
     final h = list.id.hashCode.abs() % AppColors.qwertyPalette.length;
@@ -340,22 +541,7 @@ class _LibraryTile extends ConsumerWidget {
     final selectedVocab = ref.watch(selectedVocabProvider);
     final isCurrent = selectedVocab == list.id;
     return AppCard(
-      onTap: available
-          ? () async {
-              HapticFeedback.selectionClick();
-              // Persist the selection so the home tab uses this book.
-              ref.read(selectedVocabProvider.notifier).state = list.id;
-              try {
-                await ReviewRepository.instance.setSelectedVocabId(list.id);
-              } catch (_) {}
-              if (!context.mounted) return;
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => LearningSessionScreen(vocabId: list.id),
-                ),
-              );
-            }
-          : null,
+      onTap: available ? () => onSelect(list.id) : null,
       padding: const EdgeInsets.all(AppSpacing.x3),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -386,10 +572,10 @@ class _LibraryTile extends ConsumerWidget {
                 ),
               ),
               if (isCurrent)
-                const Icon(
-                  Icons.check_circle_rounded,
+                const PillTag(
+                  label: '当前',
                   color: AppColors.primary,
-                  size: 18,
+                  icon: Icons.check,
                 )
               else if (available)
                 PillTag(
@@ -431,6 +617,20 @@ class _LibraryTile extends ConsumerWidget {
                   ).copyWith(height: 1.3),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              const SizedBox(height: AppSpacing.x2),
+              SizedBox(
+                height: 30,
+                child: OutlinedButton(
+                  onPressed: available ? () => onStart(list.id) : null,
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppSpacing.x3,
+                    ),
+                    visualDensity: VisualDensity.compact,
+                  ),
+                  child: Text(isCurrent ? '继续' : '开始'),
                 ),
               ),
             ],

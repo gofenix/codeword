@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'tokens.dart';
 
-/// v5 ThemeData factory: cream/dark background, green accent, Lora serif
-/// for word displays, Inter + Noto Sans SC for UI text.
+/// v5 ThemeData factory: light/dark surfaces, green accent, and platform
+/// system fonts so the complete interface remains available offline.
 ///
 /// Material 3 compatibility: both [light] and [dark] fill in the full
 /// ColorScheme (tertiary, outline, scrim, inverse*, surfaceContainer* …)
@@ -30,7 +29,7 @@ class AppTheme {
         scrolledUnderElevation: 0,
         surfaceTintColor: Colors.transparent,
         centerTitle: true,
-        titleTextStyle: GoogleFonts.notoSansSc(
+        titleTextStyle: TextStyle(
           fontSize: 17,
           fontWeight: FontWeight.w600,
           color: AppColors.ink,
@@ -57,7 +56,7 @@ class AppTheme {
             vertical: AppSpacing.x4,
           ),
           shape: const StadiumBorder(),
-          textStyle: GoogleFonts.notoSansSc(
+          textStyle: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -103,7 +102,6 @@ class AppTheme {
           color: AppColors.onInverseSurface,
           fontSize: 14,
           fontWeight: FontWeight.w500,
-          fontFamily: GoogleFonts.notoSansSc().fontFamily,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppRadii.pill),
@@ -118,12 +116,12 @@ class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppRadii.lg),
         ),
-        titleTextStyle: GoogleFonts.notoSansSc(
+        titleTextStyle: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w700,
           color: AppColors.ink,
         ),
-        contentTextStyle: GoogleFonts.notoSansSc(
+        contentTextStyle: TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.w400,
           color: AppColors.ink,
@@ -134,7 +132,7 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
         indicatorColor: Colors.transparent,
         labelTextStyle: WidgetStatePropertyAll(
-          GoogleFonts.notoSansSc(
+          TextStyle(
             fontSize: 10,
             fontWeight: FontWeight.w500,
           ),
@@ -163,7 +161,7 @@ class AppTheme {
         scrolledUnderElevation: 0,
         surfaceTintColor: Colors.transparent,
         centerTitle: true,
-        titleTextStyle: GoogleFonts.notoSansSc(
+        titleTextStyle: TextStyle(
           fontSize: 17,
           fontWeight: FontWeight.w600,
           color: AppColors.inkDark,
@@ -190,7 +188,7 @@ class AppTheme {
             vertical: AppSpacing.x4,
           ),
           shape: const StadiumBorder(),
-          textStyle: GoogleFonts.notoSansSc(
+          textStyle: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -236,7 +234,6 @@ class AppTheme {
           color: AppColors.ink,
           fontSize: 14,
           fontWeight: FontWeight.w500,
-          fontFamily: GoogleFonts.notoSansSc().fontFamily,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppRadii.pill),
@@ -251,12 +248,12 @@ class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppRadii.lg),
         ),
-        titleTextStyle: GoogleFonts.notoSansSc(
+        titleTextStyle: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w700,
           color: AppColors.inkDark,
         ),
-        contentTextStyle: GoogleFonts.notoSansSc(
+        contentTextStyle: TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.w400,
           color: AppColors.inkDark,
@@ -267,7 +264,7 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
         indicatorColor: Colors.transparent,
         labelTextStyle: WidgetStatePropertyAll(
-          GoogleFonts.notoSansSc(
+          TextStyle(
             fontSize: 10,
             fontWeight: FontWeight.w500,
           ),
@@ -361,67 +358,32 @@ class AppTheme {
     );
   }
 
-  /// Shared UI text-theme: Inter for Latin, Noto Sans SC for CJK.
-  /// Applies the correct text colour for [Brightness] so callers don't
-  /// have to override.
+  /// Shared platform text theme. System fonts keep the entire learning flow
+  /// available offline and provide native CJK fallback on iOS and Android.
   static TextTheme _uiTextTheme(TextTheme base, Brightness brightness) {
     final ink =
         brightness == Brightness.light ? AppColors.ink : AppColors.inkDark;
     final muted = brightness == Brightness.light
         ? AppColors.inkMuted
         : AppColors.inkMutedDark;
-    final inter = GoogleFonts.interTextTheme(base).apply(
+    final inter = base.apply(
       bodyColor: ink,
       displayColor: ink,
     );
     return inter.copyWith(
-      bodySmall: GoogleFonts.notoSansSc(
-        textStyle: inter.bodySmall,
-        color: muted,
-      ),
-      bodyMedium: GoogleFonts.notoSansSc(
-        textStyle: inter.bodyMedium,
-        fontWeight: FontWeight.w400,
-      ),
-      bodyLarge: GoogleFonts.notoSansSc(
-        textStyle: inter.bodyLarge,
-        fontWeight: FontWeight.w400,
-      ),
-      labelSmall: GoogleFonts.notoSansSc(
-        textStyle: inter.labelSmall,
-        color: muted,
-      ),
-      labelMedium: GoogleFonts.notoSansSc(
-        textStyle: inter.labelMedium,
-      ),
-      labelLarge: GoogleFonts.notoSansSc(
-        textStyle: inter.labelLarge,
-        fontWeight: FontWeight.w600,
-      ),
-      titleSmall: GoogleFonts.notoSansSc(
-        textStyle: inter.titleSmall,
-        fontWeight: FontWeight.w600,
-      ),
-      titleMedium: GoogleFonts.notoSansSc(
-        textStyle: inter.titleMedium,
-        fontWeight: FontWeight.w600,
-      ),
-      titleLarge: GoogleFonts.notoSansSc(
-        textStyle: inter.titleLarge,
-        fontWeight: FontWeight.w700,
-      ),
-      headlineSmall: GoogleFonts.notoSansSc(
-        textStyle: inter.headlineSmall,
-        fontWeight: FontWeight.w700,
-      ),
-      headlineMedium: GoogleFonts.notoSansSc(
-        textStyle: inter.headlineMedium,
-        fontWeight: FontWeight.w700,
-      ),
-      headlineLarge: GoogleFonts.notoSansSc(
-        textStyle: inter.headlineLarge,
-        fontWeight: FontWeight.w800,
-      ),
+      bodySmall: inter.bodySmall?.copyWith(color: muted),
+      bodyMedium: inter.bodyMedium?.copyWith(fontWeight: FontWeight.w400),
+      bodyLarge: inter.bodyLarge?.copyWith(fontWeight: FontWeight.w400),
+      labelSmall: inter.labelSmall?.copyWith(color: muted),
+      labelMedium: inter.labelMedium,
+      labelLarge: inter.labelLarge?.copyWith(fontWeight: FontWeight.w600),
+      titleSmall: inter.titleSmall?.copyWith(fontWeight: FontWeight.w600),
+      titleMedium: inter.titleMedium?.copyWith(fontWeight: FontWeight.w600),
+      titleLarge: inter.titleLarge?.copyWith(fontWeight: FontWeight.w700),
+      headlineSmall: inter.headlineSmall?.copyWith(fontWeight: FontWeight.w700),
+      headlineMedium:
+          inter.headlineMedium?.copyWith(fontWeight: FontWeight.w700),
+      headlineLarge: inter.headlineLarge?.copyWith(fontWeight: FontWeight.w800),
     );
   }
 
@@ -433,19 +395,20 @@ class AppTheme {
   // omitted (or when an explicit [color] is given) behaviour is unchanged,
   // keeping every existing light-theme call site pixel-identical.
 
-  /// Serif style for displaying a vocabulary word (Lora).
+  /// Platform serif style for displaying a vocabulary word.
   static TextStyle wordDisplay({
     double size = 36,
     FontWeight weight = FontWeight.w700,
     Color? color,
     BuildContext? context,
   }) {
-    return GoogleFonts.lora(
+    return TextStyle(
+      fontFamily: 'serif',
       fontSize: size,
       fontWeight: weight,
       color: color ?? _ink(context),
       height: 1.2,
-      letterSpacing: -0.5,
+      letterSpacing: 0,
     );
   }
 
@@ -455,28 +418,28 @@ class AppTheme {
     double fontSize = 14,
     BuildContext? context,
   }) {
-    return GoogleFonts.notoSansSc(
+    return TextStyle(
       fontSize: fontSize,
       fontWeight: FontWeight.w400,
       color: color ?? _inkMuted(context),
-      letterSpacing: 0.2,
+      letterSpacing: 0,
     );
   }
 
   /// Big screen header (e.g. "发现", "设置", "图表").
   static TextStyle screenHeader({Color? color, BuildContext? context}) {
-    return GoogleFonts.notoSansSc(
+    return TextStyle(
       fontSize: 34,
       fontWeight: FontWeight.w700,
       height: 1.2,
-      letterSpacing: -0.3,
+      letterSpacing: 0,
       color: color ?? _ink(context),
     );
   }
 
   /// Card title (e.g. "今日任务", stats section titles).
   static TextStyle cardTitle({Color? color, BuildContext? context}) {
-    return GoogleFonts.notoSansSc(
+    return TextStyle(
       fontSize: 17,
       fontWeight: FontWeight.w700,
       color: color ?? _ink(context),
@@ -485,10 +448,10 @@ class AppTheme {
 
   /// Small uppercase section label (e.g. "PROFILE", "AI").
   static TextStyle sectionLabel({Color? color, BuildContext? context}) {
-    return GoogleFonts.notoSansSc(
+    return TextStyle(
       fontSize: 13,
       fontWeight: FontWeight.w700,
-      letterSpacing: 1.2,
+      letterSpacing: 0,
       color: color ?? _inkMuted(context),
     );
   }
@@ -499,7 +462,7 @@ class AppTheme {
     Color? color,
     BuildContext? context,
   }) {
-    return GoogleFonts.notoSansSc(
+    return TextStyle(
       fontSize: size,
       fontWeight: FontWeight.w500,
       color: color ?? _inkMuted(context),
@@ -508,17 +471,17 @@ class AppTheme {
 
   /// Chip caption (small bold label on pills / option tags).
   static TextStyle chipCaption({Color color = AppColors.primary}) {
-    return GoogleFonts.notoSansSc(
+    return TextStyle(
       fontSize: 13,
       fontWeight: FontWeight.w700,
-      letterSpacing: 0.4,
+      letterSpacing: 0,
       color: color,
     );
   }
 
   /// Setting row title (e.g. "AI 服务商", "清除所有数据").
   static TextStyle rowTitle({Color? color, BuildContext? context}) {
-    return GoogleFonts.notoSansSc(
+    return TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w600,
       color: color ?? _ink(context),

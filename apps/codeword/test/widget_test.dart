@@ -1,3 +1,7 @@
+import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -5,24 +9,58 @@ import 'package:lib_core/lib_core.dart';
 
 import 'package:codeword/main.dart';
 import 'package:codeword/screens/learning_session_screen.dart';
+import 'package:codeword/screens/stats_screen.dart';
+import 'package:codeword/screens/settings_screen.dart';
+import 'package:codeword/state/app_settings.dart';
 import 'package:codeword/state/learning_session.dart';
+import 'package:codeword/state/llm_config.dart';
 
 void main() {
   /// Build a ProviderScope with an empty qwerty catalog override so the
   /// home shell boots without throwing.
-  Widget testApp() => ProviderScope(
-        overrides: [qwertyCatalogProvider.overrideWithValue(const [])],
-        child: const CodewordApp(),
-      );
+  Widget testApp({
+    List<VocabList> catalog = const [],
+    List<Override> overrides = const [],
+  }) => ProviderScope(
+    overrides: [
+      qwertyCatalogProvider.overrideWithValue(catalog),
+      appSettingsProvider.overrideWith(
+        (ref) => AppSettingsNotifier(_ImmediateAppSettingsStore()),
+      ),
+      ...overrides,
+    ],
+    child: const CodewordApp(),
+  );
 
-  testWidgets('App boots into 5-tab home with Words selected', (tester) async {
+  test('Coder Core contains 500 concise unique candidates', () async {
+    final raw = await File(
+      'assets/vocab/qwerty_coder_core.json',
+    ).readAsString();
+    final words = (jsonDecode(raw) as List).cast<Map<String, dynamic>>();
+    expect(words, hasLength(500));
+    expect(words.map((word) => word['word']).toSet(), hasLength(500));
+    final chineseMeaning = RegExp(r'[\u4e00-\u9fff]');
+    for (final word in words) {
+      expect((word['translation'] as String).length, lessThanOrEqualTo(36));
+      expect(
+        word['translation'],
+        matches(chineseMeaning),
+        reason: '${word['word']} must have a Chinese meaning',
+      );
+      expect((word['exampleEn'] as String).trim(), isNotEmpty);
+      expect((word['exampleCn'] as String).trim(), isNotEmpty);
+      expect(word['domain'], kDefaultVocabId);
+    }
+  });
+
+  testWidgets('App boots into 4-tab home with Words selected', (tester) async {
     await tester.pumpWidget(testApp());
     await tester.pump();
     expect(find.text('单词'), findsWidgets);
     expect(find.text('阅读'), findsOneWidget);
-    expect(find.text('发现'), findsOneWidget);
     expect(find.text('图表'), findsOneWidget);
-    expect(find.text('设置'), findsOneWidget);
+    expect(find.text('词书'), findsOneWidget);
+    expect(find.text('设置'), findsNothing);
   });
 
   testWidgets('HomeShell keeps tab state mounted while switching tabs', (
@@ -32,7 +70,7 @@ void main() {
     await tester.pump();
 
     final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
-    expect(stack.children.length, 5);
+    expect(stack.children.length, 4);
     expect(stack.index, 0);
 
     await tester.tap(find.text('阅读'));
@@ -40,10 +78,197 @@ void main() {
     final readingStack = tester.widget<IndexedStack>(find.byType(IndexedStack));
     expect(readingStack.index, 1);
 
-    await tester.tap(find.text('发现'));
+    await tester.tap(find.text('图表'));
     await tester.pump();
-    final discoveryStack = tester.widget<IndexedStack>(find.byType(IndexedStack));
-    expect(discoveryStack.index, 2);
+    final statsStack = tester.widget<IndexedStack>(find.byType(IndexedStack));
+    expect(statsStack.index, 2);
+
+    await tester.tap(find.text('词书'));
+    await tester.pump();
+    final discoveryStack = tester.widget<IndexedStack>(
+      find.byType(IndexedStack),
+    );
+    expect(discoveryStack.index, 3);
+  });
+
+  testWidgets(
+    'Charts tab prioritizes progress, distribution, today and rhythm',
+    (tester) async {
+      await tester.pumpWidget(testApp());
+      await tester.pump();
+
+      await tester.tap(find.text('图表'));
+      await tester.pump();
+
+      expect(find.text('当前词书'), findsOneWidget);
+      expect(find.text('掌握进度'), findsOneWidget);
+      expect(find.text('掌握分布'), findsOneWidget);
+      expect(find.text('今日'), findsOneWidget);
+      await tester.scrollUntilVisible(
+        find.text('学习节奏'),
+        300,
+        scrollable: find.byType(Scrollable).last,
+      );
+      expect(find.text('学习节奏'), findsOneWidget);
+      expect(find.text('打开 0 次'), findsNothing);
+    },
+  );
+
+  testWidgets('Current vocabulary card opens the Library tab', (tester) async {
+    await tester.pumpWidget(testApp());
+    await tester.pump();
+
+    await tester.tap(find.text('图表'));
+    await tester.pump();
+    await tester.tap(find.text('当前词书'));
+    await tester.pump();
+
+    final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
+    expect(stack.index, 3);
+  });
+
+  testWidgets('hidden Reading tab defers word and history loading', (
+    tester,
+  ) async {
+    final notifier = _CountingReadingNotifier();
+    await tester.pumpWidget(
+      testApp(
+        overrides: [
+          llmConfiguredProvider.overrideWithValue(true),
+          reviewStateProvider.overrideWith((ref) => notifier),
+        ],
+      ),
+    );
+    await tester.pump();
+    expect(notifier.reviewedTodayCalls, 0);
+
+    await tester.tap(find.text('阅读'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 50));
+    expect(notifier.reviewedTodayCalls, 1);
+  });
+
+  testWidgets('Today stats do not count newly introduced words as reviews', (
+    tester,
+  ) async {
+    final notifier = ReviewStateNotifier();
+    notifier.recordAnswer(wordId: 'qwerty_test_00001', quality: 4);
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          qwertyCatalogProvider.overrideWithValue(const []),
+          reviewStateProvider.overrideWith((ref) => notifier),
+        ],
+        child: MaterialApp(home: const StatsScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.scrollUntilVisible(
+      find.text('复习 0'),
+      250,
+      scrollable: find.byType(Scrollable).last,
+    );
+    expect(find.text('复习 0'), findsOneWidget);
+    expect(find.text('新学 1'), findsOneWidget);
+  });
+
+  testWidgets('Library tab opens Settings as a secondary page', (tester) async {
+    await tester.pumpWidget(testApp());
+    await tester.pump();
+
+    await tester.tap(find.text('词书'));
+    await tester.pump();
+    expect(find.text('词书'), findsWidgets);
+    expect(find.text('发现'), findsNothing);
+
+    await tester.tap(find.byIcon(Icons.settings_outlined));
+    await tester.pumpAndSettle();
+    expect(find.byType(SettingsScreen), findsOneWidget);
+    expect(find.text('设置'), findsWidgets);
+  });
+
+  testWidgets('Completion dashboard opens the Library tab', (tester) async {
+    await tester.pumpWidget(
+      testApp(
+        overrides: [
+          learningSessionProvider.overrideWith(
+            (ref) => _FinishedLearningSessionNotifier(ref),
+          ),
+        ],
+      ),
+    );
+    await tester.pump();
+
+    await tester.tap(find.text('选择下一本词书'));
+    await tester.pump();
+
+    final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
+    expect(stack.index, 3);
+    expect(find.text('词书'), findsWidgets);
+  });
+
+  testWidgets('Words tab opens directly into immersive multiple choice', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      testApp(
+        overrides: [
+          learningSessionProvider.overrideWith(
+            (ref) => _AskingLearningSessionNotifier(ref),
+          ),
+        ],
+      ),
+    );
+    await tester.pump();
+
+    expect(find.text('dermis'), findsOneWidget);
+    expect(find.text('A'), findsOneWidget);
+    expect(find.text('B'), findsOneWidget);
+    expect(find.text('C'), findsOneWidget);
+    expect(find.text('D'), findsOneWidget);
+    expect(find.text('开始背词'), findsNothing);
+    expect(find.byIcon(Icons.close_rounded), findsWidgets);
+    expect(find.byIcon(Icons.library_books_outlined), findsWidgets);
+    expect(find.text('阅读'), findsNothing);
+  });
+
+  testWidgets('Library continue returns to immersive Words tab', (
+    tester,
+  ) async {
+    const catalog = [
+      VocabList(
+        id: kDefaultVocabId,
+        name: '生物医学专业英语词汇',
+        description: 'Biomedical terms',
+        emoji: '📘',
+        domainColor: '#10B981',
+        level: 1,
+        wordCount: 20,
+      ),
+    ];
+
+    await tester.pumpWidget(
+      testApp(
+        catalog: catalog,
+        overrides: [
+          learningSessionProvider.overrideWith(
+            (ref) => _AskingLearningSessionNotifier(ref),
+          ),
+        ],
+      ),
+    );
+    await tester.pump();
+
+    await tester.tap(find.byIcon(Icons.library_books_outlined).first);
+    await tester.pump();
+    expect(find.text('继续学习'), findsOneWidget);
+
+    await tester.tap(find.text('继续学习'));
+    await tester.pump();
+    await tester.pump();
+
+    final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
+    expect(stack.index, 0);
   });
 
   test('SM-2 round-trip through notifier records answer', () {
@@ -96,7 +321,11 @@ void main() {
           'a/b/c/e have repetitions=1 (good/easy), '
           "d's quality=0 reset repetitions to 0",
     );
-    expect(s.newToday, 3, reason: 'a, b, c first-seen today with reps=1');
+    expect(
+      s.newToday,
+      4,
+      reason: 'a, b, c, d were all introduced today, including the wrong word',
+    );
     expect(
       s.reviewsToday,
       4,
@@ -141,33 +370,32 @@ void main() {
     );
   });
 
-  test('canStartLearningForVocab is true when vocab still has unseen words', () {
-    final notifier = ReviewStateNotifier();
-    final catalog = <VocabList>[
-      const VocabList(
-        id: 'qwerty_test',
-        name: 'Test',
-        description: '',
-        emoji: '📘',
-        domainColor: '#000',
-        level: 1,
-        wordCount: 50,
-      ),
-    ];
-    final stats = notifier.stats(catalog: catalog);
-    expect(canStartLearningForVocab(stats, 'qwerty_test'), isTrue);
-  });
+  test(
+    'canStartLearningForVocab is true when vocab still has unseen words',
+    () {
+      final notifier = ReviewStateNotifier();
+      final catalog = <VocabList>[
+        const VocabList(
+          id: 'qwerty_test',
+          name: 'Test',
+          description: '',
+          emoji: '📘',
+          domainColor: '#000',
+          level: 1,
+          wordCount: 50,
+        ),
+      ];
+      final stats = notifier.stats(catalog: catalog);
+      expect(canStartLearningForVocab(stats, 'qwerty_test'), isTrue);
+    },
+  );
 
   test(
     'canStartLearningForVocab is false when vocab is fully learned and not due',
     () {
       final notifier = ReviewStateNotifier();
       final now = DateTime(2026, 6, 8, 14);
-      notifier.recordAnswer(
-        wordId: 'qwerty_test_00001',
-        quality: 5,
-        now: now,
-      );
+      notifier.recordAnswer(wordId: 'qwerty_test_00001', quality: 5, now: now);
       final catalog = <VocabList>[
         const VocabList(
           id: 'qwerty_test',
@@ -192,12 +420,22 @@ void main() {
     final notifier = ReviewStateNotifier();
     final catalog = <VocabList>[
       const VocabList(
-        id: 'v1', name: 'V1', description: '', emoji: '📘',
-        domainColor: '#000', level: 1, wordCount: 10,
+        id: 'v1',
+        name: 'V1',
+        description: '',
+        emoji: '📘',
+        domainColor: '#000',
+        level: 1,
+        wordCount: 10,
       ),
       const VocabList(
-        id: 'v2', name: 'V2', description: '', emoji: '📗',
-        domainColor: '#000', level: 1, wordCount: 20,
+        id: 'v2',
+        name: 'V2',
+        description: '',
+        emoji: '📗',
+        domainColor: '#000',
+        level: 1,
+        wordCount: 20,
       ),
     ];
     final s = notifier.stats(catalog: catalog);
@@ -223,6 +461,35 @@ void main() {
       );
     },
   );
+
+  test('session summary counts only initial new and review questions', () {
+    LearningQuestion question(String id, SessionQuestionSource source) =>
+        LearningQuestion(
+          word: _word(id, id, '释义'),
+          type: QuestionType.seeWordPickMeaning,
+          options: const ['释义', 'A', 'B', 'C'],
+          correctIndex: 0,
+          prompt: id,
+          source: source,
+        );
+
+    final state = LearningSessionState(
+      phase: SessionPhase.finished,
+      questions: [
+        question('new', SessionQuestionSource.newWord),
+        question('due', SessionQuestionSource.due),
+        question('retry', SessionQuestionSource.retry),
+      ],
+      currentIndex: 3,
+      correctCount: 2,
+      initialQuestionCount: 2,
+    );
+
+    expect(state.newWordCount, 1);
+    expect(state.reviewWordCount, 1);
+    expect(formatSessionDuration(const Duration(seconds: 18)), '18秒');
+    expect(formatSessionDuration(const Duration(seconds: 90)), '1分');
+  });
 
   testWidgets('LearningSessionScreen builds with vocabId only', (tester) async {
     await tester.pumpWidget(
@@ -266,9 +533,9 @@ void main() {
       final word = _word('qwerty_flush_00001', 'latency', '延迟');
       final container = ProviderContainer(
         overrides: [
-          vocabCacheProvider('qwerty_flush').overrideWith(
-            (ref) async => [word],
-          ),
+          vocabCacheProvider(
+            'qwerty_flush',
+          ).overrideWith((ref) async => [word]),
         ],
       );
       addTearDown(container.dispose);
@@ -276,7 +543,7 @@ void main() {
       final notifier = container.read(learningSessionProvider.notifier);
       await notifier.start(
         vocabId: 'qwerty_flush',
-        minSessionSize: 1,
+        dailyNewWordLimit: 1,
         maxSessionSize: 1,
       );
       final q = container.read(learningSessionProvider).currentQuestion!;
@@ -288,6 +555,7 @@ void main() {
         1,
         reason: 'state should advance after answer',
       );
+      expect(ReviewRepository.instance.studyMinutesOn(DateTime.now()), 1);
 
       // _eagerFlush() must invoke ReviewRepository.flush().
       for (var i = 0; i < 100; i++) {
@@ -382,9 +650,7 @@ void main() {
 
     final container = ProviderContainer(
       overrides: [
-        vocabCacheProvider('qwerty_test').overrideWith(
-          (ref) async => [word],
-        ),
+        vocabCacheProvider('qwerty_test').overrideWith((ref) async => [word]),
       ],
     );
     addTearDown(container.dispose);
@@ -392,7 +658,7 @@ void main() {
     final notifier = container.read(learningSessionProvider.notifier);
     await notifier.start(
       vocabId: 'qwerty_test',
-      minSessionSize: 1,
+      dailyNewWordLimit: 1,
       maxSessionSize: 1,
     );
     final session = container.read(learningSessionProvider);
@@ -417,7 +683,7 @@ void main() {
       final notifier = container.read(learningSessionProvider.notifier);
       await notifier.start(
         vocabId: 'test',
-        minSessionSize: 2,
+        dailyNewWordLimit: 2,
         maxSessionSize: 2,
       );
       final first = container.read(learningSessionProvider).currentQuestion!;
@@ -469,6 +735,448 @@ void main() {
     expect(state.currentQuestion, isNull);
   });
 
+  test(
+    'Daily new-word limit is shared across sessions and vocabularies',
+    () async {
+      final now = DateTime.now();
+      final today = DateTime(now.year, now.month, now.day, 12);
+      final dueWords = [
+        _word('qwerty_test_00001', 'latency', '延迟'),
+        _word('qwerty_test_00002', 'throughput', '吞吐量'),
+      ];
+      final newWords = [
+        _word('qwerty_test_00003', 'cache', '缓存'),
+        _word('qwerty_test_00004', 'queue', '队列'),
+        _word('qwerty_test_00005', 'mutex', '互斥锁'),
+      ];
+      final reviewState = <String, ReviewState>{
+        for (final word in dueWords)
+          word.id: ReviewState(
+            wordId: word.id,
+            easiness: 240,
+            interval: 1,
+            repetitions: 1,
+            dueAt: now.subtract(const Duration(minutes: 1)),
+            lastReviewedAt: now.subtract(const Duration(days: 1)),
+            firstReviewedAt: now.subtract(const Duration(days: 7)),
+          ),
+        for (var i = 0; i < 2; i++)
+          'qwerty_other_0000$i': ReviewState(
+            wordId: 'qwerty_other_0000$i',
+            easiness: 250,
+            interval: 1,
+            repetitions: 1,
+            dueAt: now.add(const Duration(days: 1)),
+            lastReviewedAt: today,
+            firstReviewedAt: today,
+          ),
+      };
+      final container = ProviderContainer(
+        overrides: [
+          reviewStateProvider.overrideWith(
+            (ref) => ReviewStateNotifier(reviewState),
+          ),
+          vocabCacheProvider(
+            'qwerty_test',
+          ).overrideWith((ref) async => [...dueWords, ...newWords]),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      await container
+          .read(learningSessionProvider.notifier)
+          .start(
+            vocabId: 'qwerty_test',
+            dailyNewWordLimit: 3,
+            maxSessionSize: 10,
+          );
+      final questions = container.read(learningSessionProvider).questions;
+      expect(
+        questions.where((q) => q.source == SessionQuestionSource.due).length,
+        2,
+      );
+      expect(
+        questions
+            .where((q) => q.source == SessionQuestionSource.newWord)
+            .length,
+        1,
+      );
+    },
+  );
+
+  test('Latest vocabulary start wins while an older load is pending', () async {
+    final firstLoad = Completer<List<VocabWord>>();
+    final secondLoad = Completer<List<VocabWord>>();
+    final container = ProviderContainer(
+      overrides: [
+        vocabCacheProvider('first').overrideWith((ref) => firstLoad.future),
+        vocabCacheProvider('second').overrideWith((ref) => secondLoad.future),
+      ],
+    );
+    addTearDown(container.dispose);
+    final notifier = container.read(learningSessionProvider.notifier);
+
+    final firstStart = notifier.start(
+      vocabId: 'first',
+      dailyNewWordLimit: 1,
+      maxSessionSize: 1,
+    );
+    final secondStart = notifier.start(
+      vocabId: 'second',
+      dailyNewWordLimit: 1,
+      maxSessionSize: 1,
+    );
+    secondLoad.complete([_word('second_001', 'queue', '队列')]);
+    await secondStart;
+    firstLoad.complete([_word('first_001', 'cache', '缓存')]);
+    await firstStart;
+
+    expect(
+      container.read(learningSessionProvider).currentQuestion?.word.id,
+      'second_001',
+    );
+  });
+
+  test(
+    'Session pulls overdue words from every vocabulary before new words',
+    () async {
+      final now = DateTime.now();
+      final oldWords = [
+        _word('qwerty_old_00001', 'legacy', '旧版'),
+        _word('qwerty_old_00002', 'archive', '归档'),
+        _word('qwerty_old_00003', 'backup', '备份'),
+        _word('qwerty_old_00004', 'restore', '恢复'),
+      ];
+      final currentWords = [
+        _word('qwerty_current_00001', 'latency', '延迟'),
+        _word('qwerty_current_00002', 'throughput', '吞吐量'),
+        _word('qwerty_current_00003', 'cache', '缓存'),
+        _word('qwerty_current_00004', 'queue', '队列'),
+      ];
+      final container = ProviderContainer(
+        overrides: [
+          reviewStateProvider.overrideWith(
+            (ref) => ReviewStateNotifier({
+              oldWords.first.id: ReviewState(
+                wordId: oldWords.first.id,
+                easiness: 250,
+                interval: 1,
+                repetitions: 1,
+                dueAt: now.subtract(const Duration(days: 1)),
+                lastReviewedAt: now.subtract(const Duration(days: 2)),
+              ),
+            }),
+          ),
+          vocabCacheProvider(
+            'qwerty_old',
+          ).overrideWith((ref) async => oldWords),
+          vocabCacheProvider(
+            'qwerty_current',
+          ).overrideWith((ref) async => currentWords),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      await container
+          .read(learningSessionProvider.notifier)
+          .start(
+            vocabId: 'qwerty_current',
+            dailyNewWordLimit: 1,
+            maxSessionSize: 2,
+          );
+      final questions = container.read(learningSessionProvider).questions;
+      expect(questions, hasLength(2));
+      expect(questions.first.word.id, oldWords.first.id);
+      expect(questions.first.source, SessionQuestionSource.due);
+      expect(questions.last.word.id, startsWith('qwerty_current_'));
+      expect(questions.last.source, SessionQuestionSource.newWord);
+    },
+  );
+
+  test('Mature due word uses objective typed recall', () async {
+    final now = DateTime.now();
+    final words = [
+      _word('qwerty_recall_00001', 'latency', '延迟'),
+      _word('qwerty_recall_00002', 'throughput', '吞吐量'),
+      _word('qwerty_recall_00003', 'cache', '缓存'),
+      _word('qwerty_recall_00004', 'queue', '队列'),
+    ];
+    final container = ProviderContainer(
+      overrides: [
+        reviewStateProvider.overrideWith(
+          (ref) => ReviewStateNotifier({
+            words.first.id: ReviewState(
+              wordId: words.first.id,
+              easiness: 250,
+              interval: 6,
+              repetitions: 2,
+              dueAt: now.subtract(const Duration(minutes: 1)),
+              lastReviewedAt: now.subtract(const Duration(days: 6)),
+            ),
+          }),
+        ),
+        vocabCacheProvider('qwerty_recall').overrideWith((ref) async => words),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    final notifier = container.read(learningSessionProvider.notifier);
+    await notifier.start(
+      vocabId: 'qwerty_recall',
+      dailyNewWordLimit: 0,
+      maxSessionSize: 1,
+    );
+    final question = container.read(learningSessionProvider).currentQuestion!;
+    expect(question.type, QuestionType.typeWord);
+    expect(question.options, isEmpty);
+
+    notifier.answerTyped('  LATENCY  ');
+    expect(
+      container.read(learningSessionProvider).phase,
+      SessionPhase.finished,
+    );
+    expect(container.read(learningSessionProvider).correctCount, 1);
+  });
+
+  test(
+    'Choice questions always expose four unique non-placeholder options',
+    () async {
+      final words = [
+        _word('qwerty_choices_00001', 'cache', '缓存'),
+        _word('qwerty_choices_00002', 'queue', '队列'),
+      ];
+      final container = ProviderContainer(
+        overrides: [
+          vocabCacheProvider(
+            'qwerty_choices',
+          ).overrideWith((ref) async => words),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      await container
+          .read(learningSessionProvider.notifier)
+          .start(
+            vocabId: 'qwerty_choices',
+            dailyNewWordLimit: 1,
+            maxSessionSize: 1,
+          );
+      final options = container
+          .read(learningSessionProvider)
+          .currentQuestion!
+          .options;
+      expect(options, hasLength(4));
+      expect(options.toSet(), hasLength(4));
+      expect(options.where((option) => option.contains('—')), isEmpty);
+    },
+  );
+
+  test(
+    'App settings hydrate before queued adjustments and serialize writes',
+    () async {
+      final store = _TestAppSettingsStore();
+      final notifier = AppSettingsNotifier(store);
+
+      final first = notifier.adjustDailyNewWords(1);
+      final second = notifier.adjustDailyNewWords(1);
+      store.completeRead(const AppSettings(dailyNewWords: 20));
+      await Future.wait([first, second]);
+
+      expect(notifier.state.dailyNewWords, 22);
+      expect(store.writes, [21, 22]);
+    },
+  );
+
+  test(
+    'Failed queued setting writes roll back to the last durable value',
+    () async {
+      final store = _FailingAppSettingsStore();
+      final notifier = AppSettingsNotifier(store);
+      await notifier.ready;
+
+      final first = notifier.adjustDailyNewWords(1);
+      final second = notifier.adjustDailyNewWords(1);
+      try {
+        await first;
+      } catch (_) {}
+      try {
+        await second;
+      } catch (_) {}
+
+      expect(notifier.state.dailyNewWords, 20);
+    },
+  );
+
+  test(
+    'Overlapping flush and clear complete with empty durable state',
+    () async {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      ReviewRepository.resetForTesting();
+      final backend = _DelayedReviewBackend();
+      await ReviewRepository.initWithBackend(backend);
+      addTearDown(ReviewRepository.resetForTesting);
+
+      final now = DateTime.now();
+      await ReviewRepository.instance.put(
+        'qwerty_test_00001',
+        ReviewState(
+          wordId: 'qwerty_test_00001',
+          easiness: 250,
+          interval: 1,
+          repetitions: 1,
+          dueAt: now.add(const Duration(days: 1)),
+          lastReviewedAt: now,
+          firstReviewedAt: now,
+        ),
+      );
+
+      final firstFlush = ReviewRepository.instance.flush();
+      await backend.firstReviewSaveStarted.future;
+      final clear = ReviewRepository.instance.clearLearningData();
+      backend.releaseFirstReviewSave.complete();
+
+      await Future.wait([
+        firstFlush,
+        clear,
+      ]).timeout(const Duration(seconds: 2));
+      expect(backend.review, isEmpty);
+      expect(ReviewRepository.instance.all, isEmpty);
+    },
+  );
+
+  test('Failed clear marker leaves the learning state untouched', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    ReviewRepository.resetForTesting();
+    final backend = _FailingClearBackend();
+    await ReviewRepository.initWithBackend(backend);
+    addTearDown(ReviewRepository.resetForTesting);
+
+    final now = DateTime.now();
+    const wordId = 'qwerty_test_00001';
+    await ReviewRepository.instance.put(
+      wordId,
+      ReviewState(
+        wordId: wordId,
+        easiness: 250,
+        interval: 1,
+        repetitions: 1,
+        dueAt: now.add(const Duration(days: 1)),
+        lastReviewedAt: now,
+        firstReviewedAt: now,
+      ),
+    );
+    await ReviewRepository.instance.flush();
+
+    backend.failNextUserDataSave = true;
+    await expectLater(
+      ReviewRepository.instance.clearLearningData(),
+      throwsA(isA<StateError>()),
+    );
+    expect(ReviewRepository.instance.all, contains(wordId));
+  });
+
+  test('Repository resumes a pending clear during initialization', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    ReviewRepository.resetForTesting();
+    final now = DateTime.now();
+    const wordId = 'qwerty_test_00001';
+    final backend = InMemoryStorageBackend()
+      ..review = {
+        wordId: ReviewState(
+          wordId: wordId,
+          easiness: 250,
+          interval: 1,
+          repetitions: 1,
+          dueAt: now.add(const Duration(days: 1)),
+          lastReviewedAt: now,
+          firstReviewedAt: now,
+        ).toJson(),
+      }
+      ..activity = {'2026-07-10': 3}
+      ..userData = {
+        'schemaVersion': 2,
+        'pendingLearningDataClear': true,
+        'selectedVocabId': 'qwerty_keep',
+        'favorites': [wordId],
+      };
+
+    await ReviewRepository.initWithBackend(backend);
+    addTearDown(ReviewRepository.resetForTesting);
+
+    expect(ReviewRepository.instance.all, isEmpty);
+    expect(backend.review, isEmpty);
+    expect(backend.activity, isEmpty);
+    expect(backend.userData?['pendingLearningDataClear'], isTrue);
+    expect(ReviewRepository.instance.selectedVocabId, 'qwerty_keep');
+
+    await ReviewRepository.instance.completeLearningDataClear();
+    expect(backend.userData?['pendingLearningDataClear'], isNull);
+  });
+
+  test(
+    'finishNow records an early end instead of a normal completion',
+    () async {
+      final word = _word('qwerty_test_00001', 'latency', '延迟');
+      final container = ProviderContainer(
+        overrides: [
+          vocabCacheProvider('qwerty_test').overrideWith((ref) async => [word]),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      final notifier = container.read(learningSessionProvider.notifier);
+      await notifier.start(
+        vocabId: 'qwerty_test',
+        dailyNewWordLimit: 1,
+        maxSessionSize: 1,
+      );
+      notifier.finishNow();
+
+      final session = container.read(learningSessionProvider);
+      expect(session.phase, SessionPhase.finished);
+      expect(session.endedEarly, isTrue);
+    },
+  );
+
+  testWidgets('Long words scale down without horizontal overflow', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(320, 568);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    final word = _word(
+      'qwerty_test_00001',
+      'pneumonoultramicroscopicsilicovolcanoconiosis',
+      '一种很长的医学术语',
+    );
+    final session = LearningSessionState(
+      phase: SessionPhase.asking,
+      questions: [
+        LearningQuestion(
+          word: word,
+          type: QuestionType.seeWordPickMeaning,
+          options: const ['正确释义', '选项二', '选项三', '选项四'],
+          correctIndex: 0,
+          prompt: word.word,
+        ),
+      ],
+      currentIndex: 0,
+      correctCount: 0,
+      initialQuestionCount: 1,
+    );
+
+    await tester.pumpWidget(
+      ProviderScope(
+        child: MaterialApp(
+          home: Scaffold(body: AskingView(session: session)),
+        ),
+      ),
+    );
+    await tester.pump();
+    expect(tester.takeException(), isNull);
+  });
+
   // ----- LlmConfig / LlmClient ------------------------------------------------
 
   test('LlmConfig.isConfigured is true only when all three fields are set', () {
@@ -489,6 +1197,48 @@ void main() {
     const short = LlmConfig(baseUrl: '', apiKey: 'short', model: '');
     expect(short.maskedKey, '••••');
   });
+
+  test('LlmConfig only permits HTTPS or loopback HTTP endpoints', () {
+    const secure = LlmConfig(
+      baseUrl: 'https://api.example.com/v1',
+      apiKey: 'k',
+      model: 'm',
+    );
+    const remoteHttp = LlmConfig(
+      baseUrl: 'http://api.example.com/v1',
+      apiKey: 'k',
+      model: 'm',
+    );
+    const localHttp = LlmConfig(
+      baseUrl: 'http://127.0.0.1:11434/v1',
+      apiKey: 'k',
+      model: 'm',
+    );
+    expect(secure.hasSafeEndpoint, isTrue);
+    expect(remoteHttp.hasSafeEndpoint, isFalse);
+    expect(localHttp.hasSafeEndpoint, isTrue);
+  });
+
+  test(
+    'LlmClient rejects a remote plaintext endpoint before transport',
+    () async {
+      final client = LlmClient(
+        config: const LlmConfig(
+          baseUrl: 'http://api.example.com/v1',
+          apiKey: 'secret',
+          model: 'model',
+        ),
+        transport: _CapturingTransport((url, headers, body) {
+          fail('transport must not be called for an unsafe endpoint');
+        }),
+      );
+      addTearDown(client.close);
+      await expectLater(
+        client.chat(const LlmChatRequest(model: 'model', messages: [])),
+        throwsA(isA<LlmException>()),
+      );
+    },
+  );
 
   test('LlmClient builds the right URL for various base URL shapes', () {
     // Probe via the public surface: construct a client and trigger a
@@ -732,6 +1482,129 @@ void main() {
     expect(cleared.apiKey, '');
     expect(cleared.model, LlmConfig.defaultModel);
   });
+}
+
+class _FinishedLearningSessionNotifier extends LearningSessionNotifier {
+  _FinishedLearningSessionNotifier(super.ref) {
+    state = const LearningSessionState(
+      phase: SessionPhase.finished,
+      questions: [],
+      currentIndex: 0,
+      correctCount: 0,
+    );
+  }
+}
+
+class _AskingLearningSessionNotifier extends LearningSessionNotifier {
+  _AskingLearningSessionNotifier(super.ref) {
+    state = LearningSessionState(
+      phase: SessionPhase.asking,
+      questions: [
+        LearningQuestion(
+          word: _word('qwerty_biomedical_terms_00001', 'dermis', '皮肤，真皮'),
+          type: QuestionType.seeWordPickMeaning,
+          options: const ['皮肤，真皮', '意外事故', '黑素瘤', '复杂的'],
+          correctIndex: 0,
+          prompt: 'dermis',
+        ),
+      ],
+      currentIndex: 0,
+      correctCount: 0,
+      initialQuestionCount: 1,
+    );
+  }
+
+  @override
+  Future<void> start({
+    required String vocabId,
+    int dailyNewWordLimit = 12,
+    int maxSessionSize = 32,
+  }) async {}
+}
+
+class _TestAppSettingsStore extends AppSettingsStore {
+  final Completer<AppSettings> _read = Completer<AppSettings>();
+  final List<int> writes = [];
+
+  void completeRead(AppSettings settings) => _read.complete(settings);
+
+  @override
+  Future<AppSettings> read() => _read.future;
+
+  @override
+  Future<void> write(AppSettings settings) async {
+    writes.add(settings.dailyNewWords);
+  }
+}
+
+class _ImmediateAppSettingsStore extends AppSettingsStore {
+  @override
+  Future<AppSettings> read() async => const AppSettings();
+
+  @override
+  Future<void> write(AppSettings settings) async {}
+}
+
+class _FailingAppSettingsStore extends AppSettingsStore {
+  @override
+  Future<AppSettings> read() async => const AppSettings(dailyNewWords: 20);
+
+  @override
+  Future<void> write(AppSettings settings) async {
+    throw StateError('simulated write failure');
+  }
+}
+
+class _DelayedReviewBackend extends InMemoryStorageBackend {
+  final Completer<void> firstReviewSaveStarted = Completer<void>();
+  final Completer<void> releaseFirstReviewSave = Completer<void>();
+  int _reviewSaves = 0;
+
+  @override
+  Future<void> saveReviewState(Map<String, dynamic> json) async {
+    _reviewSaves++;
+    if (_reviewSaves == 1) {
+      firstReviewSaveStarted.complete();
+      await releaseFirstReviewSave.future;
+    }
+    await super.saveReviewState(json);
+  }
+}
+
+class _FailingClearBackend extends InMemoryStorageBackend {
+  bool failNextUserDataSave = false;
+
+  @override
+  Future<void> saveUserData(Map<String, dynamic> json) async {
+    if (failNextUserDataSave) {
+      failNextUserDataSave = false;
+      throw StateError('simulated write failure');
+    }
+    await super.saveUserData(json);
+  }
+}
+
+class _CountingReadingNotifier extends ReviewStateNotifier {
+  _CountingReadingNotifier() : super(const {});
+
+  int reviewedTodayCalls = 0;
+
+  @override
+  Future<List<PulseWordEntry>> reviewedTodayWords({
+    int limit = 10,
+    DateTime? now,
+  }) async {
+    reviewedTodayCalls++;
+    return const [
+      PulseWordEntry(
+        word: 'cache',
+        translation: '缓存',
+        phonetic: '/kæʃ/',
+        level: 'B1',
+        vocabId: kDefaultVocabId,
+      ),
+    ];
+  }
 }
 
 VocabWord _word(String id, String word, String translation) => VocabWord(

@@ -8,6 +8,7 @@ import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
 import '../services/tts_service.dart';
+import '../state/app_settings.dart';
 import '../state/learning_session.dart';
 
 /// Compute a font size for [text] that fits within a phone-width budget.
@@ -29,32 +30,27 @@ class LearningSessionScreen extends ConsumerStatefulWidget {
 }
 
 class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
-  late DateTime _sessionStart;
-  Duration _accumulated = Duration.zero;
-
   @override
   void initState() {
     super.initState();
-    _sessionStart = DateTime.now();
-    Future.microtask(() {
-      ref.read(learningSessionProvider.notifier).start(vocabId: widget.vocabId);
+    Future.microtask(() async {
+      await ref.read(appSettingsProvider.notifier).ready;
+      if (!mounted) return;
+      final settings = ref.read(appSettingsProvider);
+      await ref
+          .read(learningSessionProvider.notifier)
+          .start(
+            vocabId: widget.vocabId,
+            dailyNewWordLimit: settings.dailyNewWords,
+            maxSessionSize: settings.dailyNewWords + 20,
+          );
     });
   }
 
   @override
   void dispose() {
-    // Accumulate study time (minimum 1 minute granularity).
-    _accumulated += DateTime.now().difference(_sessionStart);
-    final minutes = (_accumulated.inSeconds / 60).round();
-    if (minutes > 0) {
-      try {
-        ReviewRepository.instance.addStudyMinutes(DateTime.now(), minutes);
-      } catch (_) {}
-    }
-    // Best-effort flush on exit: dispose can't await, so schedule one
-    // final flush. Each answer already triggers an eager flush via
-    // [LearningSessionNotifier.answer] / [next]; this pass drains any
-    // study-minute write queued above plus the debounced tail.
+    // Best-effort flush on exit. Session timing is recorded centrally by
+    // LearningSessionNotifier when a round finishes.
     try {
       unawaited(
         Future.microtask(() async {
@@ -98,10 +94,7 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
             : (session.phase == SessionPhase.asking
                   ? Text(
                       '${(session.currentIndex + 1).clamp(1, session.initialQuestionCount)} / ${session.initialQuestionCount}',
-                      style: AppTheme.mutedCaption(
-                        size: 13,
-                        context: context,
-                      ),
+                      style: AppTheme.mutedCaption(size: 13, context: context),
                     )
                   : const SizedBox.shrink()),
         centerTitle: true,
@@ -143,6 +136,8 @@ class _AskingViewState extends ConsumerState<AskingView> {
   String? _lastWordId;
   int? _selectedIndex;
   bool _locked = false;
+  bool? _typedCorrect;
+  final _typingController = TextEditingController();
 
   @override
   void initState() {
@@ -160,8 +155,16 @@ class _AskingViewState extends ConsumerState<AskingView> {
       // New question — reset feedback state.
       _selectedIndex = null;
       _locked = false;
+      _typedCorrect = null;
+      _typingController.clear();
       _maybeAutoPlay();
     }
+  }
+
+  @override
+  void dispose() {
+    _typingController.dispose();
+    super.dispose();
   }
 
   void _maybeAutoPlay() {
@@ -210,6 +213,26 @@ class _AskingViewState extends ConsumerState<AskingView> {
     }
   }
 
+  void _submitTyped() {
+    if (_locked || _typingController.text.trim().isEmpty) return;
+    final q = widget.session.currentQuestion;
+    if (q == null) return;
+    final correct =
+        _typingController.text.trim().toLowerCase() ==
+        q.word.word.trim().toLowerCase();
+    setState(() {
+      _locked = true;
+      _typedCorrect = correct;
+    });
+    correct ? HapticFeedback.lightImpact() : HapticFeedback.heavyImpact();
+    Future.delayed(const Duration(milliseconds: 320), () {
+      if (!mounted) return;
+      ref
+          .read(learningSessionProvider.notifier)
+          .answerTyped(_typingController.text);
+    });
+  }
+
   _OptionState _optionState(int i, int correctIndex) {
     if (_selectedIndex == null) return _OptionState.normal;
     if (i == _selectedIndex) {
@@ -227,12 +250,73 @@ class _AskingViewState extends ConsumerState<AskingView> {
         child: CircularProgressIndicator(color: AppColors.primary),
       );
     }
+    if (q.type == QuestionType.typeWord) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
+        child: Column(
+          children: [
+            Expanded(
+              child: Center(
+                child: _QuestionStage(
+                  type: q.type,
+                  prompt: q.prompt,
+                  word: q.word,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                bottom:
+                    AppSpacing.x6 + MediaQuery.of(context).viewPadding.bottom,
+              ),
+              child: Column(
+                children: [
+                  TextField(
+                    controller: _typingController,
+                    autofocus: true,
+                    enabled: !_locked,
+                    textAlign: TextAlign.center,
+                    textInputAction: TextInputAction.done,
+                    autocorrect: false,
+                    enableSuggestions: false,
+                    onSubmitted: (_) => _submitTyped(),
+                    decoration: InputDecoration(
+                      hintText: '输入英文单词',
+                      prefixIcon: const Icon(Icons.keyboard_rounded),
+                      suffixIcon: _typedCorrect == null
+                          ? null
+                          : Icon(
+                              _typedCorrect!
+                                  ? Icons.check_circle_rounded
+                                  : Icons.cancel_rounded,
+                              color: _typedCorrect!
+                                  ? AppColors.primary
+                                  : AppColors.danger,
+                            ),
+                    ),
+                  ),
+                  const SizedBox(height: AppSpacing.x3),
+                  SizedBox(
+                    width: double.infinity,
+                    child: FilledButton(
+                      onPressed: _locked ? null : _submitTyped,
+                      child: const Text('确认'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
       child: Column(
         children: [
           // The word / meaning — the only thing the user should look at.
           Expanded(
+            flex: 4,
             child: Center(
               child: _QuestionStage(
                 type: q.type,
@@ -242,22 +326,27 @@ class _AskingViewState extends ConsumerState<AskingView> {
             ),
           ),
           // Options sit right below, no gap.
-          Padding(
-            padding: EdgeInsets.only(
-              bottom: AppSpacing.x6 +
-                  MediaQuery.of(context).padding.bottom,
-            ),
-            child: Column(
-              children: [
-                for (var i = 0; i < q.options.length; i++) ...[
-                  if (i > 0) const SizedBox(height: AppSpacing.x2),
-                  _OptionTile(
-                    text: q.options[i],
-                    state: _optionState(i, q.correctIndex),
-                    onTap: () => _onOptionTap(i),
-                  ),
-                ],
-              ],
+          Flexible(
+            flex: 5,
+            child: Padding(
+              padding: EdgeInsets.only(
+                bottom: AppSpacing.x6 + MediaQuery.of(context).padding.bottom,
+              ),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    for (var i = 0; i < q.options.length; i++) ...[
+                      if (i > 0) const SizedBox(height: AppSpacing.x2),
+                      _OptionTile(
+                        label: String.fromCharCode(65 + i),
+                        text: q.options[i],
+                        state: _optionState(i, q.correctIndex),
+                        onTap: () => _onOptionTap(i),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
             ),
           ),
         ],
@@ -369,122 +458,141 @@ class _WrongDetailViewState extends ConsumerState<WrongDetailView> {
           children: [
             // Word as the hero — same treatment as _AskingView.
             Expanded(
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      w.word,
-                      textAlign: TextAlign.center,
-                      maxLines: 1,
-                      softWrap: false,
-                      overflow: TextOverflow.visible,
-                      style: AppTheme.wordDisplay(
-                        size: fitFontSize(w.word, 40),
-                        weight: FontWeight.w700,
-                        context: context,
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  return SingleChildScrollView(
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minHeight: constraints.maxHeight,
+                      ),
+                      child: Center(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            SizedBox(
+                              width: double.infinity,
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Text(
+                                  w.word,
+                                  textAlign: TextAlign.center,
+                                  maxLines: 1,
+                                  softWrap: false,
+                                  style: AppTheme.wordDisplay(
+                                    size: 40,
+                                    weight: FontWeight.w700,
+                                    context: context,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: AppSpacing.x2),
+                            Text(
+                              '${w.phonetic}  ${w.pos}',
+                              style: AppTheme.phonetic(
+                                fontSize: 15,
+                                context: context,
+                              ),
+                            ),
+                            const SizedBox(height: AppSpacing.x2),
+                            IconButton(
+                              tooltip: '播放发音',
+                              icon: const Icon(
+                                Icons.volume_up_outlined,
+                                size: 22,
+                              ),
+                              color: AppColors.of(context).inkMuted,
+                              onPressed: () {
+                                HapticFeedback.lightImpact();
+                                TtsService.instance.speak(text: w.word);
+                              },
+                            ),
+                            const SizedBox(height: AppSpacing.x6),
+                            Text(
+                              w.translation,
+                              textAlign: TextAlign.center,
+                              style: AppTheme.cardTitle(
+                                context: context,
+                              ).copyWith(fontSize: 18, height: 1.5),
+                            ),
+                            if (hasExample) ...[
+                              const SizedBox(height: AppSpacing.x6),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: AppSpacing.x4,
+                                ),
+                                child: Text(
+                                  w.exampleEn,
+                                  textAlign: TextAlign.center,
+                                  style: AppTheme.mutedCaption(
+                                    size: 15,
+                                    color: AppColors.of(context).ink,
+                                    context: context,
+                                  ).copyWith(height: 1.6),
+                                ),
+                              ),
+                              if (w.exampleCn.trim().isNotEmpty) ...[
+                                const SizedBox(height: AppSpacing.x2),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: AppSpacing.x4,
+                                  ),
+                                  child: Text(
+                                    w.exampleCn,
+                                    textAlign: TextAlign.center,
+                                    style: AppTheme.mutedCaption(
+                                      size: 13,
+                                      context: context,
+                                    ).copyWith(height: 1.5),
+                                  ),
+                                ),
+                              ],
+                            ],
+                            const SizedBox(height: AppSpacing.x4),
+                            Wrap(
+                              alignment: WrapAlignment.center,
+                              spacing: AppSpacing.x2,
+                              runSpacing: AppSpacing.x2,
+                              children: [
+                                OutlinedButton.icon(
+                                  onPressed: _toggleFavorite,
+                                  icon: Icon(
+                                    _isFavorite
+                                        ? Icons.star_rounded
+                                        : Icons.star_outline_rounded,
+                                    size: 18,
+                                  ),
+                                  label: Text(_isFavorite ? '已收藏' : '加入收藏'),
+                                  style: OutlinedButton.styleFrom(
+                                    foregroundColor: _isFavorite
+                                        ? AppColors.warning
+                                        : AppColors.of(context).inkMuted,
+                                  ),
+                                ),
+                                TextButton.icon(
+                                  onPressed: _markRemoved,
+                                  icon: Icon(
+                                    Icons.delete_outline,
+                                    color: AppColors.of(context).inkSubtle,
+                                    size: 18,
+                                  ),
+                                  label: const Text('移除该词'),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: AppSpacing.x4),
+                          ],
+                        ),
                       ),
                     ),
-                    const SizedBox(height: AppSpacing.x2),
-                    Text(
-                      '${w.phonetic}  ${w.pos}',
-                      style: AppTheme.phonetic(
-                        fontSize: 15,
-                        context: context,
-                      ),
-                    ),
-                    const SizedBox(height: AppSpacing.x2),
-                    IconButton(
-                      tooltip: '播放发音',
-                      icon: const Icon(
-                        Icons.volume_up_outlined,
-                        size: 22,
-                      ),
-                      color: AppColors.of(context).inkMuted,
-                      onPressed: () {
-                        HapticFeedback.lightImpact();
-                        TtsService.instance.speak(text: w.word);
-                      },
-                    ),
-                    const SizedBox(height: AppSpacing.x6),
-                    Text(
-                      w.translation,
-                      textAlign: TextAlign.center,
-                      style: AppTheme.cardTitle(
-                        context: context,
-                      ).copyWith(fontSize: 18, height: 1.5),
-                    ),
-                    if (hasExample) ...[
-                      const SizedBox(height: AppSpacing.x6),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: AppSpacing.x4,
-                        ),
-                        child: Text(
-                          w.exampleEn,
-                          textAlign: TextAlign.center,
-                          style: AppTheme.mutedCaption(
-                            size: 15,
-                            color: AppColors.of(context).ink,
-                            context: context,
-                          ).copyWith(height: 1.6),
-                        ),
-                      ),
-                      if (w.exampleCn.trim().isNotEmpty) ...[
-                        const SizedBox(height: AppSpacing.x2),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: AppSpacing.x4,
-                          ),
-                          child: Text(
-                            w.exampleCn,
-                            textAlign: TextAlign.center,
-                            style: AppTheme.mutedCaption(
-                              size: 13,
-                              context: context,
-                            ).copyWith(height: 1.5),
-                          ),
-                        ),
-                      ],
-                    ],
-                    const SizedBox(height: AppSpacing.x4),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        IconButton(
-                          tooltip: _isFavorite ? '取消收藏' : '收藏',
-                          onPressed: _toggleFavorite,
-                          icon: Icon(
-                            _isFavorite
-                                ? Icons.star_rounded
-                                : Icons.star_outline_rounded,
-                            color: _isFavorite
-                                ? AppColors.warning
-                                : AppColors.of(context).inkSubtle,
-                            size: 22,
-                          ),
-                        ),
-                        const SizedBox(width: AppSpacing.x2),
-                        IconButton(
-                          tooltip: '移除该词',
-                          onPressed: _markRemoved,
-                          icon: Icon(
-                            Icons.delete_outline,
-                            color: AppColors.of(context).inkSubtle,
-                            size: 22,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                  );
+                },
               ),
             ),
             // Continue button at the bottom.
             Padding(
               padding: EdgeInsets.only(
-                bottom: AppSpacing.x6 +
-                    MediaQuery.of(context).padding.bottom,
+                bottom: AppSpacing.x6 + MediaQuery.of(context).padding.bottom,
               ),
               child: SizedBox(
                 width: double.infinity,
@@ -492,11 +600,11 @@ class _WrongDetailViewState extends ConsumerState<WrongDetailView> {
                   onPressed: () =>
                       ref.read(learningSessionProvider.notifier).next(),
                   style: FilledButton.styleFrom(
-                    backgroundColor: AppColors.danger,
+                    backgroundColor: AppColors.primary,
                     minimumSize: const Size.fromHeight(52),
                   ),
                   child: Text(
-                    '继续，稍后再测',
+                    '继续',
                     style: AppTheme.cardTitle().copyWith(
                       fontSize: 16,
                       color: AppColors.onPrimary,
@@ -534,7 +642,40 @@ class _QuestionStage extends StatelessWidget {
         return _MeaningStage(meaning: prompt, word: word);
       case QuestionType.listenPickMeaning:
         return _ListenStage(word: word);
+      case QuestionType.typeWord:
+        return _RecallStage(meaning: prompt, word: word);
     }
+  }
+}
+
+class _RecallStage extends StatelessWidget {
+  final String meaning;
+  final VocabWord word;
+
+  const _RecallStage({required this.meaning, required this.word});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          meaning,
+          textAlign: TextAlign.center,
+          style: AppTheme.screenHeader(context: context).copyWith(
+            fontSize: fitFontSize(meaning, 28, referenceChars: 12),
+            height: 1.4,
+          ),
+        ),
+        const SizedBox(height: AppSpacing.x4),
+        _LargePlayButton(word: word),
+        const SizedBox(height: AppSpacing.x3),
+        Text(
+          '听音或根据释义拼写',
+          style: AppTheme.mutedCaption(size: 13, context: context),
+        ),
+      ],
+    );
   }
 }
 
@@ -549,16 +690,21 @@ class _WordStage extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(
-          word.word,
-          textAlign: TextAlign.center,
-          maxLines: 1,
-          softWrap: false,
-          overflow: TextOverflow.visible,
-          style: AppTheme.wordDisplay(
-            size: wordSize,
-            weight: FontWeight.w700,
-            context: context,
+        SizedBox(
+          width: double.infinity,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              word.word,
+              textAlign: TextAlign.center,
+              maxLines: 1,
+              softWrap: false,
+              style: AppTheme.wordDisplay(
+                size: wordSize,
+                weight: FontWeight.w700,
+                context: context,
+              ),
+            ),
           ),
         ),
         const SizedBox(height: AppSpacing.x3),
@@ -665,48 +811,79 @@ class _LargePlayButton extends StatelessWidget {
 enum _OptionState { normal, correct, wrong, dimmed }
 
 class _OptionTile extends StatelessWidget {
+  final String label;
   final String text;
   final _OptionState state;
   final VoidCallback? onTap;
 
-  const _OptionTile({required this.text, required this.state, this.onTap});
+  const _OptionTile({
+    required this.label,
+    required this.text,
+    required this.state,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     final colors = _colors(context);
-    return PressableScale(
-      scaleFactor: state == _OptionState.normal ? 0.97 : 1.0,
-      onTap: state == _OptionState.normal ? onTap : null,
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(minHeight: 56),
-        child: Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.x5,
-            vertical: AppSpacing.x3,
-          ),
-          decoration: BoxDecoration(
-            color: colors.background,
-            borderRadius: BorderRadius.circular(AppRadii.md),
-            border: Border.all(color: colors.border, width: 1.5),
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                child: Text(
-                  text,
-                  style: AppTheme.mutedCaption(
-                    size: 15,
-                    color: colors.text,
-                  ).copyWith(fontWeight: FontWeight.w500, height: 1.4),
+    final enabled = state == _OptionState.normal && onTap != null;
+    return Semantics(
+      button: true,
+      enabled: enabled,
+      label: '$label $text',
+      onTap: enabled ? onTap : null,
+      child: PressableScale(
+        scaleFactor: enabled ? 0.97 : 1.0,
+        onTap: enabled ? onTap : null,
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(minHeight: 56),
+          child: Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppSpacing.x5,
+              vertical: AppSpacing.x2 + 2,
+            ),
+            decoration: BoxDecoration(
+              color: colors.background,
+              borderRadius: BorderRadius.circular(AppRadii.md),
+              border: Border.all(color: colors.border, width: 1.5),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 28,
+                  height: 28,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: colors.badgeBackground,
+                    borderRadius: BorderRadius.circular(AppRadii.pill),
+                  ),
+                  child: Text(
+                    label,
+                    style: AppTheme.mutedCaption(
+                      size: 12,
+                      color: colors.badgeText,
+                      context: context,
+                    ).copyWith(fontWeight: FontWeight.w700),
+                  ),
                 ),
-              ),
-              if (state == _OptionState.correct)
-                const Icon(
-                  Icons.check_circle_rounded,
-                  color: AppColors.primary,
-                  size: 20,
+                const SizedBox(width: AppSpacing.x3),
+                Expanded(
+                  child: Text(
+                    text,
+                    style: AppTheme.mutedCaption(
+                      size: 14,
+                      color: colors.text,
+                    ).copyWith(fontWeight: FontWeight.w500, height: 1.4),
+                  ),
                 ),
-            ],
+                if (state == _OptionState.correct)
+                  const Icon(
+                    Icons.check_circle_rounded,
+                    color: AppColors.primary,
+                    size: 20,
+                  ),
+              ],
+            ),
           ),
         ),
       ),
@@ -718,27 +895,35 @@ class _OptionTile extends StatelessWidget {
     switch (state) {
       case _OptionState.correct:
         return _OptionColors(
-          background: palette.surface,
+          background: AppColors.primarySoft.withValues(alpha: 0.55),
           border: AppColors.primary,
           text: AppColors.primary,
+          badgeBackground: AppColors.primary,
+          badgeText: AppColors.onPrimary,
         );
       case _OptionState.wrong:
         return _OptionColors(
-          background: palette.surface,
-          border: palette.inkSubtle.withValues(alpha: 0.15),
-          text: palette.inkSubtle,
+          background: AppColors.danger.withValues(alpha: 0.08),
+          border: AppColors.danger,
+          text: AppColors.danger,
+          badgeBackground: AppColors.danger,
+          badgeText: AppColors.onPrimary,
         );
       case _OptionState.dimmed:
         return _OptionColors(
           background: palette.surfaceMuted,
           border: palette.inkSubtle.withValues(alpha: 0.1),
           text: palette.inkSubtle,
+          badgeBackground: palette.inkSubtle.withValues(alpha: 0.12),
+          badgeText: palette.inkSubtle,
         );
       case _OptionState.normal:
         return _OptionColors(
           background: palette.surface,
           border: palette.inkSubtle.withValues(alpha: 0.2),
           text: palette.ink,
+          badgeBackground: palette.surfaceMuted,
+          badgeText: palette.inkMuted,
         );
     }
   }
@@ -748,11 +933,15 @@ class _OptionColors {
   final Color background;
   final Color border;
   final Color text;
+  final Color badgeBackground;
+  final Color badgeText;
 
   const _OptionColors({
     required this.background,
     required this.border,
     required this.text,
+    required this.badgeBackground,
+    required this.badgeText,
   });
 }
 

@@ -89,6 +89,14 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
           ? _modelCtl.text.trim()
           : providerCfg.model,
     );
+    if (!cfg.hasSafeEndpoint) {
+      if (!mounted) return;
+      setState(() => _saving = false);
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('远程 AI 地址必须使用 HTTPS；HTTP 仅允许本机服务')),
+      );
+      return;
+    }
     try {
       await ref.read(llmConfigProvider.notifier).save(cfg);
       if (!mounted) return;
@@ -124,6 +132,13 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
     if (!cfg.isConfigured) {
       setState(() {
         _testResult = '请先填写 Base URL、API Key 和 Model';
+        _testOk = false;
+      });
+      return;
+    }
+    if (!cfg.hasSafeEndpoint) {
+      setState(() {
+        _testResult = '远程 AI 地址必须使用 HTTPS；HTTP 仅允许本机服务';
         _testOk = false;
       });
       return;
@@ -213,7 +228,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
       backgroundColor: AppColors.of(context).background,
       appBar: AppBar(
         title: Text(
-          'AI 接入',
+          'AI 阅读配置',
           style: AppTheme.screenHeader(context: context).copyWith(fontSize: 20),
         ),
         actions: [
@@ -353,7 +368,7 @@ class _IntroCard extends StatelessWidget {
           const SizedBox(width: AppSpacing.x3),
           Expanded(
             child: Text(
-              'Key 只存本机加密存储，不上传服务器。请求直发到 Base URL。',
+              'Key 只存本机加密存储。生成请求直发到你填写的服务商，模型费用由服务商收取。',
               style: AppTheme.mutedCaption(
                 size: 13,
                 color: AppColors.ink,
@@ -379,7 +394,7 @@ class _Label extends StatelessWidget {
           text,
           style: AppTheme.cardTitle(
             context: context,
-          ).copyWith(fontSize: 13, letterSpacing: 0.3),
+          ).copyWith(fontSize: 13, letterSpacing: 0),
         ),
         if (hint != null) ...[
           const SizedBox(height: 2),
