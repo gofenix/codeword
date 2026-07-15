@@ -6,9 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:lib_core/lib_core.dart';
+import 'package:lib_ui/lib_ui.dart';
 
 import 'package:codeword/main.dart';
+import 'package:codeword/screens/discovery_screen.dart';
 import 'package:codeword/screens/learning_session_screen.dart';
+import 'package:codeword/screens/reading_screen.dart';
 import 'package:codeword/screens/stats_screen.dart';
 import 'package:codeword/screens/settings_screen.dart';
 import 'package:codeword/state/app_settings.dart';
@@ -1481,6 +1484,143 @@ void main() {
     expect(cleared.baseUrl, LlmConfig.defaultBaseUrl);
     expect(cleared.apiKey, '');
     expect(cleared.model, LlmConfig.defaultModel);
+  });
+
+  // ----- Shared TabPageScaffold layout -----------------------------------
+  //
+  // The three "content" tabs (阅读/图表/词书) now share one skeleton so
+  // switching tabs no longer jumps between three header treatments,
+  // mismatched horizontal margins, and different backgrounds. These pump
+  // each tab in ISOLATION (no bottom nav, no sibling IndexedStack tabs) so
+  // the header geometry can be measured directly.
+  group('Content tabs share the TabPageScaffold skeleton', () {
+    Future<void> pumpTab(
+      WidgetTester tester,
+      Widget screen, {
+      Size size = const Size(393, 852),
+    }) async {
+      await tester.binding.setSurfaceSize(size);
+      addTearDown(() => tester.binding.setSurfaceSize(null));
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            qwertyCatalogProvider.overrideWithValue(const []),
+            appSettingsProvider.overrideWith(
+              (ref) => AppSettingsNotifier(_ImmediateAppSettingsStore()),
+            ),
+          ],
+          child: MaterialApp(theme: AppTheme.light(), home: screen),
+        ),
+      );
+      await tester.pump();
+    }
+
+    testWidgets('center the title on every content tab', (tester) async {
+      const width = 393.0;
+
+      await pumpTab(tester, const ReadingScreen());
+      expect(tester.getCenter(find.text('阅读')).dx, closeTo(width / 2, 1.0));
+
+      await pumpTab(tester, const StatsScreen());
+      expect(tester.getCenter(find.text('图表')).dx, closeTo(width / 2, 1.0));
+
+      await pumpTab(tester, DiscoveryScreen(onGoWords: () {}));
+      expect(tester.getCenter(find.text('词书库')).dx, closeTo(width / 2, 1.0));
+    });
+
+    testWidgets('render the title at a single 22px w700 style', (tester) async {
+      await pumpTab(tester, const StatsScreen());
+      final title = tester.widget<Text>(find.text('图表'));
+      expect(title.style?.fontSize, 22);
+      expect(title.style?.fontWeight, FontWeight.w700);
+    });
+
+    testWidgets('align content to a unified 24px horizontal margin', (
+      tester,
+    ) async {
+      await pumpTab(tester, const ReadingScreen());
+      expect(tester.getTopLeft(find.byType(AppCard).first).dx, closeTo(24, 0.5));
+
+      await pumpTab(tester, const StatsScreen());
+      expect(tester.getTopLeft(find.byType(AppCard).first).dx, closeTo(24, 0.5));
+
+      await pumpTab(tester, DiscoveryScreen(onGoWords: () {}));
+      expect(tester.getTopLeft(find.byType(AppCard).first).dx, closeTo(24, 0.5));
+    });
+
+    testWidgets('lay out without overflow on a 320x568 screen', (tester) async {
+      const small = Size(320, 568);
+
+      await pumpTab(tester, const ReadingScreen(), size: small);
+      expect(tester.takeException(), isNull);
+
+      await pumpTab(tester, const StatsScreen(), size: small);
+      expect(tester.takeException(), isNull);
+
+      await pumpTab(tester, DiscoveryScreen(onGoWords: () {}), size: small);
+      expect(tester.takeException(), isNull);
+    });
+  });
+
+  // ----- Answer feedback survives the animated option tile ---------------
+  //
+  // The option tile now uses AnimatedContainer for its correct/wrong state
+  // crossfade (instead of a plain Container that color-snapped). This group
+  // proves the interaction still works end to end: tapping a real tile
+  // locks the choice, animates the state, and advances the session. The
+  // device-bound integration test covers the same path, but this runs in
+  // the headless suite so a refactor can't silently break it.
+  group('Animated option tile still drives the answer flow', () {
+    testWidgets('tapping the correct option advances to the next phase', (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        testApp(
+          catalog: const [
+            VocabList(
+              id: kDefaultVocabId,
+              name: '生物医学专业英语词汇',
+              description: 'Biomedical terms',
+              emoji: '📘',
+              domainColor: '#10B981',
+              level: 1,
+              wordCount: 20,
+            ),
+          ],
+          overrides: [
+            learningSessionProvider.overrideWith(
+              (ref) => _AskingLearningSessionNotifier(ref),
+            ),
+          ],
+        ),
+      );
+      await tester.pump();
+
+      // The tile renders through AnimatedContainer (the fix), not a bare
+      // Container that would color-snap.
+      expect(
+        find.descendant(
+          of: find.byType(AskingView),
+          matching: find.byType(AnimatedContainer),
+        ),
+        findsWidgets,
+      );
+
+      // Tap the correct answer. This exercises PressableScale (now animated)
+      // and the tile's AnimatedContainer state change.
+      await tester.tap(find.text('皮肤，真皮'));
+      await tester.pump(); // register tap + setState(locked)
+      // The choice is locked: tapping a different option must be ignored.
+      await tester.tap(find.text('意外事故'), warnIfMissed: false);
+      await tester.pump();
+
+      // After the deliberate auto-advance delay, the session leaves the
+      // asking phase (correct answer with a single question → finished).
+      await tester.pump(const Duration(milliseconds: 400));
+      await tester.pumpAndSettle();
+      expect(tester.takeException(), isNull);
+      expect(find.text('dermis'), findsNothing);
+    });
   });
 }
 

@@ -837,7 +837,9 @@ class _OptionTile extends StatelessWidget {
         onTap: enabled ? onTap : null,
         child: ConstrainedBox(
           constraints: const BoxConstraints(minHeight: 56),
-          child: Container(
+          child: AnimatedContainer(
+            duration: AppMotion.fast,
+            curve: AppMotion.easeOut,
             padding: const EdgeInsets.symmetric(
               horizontal: AppSpacing.x5,
               vertical: AppSpacing.x2 + 2,
@@ -849,7 +851,9 @@ class _OptionTile extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Container(
+                AnimatedContainer(
+                  duration: AppMotion.fast,
+                  curve: AppMotion.easeOut,
                   width: 28,
                   height: 28,
                   alignment: Alignment.center,

@@ -57,95 +57,54 @@ class StatsScreen extends ConsumerWidget {
       ),
     ];
 
-    final dark = Theme.of(context).brightness == Brightness.dark;
-    return Material(
-      type: MaterialType.transparency,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          color: AppColors.of(context).background,
-          gradient: dark
-              ? null
-              : const LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    Color(0xFFF1F8FF),
-                    Color(0xFFF8FBF0),
-                    Color(0xFFFFF4F3),
-                  ],
-                ),
-        ),
-        child: SafeArea(
-          bottom: false,
-          child: CustomScrollView(
-            key: const PageStorageKey('stats-scroll'),
-            slivers: [
-              SliverPadding(
-                padding: const EdgeInsets.fromLTRB(
-                  AppSpacing.x5,
-                  AppSpacing.x3,
-                  AppSpacing.x5,
-                  AppSpacing.x8,
-                ),
-                sliver: SliverList.list(
-                  children: [
-                    const _StatsHeader(),
-                    const SizedBox(height: AppSpacing.x5),
-                    _OverviewCards(
-                      vocabName: vocab?.name ?? '暂无词书',
-                      totalWords:
-                          progress?.availableWords ?? vocab?.wordCount ?? 0,
-                      learnedWords: progress?.mastered ?? 0,
-                      coverage: progress?.masteryCoverage ?? 0,
-                      onOpenVocab: onGoLibrary,
-                    ),
-                    const SizedBox(height: AppSpacing.x4),
-                    _DistributionCard(items: distribution),
-                    const SizedBox(height: AppSpacing.x4),
-                    _TodayCard(
-                      reviews: stats.reviewsToday > stats.newToday
-                          ? stats.reviewsToday - stats.newToday
-                          : 0,
-                      newWords: stats.newToday,
-                      due: stats.totalDue,
-                      learned: progress?.mastered ?? stats.totalLearned,
-                      minutes: stats.studyMinutesToday,
-                      streakDays: stats.streakDays,
-                      onContinue: onGoWords,
-                    ),
-                    const SizedBox(height: AppSpacing.x4),
-                    _RhythmCard(
-                      activity: stats.last90DaysActivity,
-                      streakDays: stats.streakDays,
-                      activeDaysThisWeek: activeDaysInCurrentWeek(
-                        stats.last90DaysActivity,
-                        DateTime.now(),
-                      ),
-                    ),
-                  ],
+    return TabPageScaffold(
+      title: '图表',
+      scrollKey: const PageStorageKey('stats-scroll'),
+      slivers: [
+        SliverPadding(
+          padding: const EdgeInsets.fromLTRB(
+            AppSpacing.x6,
+            AppSpacing.x5,
+            AppSpacing.x6,
+            AppSpacing.x8,
+          ),
+          sliver: SliverList.list(
+            children: [
+              _OverviewCards(
+                vocabName: vocab?.name ?? '暂无词书',
+                totalWords:
+                    progress?.availableWords ?? vocab?.wordCount ?? 0,
+                learnedWords: progress?.mastered ?? 0,
+                coverage: progress?.masteryCoverage ?? 0,
+                onOpenVocab: onGoLibrary,
+              ),
+              const SizedBox(height: AppSpacing.x4),
+              _DistributionCard(items: distribution),
+              const SizedBox(height: AppSpacing.x4),
+              _TodayCard(
+                reviews: stats.reviewsToday > stats.newToday
+                    ? stats.reviewsToday - stats.newToday
+                    : 0,
+                newWords: stats.newToday,
+                due: stats.totalDue,
+                learned: progress?.mastered ?? stats.totalLearned,
+                minutes: stats.studyMinutesToday,
+                streakDays: stats.streakDays,
+                onContinue: onGoWords,
+              ),
+              const SizedBox(height: AppSpacing.x4),
+              _RhythmCard(
+                activity: stats.last90DaysActivity,
+                streakDays: stats.streakDays,
+                activeDaysThisWeek: activeDaysInCurrentWeek(
+                  stats.last90DaysActivity,
+                  DateTime.now(),
                 ),
               ),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class _StatsHeader extends StatelessWidget {
-  const _StatsHeader();
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 44,
-      child: Center(
-        child: Text(
-          '图表',
-          style: AppTheme.cardTitle(context: context).copyWith(fontSize: 22),
-        ),
-      ),
+      ],
     );
   }
 }

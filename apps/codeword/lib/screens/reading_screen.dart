@@ -315,66 +315,49 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
         _resetAfterRepositoryClear();
       }
     });
-    final dark = Theme.of(context).brightness == Brightness.dark;
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        color: AppColors.of(context).background,
-        gradient: dark
-            ? null
-            : const LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Color(0xFFF8FBF1), Color(0xFFF3FAF4)],
-              ),
-      ),
-      child: SafeArea(
-        bottom: false,
-        child: CustomScrollView(
-          key: const PageStorageKey('reading-scroll'),
-          slivers: [
-            SliverPadding(
-              padding: const EdgeInsets.fromLTRB(
-                AppSpacing.x5,
-                AppSpacing.x3,
-                AppSpacing.x5,
-                AppSpacing.x8,
-              ),
-              sliver: SliverList.list(
-                children: [
-                  const _ReadingHeader(),
-                  const SizedBox(height: AppSpacing.x4),
-                  if (!isConfigured)
-                    _ByokSetupCard(
-                      onConfigure: () => Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => const AiSettingsScreen(),
-                        ),
-                      ),
-                    )
-                  else ...[
-                    _ReadingHero(
-                      pool: _pool,
-                      loading: _loading,
-                      generating: _generating,
-                      onGenerate: _openComposer,
-                      onRefresh: () => _loadPool(replaceArticle: true),
+    return TabPageScaffold(
+      title: '阅读',
+      scrollKey: const PageStorageKey('reading-scroll'),
+      slivers: [
+        SliverPadding(
+          padding: const EdgeInsets.fromLTRB(
+            AppSpacing.x6,
+            AppSpacing.x4,
+            AppSpacing.x6,
+            AppSpacing.x8,
+          ),
+          sliver: SliverList.list(
+            children: [
+              if (!isConfigured)
+                _ByokSetupCard(
+                  onConfigure: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const AiSettingsScreen(),
                     ),
-                    if (_error != null) ...[
-                      const SizedBox(height: AppSpacing.x3),
-                      _ErrorCard(message: _error!),
-                    ],
-                    const SizedBox(height: AppSpacing.x5),
-                    _ReadingHistoryList(
-                      articles: _history,
-                      onTap: _openArticle,
-                    ),
-                  ],
+                  ),
+                )
+              else ...[
+                _ReadingHero(
+                  pool: _pool,
+                  loading: _loading,
+                  generating: _generating,
+                  onGenerate: _openComposer,
+                  onRefresh: () => _loadPool(replaceArticle: true),
+                ),
+                if (_error != null) ...[
+                  const SizedBox(height: AppSpacing.x3),
+                  _ErrorCard(message: _error!),
                 ],
-              ),
-            ),
-          ],
+                const SizedBox(height: AppSpacing.x5),
+                _ReadingHistoryList(
+                  articles: _history,
+                  onTap: _openArticle,
+                ),
+              ],
+            ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }
@@ -532,23 +515,6 @@ String _articleTitle(SavedArticle article) => article.title.trim().isEmpty
 
 int _wordCount(String text) =>
     RegExp(r"[A-Za-z]+(?:'[A-Za-z]+)?").allMatches(text).length;
-
-class _ReadingHeader extends StatelessWidget {
-  const _ReadingHeader();
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 44,
-      child: Center(
-        child: Text(
-          '阅读',
-          style: AppTheme.cardTitle(context: context).copyWith(fontSize: 22),
-        ),
-      ),
-    );
-  }
-}
 
 class _ReadingHero extends StatelessWidget {
   final List<PulseWordEntry> pool;
@@ -1175,7 +1141,9 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
                 if (_showTranslation) ...[
                   const SizedBox(height: AppSpacing.x5),
                   AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 220),
+                    duration: AppMotion.medium,
+                    switchInCurve: AppMotion.easeOut,
+                    switchOutCurve: AppMotion.easeOut,
                     child: Text(
                       translationAvailable
                           ? widget.article.translationText
@@ -1472,7 +1440,9 @@ class _QuizOption extends StatelessWidget {
 
     return GestureDetector(
       onTap: onTap,
-      child: Container(
+      child: AnimatedContainer(
+        duration: AppMotion.fast,
+        curve: AppMotion.easeOut,
         padding: const EdgeInsets.symmetric(
           horizontal: AppSpacing.x3,
           vertical: AppSpacing.x2,

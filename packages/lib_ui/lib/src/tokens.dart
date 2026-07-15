@@ -235,3 +235,40 @@ class AppShadows {
     ),
   ];
 }
+
+/// Motion tokens — shared easing curves and durations so every animation
+/// in the app feels like it belongs to the same product (cohesion).
+///
+/// The curves are translated from the web-oriented design skills into
+/// Flutter [Cubic]s. The built-in Material/CSS easings are intentionally
+/// too weak; these are the "strong" variants the craft rules call for:
+///
+///   * [easeOut] — the default for enter/exit and any tap feedback. Starts
+///     fast so the interface feels like it responds the instant the user
+///     acts. NEVER use ease-in for UI: it delays the initial movement, the
+///     exact moment the user is watching, and reads as sluggish.
+///   * [easeInOut] — for elements moving/morphing on screen (natural
+///     acceleration then deceleration).
+///   * [emphasized] — an iOS-style drawer/sheet curve for larger surfaces.
+///
+/// Durations follow the rule that UI animations stay under ~300ms; slower
+/// values are reserved for large surfaces (sheets) or deliberate holds.
+class AppMotion {
+  AppMotion._();
+
+  // Strong ease-out — cubic-bezier(0.23, 1, 0.32, 1).
+  static const Cubic easeOut = Cubic(0.23, 1, 0.32, 1);
+  // Strong ease-in-out — cubic-bezier(0.77, 0, 0.175, 1).
+  static const Cubic easeInOut = Cubic(0.77, 0, 0.175, 1);
+  // iOS-like drawer/sheet curve — cubic-bezier(0.32, 0.72, 0, 1).
+  static const Cubic emphasized = Cubic(0.32, 0.72, 0, 1);
+
+  // Press feedback: 100-160ms. Snappy confirmation the tap was heard.
+  static const Duration press = Duration(milliseconds: 140);
+  // Tooltips / small popovers.
+  static const Duration fast = Duration(milliseconds: 180);
+  // Dropdowns, selects, content crossfades.
+  static const Duration medium = Duration(milliseconds: 240);
+  // Modals, drawers, larger surfaces.
+  static const Duration slow = Duration(milliseconds: 320);
+}

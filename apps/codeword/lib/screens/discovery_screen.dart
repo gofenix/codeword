@@ -54,62 +54,68 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
         return ai.compareTo(bi);
       });
 
-    return CustomScrollView(
-      slivers: [
-        SliverSafeArea(
-          sliver: SliverPadding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x6,
-              AppSpacing.x4,
-              AppSpacing.x6,
-              AppSpacing.x3,
+    return TabPageScaffold(
+      title: '词书库',
+      scrollKey: const PageStorageKey('library-scroll'),
+      trailing: IconButton.filledTonal(
+        tooltip: '设置',
+        onPressed: () {
+          HapticFeedback.selectionClick();
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => const SettingsScreen(),
             ),
-            sliver: SliverToBoxAdapter(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _LibraryHeader(
-                    onSettings: () {
-                      HapticFeedback.selectionClick();
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => const SettingsScreen(),
-                        ),
-                      );
-                    },
+          );
+        },
+        icon: const Icon(Icons.settings_outlined, size: 20),
+        style: IconButton.styleFrom(
+          backgroundColor: AppColors.of(context).surface,
+          foregroundColor: AppColors.of(context).inkMuted,
+          minimumSize: const Size(44, 44),
+        ),
+      ),
+      slivers: [
+        SliverPadding(
+          padding: const EdgeInsets.fromLTRB(
+            AppSpacing.x6,
+            AppSpacing.x4,
+            AppSpacing.x6,
+            AppSpacing.x3,
+          ),
+          sliver: SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _SearchField(
+                  controller: _searchController,
+                  onChanged: (v) =>
+                      setState(() => _query = v.trim().toLowerCase()),
+                  onClear: () {
+                    _searchController.clear();
+                    setState(() => _query = '');
+                  },
+                ),
+                const SizedBox(height: AppSpacing.x3),
+                _CategoryChips(
+                  categories: [
+                    '全部',
+                    ...lists.map((l) => l.category).toSet().toList()..sort(),
+                  ],
+                  selected: _selectedCategory,
+                  onSelected: (cat) => setState(
+                    () => _selectedCategory = cat == '全部' ? null : cat,
                   ),
-                  const SizedBox(height: AppSpacing.x4),
-                  _SearchField(
-                    controller: _searchController,
-                    onChanged: (v) =>
-                        setState(() => _query = v.trim().toLowerCase()),
-                    onClear: () {
-                      _searchController.clear();
-                      setState(() => _query = '');
-                    },
-                  ),
-                  const SizedBox(height: AppSpacing.x3),
-                  _CategoryChips(
-                    categories: [
-                      '全部',
-                      ...lists.map((l) => l.category).toSet().toList()..sort(),
-                    ],
-                    selected: _selectedCategory,
-                    onSelected: (cat) => setState(
-                      () => _selectedCategory = cat == '全部' ? null : cat,
-                    ),
-                  ),
-                  const SizedBox(height: AppSpacing.x4),
-                  _CurrentBookCard(
-                    current: current,
-                    progress: currentProgress,
-                    totalBooks: lists.length,
-                    onContinue: current == null
-                        ? null
-                        : () => _startBook(current.id),
-                  ),
-                ],
-              ),
+                ),
+                const SizedBox(height: AppSpacing.x4),
+                _CurrentBookCard(
+                  current: current,
+                  progress: currentProgress,
+                  totalBooks: lists.length,
+                  onContinue: current == null
+                      ? null
+                      : () => _startBook(current.id),
+                ),
+              ],
             ),
           ),
         ),
@@ -209,44 +215,6 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
           dailyNewWordLimit: settings.dailyNewWords,
           maxSessionSize: settings.dailyNewWords + 20,
         );
-  }
-}
-
-class _LibraryHeader extends StatelessWidget {
-  final VoidCallback onSettings;
-
-  const _LibraryHeader({required this.onSettings});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('词书库', style: AppTheme.screenHeader(context: context)),
-              const SizedBox(height: AppSpacing.x2),
-              Text(
-                '搜索、选择并管理当前词书',
-                style: AppTheme.mutedCaption(size: 14, context: context),
-              ),
-            ],
-          ),
-        ),
-        IconButton.filledTonal(
-          tooltip: '设置',
-          onPressed: onSettings,
-          icon: const Icon(Icons.settings_outlined, size: 20),
-          style: IconButton.styleFrom(
-            backgroundColor: AppColors.of(context).surface,
-            foregroundColor: AppColors.of(context).inkMuted,
-            minimumSize: const Size(44, 44),
-          ),
-        ),
-      ],
-    );
   }
 }
 

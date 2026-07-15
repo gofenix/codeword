@@ -2,12 +2,18 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../tokens.dart';
+
 /// Wraps a child with a subtle press interaction:
 ///   - scale to [scaleFactor] (default 0.97) on tap down
 ///   - opacity to [pressedOpacity] (default 0.85) on tap down
 ///   - light haptic impact on tap release
 ///
-/// Transitions are instant (no tweens) per the 无痛单词 zero-noise spec.
+/// The scale/opacity animate over [AppMotion.press] with [AppMotion.easeOut]
+/// so a press gives instant, responsive feedback and the release settles
+/// smoothly (a hard snap reads as cheap). When the platform requests
+/// reduced motion, the transform is dropped and only the opacity dip
+/// remains — feedback stays, vestibular motion goes.
 /// Use this anywhere a tap should *feel* tappable without being noisy.
 ///
 /// The default [behavior] is [HitTestBehavior.translucent] so children with
@@ -74,7 +80,10 @@ class _PressableScaleState extends State<PressableScale> {
   @override
   Widget build(BuildContext context) {
     final hasOnTap = widget.onTap != null;
-    final scale = _down ? widget.scaleFactor : 1.0;
+    // Honor the OS "reduce motion" setting: keep the opacity feedback (it
+    // aids comprehension) but drop the scale transform (vestibular motion).
+    final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    final scale = _down && !reduceMotion ? widget.scaleFactor : 1.0;
     final opacity = _down ? widget.pressedOpacity : 1.0;
     return GestureDetector(
       behavior: widget.behavior,
@@ -89,10 +98,14 @@ class _PressableScaleState extends State<PressableScale> {
           : null,
       onTapCancel: hasOnTap ? () => _setDown(false) : null,
       onTap: hasOnTap ? _onTap : null,
-      child: Transform.scale(
+      child: AnimatedScale(
         scale: scale,
-        child: Opacity(
+        duration: AppMotion.press,
+        curve: AppMotion.easeOut,
+        child: AnimatedOpacity(
           opacity: opacity,
+          duration: AppMotion.press,
+          curve: AppMotion.easeOut,
           child: widget.child,
         ),
       ),
