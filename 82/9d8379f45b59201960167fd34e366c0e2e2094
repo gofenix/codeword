@@ -1,0 +1,31 @@
+apps/codeword/lib/screens/discovery_screen.dart
+  s_22b13f261203c9::t_891f0c2cff46da 58,64-66,76-97,99-109,112,114-121,128-138
+apps/codeword/lib/screens/reading_screen.dart
+  s_22b13f261203c9::t_eb9fdc3b8b91b9 322-327,329-340,342-343,345
+apps/codeword/lib/screens/stats_screen.dart
+  s_22b13f261203c9::t_c83f755af16c6e 64-93,95-96
+apps/codeword/pubspec.yaml
+  s_22b13f261203c9::t_3febeedaebaf08 21
+apps/codeword/test/widget_test.dart
+  s_22b13f261203c9::t_991bb44c5f50c4 1522-1523,1526-1527,1530-1533,1547-1567,1570,1573-1625
+packages/lib_ui/lib/src/widgets/tab_page_scaffold.dart
+  s_22b13f261203c9::t_9475e804c156bc 21-23,32-34,74-82
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "829d8379f45b59201960167fd34e366c0e2e2094",
+  "prompts": {},
+  "sessions": {
+    "s_22b13f261203c9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019eb5f4-716f-7800-aed3-e4659bfb4f3b",
+        "model": "unknown"
+      },
+      "human_author": "gofenix <codeless98@163.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
