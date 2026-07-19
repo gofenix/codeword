@@ -1519,13 +1519,18 @@ void main() {
       const width = 393.0;
 
       await pumpTab(tester, const ReadingScreen());
-      expect(tester.getCenter(find.text('阅读')).dx, closeTo(width / 2, 1.0));
+      final readingCenter = tester.getCenter(find.text('阅读'));
+      expect(readingCenter.dx, closeTo(width / 2, 1.0));
 
       await pumpTab(tester, const StatsScreen());
-      expect(tester.getCenter(find.text('图表')).dx, closeTo(width / 2, 1.0));
+      final statsCenter = tester.getCenter(find.text('图表'));
+      expect(statsCenter.dx, closeTo(width / 2, 1.0));
 
       await pumpTab(tester, DiscoveryScreen(onGoWords: () {}));
-      expect(tester.getCenter(find.text('词书库')).dx, closeTo(width / 2, 1.0));
+      final libraryCenter = tester.getCenter(find.text('词书'));
+      expect(libraryCenter.dx, closeTo(width / 2, 1.0));
+      expect(statsCenter.dy, closeTo(readingCenter.dy, 0.5));
+      expect(libraryCenter.dy, closeTo(readingCenter.dy, 0.5));
     });
 
     testWidgets('render the title at a single 22px w700 style', (tester) async {
@@ -1539,13 +1544,85 @@ void main() {
       tester,
     ) async {
       await pumpTab(tester, const ReadingScreen());
-      expect(tester.getTopLeft(find.byType(AppCard).first).dx, closeTo(24, 0.5));
+      expect(
+        tester.getTopLeft(find.byType(AppCard).first).dx,
+        closeTo(24, 0.5),
+      );
 
       await pumpTab(tester, const StatsScreen());
-      expect(tester.getTopLeft(find.byType(AppCard).first).dx, closeTo(24, 0.5));
+      expect(
+        tester.getTopLeft(find.byType(AppCard).first).dx,
+        closeTo(24, 0.5),
+      );
 
       await pumpTab(tester, DiscoveryScreen(onGoWords: () {}));
-      expect(tester.getTopLeft(find.byType(AppCard).first).dx, closeTo(24, 0.5));
+      expect(
+        tester.getTopLeft(find.byType(AppCard).first).dx,
+        closeTo(24, 0.5),
+      );
+    });
+
+    testWidgets('start content at one shared vertical offset', (tester) async {
+      await pumpTab(tester, const ReadingScreen());
+      final readingTop = tester.getTopLeft(find.byType(AppCard).first).dy;
+
+      await pumpTab(tester, const StatsScreen());
+      final statsTop = tester.getTopLeft(find.byType(AppCard).first).dy;
+
+      await pumpTab(tester, DiscoveryScreen(onGoWords: () {}));
+      final libraryTop = tester.getTopLeft(find.byType(TextField).first).dy;
+
+      expect(statsTop, closeTo(readingTop, 0.5));
+      expect(libraryTop, closeTo(readingTop, 0.5));
+    });
+
+    testWidgets('own the shared background, safe area and content padding', (
+      tester,
+    ) async {
+      for (final screen in <Widget>[
+        const ReadingScreen(),
+        const StatsScreen(),
+        DiscoveryScreen(onGoWords: () {}),
+      ]) {
+        await pumpTab(tester, screen);
+        final scaffold = find.byType(TabPageScaffold);
+        final safeAreas = find.descendant(
+          of: scaffold,
+          matching: find.byType(SafeArea),
+        );
+        expect(safeAreas, findsOneWidget);
+        expect(tester.widget<SafeArea>(safeAreas).bottom, isFalse);
+
+        final backgrounds = find.descendant(
+          of: scaffold,
+          matching: find.byWidgetPredicate(
+            (widget) =>
+                widget is ColoredBox && widget.color == AppColors.background,
+          ),
+        );
+        expect(backgrounds, findsOneWidget);
+
+        final paddings = tester
+            .widgetList<SliverPadding>(
+              find.descendant(
+                of: scaffold,
+                matching: find.byType(SliverPadding),
+              ),
+            )
+            .toList();
+        final contentPadding = paddings.singleWhere(
+          (padding) => padding.child is SliverMainAxisGroup,
+        );
+        expect(
+          contentPadding.padding,
+          const EdgeInsets.fromLTRB(
+            AppSpacing.x6,
+            AppSpacing.x4,
+            AppSpacing.x6,
+            AppSpacing.x8,
+          ),
+        );
+      }
     });
 
     testWidgets('lay out without overflow on a 320x568 screen', (tester) async {

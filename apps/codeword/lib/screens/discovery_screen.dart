@@ -55,17 +55,15 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
       });
 
     return TabPageScaffold(
-      title: '词书库',
+      title: '词书',
       scrollKey: const PageStorageKey('library-scroll'),
       trailing: IconButton.filledTonal(
         tooltip: '设置',
         onPressed: () {
           HapticFeedback.selectionClick();
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (_) => const SettingsScreen(),
-            ),
-          );
+          Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (_) => const SettingsScreen()));
         },
         icon: const Icon(Icons.settings_outlined, size: 20),
         style: IconButton.styleFrom(
@@ -75,92 +73,69 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
         ),
       ),
       slivers: [
-        SliverPadding(
-          padding: const EdgeInsets.fromLTRB(
-            AppSpacing.x6,
-            AppSpacing.x4,
-            AppSpacing.x6,
-            AppSpacing.x3,
-          ),
-          sliver: SliverToBoxAdapter(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _SearchField(
-                  controller: _searchController,
-                  onChanged: (v) =>
-                      setState(() => _query = v.trim().toLowerCase()),
-                  onClear: () {
-                    _searchController.clear();
-                    setState(() => _query = '');
-                  },
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _SearchField(
+                controller: _searchController,
+                onChanged: (v) =>
+                    setState(() => _query = v.trim().toLowerCase()),
+                onClear: () {
+                  _searchController.clear();
+                  setState(() => _query = '');
+                },
+              ),
+              const SizedBox(height: AppSpacing.x3),
+              _CategoryChips(
+                categories: [
+                  '全部',
+                  ...lists.map((l) => l.category).toSet().toList()..sort(),
+                ],
+                selected: _selectedCategory,
+                onSelected: (cat) => setState(
+                  () => _selectedCategory = cat == '全部' ? null : cat,
                 ),
-                const SizedBox(height: AppSpacing.x3),
-                _CategoryChips(
-                  categories: [
-                    '全部',
-                    ...lists.map((l) => l.category).toSet().toList()..sort(),
-                  ],
-                  selected: _selectedCategory,
-                  onSelected: (cat) => setState(
-                    () => _selectedCategory = cat == '全部' ? null : cat,
-                  ),
-                ),
-                const SizedBox(height: AppSpacing.x4),
-                _CurrentBookCard(
-                  current: current,
-                  progress: currentProgress,
-                  totalBooks: lists.length,
-                  onContinue: current == null
-                      ? null
-                      : () => _startBook(current.id),
-                ),
-              ],
-            ),
+              ),
+              const SizedBox(height: AppSpacing.x4),
+              _CurrentBookCard(
+                current: current,
+                progress: currentProgress,
+                totalBooks: lists.length,
+                onContinue: current == null
+                    ? null
+                    : () => _startBook(current.id),
+              ),
+            ],
           ),
         ),
+        const SliverToBoxAdapter(child: SizedBox(height: AppSpacing.x5)),
         if (categories.isEmpty)
-          SliverPadding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x6,
-              AppSpacing.x2,
-              AppSpacing.x6,
-              AppSpacing.x8,
-            ),
-            sliver: SliverToBoxAdapter(
-              child: AppCard(
-                child: const SizedBox(
-                  height: 160,
-                  child: Center(
-                    child: EmptyHint(
-                      icon: Icons.search_off_outlined,
-                      message: '没有找到相关词书',
-                    ),
+          SliverToBoxAdapter(
+            child: AppCard(
+              child: const SizedBox(
+                height: 160,
+                child: Center(
+                  child: EmptyHint(
+                    icon: Icons.search_off_outlined,
+                    message: '没有找到相关词书',
                   ),
                 ),
               ),
             ),
           )
         else
-          SliverPadding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x6,
-              AppSpacing.x2,
-              AppSpacing.x6,
-              AppSpacing.x8,
-            ),
-            sliver: SliverList(
-              delegate: SliverChildBuilderDelegate((context, index) {
-                final cat = categories[index];
-                return _CategorySection(
-                  category: cat,
-                  lists: grouped[cat]!,
-                  available: meta,
-                  onSelect: _selectBook,
-                  onStart: _startBook,
-                );
-              }, childCount: categories.length),
-            ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate((context, index) {
+              final cat = categories[index];
+              return _CategorySection(
+                category: cat,
+                lists: grouped[cat]!,
+                available: meta,
+                onSelect: _selectBook,
+                onStart: _startBook,
+              );
+            }, childCount: categories.length),
           ),
       ],
     );

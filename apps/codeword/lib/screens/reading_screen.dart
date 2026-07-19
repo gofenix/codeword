@@ -319,43 +319,30 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
       title: '阅读',
       scrollKey: const PageStorageKey('reading-scroll'),
       slivers: [
-        SliverPadding(
-          padding: const EdgeInsets.fromLTRB(
-            AppSpacing.x6,
-            AppSpacing.x4,
-            AppSpacing.x6,
-            AppSpacing.x8,
-          ),
-          sliver: SliverList.list(
-            children: [
-              if (!isConfigured)
-                _ByokSetupCard(
-                  onConfigure: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => const AiSettingsScreen(),
-                    ),
-                  ),
-                )
-              else ...[
-                _ReadingHero(
-                  pool: _pool,
-                  loading: _loading,
-                  generating: _generating,
-                  onGenerate: _openComposer,
-                  onRefresh: () => _loadPool(replaceArticle: true),
+        SliverList.list(
+          children: [
+            if (!isConfigured)
+              _ByokSetupCard(
+                onConfigure: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const AiSettingsScreen()),
                 ),
-                if (_error != null) ...[
-                  const SizedBox(height: AppSpacing.x3),
-                  _ErrorCard(message: _error!),
-                ],
-                const SizedBox(height: AppSpacing.x5),
-                _ReadingHistoryList(
-                  articles: _history,
-                  onTap: _openArticle,
-                ),
+              )
+            else ...[
+              _ReadingHero(
+                pool: _pool,
+                loading: _loading,
+                generating: _generating,
+                onGenerate: _openComposer,
+                onRefresh: () => _loadPool(replaceArticle: true),
+              ),
+              if (_error != null) ...[
+                const SizedBox(height: AppSpacing.x3),
+                _ErrorCard(message: _error!),
               ],
+              const SizedBox(height: AppSpacing.x5),
+              _ReadingHistoryList(articles: _history, onTap: _openArticle),
             ],
-          ),
+          ],
         ),
       ],
     );

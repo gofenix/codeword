@@ -18,9 +18,9 @@ import '../tokens.dart';
 /// 单词 (the immersive learning tab) intentionally does NOT use this — it
 /// stays full-bleed.
 ///
-/// Callers pass their body as [slivers] and wrap each in a [SliverPadding]
-/// at the same [AppSpacing.x6] (24px) horizontal margin the header uses,
-/// so cards line up edge-to-edge across every tab.
+/// Callers pass raw body [slivers]. This scaffold groups them under one
+/// standard 24px horizontal, 16px top, and 32px bottom inset so pages cannot
+/// quietly drift apart.
 class TabPageScaffold extends StatelessWidget {
   /// Centered title shown in the header bar.
   final String title;
@@ -29,8 +29,9 @@ class TabPageScaffold extends StatelessWidget {
   /// 44px slot so the title stays centered whether or not it is present.
   final Widget? trailing;
 
-  /// Page body. Each entry should be a sliver (typically a [SliverPadding]
-  /// at 24px horizontal) so lazy lists keep their laziness.
+  /// Page body. Each entry must be a sliver; outer content padding is owned
+  /// by this scaffold so lazy lists keep their laziness without page-specific
+  /// geometry.
   final List<Widget> slivers;
 
   /// Key for the [CustomScrollView] so each tab preserves its scroll
@@ -70,7 +71,15 @@ class TabPageScaffold extends StatelessWidget {
                   child: _TabPageHeader(title: title, trailing: trailing),
                 ),
               ),
-              ...slivers,
+              SliverPadding(
+                padding: const EdgeInsets.fromLTRB(
+                  AppSpacing.x6,
+                  AppSpacing.x4,
+                  AppSpacing.x6,
+                  AppSpacing.x8,
+                ),
+                sliver: SliverMainAxisGroup(slivers: slivers),
+              ),
             ],
           ),
         ),
