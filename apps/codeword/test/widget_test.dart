@@ -15,6 +15,7 @@ import 'package:codeword/screens/reading_screen.dart';
 import 'package:codeword/screens/stats_screen.dart';
 import 'package:codeword/screens/settings_screen.dart';
 import 'package:codeword/state/learning_session.dart';
+import 'package:codeword/state/learning_preferences.dart';
 import 'package:codeword/state/llm_config.dart';
 
 void main() {
@@ -278,6 +279,186 @@ void main() {
     await tester.pump();
     expect(find.textContaining('每日新词'), findsNothing);
     expect(find.textContaining('新词上限'), findsNothing);
+  });
+
+  testWidgets('Settings exposes two independent advanced question toggles', (
+    tester,
+  ) async {
+    final backend = _MemoryLearningPreferencesBackend();
+    final notifier = LearningPreferencesNotifier(
+      LearningPreferencesStore(backend),
+    );
+    await notifier.ready;
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          learningPreferencesProvider.overrideWith((ref) => notifier),
+        ],
+        child: const MaterialApp(home: SettingsScreen()),
+      ),
+    );
+    await tester.pump();
+
+    expect(find.text('高级题型'), findsOneWidget);
+    expect(find.text('手动拼写'), findsOneWidget);
+    expect(find.text('听音选择'), findsOneWidget);
+    expect(notifier.state, const LearningPreferences());
+
+    await tester.tap(find.byKey(const ValueKey('spelling-question-toggle')));
+    await tester.pump();
+    expect(notifier.state.spellingEnabled, isTrue);
+    expect(notifier.state.listeningEnabled, isFalse);
+
+    await tester.tap(find.byKey(const ValueKey('listening-question-toggle')));
+    await tester.pump();
+    expect(
+      notifier.state,
+      const LearningPreferences(spellingEnabled: true, listeningEnabled: true),
+    );
+  });
+
+  test(
+    'Learning preferences persist and malformed data falls back safely',
+    () async {
+      final backend = _MemoryLearningPreferencesBackend(value: '{broken');
+      final store = LearningPreferencesStore(backend);
+      expect(await store.read(), const LearningPreferences());
+
+      const preferences = LearningPreferences(
+        spellingEnabled: true,
+        listeningEnabled: true,
+      );
+      await store.write(preferences);
+      expect(await store.read(), preferences);
+    },
+  );
+
+  test(
+    'Learning preference write failure rolls back the optimistic switch',
+    () async {
+      final backend = _MemoryLearningPreferencesBackend(failWrites: true);
+      final notifier = LearningPreferencesNotifier(
+        LearningPreferencesStore(backend),
+      );
+      await notifier.ready;
+      addTearDown(notifier.dispose);
+
+      await expectLater(
+        notifier.setSpellingEnabled(true),
+        throwsA(isA<StateError>()),
+      );
+      expect(notifier.state, const LearningPreferences());
+    },
+  );
+
+  test(
+    'Session waits for stored preferences before building its queue',
+    () async {
+      final backend = _DelayedLearningPreferencesBackend();
+      final preferences = LearningPreferencesNotifier(
+        LearningPreferencesStore(backend),
+      );
+      final words = List.generate(
+        4,
+        (index) => _word(
+          'qwerty_ready_${(index + 1).toString().padLeft(5, '0')}',
+          'ready$index',
+          '等待$index',
+        ),
+      );
+      final container = ProviderContainer(
+        overrides: [
+          learningPreferencesProvider.overrideWith((ref) => preferences),
+          vocabCacheProvider('qwerty_ready').overrideWith((ref) async => words),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      final starting = container
+          .read(learningSessionProvider.notifier)
+          .start(vocabId: 'qwerty_ready');
+      await pumpEventQueue();
+      expect(
+        container.read(learningSessionProvider).phase,
+        SessionPhase.loading,
+      );
+
+      backend.readCompleter.complete(
+        jsonEncode({'spellingEnabled': true, 'listeningEnabled': true}),
+      );
+      await starting;
+      expect(
+        container
+            .read(learningSessionProvider)
+            .questions
+            .map((question) => question.type),
+        [
+          QuestionType.seeWordPickMeaning,
+          QuestionType.seeMeaningPickWord,
+          QuestionType.listenPickMeaning,
+          QuestionType.typeWord,
+        ],
+      );
+    },
+  );
+
+  testWidgets('Advanced question switch reports persistence failure', (
+    tester,
+  ) async {
+    final notifier = LearningPreferencesNotifier(
+      LearningPreferencesStore(
+        _MemoryLearningPreferencesBackend(failWrites: true),
+      ),
+    );
+    await notifier.ready;
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          learningPreferencesProvider.overrideWith((ref) => notifier),
+        ],
+        child: const MaterialApp(home: SettingsScreen()),
+      ),
+    );
+    await tester.tap(find.byKey(const ValueKey('spelling-question-toggle')));
+    await tester.pumpAndSettle();
+
+    expect(notifier.state.spellingEnabled, isFalse);
+    expect(find.text('设置保存失败，请稍后重试'), findsOneWidget);
+  });
+
+  testWidgets('Advanced question settings fit compact enlarged text', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(320, 568));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    final notifier = LearningPreferencesNotifier(
+      LearningPreferencesStore(_MemoryLearningPreferencesBackend()),
+    );
+    await notifier.ready;
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          learningPreferencesProvider.overrideWith((ref) => notifier),
+        ],
+        child: MaterialApp(
+          builder: (context, child) => MediaQuery(
+            data: MediaQuery.of(
+              context,
+            ).copyWith(textScaler: const TextScaler.linear(1.4)),
+            child: child!,
+          ),
+          home: const SettingsScreen(),
+        ),
+      ),
+    );
+    await tester.pump();
+
+    expect(find.text('手动拼写'), findsOneWidget);
+    expect(find.text('听音选择'), findsOneWidget);
+    expect(tester.takeException(), isNull);
   });
 
   testWidgets('Library continue returns to immersive Words tab', (
@@ -750,6 +931,13 @@ void main() {
       expect(retryIndex, inInclusiveRange(3, 5));
       expect(state.questions[retryIndex].word.id, original.word.id);
       expect(state.questions[retryIndex].type, isNot(original.type));
+      expect(
+        state.questions[retryIndex].type,
+        isIn([
+          QuestionType.seeWordPickMeaning,
+          QuestionType.seeMeaningPickWord,
+        ]),
+      );
     },
   );
 
@@ -782,10 +970,12 @@ void main() {
       final notifier = container.read(learningSessionProvider.notifier);
       await notifier.start(vocabId: 'qwerty_continuous');
       expect(container.read(learningSessionProvider).questions.length, 16);
+      final seenTypes = <QuestionType>{};
       for (var answered = 0; answered < 35; answered++) {
         final question = container
             .read(learningSessionProvider)
             .currentQuestion!;
+        seenTypes.add(question.type);
         notifier.answer(question.correctIndex);
         await pumpEventQueue();
         for (var tick = 0; tick < 20; tick++) {
@@ -810,6 +1000,13 @@ void main() {
       expect(
         container.read(learningSessionProvider).phase,
         SessionPhase.asking,
+      );
+      expect(
+        seenTypes,
+        equals({
+          QuestionType.seeWordPickMeaning,
+          QuestionType.seeMeaningPickWord,
+        }),
       );
     },
   );
@@ -1033,14 +1230,16 @@ void main() {
     },
   );
 
-  test('Mature due word uses objective typed recall', () async {
+  test('Advanced question types stay disabled by default', () async {
     final now = DateTime.now();
-    final words = [
-      _word('qwerty_recall_00001', 'latency', '延迟'),
-      _word('qwerty_recall_00002', 'throughput', '吞吐量'),
-      _word('qwerty_recall_00003', 'cache', '缓存'),
-      _word('qwerty_recall_00004', 'queue', '队列'),
-    ];
+    final words = List.generate(
+      40,
+      (index) => _word(
+        'qwerty_recall_${(index + 1).toString().padLeft(5, '0')}',
+        'term$index',
+        '术语$index',
+      ),
+    );
     final container = ProviderContainer(
       overrides: [
         reviewStateProvider.overrideWith(
@@ -1060,16 +1259,243 @@ void main() {
     );
     addTearDown(container.dispose);
 
-    final notifier = container.read(learningSessionProvider.notifier);
-    await notifier.start(vocabId: 'qwerty_recall');
-    final question = container.read(learningSessionProvider).currentQuestion!;
-    expect(question.type, QuestionType.typeWord);
-    expect(question.options, isEmpty);
-
-    notifier.answerTyped('  LATENCY  ');
-    expect(container.read(learningSessionProvider).phase, SessionPhase.asking);
-    expect(container.read(learningSessionProvider).correctCount, 1);
+    await container
+        .read(learningSessionProvider.notifier)
+        .start(vocabId: 'qwerty_recall');
+    final types = container
+        .read(learningSessionProvider)
+        .questions
+        .map((question) => question.type)
+        .toSet();
+    expect(
+      types,
+      equals({
+        QuestionType.seeWordPickMeaning,
+        QuestionType.seeMeaningPickWord,
+      }),
+    );
   });
+
+  test('Enabled advanced types apply equally to due and new words', () async {
+    final now = DateTime.now();
+    final words = List.generate(
+      8,
+      (index) => _word(
+        'qwerty_advanced_${(index + 1).toString().padLeft(5, '0')}',
+        'advanced$index',
+        '高级$index',
+      ),
+    );
+    final preferences = LearningPreferencesNotifier(
+      LearningPreferencesStore(
+        _MemoryLearningPreferencesBackend(
+          value: jsonEncode({
+            'spellingEnabled': true,
+            'listeningEnabled': true,
+          }),
+        ),
+      ),
+    );
+    final container = ProviderContainer(
+      overrides: [
+        learningPreferencesProvider.overrideWith((ref) => preferences),
+        reviewStateProvider.overrideWith(
+          (ref) => ReviewStateNotifier({
+            for (final word in words.take(4))
+              word.id: ReviewState(
+                wordId: word.id,
+                easiness: 250,
+                interval: 1,
+                repetitions: 1,
+                dueAt: now.subtract(const Duration(minutes: 1)),
+                lastReviewedAt: now.subtract(const Duration(days: 1)),
+              ),
+          }),
+        ),
+        vocabCacheProvider(
+          'qwerty_advanced',
+        ).overrideWith((ref) async => words),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    await container
+        .read(learningSessionProvider.notifier)
+        .start(vocabId: 'qwerty_advanced');
+    final questions = container.read(learningSessionProvider).questions;
+    expect(questions.take(4).map((question) => question.type), [
+      QuestionType.seeWordPickMeaning,
+      QuestionType.seeMeaningPickWord,
+      QuestionType.listenPickMeaning,
+      QuestionType.typeWord,
+    ]);
+    expect(questions.take(4).map((question) => question.source).toSet(), {
+      SessionQuestionSource.due,
+    });
+    expect(questions.skip(4).map((question) => question.type), [
+      QuestionType.seeWordPickMeaning,
+      QuestionType.seeMeaningPickWord,
+      QuestionType.listenPickMeaning,
+      QuestionType.typeWord,
+    ]);
+    expect(questions.skip(4).map((question) => question.source).toSet(), {
+      SessionQuestionSource.newWord,
+    });
+  });
+
+  test(
+    'Each advanced toggle controls only its matching question type',
+    () async {
+      final words = List.generate(
+        8,
+        (index) => _word(
+          'qwerty_independent_${(index + 1).toString().padLeft(5, '0')}',
+          'independent$index',
+          '独立$index',
+        ),
+      );
+
+      Future<Set<QuestionType>> generatedTypes(
+        LearningPreferences initial,
+      ) async {
+        final preferences = LearningPreferencesNotifier(
+          LearningPreferencesStore(
+            _MemoryLearningPreferencesBackend(
+              value: jsonEncode(initial.toJson()),
+            ),
+          ),
+        );
+        final container = ProviderContainer(
+          overrides: [
+            learningPreferencesProvider.overrideWith((ref) => preferences),
+            vocabCacheProvider(
+              'qwerty_independent',
+            ).overrideWith((ref) async => words),
+          ],
+        );
+        await container
+            .read(learningSessionProvider.notifier)
+            .start(vocabId: 'qwerty_independent');
+        final types = container
+            .read(learningSessionProvider)
+            .questions
+            .map((question) => question.type)
+            .toSet();
+        container.dispose();
+        return types;
+      }
+
+      final spellingTypes = await generatedTypes(
+        const LearningPreferences(spellingEnabled: true),
+      );
+      expect(spellingTypes, contains(QuestionType.typeWord));
+      expect(spellingTypes, isNot(contains(QuestionType.listenPickMeaning)));
+
+      final listeningTypes = await generatedTypes(
+        const LearningPreferences(listeningEnabled: true),
+      );
+      expect(listeningTypes, contains(QuestionType.listenPickMeaning));
+      expect(listeningTypes, isNot(contains(QuestionType.typeWord)));
+    },
+  );
+
+  test(
+    'Enabled spelling keeps case and whitespace tolerant validation',
+    () async {
+      final words = List.generate(
+        6,
+        (index) => _word(
+          'qwerty_spelling_${(index + 1).toString().padLeft(5, '0')}',
+          index == 2 ? 'Latency' : 'spelling$index',
+          '拼写$index',
+        ),
+      );
+      final preferences = LearningPreferencesNotifier(
+        LearningPreferencesStore(
+          _MemoryLearningPreferencesBackend(
+            value: jsonEncode({'spellingEnabled': true}),
+          ),
+        ),
+      );
+      final container = ProviderContainer(
+        overrides: [
+          learningPreferencesProvider.overrideWith((ref) => preferences),
+          vocabCacheProvider(
+            'qwerty_spelling',
+          ).overrideWith((ref) async => words),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      final notifier = container.read(learningSessionProvider.notifier);
+      await notifier.start(vocabId: 'qwerty_spelling');
+      while (container.read(learningSessionProvider).currentQuestion!.type !=
+          QuestionType.typeWord) {
+        final question = container
+            .read(learningSessionProvider)
+            .currentQuestion!;
+        notifier.answer(question.correctIndex);
+      }
+      final typedQuestion = container
+          .read(learningSessionProvider)
+          .currentQuestion!;
+      expect(typedQuestion.word.word, 'Latency');
+
+      notifier.answerTyped('  LATENCY  ');
+      expect(container.read(learningSessionProvider).correctCount, 3);
+    },
+  );
+
+  test(
+    'Preference changes preserve current question and rebuild pending types',
+    () async {
+      final words = List.generate(
+        10,
+        (index) => _word(
+          'qwerty_toggle_${(index + 1).toString().padLeft(5, '0')}',
+          'toggle$index',
+          '切换$index',
+        ),
+      );
+      final preferences = LearningPreferencesNotifier(
+        LearningPreferencesStore(_MemoryLearningPreferencesBackend()),
+      );
+      final container = ProviderContainer(
+        overrides: [
+          learningPreferencesProvider.overrideWith((ref) => preferences),
+          vocabCacheProvider(
+            'qwerty_toggle',
+          ).overrideWith((ref) async => words),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      await container
+          .read(learningSessionProvider.notifier)
+          .start(vocabId: 'qwerty_toggle');
+      final current = container.read(learningSessionProvider).currentQuestion!;
+
+      await preferences.setListeningEnabled(true);
+      final enabled = container.read(learningSessionProvider);
+      expect(enabled.currentQuestion, same(current));
+      expect(
+        enabled.questions.skip(1).map((question) => question.type),
+        contains(QuestionType.listenPickMeaning),
+      );
+
+      await preferences.setListeningEnabled(false);
+      final disabled = container.read(learningSessionProvider);
+      expect(disabled.currentQuestion, same(current));
+      expect(
+        disabled.questions.skip(1).map((question) => question.type),
+        isNot(contains(QuestionType.listenPickMeaning)),
+      );
+      expect(
+        disabled.questions.skip(1).map((question) => question.type),
+        isNot(contains(QuestionType.typeWord)),
+      );
+    },
+  );
 
   test(
     'Choice questions always expose four unique non-placeholder options',
@@ -1856,6 +2282,35 @@ class _WrongLearningSessionNotifier extends LearningSessionNotifier {
 
   @override
   Future<void> start({required String vocabId}) async {}
+}
+
+class _MemoryLearningPreferencesBackend implements LearningPreferencesBackend {
+  String? value;
+  bool failWrites;
+
+  _MemoryLearningPreferencesBackend({this.value, this.failWrites = false});
+
+  @override
+  Future<String?> read() async => value;
+
+  @override
+  Future<void> write(String value) async {
+    if (failWrites) throw StateError('simulated preference write failure');
+    this.value = value;
+  }
+}
+
+class _DelayedLearningPreferencesBackend implements LearningPreferencesBackend {
+  final Completer<String?> readCompleter = Completer<String?>();
+  String? value;
+
+  @override
+  Future<String?> read() => readCompleter.future;
+
+  @override
+  Future<void> write(String value) async {
+    this.value = value;
+  }
 }
 
 class _DelayedReviewBackend extends InMemoryStorageBackend {

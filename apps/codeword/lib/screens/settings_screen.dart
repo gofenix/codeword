@@ -6,6 +6,7 @@ import 'package:lib_ui/lib_ui.dart';
 
 import '../services/article_repository.dart';
 import '../state/learning_session.dart';
+import '../state/learning_preferences.dart';
 import '../state/llm_config.dart';
 import 'ai_settings_screen.dart';
 
@@ -32,6 +33,19 @@ class SettingsScreen extends ConsumerWidget {
                 children: [
                   const _SettingsHeader(),
                   const SizedBox(height: AppSpacing.x5),
+                  const _SectionLabel('高级题型'),
+                  const SizedBox(height: AppSpacing.x2),
+                  const _SettingsGroup(
+                    children: [
+                      _AdvancedQuestionTypeRow(
+                        type: _AdvancedQuestionType.spelling,
+                      ),
+                      _AdvancedQuestionTypeRow(
+                        type: _AdvancedQuestionType.listening,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: AppSpacing.x5),
                   const _SectionLabel('AI'),
                   const SizedBox(height: AppSpacing.x2),
                   const _SettingsGroup(children: [_AiSettingsRow()]),
@@ -54,6 +68,57 @@ class SettingsScreen extends ConsumerWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+enum _AdvancedQuestionType { spelling, listening }
+
+class _AdvancedQuestionTypeRow extends ConsumerWidget {
+  final _AdvancedQuestionType type;
+
+  const _AdvancedQuestionTypeRow({required this.type});
+
+  Future<void> _setEnabled(
+    BuildContext context,
+    WidgetRef ref,
+    bool enabled,
+  ) async {
+    try {
+      final notifier = ref.read(learningPreferencesProvider.notifier);
+      switch (type) {
+        case _AdvancedQuestionType.spelling:
+          await notifier.setSpellingEnabled(enabled);
+        case _AdvancedQuestionType.listening:
+          await notifier.setListeningEnabled(enabled);
+      }
+    } catch (_) {
+      if (!context.mounted) return;
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('设置保存失败，请稍后重试')));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final preferences = ref.watch(learningPreferencesProvider);
+    final spelling = type == _AdvancedQuestionType.spelling;
+    final enabled = spelling
+        ? preferences.spellingEnabled
+        : preferences.listeningEnabled;
+    return _SettingsTile(
+      icon: spelling ? Icons.keyboard_rounded : Icons.hearing_rounded,
+      title: spelling ? '手动拼写' : '听音选择',
+      subtitle: spelling ? '输入完整英文单词' : '听发音后选择正确释义',
+      trailing: Switch.adaptive(
+        key: ValueKey(
+          spelling ? 'spelling-question-toggle' : 'listening-question-toggle',
+        ),
+        value: enabled,
+        onChanged: (value) => _setEnabled(context, ref, value),
+      ),
+      onTap: () => _setEnabled(context, ref, !enabled),
     );
   }
 }
@@ -184,7 +249,7 @@ class _ClearLearningDataRow extends ConsumerWidget {
       builder: (dialogContext) {
         return AlertDialog(
           title: const Text('清理学习数据'),
-          content: const Text('将清空背词记录、统计、收藏、已移除词和阅读历史。AI 配置和当前词书会保留。'),
+          content: const Text('将清空背词记录、统计、收藏、已移除词和阅读历史。AI 配置、当前词书和学习偏好会保留。'),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(false),
@@ -242,7 +307,7 @@ class _ClearLearningDataRow extends ConsumerWidget {
     return _SettingsTile(
       icon: Icons.delete_outline_rounded,
       title: '清理学习数据',
-      subtitle: '保留 AI 配置和当前词书',
+      subtitle: '保留 AI 配置、当前词书和学习偏好',
       color: AppColors.danger,
       destructive: true,
       onTap: () => _confirm(context, ref),

@@ -5,6 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_core/lib_core.dart';
 import 'package:lib_content/lib_content.dart';
 
+import 'learning_preferences.dart';
+
 /// Curated first-run list. Existing users keep their persisted selection.
 const String kDefaultVocabId = 'qwerty_coder_core';
 
@@ -770,6 +772,7 @@ class LearningQuestion {
   final String prompt;
   final SessionQuestionSource source;
   final int attemptNo;
+  final QuestionType? retryOfType;
 
   const LearningQuestion({
     required this.word,
@@ -779,6 +782,7 @@ class LearningQuestion {
     this.prompt = '',
     this.source = SessionQuestionSource.newWord,
     this.attemptNo = 0,
+    this.retryOfType,
   });
 }
 
@@ -847,6 +851,8 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     _activeSeconds = 0;
     _lastInteractionAt = DateTime.now();
     state = LearningSessionState.loading();
+    await ref.read(learningPreferencesProvider.notifier).ready;
+    if (gen != _startGen) return;
     final raw = await ref.read(vocabCacheProvider(vocabId).future);
     if (gen != _startGen) return;
     final removed = _removedWordIds();
@@ -960,21 +966,9 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       }
     }
 
-    const selectionTypes = [
-      QuestionType.seeWordPickMeaning,
-      QuestionType.seeMeaningPickWord,
-      QuestionType.listenPickMeaning,
-    ];
+    final preferences = ref.read(learningPreferencesProvider);
     return picked.map((pickedWord) {
-      final review = reviewMap[pickedWord.word.id];
-      final serial = _questionSerial++;
-      final activeRecall =
-          pickedWord.source == SessionQuestionSource.due &&
-          (review?.repetitions ?? 0) >= 2 &&
-          serial.isEven;
-      final type = activeRecall
-          ? QuestionType.typeWord
-          : selectionTypes[serial % selectionTypes.length];
+      final type = _nextQuestionType(preferences);
       return _buildQuestion(
         pickedWord.word,
         type,
@@ -1011,6 +1005,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     List<VocabWord> all, {
     SessionQuestionSource source = SessionQuestionSource.newWord,
     int attemptNo = 0,
+    QuestionType? retryOfType,
   }) {
     final pool = all.where((o) => o.id != w.id).toList();
     switch (type) {
@@ -1033,6 +1028,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
           prompt: w.word,
           source: source,
           attemptNo: attemptNo,
+          retryOfType: retryOfType,
         );
       case QuestionType.seeMeaningPickWord:
         final ranked = [...pool]
@@ -1058,6 +1054,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
           prompt: _compactMeaning(w.translation),
           source: source,
           attemptNo: attemptNo,
+          retryOfType: retryOfType,
         );
       case QuestionType.listenPickMeaning:
         final correctL = _compactMeaning(w.translation);
@@ -1078,6 +1075,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
           prompt: w.word,
           source: source,
           attemptNo: attemptNo,
+          retryOfType: retryOfType,
         );
       case QuestionType.typeWord:
         return LearningQuestion(
@@ -1088,6 +1086,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
           prompt: _compactMeaning(w.translation),
           source: source,
           attemptNo: attemptNo,
+          retryOfType: retryOfType,
         );
     }
   }
@@ -1198,21 +1197,77 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     return previous.last;
   }
 
-  LearningQuestion _buildRetryQuestion(LearningQuestion q) {
-    const types = [
+  List<QuestionType> _enabledQuestionTypes(LearningPreferences preferences) {
+    return [
       QuestionType.seeWordPickMeaning,
       QuestionType.seeMeaningPickWord,
-      QuestionType.listenPickMeaning,
+      if (preferences.listeningEnabled) QuestionType.listenPickMeaning,
+      if (preferences.spellingEnabled) QuestionType.typeWord,
     ];
-    final nextType = q.type == QuestionType.typeWord
-        ? QuestionType.seeMeaningPickWord
-        : types[(types.indexOf(q.type) + 1) % types.length];
+  }
+
+  QuestionType _nextQuestionType(
+    LearningPreferences preferences, {
+    QuestionType? excluded,
+  }) {
+    final enabled = _enabledQuestionTypes(preferences);
+    final candidates = excluded == null
+        ? enabled
+        : enabled.where((type) => type != excluded).toList();
+    final pool = candidates.isEmpty ? enabled : candidates;
+    return pool[_questionSerial++ % pool.length];
+  }
+
+  void applyPreferences(LearningPreferences preferences) {
+    if (state.questions.isEmpty ||
+        state.currentIndex >= state.questions.length) {
+      return;
+    }
+    final questions = <LearningQuestion>[];
+    for (var i = 0; i < state.questions.length; i++) {
+      final question = state.questions[i];
+      if (i <= state.currentIndex) {
+        questions.add(question);
+        continue;
+      }
+      final type = _nextQuestionType(
+        preferences,
+        excluded: question.retryOfType,
+      );
+      questions.add(
+        _buildQuestion(
+          question.word,
+          type,
+          _candidatePool(question.word),
+          source: question.source,
+          attemptNo: question.attemptNo,
+          retryOfType: question.retryOfType,
+        ),
+      );
+    }
+    state = LearningSessionState(
+      phase: state.phase,
+      questions: questions,
+      currentIndex: state.currentIndex,
+      correctCount: state.correctCount,
+      lastAnswer: state.lastAnswer,
+      lastSelectedIndex: state.lastSelectedIndex,
+      lastQuestionQueuedForRetry: state.lastQuestionQueuedForRetry,
+    );
+  }
+
+  LearningQuestion _buildRetryQuestion(LearningQuestion q) {
+    final nextType = _nextQuestionType(
+      ref.read(learningPreferencesProvider),
+      excluded: q.type,
+    );
     return _buildQuestion(
       q.word,
       nextType,
       _candidatePool(q.word),
       source: SessionQuestionSource.retry,
       attemptNo: q.attemptNo + 1,
+      retryOfType: q.type,
     );
   }
 
@@ -1342,7 +1397,15 @@ class _PickedWord {
 }
 
 final learningSessionProvider =
-    StateNotifierProvider.autoDispose<
-      LearningSessionNotifier,
-      LearningSessionState
-    >((ref) => LearningSessionNotifier(ref));
+    StateNotifierProvider<LearningSessionNotifier, LearningSessionState>((ref) {
+      final notifier = LearningSessionNotifier(ref);
+      ref.listen<LearningPreferences>(learningPreferencesProvider, (
+        previous,
+        next,
+      ) {
+        if (previous != null && previous != next) {
+          notifier.applyPreferences(next);
+        }
+      });
+      return notifier;
+    });
