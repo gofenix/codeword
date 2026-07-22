@@ -1,0 +1,27 @@
+apps/codeword/lib/screens/settings_screen.dart
+  s_22b13f261203c9::t_e9bbeea3454e6f 9,36-48,75-125,252,310
+apps/codeword/lib/state/learning_preferences.dart
+  s_22b13f261203c9::t_2cba5c25f8cf64 1-156
+apps/codeword/lib/state/learning_session.dart
+  s_22b13f261203c9::t_16fd22d91124c6 8-9,775,785,854-855,969,971,1008,1031,1057,1078,1089,1200-1201,1204-1205,1207-1263,1270,1400-1411
+apps/codeword/test/widget_test.dart
+  s_22b13f261203c9::t_051f3f4b220748 18,284-463,934-940,973,978,1004-1010,1233,1235-1242,1262-1343,1346-1499,2287-2315
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8b6aaceede28d4fcc71736476903c2b88a94fe6b",
+  "prompts": {},
+  "sessions": {
+    "s_22b13f261203c9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019eb5f4-716f-7800-aed3-e4659bfb4f3b",
+        "model": "unknown"
+      },
+      "human_author": "gofenix <codeless98@163.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
