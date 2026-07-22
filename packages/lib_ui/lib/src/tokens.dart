@@ -265,6 +265,10 @@ class AppMotion {
 
   // Press feedback: 100-160ms. Snappy confirmation the tap was heard.
   static const Duration press = Duration(milliseconds: 140);
+  // Learning feedback remains visible just long enough to register without
+  // slowing the high-frequency question loop.
+  static const Duration answerCorrect = Duration(milliseconds: 180);
+  static const Duration answerWrong = Duration(milliseconds: 240);
   // Tooltips / small popovers.
   static const Duration fast = Duration(milliseconds: 180);
   // Dropdowns, selects, content crossfades.

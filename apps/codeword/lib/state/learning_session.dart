@@ -794,14 +794,6 @@ class LearningSessionState {
   final int? lastSelectedIndex;
   final bool lastQuestionQueuedForRetry;
 
-  /// Number of questions the session started with. Used as the stable
-  /// denominator for progress — wrong answers append retry questions to
-  /// [questions], so using [questions.length] would make the progress bar
-  /// regress after a mistake.
-  final int initialQuestionCount;
-  final bool endedEarly;
-  final DateTime? startedAt;
-
   const LearningSessionState({
     required this.phase,
     required this.questions,
@@ -810,9 +802,6 @@ class LearningSessionState {
     this.lastAnswer,
     this.lastSelectedIndex,
     this.lastQuestionQueuedForRetry = false,
-    this.initialQuestionCount = 0,
-    this.endedEarly = false,
-    this.startedAt,
   });
 
   factory LearningSessionState.loading() => const LearningSessionState(
@@ -825,97 +814,108 @@ class LearningSessionState {
   LearningQuestion? get currentQuestion =>
       (currentIndex < questions.length) ? questions[currentIndex] : null;
 
-  double get progress {
-    if (initialQuestionCount <= 0) return 0;
-    // Treat retry questions (appended after the initial batch) as
-    // "still working on the current word" — clamp to just under 1.0
-    // so the bar never reaches 100% before the finished phase.
-    final p = currentIndex / initialQuestionCount;
-    return p.clamp(0.0, 0.9999);
-  }
-
   bool get isCorrect => lastAnswer != null && lastAnswer != AnswerQuality.again;
-
-  Iterable<LearningQuestion> get initialQuestions =>
-      questions.take(initialQuestionCount);
-
-  int get newWordCount => initialQuestions
-      .where((question) => question.source == SessionQuestionSource.newWord)
-      .length;
-
-  int get reviewWordCount => initialQuestions
-      .where((question) => question.source == SessionQuestionSource.due)
-      .length;
 }
 
 class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
+  static const _bufferSize = 16;
+  static const _refillThreshold = 5;
+
   final Ref ref;
   final Random _rng = Random();
 
   /// Stale-call guard. Incremented per [start()]; any pending async
   /// work that returns with a mismatched counter is discarded.
   int _startGen = 0;
-  bool _studyTimeRecorded = false;
+  int? _refillingForGen;
+  int _questionSerial = 0;
+  int _activeSeconds = 0;
+  DateTime? _lastInteractionAt;
+  String? _activeVocabId;
 
   /// Full owning-vocabulary pools for mixed cross-book review questions.
   final Map<String, List<VocabWord>> _vocabPools = {};
 
   LearningSessionNotifier(this.ref) : super(LearningSessionState.loading());
 
-  /// Build a session that respects the SM-2 memory curve.
-  ///
-  /// Build today's session with review words first, then the remaining
-  /// daily new-word allowance.
-  ///
-  ///   - All due words (dueAt <= now) are included first.
-  ///   - If due words exceed [maxSessionSize], cap at [maxSessionSize]
-  ///     (user can start another session after).
-  ///   - New words already introduced today count against
-  ///     [dailyNewWordLimit], including words introduced in another vocab.
-  ///   - New words are only added when there is room after due words.
-  Future<void> start({
-    required String vocabId,
-    int dailyNewWordLimit = 12,
-    int maxSessionSize = 32,
-  }) async {
+  /// Starts an endless, memory-curve-driven learning queue.
+  Future<void> start({required String vocabId}) async {
     final gen = ++_startGen;
-    _studyTimeRecorded = false;
+    _activeVocabId = vocabId;
+    _refillingForGen = null;
+    _questionSerial = 0;
+    _activeSeconds = 0;
+    _lastInteractionAt = DateTime.now();
     state = LearningSessionState.loading();
     final raw = await ref.read(vocabCacheProvider(vocabId).future);
-    // If start() was called again while we awaited the vocab cache,
-    // abandon this entire work — the second call is authoritative.
     if (gen != _startGen) return;
     final removed = _removedWordIds();
     final all = raw.where((w) => !removed.contains(w.id)).toList();
     _vocabPools
       ..clear()
       ..[vocabId] = all;
-    if (all.isEmpty) {
-      state = const LearningSessionState(
-        phase: SessionPhase.finished,
-        questions: [],
-        currentIndex: 0,
-        correctCount: 0,
+    await _ensureBuffer(force: true, gen: gen);
+  }
+
+  Future<void> _ensureBuffer({bool force = false, int? gen}) async {
+    final activeGen = gen ?? _startGen;
+    if (activeGen != _startGen || _activeVocabId == null) return;
+    final remaining = state.questions.length - state.currentIndex;
+    if (!force && remaining > _refillThreshold) return;
+    if (_refillingForGen == activeGen) return;
+    _refillingForGen = activeGen;
+    try {
+      _compactConsumed();
+      final excluded = state.questions.map((q) => q.word.id).toSet();
+      final needed = max(0, _bufferSize - state.questions.length);
+      final additions = await _buildEligibleQuestions(
+        vocabId: _activeVocabId!,
+        limit: needed,
+        excludedIds: excluded,
+        gen: activeGen,
       );
-      return;
+      if (activeGen != _startGen) return;
+
+      final pendingIds = state.questions.map((q) => q.word.id).toSet();
+      final fresh = additions.where((q) => pendingIds.add(q.word.id)).toList();
+      final questions = [...state.questions, ...fresh];
+      final hasCurrent = state.currentIndex < questions.length;
+      state = LearningSessionState(
+        phase: hasCurrent
+            ? (state.phase == SessionPhase.wrongDetail
+                  ? SessionPhase.wrongDetail
+                  : SessionPhase.asking)
+            : SessionPhase.finished,
+        questions: questions,
+        currentIndex: hasCurrent ? state.currentIndex : questions.length,
+        correctCount: state.correctCount,
+        lastAnswer: state.lastAnswer,
+        lastSelectedIndex: state.lastSelectedIndex,
+        lastQuestionQueuedForRetry: state.lastQuestionQueuedForRetry,
+      );
+    } finally {
+      if (_refillingForGen == activeGen) _refillingForGen = null;
     }
+  }
 
-    final now = DateTime.now();
+  Future<List<LearningQuestion>> _buildEligibleQuestions({
+    required String vocabId,
+    required int limit,
+    required Set<String> excludedIds,
+    required int gen,
+  }) async {
+    if (limit <= 0) return const [];
+    final removed = _removedWordIds();
     final reviewMap = ref.read(reviewStateProvider);
-    final allWordIds = all.map((w) => w.id).toSet();
-    final seenIds = reviewMap.keys.where(allWordIds.contains).toSet();
+    final now = DateTime.now();
+    final dueEntries = reviewMap.entries.where((entry) {
+      final dueAt = entry.value.dueAt;
+      return !removed.contains(entry.key) &&
+          !excludedIds.contains(entry.key) &&
+          dueAt != null &&
+          !dueAt.isAfter(now);
+    }).toList()..sort((a, b) => a.value.dueAt!.compareTo(b.value.dueAt!));
 
-    // Due words are global: switching books must never hide an expired review.
-    final dueEntries =
-        reviewMap.entries
-            .where(
-              (entry) =>
-                  !removed.contains(entry.key) &&
-                  entry.value.dueAt != null &&
-                  !entry.value.dueAt!.isAfter(now),
-            )
-            .toList()
-          ..sort((a, b) => a.value.dueAt!.compareTo(b.value.dueAt!));
     final dueIdsByVocab = <String, Set<String>>{};
     for (final entry in dueEntries) {
       dueIdsByVocab
@@ -925,57 +925,39 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     final dueById = <String, VocabWord>{};
     for (final entry in dueIdsByVocab.entries) {
       try {
-        final words = entry.key == vocabId
-            ? all
-            : (await ref.read(
-                vocabCacheProvider(entry.key).future,
-              )).where((word) => !removed.contains(word.id)).toList();
-        if (gen != _startGen) return;
+        final words =
+            _vocabPools[entry.key] ??
+            (await ref.read(
+              vocabCacheProvider(entry.key).future,
+            )).where((word) => !removed.contains(word.id)).toList();
+        if (gen != _startGen) return const [];
         _vocabPools[entry.key] = words;
         for (final word in words) {
           if (entry.value.contains(word.id)) dueById[word.id] = word;
         }
       } catch (_) {
-        // A removed or corrupt optional word list must not block today's queue.
+        // One unavailable optional list must not block the rest of the queue.
       }
     }
-    final dueWords = [
-      for (final entry in dueEntries)
-        if (dueById[entry.key] != null) dueById[entry.key]!,
-    ];
 
-    // New = never seen.
-    final newWords = all.where((w) => !seenIds.contains(w.id)).toList()
-      ..shuffle(_rng);
-
-    final safeMaxSessionSize = max(0, maxSessionSize);
-    final pickedDue = dueWords.take(safeMaxSessionSize).toList();
-    final today = DateTime(now.year, now.month, now.day);
-    final tomorrow = today.add(const Duration(days: 1));
-    final introducedToday = reviewMap.values.where((s) {
-      final first = s.firstReviewedAt;
-      return first != null &&
-          !first.isBefore(today) &&
-          first.isBefore(tomorrow);
-    }).length;
-    final remainingNew = max(0, dailyNewWordLimit - introducedToday);
-    final headroom = max(0, safeMaxSessionSize - pickedDue.length);
-    final newSlots = min(remainingNew, headroom);
-    final pickedNew = newWords.take(newSlots).toList();
-
-    final picked = [
-      for (final w in pickedDue) _PickedWord(w, SessionQuestionSource.due),
-      for (final w in pickedNew) _PickedWord(w, SessionQuestionSource.newWord),
-    ];
-
-    if (picked.isEmpty) {
-      state = const LearningSessionState(
-        phase: SessionPhase.finished,
-        questions: [],
-        currentIndex: 0,
-        correctCount: 0,
-      );
-      return;
+    final picked = <_PickedWord>[];
+    for (final entry in dueEntries) {
+      final word = dueById[entry.key];
+      if (word == null) continue;
+      picked.add(_PickedWord(word, SessionQuestionSource.due));
+      if (picked.length == limit) break;
+    }
+    if (picked.length < limit) {
+      final currentWords = _vocabPools[vocabId] ?? const <VocabWord>[];
+      for (final word in currentWords) {
+        if (reviewMap.containsKey(word.id) ||
+            removed.contains(word.id) ||
+            excludedIds.contains(word.id)) {
+          continue;
+        }
+        picked.add(_PickedWord(word, SessionQuestionSource.newWord));
+        if (picked.length == limit) break;
+      }
     }
 
     const selectionTypes = [
@@ -983,27 +965,35 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       QuestionType.seeMeaningPickWord,
       QuestionType.listenPickMeaning,
     ];
-    final questions = picked.asMap().entries.map((entry) {
-      final picked = entry.value;
-      final w = picked.word;
-      final review = reviewMap[w.id];
-      final usesActiveRecall =
-          picked.source == SessionQuestionSource.due &&
+    return picked.map((pickedWord) {
+      final review = reviewMap[pickedWord.word.id];
+      final serial = _questionSerial++;
+      final activeRecall =
+          pickedWord.source == SessionQuestionSource.due &&
           (review?.repetitions ?? 0) >= 2 &&
-          entry.key.isEven;
-      final type = usesActiveRecall
+          serial.isEven;
+      final type = activeRecall
           ? QuestionType.typeWord
-          : selectionTypes[entry.key % selectionTypes.length];
-      return _buildQuestion(w, type, _candidatePool(w), source: picked.source);
+          : selectionTypes[serial % selectionTypes.length];
+      return _buildQuestion(
+        pickedWord.word,
+        type,
+        _candidatePool(pickedWord.word),
+        source: pickedWord.source,
+      );
     }).toList();
+  }
 
+  void _compactConsumed() {
+    if (state.currentIndex == 0 || state.phase == SessionPhase.wrongDetail) {
+      return;
+    }
+    final remaining = state.questions.sublist(state.currentIndex);
     state = LearningSessionState(
-      phase: SessionPhase.asking,
-      questions: questions,
+      phase: remaining.isEmpty ? SessionPhase.loading : state.phase,
+      questions: remaining,
       currentIndex: 0,
-      correctCount: 0,
-      initialQuestionCount: questions.length,
-      startedAt: DateTime.now(),
+      correctCount: state.correctCount,
     );
   }
 
@@ -1270,20 +1260,20 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     ref
         .read(reviewStateProvider.notifier)
         .recordAnswer(wordId: q.word.id, quality: quality.toSm2Quality());
+    _recordActiveStudyTime();
     unawaited(_eagerFlush());
     if (correct) {
       final nextIndex = state.currentIndex + 1;
       state = LearningSessionState(
         phase: nextIndex >= state.questions.length
-            ? SessionPhase.finished
+            ? SessionPhase.loading
             : SessionPhase.asking,
         questions: state.questions,
         currentIndex: nextIndex,
         correctCount: state.correctCount + 1,
-        initialQuestionCount: state.initialQuestionCount,
-        startedAt: state.startedAt,
       );
-      if (state.phase == SessionPhase.finished) _recordStudyTime();
+      _compactConsumed();
+      unawaited(_ensureBuffer(force: state.questions.isEmpty));
     } else {
       state = LearningSessionState(
         phase: SessionPhase.wrongDetail,
@@ -1293,72 +1283,49 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
         lastAnswer: quality,
         lastSelectedIndex: selectedIndex,
         lastQuestionQueuedForRetry: true,
-        initialQuestionCount: state.initialQuestionCount,
-        startedAt: state.startedAt,
       );
+      unawaited(_ensureBuffer(force: true));
     }
   }
 
-  /// Advance from wrong-detail to next question (or finish).
-  void next({bool skipRetry = false}) {
+  /// Advance from wrong-detail and place a changed retry 3–5 items later.
+  Future<void> next({bool skipRetry = false}) async {
+    if (state.phase != SessionPhase.wrongDetail) return;
+    await _ensureBuffer(force: true);
     if (state.phase != SessionPhase.wrongDetail) return;
     final current = state.currentQuestion;
     if (current == null) return;
-    final questions = skipRetry
-        ? state.questions
-        : [...state.questions, _buildRetryQuestion(current)];
-    final nextIndex = state.currentIndex + 1;
-    if (nextIndex >= questions.length) {
-      state = LearningSessionState(
-        phase: SessionPhase.finished,
-        questions: questions,
-        currentIndex: nextIndex,
-        correctCount: state.correctCount,
-        initialQuestionCount: state.initialQuestionCount,
-        startedAt: state.startedAt,
+    final questions = [...state.questions];
+    if (!skipRetry) {
+      final retryIndex = min(
+        questions.length,
+        state.currentIndex + 4 + _rng.nextInt(3),
       );
-      _recordStudyTime();
-      unawaited(_eagerFlush());
-      return;
+      questions.insert(retryIndex, _buildRetryQuestion(current));
     }
+    final nextIndex = state.currentIndex + 1;
     state = LearningSessionState(
-      phase: SessionPhase.asking,
+      phase: nextIndex < questions.length
+          ? SessionPhase.asking
+          : SessionPhase.loading,
       questions: questions,
       currentIndex: nextIndex,
       correctCount: state.correctCount,
-      initialQuestionCount: state.initialQuestionCount,
-      startedAt: state.startedAt,
     );
+    _compactConsumed();
+    unawaited(_ensureBuffer(force: state.questions.isEmpty));
     unawaited(_eagerFlush());
   }
 
-  /// End the current round without discarding already recorded answers.
-  void finishNow() {
-    if (state.phase == SessionPhase.finished) return;
-    state = LearningSessionState(
-      phase: SessionPhase.finished,
-      questions: state.questions,
-      currentIndex: state.currentIndex,
-      correctCount: state.correctCount,
-      lastAnswer: state.lastAnswer,
-      lastSelectedIndex: state.lastSelectedIndex,
-      lastQuestionQueuedForRetry: state.lastQuestionQueuedForRetry,
-      initialQuestionCount: state.initialQuestionCount,
-      endedEarly: true,
-      startedAt: state.startedAt,
-    );
-    _recordStudyTime();
-    unawaited(_eagerFlush());
-  }
-
-  void _recordStudyTime() {
-    if (_studyTimeRecorded || state.startedAt == null) return;
-    _studyTimeRecorded = true;
-    final elapsedSeconds = max(
-      1,
-      DateTime.now().difference(state.startedAt!).inSeconds,
-    );
-    final minutes = (elapsedSeconds + 59) ~/ 60;
+  void _recordActiveStudyTime() {
+    final now = DateTime.now();
+    final previous = _lastInteractionAt;
+    _lastInteractionAt = now;
+    if (previous == null) return;
+    _activeSeconds += min(60, max(1, now.difference(previous).inSeconds));
+    final minutes = _activeSeconds ~/ 60;
+    if (minutes == 0) return;
+    _activeSeconds %= 60;
     try {
       unawaited(
         ReviewRepository.instance.addStudyMinutes(DateTime.now(), minutes),

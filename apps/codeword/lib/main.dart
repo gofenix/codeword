@@ -1,5 +1,4 @@
 import 'dart:developer' as developer;
-import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -14,7 +13,6 @@ import 'screens/learning_session_screen.dart';
 import 'screens/reading_screen.dart';
 import 'screens/stats_screen.dart';
 import 'services/article_repository.dart';
-import 'state/app_settings.dart';
 import 'state/learning_session.dart';
 
 void main() async {
@@ -122,6 +120,7 @@ class _HomeShellState extends ConsumerState<HomeShell> {
 
   void _goToTab(int index) {
     if (index < 0 || index >= 4) return;
+    if (index == _index) return;
     HapticFeedback.selectionClick();
     setState(() => _index = index);
   }
@@ -154,24 +153,10 @@ class _HomeShellState extends ConsumerState<HomeShell> {
 
   @override
   Widget build(BuildContext context) {
-    final sessionPhase = ref.watch(
-      learningSessionProvider.select((session) => session.phase),
-    );
-    final immersiveLearning =
-        _index == 0 &&
-        (sessionPhase == SessionPhase.asking ||
-            sessionPhase == SessionPhase.wrongDetail);
     return Scaffold(
       backgroundColor: AppColors.of(context).background,
       body: IndexedStack(index: _index, children: _pages),
-      bottomNavigationBar: immersiveLearning
-          ? null
-          : _PhoneBottomNav(
-              index: _index,
-              // Delegate to _goToTab so the haptic feedback path is
-              // centralised — two tactile clicks per tap feels like a bug.
-              onTap: _goToTab,
-            ),
+      bottomNavigationBar: _PhoneBottomNav(index: _index, onTap: _goToTab),
     );
   }
 }
@@ -302,8 +287,6 @@ class _TodayPageState extends ConsumerState<TodayPage> {
     if (ref.read(learningDataClearInProgressProvider)) return;
     _starting = true;
     try {
-      await ref.read(appSettingsProvider.notifier).ready;
-      if (!mounted) return;
       if (ref.read(learningDataClearInProgressProvider)) return;
       final session = ref.read(learningSessionProvider);
       if (session.phase != SessionPhase.loading ||
@@ -311,22 +294,10 @@ class _TodayPageState extends ConsumerState<TodayPage> {
         return;
       }
       final vocabId = ref.read(selectedVocabProvider);
-      final settings = ref.read(appSettingsProvider);
-      await ref
-          .read(learningSessionProvider.notifier)
-          .start(
-            vocabId: vocabId,
-            dailyNewWordLimit: settings.dailyNewWords,
-            maxSessionSize: settings.dailyNewWords + 20,
-          );
+      await ref.read(learningSessionProvider.notifier).start(vocabId: vocabId);
     } finally {
       _starting = false;
     }
-  }
-
-  void _goLibrary() {
-    HapticFeedback.selectionClick();
-    context.findAncestorStateOfType<_HomeShellState>()?._goToTab(3);
   }
 
   void _goReading() {
@@ -334,71 +305,15 @@ class _TodayPageState extends ConsumerState<TodayPage> {
     context.findAncestorStateOfType<_HomeShellState>()?._goToTab(1);
   }
 
-  Future<void> _showPauseSheet() async {
+  void _goLibrary() {
     HapticFeedback.selectionClick();
-    await showModalBottomSheet<void>(
-      context: context,
-      builder: (context) => SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(
-            AppSpacing.x6,
-            AppSpacing.x4,
-            AppSpacing.x6,
-            AppSpacing.x6,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text('暂停背词', style: AppTheme.cardTitle(context: context)),
-              const SizedBox(height: AppSpacing.x2),
-              Text(
-                '当前进度会保留，继续后回到这道题。',
-                style: AppTheme.mutedCaption(context: context),
-              ),
-              const SizedBox(height: AppSpacing.x4),
-              FilledButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: const Text('继续背词'),
-              ),
-              const SizedBox(height: AppSpacing.x2),
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  ref.read(learningSessionProvider.notifier).finishNow();
-                },
-                child: const Text('结束本轮'),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+    context.findAncestorStateOfType<_HomeShellState>()?._goToTab(3);
   }
 
   @override
   Widget build(BuildContext context) {
     final session = ref.watch(learningSessionProvider);
-    ref.watch(reviewStateProvider);
-    final catalog = ref.watch(qwertyCatalogProvider);
-    final stats = ref
-        .read(reviewStateProvider.notifier)
-        .stats(catalog: catalog);
-    final vocabId = ref.watch(selectedVocabProvider);
-    final vocabName = ref.watch(vocabMetaProvider)[vocabId]?.name ?? vocabId;
-    final mixedReview = session.questions.any(
-      (question) =>
-          question.source == SessionQuestionSource.due &&
-          question.word.domain != vocabId,
-    );
-    final appSettings = ref.watch(appSettingsProvider);
     final clearingLearningData = ref.watch(learningDataClearInProgressProvider);
-
-    ref.listen(learningSessionProvider, (prev, next) {
-      if (next.phase == SessionPhase.loading && next.questions.isEmpty) {
-        Future.microtask(_maybeStart);
-      }
-    });
 
     return SafeArea(
       child: Column(
@@ -407,15 +322,6 @@ class _TodayPageState extends ConsumerState<TodayPage> {
             const _PersistenceWarning(),
             const SizedBox(height: AppSpacing.x2),
           ],
-          if (!clearingLearningData)
-            _SessionStatusBar(
-              current: session.currentIndex,
-              total: session.initialQuestionCount,
-              vocabName: mixedReview ? '今日复习' : vocabName,
-              phase: session.phase,
-              onPause: _showPauseSheet,
-              onLibrary: _goLibrary,
-            ),
           Expanded(
             child: clearingLearningData
                 ? const _LearningDataClearView()
@@ -429,44 +335,9 @@ class _TodayPageState extends ConsumerState<TodayPage> {
                     SessionPhase.wrongDetail => WrongDetailView(
                       session: session,
                     ),
-                    SessionPhase.finished => _CompletionDashboard(
-                      stats: stats,
-                      vocabId: vocabId,
-                      endedEarly: session.endedEarly,
-                      dailyNewWordLimit: appSettings.dailyNewWords,
-                      newWordCount: session.newWordCount,
-                      reviewWordCount: session.reviewWordCount,
-                      duration: session.startedAt == null
-                          ? null
-                          : DateTime.now().difference(session.startedAt!),
-                      hasSessionSummary: session.initialQuestionCount > 0,
-                      onRestart: () async {
-                        HapticFeedback.lightImpact();
-                        await ref.read(appSettingsProvider.notifier).ready;
-                        if (!mounted) return;
-                        final settings = ref.read(appSettingsProvider);
-                        await ref
-                            .read(learningSessionProvider.notifier)
-                            .start(
-                              vocabId: vocabId,
-                              dailyNewWordLimit: settings.dailyNewWords,
-                              maxSessionSize: settings.dailyNewWords + 20,
-                            );
-                      },
-                      onLearnMore: () async {
-                        HapticFeedback.lightImpact();
-                        await ref.read(appSettingsProvider.notifier).ready;
-                        if (!mounted) return;
-                        await ref
-                            .read(learningSessionProvider.notifier)
-                            .start(
-                              vocabId: vocabId,
-                              dailyNewWordLimit: stats.newToday + 10,
-                              maxSessionSize: 10,
-                            );
-                      },
+                    SessionPhase.finished => _NoLearningContent(
                       onGoReading: _goReading,
-                      onGoDiscovery: _goLibrary,
+                      onGoLibrary: _goLibrary,
                     ),
                   },
           ),
@@ -497,289 +368,60 @@ class _LearningDataClearView extends StatelessWidget {
   }
 }
 
-class _SessionStatusBar extends StatelessWidget {
-  final int current;
-  final int total;
-  final String vocabName;
-  final SessionPhase phase;
-  final VoidCallback onPause;
-  final VoidCallback onLibrary;
-
-  const _SessionStatusBar({
-    required this.current,
-    required this.total,
-    required this.vocabName,
-    required this.phase,
-    required this.onPause,
-    required this.onLibrary,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    if (phase == SessionPhase.finished || phase == SessionPhase.loading) {
-      return const SizedBox.shrink();
-    }
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.x6,
-        vertical: AppSpacing.x2,
-      ),
-      child: Row(
-        children: [
-          SizedBox.square(
-            dimension: 36,
-            child: IconButton(
-              tooltip: '暂停',
-              padding: EdgeInsets.zero,
-              icon: Icon(
-                Icons.close_rounded,
-                color: AppColors.of(context).inkMuted,
-                size: 22,
-              ),
-              onPressed: onPause,
-            ),
-          ),
-          Expanded(
-            child: Center(
-              child: Text(
-                total > 0 ? '${(current + 1).clamp(1, total)} / $total' : '',
-                style: AppTheme.mutedCaption(
-                  size: 13,
-                  context: context,
-                ).copyWith(fontWeight: FontWeight.w600, letterSpacing: 0.5),
-              ),
-            ),
-          ),
-          TextButton.icon(
-            onPressed: onLibrary,
-            style: TextButton.styleFrom(
-              foregroundColor: AppColors.of(context).inkMuted,
-              minimumSize: const Size(44, 36),
-              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x2),
-              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            ),
-            icon: Icon(
-              Icons.library_books_outlined,
-              color: AppColors.of(context).inkMuted,
-              size: 18,
-            ),
-            label: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 92),
-              child: Text(
-                vocabName,
-                style: AppTheme.mutedCaption(size: 12, context: context),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.right,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _CompletionDashboard extends StatelessWidget {
-  final ReviewStats stats;
-  final String vocabId;
-  final bool endedEarly;
-  final int dailyNewWordLimit;
-  final int newWordCount;
-  final int reviewWordCount;
-  final Duration? duration;
-  final bool hasSessionSummary;
-  final VoidCallback onRestart;
-  final VoidCallback onLearnMore;
+class _NoLearningContent extends StatelessWidget {
   final VoidCallback onGoReading;
-  final VoidCallback onGoDiscovery;
+  final VoidCallback onGoLibrary;
 
-  const _CompletionDashboard({
-    required this.stats,
-    required this.vocabId,
-    required this.endedEarly,
-    required this.dailyNewWordLimit,
-    required this.newWordCount,
-    required this.reviewWordCount,
-    required this.duration,
-    required this.hasSessionSummary,
-    required this.onRestart,
-    required this.onLearnMore,
+  const _NoLearningContent({
     required this.onGoReading,
-    required this.onGoDiscovery,
+    required this.onGoLibrary,
   });
 
   @override
   Widget build(BuildContext context) {
-    final vocab = vocabProgressFor(stats, vocabId);
-    final allDone = vocab == null || (vocab.due == 0 && vocab.unseenWords == 0);
-    final dailyGoalDone =
-        !allDone && vocab.due == 0 && stats.newToday >= dailyNewWordLimit;
-    final shownNewWords = hasSessionSummary ? newWordCount : stats.newToday;
-    final shownReviews = hasSessionSummary
-        ? reviewWordCount
-        : max(0, stats.reviewsToday - stats.newToday);
-    final durationLabel = hasSessionSummary
-        ? formatSessionDuration(duration)
-        : stats.studyMinutesToday > 0
-        ? '${stats.studyMinutesToday}分'
-        : stats.reviewsToday > 0
-        ? '<1分'
-        : '—';
-    final summaryScope = hasSessionSummary ? '本轮' : '今日';
-    final primaryAction = allDone
-        ? onGoDiscovery
-        : dailyGoalDone && !endedEarly
-        ? onLearnMore
-        : onRestart;
-    final primaryLabel = allDone
-        ? '选择下一本词书'
-        : endedEarly
-        ? '继续背词'
-        : dailyGoalDone
-        ? '再学 10 个'
-        : '继续下一组';
-    return SingleChildScrollView(
+    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(height: AppSpacing.x8),
-          if (!endedEarly) ...[
-            Container(
-              width: 64,
-              height: 64,
-              decoration: const BoxDecoration(
-                color: AppColors.primarySoft,
-                shape: BoxShape.circle,
-              ),
-              child: const Icon(
-                Icons.check_rounded,
-                color: AppColors.primary,
-                size: 34,
-              ),
-            ),
-            const SizedBox(height: AppSpacing.x4),
-          ],
+          Icon(
+            Icons.inbox_outlined,
+            size: 38,
+            color: AppColors.of(context).inkSubtle,
+          ),
+          const SizedBox(height: AppSpacing.x4),
           Text(
-            endedEarly
-                ? '本轮已结束'
-                : (allDone ? '本书新词已学完' : (dailyGoalDone ? '今日目标完成' : '本轮完成')),
-            style: AppTheme.screenHeader(
-              context: context,
-            ).copyWith(fontSize: 28),
+            '当前没有待学单词',
+            style: AppTheme.cardTitle(context: context).copyWith(fontSize: 20),
           ),
           const SizedBox(height: AppSpacing.x2),
           Text(
-            endedEarly ? '已保留本轮学习记录' : '连续 ${stats.streakDays} 天 · 随时可以继续',
+            '可以去阅读巩固，或选择其他词书',
+            textAlign: TextAlign.center,
             style: AppTheme.mutedCaption(size: 14, context: context),
           ),
           const SizedBox(height: AppSpacing.x6),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
-                child: _StatTile(
-                  label: '$summaryScope新学',
-                  value: '$shownNewWords',
-                  color: AppColors.primary,
+                child: OutlinedButton.icon(
+                  onPressed: onGoReading,
+                  icon: const Icon(Icons.menu_book_outlined, size: 18),
+                  label: const Text('去阅读'),
                 ),
               ),
               const SizedBox(width: AppSpacing.x3),
               Expanded(
-                child: _StatTile(
-                  label: '$summaryScope复习',
-                  value: '$shownReviews',
-                  color: AppColors.info,
-                ),
-              ),
-              const SizedBox(width: AppSpacing.x3),
-              Expanded(
-                child: _StatTile(
-                  label: '用时',
-                  value: durationLabel,
-                  color: AppColors.warning,
+                child: FilledButton.icon(
+                  onPressed: onGoLibrary,
+                  icon: const Icon(Icons.library_books_outlined, size: 18),
+                  label: const Text('选择词书'),
                 ),
               ),
             ],
           ),
-          const SizedBox(height: AppSpacing.x6),
-          SizedBox(
-            width: double.infinity,
-            child: FilledButton.icon(
-              onPressed: primaryAction,
-              style: FilledButton.styleFrom(
-                minimumSize: const Size.fromHeight(52),
-              ),
-              icon: Icon(
-                allDone
-                    ? Icons.library_books_outlined
-                    : Icons.play_arrow_rounded,
-              ),
-              label: Text(primaryLabel),
-            ),
-          ),
-          if (!endedEarly && (shownNewWords + shownReviews) > 0) ...[
-            const SizedBox(height: AppSpacing.x3),
-            SizedBox(
-              width: double.infinity,
-              child: OutlinedButton.icon(
-                onPressed: onGoReading,
-                style: OutlinedButton.styleFrom(
-                  minimumSize: const Size.fromHeight(50),
-                ),
-                icon: const Icon(Icons.menu_book_outlined),
-                label: const Text('去阅读巩固'),
-              ),
-            ),
-          ],
-          if (!allDone) ...[
-            const SizedBox(height: AppSpacing.x2),
-            TextButton.icon(
-              onPressed: onGoDiscovery,
-              icon: const Icon(Icons.swap_horiz_rounded, size: 18),
-              label: const Text('切换词书'),
-            ),
-          ],
-          const SizedBox(height: AppSpacing.x4),
-        ],
-      ),
-    );
-  }
-}
-
-@visibleForTesting
-String formatSessionDuration(Duration? duration) {
-  if (duration == null) return '—';
-  final seconds = max(1, duration.inSeconds);
-  if (seconds < 60) return '$seconds秒';
-  return '${seconds ~/ 60}分';
-}
-
-class _StatTile extends StatelessWidget {
-  final String label;
-  final String value;
-  final Color color;
-  const _StatTile({
-    required this.label,
-    required this.value,
-    required this.color,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return AppCard(
-      padding: const EdgeInsets.symmetric(vertical: AppSpacing.x4),
-      child: Column(
-        children: [
-          Text(
-            value,
-            style: AppTheme.wordDisplay(
-              size: 22,
-              color: color,
-              weight: FontWeight.w700,
-            ),
-          ),
-          const SizedBox(height: 2),
-          Text(label, style: AppTheme.mutedCaption(size: 12, context: context)),
+          const SizedBox(height: AppSpacing.x8),
         ],
       ),
     );

@@ -147,12 +147,12 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 100));
 
-    expect(find.text('AI 今日阅读'), findsOneWidget);
-    expect(find.textContaining('真正看得懂的文章'), findsOneWidget);
-    expect(find.text('选择 3 个词生成'), findsOneWidget);
+    expect(find.text('今日阅读'), findsOneWidget);
+    expect(find.textContaining('优先复现'), findsOneWidget);
+    expect(find.text('选择目标词并生成'), findsOneWidget);
     expect(find.text('阅读记录'), findsOneWidget);
 
-    await tester.tap(find.text('选择 3 个词生成'));
+    await tester.tap(find.text('选择目标词并生成'));
     await tester.pumpAndSettle();
     expect(find.text('生成阅读'), findsOneWidget);
     expect(find.text('用这 3 个词生成文章'), findsOneWidget);

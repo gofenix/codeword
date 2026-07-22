@@ -357,6 +357,7 @@ class _ByokSetupCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppCard(
+      key: const ValueKey('reading-first-content'),
       padding: const EdgeInsets.all(AppSpacing.x5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -521,132 +522,104 @@ class _ReadingHero extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final words = pool.take(5).map((entry) => entry.word).toList();
+    final remaining = pool.length - words.length;
     return Container(
-      height: 238,
-      clipBehavior: Clip.antiAlias,
+      key: const ValueKey('reading-first-content'),
+      constraints: const BoxConstraints(minHeight: 184),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(AppRadii.lg),
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFF13D5B3), Color(0xFF078DE8)],
-        ),
-        boxShadow: AppShadows.md,
+        color: const Color(0xFFEAF8F1),
       ),
-      child: Stack(
+      padding: const EdgeInsets.all(AppSpacing.x4),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          for (var i = 0; i < words.length; i++)
-            Positioned(
-              left: [190.0, 252.0, 215.0, 285.0, 165.0][i],
-              top: [28.0, 62.0, 102.0, 132.0, 150.0][i],
-              child: Text(
-                words[i],
-                style: AppTheme.wordDisplay(
-                  size: i == 0 ? 17 : 14,
-                  color: Colors.white.withValues(alpha: i == 0 ? 0.62 : 0.3),
-                  weight: FontWeight.w700,
-                ).copyWith(fontFamily: null),
+          Row(
+            children: [
+              const Icon(
+                Icons.auto_awesome,
+                size: 19,
+                color: AppColors.primary,
+              ),
+              const SizedBox(width: AppSpacing.x2),
+              Expanded(
+                child: Text(
+                  '今日阅读',
+                  style: AppTheme.cardTitle(context: context),
+                ),
+              ),
+              IconButton(
+                tooltip: '换一批目标词',
+                onPressed: loading || generating ? null : onRefresh,
+                icon: const Icon(Icons.refresh_rounded, size: 20),
+                color: AppColors.of(context).inkMuted,
+                visualDensity: VisualDensity.compact,
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.x2),
+          Text(
+            loading
+                ? '正在整理今天答过的词…'
+                : pool.isEmpty
+                ? '先背几个词，再回来把它们放进语境'
+                : '优先复现今天答错和待巩固的词',
+            style: AppTheme.mutedCaption(size: 12, context: context),
+          ),
+          const SizedBox(height: AppSpacing.x3),
+          SizedBox(
+            height: 32,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  for (var i = 0; i < words.length; i++) ...[
+                    if (i > 0) const SizedBox(width: AppSpacing.x2),
+                    PillTag(
+                      label: words[i],
+                      color: AppColors.primary,
+                      variant: PillVariant.soft,
+                    ),
+                  ],
+                  if (remaining > 0) ...[
+                    const SizedBox(width: AppSpacing.x2),
+                    PillTag(
+                      label: '+$remaining',
+                      color: AppColors.of(context).inkMuted,
+                      variant: PillVariant.soft,
+                    ),
+                  ],
+                ],
               ),
             ),
-          Positioned(
-            right: AppSpacing.x2,
-            top: AppSpacing.x2,
-            child: IconButton(
-              tooltip: '换一批目标词',
-              onPressed: loading || generating ? null : onRefresh,
-              icon: const Icon(Icons.refresh_rounded, color: Colors.white),
-            ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(AppSpacing.x4),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: AppSpacing.x3,
-                    vertical: AppSpacing.x1_5,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.18),
-                    borderRadius: BorderRadius.circular(AppRadii.pill),
-                  ),
-                  child: const FittedBox(
-                    fit: BoxFit.scaleDown,
-                    alignment: Alignment.centerLeft,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(Icons.auto_awesome, size: 16, color: Colors.white),
-                        SizedBox(width: AppSpacing.x1_5),
-                        Text(
-                          'AI 今日阅读',
-                          maxLines: 1,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w700,
-                          ),
+          const SizedBox(height: AppSpacing.x4),
+          SizedBox(
+            width: double.infinity,
+            height: 46,
+            child: FilledButton.icon(
+              onPressed: loading || generating || pool.isEmpty
+                  ? null
+                  : onGenerate,
+              icon: AnimatedSwitcher(
+                duration: AppMotion.fast,
+                child: generating
+                    ? const SizedBox(
+                        key: ValueKey('reading-loading'),
+                        width: 17,
+                        height: 17,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2,
+                          color: Colors.white,
                         ),
-                      ],
-                    ),
-                  ),
-                ),
-                const SizedBox(height: AppSpacing.x4),
-                const SizedBox(
-                  width: 230,
-                  child: Text(
-                    '用今天学过的词，\n读一篇真正看得懂的文章',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      height: 1.35,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: AppSpacing.x2),
-                Text(
-                  loading
-                      ? '正在整理今日词汇…'
-                      : pool.isEmpty
-                      ? '先完成一轮背词，再回来阅读'
-                      : '优先选择答错和待巩固单词',
-                  style: TextStyle(
-                    color: Colors.white.withValues(alpha: 0.78),
-                    fontSize: 12,
-                  ),
-                ),
-                const Spacer(),
-                SizedBox(
-                  width: double.infinity,
-                  height: 48,
-                  child: FilledButton(
-                    onPressed: loading || generating || pool.isEmpty
-                        ? null
-                        : onGenerate,
-                    style: FilledButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: AppColors.ink,
-                      disabledBackgroundColor: Colors.white.withValues(
-                        alpha: 0.5,
+                      )
+                    : const Icon(
+                        Icons.auto_stories_outlined,
+                        key: ValueKey('reading-ready'),
+                        size: 18,
                       ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(AppRadii.sm),
-                      ),
-                    ),
-                    child: generating
-                        ? const SizedBox(
-                            width: 18,
-                            height: 18,
-                            child: CircularProgressIndicator(
-                              strokeWidth: 2,
-                              color: AppColors.primary,
-                            ),
-                          )
-                        : Text('选择 ${pool.length} 个词生成'),
-                  ),
-                ),
-              ],
+              ),
+              label: Text(generating ? '正在生成' : '选择目标词并生成'),
             ),
           ),
         ],
@@ -673,10 +646,23 @@ class _ReadingHistoryList extends StatelessWidget {
             message: '生成第一篇文章，让今天的单词在语境里再出现一次。',
           )
         else
-          for (var i = 0; i < articles.length; i++) ...[
-            if (i > 0) const SizedBox(height: AppSpacing.x3),
-            _ReadingHistoryCard(article: articles[i], onTap: onTap),
-          ],
+          AppCard(
+            padding: EdgeInsets.zero,
+            child: Column(
+              children: [
+                for (var i = 0; i < articles.length; i++) ...[
+                  _ReadingHistoryCard(article: articles[i], onTap: onTap),
+                  if (i != articles.length - 1)
+                    Divider(
+                      height: 1,
+                      indent: AppSpacing.x4,
+                      endIndent: AppSpacing.x4,
+                      color: AppColors.of(context).divider,
+                    ),
+                ],
+              ],
+            ),
+          ),
       ],
     );
   }
@@ -693,85 +679,92 @@ class _ReadingHistoryCard extends StatelessWidget {
     final preview = article.articleText.replaceAll('\n', ' ').trim();
     final words = article.wordPool.take(4).toList();
     final level = article.level.isEmpty ? 'B1' : article.level;
-    return AppCard(
-      onTap: () => onTap(article),
-      semanticLabel: '阅读 ${_articleTitle(article)}',
-      padding: const EdgeInsets.all(AppSpacing.x4),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            _articleTitle(article),
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: AppTheme.cardTitle(context: context).copyWith(fontSize: 19),
-          ),
-          const SizedBox(height: AppSpacing.x2),
-          Text(
-            preview,
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
-            style: AppTheme.mutedCaption(
-              size: 13,
-              context: context,
-            ).copyWith(height: 1.45),
-          ),
-          const SizedBox(height: AppSpacing.x3),
-          Wrap(
-            spacing: AppSpacing.x1_5,
-            runSpacing: AppSpacing.x1_5,
-            children: [
-              for (final word in words)
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: AppSpacing.x2,
-                    vertical: AppSpacing.x1,
-                  ),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFFFF3A6),
-                    borderRadius: BorderRadius.circular(AppRadii.pill),
-                  ),
-                  child: Text(
-                    word['word'] ?? '',
-                    style: AppTheme.wordDisplay(
-                      size: 12,
-                      weight: FontWeight.w700,
-                      color: AppColors.ink,
-                    ).copyWith(fontFamily: null),
-                  ),
-                ),
-            ],
-          ),
-          const SizedBox(height: AppSpacing.x3),
-          Divider(color: AppColors.of(context).divider, height: 1),
-          const SizedBox(height: AppSpacing.x3),
-          Row(
+    return Semantics(
+      button: true,
+      label: '阅读 ${_articleTitle(article)}',
+      child: InkWell(
+        onTap: () => onTap(article),
+        child: Padding(
+          padding: const EdgeInsets.all(AppSpacing.x4),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                '${article.createdAt.month}/${article.createdAt.day} · ${_wordCount(article.articleText)} 词',
-                style: AppTheme.mutedCaption(size: 11, context: context),
+                _articleTitle(article),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: AppTheme.cardTitle(
+                  context: context,
+                ).copyWith(fontSize: 19),
               ),
-              const Spacer(),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppSpacing.x3,
-                  vertical: AppSpacing.x1,
-                ),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF57A16),
-                  borderRadius: BorderRadius.circular(AppRadii.pill),
-                ),
-                child: Text(
-                  level,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w800,
+              const SizedBox(height: AppSpacing.x2),
+              Text(
+                preview,
+                maxLines: 3,
+                overflow: TextOverflow.ellipsis,
+                style: AppTheme.mutedCaption(
+                  size: 13,
+                  context: context,
+                ).copyWith(height: 1.45),
+              ),
+              const SizedBox(height: AppSpacing.x3),
+              Wrap(
+                spacing: AppSpacing.x1_5,
+                runSpacing: AppSpacing.x1_5,
+                children: [
+                  for (final word in words)
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: AppSpacing.x2,
+                        vertical: AppSpacing.x1,
+                      ),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFF3A6),
+                        borderRadius: BorderRadius.circular(AppRadii.pill),
+                      ),
+                      child: Text(
+                        word['word'] ?? '',
+                        style: AppTheme.wordDisplay(
+                          size: 12,
+                          weight: FontWeight.w700,
+                          color: AppColors.ink,
+                        ).copyWith(fontFamily: null),
+                      ),
+                    ),
+                ],
+              ),
+              const SizedBox(height: AppSpacing.x3),
+              Divider(color: AppColors.of(context).divider, height: 1),
+              const SizedBox(height: AppSpacing.x3),
+              Row(
+                children: [
+                  Text(
+                    '${article.createdAt.month}/${article.createdAt.day} · ${_wordCount(article.articleText)} 词',
+                    style: AppTheme.mutedCaption(size: 11, context: context),
                   ),
-                ),
+                  const Spacer(),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppSpacing.x3,
+                      vertical: AppSpacing.x1,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF57A16),
+                      borderRadius: BorderRadius.circular(AppRadii.pill),
+                    ),
+                    child: Text(
+                      level,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }

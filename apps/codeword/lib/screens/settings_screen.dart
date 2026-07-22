@@ -5,7 +5,6 @@ import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
 import '../services/article_repository.dart';
-import '../state/app_settings.dart';
 import '../state/learning_session.dart';
 import '../state/llm_config.dart';
 import 'ai_settings_screen.dart';
@@ -32,10 +31,6 @@ class SettingsScreen extends ConsumerWidget {
               sliver: SliverList.list(
                 children: [
                   const _SettingsHeader(),
-                  const SizedBox(height: AppSpacing.x5),
-                  const _SectionLabel('学习节奏'),
-                  const SizedBox(height: AppSpacing.x2),
-                  const _SettingsGroup(children: [_DailyNewWordsRow()]),
                   const SizedBox(height: AppSpacing.x5),
                   const _SectionLabel('AI'),
                   const SizedBox(height: AppSpacing.x2),
@@ -123,75 +118,6 @@ class _SettingsGroup extends StatelessWidget {
                 color: AppColors.of(context).divider.withValues(alpha: 0.7),
               ),
           ],
-        ],
-      ),
-    );
-  }
-}
-
-class _DailyNewWordsRow extends ConsumerWidget {
-  const _DailyNewWordsRow();
-
-  Future<void> _adjust(BuildContext context, WidgetRef ref, int delta) async {
-    HapticFeedback.selectionClick();
-    try {
-      await ref.read(appSettingsProvider.notifier).adjustDailyNewWords(delta);
-    } catch (_) {
-      if (!context.mounted) return;
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(const SnackBar(content: Text('保存失败，请稍后再试')));
-    }
-  }
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final settings = ref.watch(appSettingsProvider);
-    final value = settings.dailyNewWords;
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.x4,
-        vertical: AppSpacing.x3,
-      ),
-      child: Row(
-        children: [
-          const _SettingIcon(icon: Icons.calendar_today_rounded),
-          const SizedBox(width: AppSpacing.x3),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('每日新词', style: AppTheme.rowTitle(context: context)),
-                const SizedBox(height: 2),
-                Text(
-                  '新词上限，复习仍然优先',
-                  style: AppTheme.mutedCaption(size: 12, context: context),
-                ),
-              ],
-            ),
-          ),
-          _StepperButton(
-            icon: Icons.remove_rounded,
-            enabled: value > AppSettings.minDailyNewWords,
-            onPressed: () => _adjust(context, ref, -1),
-          ),
-          SizedBox(
-            width: 48,
-            child: Text(
-              '$value',
-              textAlign: TextAlign.center,
-              style: AppTheme.wordDisplay(
-                size: 20,
-                color: AppColors.of(context).ink,
-                weight: FontWeight.w700,
-              ),
-            ),
-          ),
-          _StepperButton(
-            icon: Icons.add_rounded,
-            enabled: value < AppSettings.maxDailyNewWords,
-            onPressed: () => _adjust(context, ref, 1),
-          ),
         ],
       ),
     );
@@ -298,15 +224,9 @@ class _ClearLearningDataRow extends ConsumerWidget {
     if (completed) {
       ref.read(learningDataClearInProgressProvider.notifier).state = false;
       try {
-        await ref.read(appSettingsProvider.notifier).ready;
-        final settings = ref.read(appSettingsProvider);
         await ref
             .read(learningSessionProvider.notifier)
-            .start(
-              vocabId: ref.read(selectedVocabProvider),
-              dailyNewWordLimit: settings.dailyNewWords,
-              maxSessionSize: settings.dailyNewWords + 20,
-            );
+            .start(vocabId: ref.read(selectedVocabProvider));
       } catch (_) {
         // The Words tab already shows its loading state and can retry.
       }
@@ -410,34 +330,6 @@ class _SettingIcon extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppRadii.sm),
       ),
       child: Icon(icon, color: color, size: 19),
-    );
-  }
-}
-
-class _StepperButton extends StatelessWidget {
-  final IconData icon;
-  final bool enabled;
-  final VoidCallback onPressed;
-
-  const _StepperButton({
-    required this.icon,
-    required this.enabled,
-    required this.onPressed,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton.filledTonal(
-      tooltip: icon == Icons.add_rounded ? '增加' : '减少',
-      onPressed: enabled ? onPressed : null,
-      icon: Icon(icon, size: 18),
-      style: IconButton.styleFrom(
-        backgroundColor: AppColors.of(context).surfaceMuted,
-        foregroundColor: AppColors.of(context).ink,
-        disabledForegroundColor: AppColors.of(context).inkSubtle,
-        minimumSize: const Size(36, 36),
-        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-      ),
     );
   }
 }

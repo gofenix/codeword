@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,7 +7,6 @@ import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
 import '../services/tts_service.dart';
-import '../state/app_settings.dart';
 import '../state/learning_session.dart';
 
 /// Compute a font size for [text] that fits within a phone-width budget.
@@ -34,16 +32,10 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
   void initState() {
     super.initState();
     Future.microtask(() async {
-      await ref.read(appSettingsProvider.notifier).ready;
       if (!mounted) return;
-      final settings = ref.read(appSettingsProvider);
       await ref
           .read(learningSessionProvider.notifier)
-          .start(
-            vocabId: widget.vocabId,
-            dailyNewWordLimit: settings.dailyNewWords,
-            maxSessionSize: settings.dailyNewWords + 20,
-          );
+          .start(vocabId: widget.vocabId);
     });
   }
 
@@ -70,56 +62,24 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
 
     return Scaffold(
       backgroundColor: AppColors.of(context).background,
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: AppColors.of(context).surface.withValues(alpha: 0.7),
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        surfaceTintColor: Colors.transparent,
-        flexibleSpace: ClipRect(
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
-            child: Container(color: Colors.transparent),
+      body: SafeArea(
+        child: switch (session.phase) {
+          SessionPhase.loading => const Center(
+            child: CircularProgressIndicator(color: AppColors.primary),
           ),
-        ),
-        title: session.phase == SessionPhase.wrongDetail
-            ? Text(
-                '答错了',
-                style: AppTheme.mutedCaption(
-                  size: 13,
-                  color: AppColors.danger,
-                  context: context,
-                ),
-              )
-            : (session.phase == SessionPhase.asking
-                  ? Text(
-                      '${(session.currentIndex + 1).clamp(1, session.initialQuestionCount)} / ${session.initialQuestionCount}',
-                      style: AppTheme.mutedCaption(size: 13, context: context),
-                    )
-                  : const SizedBox.shrink()),
-        centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.close_rounded),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
+          SessionPhase.asking => AskingView(
+            session: session,
+            key: const ValueKey('asking'),
+          ),
+          SessionPhase.wrongDetail => WrongDetailView(
+            session: session,
+            key: const ValueKey('wrong'),
+          ),
+          SessionPhase.finished => const _FinishedView(
+            key: ValueKey('finished'),
+          ),
+        },
       ),
-      body: switch (session.phase) {
-        SessionPhase.loading => const Center(
-          child: CircularProgressIndicator(color: AppColors.primary),
-        ),
-        SessionPhase.asking => AskingView(
-          session: session,
-          key: const ValueKey('asking'),
-        ),
-        SessionPhase.wrongDetail => WrongDetailView(
-          session: session,
-          key: const ValueKey('wrong'),
-        ),
-        SessionPhase.finished => _FinishedView(
-          key: const ValueKey('finished'),
-          onClose: () => Navigator.of(context).pop(),
-        ),
-      },
     );
   }
 }
@@ -198,7 +158,7 @@ class _AskingViewState extends ConsumerState<AskingView> {
       // the prompt, (2) the wrong-answer detail card where hearing the
       // correct pronunciation helps learning. Playing here just makes
       // the flow feel laggy.
-      Future.delayed(const Duration(milliseconds: 320), () {
+      Future.delayed(AppMotion.answerCorrect, () {
         if (!mounted) return;
         ref.read(learningSessionProvider.notifier).answer(i);
       });
@@ -206,7 +166,7 @@ class _AskingViewState extends ConsumerState<AskingView> {
       HapticFeedback.heavyImpact();
       // Brief pause so the user sees the red highlight before the
       // immersive wrong-answer card takes over.
-      Future.delayed(const Duration(milliseconds: 250), () {
+      Future.delayed(AppMotion.answerWrong, () {
         if (!mounted) return;
         ref.read(learningSessionProvider.notifier).answer(i);
       });
@@ -225,12 +185,15 @@ class _AskingViewState extends ConsumerState<AskingView> {
       _typedCorrect = correct;
     });
     correct ? HapticFeedback.lightImpact() : HapticFeedback.heavyImpact();
-    Future.delayed(const Duration(milliseconds: 320), () {
-      if (!mounted) return;
-      ref
-          .read(learningSessionProvider.notifier)
-          .answerTyped(_typingController.text);
-    });
+    Future.delayed(
+      correct ? AppMotion.answerCorrect : AppMotion.answerWrong,
+      () {
+        if (!mounted) return;
+        ref
+            .read(learningSessionProvider.notifier)
+            .answerTyped(_typingController.text);
+      },
+    );
   }
 
   _OptionState _optionState(int i, int correctIndex) {
@@ -950,36 +913,24 @@ class _OptionColors {
 }
 
 class _FinishedView extends StatelessWidget {
-  final VoidCallback onClose;
-  const _FinishedView({required this.onClose, super.key});
+  const _FinishedView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(AppSpacing.x6),
-        child: AppCard(
-          padding: const EdgeInsets.all(AppSpacing.x6),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                '本组完成',
-                style: AppTheme.wordDisplay(
-                  size: 24,
-                  color: AppColors.of(context).ink,
-                ),
-              ),
-              const SizedBox(height: AppSpacing.x6),
-              FilledButton(
-                onPressed: onClose,
-                style: FilledButton.styleFrom(
-                  minimumSize: const Size.fromHeight(48),
-                ),
-                child: const Text('完成'),
-              ),
-            ],
-          ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.inbox_outlined,
+              color: AppColors.of(context).inkSubtle,
+              size: 36,
+            ),
+            const SizedBox(height: AppSpacing.x3),
+            Text('当前没有待学单词', style: AppTheme.cardTitle(context: context)),
+          ],
         ),
       ),
     );

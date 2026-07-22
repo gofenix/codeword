@@ -1,5 +1,4 @@
 import 'package:codeword/main.dart';
-import 'package:codeword/state/app_settings.dart';
 import 'package:codeword/state/learning_session.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -10,7 +9,9 @@ import 'package:lib_core/lib_core.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('first learning round and BYOK reading gate', (tester) async {
+  testWidgets('continuous learning exhaustion and BYOK reading gate', (
+    tester,
+  ) async {
     ReviewRepository.resetForTesting();
     await ReviewRepository.initWithBackend(InMemoryStorageBackend());
     addTearDown(ReviewRepository.resetForTesting);
@@ -44,9 +45,6 @@ void main() {
           vocabCacheProvider(
             kDefaultVocabId,
           ).overrideWith((ref) async => [word]),
-          appSettingsProvider.overrideWith(
-            (ref) => AppSettingsNotifier(_ImmediateSettingsStore()),
-          ),
         ],
         child: const CodewordApp(),
       ),
@@ -56,7 +54,7 @@ void main() {
     expect(find.text('cache'), findsWidgets);
     await tester.tap(find.text('缓存'));
     await tester.pump(const Duration(milliseconds: 400));
-    expect(find.text('本书新词已学完'), findsOneWidget);
+    expect(find.text('当前没有待学单词'), findsOneWidget);
 
     await tester.tap(find.text('阅读'));
     await tester.pumpAndSettle();
@@ -66,20 +64,11 @@ void main() {
 
     await tester.tap(find.text('图表'));
     await tester.pumpAndSettle();
-    expect(find.text('掌握进度'), findsOneWidget);
-    expect(find.text('掌握分布'), findsOneWidget);
-    expect(find.text('今日'), findsOneWidget);
+    expect(find.text('当前词书掌握'), findsOneWidget);
+    expect(find.text('近 14 天'), findsOneWidget);
     await tester.drag(find.byType(CustomScrollView), const Offset(0, -500));
     await tester.pumpAndSettle();
-    expect(find.text('学习节奏'), findsOneWidget);
+    expect(find.text('90 天学习节奏'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
-}
-
-class _ImmediateSettingsStore extends AppSettingsStore {
-  @override
-  Future<AppSettings> read() async => const AppSettings(dailyNewWords: 3);
-
-  @override
-  Future<void> write(AppSettings settings) async {}
 }

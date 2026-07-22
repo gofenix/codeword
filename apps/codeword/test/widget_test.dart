@@ -14,7 +14,6 @@ import 'package:codeword/screens/learning_session_screen.dart';
 import 'package:codeword/screens/reading_screen.dart';
 import 'package:codeword/screens/stats_screen.dart';
 import 'package:codeword/screens/settings_screen.dart';
-import 'package:codeword/state/app_settings.dart';
 import 'package:codeword/state/learning_session.dart';
 import 'package:codeword/state/llm_config.dart';
 
@@ -25,13 +24,7 @@ void main() {
     List<VocabList> catalog = const [],
     List<Override> overrides = const [],
   }) => ProviderScope(
-    overrides: [
-      qwertyCatalogProvider.overrideWithValue(catalog),
-      appSettingsProvider.overrideWith(
-        (ref) => AppSettingsNotifier(_ImmediateAppSettingsStore()),
-      ),
-      ...overrides,
-    ],
+    overrides: [qwertyCatalogProvider.overrideWithValue(catalog), ...overrides],
     child: const CodewordApp(),
   );
 
@@ -94,28 +87,26 @@ void main() {
     expect(discoveryStack.index, 3);
   });
 
-  testWidgets(
-    'Charts tab prioritizes progress, distribution, today and rhythm',
-    (tester) async {
-      await tester.pumpWidget(testApp());
-      await tester.pump();
+  testWidgets('Charts tab prioritizes today, mastery, trends and rhythm', (
+    tester,
+  ) async {
+    await tester.pumpWidget(testApp());
+    await tester.pump();
 
-      await tester.tap(find.text('图表'));
-      await tester.pump();
+    await tester.tap(find.text('图表'));
+    await tester.pump();
 
-      expect(find.text('当前词书'), findsOneWidget);
-      expect(find.text('掌握进度'), findsOneWidget);
-      expect(find.text('掌握分布'), findsOneWidget);
-      expect(find.text('今日'), findsOneWidget);
-      await tester.scrollUntilVisible(
-        find.text('学习节奏'),
-        300,
-        scrollable: find.byType(Scrollable).last,
-      );
-      expect(find.text('学习节奏'), findsOneWidget);
-      expect(find.text('打开 0 次'), findsNothing);
-    },
-  );
+    expect(find.textContaining('记忆状态'), findsOneWidget);
+    expect(find.text('当前词书掌握'), findsOneWidget);
+    expect(find.text('近 14 天'), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.text('90 天学习节奏'),
+      300,
+      scrollable: find.byType(Scrollable).last,
+    );
+    expect(find.text('90 天学习节奏'), findsOneWidget);
+    expect(find.text('打开 0 次'), findsNothing);
+  });
 
   testWidgets('Current vocabulary card opens the Library tab', (tester) async {
     await tester.pumpWidget(testApp());
@@ -123,7 +114,7 @@ void main() {
 
     await tester.tap(find.text('图表'));
     await tester.pump();
-    await tester.tap(find.text('当前词书'));
+    await tester.tap(find.text('当前词书掌握'));
     await tester.pump();
 
     final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
@@ -166,13 +157,7 @@ void main() {
       ),
     );
     await tester.pump();
-    await tester.scrollUntilVisible(
-      find.text('复习 0'),
-      250,
-      scrollable: find.byType(Scrollable).last,
-    );
-    expect(find.text('复习 0'), findsOneWidget);
-    expect(find.text('新学 1'), findsOneWidget);
+    expect(find.textContaining('今日新学 1'), findsOneWidget);
   });
 
   testWidgets('Library tab opens Settings as a secondary page', (tester) async {
@@ -190,7 +175,7 @@ void main() {
     expect(find.text('设置'), findsWidgets);
   });
 
-  testWidgets('Completion dashboard opens the Library tab', (tester) async {
+  testWidgets('Empty learning state opens the Library tab', (tester) async {
     await tester.pumpWidget(
       testApp(
         overrides: [
@@ -202,7 +187,8 @@ void main() {
     );
     await tester.pump();
 
-    await tester.tap(find.text('选择下一本词书'));
+    expect(find.text('当前没有待学单词'), findsOneWidget);
+    await tester.tap(find.text('选择词书'));
     await tester.pump();
 
     final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
@@ -230,9 +216,68 @@ void main() {
     expect(find.text('C'), findsOneWidget);
     expect(find.text('D'), findsOneWidget);
     expect(find.text('开始背词'), findsNothing);
-    expect(find.byIcon(Icons.close_rounded), findsWidgets);
+    expect(find.byIcon(Icons.close_rounded), findsNothing);
     expect(find.byIcon(Icons.library_books_outlined), findsWidgets);
-    expect(find.text('阅读'), findsNothing);
+    expect(find.text('阅读'), findsOneWidget);
+  });
+
+  testWidgets('Words tab keeps the same question across tab switches', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      testApp(
+        overrides: [
+          learningSessionProvider.overrideWith(
+            (ref) => _AskingLearningSessionNotifier(ref),
+          ),
+        ],
+      ),
+    );
+    await tester.pump();
+    expect(find.text('dermis'), findsOneWidget);
+
+    await tester.tap(find.text('阅读'));
+    await tester.pump();
+    await tester.tap(find.byIcon(Icons.style_outlined));
+    await tester.pump();
+
+    expect(find.text('dermis'), findsOneWidget);
+    expect(find.byType(LinearProgressIndicator), findsNothing);
+    expect(find.byIcon(Icons.close_rounded), findsNothing);
+    expect(find.textContaining('继续下一组'), findsNothing);
+  });
+
+  testWidgets('Wrong detail survives a round trip to Reading', (tester) async {
+    await tester.pumpWidget(
+      testApp(
+        overrides: [
+          learningSessionProvider.overrideWith(
+            (ref) => _WrongLearningSessionNotifier(ref),
+          ),
+        ],
+      ),
+    );
+    await tester.pump();
+    expect(find.byType(WrongDetailView), findsOneWidget);
+
+    await tester.tap(find.text('阅读'));
+    await tester.pump();
+    await tester.tap(find.byIcon(Icons.style_outlined));
+    await tester.pump();
+
+    expect(find.byType(WrongDetailView), findsOneWidget);
+    expect(find.text('dermis'), findsOneWidget);
+  });
+
+  testWidgets('Settings no longer exposes a daily new-word target', (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      const ProviderScope(child: MaterialApp(home: SettingsScreen())),
+    );
+    await tester.pump();
+    expect(find.textContaining('每日新词'), findsNothing);
+    expect(find.textContaining('新词上限'), findsNothing);
   });
 
   testWidgets('Library continue returns to immersive Words tab', (
@@ -264,9 +309,9 @@ void main() {
 
     await tester.tap(find.byIcon(Icons.library_books_outlined).first);
     await tester.pump();
-    expect(find.text('继续学习'), findsOneWidget);
+    expect(find.text('继续学习'), findsNothing);
 
-    await tester.tap(find.text('继续学习'));
+    await tester.tap(find.text('生物医学专业英语词汇').first);
     await tester.pump();
     await tester.pump();
 
@@ -465,35 +510,6 @@ void main() {
     },
   );
 
-  test('session summary counts only initial new and review questions', () {
-    LearningQuestion question(String id, SessionQuestionSource source) =>
-        LearningQuestion(
-          word: _word(id, id, '释义'),
-          type: QuestionType.seeWordPickMeaning,
-          options: const ['释义', 'A', 'B', 'C'],
-          correctIndex: 0,
-          prompt: id,
-          source: source,
-        );
-
-    final state = LearningSessionState(
-      phase: SessionPhase.finished,
-      questions: [
-        question('new', SessionQuestionSource.newWord),
-        question('due', SessionQuestionSource.due),
-        question('retry', SessionQuestionSource.retry),
-      ],
-      currentIndex: 3,
-      correctCount: 2,
-      initialQuestionCount: 2,
-    );
-
-    expect(state.newWordCount, 1);
-    expect(state.reviewWordCount, 1);
-    expect(formatSessionDuration(const Duration(seconds: 18)), '18秒');
-    expect(formatSessionDuration(const Duration(seconds: 90)), '1分');
-  });
-
   testWidgets('LearningSessionScreen builds with vocabId only', (tester) async {
     await tester.pumpWidget(
       ProviderScope(
@@ -544,11 +560,7 @@ void main() {
       addTearDown(container.dispose);
 
       final notifier = container.read(learningSessionProvider.notifier);
-      await notifier.start(
-        vocabId: 'qwerty_flush',
-        dailyNewWordLimit: 1,
-        maxSessionSize: 1,
-      );
+      await notifier.start(vocabId: 'qwerty_flush');
       final q = container.read(learningSessionProvider).currentQuestion!;
       expect(ReviewRepository.flushInvocationCount, 0);
 
@@ -558,7 +570,7 @@ void main() {
         1,
         reason: 'state should advance after answer',
       );
-      expect(ReviewRepository.instance.studyMinutesOn(DateTime.now()), 1);
+      expect(ReviewRepository.instance.studyMinutesOn(DateTime.now()), 0);
 
       // _eagerFlush() must invoke ReviewRepository.flush().
       for (var i = 0; i < 100; i++) {
@@ -657,13 +669,15 @@ void main() {
       ],
     );
     addTearDown(container.dispose);
+    final subscription = container.listen(
+      learningSessionProvider,
+      (_, _) {},
+      fireImmediately: true,
+    );
+    addTearDown(subscription.close);
 
     final notifier = container.read(learningSessionProvider.notifier);
-    await notifier.start(
-      vocabId: 'qwerty_test',
-      dailyNewWordLimit: 1,
-      maxSessionSize: 1,
-    );
+    await notifier.start(vocabId: 'qwerty_test');
     final session = container.read(learningSessionProvider);
     expect(session.phase, SessionPhase.finished);
     expect(session.questions, isEmpty);
@@ -684,11 +698,7 @@ void main() {
       addTearDown(container.dispose);
 
       final notifier = container.read(learningSessionProvider.notifier);
-      await notifier.start(
-        vocabId: 'test',
-        dailyNewWordLimit: 2,
-        maxSessionSize: 2,
-      );
+      await notifier.start(vocabId: 'test');
       final first = container.read(learningSessionProvider).currentQuestion!;
       final wrongIndex = first.correctIndex == 0 ? 1 : 0;
 
@@ -699,13 +709,108 @@ void main() {
       );
       expect(container.read(learningSessionProvider).questions.length, 2);
 
-      notifier.next();
+      await notifier.next();
       final after = container.read(learningSessionProvider);
       expect(after.phase, SessionPhase.asking);
-      expect(after.questions.length, 3);
+      expect(after.questions.length, 2);
       expect(after.questions.last.word.id, first.word.id);
       expect(after.questions.last.source, SessionQuestionSource.retry);
       expect(after.questions.last.attemptNo, first.attemptNo + 1);
+    },
+  );
+
+  test(
+    'Wrong retry is inserted 3 to 5 questions later with a new type',
+    () async {
+      final words = List.generate(
+        10,
+        (index) => _word(
+          'qwerty_retry_${(index + 1).toString().padLeft(5, '0')}',
+          'word$index',
+          '释义$index',
+        ),
+      );
+      final container = ProviderContainer(
+        overrides: [
+          vocabCacheProvider('qwerty_retry').overrideWith((ref) async => words),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      final notifier = container.read(learningSessionProvider.notifier);
+      await notifier.start(vocabId: 'qwerty_retry');
+      final original = container.read(learningSessionProvider).currentQuestion!;
+      notifier.answer(original.correctIndex == 0 ? 1 : 0);
+      await notifier.next();
+
+      final state = container.read(learningSessionProvider);
+      final retryIndex = state.questions.indexWhere(
+        (question) => question.source == SessionQuestionSource.retry,
+      );
+      expect(retryIndex, inInclusiveRange(3, 5));
+      expect(state.questions[retryIndex].word.id, original.word.id);
+      expect(state.questions[retryIndex].type, isNot(original.type));
+    },
+  );
+
+  test(
+    'Continuous queue keeps learning beyond the old 32-question cap',
+    () async {
+      final words = List.generate(
+        40,
+        (index) => _word(
+          'qwerty_continuous_${(index + 1).toString().padLeft(5, '0')}',
+          'term$index',
+          '术语$index',
+        ),
+      );
+      final container = ProviderContainer(
+        overrides: [
+          vocabCacheProvider(
+            'qwerty_continuous',
+          ).overrideWith((ref) async => words),
+        ],
+      );
+      addTearDown(container.dispose);
+      final subscription = container.listen(
+        learningSessionProvider,
+        (_, _) {},
+        fireImmediately: true,
+      );
+      addTearDown(subscription.close);
+
+      final notifier = container.read(learningSessionProvider.notifier);
+      await notifier.start(vocabId: 'qwerty_continuous');
+      expect(container.read(learningSessionProvider).questions.length, 16);
+      for (var answered = 0; answered < 35; answered++) {
+        final question = container
+            .read(learningSessionProvider)
+            .currentQuestion!;
+        notifier.answer(question.correctIndex);
+        await pumpEventQueue();
+        for (var tick = 0; tick < 20; tick++) {
+          if (container.read(learningSessionProvider).phase ==
+              SessionPhase.asking) {
+            break;
+          }
+          await pumpEventQueue();
+        }
+        final state = container.read(learningSessionProvider);
+        expect(
+          state.phase,
+          SessionPhase.asking,
+          reason: 'answer $answered left ${state.questions.length}',
+        );
+        expect(
+          state.questions.map((question) => question.word.id).toSet().length,
+          state.questions.length,
+        );
+      }
+      expect(container.read(learningSessionProvider).correctCount, 35);
+      expect(
+        container.read(learningSessionProvider).phase,
+        SessionPhase.asking,
+      );
     },
   );
 
@@ -738,8 +843,50 @@ void main() {
     expect(state.currentQuestion, isNull);
   });
 
+  test('Global due words are ordered by oldest dueAt first', () async {
+    final now = DateTime.now();
+    final words = [
+      _word('qwerty_order_00001', 'latest', '较晚'),
+      _word('qwerty_order_00002', 'oldest', '最早'),
+      _word('qwerty_order_00003', 'middle', '中间'),
+      _word('qwerty_order_00004', 'fresh', '新词'),
+    ];
+    ReviewState reviewed(VocabWord word, int hoursAgo) => ReviewState(
+      wordId: word.id,
+      easiness: 250,
+      interval: 1,
+      repetitions: 1,
+      dueAt: now.subtract(Duration(hours: hoursAgo)),
+      lastReviewedAt: now.subtract(const Duration(days: 1)),
+    );
+    final container = ProviderContainer(
+      overrides: [
+        reviewStateProvider.overrideWith(
+          (ref) => ReviewStateNotifier({
+            words[0].id: reviewed(words[0], 1),
+            words[1].id: reviewed(words[1], 5),
+            words[2].id: reviewed(words[2], 3),
+          }),
+        ),
+        vocabCacheProvider('qwerty_order').overrideWith((ref) async => words),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    await container
+        .read(learningSessionProvider.notifier)
+        .start(vocabId: 'qwerty_order');
+    expect(
+      container
+          .read(learningSessionProvider)
+          .questions
+          .map((question) => question.word.word),
+      ['oldest', 'middle', 'latest', 'fresh'],
+    );
+  });
+
   test(
-    'Daily new-word limit is shared across sessions and vocabularies',
+    'Due words stay ahead of current-vocab new words in original order',
     () async {
       final now = DateTime.now();
       final today = DateTime(now.year, now.month, now.day, 12);
@@ -788,11 +935,7 @@ void main() {
 
       await container
           .read(learningSessionProvider.notifier)
-          .start(
-            vocabId: 'qwerty_test',
-            dailyNewWordLimit: 3,
-            maxSessionSize: 10,
-          );
+          .start(vocabId: 'qwerty_test');
       final questions = container.read(learningSessionProvider).questions;
       expect(
         questions.where((q) => q.source == SessionQuestionSource.due).length,
@@ -802,7 +945,11 @@ void main() {
         questions
             .where((q) => q.source == SessionQuestionSource.newWord)
             .length,
-        1,
+        3,
+      );
+      expect(
+        questions.skip(2).map((question) => question.word.id),
+        newWords.map((word) => word.id),
       );
     },
   );
@@ -819,16 +966,8 @@ void main() {
     addTearDown(container.dispose);
     final notifier = container.read(learningSessionProvider.notifier);
 
-    final firstStart = notifier.start(
-      vocabId: 'first',
-      dailyNewWordLimit: 1,
-      maxSessionSize: 1,
-    );
-    final secondStart = notifier.start(
-      vocabId: 'second',
-      dailyNewWordLimit: 1,
-      maxSessionSize: 1,
-    );
+    final firstStart = notifier.start(vocabId: 'first');
+    final secondStart = notifier.start(vocabId: 'second');
     secondLoad.complete([_word('second_001', 'queue', '队列')]);
     await secondStart;
     firstLoad.complete([_word('first_001', 'cache', '缓存')]);
@@ -882,17 +1021,15 @@ void main() {
 
       await container
           .read(learningSessionProvider.notifier)
-          .start(
-            vocabId: 'qwerty_current',
-            dailyNewWordLimit: 1,
-            maxSessionSize: 2,
-          );
+          .start(vocabId: 'qwerty_current');
       final questions = container.read(learningSessionProvider).questions;
-      expect(questions, hasLength(2));
+      expect(questions, hasLength(5));
       expect(questions.first.word.id, oldWords.first.id);
       expect(questions.first.source, SessionQuestionSource.due);
-      expect(questions.last.word.id, startsWith('qwerty_current_'));
-      expect(questions.last.source, SessionQuestionSource.newWord);
+      expect(
+        questions.skip(1).map((question) => question.word.id),
+        currentWords.map((word) => word.id),
+      );
     },
   );
 
@@ -924,20 +1061,13 @@ void main() {
     addTearDown(container.dispose);
 
     final notifier = container.read(learningSessionProvider.notifier);
-    await notifier.start(
-      vocabId: 'qwerty_recall',
-      dailyNewWordLimit: 0,
-      maxSessionSize: 1,
-    );
+    await notifier.start(vocabId: 'qwerty_recall');
     final question = container.read(learningSessionProvider).currentQuestion!;
     expect(question.type, QuestionType.typeWord);
     expect(question.options, isEmpty);
 
     notifier.answerTyped('  LATENCY  ');
-    expect(
-      container.read(learningSessionProvider).phase,
-      SessionPhase.finished,
-    );
+    expect(container.read(learningSessionProvider).phase, SessionPhase.asking);
     expect(container.read(learningSessionProvider).correctCount, 1);
   });
 
@@ -959,11 +1089,7 @@ void main() {
 
       await container
           .read(learningSessionProvider.notifier)
-          .start(
-            vocabId: 'qwerty_choices',
-            dailyNewWordLimit: 1,
-            maxSessionSize: 1,
-          );
+          .start(vocabId: 'qwerty_choices');
       final options = container
           .read(learningSessionProvider)
           .currentQuestion!
@@ -971,42 +1097,6 @@ void main() {
       expect(options, hasLength(4));
       expect(options.toSet(), hasLength(4));
       expect(options.where((option) => option.contains('—')), isEmpty);
-    },
-  );
-
-  test(
-    'App settings hydrate before queued adjustments and serialize writes',
-    () async {
-      final store = _TestAppSettingsStore();
-      final notifier = AppSettingsNotifier(store);
-
-      final first = notifier.adjustDailyNewWords(1);
-      final second = notifier.adjustDailyNewWords(1);
-      store.completeRead(const AppSettings(dailyNewWords: 20));
-      await Future.wait([first, second]);
-
-      expect(notifier.state.dailyNewWords, 22);
-      expect(store.writes, [21, 22]);
-    },
-  );
-
-  test(
-    'Failed queued setting writes roll back to the last durable value',
-    () async {
-      final store = _FailingAppSettingsStore();
-      final notifier = AppSettingsNotifier(store);
-      await notifier.ready;
-
-      final first = notifier.adjustDailyNewWords(1);
-      final second = notifier.adjustDailyNewWords(1);
-      try {
-        await first;
-      } catch (_) {}
-      try {
-        await second;
-      } catch (_) {}
-
-      expect(notifier.state.dailyNewWords, 20);
     },
   );
 
@@ -1116,31 +1206,6 @@ void main() {
     expect(backend.userData?['pendingLearningDataClear'], isNull);
   });
 
-  test(
-    'finishNow records an early end instead of a normal completion',
-    () async {
-      final word = _word('qwerty_test_00001', 'latency', '延迟');
-      final container = ProviderContainer(
-        overrides: [
-          vocabCacheProvider('qwerty_test').overrideWith((ref) async => [word]),
-        ],
-      );
-      addTearDown(container.dispose);
-
-      final notifier = container.read(learningSessionProvider.notifier);
-      await notifier.start(
-        vocabId: 'qwerty_test',
-        dailyNewWordLimit: 1,
-        maxSessionSize: 1,
-      );
-      notifier.finishNow();
-
-      final session = container.read(learningSessionProvider);
-      expect(session.phase, SessionPhase.finished);
-      expect(session.endedEarly, isTrue);
-    },
-  );
-
   testWidgets('Long words scale down without horizontal overflow', (
     tester,
   ) async {
@@ -1166,7 +1231,6 @@ void main() {
       ],
       currentIndex: 0,
       correctCount: 0,
-      initialQuestionCount: 1,
     );
 
     await tester.pumpWidget(
@@ -1498,18 +1562,23 @@ void main() {
       WidgetTester tester,
       Widget screen, {
       Size size = const Size(393, 852),
+      double textScale = 1,
     }) async {
       await tester.binding.setSurfaceSize(size);
       addTearDown(() => tester.binding.setSurfaceSize(null));
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
-            qwertyCatalogProvider.overrideWithValue(const []),
-            appSettingsProvider.overrideWith(
-              (ref) => AppSettingsNotifier(_ImmediateAppSettingsStore()),
+          overrides: [qwertyCatalogProvider.overrideWithValue(const [])],
+          child: MaterialApp(
+            theme: AppTheme.light(),
+            builder: (context, child) => MediaQuery(
+              data: MediaQuery.of(
+                context,
+              ).copyWith(textScaler: TextScaler.linear(textScale)),
+              child: child!,
             ),
-          ],
-          child: MaterialApp(theme: AppTheme.light(), home: screen),
+            home: screen,
+          ),
         ),
       );
       await tester.pump();
@@ -1545,32 +1614,42 @@ void main() {
     ) async {
       await pumpTab(tester, const ReadingScreen());
       expect(
-        tester.getTopLeft(find.byType(AppCard).first).dx,
+        tester
+            .getTopLeft(find.byKey(const ValueKey('reading-first-content')))
+            .dx,
         closeTo(24, 0.5),
       );
 
       await pumpTab(tester, const StatsScreen());
       expect(
-        tester.getTopLeft(find.byType(AppCard).first).dx,
+        tester.getTopLeft(find.byKey(const ValueKey('stats-first-content'))).dx,
         closeTo(24, 0.5),
       );
 
       await pumpTab(tester, DiscoveryScreen(onGoWords: () {}));
       expect(
-        tester.getTopLeft(find.byType(AppCard).first).dx,
+        tester
+            .getTopLeft(find.byKey(const ValueKey('library-first-content')))
+            .dx,
         closeTo(24, 0.5),
       );
     });
 
     testWidgets('start content at one shared vertical offset', (tester) async {
       await pumpTab(tester, const ReadingScreen());
-      final readingTop = tester.getTopLeft(find.byType(AppCard).first).dy;
+      final readingTop = tester
+          .getTopLeft(find.byKey(const ValueKey('reading-first-content')))
+          .dy;
 
       await pumpTab(tester, const StatsScreen());
-      final statsTop = tester.getTopLeft(find.byType(AppCard).first).dy;
+      final statsTop = tester
+          .getTopLeft(find.byKey(const ValueKey('stats-first-content')))
+          .dy;
 
       await pumpTab(tester, DiscoveryScreen(onGoWords: () {}));
-      final libraryTop = tester.getTopLeft(find.byType(TextField).first).dy;
+      final libraryTop = tester
+          .getTopLeft(find.byKey(const ValueKey('library-first-content')))
+          .dy;
 
       expect(statsTop, closeTo(readingTop, 0.5));
       expect(libraryTop, closeTo(readingTop, 0.5));
@@ -1636,6 +1715,20 @@ void main() {
 
       await pumpTab(tester, DiscoveryScreen(onGoWords: () {}), size: small);
       expect(tester.takeException(), isNull);
+    });
+
+    testWidgets('lay out at 140% text scale on a compact screen', (
+      tester,
+    ) async {
+      const small = Size(320, 568);
+      for (final screen in <Widget>[
+        const ReadingScreen(),
+        const StatsScreen(),
+        DiscoveryScreen(onGoWords: () {}),
+      ]) {
+        await pumpTab(tester, screen, size: small, textScale: 1.4);
+        expect(tester.takeException(), isNull);
+      }
     });
   });
 
@@ -1724,52 +1817,45 @@ class _AskingLearningSessionNotifier extends LearningSessionNotifier {
           correctIndex: 0,
           prompt: 'dermis',
         ),
+        LearningQuestion(
+          word: _word('qwerty_biomedical_terms_00002', 'cache', '缓存'),
+          type: QuestionType.seeWordPickMeaning,
+          options: const ['缓存', '队列', '线程', '文件'],
+          correctIndex: 0,
+          prompt: 'cache',
+        ),
       ],
       currentIndex: 0,
       correctCount: 0,
-      initialQuestionCount: 1,
     );
   }
 
   @override
-  Future<void> start({
-    required String vocabId,
-    int dailyNewWordLimit = 12,
-    int maxSessionSize = 32,
-  }) async {}
+  Future<void> start({required String vocabId}) async {}
 }
 
-class _TestAppSettingsStore extends AppSettingsStore {
-  final Completer<AppSettings> _read = Completer<AppSettings>();
-  final List<int> writes = [];
-
-  void completeRead(AppSettings settings) => _read.complete(settings);
-
-  @override
-  Future<AppSettings> read() => _read.future;
-
-  @override
-  Future<void> write(AppSettings settings) async {
-    writes.add(settings.dailyNewWords);
+class _WrongLearningSessionNotifier extends LearningSessionNotifier {
+  _WrongLearningSessionNotifier(super.ref) {
+    final question = LearningQuestion(
+      word: _word('qwerty_biomedical_terms_00001', 'dermis', '皮肤，真皮'),
+      type: QuestionType.seeWordPickMeaning,
+      options: const ['皮肤，真皮', '意外事故', '黑素瘤', '复杂的'],
+      correctIndex: 0,
+      prompt: 'dermis',
+    );
+    state = LearningSessionState(
+      phase: SessionPhase.wrongDetail,
+      questions: [question],
+      currentIndex: 0,
+      correctCount: 0,
+      lastAnswer: AnswerQuality.again,
+      lastSelectedIndex: 1,
+      lastQuestionQueuedForRetry: true,
+    );
   }
-}
-
-class _ImmediateAppSettingsStore extends AppSettingsStore {
-  @override
-  Future<AppSettings> read() async => const AppSettings();
 
   @override
-  Future<void> write(AppSettings settings) async {}
-}
-
-class _FailingAppSettingsStore extends AppSettingsStore {
-  @override
-  Future<AppSettings> read() async => const AppSettings(dailyNewWords: 20);
-
-  @override
-  Future<void> write(AppSettings settings) async {
-    throw StateError('simulated write failure');
-  }
+  Future<void> start({required String vocabId}) async {}
 }
 
 class _DelayedReviewBackend extends InMemoryStorageBackend {
