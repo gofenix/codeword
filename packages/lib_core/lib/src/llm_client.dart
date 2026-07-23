@@ -56,7 +56,7 @@ class LlmConfig {
 
   /// Default endpoint for MiniMax (Anthropic-compatible format).
   static const defaultBaseUrl = 'https://api.minimaxi.com/anthropic';
-  static const defaultModel = 'MiniMax-M3';
+  static const defaultModel = 'MiniMax-M2.7';
 
   /// Convenience factory for a "first time" config (no key yet).
   static LlmConfig defaults() =>

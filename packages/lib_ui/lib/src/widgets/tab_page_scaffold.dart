@@ -10,7 +10,7 @@ import '../tokens.dart';
 /// / tri-colour gradient). This owns all of that in one place so every
 /// content tab shares:
 ///
-///   * a solid [AppColors.background] fill — no gradients,
+///   * one restrained warm-light canvas material,
 ///   * a single `SafeArea(bottom: false)` around the whole scroll view
 ///     (the bottom inset stays owned by the frosted bottom nav), and
 ///   * a centered 22px title bar with an optional trailing action.
@@ -50,11 +50,11 @@ class TabPageScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     // Material keeps the ink/text/canvas ancestor available to the scroll
     // content (StatsScreen relied on this when it wrapped itself in a
-    // transparent Material). Transparent so the ColoredBox fill shows.
+    // transparent Material). Transparent so the canvas material shows.
     return Material(
       type: MaterialType.transparency,
-      child: ColoredBox(
-        color: AppColors.of(context).background,
+      child: DecoratedBox(
+        decoration: AppMaterials.canvasDecoration(context),
         child: SafeArea(
           bottom: false,
           child: CustomScrollView(
@@ -101,8 +101,10 @@ class _TabPageHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaledTitleHeight = MediaQuery.textScalerOf(context).scale(22) + 12;
+    final headerHeight = scaledTitleHeight > 44 ? scaledTitleHeight : 44.0;
     return SizedBox(
-      height: 44,
+      height: headerHeight,
       child: Row(
         children: [
           const SizedBox(width: 44),
@@ -110,6 +112,9 @@ class _TabPageHeader extends StatelessWidget {
             child: Center(
               child: Text(
                 title,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w700,

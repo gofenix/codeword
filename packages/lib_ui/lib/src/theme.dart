@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'tokens.dart';
 
-/// v5 ThemeData factory: light/dark surfaces, green accent, and platform
-/// system fonts so the complete interface remains available offline.
+/// Editorial ThemeData factory: paper surfaces, bronze accents, system CJK and
+/// a bundled Libre Baskerville face for English display copy.
 ///
 /// Material 3 compatibility: both [light] and [dark] fill in the full
 /// ColorScheme (tertiary, outline, scrim, inverse*, surfaceContainer* …)
@@ -55,7 +55,9 @@ class AppTheme {
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
-          shape: const StadiumBorder(),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppRadii.sm),
+          ),
           textStyle: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
@@ -66,12 +68,17 @@ class AppTheme {
         style: FilledButton.styleFrom(
           backgroundColor: AppColors.primary,
           foregroundColor: AppColors.onPrimary,
+          elevation: 2,
+          shadowColor: const Color(0x3D3A2E1E),
+          surfaceTintColor: Colors.transparent,
           padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
           minimumSize: const Size.fromHeight(50),
-          shape: const StadiumBorder(),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppRadii.sm),
+          ),
         ),
       ),
       pageTransitionsTheme: const PageTransitionsTheme(
@@ -187,7 +194,9 @@ class AppTheme {
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
-          shape: const StadiumBorder(),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppRadii.sm),
+          ),
           textStyle: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
@@ -198,12 +207,17 @@ class AppTheme {
         style: FilledButton.styleFrom(
           backgroundColor: AppColors.primary,
           foregroundColor: AppColors.onPrimary,
+          elevation: 1,
+          shadowColor: const Color(0x66000000),
+          surfaceTintColor: Colors.transparent,
           padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
           minimumSize: const Size.fromHeight(50),
-          shape: const StadiumBorder(),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppRadii.sm),
+          ),
         ),
       ),
       pageTransitionsTheme: const PageTransitionsTheme(
@@ -321,18 +335,18 @@ class AppTheme {
   static ColorScheme _darkScheme() {
     return const ColorScheme.dark(
       brightness: Brightness.dark,
-      primary: Color(0xFF6EE7B7),
-      onPrimary: Color(0xFF003827),
-      primaryContainer: Color(0xFF006E51),
-      onPrimaryContainer: Color(0xFF7AF5C6),
-      secondary: Color(0xFFA5B4FC),
-      onSecondary: Color(0xFF1E1B4B),
-      secondaryContainer: Color(0xFF3730A3),
-      onSecondaryContainer: Color(0xFFC7D2FE),
-      tertiary: Color(0xFFA5B4FC),
-      onTertiary: Color(0xFF1E1B4B),
-      tertiaryContainer: Color(0xFF3730A3),
-      onTertiaryContainer: Color(0xFFC7D2FE),
+      primary: Color(0xFFD8C39E),
+      onPrimary: Color(0xFF342A1D),
+      primaryContainer: Color(0xFF59492F),
+      onPrimaryContainer: Color(0xFFF2E4CB),
+      secondary: Color(0xFFAFC1A6),
+      onSecondary: Color(0xFF20301D),
+      secondaryContainer: Color(0xFF394A35),
+      onSecondaryContainer: Color(0xFFD7E8D0),
+      tertiary: Color(0xFFAFC1A6),
+      onTertiary: Color(0xFF20301D),
+      tertiaryContainer: Color(0xFF394A35),
+      onTertiaryContainer: Color(0xFFD7E8D0),
       error: Color(0xFFFFB4AB),
       onError: Color(0xFF690005),
       errorContainer: Color(0xFF93000A),
@@ -354,7 +368,7 @@ class AppTheme {
       inverseSurface: AppColors.surface,
       onInverseSurface: AppColors.ink,
       inversePrimary: AppColors.primaryDark,
-      surfaceTint: Color(0xFF6EE7B7),
+      surfaceTint: Color(0xFFD8C39E),
     );
   }
 
@@ -395,7 +409,9 @@ class AppTheme {
   // omitted (or when an explicit [color] is given) behaviour is unchanged,
   // keeping every existing light-theme call site pixel-identical.
 
-  /// Platform serif style for displaying a vocabulary word.
+  static const String editorialFont = 'packages/lib_ui/LibreBaskerville';
+
+  /// Bundled serif style for vocabulary words and editorial English copy.
   static TextStyle wordDisplay({
     double size = 36,
     FontWeight weight = FontWeight.w700,
@@ -403,11 +419,28 @@ class AppTheme {
     BuildContext? context,
   }) {
     return TextStyle(
-      fontFamily: 'serif',
+      fontFamily: editorialFont,
       fontSize: size,
       fontWeight: weight,
       color: color ?? _ink(context),
       height: 1.2,
+      letterSpacing: 0,
+    );
+  }
+
+  static TextStyle editorial({
+    double size = 24,
+    FontWeight weight = FontWeight.w700,
+    Color? color,
+    BuildContext? context,
+    double height = 1.2,
+  }) {
+    return TextStyle(
+      fontFamily: editorialFont,
+      fontSize: size,
+      fontWeight: weight,
+      color: color ?? _ink(context),
+      height: height,
       letterSpacing: 0,
     );
   }
@@ -449,10 +482,10 @@ class AppTheme {
   /// Small uppercase section label (e.g. "PROFILE", "AI").
   static TextStyle sectionLabel({Color? color, BuildContext? context}) {
     return TextStyle(
-      fontSize: 13,
-      fontWeight: FontWeight.w700,
-      letterSpacing: 0,
-      color: color ?? _inkMuted(context),
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
+      letterSpacing: 2.4,
+      color: color ?? AppColors.primary,
     );
   }
 

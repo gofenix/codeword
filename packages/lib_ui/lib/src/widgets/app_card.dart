@@ -32,16 +32,24 @@ class AppCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final palette = AppColors.of(context);
+    final usePaperMaterial = Theme.of(context).brightness == Brightness.light &&
+        (color == null || color == palette.surface);
     final card = Container(
       padding: padding,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        color: color ?? AppColors.of(context).surface,
-        borderRadius: BorderRadius.circular(AppRadii.md),
+        color: usePaperMaterial ? null : color ?? palette.surface,
+        gradient: usePaperMaterial ? AppMaterials.paper : null,
+        borderRadius: BorderRadius.circular(AppRadii.sm),
         border: Border.all(
-          color: AppColors.of(context).divider.withValues(alpha: 0.5),
-          width: 0.5,
+          color: palette.divider.withValues(alpha: 0.82),
+          width: 0.8,
         ),
+        boxShadow: shadow ??
+            (Theme.of(context).brightness == Brightness.light
+                ? AppShadows.paper
+                : AppShadows.none),
       ),
       child: child,
     );

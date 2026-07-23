@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_core/lib_core.dart';
 
+typedef LlmConfigVerifier = Future<void> Function(LlmConfig config);
+
 /// Riverpod provider for the current [LlmConfig]. Auto-loads from
 /// secure storage on first read; mutations are persisted transparently.
 ///
@@ -102,4 +104,21 @@ final llmClientProvider = Provider<LlmClient>((ref) {
 final llmConfiguredProvider = Provider<bool>((ref) {
   final c = ref.watch(llmConfigProvider);
   return c.isConfigured;
+});
+
+final llmConfigVerifierProvider = Provider<LlmConfigVerifier>((ref) {
+  return (config) async {
+    final client = LlmClient(config: config);
+    try {
+      await client.chat(
+        LlmChatRequest(
+          model: config.model,
+          maxTokens: 4,
+          messages: const [LlmMessage(role: 'user', content: 'Reply OK')],
+        ),
+      );
+    } finally {
+      client.close();
+    }
+  };
 });

@@ -1,5 +1,7 @@
+import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,23 +19,27 @@ import 'ai_settings_screen.dart';
 /// tap-to-define, comprehension quiz, and article history.
 class ReadingScreen extends ConsumerStatefulWidget {
   final bool isActive;
+  final VoidCallback? onGoWords;
 
-  const ReadingScreen({super.key, this.isActive = true});
+  const ReadingScreen({super.key, this.isActive = true, this.onGoWords});
 
   @override
   ConsumerState<ReadingScreen> createState() => _ReadingScreenState();
 }
 
 class _ReadingScreenState extends ConsumerState<ReadingScreen> {
-  List<PulseWordEntry> _pool = const [];
+  List<PulseWordEntry> _candidates = const [];
+  List<PulseWordEntry> _selection = const [];
   bool _loading = true;
   bool _generating = false;
-  String? _article;
   String? _error;
   List<SavedArticle> _history = const [];
   int _requestGeneration = 0;
+  int _poolLoadGeneration = 0;
   int _loadedRepositoryRevision = -1;
+  int _rotation = 0;
   bool _contentInitialized = false;
+  bool _selectingWords = false;
 
   @override
   void initState() {
@@ -44,13 +50,14 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
         if (widget.isActive) _initializeContent();
       } else if (mounted) {
         _requestGeneration++;
+        _poolLoadGeneration++;
         _contentInitialized = false;
         setState(() {
           _loading = false;
           _generating = false;
-          _pool = const [];
+          _candidates = const [];
+          _selection = const [];
           _history = const [];
-          _article = null;
           _error = null;
         });
       }
@@ -93,41 +100,34 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
     }
   }
 
-  Future<void> _loadPool({bool replaceArticle = false}) async {
-    if (replaceArticle) _requestGeneration++;
-    setState(() {
-      _loading = true;
-      if (replaceArticle) {
-        _generating = false;
-        _article = null;
-      }
-    });
+  Future<void> _loadPool({bool rotate = false}) async {
+    final loadGeneration = ++_poolLoadGeneration;
+    final previousSelection = _selection.map(_readingWordKey).toList();
+    if (rotate) _rotation++;
+    setState(() => _loading = true);
     try {
       final notifier = ref.read(reviewStateProvider.notifier);
-      final reviewed = await notifier.reviewedTodayWords(limit: 10);
-      final due = reviewed.isEmpty
-          ? await notifier.dueWords(limit: 5)
-          : const <PulseWordEntry>[];
-      final fresh = reviewed.isEmpty
-          ? await notifier.recommendedNewWords(
-              limit: 5,
-              catalog: ref.read(qwertyCatalogProvider),
-            )
-          : const <PulseWordEntry>[];
-      final seen = <String>{};
-      final combined = <PulseWordEntry>[];
-      for (final e in [...reviewed, ...due, ...fresh]) {
-        if (seen.add('${e.vocabId}:${e.word}')) combined.add(e);
-      }
-      if (!mounted) return;
+      final candidates = await notifier.readingCandidateWords(limit: 24);
+      if (!mounted || loadGeneration != _poolLoadGeneration) return;
+      final selection = selectReadingWords(candidates, rotation: _rotation);
       setState(() {
-        if (_article == null || replaceArticle) {
-          _pool = combined;
-        }
+        _candidates = candidates;
+        _selection = selection;
         _loading = false;
+        _error = null;
       });
+      if (rotate &&
+          previousSelection.isNotEmpty &&
+          listEquals(
+            previousSelection,
+            selection.map(_readingWordKey).toList(),
+          )) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text('已经是当前最适合复现的词')));
+      }
     } catch (e) {
-      if (!mounted) return;
+      if (!mounted || loadGeneration != _poolLoadGeneration) return;
       setState(() {
         _loading = false;
         _error = '加载词表失败: $e';
@@ -135,28 +135,24 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
     }
   }
 
-  Future<SavedArticle?> _generate({List<PulseWordEntry>? poolOverride}) async {
-    if (_generating) return null;
+  Future<ReadingGenerationResult> _generate(
+    List<PulseWordEntry> sourcePool,
+  ) async {
+    if (_generating) {
+      return const ReadingGenerationResult.failure('文章正在生成，请稍候');
+    }
     final cfg = ref.read(llmConfigProvider);
     if (!cfg.isConfigured) {
-      if (!mounted) return null;
-      Navigator.of(
-        context,
-      ).push(MaterialPageRoute(builder: (_) => const AiSettingsScreen()));
-      return null;
+      return const ReadingGenerationResult.failure('请先配置 AI 阅读');
     }
-    final sourcePool = poolOverride ?? _pool;
-    if (sourcePool.isEmpty) {
-      if (mounted) {
-        setState(() => _error = '没有可用的词。先去学几轮。');
-      }
-      return null;
+    if (sourcePool.length < 3) {
+      return const ReadingGenerationResult.failure('至少选择 3 个已学词');
     }
     final generation = ++_requestGeneration;
     final repositoryRevision = ArticleRepository.instance.revision;
     final pool = List<PulseWordEntry>.unmodifiable(sourcePool);
     setState(() {
-      _pool = pool;
+      _selection = pool;
       _generating = true;
       _error = null;
     });
@@ -199,20 +195,16 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
               messages: [system, user],
             ),
           );
-      if (!mounted || generation != _requestGeneration) return null;
+      if (!mounted || generation != _requestGeneration) {
+        return const ReadingGenerationResult.cancelled();
+      }
       final generated = parseGeneratedReadingPayload(resp.content);
       final articleText = generated.article;
       if (articleText.isEmpty) {
-        setState(() {
-          _generating = false;
-          _error = 'AI 没有返回有效文章，请重试';
-        });
-        return null;
+        setState(() => _generating = false);
+        return const ReadingGenerationResult.failure('AI 没有返回有效文章，请重试');
       }
-      setState(() {
-        _article = articleText;
-        _generating = false;
-      });
+      setState(() => _generating = false);
       HapticFeedback.mediumImpact();
 
       // Save to history.
@@ -250,29 +242,33 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
         saved,
         expectedRevision: repositoryRevision,
       );
-      if (!savedSuccessfully || !mounted || generation != _requestGeneration) {
-        return null;
+      if (!mounted || generation != _requestGeneration) {
+        return const ReadingGenerationResult.cancelled();
+      }
+      if (!savedSuccessfully) {
+        return const ReadingGenerationResult.failure('文章已生成，但保存失败，请重试');
       }
       await _loadHistory();
-      return saved;
+      return ReadingGenerationResult.success(saved);
     } on LlmException catch (e) {
-      if (!mounted || generation != _requestGeneration) return null;
-      setState(() {
-        _generating = false;
-        _error = e.statusCode == 401
-            ? '鉴权失败 (401) · 检查 API Key'
+      if (!mounted || generation != _requestGeneration) {
+        return const ReadingGenerationResult.cancelled();
+      }
+      setState(() => _generating = false);
+      return ReadingGenerationResult.failure(
+        e.statusCode == 401
+            ? '鉴权失败，请检查 API Key'
             : e.statusCode == 404
-            ? '路径错误 (404) · 检查 Base URL'
-            : 'AI 调用失败 (${e.statusCode ?? '-'}): ${e.message}';
-      });
+            ? '模型或服务地址不可用'
+            : 'AI 调用失败：${e.message}',
+      );
     } catch (e) {
-      if (!mounted || generation != _requestGeneration) return null;
-      setState(() {
-        _generating = false;
-        _error = '网络错误: $e';
-      });
+      if (!mounted || generation != _requestGeneration) {
+        return const ReadingGenerationResult.cancelled();
+      }
+      setState(() => _generating = false);
+      return const ReadingGenerationResult.failure('网络连接失败，请稍后重试');
     }
-    return null;
   }
 
   void _resetAfterRepositoryClear() {
@@ -281,27 +277,23 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
       _history = const [];
       _loadedRepositoryRevision = ArticleRepository.instance.revision;
     });
-    _loadPool(replaceArticle: true);
+    _rotation = 0;
+    _loadPool();
   }
 
   Future<void> _openComposer() async {
     if (_loading || _generating) return;
-    if (_pool.isEmpty) {
-      setState(() => _error = '没有可用的词。先去学几轮再回来。');
+    if (_selection.length < 3) {
+      widget.onGoWords?.call();
       return;
     }
-    final selected = await Navigator.of(context).push<List<PulseWordEntry>>(
-      MaterialPageRoute(builder: (_) => _ReadingComposerPage(pool: _pool)),
-    );
-    if (!mounted || selected == null || selected.isEmpty) return;
-    final article = await _generate(poolOverride: selected);
-    if (!mounted || article == null) return;
-    _openArticle(article);
+    HapticFeedback.selectionClick();
+    setState(() => _selectingWords = true);
   }
 
-  void _openArticle(SavedArticle article) {
+  Future<void> _openArticle(SavedArticle article) async {
     HapticFeedback.selectionClick();
-    Navigator.of(context).push(
+    await Navigator.of(context).push<void>(
       MaterialPageRoute(builder: (_) => ArticleDetailScreen(article: article)),
     );
   }
@@ -328,12 +320,26 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
                 ),
               )
             else ...[
-              _ReadingHero(
-                pool: _pool,
-                loading: _loading,
-                generating: _generating,
-                onGenerate: _openComposer,
-                onRefresh: () => _loadPool(replaceArticle: true),
+              AnimatedSwitcher(
+                duration: AppMotion.medium,
+                child: _selectingWords
+                    ? _InlineReadingComposer(
+                        key: const ValueKey('inline-reading-composer'),
+                        candidates: _candidates,
+                        initialSelection: _selection,
+                        onGenerate: _generate,
+                        onClose: () => setState(() => _selectingWords = false),
+                        onOpenArticle: _openArticle,
+                      )
+                    : _ReadingHero(
+                        key: const ValueKey('reading-summary'),
+                        pool: _selection,
+                        loading: _loading,
+                        generating: _generating,
+                        onGenerate: _openComposer,
+                        onRefresh: () => _loadPool(rotate: true),
+                        onGoWords: widget.onGoWords,
+                      ),
               ),
               if (_error != null) ...[
                 const SizedBox(height: AppSpacing.x3),
@@ -376,7 +382,7 @@ class _ByokSetupCard extends StatelessWidget {
           const SizedBox(height: AppSpacing.x5),
           SizedBox(
             width: double.infinity,
-            child: FilledButton.icon(
+            child: EditorialPrimaryButton(
               onPressed: onConfigure,
               icon: const Icon(Icons.settings_outlined, size: 18),
               label: const Text('配置 AI 阅读'),
@@ -415,6 +421,54 @@ class GeneratedReadingPayload {
   });
 }
 
+class ReadingGenerationResult {
+  final SavedArticle? article;
+  final String? error;
+  final bool wasCancelled;
+
+  const ReadingGenerationResult.success(SavedArticle value)
+    : article = value,
+      error = null,
+      wasCancelled = false;
+
+  const ReadingGenerationResult.failure(String message)
+    : article = null,
+      error = message,
+      wasCancelled = false;
+
+  const ReadingGenerationResult.cancelled()
+    : article = null,
+      error = null,
+      wasCancelled = true;
+}
+
+String _readingWordKey(PulseWordEntry entry) =>
+    '${entry.vocabId}:${entry.word.toLowerCase()}';
+
+@visibleForTesting
+List<PulseWordEntry> selectReadingWords(
+  List<PulseWordEntry> candidates, {
+  int rotation = 0,
+}) {
+  if (candidates.isEmpty) return const [];
+  final due = candidates.where((entry) => entry.isDue).toList();
+  final fillers = candidates.where((entry) => !entry.isDue).toList();
+  var targetCount = due.length;
+  if (targetCount < 6) targetCount = 6;
+  if (targetCount > 10) targetCount = 10;
+  if (targetCount > candidates.length) targetCount = candidates.length;
+  if (candidates.length <= targetCount) return List.of(candidates);
+
+  final selected = <PulseWordEntry>[...due.take(targetCount)];
+  if (selected.length == targetCount || fillers.isEmpty) return selected;
+
+  final start = rotation % fillers.length;
+  for (var i = 0; i < fillers.length && selected.length < targetCount; i++) {
+    selected.add(fillers[(start + i) % fillers.length]);
+  }
+  return selected;
+}
+
 @visibleForTesting
 GeneratedReadingPayload parseGeneratedReadingPayload(String raw) {
   try {
@@ -423,12 +477,12 @@ GeneratedReadingPayload parseGeneratedReadingPayload(String raw) {
     if (start >= 0 && end > start) {
       final decoded = jsonDecode(raw.substring(start, end + 1));
       if (decoded is Map<String, dynamic>) {
-        final article = (decoded['article'] as String? ?? '').trim();
+        final article = _boundedText(decoded['article'], 12000);
         if (article.isNotEmpty) {
           return GeneratedReadingPayload(
-            title: (decoded['title'] as String? ?? '').trim(),
+            title: _boundedText(decoded['title'], 120),
             article: article,
-            translation: (decoded['translation'] as String? ?? '').trim(),
+            translation: _boundedText(decoded['translation'], 18000),
             questions: parseQuizQuestions(decoded['questions']),
           );
         }
@@ -437,7 +491,7 @@ GeneratedReadingPayload parseGeneratedReadingPayload(String raw) {
   } catch (_) {
     // Some OpenAI-compatible providers ignore the JSON-only instruction.
   }
-  final article = raw.trim();
+  final article = _boundedText(raw, 12000);
   return GeneratedReadingPayload(
     title: _fallbackArticleTitle(article),
     article: article,
@@ -461,13 +515,28 @@ List<QuizQuestion> parseQuizQuestions(Object? raw) {
               options.length != 4 ||
               options.any((option) => option is! String) ||
               correct is! num ||
+              !correct.isFinite ||
+              correct != correct.truncateToDouble() ||
               correct.toInt() < 0 ||
               correct.toInt() >= options.length) {
             return null;
           }
+          final questionText = _boundedText(question, 500);
+          final optionTexts = options
+              .cast<String>()
+              .map((option) => _boundedText(option, 300))
+              .toList();
+          final normalizedOptions = optionTexts
+              .map((option) => option.toLowerCase())
+              .toSet();
+          if (questionText.isEmpty ||
+              optionTexts.any((option) => option.isEmpty) ||
+              normalizedOptions.length != optionTexts.length) {
+            return null;
+          }
           return QuizQuestion(
-            question: question,
-            options: options.cast<String>(),
+            question: questionText,
+            options: optionTexts,
             correctIndex: correct.toInt(),
           );
         })
@@ -477,6 +546,13 @@ List<QuizQuestion> parseQuizQuestions(Object? raw) {
   } catch (_) {
     return const [];
   }
+}
+
+String _boundedText(Object? value, int maxRunes) {
+  if (value is! String) return '';
+  final trimmed = value.trim();
+  if (trimmed.runes.length <= maxRunes) return trimmed;
+  return String.fromCharCodes(trimmed.runes.take(maxRunes));
 }
 
 String _readingLevel(List<PulseWordEntry> pool) {
@@ -510,13 +586,16 @@ class _ReadingHero extends StatelessWidget {
   final bool generating;
   final VoidCallback onGenerate;
   final VoidCallback onRefresh;
+  final VoidCallback? onGoWords;
 
   const _ReadingHero({
+    super.key,
     required this.pool,
     required this.loading,
     required this.generating,
     required this.onGenerate,
     required this.onRefresh,
+    required this.onGoWords,
   });
 
   @override
@@ -525,10 +604,19 @@ class _ReadingHero extends StatelessWidget {
     final remaining = pool.length - words.length;
     return Container(
       key: const ValueKey('reading-first-content'),
-      constraints: const BoxConstraints(minHeight: 184),
+      constraints: const BoxConstraints(minHeight: 190),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppRadii.lg),
-        color: const Color(0xFFEAF8F1),
+        borderRadius: BorderRadius.circular(AppRadii.sm),
+        gradient: Theme.of(context).brightness == Brightness.light
+            ? AppMaterials.paper
+            : null,
+        color: Theme.of(context).brightness == Brightness.light
+            ? null
+            : AppColors.of(context).surface,
+        border: Border.all(color: AppColors.of(context).divider),
+        boxShadow: Theme.of(context).brightness == Brightness.light
+            ? AppShadows.paper
+            : AppShadows.none,
       ),
       padding: const EdgeInsets.all(AppSpacing.x4),
       child: Column(
@@ -536,16 +624,17 @@ class _ReadingHero extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(
-                Icons.auto_awesome,
-                size: 19,
-                color: AppColors.primary,
-              ),
-              const SizedBox(width: AppSpacing.x2),
               Expanded(
-                child: Text(
-                  '今日阅读',
-                  style: AppTheme.cardTitle(context: context),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('今日阅读', style: AppTheme.cardTitle(context: context)),
+                    const SizedBox(height: AppSpacing.x2),
+                    Text(
+                      '把今天的词放进一篇值得读完的文章',
+                      style: AppTheme.mutedCaption(size: 12, context: context),
+                    ),
+                  ],
                 ),
               ),
               IconButton(
@@ -557,72 +646,305 @@ class _ReadingHero extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: AppSpacing.x2),
+          const SizedBox(height: AppSpacing.x3),
           Text(
             loading
-                ? '正在整理今天答过的词…'
+                ? '正在整理适合今天复现的词…'
                 : pool.isEmpty
-                ? '先背几个词，再回来把它们放进语境'
-                : '优先复现今天答错和待巩固的词',
+                ? '先学习至少 3 个词，再把它们放进语境'
+                : pool.length < 3
+                ? '还差 ${3 - pool.length} 个词即可生成今日阅读'
+                : '优先复现到期词和最近学过的词',
             style: AppTheme.mutedCaption(size: 12, context: context),
           ),
           const SizedBox(height: AppSpacing.x3),
-          SizedBox(
-            height: 32,
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  for (var i = 0; i < words.length; i++) ...[
-                    if (i > 0) const SizedBox(width: AppSpacing.x2),
-                    PillTag(
-                      label: words[i],
-                      color: AppColors.primary,
-                      variant: PillVariant.soft,
-                    ),
-                  ],
-                  if (remaining > 0) ...[
-                    const SizedBox(width: AppSpacing.x2),
-                    PillTag(
-                      label: '+$remaining',
-                      color: AppColors.of(context).inkMuted,
-                      variant: PillVariant.soft,
-                    ),
-                  ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                for (var i = 0; i < words.length; i++) ...[
+                  if (i > 0) const SizedBox(width: AppSpacing.x2),
+                  PillTag(
+                    label: words[i],
+                    color: AppColors.warning,
+                    variant: PillVariant.soft,
+                  ),
                 ],
-              ),
+                if (remaining > 0) ...[
+                  const SizedBox(width: AppSpacing.x2),
+                  PillTag(
+                    label: '+$remaining',
+                    color: AppColors.of(context).inkMuted,
+                    variant: PillVariant.soft,
+                  ),
+                ],
+              ],
             ),
           ),
           const SizedBox(height: AppSpacing.x4),
           SizedBox(
             width: double.infinity,
-            height: 46,
-            child: FilledButton.icon(
-              onPressed: loading || generating || pool.isEmpty
-                  ? null
-                  : onGenerate,
-              icon: AnimatedSwitcher(
-                duration: AppMotion.fast,
-                child: generating
-                    ? const SizedBox(
-                        key: ValueKey('reading-loading'),
-                        width: 17,
-                        height: 17,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2,
-                          color: Colors.white,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(minHeight: 46),
+              child: EditorialPrimaryButton(
+                onPressed: loading || generating
+                    ? null
+                    : pool.length < 3
+                    ? onGoWords
+                    : onGenerate,
+                icon: AnimatedSwitcher(
+                  duration: AppMotion.fast,
+                  child: generating
+                      ? const SizedBox(
+                          key: ValueKey('reading-loading'),
+                          width: 17,
+                          height: 17,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            color: Colors.white,
+                          ),
+                        )
+                      : const Icon(
+                          Icons.auto_stories_outlined,
+                          key: ValueKey('reading-ready'),
+                          size: 18,
                         ),
-                      )
-                    : const Icon(
-                        Icons.auto_stories_outlined,
-                        key: ValueKey('reading-ready'),
-                        size: 18,
-                      ),
+                ),
+                label: Text(
+                  generating
+                      ? '正在生成'
+                      : pool.length < 3
+                      ? '继续背词'
+                      : '选择目标词并生成',
+                ),
               ),
-              label: Text(generating ? '正在生成' : '选择目标词并生成'),
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _InlineReadingComposer extends StatefulWidget {
+  final List<PulseWordEntry> candidates;
+  final List<PulseWordEntry> initialSelection;
+  final Future<ReadingGenerationResult> Function(List<PulseWordEntry>)
+  onGenerate;
+  final VoidCallback onClose;
+  final Future<void> Function(SavedArticle) onOpenArticle;
+
+  const _InlineReadingComposer({
+    super.key,
+    required this.candidates,
+    required this.initialSelection,
+    required this.onGenerate,
+    required this.onClose,
+    required this.onOpenArticle,
+  });
+
+  @override
+  State<_InlineReadingComposer> createState() => _InlineReadingComposerState();
+}
+
+class _InlineReadingComposerState extends State<_InlineReadingComposer> {
+  static const _messages = ['正在构思自然语境', '正在检查目标词', '正在准备翻译和理解题'];
+
+  late final Set<String> _selected = widget.initialSelection
+      .map(_readingWordKey)
+      .toSet();
+  bool _generating = false;
+  String? _error;
+  int _messageIndex = 0;
+  Timer? _timer;
+
+  List<PulseWordEntry> get _selectedWords => widget.candidates
+      .where((entry) => _selected.contains(_readingWordKey(entry)))
+      .toList();
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  void _toggle(PulseWordEntry word) {
+    if (_generating) return;
+    final key = _readingWordKey(word);
+    if (_selected.contains(key)) {
+      if (_selected.length <= 3) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text('至少保留 3 个词')));
+        return;
+      }
+      setState(() => _selected.remove(key));
+    } else {
+      if (_selected.length >= 10) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text('一篇文章最多选择 10 个词')));
+        return;
+      }
+      setState(() => _selected.add(key));
+    }
+    HapticFeedback.selectionClick();
+  }
+
+  Future<void> _generate() async {
+    if (_generating || _selectedWords.length < 3) return;
+    setState(() {
+      _generating = true;
+      _error = null;
+      _messageIndex = 0;
+    });
+    _timer = Timer.periodic(const Duration(milliseconds: 1500), (_) {
+      if (!mounted) return;
+      setState(() => _messageIndex = (_messageIndex + 1) % _messages.length);
+    });
+    final result = await widget.onGenerate(_selectedWords);
+    _timer?.cancel();
+    if (!mounted) return;
+    if (result.article case final article?) {
+      await widget.onOpenArticle(article);
+      if (mounted) widget.onClose();
+      return;
+    }
+    setState(() {
+      _generating = false;
+      _error = result.error ?? '生成失败，请稍后重试';
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final selected = _selectedWords;
+    final available = widget.candidates
+        .where((entry) => !_selected.contains(_readingWordKey(entry)))
+        .toList();
+    return AppCard(
+      key: const ValueKey('reading-first-content'),
+      padding: const EdgeInsets.all(AppSpacing.x4),
+      color: AppColors.of(context).surface,
+      child: AnimatedSwitcher(
+        duration: AppMotion.medium,
+        child: _generating
+            ? SizedBox(
+                key: const ValueKey('inline-reading-generating'),
+                height: 248,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.auto_stories_outlined,
+                      size: 34,
+                      color: AppColors.primary,
+                    ),
+                    const SizedBox(height: AppSpacing.x5),
+                    AnimatedSwitcher(
+                      duration: AppMotion.fast,
+                      child: Text(
+                        _messages[_messageIndex],
+                        key: ValueKey(_messageIndex),
+                        style: AppTheme.cardTitle(context: context),
+                      ),
+                    ),
+                    const SizedBox(height: AppSpacing.x3),
+                    Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: AppSpacing.x2,
+                      runSpacing: AppSpacing.x2,
+                      children: [
+                        for (final word in selected)
+                          Text(
+                            word.word,
+                            style: AppTheme.editorial(
+                              size: 14,
+                              color: AppColors.primary,
+                              context: context,
+                            ),
+                          ),
+                      ],
+                    ),
+                    const SizedBox(height: AppSpacing.x5),
+                    const SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    ),
+                  ],
+                ),
+              )
+            : Column(
+                key: const ValueKey('inline-reading-selection'),
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'TODAY\'S WORDS',
+                              style: AppTheme.sectionLabel(context: context),
+                            ),
+                            const SizedBox(height: AppSpacing.x2),
+                            Text(
+                              '选择要在文章中复现的词',
+                              style: AppTheme.cardTitle(context: context),
+                            ),
+                          ],
+                        ),
+                      ),
+                      IconButton(
+                        tooltip: '收起',
+                        onPressed: widget.onClose,
+                        icon: const Icon(Icons.close_rounded),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: AppSpacing.x4),
+                  _ReadingWordWrap(
+                    words: selected,
+                    selected: true,
+                    onTap: _toggle,
+                  ),
+                  if (available.isNotEmpty) ...[
+                    const SizedBox(height: AppSpacing.x4),
+                    Text(
+                      '可替换',
+                      style: AppTheme.mutedCaption(size: 12, context: context),
+                    ),
+                    const SizedBox(height: AppSpacing.x2),
+                    _ReadingWordWrap(
+                      words: available.take(12).toList(),
+                      selected: false,
+                      onTap: _toggle,
+                    ),
+                  ],
+                  if (_error != null) ...[
+                    const SizedBox(height: AppSpacing.x3),
+                    Text(
+                      _error!,
+                      style: AppTheme.mutedCaption(
+                        size: 12,
+                        color: AppColors.danger,
+                        context: context,
+                      ),
+                    ),
+                  ],
+                  const SizedBox(height: AppSpacing.x4),
+                  SizedBox(
+                    width: double.infinity,
+                    child: EditorialPrimaryButton(
+                      onPressed: _generate,
+                      icon: const Icon(Icons.auto_awesome_rounded, size: 18),
+                      label: Text('生成阅读 · ${selected.length} 词'),
+                    ),
+                  ),
+                ],
+              ),
       ),
     );
   }
@@ -638,6 +960,8 @@ class _ReadingHistoryList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Text('READING ARCHIVE', style: AppTheme.sectionLabel(context: context)),
+        const SizedBox(height: AppSpacing.x2),
         Text('阅读记录', style: AppTheme.cardTitle(context: context)),
         const SizedBox(height: AppSpacing.x3),
         if (articles.isEmpty)
@@ -693,9 +1017,11 @@ class _ReadingHistoryCard extends StatelessWidget {
                 _articleTitle(article),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: AppTheme.cardTitle(
+                style: AppTheme.editorial(
+                  size: 20,
                   context: context,
-                ).copyWith(fontSize: 19),
+                  height: 1.35,
+                ),
               ),
               const SizedBox(height: AppSpacing.x2),
               Text(
@@ -719,16 +1045,16 @@ class _ReadingHistoryCard extends StatelessWidget {
                         vertical: AppSpacing.x1,
                       ),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFFFF3A6),
+                        color: AppColors.target.withValues(alpha: 0.62),
                         borderRadius: BorderRadius.circular(AppRadii.pill),
                       ),
                       child: Text(
                         word['word'] ?? '',
-                        style: AppTheme.wordDisplay(
+                        style: AppTheme.editorial(
                           size: 12,
                           weight: FontWeight.w700,
                           color: AppColors.ink,
-                        ).copyWith(fontFamily: null),
+                        ),
                       ),
                     ),
                 ],
@@ -738,22 +1064,29 @@ class _ReadingHistoryCard extends StatelessWidget {
               const SizedBox(height: AppSpacing.x3),
               Row(
                 children: [
-                  Text(
-                    '${article.createdAt.month}/${article.createdAt.day} · ${_wordCount(article.articleText)} 词',
-                    style: AppTheme.mutedCaption(size: 11, context: context),
+                  Expanded(
+                    child: Text(
+                      '${article.createdAt.month}/${article.createdAt.day} · ${_wordCount(article.articleText)} 词',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTheme.mutedCaption(size: 11, context: context),
+                    ),
                   ),
-                  const Spacer(),
+                  const SizedBox(width: AppSpacing.x2),
                   Container(
+                    constraints: const BoxConstraints(maxWidth: 72),
                     padding: const EdgeInsets.symmetric(
                       horizontal: AppSpacing.x3,
                       vertical: AppSpacing.x1,
                     ),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF57A16),
+                      color: AppColors.primary,
                       borderRadius: BorderRadius.circular(AppRadii.pill),
                     ),
                     child: Text(
                       level,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w800,
@@ -771,194 +1104,436 @@ class _ReadingHistoryCard extends StatelessWidget {
 }
 
 class _ReadingComposerPage extends StatefulWidget {
-  final List<PulseWordEntry> pool;
+  final List<PulseWordEntry> candidates;
+  final List<PulseWordEntry> initialSelection;
+  final Future<ReadingGenerationResult> Function(List<PulseWordEntry>)
+  onGenerate;
+  final VoidCallback onCancelGeneration;
 
-  const _ReadingComposerPage({required this.pool});
+  const _ReadingComposerPage({
+    required this.candidates,
+    required this.initialSelection,
+    required this.onGenerate,
+    required this.onCancelGeneration,
+  });
 
   @override
   State<_ReadingComposerPage> createState() => _ReadingComposerPageState();
 }
 
 class _ReadingComposerPageState extends State<_ReadingComposerPage> {
-  late final Set<String> _selected = widget.pool
-      .map((word) => word.word)
+  static const _messages = ['正在构思自然语境', '正在让目标词自然出现', '正在准备翻译和理解题'];
+
+  late final Set<String> _selected = widget.initialSelection
+      .map(_readingWordKey)
       .toSet();
+  bool _generating = false;
+  String? _error;
+  int _messageIndex = 0;
+  int _highlightIndex = 0;
+  Timer? _waitingTimer;
+
+  List<PulseWordEntry> get _selectedWords => widget.candidates
+      .where((entry) => _selected.contains(_readingWordKey(entry)))
+      .toList();
 
   @override
-  Widget build(BuildContext context) {
-    final selectedWords = widget.pool
-        .where((entry) => _selected.contains(entry.word))
-        .toList();
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.white,
-        surfaceTintColor: Colors.transparent,
-        systemOverlayStyle: SystemUiOverlayStyle.light,
-        title: const Text('生成阅读'),
-        centerTitle: true,
+  void dispose() {
+    _waitingTimer?.cancel();
+    super.dispose();
+  }
+
+  void _toggle(PulseWordEntry word) {
+    final key = _readingWordKey(word);
+    if (_selected.contains(key)) {
+      setState(() => _selected.remove(key));
+    } else if (_selected.length >= 10) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('一篇文章最多选择 10 个词')));
+      return;
+    } else {
+      setState(() => _selected.add(key));
+    }
+    HapticFeedback.selectionClick();
+  }
+
+  void _startWaitingAnimation() {
+    _waitingTimer?.cancel();
+    _waitingTimer = Timer.periodic(const Duration(milliseconds: 1600), (_) {
+      if (!mounted || !_generating) return;
+      setState(() {
+        _messageIndex = (_messageIndex + 1) % _messages.length;
+        final count = _selectedWords.length;
+        if (count > 0) _highlightIndex = (_highlightIndex + 1) % count;
+      });
+    });
+  }
+
+  Future<void> _generate() async {
+    final words = _selectedWords;
+    if (words.length < 3 || _generating) return;
+    setState(() {
+      _generating = true;
+      _error = null;
+      _messageIndex = 0;
+      _highlightIndex = 0;
+    });
+    _startWaitingAnimation();
+    final result = await widget.onGenerate(words);
+    _waitingTimer?.cancel();
+    if (!mounted) return;
+    if (result.wasCancelled) {
+      setState(() => _generating = false);
+      return;
+    }
+    if (result.article case final article?) {
+      await Navigator.of(context).pushReplacement<void, void>(
+        MaterialPageRoute(
+          builder: (_) => ArticleDetailScreen(article: article),
+        ),
+      );
+      return;
+    }
+    setState(() {
+      _generating = false;
+      _error = result.error ?? '生成失败，请稍后重试';
+    });
+  }
+
+  Future<void> _confirmCancel() async {
+    final leave = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('停止等待？'),
+        content: const Text('离开后不会打开本次生成结果，服务商仍可能完成已经发出的请求。'),
         actions: [
-          IconButton(
-            tooltip: '选词说明',
-            onPressed: () => showModalBottomSheet<void>(
-              context: context,
-              showDragHandle: true,
-              builder: (context) => const SafeArea(
-                top: false,
-                child: Padding(
-                  padding: EdgeInsets.all(AppSpacing.x5),
-                  child: Text(
-                    'CodeWord 会优先选择你今天答错、刚学过和即将遗忘的词。你可以取消不想放进文章的词，至少保留 1 个。',
-                    style: TextStyle(fontSize: 15, height: 1.6),
-                  ),
-                ),
-              ),
-            ),
-            icon: const Icon(Icons.help_outline_rounded),
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text('继续等待'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(context, true),
+            child: const Text('离开'),
           ),
         ],
       ),
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Color(0xFF079FE8), Color(0xFF0E8FEA), Color(0xFF14D8C2)],
+    );
+    if (leave != true || !mounted) return;
+    widget.onCancelGeneration();
+    Navigator.of(context).pop();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final selectedWords = _selectedWords;
+    final available = widget.candidates
+        .where((entry) => !_selected.contains(_readingWordKey(entry)))
+        .toList();
+    return PopScope<void>(
+      canPop: !_generating,
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop && _generating) _confirmCancel();
+      },
+      child: Scaffold(
+        backgroundColor: AppColors.of(context).background,
+        appBar: AppBar(
+          title: const Text('生成阅读'),
+          centerTitle: true,
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            tooltip: '返回',
+            onPressed: _generating
+                ? _confirmCancel
+                : () => Navigator.of(context).maybePop(),
+            icon: const Icon(Icons.arrow_back_ios_new_rounded),
           ),
         ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x5,
-              AppSpacing.x8,
-              AppSpacing.x5,
-              AppSpacing.x5,
-            ),
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 4,
-                  child: Stack(
-                    children: [
-                      for (var i = 0; i < widget.pool.length; i++)
-                        Positioned(
-                          left: 12 + (i * 79 % 290).toDouble(),
-                          top: 8 + (i * 53 % 220).toDouble(),
-                          child: Text(
-                            widget.pool[i].word,
-                            style: TextStyle(
-                              color: Colors.white.withValues(
-                                alpha: _selected.contains(widget.pool[i].word)
-                                    ? 0.72
-                                    : 0.24,
-                              ),
-                              fontSize: 14 + (i % 3) * 3,
-                              fontWeight: FontWeight.w700,
+        body: SafeArea(
+          top: false,
+          child: AnimatedSwitcher(
+            duration: AppMotion.medium,
+            child: _generating
+                ? _ReadingGeneratingView(
+                    key: const ValueKey('generating-reading'),
+                    words: selectedWords,
+                    message: _messages[_messageIndex],
+                    highlightIndex: _highlightIndex,
+                  )
+                : CustomScrollView(
+                    key: const ValueKey('select-reading-words'),
+                    slivers: [
+                      if (available.isEmpty)
+                        SliverFillRemaining(
+                          hasScrollBody: false,
+                          child: Padding(
+                            padding: const EdgeInsets.all(AppSpacing.x5),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  '今日要复现的词',
+                                  textAlign: TextAlign.center,
+                                  style: AppTheme.screenHeader(
+                                    context: context,
+                                  ),
+                                ),
+                                const SizedBox(height: AppSpacing.x2),
+                                Text(
+                                  '已选 ${selectedWords.length} / 10 · 优先保留到期词',
+                                  textAlign: TextAlign.center,
+                                  style: AppTheme.mutedCaption(
+                                    size: 13,
+                                    context: context,
+                                  ),
+                                ),
+                                const SizedBox(height: AppSpacing.x5),
+                                _ReadingWordWrap(
+                                  words: selectedWords,
+                                  selected: true,
+                                  alignment: WrapAlignment.center,
+                                  onTap: _toggle,
+                                ),
+                                if (_error != null) ...[
+                                  const SizedBox(height: AppSpacing.x5),
+                                  _ErrorCard(message: _error!),
+                                ],
+                              ],
                             ),
+                          ),
+                        )
+                      else
+                        SliverPadding(
+                          padding: const EdgeInsets.fromLTRB(
+                            AppSpacing.x5,
+                            AppSpacing.x4,
+                            AppSpacing.x5,
+                            AppSpacing.x8,
+                          ),
+                          sliver: SliverList.list(
+                            children: [
+                              Text(
+                                '今日要复现的词',
+                                style: AppTheme.screenHeader(context: context),
+                              ),
+                              const SizedBox(height: AppSpacing.x2),
+                              Text(
+                                '已选 ${selectedWords.length} / 10 · 优先保留到期词',
+                                style: AppTheme.mutedCaption(
+                                  size: 13,
+                                  context: context,
+                                ),
+                              ),
+                              const SizedBox(height: AppSpacing.x4),
+                              _ReadingWordWrap(
+                                words: selectedWords,
+                                selected: true,
+                                onTap: _toggle,
+                              ),
+                              const SizedBox(height: AppSpacing.x8),
+                              Text(
+                                '可替换词',
+                                style: AppTheme.cardTitle(context: context),
+                              ),
+                              const SizedBox(height: AppSpacing.x2),
+                              Text(
+                                '这些词都来自你已经学过的内容',
+                                style: AppTheme.mutedCaption(
+                                  size: 12,
+                                  context: context,
+                                ),
+                              ),
+                              const SizedBox(height: AppSpacing.x3),
+                              _ReadingWordWrap(
+                                words: available,
+                                selected: false,
+                                onTap: _toggle,
+                              ),
+                              if (_error != null) ...[
+                                const SizedBox(height: AppSpacing.x5),
+                                _ErrorCard(message: _error!),
+                              ],
+                            ],
                           ),
                         ),
                     ],
                   ),
-                ),
-                const Text(
-                  '选择要在文章中复现的词',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w800,
+          ),
+        ),
+        bottomNavigationBar: _generating
+            ? null
+            : SafeArea(
+                top: false,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(
+                    AppSpacing.x5,
+                    AppSpacing.x3,
+                    AppSpacing.x5,
+                    AppSpacing.x3,
+                  ),
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(minHeight: 52),
+                    child: FilledButton.icon(
+                      onPressed: selectedWords.length >= 3 ? _generate : null,
+                      icon: const Icon(Icons.auto_awesome, size: 18),
+                      label: Text(
+                        selectedWords.length >= 3
+                            ? '生成阅读 · ${selectedWords.length} 词'
+                            : '至少选择 3 个词',
+                      ),
+                    ),
                   ),
                 ),
-                const SizedBox(height: AppSpacing.x2),
-                Text(
-                  '已选 ${selectedWords.length} / ${widget.pool.length}',
-                  style: TextStyle(
-                    color: Colors.white.withValues(alpha: 0.78),
-                    fontSize: 14,
-                  ),
+              ),
+      ),
+    );
+  }
+}
+
+class _ReadingWordWrap extends StatelessWidget {
+  final List<PulseWordEntry> words;
+  final bool selected;
+  final ValueChanged<PulseWordEntry> onTap;
+  final WrapAlignment alignment;
+
+  const _ReadingWordWrap({
+    required this.words,
+    required this.selected,
+    required this.onTap,
+    this.alignment = WrapAlignment.start,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      alignment: alignment,
+      spacing: AppSpacing.x2,
+      runSpacing: AppSpacing.x2,
+      children: [
+        for (final word in words)
+          ActionChip(
+            avatar: selected
+                ? Icon(
+                    word.isDue ? Icons.schedule_rounded : Icons.check_rounded,
+                    size: 16,
+                    color: AppColors.primary,
+                  )
+                : const Icon(Icons.add_rounded, size: 16),
+            label: Text(word.word, overflow: TextOverflow.ellipsis),
+            onPressed: () => onTap(word),
+            backgroundColor: selected
+                ? const Color(0xFFE4F7EE)
+                : AppColors.of(context).surface,
+            side: BorderSide(
+              color: selected
+                  ? AppColors.primary.withValues(alpha: 0.28)
+                  : AppColors.of(context).divider,
+            ),
+            labelStyle: TextStyle(
+              color: AppColors.of(context).ink,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+class _ReadingGeneratingView extends StatelessWidget {
+  final List<PulseWordEntry> words;
+  final String message;
+  final int highlightIndex;
+
+  const _ReadingGeneratingView({
+    super.key,
+    required this.words,
+    required this.message,
+    required this.highlightIndex,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) => SingleChildScrollView(
+        padding: const EdgeInsets.all(AppSpacing.x5),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minWidth: constraints.maxWidth,
+            minHeight: (constraints.maxHeight - AppSpacing.x10).clamp(
+              0,
+              double.infinity,
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 64,
+                height: 64,
+                decoration: const BoxDecoration(
+                  color: Color(0xFFE4F7EE),
+                  shape: BoxShape.circle,
                 ),
-                const SizedBox(height: AppSpacing.x4),
-                Wrap(
-                  alignment: WrapAlignment.center,
-                  spacing: AppSpacing.x2,
-                  runSpacing: AppSpacing.x2,
-                  children: [
-                    for (final word in widget.pool)
-                      FilterChip(
-                        label: Text(word.word),
-                        selected: _selected.contains(word.word),
-                        onSelected: (selected) {
-                          HapticFeedback.selectionClick();
-                          setState(() {
-                            if (selected) {
-                              _selected.add(word.word);
-                            } else {
-                              _selected.remove(word.word);
-                            }
-                          });
-                        },
-                        showCheckmark: false,
-                        selectedColor: Colors.white,
-                        backgroundColor: Colors.white.withValues(alpha: 0.1),
-                        side: BorderSide(
-                          color: Colors.white.withValues(alpha: 0.65),
-                        ),
-                        labelStyle: TextStyle(
-                          color: _selected.contains(word.word)
-                              ? AppColors.ink
-                              : Colors.white,
+                child: const Icon(
+                  Icons.auto_stories_rounded,
+                  color: AppColors.primary,
+                  size: 30,
+                ),
+              ),
+              const SizedBox(height: AppSpacing.x5),
+              AnimatedSwitcher(
+                duration: AppMotion.fast,
+                child: Text(
+                  message,
+                  key: ValueKey(message),
+                  textAlign: TextAlign.center,
+                  style: AppTheme.cardTitle(context: context),
+                ),
+              ),
+              const SizedBox(height: AppSpacing.x2),
+              Text(
+                '正在把这些词写成一篇值得读完的短文',
+                textAlign: TextAlign.center,
+                style: AppTheme.mutedCaption(size: 13, context: context),
+              ),
+              const SizedBox(height: AppSpacing.x6),
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: AppSpacing.x2,
+                runSpacing: AppSpacing.x2,
+                children: [
+                  for (var i = 0; i < words.length; i++)
+                    AnimatedContainer(
+                      duration: AppMotion.fast,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: AppSpacing.x3,
+                        vertical: AppSpacing.x2,
+                      ),
+                      decoration: BoxDecoration(
+                        color: i == highlightIndex
+                            ? AppColors.primary
+                            : const Color(0xFFE4F7EE),
+                        borderRadius: BorderRadius.circular(AppRadii.pill),
+                      ),
+                      child: Text(
+                        words[i].word,
+                        style: TextStyle(
+                          color: i == highlightIndex
+                              ? Colors.white
+                              : AppColors.primary,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                  ],
-                ),
-                const SizedBox(height: AppSpacing.x4),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(
-                      Icons.auto_awesome,
-                      color: Colors.white,
-                      size: 16,
                     ),
-                    const SizedBox(width: AppSpacing.x2),
-                    Flexible(
-                      child: Text(
-                        '已优先选中今天答错和待巩固的词',
-                        style: TextStyle(
-                          color: Colors.white.withValues(alpha: 0.84),
-                          fontSize: 12,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const Spacer(),
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(AppSpacing.x3),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.95),
-                    borderRadius: BorderRadius.circular(AppRadii.lg),
-                  ),
-                  child: SizedBox(
-                    height: 48,
-                    child: FilledButton.icon(
-                      onPressed: selectedWords.isEmpty
-                          ? null
-                          : () => Navigator.of(context).pop(selectedWords),
-                      icon: const Icon(Icons.auto_awesome, size: 18),
-                      label: Text('用这 ${selectedWords.length} 个词生成文章'),
-                      style: FilledButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(AppRadii.sm),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+                ],
+              ),
+              const SizedBox(height: AppSpacing.x6),
+              const SizedBox(
+                width: 22,
+                height: 22,
+                child: CircularProgressIndicator(strokeWidth: 2.5),
+              ),
+            ],
           ),
         ),
       ),
@@ -1088,7 +1663,10 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
                   ).copyWith(fontFamily: null, fontSize: 30, height: 1.15),
                 ),
                 const SizedBox(height: AppSpacing.x4),
-                Row(
+                Wrap(
+                  spacing: AppSpacing.x3,
+                  runSpacing: AppSpacing.x2,
+                  crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
                     Container(
                       padding: const EdgeInsets.symmetric(
@@ -1109,7 +1687,6 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(width: AppSpacing.x3),
                     Text(
                       'AI 阅读 · ${_wordCount(widget.article.articleText)} 词',
                       style: AppTheme.mutedCaption(size: 14, context: context),
@@ -1226,20 +1803,29 @@ class _ReaderAction extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(AppRadii.sm),
       child: SizedBox(
-        height: 58,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, color: color, size: 23),
-            const SizedBox(height: AppSpacing.x1),
-            Text(
-              label,
-              style: AppTheme.mutedCaption(
-                size: 12,
-                context: context,
-              ).copyWith(color: AppColors.of(context).ink),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(minHeight: 58),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: AppSpacing.x1),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(icon, color: color, size: 23),
+                const SizedBox(height: AppSpacing.x1),
+                Text(
+                  label,
+                  maxLines: 1,
+                  overflow: TextOverflow.fade,
+                  softWrap: false,
+                  style: AppTheme.mutedCaption(
+                    size: 12,
+                    context: context,
+                  ).copyWith(color: AppColors.of(context).ink),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
@@ -1602,12 +2188,15 @@ class _WordDefinitionSheet extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(
-                    entry.word,
-                    style: AppTheme.wordDisplay(
-                      size: 28,
-                      weight: FontWeight.w700,
-                      context: context,
+                  Expanded(
+                    child: Text(
+                      entry.word,
+                      softWrap: true,
+                      style: AppTheme.wordDisplay(
+                        size: 28,
+                        weight: FontWeight.w700,
+                        context: context,
+                      ),
                     ),
                   ),
                   const SizedBox(width: AppSpacing.x3),

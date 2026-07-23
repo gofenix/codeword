@@ -19,54 +19,72 @@ class SettingsScreen extends ConsumerWidget {
     final palette = AppColors.of(context);
     return Scaffold(
       backgroundColor: palette.background,
-      body: CustomScrollView(
-        slivers: [
-          SliverSafeArea(
-            sliver: SliverPadding(
-              padding: const EdgeInsets.fromLTRB(
-                AppSpacing.x6,
-                AppSpacing.x3,
-                AppSpacing.x6,
-                AppSpacing.x8,
-              ),
-              sliver: SliverList.list(
-                children: [
-                  const _SettingsHeader(),
-                  const SizedBox(height: AppSpacing.x5),
-                  const _SectionLabel('高级题型'),
-                  const SizedBox(height: AppSpacing.x2),
-                  const _SettingsGroup(
-                    children: [
-                      _AdvancedQuestionTypeRow(
-                        type: _AdvancedQuestionType.spelling,
-                      ),
-                      _AdvancedQuestionTypeRow(
-                        type: _AdvancedQuestionType.listening,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: AppSpacing.x5),
-                  const _SectionLabel('AI'),
-                  const SizedBox(height: AppSpacing.x2),
-                  const _SettingsGroup(children: [_AiSettingsRow()]),
-                  const SizedBox(height: AppSpacing.x5),
-                  const _SectionLabel('数据'),
-                  const SizedBox(height: AppSpacing.x2),
-                  const _SettingsGroup(
-                    children: [_LocalDataRow(), _ClearLearningDataRow()],
-                  ),
-                  const SizedBox(height: AppSpacing.x8),
-                  Center(
-                    child: Text(
-                      'CodeWord · 本地优先背单词',
-                      style: AppTheme.mutedCaption(size: 12, context: context),
+      body: DecoratedBox(
+        decoration: AppMaterials.canvasDecoration(context),
+        child: CustomScrollView(
+          slivers: [
+            SliverSafeArea(
+              sliver: SliverPadding(
+                padding: const EdgeInsets.fromLTRB(
+                  AppSpacing.x6,
+                  AppSpacing.x3,
+                  AppSpacing.x6,
+                  AppSpacing.x8,
+                ),
+                sliver: SliverList.list(
+                  children: [
+                    const _SettingsHeader(),
+                    const SizedBox(height: AppSpacing.x5),
+                    const _SectionLabel('高级题型'),
+                    const SizedBox(height: AppSpacing.x2),
+                    const _SettingsGroup(
+                      children: [
+                        _AdvancedQuestionTypeRow(
+                          type: _AdvancedQuestionType.spelling,
+                        ),
+                        _AdvancedQuestionTypeRow(
+                          type: _AdvancedQuestionType.listening,
+                        ),
+                      ],
                     ),
-                  ),
-                ],
+                    const SizedBox(height: AppSpacing.x5),
+                    const _SectionLabel('AI'),
+                    const SizedBox(height: AppSpacing.x2),
+                    const _SettingsGroup(children: [_AiSettingsRow()]),
+                    const SizedBox(height: AppSpacing.x5),
+                    const _SectionLabel('数据'),
+                    const SizedBox(height: AppSpacing.x2),
+                    const _SettingsGroup(
+                      children: [_LocalDataRow(), _ClearLearningDataRow()],
+                    ),
+                    const SizedBox(height: AppSpacing.x12),
+                    Center(
+                      child: Column(
+                        children: [
+                          Text(
+                            'CodeWord · 本地优先背单词',
+                            style: AppTheme.mutedCaption(
+                              size: 12,
+                              context: context,
+                            ),
+                          ),
+                          const SizedBox(height: AppSpacing.x1),
+                          Text(
+                            '1.1.1',
+                            style: AppTheme.mutedCaption(
+                              size: 11,
+                              context: context,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -131,17 +149,33 @@ class _SettingsHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        IconButton(
-          tooltip: '返回',
-          onPressed: () => Navigator.of(context).maybePop(),
-          icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 21),
-          color: AppColors.of(context).ink,
-          padding: EdgeInsets.zero,
-          constraints: const BoxConstraints(minWidth: 44, minHeight: 44),
+        SizedBox(
+          height: 48,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: AppGlassIconButton(
+                  tooltip: '返回',
+                  onPressed: () => Navigator.of(context).maybePop(),
+                  icon: Icons.arrow_back_ios_new_rounded,
+                  size: 21,
+                  color: AppColors.primary,
+                ),
+              ),
+              Text(
+                '设置',
+                style: AppTheme.cardTitle(
+                  context: context,
+                ).copyWith(fontSize: 22),
+              ),
+            ],
+          ),
         ),
+        const SizedBox(height: AppSpacing.x8),
+        Text('PREFERENCES', style: AppTheme.sectionLabel(context: context)),
         const SizedBox(height: AppSpacing.x3),
-        Text('设置', style: AppTheme.screenHeader(context: context)),
-        const SizedBox(height: AppSpacing.x2),
         Text(
           '只保留会影响学习体验的配置',
           style: AppTheme.mutedCaption(size: 14, context: context),
@@ -158,7 +192,14 @@ class _SectionLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(label, style: AppTheme.sectionLabel(context: context));
+    return Text(
+      label,
+      style: AppTheme.mutedCaption(
+        size: 13,
+        color: AppColors.primary,
+        context: context,
+      ).copyWith(fontWeight: FontWeight.w600),
+    );
   }
 }
 
@@ -205,11 +246,15 @@ class _AiSettingsRow extends ConsumerWidget {
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          PillTag(
-            label: cfg.isConfigured ? '已配置' : '未配置',
-            color: cfg.isConfigured ? AppColors.success : AppColors.inkSubtle,
-            icon: cfg.isConfigured ? Icons.check : Icons.more_horiz,
-            variant: PillVariant.soft,
+          Text(
+            cfg.isConfigured ? '已连接' : '未配置',
+            style: AppTheme.mutedCaption(
+              size: 12,
+              color: cfg.isConfigured
+                  ? AppColors.success
+                  : AppColors.of(context).inkSubtle,
+              context: context,
+            ).copyWith(fontWeight: FontWeight.w600),
           ),
           const SizedBox(width: AppSpacing.x2),
           Icon(
@@ -342,12 +387,12 @@ class _SettingsTile extends StatelessWidget {
     final content = Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: AppSpacing.x4,
-        vertical: AppSpacing.x3,
+        vertical: AppSpacing.x4,
       ),
       child: Row(
         children: [
           _SettingIcon(icon: icon, color: color),
-          const SizedBox(width: AppSpacing.x3),
+          const SizedBox(width: AppSpacing.x4),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -360,7 +405,7 @@ class _SettingsTile extends StatelessWidget {
                 Text(
                   subtitle,
                   style: AppTheme.mutedCaption(size: 12, context: context),
-                  maxLines: 1,
+                  maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
@@ -386,15 +431,10 @@ class _SettingIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 36,
-      height: 36,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.12),
-        borderRadius: BorderRadius.circular(AppRadii.sm),
-      ),
-      child: Icon(icon, color: color, size: 19),
+    return SizedBox(
+      width: 40,
+      height: 40,
+      child: Icon(icon, color: color, size: 27),
     );
   }
 }

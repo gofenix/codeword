@@ -62,23 +62,27 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
 
     return Scaffold(
       backgroundColor: AppColors.of(context).background,
-      body: SafeArea(
-        child: switch (session.phase) {
-          SessionPhase.loading => const Center(
-            child: CircularProgressIndicator(color: AppColors.primary),
-          ),
-          SessionPhase.asking => AskingView(
-            session: session,
-            key: const ValueKey('asking'),
-          ),
-          SessionPhase.wrongDetail => WrongDetailView(
-            session: session,
-            key: const ValueKey('wrong'),
-          ),
-          SessionPhase.finished => const _FinishedView(
-            key: ValueKey('finished'),
-          ),
-        },
+      body: MediaQuery.withClampedTextScaling(
+        minScaleFactor: 1,
+        maxScaleFactor: 1.3,
+        child: SafeArea(
+          child: switch (session.phase) {
+            SessionPhase.loading => const Center(
+              child: CircularProgressIndicator(color: AppColors.primary),
+            ),
+            SessionPhase.asking => AskingView(
+              session: session,
+              key: const ValueKey('asking'),
+            ),
+            SessionPhase.wrongDetail => WrongDetailView(
+              session: session,
+              key: const ValueKey('wrong'),
+            ),
+            SessionPhase.finished => const _FinishedView(
+              key: ValueKey('finished'),
+            ),
+          },
+        ),
       ),
     );
   }
@@ -93,7 +97,7 @@ class AskingView extends ConsumerStatefulWidget {
 }
 
 class _AskingViewState extends ConsumerState<AskingView> {
-  String? _lastWordId;
+  String? _lastAutoPlayedQuestion;
   int? _selectedIndex;
   bool _locked = false;
   bool? _typedCorrect;
@@ -111,7 +115,8 @@ class _AskingViewState extends ConsumerState<AskingView> {
   @override
   void didUpdateWidget(covariant AskingView old) {
     super.didUpdateWidget(old);
-    if (widget.session.currentIndex != old.session.currentIndex) {
+    if (_questionIdentity(widget.session.currentQuestion) !=
+        _questionIdentity(old.session.currentQuestion)) {
       // New question — reset feedback state.
       _selectedIndex = null;
       _locked = false;
@@ -130,8 +135,9 @@ class _AskingViewState extends ConsumerState<AskingView> {
   void _maybeAutoPlay() {
     final q = widget.session.currentQuestion;
     if (q == null) return;
-    if (q.word.id == _lastWordId) return;
-    _lastWordId = q.word.id;
+    final identity = _questionIdentity(q);
+    if (identity == _lastAutoPlayedQuestion) return;
+    _lastAutoPlayedQuestion = identity;
     // Only auto-play when audio IS the prompt (listening question).
     // For the other two question types, auto-playing would either
     // give away the answer (seeMeaningPickWord) or distract from
@@ -142,10 +148,16 @@ class _AskingViewState extends ConsumerState<AskingView> {
     TtsService.instance.speak(text: q.word.word);
   }
 
+  String? _questionIdentity(LearningQuestion? question) {
+    if (question == null) return null;
+    return '${question.word.id}:${question.type.name}:${question.attemptNo}';
+  }
+
   void _onOptionTap(int i) {
     if (_locked) return;
     final q = widget.session.currentQuestion;
     if (q == null) return;
+    final questionIdentity = _questionIdentity(q);
     final correct = i == q.correctIndex;
     setState(() {
       _selectedIndex = i;
@@ -159,7 +171,7 @@ class _AskingViewState extends ConsumerState<AskingView> {
       // correct pronunciation helps learning. Playing here just makes
       // the flow feel laggy.
       Future.delayed(AppMotion.answerCorrect, () {
-        if (!mounted) return;
+        if (!mounted || !_isCurrentQuestion(questionIdentity)) return;
         ref.read(learningSessionProvider.notifier).answer(i);
       });
     } else {
@@ -167,7 +179,7 @@ class _AskingViewState extends ConsumerState<AskingView> {
       // Brief pause so the user sees the red highlight before the
       // immersive wrong-answer card takes over.
       Future.delayed(AppMotion.answerWrong, () {
-        if (!mounted) return;
+        if (!mounted || !_isCurrentQuestion(questionIdentity)) return;
         ref.read(learningSessionProvider.notifier).answer(i);
       });
     }
@@ -177,9 +189,10 @@ class _AskingViewState extends ConsumerState<AskingView> {
     if (_locked || _typingController.text.trim().isEmpty) return;
     final q = widget.session.currentQuestion;
     if (q == null) return;
+    final questionIdentity = _questionIdentity(q);
+    final submitted = _typingController.text;
     final correct =
-        _typingController.text.trim().toLowerCase() ==
-        q.word.word.trim().toLowerCase();
+        submitted.trim().toLowerCase() == q.word.word.trim().toLowerCase();
     setState(() {
       _locked = true;
       _typedCorrect = correct;
@@ -188,12 +201,17 @@ class _AskingViewState extends ConsumerState<AskingView> {
     Future.delayed(
       correct ? AppMotion.answerCorrect : AppMotion.answerWrong,
       () {
-        if (!mounted) return;
-        ref
-            .read(learningSessionProvider.notifier)
-            .answerTyped(_typingController.text);
+        if (!mounted || !_isCurrentQuestion(questionIdentity)) return;
+        ref.read(learningSessionProvider.notifier).answerTyped(submitted);
       },
     );
+  }
+
+  bool _isCurrentQuestion(String? identity) {
+    return _questionIdentity(
+          ref.read(learningSessionProvider).currentQuestion,
+        ) ==
+        identity;
   }
 
   _OptionState _optionState(int i, int correctIndex) {
@@ -279,7 +297,7 @@ class _AskingViewState extends ConsumerState<AskingView> {
         children: [
           // The word / meaning — the only thing the user should look at.
           Expanded(
-            flex: 4,
+            flex: 5,
             child: Center(
               child: _QuestionStage(
                 type: q.type,
@@ -559,14 +577,11 @@ class _WrongDetailViewState extends ConsumerState<WrongDetailView> {
               ),
               child: SizedBox(
                 width: double.infinity,
-                child: FilledButton(
+                child: EditorialPrimaryButton(
                   onPressed: () =>
                       ref.read(learningSessionProvider.notifier).next(),
-                  style: FilledButton.styleFrom(
-                    backgroundColor: AppColors.primary,
-                    minimumSize: const Size.fromHeight(52),
-                  ),
-                  child: Text(
+                  minHeight: 52,
+                  label: Text(
                     '继续',
                     style: AppTheme.cardTitle().copyWith(
                       fontSize: 16,
@@ -677,6 +692,22 @@ class _WordStage extends StatelessWidget {
           overflow: TextOverflow.visible,
           style: AppTheme.phonetic(fontSize: phoneticSize, context: context),
         ),
+        const SizedBox(height: AppSpacing.x2),
+        AppGlassIconButton(
+          tooltip: '播放发音',
+          onPressed: () {
+            HapticFeedback.lightImpact();
+            TtsService.instance.speak(text: word.word);
+          },
+          icon: Icons.volume_up_outlined,
+          size: 18,
+          color: AppColors.primary,
+        ),
+        const SizedBox(height: AppSpacing.x2),
+        Text(
+          '最符合该单词意思的是？',
+          style: AppTheme.mutedCaption(size: 13, context: context),
+        ),
       ],
     );
   }
@@ -763,7 +794,7 @@ class _LargePlayButton extends StatelessWidget {
         ),
         child: const Icon(
           Icons.volume_up_rounded,
-          size: 56,
+          size: 48,
           color: AppColors.primary,
         ),
       ),
@@ -799,30 +830,44 @@ class _OptionTile extends StatelessWidget {
         scaleFactor: enabled ? 0.97 : 1.0,
         onTap: enabled ? onTap : null,
         child: ConstrainedBox(
-          constraints: const BoxConstraints(minHeight: 56),
+          constraints: const BoxConstraints(minHeight: 60),
           child: AnimatedContainer(
             duration: AppMotion.fast,
             curve: AppMotion.easeOut,
             padding: const EdgeInsets.symmetric(
               horizontal: AppSpacing.x5,
-              vertical: AppSpacing.x2 + 2,
+              vertical: AppSpacing.x3,
             ),
             decoration: BoxDecoration(
-              color: colors.background,
-              borderRadius: BorderRadius.circular(AppRadii.md),
-              border: Border.all(color: colors.border, width: 1.5),
+              color:
+                  state == _OptionState.normal &&
+                      Theme.of(context).brightness == Brightness.light
+                  ? null
+                  : colors.background,
+              gradient:
+                  state == _OptionState.normal &&
+                      Theme.of(context).brightness == Brightness.light
+                  ? AppMaterials.paper
+                  : null,
+              borderRadius: BorderRadius.circular(AppRadii.sm),
+              border: Border.all(color: colors.border, width: 1),
+              boxShadow:
+                  state == _OptionState.normal &&
+                      Theme.of(context).brightness == Brightness.light
+                  ? AppShadows.paper
+                  : AppShadows.none,
             ),
             child: Row(
               children: [
                 AnimatedContainer(
                   duration: AppMotion.fast,
                   curve: AppMotion.easeOut,
-                  width: 28,
-                  height: 28,
+                  width: 30,
+                  height: 30,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: colors.badgeBackground,
-                    borderRadius: BorderRadius.circular(AppRadii.pill),
+                    shape: BoxShape.circle,
                   ),
                   child: Text(
                     label,
@@ -846,7 +891,7 @@ class _OptionTile extends StatelessWidget {
                 if (state == _OptionState.correct)
                   const Icon(
                     Icons.check_circle_rounded,
-                    color: AppColors.primary,
+                    color: AppColors.success,
                     size: 20,
                   ),
               ],
@@ -862,10 +907,10 @@ class _OptionTile extends StatelessWidget {
     switch (state) {
       case _OptionState.correct:
         return _OptionColors(
-          background: AppColors.primarySoft.withValues(alpha: 0.55),
-          border: AppColors.primary,
-          text: AppColors.primary,
-          badgeBackground: AppColors.primary,
+          background: AppColors.sageSoft,
+          border: AppColors.success,
+          text: AppColors.success,
+          badgeBackground: AppColors.success,
           badgeText: AppColors.onPrimary,
         );
       case _OptionState.wrong:

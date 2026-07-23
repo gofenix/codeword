@@ -442,6 +442,50 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
     return _hydrate(entries: entries.take(limit).toList(), at: at);
   }
 
+  /// Learned words eligible for contextual reading. Due words come first,
+  /// followed by words reviewed today and then the most recently reviewed
+  /// history. Unseen words are intentionally excluded.
+  Future<List<PulseWordEntry>> readingCandidateWords({
+    int limit = 24,
+    DateTime? now,
+  }) async {
+    final at = now ?? DateTime.now();
+    final today = DateTime(at.year, at.month, at.day);
+    final removed = _removedWordIds();
+    final entries = state.entries
+        .where(
+          (entry) =>
+              !removed.contains(entry.key) &&
+              entry.value.lastReviewedAt != null,
+        )
+        .toList();
+
+    bool isDue(ReviewState review) =>
+        review.dueAt != null && !review.dueAt!.isAfter(at);
+    bool reviewedToday(ReviewState review) =>
+        !review.lastReviewedAt!.isBefore(today);
+
+    entries.sort((a, b) {
+      final aDue = isDue(a.value);
+      final bDue = isDue(b.value);
+      if (aDue != bDue) return aDue ? -1 : 1;
+      if (aDue) {
+        final dueOrder = a.value.dueAt!.compareTo(b.value.dueAt!);
+        if (dueOrder != 0) return dueOrder;
+      }
+      final aToday = reviewedToday(a.value);
+      final bToday = reviewedToday(b.value);
+      if (aToday != bToday) return aToday ? -1 : 1;
+      final reviewedOrder = b.value.lastReviewedAt!.compareTo(
+        a.value.lastReviewedAt!,
+      );
+      if (reviewedOrder != 0) return reviewedOrder;
+      return a.key.compareTo(b.key);
+    });
+
+    return _hydrate(entries: entries.take(limit).toList(), at: at);
+  }
+
   /// Top-N recommended new words. Picks the vocab with the lowest
   /// coverage that still has unseen words, then returns the first few
   /// of those.
@@ -490,7 +534,7 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
       final vid = _extractVocabIdFromWordId(e.key);
       byVocab.putIfAbsent(vid, () => []).add(e.key);
     }
-    final out = <PulseWordEntry>[];
+    final hydrated = <String, PulseWordEntry>{};
     for (final vid in byVocab.keys) {
       try {
         final list = await ContentLoader.loadList(vid);
@@ -505,23 +549,26 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
           if (s == null) continue;
           final due = s.dueAt;
           final overdue = due == null ? 0 : at.difference(due).inDays;
-          out.add(
-            PulseWordEntry(
-              word: w.word,
-              translation: w.translation,
-              phonetic: w.phonetic,
-              level: w.level,
-              vocabId: vid,
-              overdueDays: overdue < 0 ? 0 : overdue,
-            ),
+          hydrated[wid] = PulseWordEntry(
+            word: w.word,
+            translation: w.translation,
+            phonetic: w.phonetic,
+            level: w.level,
+            vocabId: vid,
+            overdueDays: overdue < 0 ? 0 : overdue,
+            isDue: due != null && !due.isAfter(at),
           );
         }
       } catch (_) {
         // Vocab not bundled — skip.
       }
     }
-    out.sort((a, b) => (b.overdueDays ?? 0).compareTo(a.overdueDays ?? 0));
-    return out;
+    final ordered = <PulseWordEntry>[];
+    for (final entry in entries) {
+      final value = hydrated[entry.key];
+      if (value != null) ordered.add(value);
+    }
+    return ordered;
   }
 
   /// All stats for the home + stats pages. Pulls activity from the
@@ -704,6 +751,7 @@ class PulseWordEntry {
   final String level;
   final String vocabId;
   final int? overdueDays; // null for new-word recommendations
+  final bool isDue;
   const PulseWordEntry({
     required this.word,
     required this.translation,
@@ -711,6 +759,7 @@ class PulseWordEntry {
     required this.level,
     required this.vocabId,
     this.overdueDays,
+    this.isDue = false,
   });
 }
 

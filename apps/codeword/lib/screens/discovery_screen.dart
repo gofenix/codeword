@@ -45,7 +45,7 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
     return TabPageScaffold(
       title: '词书',
       scrollKey: const PageStorageKey('library-scroll'),
-      trailing: IconButton(
+      trailing: AppGlassIconButton(
         tooltip: '设置',
         onPressed: () {
           HapticFeedback.selectionClick();
@@ -53,12 +53,24 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
             context,
           ).push(MaterialPageRoute(builder: (_) => const SettingsScreen()));
         },
-        icon: const Icon(Icons.settings_outlined, size: 21),
+        icon: Icons.settings_outlined,
         color: AppColors.of(context).inkMuted,
       ),
       slivers: [
         SliverList.list(
           children: [
+            Text(
+              'CURRENT COLLECTION',
+              key: const ValueKey('library-first-content'),
+              style: AppTheme.sectionLabel(context: context),
+            ),
+            const SizedBox(height: AppSpacing.x4),
+            _CurrentBookBand(
+              list: current,
+              progress: currentProgress,
+              onTap: current == null ? null : () => _startBook(current.id),
+            ),
+            const SizedBox(height: AppSpacing.x6),
             _SearchField(
               controller: _searchController,
               onChanged: (value) =>
@@ -74,12 +86,6 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
                 ..sort(),
               selected: _category,
               onChanged: (value) => setState(() => _category = value),
-            ),
-            const SizedBox(height: AppSpacing.x4),
-            _CurrentBookBand(
-              list: current,
-              progress: currentProgress,
-              onTap: current == null ? null : () => _startBook(current.id),
             ),
             const SizedBox(height: AppSpacing.x5),
             if (grouped.isEmpty)
@@ -153,7 +159,6 @@ class _SearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      key: const ValueKey('library-first-content'),
       controller: controller,
       onChanged: onChanged,
       textAlignVertical: TextAlignVertical.center,
@@ -173,8 +178,12 @@ class _SearchField extends StatelessWidget {
         filled: true,
         fillColor: AppColors.of(context).surface,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(AppRadii.md),
-          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(AppRadii.sm),
+          borderSide: BorderSide(color: AppColors.of(context).divider),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(AppRadii.sm),
+          borderSide: BorderSide(color: AppColors.of(context).divider),
         ),
       ),
     );
@@ -210,8 +219,10 @@ class _CategoryFilter extends StatelessWidget {
             onSelected: (_) => onChanged(value),
             visualDensity: VisualDensity.compact,
             selectedColor: AppColors.primarySoft,
-            backgroundColor: AppColors.of(context).surface,
-            side: BorderSide.none,
+            backgroundColor: Colors.transparent,
+            side: BorderSide(
+              color: active ? AppColors.primary : AppColors.of(context).divider,
+            ),
             labelStyle: AppTheme.mutedCaption(
               size: 12,
               color: active
@@ -241,71 +252,88 @@ class _CurrentBookBand extends StatelessWidget {
     final total = progress?.availableWords ?? list?.wordCount ?? 0;
     final learned = progress?.learned ?? 0;
     final ratio = total == 0 ? 0.0 : learned / total;
-    return Material(
-      color: const Color(0xFFEAF7EE),
-      borderRadius: BorderRadius.circular(AppRadii.lg),
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(AppRadii.lg),
-        child: Padding(
-          padding: const EdgeInsets.all(AppSpacing.x4),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    width: 42,
-                    height: 42,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.8),
-                      borderRadius: BorderRadius.circular(AppRadii.md),
+    final name = list?.name ?? '';
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return Container(
+      decoration: BoxDecoration(
+        gradient: isDark ? null : AppMaterials.paper,
+        color: isDark ? AppColors.of(context).surface : null,
+        borderRadius: BorderRadius.circular(AppRadii.sm),
+        border: Border.all(color: AppColors.of(context).divider),
+        boxShadow: isDark ? null : AppShadows.paper,
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(AppRadii.sm),
+          child: Padding(
+            padding: const EdgeInsets.all(AppSpacing.x4),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      width: 48,
+                      height: 58,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: AppColors.primarySoft,
+                        borderRadius: BorderRadius.circular(AppRadii.xs),
+                      ),
+                      child: Text(
+                        name.characters.isEmpty ? 'C' : name.characters.first,
+                        style: AppTheme.editorial(
+                          size: 22,
+                          color: AppColors.primary,
+                          context: context,
+                        ),
+                      ),
                     ),
-                    child: const Icon(
-                      Icons.book_rounded,
+                    const SizedBox(width: AppSpacing.x3),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            list?.name ?? '尚未选择词书',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: AppTheme.editorial(
+                              size: 20,
+                              context: context,
+                            ),
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            '当前词书 · 已学 $learned / $total',
+                            style: AppTheme.mutedCaption(
+                              size: 12,
+                              context: context,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_forward_rounded,
                       color: AppColors.primary,
                     ),
-                  ),
-                  const SizedBox(width: AppSpacing.x3),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          list?.name ?? '尚未选择词书',
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: AppTheme.cardTitle(context: context),
-                        ),
-                        const SizedBox(height: 3),
-                        Text(
-                          '当前词书 · 已学 $learned / $total',
-                          style: AppTheme.mutedCaption(
-                            size: 12,
-                            context: context,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const Icon(
-                    Icons.arrow_forward_rounded,
-                    color: AppColors.primary,
-                  ),
-                ],
-              ),
-              const SizedBox(height: AppSpacing.x3),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(AppRadii.pill),
-                child: LinearProgressIndicator(
-                  value: ratio,
-                  minHeight: 6,
-                  backgroundColor: Colors.white.withValues(alpha: 0.8),
-                  valueColor: const AlwaysStoppedAnimation(AppColors.primary),
+                  ],
                 ),
-              ),
-            ],
+                const SizedBox(height: AppSpacing.x3),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(AppRadii.pill),
+                  child: LinearProgressIndicator(
+                    value: ratio,
+                    minHeight: 6,
+                    backgroundColor: AppColors.surfaceMuted,
+                    valueColor: const AlwaysStoppedAnimation(AppColors.sage),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -335,7 +363,11 @@ class _BookSection extends StatelessWidget {
       children: [
         Text(
           '$category · ${books.length}',
-          style: AppTheme.sectionLabel(context: context),
+          style: AppTheme.mutedCaption(
+            size: 13,
+            color: AppColors.primary,
+            context: context,
+          ).copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: AppSpacing.x2),
         AppCard(
@@ -402,9 +434,11 @@ class _BookRow extends StatelessWidget {
               ),
               child: Text(
                 list.name.characters.isEmpty ? '·' : list.name.characters.first,
-                style: AppTheme.cardTitle(
+                style: AppTheme.editorial(
+                  size: 16,
+                  color: _categoryColor(list.category),
                   context: context,
-                ).copyWith(color: _categoryColor(list.category), fontSize: 16),
+                ),
               ),
             ),
             const SizedBox(width: AppSpacing.x3),
@@ -419,7 +453,8 @@ class _BookRow extends StatelessWidget {
                           list.name,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: AppTheme.rowTitle(
+                          style: AppTheme.editorial(
+                            size: 16,
                             color: selected ? AppColors.primary : null,
                             context: context,
                           ),

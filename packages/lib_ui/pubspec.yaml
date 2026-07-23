@@ -17,3 +17,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+
+flutter:
+  fonts:
+    - family: LibreBaskerville
+      fonts:
+        - asset: assets/fonts/LibreBaskerville-Variable.ttf

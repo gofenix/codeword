@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-/// v5 design tokens — derived from `design-doc-v5-painless.md`.
+/// CodeWord editorial design tokens.
 ///
-/// Visual style: cream/light, Lora serif for words, Inter+Noto Sans SC for UI,
-/// green #10B981 accent, pill tags, card-based, shadow-md, 12-16px radius.
+/// Warm paper surfaces, deep ink, restrained bronze and sage accents. English
+/// display copy uses a bundled serif while Chinese UI keeps the system font.
 ///
 /// All colours are light theme. For the dark theme tokens (paired with
 /// [AppTheme.dark()]) see the `darkXxx` variants below — they are used by
@@ -11,59 +11,62 @@ import 'package:flutter/material.dart';
 class AppColors {
   AppColors._();
 
-  // Surfaces (cream/light)
-  static const Color background = Color(0xFFFAFAF5);
-  static const Color surface = Color(0xFFFFFFFF);
-  static const Color surfaceMuted = Color(0xFFF5F2EA);
+  // Surfaces (warm paper)
+  static const Color background = Color(0xFFF4F0E7);
+  static const Color surface = Color(0xFFFBF9F3);
+  static const Color surfaceMuted = Color(0xFFEEE8DC);
   // Dark bezel painted around the phone-shaped column when the app
   // runs in a desktop window. Reads as a phone sitting on a desk.
   static const Color bezel = Color(0xFF1A1A1F);
   // Light cream wall behind the phone bezel on desktop.
-  static const Color desktopWall = Color(0xFFEDEAE0);
+  static const Color desktopWall = Color(0xFFE4DED2);
 
   // Dark-mode surfaces
-  static const Color backgroundDark = Color(0xFF151819);
-  static const Color surfaceDark = Color(0xFF1E2223);
-  static const Color surfaceMutedDark = Color(0xFF272B2C);
-  static const Color desktopWallDark = Color(0xFF0E1011);
+  static const Color backgroundDark = Color(0xFF181714);
+  static const Color surfaceDark = Color(0xFF22201C);
+  static const Color surfaceMutedDark = Color(0xFF2D2A25);
+  static const Color desktopWallDark = Color(0xFF100F0D);
 
   // Text (light)
-  static const Color ink = Color(0xFF1F2421);
-  static const Color inkMuted = Color(0xFF6B7470);
-  static const Color inkSubtle = Color(0xFF98A09B);
+  static const Color ink = Color(0xFF20211E);
+  static const Color inkMuted = Color(0xFF77746C);
+  static const Color inkSubtle = Color(0xFFA39D91);
 
   // Text (dark)
-  static const Color inkDark = Color(0xFFEDECE6);
-  static const Color inkMutedDark = Color(0xFFA3ABA8);
-  static const Color inkSubtleDark = Color(0xFF727B78);
+  static const Color inkDark = Color(0xFFF2EDE3);
+  static const Color inkMutedDark = Color(0xFFB8B0A2);
+  static const Color inkSubtleDark = Color(0xFF857E72);
 
   // Foreground on top of primary/accent fills.
   static const Color onPrimary = Color(0xFFFFFFFF);
 
   // Generic divider used in ThemeData.
-  static const Color divider = Color(0x261F2421); // ink ~15% alpha
-  static const Color dividerDark = Color(0x26EDECE6);
+  static const Color divider = Color(0xFFD8D0C2);
+  static const Color dividerDark = Color(0xFF484238);
 
   // Idle state for the favorite star (replaces Colors.amber default).
   static const Color starIdle = Color(0xFFE5E7EB);
 
-  // Accent — green (matches 无痛单词)
-  static const Color primary = Color(0xFF10B981);
-  static const Color primaryDark = Color(0xFF059669);
-  static const Color primarySoft = Color(0xFFD1FAE5);
-  // Tertiary — indigo, used as a secondary accent to break up the green.
-  static const Color tertiary = Color(0xFF6366F1);
+  // Accent — muted bronze. Sage remains a distinct semantic learning colour.
+  static const Color primary = Color(0xFF806A46);
+  static const Color primaryDark = Color(0xFF604D31);
+  static const Color primarySoft = Color(0xFFEEE6D8);
+  static const Color sage = Color(0xFF65775F);
+  static const Color sageSoft = Color(0xFFE5ECE1);
+  static const Color target = Color(0xFFF2D96B);
+  // Tertiary — sage, used for mastery and learning progress.
+  static const Color tertiary = sage;
   static const Color onTertiary = Color(0xFFFFFFFF);
-  static const Color tertiarySoft = Color(0xFFE0E7FF);
+  static const Color tertiarySoft = sageSoft;
   // Inverse surface + inverse primary used by SnackBar / scrim / dialogs.
   static const Color inverseSurface = ink;
   static const Color onInverseSurface = surface;
-  static const Color inversePrimary = Color(0xFF6EE7B7);
+  static const Color inversePrimary = Color(0xFFD8C39E);
 
   // Status
   static const Color success = Color(0xFF16A34A); // deeper — WCAG AA on white
-  static const Color warning = Color(0xFFD97706); // deeper — WCAG AA
-  static const Color danger = Color(0xFFEF4444);
+  static const Color warning = Color(0xFFC28A2C);
+  static const Color danger = Color(0xFFB95745);
   static const Color info = Color(0xFF2563EB);
 
   // 8-color palette for vocab tags & per-vocab progress chips.
@@ -234,6 +237,52 @@ class AppShadows {
       offset: Offset(0, 2),
     ),
   ];
+
+  static const List<BoxShadow> paper = [
+    BoxShadow(
+      color: Color(0x120F0D09),
+      blurRadius: 20,
+      offset: Offset(0, 8),
+    ),
+    BoxShadow(
+      color: Color(0x59FFFFFF),
+      blurRadius: 1,
+      offset: Offset(0, -1),
+    ),
+  ];
+}
+
+class AppMaterials {
+  AppMaterials._();
+
+  static const LinearGradient canvas = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Color(0xFFF9F6EF), Color(0xFFF1EBDD)],
+    stops: [0, 1],
+  );
+
+  static const LinearGradient paper = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Color(0xFFFFFDF8), Color(0xFFF8F3E9)],
+    stops: [0, 1],
+  );
+
+  static const LinearGradient bronze = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [Color(0xFF967E55), Color(0xFF735E3D)],
+  );
+
+  static BoxDecoration canvasDecoration(BuildContext context) {
+    final palette = AppColors.of(context);
+    return BoxDecoration(
+      color: palette.background,
+      gradient:
+          Theme.of(context).brightness == Brightness.light ? canvas : null,
+    );
+  }
 }
 
 /// Motion tokens — shared easing curves and durations so every animation

@@ -1,5 +1,4 @@
 import 'dart:developer' as developer;
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -104,6 +103,18 @@ class CodewordApp extends StatelessWidget {
       // override in the OS settings. Both themes ship a full
       // Material-3 ColorScheme so we never get a half-themed app.
       themeMode: ThemeMode.system,
+      builder: (context, child) {
+        final dark = Theme.of(context).brightness == Brightness.dark;
+        return AnnotatedRegion<SystemUiOverlayStyle>(
+          value: (dark ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark)
+              .copyWith(
+                statusBarColor: Colors.transparent,
+                systemNavigationBarColor: Colors.transparent,
+                systemNavigationBarContrastEnforced: false,
+              ),
+          child: child ?? const SizedBox.shrink(),
+        );
+      },
       home: const HomeShell(),
     );
   }
@@ -138,6 +149,7 @@ class _HomeShellState extends ConsumerState<HomeShell> {
     ReadingScreen(
       key: const PageStorageKey('tab-reading'),
       isActive: _index == 1,
+      onGoWords: () => _goToTab(0),
     ),
     StatsScreen(
       key: const PageStorageKey('tab-stats'),
@@ -154,8 +166,12 @@ class _HomeShellState extends ConsumerState<HomeShell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       backgroundColor: AppColors.of(context).background,
-      body: IndexedStack(index: _index, children: _pages),
+      body: DecoratedBox(
+        decoration: AppMaterials.canvasDecoration(context),
+        child: IndexedStack(index: _index, children: _pages),
+      ),
       bottomNavigationBar: _PhoneBottomNav(index: _index, onTap: _goToTab),
     );
   }
@@ -170,32 +186,25 @@ class _PhoneBottomNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final palette = AppColors.of(context);
-    return ClipRect(
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
-        child: Container(
-          decoration: BoxDecoration(
-            color: palette.surface.withValues(alpha: 0.7),
-            border: Border(
-              top: BorderSide(
-                color: palette.divider.withValues(alpha: 0.3),
-                width: 0.5,
-              ),
-            ),
-          ),
-          child: SafeArea(
-            top: false,
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+      child: AppGlassSurface(
+        borderRadius: BorderRadius.circular(30),
+        child: SafeArea(
+          top: false,
+          minimum: const EdgeInsets.symmetric(horizontal: 4),
+          child: MediaQuery.withClampedTextScaling(
+            minScaleFactor: 1,
+            maxScaleFactor: 1.3,
             child: NavigationBar(
               selectedIndex: index,
               onDestinationSelected: onTap,
               backgroundColor: Colors.transparent,
-              indicatorColor: Colors.transparent,
+              indicatorColor: AppColors.primary.withValues(alpha: 0.12),
               surfaceTintColor: Colors.transparent,
               elevation: 0,
-              height: 56,
-              labelBehavior:
-                  NavigationDestinationLabelBehavior.onlyShowSelected,
+              height: 60,
+              labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
               destinations: const [
                 NavigationDestination(
                   icon: Icon(Icons.style_outlined),
@@ -315,33 +324,37 @@ class _TodayPageState extends ConsumerState<TodayPage> {
     final session = ref.watch(learningSessionProvider);
     final clearingLearningData = ref.watch(learningDataClearInProgressProvider);
 
-    return SafeArea(
-      child: Column(
-        children: [
-          if (!ReviewRepository.isReady) ...[
-            const _PersistenceWarning(),
-            const SizedBox(height: AppSpacing.x2),
-          ],
-          Expanded(
-            child: clearingLearningData
-                ? const _LearningDataClearView()
-                : switch (session.phase) {
-                    SessionPhase.loading => const Center(
-                      child: CircularProgressIndicator(
-                        color: AppColors.primary,
+    return MediaQuery.withClampedTextScaling(
+      minScaleFactor: 1,
+      maxScaleFactor: 1.3,
+      child: SafeArea(
+        child: Column(
+          children: [
+            if (!ReviewRepository.isReady) ...[
+              const _PersistenceWarning(),
+              const SizedBox(height: AppSpacing.x2),
+            ],
+            Expanded(
+              child: clearingLearningData
+                  ? const _LearningDataClearView()
+                  : switch (session.phase) {
+                      SessionPhase.loading => const Center(
+                        child: CircularProgressIndicator(
+                          color: AppColors.primary,
+                        ),
                       ),
-                    ),
-                    SessionPhase.asking => AskingView(session: session),
-                    SessionPhase.wrongDetail => WrongDetailView(
-                      session: session,
-                    ),
-                    SessionPhase.finished => _NoLearningContent(
-                      onGoReading: _goReading,
-                      onGoLibrary: _goLibrary,
-                    ),
-                  },
-          ),
-        ],
+                      SessionPhase.asking => AskingView(session: session),
+                      SessionPhase.wrongDetail => WrongDetailView(
+                        session: session,
+                      ),
+                      SessionPhase.finished => _NoLearningContent(
+                        onGoReading: _goReading,
+                        onGoLibrary: _goLibrary,
+                      ),
+                    },
+            ),
+          ],
+        ),
       ),
     );
   }

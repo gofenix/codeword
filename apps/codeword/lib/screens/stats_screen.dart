@@ -7,7 +7,7 @@ import 'package:lib_ui/lib_ui.dart';
 
 import '../state/learning_session.dart';
 
-enum _TrendMetric { words, minutes }
+enum _TrendMetric { answers, minutes }
 
 class StatsScreen extends ConsumerStatefulWidget {
   final bool isActive;
@@ -26,7 +26,7 @@ class StatsScreen extends ConsumerStatefulWidget {
 }
 
 class _StatsScreenState extends ConsumerState<StatsScreen> {
-  _TrendMetric _metric = _TrendMetric.words;
+  _TrendMetric _metric = _TrendMetric.answers;
   int _selectedDay = 13;
 
   @override
@@ -43,18 +43,18 @@ class _StatsScreenState extends ConsumerState<StatsScreen> {
     final vocab = matchingVocab.isEmpty ? null : matchingVocab.first;
 
     final distribution = [
-      _MasteryPart('稳固', progress?.mastered ?? 0, const Color(0xFF48A868)),
+      _MasteryPart('稳固', progress?.mastered ?? 0, AppColors.sage),
       _MasteryPart(
         '学习中',
         max(0, (progress?.learned ?? 0) - (progress?.mastered ?? 0)),
-        const Color(0xFF5E7ED8),
+        AppColors.primary,
       ),
       _MasteryPart(
         '待巩固',
         max(0, (progress?.seen ?? 0) - (progress?.learned ?? 0)),
-        const Color(0xFFF0B53A),
+        AppColors.warning,
       ),
-      _MasteryPart('未学习', progress?.unseenWords ?? 0, const Color(0xFFD9DDDC)),
+      _MasteryPart('未学习', progress?.unseenWords ?? 0, AppColors.divider),
     ];
 
     final words = stats.last30Days
@@ -70,7 +70,14 @@ class _StatsScreenState extends ConsumerState<StatsScreen> {
       slivers: [
         SliverList.list(
           children: [
+            Text(
+              'LEARNING LEDGER',
+              key: const ValueKey('stats-first-content'),
+              style: AppTheme.sectionLabel(context: context),
+            ),
+            const SizedBox(height: AppSpacing.x4),
             _TodayAction(
+              hasLearningData: stats.totalSeen > 0,
               due: stats.totalDue,
               newToday: stats.newToday,
               minutes: stats.studyMinutesToday,
@@ -106,12 +113,14 @@ class _StatsScreenState extends ConsumerState<StatsScreen> {
 }
 
 class _TodayAction extends StatelessWidget {
+  final bool hasLearningData;
   final int due;
   final int newToday;
   final int minutes;
   final VoidCallback? onContinue;
 
   const _TodayAction({
+    required this.hasLearningData,
     required this.due,
     required this.newToday,
     required this.minutes,
@@ -120,55 +129,79 @@ class _TodayAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final estimate = due == 0 ? 2 : (due / 3).ceil().clamp(1, 20);
-    return Material(
-      key: const ValueKey('stats-first-content'),
-      color: const Color(0xFFEAF7EE),
-      borderRadius: BorderRadius.circular(AppRadii.lg),
-      child: InkWell(
-        onTap: onContinue == null
-            ? null
-            : () {
-                HapticFeedback.selectionClick();
-                onContinue!();
-              },
-        borderRadius: BorderRadius.circular(AppRadii.lg),
-        child: Padding(
-          padding: const EdgeInsets.all(AppSpacing.x4),
-          child: Row(
-            children: [
-              Container(
-                width: 44,
-                height: 44,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.8),
-                  borderRadius: BorderRadius.circular(AppRadii.md),
+    final estimate = (due / 3).ceil().clamp(1, 20);
+    final title = !hasLearningData
+        ? '从第一个词开始'
+        : due > 0
+        ? '还有 $due 个词该复习了'
+        : '记忆状态很好';
+    final detail = !hasLearningData
+        ? '开始学习后，这里会记录你的掌握变化'
+        : due > 0
+        ? '今日新学 $newToday · 已学习 $minutes 分钟 · 约 $estimate 分钟'
+        : '今日新学 $newToday · 已学习 $minutes 分钟';
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return Container(
+      decoration: BoxDecoration(
+        gradient: isDark ? null : AppMaterials.paper,
+        color: isDark ? AppColors.of(context).surface : null,
+        borderRadius: BorderRadius.circular(AppRadii.sm),
+        border: Border.all(color: AppColors.of(context).divider),
+        boxShadow: isDark ? null : AppShadows.paper,
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onContinue == null
+              ? null
+              : () {
+                  HapticFeedback.selectionClick();
+                  onContinue!();
+                },
+          borderRadius: BorderRadius.circular(AppRadii.sm),
+          child: Padding(
+            padding: const EdgeInsets.all(AppSpacing.x4),
+            child: Row(
+              children: [
+                Container(
+                  width: 44,
+                  height: 44,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: AppColors.primarySoft,
+                    borderRadius: BorderRadius.circular(AppRadii.sm),
+                  ),
+                  child: const Icon(
+                    Icons.arrow_forward_rounded,
+                    color: AppColors.primary,
+                  ),
                 ),
-                child: const Icon(Icons.bolt_rounded, color: AppColors.primary),
-              ),
-              const SizedBox(width: AppSpacing.x3),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      due > 0 ? '还有 $due 个词正在变模糊' : '记忆状态很好',
-                      style: AppTheme.rowTitle(context: context),
-                    ),
-                    const SizedBox(height: 3),
-                    Text(
-                      '今日新学 $newToday · 已学习 $minutes 分钟 · 约 $estimate 分钟',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTheme.mutedCaption(size: 12, context: context),
-                    ),
-                  ],
+                const SizedBox(width: AppSpacing.x3),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(title, style: AppTheme.rowTitle(context: context)),
+                      const SizedBox(height: 3),
+                      Text(
+                        detail,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTheme.mutedCaption(
+                          size: 12,
+                          context: context,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              const SizedBox(width: AppSpacing.x2),
-              const Icon(Icons.arrow_forward_rounded, color: AppColors.primary),
-            ],
+                const SizedBox(width: AppSpacing.x2),
+                const Icon(
+                  Icons.chevron_right_rounded,
+                  color: AppColors.primary,
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -202,6 +235,7 @@ class _MasteryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ratio = total == 0 ? 0.0 : mastered / total;
+    final largeText = MediaQuery.textScalerOf(context).scale(16) >= 25.6;
     final distributionTotal = distribution.fold<int>(
       0,
       (sum, item) => sum + item.count,
@@ -214,44 +248,21 @@ class _MasteryCard extends StatelessWidget {
           InkWell(
             onTap: onOpenLibrary,
             borderRadius: BorderRadius.circular(AppRadii.sm),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
+            child: largeText
+                ? Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        '当前词书掌握',
-                        style: AppTheme.cardTitle(context: context),
-                      ),
-                      const SizedBox(height: 3),
-                      Text(
-                        vocabName,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: AppTheme.mutedCaption(
-                          size: 12,
-                          context: context,
-                        ),
-                      ),
+                      _MasteryTitle(vocabName: vocabName),
+                      const SizedBox(height: AppSpacing.x2),
+                      _MasteryRatio(ratio: ratio),
+                    ],
+                  )
+                : Row(
+                    children: [
+                      Expanded(child: _MasteryTitle(vocabName: vocabName)),
+                      Flexible(child: _MasteryRatio(ratio: ratio)),
                     ],
                   ),
-                ),
-                Text(
-                  '${(ratio * 100).toStringAsFixed(1)}%',
-                  style: AppTheme.wordDisplay(
-                    size: 30,
-                    color: AppColors.primary,
-                    weight: FontWeight.w800,
-                    context: context,
-                  ).copyWith(fontFamily: null),
-                ),
-                Icon(
-                  Icons.chevron_right_rounded,
-                  color: AppColors.of(context).inkSubtle,
-                ),
-              ],
-            ),
           ),
           const SizedBox(height: AppSpacing.x4),
           ClipRRect(
@@ -291,6 +302,63 @@ class _MasteryCard extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _MasteryTitle extends StatelessWidget {
+  final String vocabName;
+
+  const _MasteryTitle({required this.vocabName});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('当前词书掌握', style: AppTheme.cardTitle(context: context)),
+        const SizedBox(height: 3),
+        Text(
+          vocabName,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: AppTheme.mutedCaption(size: 12, context: context),
+        ),
+      ],
+    );
+  }
+}
+
+class _MasteryRatio extends StatelessWidget {
+  final double ratio;
+
+  const _MasteryRatio({required this.ratio});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Flexible(
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              '${(ratio * 100).toStringAsFixed(1)}%',
+              maxLines: 1,
+              style: AppTheme.editorial(
+                size: 34,
+                color: AppColors.sage,
+                weight: FontWeight.w700,
+                context: context,
+              ),
+            ),
+          ),
+        ),
+        Icon(
+          Icons.chevron_right_rounded,
+          color: AppColors.of(context).inkSubtle,
+        ),
+      ],
     );
   }
 }
@@ -345,7 +413,8 @@ class _TrendCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final values = metric == _TrendMetric.words ? words : minutes;
+    final values = metric == _TrendMetric.answers ? words : minutes;
+    final largeText = MediaQuery.textScalerOf(context).scale(16) >= 25.6;
     final maxValue = values.fold<int>(1, max);
     final safeSelected = selectedDay
         .clamp(0, max(0, values.length - 1))
@@ -359,56 +428,81 @@ class _TrendCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Expanded(
-                child: Text(
-                  '近 14 天',
-                  style: AppTheme.cardTitle(context: context),
+          if (largeText) ...[
+            Text('近 14 天', style: AppTheme.cardTitle(context: context)),
+            const SizedBox(height: AppSpacing.x2),
+            _MetricSwitch(
+              metric: metric,
+              onChanged: onMetricChanged,
+              wide: true,
+            ),
+          ] else
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    '近 14 天',
+                    style: AppTheme.cardTitle(context: context),
+                  ),
                 ),
-              ),
-              _MetricSwitch(metric: metric, onChanged: onMetricChanged),
-            ],
+                _MetricSwitch(metric: metric, onChanged: onMetricChanged),
+              ],
+            ),
+          const SizedBox(height: AppSpacing.x1),
+          _TrendDayNavigator(
+            label:
+                '${selectedDate.month}月${selectedDate.day}日 · $selectedValue${metric == _TrendMetric.answers ? " 次" : " 分钟"}',
+            canGoPrevious: safeSelected > 0,
+            canGoNext: safeSelected < values.length - 1,
+            onPrevious: () => onDaySelected(safeSelected - 1),
+            onNext: () => onDaySelected(safeSelected + 1),
           ),
           const SizedBox(height: AppSpacing.x2),
-          Text(
-            '${selectedDate.month}月${selectedDate.day}日 · $selectedValue${metric == _TrendMetric.words ? " 词" : " 分钟"}',
-            style: AppTheme.mutedCaption(size: 12, context: context),
-          ),
-          const SizedBox(height: AppSpacing.x4),
           SizedBox(
             height: 128,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                for (var i = 0; i < values.length; i++)
-                  Expanded(
-                    child: Semantics(
-                      button: true,
-                      label: '第 ${i + 1} 天 ${values[i]}',
-                      child: GestureDetector(
-                        onTap: () => onDaySelected(i),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 2),
-                          child: AnimatedContainer(
-                            duration: AppMotion.fast,
-                            height: values[i] == 0
-                                ? 5
-                                : 14 + values[i] / maxValue * 100,
-                            decoration: BoxDecoration(
-                              color: i == safeSelected
-                                  ? AppColors.primary
-                                  : AppColors.primary.withValues(alpha: 0.25),
-                              borderRadius: const BorderRadius.vertical(
-                                top: Radius.circular(AppRadii.xs),
+            child: Semantics(
+              label:
+                  '近 14 天${metric == _TrendMetric.answers ? "答题次数" : "学习时长"}趋势',
+              child: LayoutBuilder(
+                builder: (context, constraints) => GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTapDown: (details) {
+                    if (values.isEmpty || constraints.maxWidth <= 0) return;
+                    final index =
+                        (details.localPosition.dx /
+                                constraints.maxWidth *
+                                values.length)
+                            .floor()
+                            .clamp(0, values.length - 1);
+                    onDaySelected(index);
+                  },
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      for (var i = 0; i < values.length; i++)
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 2),
+                            child: AnimatedContainer(
+                              duration: AppMotion.fast,
+                              height: values[i] == 0
+                                  ? 5
+                                  : 14 + values[i] / maxValue * 100,
+                              decoration: BoxDecoration(
+                                color: i == safeSelected
+                                    ? AppColors.primary
+                                    : AppColors.sage.withValues(alpha: 0.28),
+                                borderRadius: const BorderRadius.vertical(
+                                  top: Radius.circular(AppRadii.xs),
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                    ),
+                    ],
                   ),
-              ],
+                ),
+              ),
             ),
           ),
         ],
@@ -417,17 +511,65 @@ class _TrendCard extends StatelessWidget {
   }
 }
 
+class _TrendDayNavigator extends StatelessWidget {
+  final String label;
+  final bool canGoPrevious;
+  final bool canGoNext;
+  final VoidCallback onPrevious;
+  final VoidCallback onNext;
+
+  const _TrendDayNavigator({
+    required this.label,
+    required this.canGoPrevious,
+    required this.canGoNext,
+    required this.onPrevious,
+    required this.onNext,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        IconButton(
+          key: const ValueKey('trend-previous-day'),
+          tooltip: '前一天',
+          onPressed: canGoPrevious ? onPrevious : null,
+          icon: const Icon(Icons.chevron_left_rounded),
+        ),
+        Expanded(
+          child: Text(
+            label,
+            textAlign: TextAlign.center,
+            style: AppTheme.mutedCaption(size: 12, context: context),
+          ),
+        ),
+        IconButton(
+          key: const ValueKey('trend-next-day'),
+          tooltip: '后一天',
+          onPressed: canGoNext ? onNext : null,
+          icon: const Icon(Icons.chevron_right_rounded),
+        ),
+      ],
+    );
+  }
+}
+
 class _MetricSwitch extends StatelessWidget {
   final _TrendMetric metric;
   final ValueChanged<_TrendMetric> onChanged;
+  final bool wide;
 
-  const _MetricSwitch({required this.metric, required this.onChanged});
+  const _MetricSwitch({
+    required this.metric,
+    required this.onChanged,
+    this.wide = false,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 132,
-      height: 34,
+      width: wide ? double.infinity : 132,
+      constraints: const BoxConstraints(minHeight: 34),
       padding: const EdgeInsets.all(3),
       decoration: BoxDecoration(
         color: AppColors.of(context).surfaceMuted,
@@ -449,7 +591,7 @@ class _MetricSwitch extends StatelessWidget {
                     borderRadius: BorderRadius.circular(AppRadii.xs),
                   ),
                   child: Text(
-                    value == _TrendMetric.words ? '单词数' : '时长',
+                    value == _TrendMetric.answers ? '答题数' : '时长',
                     style: AppTheme.mutedCaption(
                       size: 11,
                       color: metric == value
@@ -474,26 +616,22 @@ class _HeatmapCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cells = buildRhythmCalendar(
-      activity: activity,
-      now: DateTime.now(),
-      weeks: 13,
-    );
+    final now = DateTime.now();
+    final cells = buildRhythmCalendar(activity: activity, now: now, weeks: 13);
+    final dates = buildRhythmCalendarDates(now: now, weeks: 13);
     return AppCard(
       padding: const EdgeInsets.all(AppSpacing.x4),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          Wrap(
+            spacing: AppSpacing.x3,
+            runSpacing: AppSpacing.x1,
+            crossAxisAlignment: WrapCrossAlignment.center,
             children: [
-              Expanded(
-                child: Text(
-                  '90 天学习节奏',
-                  style: AppTheme.cardTitle(context: context),
-                ),
-              ),
+              Text('90 天学习节奏', style: AppTheme.cardTitle(context: context)),
               Text(
-                '连续 $streakDays 天',
+                '${now.month}月${now.day}日止 · ${streakDays > 0 ? "连续 $streakDays 天" : "今天开始也不晚"}',
                 style: AppTheme.mutedCaption(size: 12, context: context),
               ),
             ],
@@ -517,10 +655,14 @@ class _HeatmapCard extends StatelessWidget {
                               color: cells[col * 7 + row] == null
                                   ? Colors.transparent
                                   : cells[col * 7 + row]!
-                                  ? AppColors.primary.withValues(alpha: 0.82)
+                                  ? AppColors.sage.withValues(alpha: 0.86)
                                   : AppColors.of(context).surfaceMuted,
                               borderRadius: BorderRadius.circular(3),
                             ),
+                          ).withRhythmSemantics(
+                            context,
+                            date: dates[col * 7 + row],
+                            active: cells[col * 7 + row],
                           ),
                         ],
                       ],
@@ -530,10 +672,47 @@ class _HeatmapCard extends StatelessWidget {
               );
             },
           ),
+          const SizedBox(height: AppSpacing.x2),
+          Text(
+            '每列一周 · 周一在上，周日在下',
+            style: AppTheme.mutedCaption(size: 11, context: context),
+          ),
         ],
       ),
     );
   }
+}
+
+extension on Widget {
+  Widget withRhythmSemantics(
+    BuildContext context, {
+    required DateTime? date,
+    required bool? active,
+  }) {
+    if (date == null || active == null) return ExcludeSemantics(child: this);
+    final label = '${date.month}月${date.day}日，${active ? "已学习" : "无学习记录"}';
+    return Tooltip(
+      message: label,
+      child: Semantics(label: label, image: true, child: this),
+    );
+  }
+}
+
+@visibleForTesting
+List<DateTime?> buildRhythmCalendarDates({
+  required DateTime now,
+  int weeks = 7,
+}) {
+  assert(weeks > 0);
+  final today = DateUtils.dateOnly(now);
+  final currentMonday = today.subtract(Duration(days: today.weekday - 1));
+  final gridStart = currentMonday.subtract(Duration(days: (weeks - 1) * 7));
+  return List<DateTime?>.generate(weeks * 7, (index) {
+    final col = index ~/ 7;
+    final row = index % 7;
+    final date = gridStart.add(Duration(days: col * 7 + row));
+    return date.isAfter(today) ? null : date;
+  });
 }
 
 @visibleForTesting
