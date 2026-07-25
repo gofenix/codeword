@@ -791,16 +791,28 @@ final vocabMetaProvider = Provider<Map<String, VocabList>>((ref) {
 /// Persisted in ReviewRepository so it survives app restarts.
 /// Falls back to [kDefaultVocabId] if the user hasn't picked one.
 ///
+/// Self-healing: if the persisted id is no longer in the catalogue (e.g. the
+/// book was removed by a data migration), fall back to a valid book — the
+/// default when present, otherwise the first catalogue entry. This prevents
+/// the home from booting into a book whose asset no longer exists.
+///
 /// A note on ordering: the main() bootstrap awaits ReviewRepository.init()
 /// BEFORE runApp, so read-through-to-instance is always safe for the
 /// initial build. If hot-restart / testing ever bypasses init, the
 /// catch fallback returns the default.
 final selectedVocabProvider = StateProvider<String>((ref) {
+  String persisted;
   try {
-    return ReviewRepository.instance.selectedVocabId ?? kDefaultVocabId;
+    persisted = ReviewRepository.instance.selectedVocabId ?? kDefaultVocabId;
   } catch (_) {
-    return kDefaultVocabId;
+    persisted = kDefaultVocabId;
   }
+  final catalog = ref.watch(qwertyCatalogProvider);
+  if (catalog.isEmpty) return persisted;
+  final ids = {for (final l in catalog) l.id};
+  if (ids.contains(persisted)) return persisted;
+  if (ids.contains(kDefaultVocabId)) return kDefaultVocabId;
+  return catalog.first.id;
 });
 
 enum QuestionType {
@@ -902,7 +914,23 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     state = LearningSessionState.loading();
     await ref.read(learningPreferencesProvider.notifier).ready;
     if (gen != _startGen) return;
-    final raw = await ref.read(vocabCacheProvider(vocabId).future);
+    // Loading a book's words can fail if its asset is missing (e.g. the
+    // selected book was removed by a catalogue migration). Recover by
+    // finishing the session instead of leaving the home stuck on a spinner.
+    final List<VocabWord> raw;
+    try {
+      raw = await ref.read(vocabCacheProvider(vocabId).future);
+    } catch (_) {
+      if (gen != _startGen) return;
+      _vocabPools.clear();
+      state = LearningSessionState(
+        phase: SessionPhase.finished,
+        questions: const [],
+        currentIndex: 0,
+        correctCount: 0,
+      );
+      return;
+    }
     if (gen != _startGen) return;
     final removed = _removedWordIds();
     final all = raw.where((w) => !removed.contains(w.id)).toList();
@@ -963,9 +991,13 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     final removed = _removedWordIds();
     final reviewMap = ref.read(reviewStateProvider);
     final now = DateTime.now();
+    // Due-review words are scoped to the current book: switching to a book
+    // should study that book, not resurface overdue words from other books.
+    // (New words below already come only from [vocabId].)
     final dueEntries = reviewMap.entries.where((entry) {
       final dueAt = entry.value.dueAt;
-      return !removed.contains(entry.key) &&
+      return _extractVocabIdFromWordId(entry.key) == vocabId &&
+          !removed.contains(entry.key) &&
           !excludedIds.contains(entry.key) &&
           dueAt != null &&
           !dueAt.isAfter(now);

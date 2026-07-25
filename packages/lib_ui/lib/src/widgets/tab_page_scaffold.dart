@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../tokens.dart';
+import 'liquid_glass.dart';
 
 /// Shared skeleton for the "content" bottom-nav tabs (阅读 / 图表 / 词书).
 ///
@@ -10,23 +11,24 @@ import '../tokens.dart';
 /// / tri-colour gradient). This owns all of that in one place so every
 /// content tab shares:
 ///
-///   * one restrained warm-light canvas material,
-///   * a single `SafeArea(bottom: false)` around the whole scroll view
-///     (the bottom inset stays owned by the frosted bottom nav), and
-///   * a centered 22px title bar with an optional trailing action.
+///   * one restrained warm-light canvas material (the opaque *paper* layer),
+///   * a persistent frosted [GlassAppBar] title bar (the floating *glass*
+///     chrome layer) that the content scrolls up under, and
+///   * a single 24px horizontal inset so pages cannot quietly drift apart.
 ///
 /// 单词 (the immersive learning tab) intentionally does NOT use this — it
 /// stays full-bleed.
 ///
 /// Callers pass raw body [slivers]. This scaffold groups them under one
-/// standard 24px horizontal, 16px top, and 32px bottom inset so pages cannot
-/// quietly drift apart.
+/// standard 24px horizontal and 32px bottom inset (plus a top inset that
+/// clears the frosted bar) so lazy lists keep their laziness without
+/// page-specific geometry.
 class TabPageScaffold extends StatelessWidget {
-  /// Centered title shown in the header bar.
+  /// Centered title shown in the frosted header bar.
   final String title;
 
-  /// Optional trailing action (e.g. a settings [IconButton]). Reserved a
-  /// 44px slot so the title stays centered whether or not it is present.
+  /// Optional trailing action (e.g. a settings [IconButton]) placed at the
+  /// end of the glass title bar.
   final Widget? trailing;
 
   /// Page body. Each entry must be a sliver; outer content padding is owned
@@ -48,91 +50,53 @@ class TabPageScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Material keeps the ink/text/canvas ancestor available to the scroll
-    // content (StatsScreen relied on this when it wrapped itself in a
-    // transparent Material). Transparent so the canvas material shows.
-    return Material(
-      type: MaterialType.transparency,
-      child: DecoratedBox(
+    return Scaffold(
+      // The parent HomeShell scaffold owns the canvas + floating bottom nav;
+      // this inner scaffold stays transparent and only adds the frosted top
+      // bar, letting content scroll behind it.
+      backgroundColor: Colors.transparent,
+      extendBodyBehindAppBar: true,
+      appBar: GlassAppBar(
+        title: title,
+        titleStyle: TextStyle(
+          fontSize: 22,
+          fontWeight: FontWeight.w700,
+          color: AppColors.of(context).ink,
+        ),
+        actions: trailing == null ? null : [trailing!],
+      ),
+      body: DecoratedBox(
         decoration: AppMaterials.canvasDecoration(context),
-        child: SafeArea(
-          bottom: false,
-          child: CustomScrollView(
-            key: scrollKey,
-            slivers: [
-              SliverPadding(
-                padding: const EdgeInsets.fromLTRB(
-                  AppSpacing.x6,
-                  AppSpacing.x3,
-                  AppSpacing.x6,
-                  0,
-                ),
-                sliver: SliverToBoxAdapter(
-                  child: _TabPageHeader(title: title, trailing: trailing),
-                ),
-              ),
-              SliverPadding(
-                padding: const EdgeInsets.fromLTRB(
-                  AppSpacing.x6,
-                  AppSpacing.x4,
-                  AppSpacing.x6,
-                  AppSpacing.x8,
-                ),
-                sliver: SliverMainAxisGroup(slivers: slivers),
-              ),
-            ],
+        // A transparent Material keeps the ink/text ancestor available to the
+        // scroll content (InkWell rows, ListTiles) without tinting the canvas.
+        child: Material(
+          type: MaterialType.transparency,
+          // With extendBodyBehindAppBar the Scaffold rewrites the body's
+          // MediaQuery so `padding.top` already covers the status bar AND the
+          // frosted bar height, and `padding.bottom` carries the floating
+          // bottom-nav inset from the parent shell. So the first content sits
+          // just below the bar and its last item clears the nav, both
+          // scrolling behind the glass.
+          child: Builder(
+            builder: (context) {
+              final insets = MediaQuery.paddingOf(context);
+              return CustomScrollView(
+                key: scrollKey,
+                slivers: [
+                  SliverPadding(
+                    padding: EdgeInsets.fromLTRB(
+                      AppSpacing.x6,
+                      insets.top + AppSpacing.x4,
+                      AppSpacing.x6,
+                      insets.bottom + AppSpacing.x8,
+                    ),
+                    sliver: SliverMainAxisGroup(slivers: slivers),
+                  ),
+                ],
+              );
+            },
           ),
         ),
-      ),
-    );
-  }
-}
-
-/// The single title-bar implementation for content tabs.
-///
-/// A balanced [Row] — 44px leading spacer · centered title · 44px trailing
-/// slot — so the title is truly centered regardless of whether a trailing
-/// action is supplied.
-class _TabPageHeader extends StatelessWidget {
-  final String title;
-  final Widget? trailing;
-
-  const _TabPageHeader({required this.title, this.trailing});
-
-  @override
-  Widget build(BuildContext context) {
-    final scaledTitleHeight = MediaQuery.textScalerOf(context).scale(22) + 12;
-    final headerHeight = scaledTitleHeight > 44 ? scaledTitleHeight : 44.0;
-    return SizedBox(
-      height: headerHeight,
-      child: Row(
-        children: [
-          const SizedBox(width: 44),
-          Expanded(
-            child: Center(
-              child: Text(
-                title,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.of(context).ink,
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            width: 44,
-            child: trailing == null
-                ? null
-                : Align(
-                    alignment: Alignment.centerRight,
-                    child: trailing,
-                  ),
-          ),
-        ],
       ),
     );
   }

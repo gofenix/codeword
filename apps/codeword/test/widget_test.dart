@@ -1322,14 +1322,12 @@ void main() {
   });
 
   test(
-    'Session pulls overdue words from every vocabulary before new words',
+    'Session scopes overdue reviews to the current book, then adds its new words',
     () async {
       final now = DateTime.now();
-      final oldWords = [
-        _word('qwerty_old_00001', 'legacy', '旧版'),
-        _word('qwerty_old_00002', 'archive', '归档'),
-        _word('qwerty_old_00003', 'backup', '备份'),
-        _word('qwerty_old_00004', 'restore', '恢复'),
+      final otherWords = [
+        _word('qwerty_other_00001', 'legacy', '旧版'),
+        _word('qwerty_other_00002', 'archive', '归档'),
       ];
       final currentWords = [
         _word('qwerty_current_00001', 'latency', '延迟'),
@@ -1341,8 +1339,18 @@ void main() {
         overrides: [
           reviewStateProvider.overrideWith(
             (ref) => ReviewStateNotifier({
-              oldWords.first.id: ReviewState(
-                wordId: oldWords.first.id,
+              // Overdue word in ANOTHER book — must NOT be pulled in.
+              otherWords.first.id: ReviewState(
+                wordId: otherWords.first.id,
+                easiness: 250,
+                interval: 1,
+                repetitions: 1,
+                dueAt: now.subtract(const Duration(days: 2)),
+                lastReviewedAt: now.subtract(const Duration(days: 3)),
+              ),
+              // Overdue word in the CURRENT book — must come first.
+              currentWords.first.id: ReviewState(
+                wordId: currentWords.first.id,
                 easiness: 250,
                 interval: 1,
                 repetitions: 1,
@@ -1352,8 +1360,8 @@ void main() {
             }),
           ),
           vocabCacheProvider(
-            'qwerty_old',
-          ).overrideWith((ref) async => oldWords),
+            'qwerty_other',
+          ).overrideWith((ref) async => otherWords),
           vocabCacheProvider(
             'qwerty_current',
           ).overrideWith((ref) async => currentWords),
@@ -1365,12 +1373,19 @@ void main() {
           .read(learningSessionProvider.notifier)
           .start(vocabId: 'qwerty_current');
       final questions = container.read(learningSessionProvider).questions;
-      expect(questions, hasLength(5));
-      expect(questions.first.word.id, oldWords.first.id);
+
+      // No word from the other book leaks in.
+      expect(
+        questions.any((q) => q.word.id.startsWith('qwerty_other_')),
+        isFalse,
+        reason: 'switching to a book must not resurface other books\' words',
+      );
+      // The current book's overdue word leads, then its unseen new words.
+      expect(questions.first.word.id, currentWords.first.id);
       expect(questions.first.source, SessionQuestionSource.due);
       expect(
         questions.skip(1).map((question) => question.word.id),
-        currentWords.map((word) => word.id),
+        currentWords.skip(1).map((word) => word.id),
       );
     },
   );
@@ -2377,14 +2392,16 @@ void main() {
       tester.widget<PopScope<bool>>(find.byType(PopScope<bool>)).canPop,
       isFalse,
     );
-    await tester.tap(find.byType(BackButton));
+    // The GlassAppBar back affordance is an iOS-chevron IconButton (tooltip
+    // '返回'), consistent with the app's other glass nav bars.
+    await tester.tap(find.byTooltip('返回'));
     await tester.pumpAndSettle();
     expect(find.text('放弃未保存的更改？'), findsOneWidget);
     await tester.tap(find.text('继续编辑'));
     await tester.pumpAndSettle();
     expect(find.byType(AiSettingsScreen), findsOneWidget);
 
-    await tester.tap(find.byType(BackButton));
+    await tester.tap(find.byTooltip('返回'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('放弃更改'));
     await tester.pumpAndSettle();
@@ -2538,12 +2555,15 @@ void main() {
       ]) {
         await pumpTab(tester, screen);
         final scaffold = find.byType(TabPageScaffold);
-        final safeAreas = find.descendant(
+        // The scaffold now floats a persistent frosted GlassAppBar over the
+        // content (chrome layer) instead of a scrolling title sliver, and the
+        // body extends behind it — so the top/bottom insets are owned by the
+        // Scaffold + glass bar rather than a body SafeArea widget.
+        final glassBars = find.descendant(
           of: scaffold,
-          matching: find.byType(SafeArea),
+          matching: find.byType(GlassAppBar),
         );
-        expect(safeAreas, findsOneWidget);
-        expect(tester.widget<SafeArea>(safeAreas).bottom, isFalse);
+        expect(glassBars, findsOneWidget);
 
         final backgrounds = find.descendant(
           of: scaffold,
@@ -2557,6 +2577,11 @@ void main() {
         );
         expect(backgrounds, findsOneWidget);
 
+        // The single content sliver keeps the unified 24px horizontal margin;
+        // the vertical insets fold in the measured status-bar/nav padding so
+        // content clears the glass bar and the floating bottom nav. In the
+        // isolated test harness (no real insets) that resolves to the base
+        // 16px top / 32px bottom.
         final paddings = tester
             .widgetList<SliverPadding>(
               find.descendant(
@@ -2568,15 +2593,11 @@ void main() {
         final contentPadding = paddings.singleWhere(
           (padding) => padding.child is SliverMainAxisGroup,
         );
-        expect(
-          contentPadding.padding,
-          const EdgeInsets.fromLTRB(
-            AppSpacing.x6,
-            AppSpacing.x4,
-            AppSpacing.x6,
-            AppSpacing.x8,
-          ),
-        );
+        final resolved = contentPadding.padding.resolve(TextDirection.ltr);
+        expect(resolved.left, AppSpacing.x6);
+        expect(resolved.right, AppSpacing.x6);
+        expect(resolved.top, greaterThanOrEqualTo(AppSpacing.x4));
+        expect(resolved.bottom, greaterThanOrEqualTo(AppSpacing.x8));
       }
     });
 

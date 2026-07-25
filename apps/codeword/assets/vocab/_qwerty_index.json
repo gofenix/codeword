@@ -1,9 +1,20 @@
 [
   {
+    "id": "qwerty_coca_20000",
+    "name": "COCA20000词",
+    "description": "COCA20000词",
+    "category": "综合",
+    "emoji": "🗂️",
+    "domainColor": "#1E293B",
+    "level": 1,
+    "wordCount": 20199,
+    "source": "qwerty"
+  },
+  {
     "id": "qwerty_coder_core",
     "name": "Coder Core",
     "description": "程序员核心英语 500 词",
-    "category": "精选词书",
+    "category": "综合",
     "emoji": "💻",
     "domainColor": "#10B981",
     "level": 1,
@@ -11,10 +22,21 @@
     "source": "codeword-candidate"
   },
   {
+    "id": "qwerty_longman_communication_3000_words",
+    "name": "Longman Communication 3000",
+    "description": "Most frequent words in both spoken and written English",
+    "category": "综合",
+    "emoji": "📙",
+    "domainColor": "#94A3B8",
+    "level": 1,
+    "wordCount": 3168,
+    "source": "qwerty"
+  },
+  {
     "id": "qwerty_biomedical_terms",
     "name": "生物医学专业英语词汇",
     "description": "生物医学专业英语词汇",
-    "category": "专业词汇",
+    "category": "综合",
     "emoji": "🧬",
     "domainColor": "#BE123C",
     "level": 1,
@@ -649,9 +671,9 @@
     "source": "qwerty"
   },
   {
-    "id": "qwerty_4000_essential_english_words1",
-    "name": "Essential Words",
-    "description": "4000 Essential English Words meaning",
+    "id": "qwerty_4000_essential_english_words2",
+    "name": "Essential Words（例句版）",
+    "description": "4000 Essential English Words sentence",
     "category": "考试英语",
     "emoji": "📘",
     "domainColor": "#3B82F6",
@@ -660,9 +682,9 @@
     "source": "qwerty"
   },
   {
-    "id": "qwerty_4000_essential_english_words2",
-    "name": "Essential Words",
-    "description": "4000 Essential English Words sentence",
+    "id": "qwerty_4000_essential_english_words1",
+    "name": "Essential Words（释义版）",
+    "description": "4000 Essential English Words meaning",
     "category": "考试英语",
     "emoji": "📘",
     "domainColor": "#3B82F6",
@@ -2101,281 +2123,6 @@
     "source": "qwerty"
   },
   {
-    "id": "qwerty_coca_20000",
-    "name": "COCA20000词",
-    "description": "COCA20000词",
-    "category": "词典",
-    "emoji": "🗂️",
-    "domainColor": "#1E293B",
-    "level": 1,
-    "wordCount": 20199,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_longman_communication_3000_words",
-    "name": "Longman Communication 3000",
-    "description": "Most frequent words in both spoken and written English",
-    "category": "词典",
-    "emoji": "📙",
-    "domainColor": "#94A3B8",
-    "level": 1,
-    "wordCount": 3168,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese006",
-    "name": "N1",
-    "description": "英语翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 3473,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese006_zh",
-    "name": "N1",
-    "description": "中文翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 3473,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese005",
-    "name": "N2",
-    "description": "英语翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 1834,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese005_zh",
-    "name": "N2",
-    "description": "中文翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 1834,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese004",
-    "name": "N3",
-    "description": "英语翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 1830,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese004_zh",
-    "name": "N3",
-    "description": "中文翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 1830,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese003",
-    "name": "N4",
-    "description": "英语翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 634,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese003_zh",
-    "name": "N4",
-    "description": "中文翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 634,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese002",
-    "name": "N5",
-    "description": "英语翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 669,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese002_zh",
-    "name": "N5",
-    "description": "中文翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 669,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_indonesian_highfrequency_3043",
-    "name": "印尼语高频词汇",
-    "description": "印尼语常用单词及中文解释",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 3037,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_kazakh_basic_3000_arabic_hapin",
-    "name": "基础3000词(老文字版)",
-    "description": "哈萨克语基础3000词(哈拼老文字版)",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 3002,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_kazakh_basic_3000_cyrillic_hapin",
-    "name": "基础3000词(西里尔字母版)",
-    "description": "哈萨克语基础3000词(哈拼西里尔字母版)",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 3002,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese_hiragana",
-    "name": "平假名",
-    "description": "平假名练习",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 280,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_german2en",
-    "name": "德语 英译",
-    "description": "德语词汇, 英语翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 5892,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese001",
-    "name": "日语常见词",
-    "description": "英语翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 100,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese001_zh",
-    "name": "日语常见词",
-    "description": "中文翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 100,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese_katakana",
-    "name": "片假名",
-    "description": "片假名练习",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 280,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_en2german",
-    "name": "英语 德译",
-    "description": "英语词汇，德语翻译",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 5025,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese007",
-    "name": "高频单词_N1",
-    "description": "高频单词_日语N1",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 3000,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese008",
-    "name": "高频单词_N2",
-    "description": "高频单词_日语N2",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 2500,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese009",
-    "name": "高频单词_N3",
-    "description": "高频单词_日语N3",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 1999,
-    "source": "qwerty"
-  },
-  {
-    "id": "qwerty_japanese0010",
-    "name": "高频单词_N4N5",
-    "description": "高频单词_日语N4N5",
-    "category": "语言",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 2000,
-    "source": "qwerty"
-  },
-  {
     "id": "qwerty_eflevel1",
     "name": "EF-LEVEL-1",
     "description": "EF等级1",
@@ -3785,7 +3532,7 @@
   },
   {
     "id": "qwerty_renjiaogaozhong1",
-    "name": "高中必修1",
+    "name": "高中必修1（人教版）",
     "description": "人教版高中必修1",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3795,19 +3542,8 @@
     "source": "qwerty"
   },
   {
-    "id": "qwerty_yilin1",
-    "name": "高中必修1",
-    "description": "译林版高中必修1",
-    "category": "青少年英语",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 276,
-    "source": "qwerty"
-  },
-  {
     "id": "qwerty_beishi1",
-    "name": "高中必修1",
+    "name": "高中必修1（北师大版）",
     "description": "北师大版高中必修1",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3817,8 +3553,19 @@
     "source": "qwerty"
   },
   {
+    "id": "qwerty_yilin1",
+    "name": "高中必修1（译林版）",
+    "description": "译林版高中必修1",
+    "category": "青少年英语",
+    "emoji": "📘",
+    "domainColor": "#3B82F6",
+    "level": 1,
+    "wordCount": 276,
+    "source": "qwerty"
+  },
+  {
     "id": "qwerty_renjiaogaozhong2",
-    "name": "高中必修2",
+    "name": "高中必修2（人教版）",
     "description": "人教版高中必修2",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3828,19 +3575,8 @@
     "source": "qwerty"
   },
   {
-    "id": "qwerty_yilin2",
-    "name": "高中必修2",
-    "description": "译林版高中必修2",
-    "category": "青少年英语",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 297,
-    "source": "qwerty"
-  },
-  {
     "id": "qwerty_beishi2",
-    "name": "高中必修2",
+    "name": "高中必修2（北师大版）",
     "description": "北师大版高中必修2",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3850,8 +3586,19 @@
     "source": "qwerty"
   },
   {
+    "id": "qwerty_yilin2",
+    "name": "高中必修2（译林版）",
+    "description": "译林版高中必修2",
+    "category": "青少年英语",
+    "emoji": "📘",
+    "domainColor": "#3B82F6",
+    "level": 1,
+    "wordCount": 297,
+    "source": "qwerty"
+  },
+  {
     "id": "qwerty_renjiaogaozhong3",
-    "name": "高中必修3",
+    "name": "高中必修3（人教版）",
     "description": "人教版高中必修3",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3861,19 +3608,8 @@
     "source": "qwerty"
   },
   {
-    "id": "qwerty_yilin3",
-    "name": "高中必修3",
-    "description": "译林版高中必修3",
-    "category": "青少年英语",
-    "emoji": "📘",
-    "domainColor": "#3B82F6",
-    "level": 1,
-    "wordCount": 295,
-    "source": "qwerty"
-  },
-  {
     "id": "qwerty_beishi3",
-    "name": "高中必修3",
+    "name": "高中必修3（北师大版）",
     "description": "北师大版高中必修3",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3883,8 +3619,19 @@
     "source": "qwerty"
   },
   {
+    "id": "qwerty_yilin3",
+    "name": "高中必修3（译林版）",
+    "description": "译林版高中必修3",
+    "category": "青少年英语",
+    "emoji": "📘",
+    "domainColor": "#3B82F6",
+    "level": 1,
+    "wordCount": 295,
+    "source": "qwerty"
+  },
+  {
     "id": "qwerty_renjiaogaozhong4",
-    "name": "高中必修4",
+    "name": "高中必修4（人教版）",
     "description": "人教版高中必修4",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3895,7 +3642,7 @@
   },
   {
     "id": "qwerty_beishi4",
-    "name": "高中必修4",
+    "name": "高中必修4（北师大版）",
     "description": "北师大版高中必修4",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3906,7 +3653,7 @@
   },
   {
     "id": "qwerty_renjiaogaozhong5",
-    "name": "高中必修5",
+    "name": "高中必修5（人教版）",
     "description": "人教版高中必修5",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3917,7 +3664,7 @@
   },
   {
     "id": "qwerty_beishi5",
-    "name": "高中必修5",
+    "name": "高中必修5（北师大版）",
     "description": "北师大版高中必修5",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3928,7 +3675,7 @@
   },
   {
     "id": "qwerty_renjiaogaozhong10",
-    "name": "高中选修10",
+    "name": "高中选修10（人教版）",
     "description": "人教版高中选修10",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3939,7 +3686,7 @@
   },
   {
     "id": "qwerty_beishi10",
-    "name": "高中选修10",
+    "name": "高中选修10（北师大版）",
     "description": "北师大版高中选修10",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3950,7 +3697,7 @@
   },
   {
     "id": "qwerty_renjiaogaozhong11",
-    "name": "高中选修11",
+    "name": "高中选修11（人教版）",
     "description": "人教版高中选修11",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3961,7 +3708,7 @@
   },
   {
     "id": "qwerty_beishi11",
-    "name": "高中选修11",
+    "name": "高中选修11（北师大版）",
     "description": "北师大版高中选修11",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3972,7 +3719,7 @@
   },
   {
     "id": "qwerty_renjiaogaozhong6",
-    "name": "高中选修6",
+    "name": "高中选修6（人教版）",
     "description": "人教版高中选修6",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3983,7 +3730,7 @@
   },
   {
     "id": "qwerty_beishi6",
-    "name": "高中选修6",
+    "name": "高中选修6（北师大版）",
     "description": "北师大版高中选修6",
     "category": "青少年英语",
     "emoji": "📘",
@@ -3994,7 +3741,7 @@
   },
   {
     "id": "qwerty_renjiaogaozhong7",
-    "name": "高中选修7",
+    "name": "高中选修7（人教版）",
     "description": "人教版高中选修7",
     "category": "青少年英语",
     "emoji": "📘",
@@ -4005,7 +3752,7 @@
   },
   {
     "id": "qwerty_beishi7",
-    "name": "高中选修7",
+    "name": "高中选修7（北师大版）",
     "description": "北师大版高中选修7",
     "category": "青少年英语",
     "emoji": "📘",
@@ -4016,7 +3763,7 @@
   },
   {
     "id": "qwerty_renjiaogaozhong8",
-    "name": "高中选修8",
+    "name": "高中选修8（人教版）",
     "description": "人教版高中选修8",
     "category": "青少年英语",
     "emoji": "📘",
@@ -4027,7 +3774,7 @@
   },
   {
     "id": "qwerty_beishi8",
-    "name": "高中选修8",
+    "name": "高中选修8（北师大版）",
     "description": "北师大版高中选修8",
     "category": "青少年英语",
     "emoji": "📘",
@@ -4038,7 +3785,7 @@
   },
   {
     "id": "qwerty_renjiaogaozhong9",
-    "name": "高中选修9",
+    "name": "高中选修9（人教版）",
     "description": "人教版高中选修9",
     "category": "青少年英语",
     "emoji": "📘",
@@ -4049,7 +3796,7 @@
   },
   {
     "id": "qwerty_beishi9",
-    "name": "高中选修9",
+    "name": "高中选修9（北师大版）",
     "description": "北师大版高中选修9",
     "category": "青少年英语",
     "emoji": "📘",

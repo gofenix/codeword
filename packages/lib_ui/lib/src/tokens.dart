@@ -146,6 +146,33 @@ class AppColors {
   /// Resolve the brightness-dependent surface/text palette for [context].
   static AppPalette of(BuildContext context) =>
       Theme.of(context).brightness == Brightness.dark ? _dark : _light;
+
+  // Dark-mode counterpart to [primarySoft]. Matches the Material 3
+  // `primaryContainer` used by [AppTheme.dark] so the bronze "soft" fill
+  // reads as a warm container on the dark scaffold instead of a bright
+  // cream block. Light-theme [primarySoft] is a pale cream that would glow
+  // on a dark surface; this is the resolved-per-brightness fill to use
+  // wherever [primarySoft] was previously hard-coded as a background.
+  static const Color primarySoftDark = Color(0xFF59492F);
+
+  /// Brightness-aware bronze container fill (light: [primarySoft],
+  /// dark: [primarySoftDark]). Use for soft bronze pill/tag/badge
+  /// backgrounds so they never leak the light cream into dark mode.
+  static Color primaryContainerOf(BuildContext context) =>
+      Theme.of(context).brightness == Brightness.dark
+      ? primarySoftDark
+      : primarySoft;
+
+  /// Foreground colour that reads correctly on top of
+  /// [primaryContainerOf] (light: [primaryDark] on cream, dark: a warm
+  /// cream on the dark bronze container — matching the Material 3
+  /// `onPrimaryContainer` pairing).
+  static const Color onPrimaryContainerDark = Color(0xFFF2E4CB);
+
+  static Color onPrimaryContainerOf(BuildContext context) =>
+      Theme.of(context).brightness == Brightness.dark
+      ? onPrimaryContainerDark
+      : primaryDark;
 }
 
 /// Brightness-resolved surface/text tokens returned by [AppColors.of].

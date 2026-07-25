@@ -21,7 +21,7 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
   String _query = '';
   String? _category;
 
-  static const _categoryPriority = ['编程', '考试英语', '青少年英语', '语言', '词典', '专业词汇'];
+  static const _categoryPriority = ['编程', '考试英语', '青少年英语', '综合'];
 
   @override
   void dispose() {
@@ -82,8 +82,9 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
             ),
             const SizedBox(height: AppSpacing.x3),
             _CategoryFilter(
-              categories: catalog.map((item) => item.category).toSet().toList()
-                ..sort(),
+              categories: _sortedCategories(
+                catalog.map((item) => item.category).toSet(),
+              ),
               selected: _category,
               onChanged: (value) => setState(() => _category = value),
             ),
@@ -122,7 +123,15 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
       if (_query.isNotEmpty && !haystack.contains(_query)) continue;
       result.putIfAbsent(list.category, () => []).add(list);
     }
-    final keys = result.keys.toList()
+    final keys = _sortedCategories(result.keys);
+    return {for (final key in keys) key: result[key]!};
+  }
+
+  /// Shared category ordering: priority list first (编程 → 考试英语 → 青少年英语 →
+  /// 综合), then any stragglers alphabetically. Used for both the filter chips
+  /// and the grouped section titles so the two never disagree.
+  List<String> _sortedCategories(Iterable<String> categories) {
+    return categories.toList()
       ..sort((a, b) {
         final ai = _categoryPriority.indexOf(a);
         final bi = _categoryPriority.indexOf(b);
@@ -131,7 +140,6 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
         if (bi < 0) return -1;
         return ai.compareTo(bi);
       });
-    return {for (final key in keys) key: result[key]!};
   }
 
   Future<void> _startBook(String vocabId) async {
@@ -204,7 +212,7 @@ class _CategoryFilter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 38,
+      height: 44,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: categories.length + 1,
@@ -217,8 +225,7 @@ class _CategoryFilter extends StatelessWidget {
             selected: active,
             showCheckmark: false,
             onSelected: (_) => onChanged(value),
-            visualDensity: VisualDensity.compact,
-            selectedColor: AppColors.primarySoft,
+            selectedColor: AppColors.primaryContainerOf(context),
             backgroundColor: Colors.transparent,
             side: BorderSide(
               color: active ? AppColors.primary : AppColors.of(context).divider,
@@ -253,6 +260,11 @@ class _CurrentBookBand extends StatelessWidget {
     final learned = progress?.learned ?? 0;
     final ratio = total == 0 ? 0.0 : learned / total;
     final name = list?.name ?? '';
+    // Surface the description only when it adds information beyond the title.
+    final rawDescription = list?.description.trim() ?? '';
+    final description = rawDescription.isEmpty || rawDescription == name
+        ? null
+        : rawDescription;
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       decoration: BoxDecoration(
@@ -279,7 +291,7 @@ class _CurrentBookBand extends StatelessWidget {
                       height: 58,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        color: AppColors.primarySoft,
+                        color: AppColors.primaryContainerOf(context),
                         borderRadius: BorderRadius.circular(AppRadii.xs),
                       ),
                       child: Text(
@@ -305,6 +317,18 @@ class _CurrentBookBand extends StatelessWidget {
                               context: context,
                             ),
                           ),
+                          if (description != null) ...[
+                            const SizedBox(height: 3),
+                            Text(
+                              description,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: AppTheme.mutedCaption(
+                                size: 12,
+                                context: context,
+                              ),
+                            ),
+                          ],
                           const SizedBox(height: 3),
                           Text(
                             '当前词书 · 已学 $learned / $total',
@@ -328,7 +352,7 @@ class _CurrentBookBand extends StatelessWidget {
                   child: LinearProgressIndicator(
                     value: ratio,
                     minHeight: 6,
-                    backgroundColor: AppColors.surfaceMuted,
+                    backgroundColor: AppColors.of(context).surfaceMuted,
                     valueColor: const AlwaysStoppedAnimation(AppColors.sage),
                   ),
                 ),
@@ -494,11 +518,14 @@ class _BookRow extends StatelessWidget {
   }
 }
 
+/// Warm, paper-friendly monogram tint per category. Every value sits in the
+/// bronze/clay/sage/gold family so the first-letter blocks read as part of the
+/// editorial theme instead of the old cold-blue defaults. Rendered as an
+/// alpha-0.14 fill under the letter drawn in the full colour (see [_BookRow]).
 Color _categoryColor(String category) => switch (category) {
-  '编程' => const Color(0xFF3977C2),
-  '考试英语' => const Color(0xFFBC6A32),
-  '青少年英语' => const Color(0xFF8D6BB8),
-  '专业词汇' => const Color(0xFF3A8C7A),
-  '语言' => const Color(0xFFD29B2C),
-  _ => const Color(0xFF687673),
+  '编程' => AppColors.primary, // 青铜
+  '考试英语' => const Color(0xFFB4693A), // 陶土暖橙
+  '青少年英语' => AppColors.sage, // 苔绿
+  '综合' => const Color(0xFFB08A3E), // 暖金
+  _ => AppColors.inkMuted, // 暖灰
 };

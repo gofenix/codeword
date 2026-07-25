@@ -126,14 +126,39 @@ class HomeShell extends ConsumerStatefulWidget {
   ConsumerState<HomeShell> createState() => _HomeShellState();
 }
 
-class _HomeShellState extends ConsumerState<HomeShell> {
+class _HomeShellState extends ConsumerState<HomeShell>
+    with SingleTickerProviderStateMixin {
   int _index = 0;
+
+  // A soft fade-in for the newly-selected tab. The IndexedStack stays a
+  // single persistent widget (so every tab's State — ReadingScreen's loaded
+  // articles, generation flags, scroll offsets — survives the switch); we
+  // only fade the body back in on change so tabs feel like they cross over
+  // rather than hard-cut. Reduced-motion collapses this to an instant show.
+  late final AnimationController _fade = AnimationController(
+    vsync: this,
+    duration: AppMotion.medium,
+    value: 1,
+  );
+
+  @override
+  void dispose() {
+    _fade.dispose();
+    super.dispose();
+  }
 
   void _goToTab(int index) {
     if (index < 0 || index >= 4) return;
     if (index == _index) return;
     HapticFeedback.selectionClick();
     setState(() => _index = index);
+    final reduceMotion =
+        MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    if (reduceMotion) {
+      _fade.value = 1;
+    } else {
+      _fade.forward(from: 0);
+    }
   }
 
   // 4 tabs: 单词 (today/learning) | 阅读 (AI articles, BYOK) |
@@ -170,7 +195,14 @@ class _HomeShellState extends ConsumerState<HomeShell> {
       backgroundColor: AppColors.of(context).background,
       body: DecoratedBox(
         decoration: AppMaterials.canvasDecoration(context),
-        child: IndexedStack(index: _index, children: _pages),
+        // A single, persistent IndexedStack keeps every tab's state alive;
+        // FadeTransition only re-fades the visible layer on tab change, so
+        // the switch reads as a gentle crossover, not a hard cut.
+        child: FadeTransition(
+          key: const ValueKey('tab-fade'),
+          opacity: CurvedAnimation(parent: _fade, curve: AppMotion.easeOut),
+          child: IndexedStack(index: _index, children: _pages),
+        ),
       ),
       bottomNavigationBar: _PhoneBottomNav(index: _index, onTap: _goToTab),
     );
@@ -200,7 +232,10 @@ class _PhoneBottomNav extends StatelessWidget {
               selectedIndex: index,
               onDestinationSelected: onTap,
               backgroundColor: Colors.transparent,
-              indicatorColor: AppColors.primary.withValues(alpha: 0.12),
+              // iOS tint-only selection: no filled pill behind the active
+              // destination — the bronze icon + label carry the selected
+              // state, which reads cleaner over the liquid-glass bar.
+              indicatorColor: Colors.transparent,
               surfaceTintColor: Colors.transparent,
               elevation: 0,
               height: 60,

@@ -292,7 +292,7 @@ class _ClearLearningDataRow extends ConsumerWidget {
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (dialogContext) {
-        return AlertDialog(
+        return AlertDialog.adaptive(
           title: const Text('清理学习数据'),
           content: const Text('将清空背词记录、统计、收藏、已移除词和阅读历史。AI 配置、当前词书和学习偏好会保留。'),
           actions: [

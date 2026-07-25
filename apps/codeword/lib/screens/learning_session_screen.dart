@@ -789,7 +789,7 @@ class _LargePlayButton extends StatelessWidget {
         width: 120,
         height: 120,
         decoration: BoxDecoration(
-          color: AppColors.primarySoft,
+          color: AppColors.primaryContainerOf(context),
           shape: BoxShape.circle,
         ),
         child: const Icon(

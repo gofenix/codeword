@@ -168,7 +168,7 @@ class _TodayAction extends StatelessWidget {
                   height: 44,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: AppColors.primarySoft,
+                    color: AppColors.primaryContainerOf(context),
                     borderRadius: BorderRadius.circular(AppRadii.sm),
                   ),
                   child: const Icon(

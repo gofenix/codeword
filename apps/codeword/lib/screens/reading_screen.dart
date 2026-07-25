@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math' as math;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -20,8 +21,15 @@ import 'ai_settings_screen.dart';
 class ReadingScreen extends ConsumerStatefulWidget {
   final bool isActive;
   final VoidCallback? onGoWords;
+  final Future<ReadingGenerationResult> Function(List<PulseWordEntry>)?
+  generationOverride;
 
-  const ReadingScreen({super.key, this.isActive = true, this.onGoWords});
+  const ReadingScreen({
+    super.key,
+    this.isActive = true,
+    this.onGoWords,
+    @visibleForTesting this.generationOverride,
+  });
 
   @override
   ConsumerState<ReadingScreen> createState() => _ReadingScreenState();
@@ -39,7 +47,6 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
   int _loadedRepositoryRevision = -1;
   int _rotation = 0;
   bool _contentInitialized = false;
-  bool _selectingWords = false;
 
   @override
   void initState() {
@@ -288,7 +295,40 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
       return;
     }
     HapticFeedback.selectionClick();
-    setState(() => _selectingWords = true);
+    await Navigator.of(context).push<void>(
+      PageRouteBuilder<void>(
+        transitionDuration: AppMotion.slow,
+        reverseTransitionDuration: AppMotion.medium,
+        pageBuilder: (context, animation, secondaryAnimation) =>
+            _ImmersiveReadingComposer(
+              candidates: _candidates,
+              initialSelection: _selection,
+              onGenerate: widget.generationOverride ?? _generate,
+              onCancelGeneration: _cancelActiveGeneration,
+            ),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          final curved = CurvedAnimation(
+            parent: animation,
+            curve: AppMotion.emphasized,
+            reverseCurve: AppMotion.easeOut,
+          );
+          return FadeTransition(
+            opacity: curved,
+            child: ScaleTransition(
+              scale: Tween<double>(begin: 0.98, end: 1).animate(curved),
+              child: child,
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  void _cancelActiveGeneration() {
+    _requestGeneration++;
+    if (mounted && _generating) {
+      setState(() => _generating = false);
+    }
   }
 
   Future<void> _openArticle(SavedArticle article) async {
@@ -320,26 +360,14 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
                 ),
               )
             else ...[
-              AnimatedSwitcher(
-                duration: AppMotion.medium,
-                child: _selectingWords
-                    ? _InlineReadingComposer(
-                        key: const ValueKey('inline-reading-composer'),
-                        candidates: _candidates,
-                        initialSelection: _selection,
-                        onGenerate: _generate,
-                        onClose: () => setState(() => _selectingWords = false),
-                        onOpenArticle: _openArticle,
-                      )
-                    : _ReadingHero(
-                        key: const ValueKey('reading-summary'),
-                        pool: _selection,
-                        loading: _loading,
-                        generating: _generating,
-                        onGenerate: _openComposer,
-                        onRefresh: () => _loadPool(rotate: true),
-                        onGoWords: widget.onGoWords,
-                      ),
+              _ReadingHero(
+                key: const ValueKey('reading-summary'),
+                pool: _selection,
+                loading: _loading,
+                generating: _generating,
+                onGenerate: _openComposer,
+                onRefresh: () => _loadPool(rotate: true),
+                onGoWords: widget.onGoWords,
               ),
               if (_error != null) ...[
                 const SizedBox(height: AppSpacing.x3),
@@ -642,7 +670,7 @@ class _ReadingHero extends StatelessWidget {
                 onPressed: loading || generating ? null : onRefresh,
                 icon: const Icon(Icons.refresh_rounded, size: 20),
                 color: AppColors.of(context).inkMuted,
-                visualDensity: VisualDensity.compact,
+                constraints: const BoxConstraints(minWidth: 44, minHeight: 44),
               ),
             ],
           ),
@@ -721,230 +749,6 @@ class _ReadingHero extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _InlineReadingComposer extends StatefulWidget {
-  final List<PulseWordEntry> candidates;
-  final List<PulseWordEntry> initialSelection;
-  final Future<ReadingGenerationResult> Function(List<PulseWordEntry>)
-  onGenerate;
-  final VoidCallback onClose;
-  final Future<void> Function(SavedArticle) onOpenArticle;
-
-  const _InlineReadingComposer({
-    super.key,
-    required this.candidates,
-    required this.initialSelection,
-    required this.onGenerate,
-    required this.onClose,
-    required this.onOpenArticle,
-  });
-
-  @override
-  State<_InlineReadingComposer> createState() => _InlineReadingComposerState();
-}
-
-class _InlineReadingComposerState extends State<_InlineReadingComposer> {
-  static const _messages = ['正在构思自然语境', '正在检查目标词', '正在准备翻译和理解题'];
-
-  late final Set<String> _selected = widget.initialSelection
-      .map(_readingWordKey)
-      .toSet();
-  bool _generating = false;
-  String? _error;
-  int _messageIndex = 0;
-  Timer? _timer;
-
-  List<PulseWordEntry> get _selectedWords => widget.candidates
-      .where((entry) => _selected.contains(_readingWordKey(entry)))
-      .toList();
-
-  @override
-  void dispose() {
-    _timer?.cancel();
-    super.dispose();
-  }
-
-  void _toggle(PulseWordEntry word) {
-    if (_generating) return;
-    final key = _readingWordKey(word);
-    if (_selected.contains(key)) {
-      if (_selected.length <= 3) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(const SnackBar(content: Text('至少保留 3 个词')));
-        return;
-      }
-      setState(() => _selected.remove(key));
-    } else {
-      if (_selected.length >= 10) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(const SnackBar(content: Text('一篇文章最多选择 10 个词')));
-        return;
-      }
-      setState(() => _selected.add(key));
-    }
-    HapticFeedback.selectionClick();
-  }
-
-  Future<void> _generate() async {
-    if (_generating || _selectedWords.length < 3) return;
-    setState(() {
-      _generating = true;
-      _error = null;
-      _messageIndex = 0;
-    });
-    _timer = Timer.periodic(const Duration(milliseconds: 1500), (_) {
-      if (!mounted) return;
-      setState(() => _messageIndex = (_messageIndex + 1) % _messages.length);
-    });
-    final result = await widget.onGenerate(_selectedWords);
-    _timer?.cancel();
-    if (!mounted) return;
-    if (result.article case final article?) {
-      await widget.onOpenArticle(article);
-      if (mounted) widget.onClose();
-      return;
-    }
-    setState(() {
-      _generating = false;
-      _error = result.error ?? '生成失败，请稍后重试';
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final selected = _selectedWords;
-    final available = widget.candidates
-        .where((entry) => !_selected.contains(_readingWordKey(entry)))
-        .toList();
-    return AppCard(
-      key: const ValueKey('reading-first-content'),
-      padding: const EdgeInsets.all(AppSpacing.x4),
-      color: AppColors.of(context).surface,
-      child: AnimatedSwitcher(
-        duration: AppMotion.medium,
-        child: _generating
-            ? SizedBox(
-                key: const ValueKey('inline-reading-generating'),
-                height: 248,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(
-                      Icons.auto_stories_outlined,
-                      size: 34,
-                      color: AppColors.primary,
-                    ),
-                    const SizedBox(height: AppSpacing.x5),
-                    AnimatedSwitcher(
-                      duration: AppMotion.fast,
-                      child: Text(
-                        _messages[_messageIndex],
-                        key: ValueKey(_messageIndex),
-                        style: AppTheme.cardTitle(context: context),
-                      ),
-                    ),
-                    const SizedBox(height: AppSpacing.x3),
-                    Wrap(
-                      alignment: WrapAlignment.center,
-                      spacing: AppSpacing.x2,
-                      runSpacing: AppSpacing.x2,
-                      children: [
-                        for (final word in selected)
-                          Text(
-                            word.word,
-                            style: AppTheme.editorial(
-                              size: 14,
-                              color: AppColors.primary,
-                              context: context,
-                            ),
-                          ),
-                      ],
-                    ),
-                    const SizedBox(height: AppSpacing.x5),
-                    const SizedBox(
-                      width: 20,
-                      height: 20,
-                      child: CircularProgressIndicator(strokeWidth: 2),
-                    ),
-                  ],
-                ),
-              )
-            : Column(
-                key: const ValueKey('inline-reading-selection'),
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'TODAY\'S WORDS',
-                              style: AppTheme.sectionLabel(context: context),
-                            ),
-                            const SizedBox(height: AppSpacing.x2),
-                            Text(
-                              '选择要在文章中复现的词',
-                              style: AppTheme.cardTitle(context: context),
-                            ),
-                          ],
-                        ),
-                      ),
-                      IconButton(
-                        tooltip: '收起',
-                        onPressed: widget.onClose,
-                        icon: const Icon(Icons.close_rounded),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: AppSpacing.x4),
-                  _ReadingWordWrap(
-                    words: selected,
-                    selected: true,
-                    onTap: _toggle,
-                  ),
-                  if (available.isNotEmpty) ...[
-                    const SizedBox(height: AppSpacing.x4),
-                    Text(
-                      '可替换',
-                      style: AppTheme.mutedCaption(size: 12, context: context),
-                    ),
-                    const SizedBox(height: AppSpacing.x2),
-                    _ReadingWordWrap(
-                      words: available.take(12).toList(),
-                      selected: false,
-                      onTap: _toggle,
-                    ),
-                  ],
-                  if (_error != null) ...[
-                    const SizedBox(height: AppSpacing.x3),
-                    Text(
-                      _error!,
-                      style: AppTheme.mutedCaption(
-                        size: 12,
-                        color: AppColors.danger,
-                        context: context,
-                      ),
-                    ),
-                  ],
-                  const SizedBox(height: AppSpacing.x4),
-                  SizedBox(
-                    width: double.infinity,
-                    child: EditorialPrimaryButton(
-                      onPressed: _generate,
-                      icon: const Icon(Icons.auto_awesome_rounded, size: 18),
-                      label: Text('生成阅读 · ${selected.length} 词'),
-                    ),
-                  ),
-                ],
-              ),
       ),
     );
   }
@@ -1053,7 +857,7 @@ class _ReadingHistoryCard extends StatelessWidget {
                         style: AppTheme.editorial(
                           size: 12,
                           weight: FontWeight.w700,
-                          color: AppColors.ink,
+                          color: AppColors.of(context).ink,
                         ),
                       ),
                     ),
@@ -1073,26 +877,7 @@ class _ReadingHistoryCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: AppSpacing.x2),
-                  Container(
-                    constraints: const BoxConstraints(maxWidth: 72),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: AppSpacing.x3,
-                      vertical: AppSpacing.x1,
-                    ),
-                    decoration: BoxDecoration(
-                      color: AppColors.primary,
-                      borderRadius: BorderRadius.circular(AppRadii.pill),
-                    ),
-                    child: Text(
-                      level,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
-                  ),
+                  _LevelBadge(level),
                 ],
               ),
             ],
@@ -1103,14 +888,16 @@ class _ReadingHistoryCard extends StatelessWidget {
   }
 }
 
-class _ReadingComposerPage extends StatefulWidget {
+enum _ReadingComposerPhase { selecting, forging, revealed }
+
+class _ImmersiveReadingComposer extends StatefulWidget {
   final List<PulseWordEntry> candidates;
   final List<PulseWordEntry> initialSelection;
   final Future<ReadingGenerationResult> Function(List<PulseWordEntry>)
   onGenerate;
   final VoidCallback onCancelGeneration;
 
-  const _ReadingComposerPage({
+  const _ImmersiveReadingComposer({
     required this.candidates,
     required this.initialSelection,
     required this.onGenerate,
@@ -1118,20 +905,23 @@ class _ReadingComposerPage extends StatefulWidget {
   });
 
   @override
-  State<_ReadingComposerPage> createState() => _ReadingComposerPageState();
+  State<_ImmersiveReadingComposer> createState() =>
+      _ImmersiveReadingComposerState();
 }
 
-class _ReadingComposerPageState extends State<_ReadingComposerPage> {
+class _ImmersiveReadingComposerState extends State<_ImmersiveReadingComposer> {
   static const _messages = ['正在构思自然语境', '正在让目标词自然出现', '正在准备翻译和理解题'];
 
   late final Set<String> _selected = widget.initialSelection
       .map(_readingWordKey)
       .toSet();
-  bool _generating = false;
+  _ReadingComposerPhase _phase = _ReadingComposerPhase.selecting;
   String? _error;
+  SavedArticle? _article;
   int _messageIndex = 0;
-  int _highlightIndex = 0;
-  Timer? _waitingTimer;
+  int _rotation = 0;
+  bool _settling = false;
+  Timer? _messageTimer;
 
   List<PulseWordEntry> get _selectedWords => widget.candidates
       .where((entry) => _selected.contains(_readingWordKey(entry)))
@@ -1139,11 +929,12 @@ class _ReadingComposerPageState extends State<_ReadingComposerPage> {
 
   @override
   void dispose() {
-    _waitingTimer?.cancel();
+    _messageTimer?.cancel();
     super.dispose();
   }
 
   void _toggle(PulseWordEntry word) {
+    if (_phase != _ReadingComposerPhase.selecting) return;
     final key = _readingWordKey(word);
     if (_selected.contains(key)) {
       setState(() => _selected.remove(key));
@@ -1158,45 +949,78 @@ class _ReadingComposerPageState extends State<_ReadingComposerPage> {
     HapticFeedback.selectionClick();
   }
 
-  void _startWaitingAnimation() {
-    _waitingTimer?.cancel();
-    _waitingTimer = Timer.periodic(const Duration(milliseconds: 1600), (_) {
-      if (!mounted || !_generating) return;
-      setState(() {
-        _messageIndex = (_messageIndex + 1) % _messages.length;
-        final count = _selectedWords.length;
-        if (count > 0) _highlightIndex = (_highlightIndex + 1) % count;
-      });
+  void _refreshSelection() {
+    if (_phase != _ReadingComposerPhase.selecting) return;
+    final previous = Set<String>.of(_selected);
+    final next = selectReadingWords(widget.candidates, rotation: ++_rotation);
+    final nextKeys = next.map(_readingWordKey).toSet();
+    setState(() {
+      _selected
+        ..clear()
+        ..addAll(nextKeys);
+      _error = null;
+    });
+    HapticFeedback.selectionClick();
+    if (setEquals(previous, nextKeys)) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('已经是当前最适合复现的词')));
+    }
+  }
+
+  void _startMessageRotation() {
+    _messageTimer?.cancel();
+    _messageTimer = Timer.periodic(const Duration(milliseconds: 1600), (_) {
+      if (!mounted || _phase != _ReadingComposerPhase.forging) return;
+      setState(() => _messageIndex = (_messageIndex + 1) % _messages.length);
     });
   }
 
   Future<void> _generate() async {
     final words = _selectedWords;
-    if (words.length < 3 || _generating) return;
+    if (words.length < 3 || _phase != _ReadingComposerPhase.selecting) return;
+    final reduceMotion = MediaQuery.of(context).disableAnimations;
+    final startedAt = DateTime.now();
     setState(() {
-      _generating = true;
+      _phase = _ReadingComposerPhase.forging;
       _error = null;
+      _article = null;
       _messageIndex = 0;
-      _highlightIndex = 0;
+      _settling = false;
     });
-    _startWaitingAnimation();
+    _startMessageRotation();
     final result = await widget.onGenerate(words);
-    _waitingTimer?.cancel();
+    _messageTimer?.cancel();
     if (!mounted) return;
     if (result.wasCancelled) {
-      setState(() => _generating = false);
+      setState(() => _phase = _ReadingComposerPhase.selecting);
+      Navigator.of(context).pop();
       return;
     }
     if (result.article case final article?) {
-      await Navigator.of(context).pushReplacement<void, void>(
-        MaterialPageRoute(
-          builder: (_) => ArticleDetailScreen(article: article),
-        ),
-      );
+      if (!reduceMotion) {
+        final elapsed = DateTime.now().difference(startedAt);
+        const minimumForgeTime = Duration(milliseconds: 900);
+        if (elapsed < minimumForgeTime) {
+          await Future<void>.delayed(minimumForgeTime - elapsed);
+          if (!mounted) return;
+        }
+        setState(() {
+          _article = article;
+          _settling = true;
+        });
+        await Future<void>.delayed(const Duration(milliseconds: 360));
+        if (!mounted) return;
+      }
+      setState(() {
+        _article = article;
+        _phase = _ReadingComposerPhase.revealed;
+        _settling = false;
+      });
       return;
     }
     setState(() {
-      _generating = false;
+      _phase = _ReadingComposerPhase.selecting;
       _error = result.error ?? '生成失败，请稍后重试';
     });
   }
@@ -1204,7 +1028,7 @@ class _ReadingComposerPageState extends State<_ReadingComposerPage> {
   Future<void> _confirmCancel() async {
     final leave = await showDialog<bool>(
       context: context,
-      builder: (context) => AlertDialog(
+      builder: (context) => AlertDialog.adaptive(
         title: const Text('停止等待？'),
         content: const Text('离开后不会打开本次生成结果，服务商仍可能完成已经发出的请求。'),
         actions: [
@@ -1221,7 +1045,27 @@ class _ReadingComposerPageState extends State<_ReadingComposerPage> {
     );
     if (leave != true || !mounted) return;
     widget.onCancelGeneration();
+    setState(() => _phase = _ReadingComposerPhase.selecting);
+    await WidgetsBinding.instance.endOfFrame;
+    if (!mounted) return;
     Navigator.of(context).pop();
+  }
+
+  void _close() {
+    if (_phase == _ReadingComposerPhase.forging) {
+      _confirmCancel();
+    } else {
+      Navigator.of(context).maybePop();
+    }
+  }
+
+  void _startReading() {
+    final article = _article;
+    if (article == null) return;
+    HapticFeedback.selectionClick();
+    Navigator.of(context).pushReplacement<void, void>(
+      MaterialPageRoute(builder: (_) => ArticleDetailScreen(article: article)),
+    );
   }
 
   @override
@@ -1231,151 +1075,86 @@ class _ReadingComposerPageState extends State<_ReadingComposerPage> {
         .where((entry) => !_selected.contains(_readingWordKey(entry)))
         .toList();
     return PopScope<void>(
-      canPop: !_generating,
+      canPop: _phase != _ReadingComposerPhase.forging,
       onPopInvokedWithResult: (didPop, _) {
-        if (!didPop && _generating) _confirmCancel();
+        if (!didPop && _phase == _ReadingComposerPhase.forging) {
+          _confirmCancel();
+        }
       },
       child: Scaffold(
         backgroundColor: AppColors.of(context).background,
-        appBar: AppBar(
-          title: const Text('生成阅读'),
-          centerTitle: true,
-          automaticallyImplyLeading: false,
+        appBar: GlassAppBar(
+          title: '生成阅读',
           leading: IconButton(
-            tooltip: '返回',
-            onPressed: _generating
-                ? _confirmCancel
-                : () => Navigator.of(context).maybePop(),
-            icon: const Icon(Icons.arrow_back_ios_new_rounded),
+            tooltip: '关闭',
+            onPressed: _close,
+            icon: const Icon(Icons.close_rounded, size: 23),
+            color: AppColors.primary,
+            constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
           ),
         ),
-        body: SafeArea(
-          top: false,
-          child: AnimatedSwitcher(
-            duration: AppMotion.medium,
-            child: _generating
-                ? _ReadingGeneratingView(
-                    key: const ValueKey('generating-reading'),
-                    words: selectedWords,
-                    message: _messages[_messageIndex],
-                    highlightIndex: _highlightIndex,
-                  )
-                : CustomScrollView(
-                    key: const ValueKey('select-reading-words'),
-                    slivers: [
-                      if (available.isEmpty)
-                        SliverFillRemaining(
-                          hasScrollBody: false,
-                          child: Padding(
-                            padding: const EdgeInsets.all(AppSpacing.x5),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  '今日要复现的词',
-                                  textAlign: TextAlign.center,
-                                  style: AppTheme.screenHeader(
-                                    context: context,
-                                  ),
-                                ),
-                                const SizedBox(height: AppSpacing.x2),
-                                Text(
-                                  '已选 ${selectedWords.length} / 10 · 优先保留到期词',
-                                  textAlign: TextAlign.center,
-                                  style: AppTheme.mutedCaption(
-                                    size: 13,
-                                    context: context,
-                                  ),
-                                ),
-                                const SizedBox(height: AppSpacing.x5),
-                                _ReadingWordWrap(
-                                  words: selectedWords,
-                                  selected: true,
-                                  alignment: WrapAlignment.center,
-                                  onTap: _toggle,
-                                ),
-                                if (_error != null) ...[
-                                  const SizedBox(height: AppSpacing.x5),
-                                  _ErrorCard(message: _error!),
-                                ],
-                              ],
-                            ),
-                          ),
-                        )
-                      else
-                        SliverPadding(
-                          padding: const EdgeInsets.fromLTRB(
-                            AppSpacing.x5,
-                            AppSpacing.x4,
-                            AppSpacing.x5,
-                            AppSpacing.x8,
-                          ),
-                          sliver: SliverList.list(
-                            children: [
-                              Text(
-                                '今日要复现的词',
-                                style: AppTheme.screenHeader(context: context),
-                              ),
-                              const SizedBox(height: AppSpacing.x2),
-                              Text(
-                                '已选 ${selectedWords.length} / 10 · 优先保留到期词',
-                                style: AppTheme.mutedCaption(
-                                  size: 13,
-                                  context: context,
-                                ),
-                              ),
-                              const SizedBox(height: AppSpacing.x4),
-                              _ReadingWordWrap(
-                                words: selectedWords,
-                                selected: true,
-                                onTap: _toggle,
-                              ),
-                              const SizedBox(height: AppSpacing.x8),
-                              Text(
-                                '可替换词',
-                                style: AppTheme.cardTitle(context: context),
-                              ),
-                              const SizedBox(height: AppSpacing.x2),
-                              Text(
-                                '这些词都来自你已经学过的内容',
-                                style: AppTheme.mutedCaption(
-                                  size: 12,
-                                  context: context,
-                                ),
-                              ),
-                              const SizedBox(height: AppSpacing.x3),
-                              _ReadingWordWrap(
-                                words: available,
-                                selected: false,
-                                onTap: _toggle,
-                              ),
-                              if (_error != null) ...[
-                                const SizedBox(height: AppSpacing.x5),
-                                _ErrorCard(message: _error!),
-                              ],
-                            ],
-                          ),
-                        ),
-                    ],
+        body: DecoratedBox(
+          decoration: AppMaterials.canvasDecoration(context),
+          child: SafeArea(
+            top: false,
+            child: AnimatedSwitcher(
+              duration: MediaQuery.of(context).disableAnimations
+                  ? Duration.zero
+                  : AppMotion.slow,
+              switchInCurve: AppMotion.emphasized,
+              switchOutCurve: AppMotion.easeOut,
+              transitionBuilder: (child, animation) => FadeTransition(
+                opacity: animation,
+                child: ScaleTransition(
+                  scale: Tween<double>(begin: 0.985, end: 1).animate(animation),
+                  child: child,
+                ),
+              ),
+              child: switch (_phase) {
+                _ReadingComposerPhase.selecting => _ReadingSelectionView(
+                  key: const ValueKey('select-reading-words'),
+                  selectedWords: selectedWords,
+                  availableWords: available,
+                  error: _error,
+                  onToggle: _toggle,
+                  onRefresh: _refreshSelection,
+                ),
+                _ReadingComposerPhase.forging => _InkLightForge(
+                  key: const ValueKey('forging-reading'),
+                  words: selectedWords,
+                  message: _messages[_messageIndex],
+                  settling: _settling,
+                ),
+                _ReadingComposerPhase.revealed => _ForgeRevealCard(
+                  key: const ValueKey('revealed-reading'),
+                  article: _article!,
+                  onStartReading: _startReading,
+                ),
+              },
+            ),
+          ),
+        ),
+        bottomNavigationBar: _phase == _ReadingComposerPhase.selecting
+            ? DecoratedBox(
+                decoration: BoxDecoration(
+                  color: AppColors.of(context).background,
+                  border: Border(
+                    top: BorderSide(color: AppColors.of(context).divider),
                   ),
-          ),
-        ),
-        bottomNavigationBar: _generating
-            ? null
-            : SafeArea(
-                top: false,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(
+                ),
+                child: SafeArea(
+                  top: false,
+                  minimum: const EdgeInsets.fromLTRB(
                     AppSpacing.x5,
                     AppSpacing.x3,
                     AppSpacing.x5,
                     AppSpacing.x3,
                   ),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(minHeight: 52),
-                    child: FilledButton.icon(
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: EditorialPrimaryButton(
                       onPressed: selectedWords.length >= 3 ? _generate : null,
-                      icon: const Icon(Icons.auto_awesome, size: 18),
+                      icon: const Icon(Icons.auto_awesome_rounded, size: 18),
                       label: Text(
                         selectedWords.length >= 3
                             ? '生成阅读 · ${selectedWords.length} 词'
@@ -1384,8 +1163,105 @@ class _ReadingComposerPageState extends State<_ReadingComposerPage> {
                     ),
                   ),
                 ),
-              ),
+              )
+            : null,
       ),
+    );
+  }
+}
+
+class _ReadingSelectionView extends StatelessWidget {
+  final List<PulseWordEntry> selectedWords;
+  final List<PulseWordEntry> availableWords;
+  final String? error;
+  final ValueChanged<PulseWordEntry> onToggle;
+  final VoidCallback onRefresh;
+
+  const _ReadingSelectionView({
+    super.key,
+    required this.selectedWords,
+    required this.availableWords,
+    required this.error,
+    required this.onToggle,
+    required this.onRefresh,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomScrollView(
+      slivers: [
+        SliverPadding(
+          padding: const EdgeInsets.fromLTRB(
+            AppSpacing.x5,
+            AppSpacing.x5,
+            AppSpacing.x5,
+            AppSpacing.x8,
+          ),
+          sliver: SliverList.list(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '选择目标词',
+                          style: AppTheme.screenHeader(context: context),
+                        ),
+                        const SizedBox(height: AppSpacing.x2),
+                        Text(
+                          '已选 ${selectedWords.length} / 10 · 点按可移除',
+                          style: AppTheme.mutedCaption(
+                            size: 13,
+                            context: context,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: AppSpacing.x3),
+                  TextButton.icon(
+                    onPressed: onRefresh,
+                    icon: const Icon(Icons.refresh_rounded, size: 19),
+                    label: const Text('换一批'),
+                    style: TextButton.styleFrom(
+                      minimumSize: const Size(44, 44),
+                      foregroundColor: AppColors.primary,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: AppSpacing.x5),
+              _ReadingWordWrap(
+                words: selectedWords,
+                selected: true,
+                onTap: onToggle,
+              ),
+              if (availableWords.isNotEmpty) ...[
+                const SizedBox(height: AppSpacing.x8),
+                Text('可替换词', style: AppTheme.cardTitle(context: context)),
+                const SizedBox(height: AppSpacing.x2),
+                Text(
+                  '这些词都来自你已经学过的内容',
+                  style: AppTheme.mutedCaption(size: 12, context: context),
+                ),
+                const SizedBox(height: AppSpacing.x3),
+                _ReadingWordWrap(
+                  words: availableWords,
+                  selected: false,
+                  onTap: onToggle,
+                ),
+              ],
+              if (error != null) ...[
+                const SizedBox(height: AppSpacing.x5),
+                _ErrorCard(message: error!),
+              ],
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
@@ -1394,19 +1270,16 @@ class _ReadingWordWrap extends StatelessWidget {
   final List<PulseWordEntry> words;
   final bool selected;
   final ValueChanged<PulseWordEntry> onTap;
-  final WrapAlignment alignment;
 
   const _ReadingWordWrap({
     required this.words,
     required this.selected,
     required this.onTap,
-    this.alignment = WrapAlignment.start,
   });
 
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      alignment: alignment,
       spacing: AppSpacing.x2,
       runSpacing: AppSpacing.x2,
       children: [
@@ -1421,8 +1294,9 @@ class _ReadingWordWrap extends StatelessWidget {
                 : const Icon(Icons.add_rounded, size: 16),
             label: Text(word.word, overflow: TextOverflow.ellipsis),
             onPressed: () => onTap(word),
+            materialTapTargetSize: MaterialTapTargetSize.padded,
             backgroundColor: selected
-                ? const Color(0xFFE4F7EE)
+                ? AppColors.primaryContainerOf(context)
                 : AppColors.of(context).surface,
             side: BorderSide(
               color: selected
@@ -1439,101 +1313,595 @@ class _ReadingWordWrap extends StatelessWidget {
   }
 }
 
-class _ReadingGeneratingView extends StatelessWidget {
+class _InkLightForge extends StatefulWidget {
   final List<PulseWordEntry> words;
   final String message;
-  final int highlightIndex;
+  final bool settling;
 
-  const _ReadingGeneratingView({
+  const _InkLightForge({
     super.key,
     required this.words,
     required this.message,
-    required this.highlightIndex,
+    required this.settling,
+  });
+
+  @override
+  State<_InkLightForge> createState() => _InkLightForgeState();
+}
+
+class _InkLightForgeState extends State<_InkLightForge>
+    with TickerProviderStateMixin {
+  late final AnimationController _emberController = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 2200),
+  );
+  late final AnimationController _dissolveController = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 900),
+  );
+  late final AnimationController _settleController = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 320),
+  );
+  bool _motionConfigured = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_motionConfigured) return;
+    _motionConfigured = true;
+    if (MediaQuery.of(context).disableAnimations) {
+      _dissolveController.value = 1;
+    } else {
+      _emberController.repeat();
+      _dissolveController.forward();
+    }
+  }
+
+  @override
+  void didUpdateWidget(covariant _InkLightForge oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (!oldWidget.settling &&
+        widget.settling &&
+        !MediaQuery.of(context).disableAnimations) {
+      _settleController.forward();
+    }
+  }
+
+  @override
+  void dispose() {
+    _emberController.dispose();
+    _dissolveController.dispose();
+    _settleController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final reduceMotion = MediaQuery.of(context).disableAnimations;
+    return LayoutBuilder(
+      builder: (context, constraints) => Stack(
+        fit: StackFit.expand,
+        children: [
+          if (!reduceMotion)
+            IgnorePointer(
+              child: ExcludeSemantics(
+                child: CustomPaint(
+                  painter: _EmberFieldPainter(
+                    animation: _emberController,
+                    settling: _settleController,
+                  ),
+                ),
+              ),
+            ),
+          SingleChildScrollView(
+            padding: const EdgeInsets.all(AppSpacing.x5),
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                minWidth: constraints.maxWidth - AppSpacing.x10,
+                minHeight: math.max(0, constraints.maxHeight - AppSpacing.x10),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FadeTransition(
+                    opacity: Tween<double>(begin: 1, end: 0.14).animate(
+                      CurvedAnimation(
+                        parent: _dissolveController,
+                        curve: AppMotion.easeOut,
+                      ),
+                    ),
+                    child: Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: AppSpacing.x3,
+                      runSpacing: AppSpacing.x2,
+                      children: [
+                        for (final word in widget.words)
+                          Text(
+                            word.word,
+                            style: AppTheme.editorial(
+                              size: 14,
+                              color: AppColors.primary,
+                              context: context,
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: AppSpacing.x5),
+                  _BreathingPaper(
+                    breath: _emberController,
+                    settling: _settleController,
+                    reduceMotion: reduceMotion,
+                  ),
+                  const SizedBox(height: AppSpacing.x5),
+                  AnimatedSwitcher(
+                    duration: reduceMotion ? Duration.zero : AppMotion.fast,
+                    child: Text(
+                      widget.message,
+                      key: ValueKey(widget.message),
+                      textAlign: TextAlign.center,
+                      style: AppTheme.cardTitle(context: context),
+                    ),
+                  ),
+                  const SizedBox(height: AppSpacing.x2),
+                  Text(
+                    '墨光正把这些词写进一篇值得读完的短文',
+                    textAlign: TextAlign.center,
+                    style: AppTheme.mutedCaption(size: 13, context: context),
+                  ),
+                  if (reduceMotion) ...[
+                    const SizedBox(height: AppSpacing.x5),
+                    const SizedBox(
+                      width: 22,
+                      height: 22,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2.5,
+                        color: AppColors.primary,
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _BreathingPaper extends StatelessWidget {
+  final Animation<double> breath;
+  final Animation<double> settling;
+  final bool reduceMotion;
+
+  const _BreathingPaper({
+    required this.breath,
+    required this.settling,
+    required this.reduceMotion,
   });
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) => SingleChildScrollView(
-        padding: const EdgeInsets.all(AppSpacing.x5),
-        child: ConstrainedBox(
-          constraints: BoxConstraints(
-            minWidth: constraints.maxWidth,
-            minHeight: (constraints.maxHeight - AppSpacing.x10).clamp(
-              0,
-              double.infinity,
-            ),
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    Widget paper(double glow, double flash) => Container(
+      width: 206,
+      height: 244,
+      padding: const EdgeInsets.all(AppSpacing.x6),
+      decoration: BoxDecoration(
+        color: isDark ? AppColors.of(context).surface : null,
+        gradient: isDark ? null : AppMaterials.paper,
+        borderRadius: BorderRadius.circular(AppRadii.sm),
+        border: Border.all(
+          color: AppColors.primary.withValues(alpha: 0.26 + glow * 0.32),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.primary.withValues(alpha: 0.14 + glow * 0.18),
+            blurRadius: 22 + glow * 18,
+            spreadRadius: 1 + glow * 4,
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          if (!isDark) ...AppShadows.paper,
+        ],
+      ),
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Column(
             children: [
               Container(
-                width: 64,
-                height: 64,
-                decoration: const BoxDecoration(
-                  color: Color(0xFFE4F7EE),
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(
-                  Icons.auto_stories_rounded,
-                  color: AppColors.primary,
-                  size: 30,
+                width: 34,
+                height: 3,
+                decoration: BoxDecoration(
+                  gradient: AppMaterials.bronze,
+                  borderRadius: BorderRadius.circular(AppRadii.pill),
                 ),
               ),
-              const SizedBox(height: AppSpacing.x5),
-              AnimatedSwitcher(
-                duration: AppMotion.fast,
-                child: Text(
-                  message,
-                  key: ValueKey(message),
-                  textAlign: TextAlign.center,
-                  style: AppTheme.cardTitle(context: context),
+              const Spacer(),
+              for (var i = 0; i < 5; i++) ...[
+                Container(
+                  height: 1,
+                  color: AppColors.primary.withValues(alpha: 0.08 + i * 0.012),
                 ),
+                if (i < 4) const SizedBox(height: AppSpacing.x4),
+              ],
+              const Spacer(),
+              Icon(
+                Icons.auto_stories_outlined,
+                size: 24,
+                color: AppColors.primary.withValues(alpha: 0.28),
               ),
-              const SizedBox(height: AppSpacing.x2),
-              Text(
-                '正在把这些词写成一篇值得读完的短文',
-                textAlign: TextAlign.center,
-                style: AppTheme.mutedCaption(size: 13, context: context),
+            ],
+          ),
+          if (flash > 0)
+            DecoratedBox(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(AppRadii.sm),
+                color: AppColors.inversePrimary.withValues(alpha: flash * 0.36),
               ),
-              const SizedBox(height: AppSpacing.x6),
-              Wrap(
-                alignment: WrapAlignment.center,
-                spacing: AppSpacing.x2,
-                runSpacing: AppSpacing.x2,
+            ),
+        ],
+      ),
+    );
+
+    if (reduceMotion) return paper(0.45, 0);
+    return AnimatedBuilder(
+      animation: Listenable.merge([breath, settling]),
+      builder: (context, child) {
+        final glow = (math.sin(breath.value * math.pi * 2) + 1) / 2;
+        final flash = math.sin(settling.value * math.pi);
+        return Transform.scale(
+          scale: 1 + glow * 0.008,
+          child: paper(glow, flash),
+        );
+      },
+    );
+  }
+}
+
+class _EmberFieldPainter extends CustomPainter {
+  final Animation<double> animation;
+  final Animation<double> settling;
+
+  _EmberFieldPainter({required this.animation, required this.settling})
+    : super(repaint: Listenable.merge([animation, settling]));
+
+  double _randomUnit(int seed) {
+    final value = math.sin(seed * 12.9898 + 78.233) * 43758.5453;
+    return (value - value.floor()).abs();
+  }
+
+  Offset _startPoint(Size size, int index) {
+    final along = 0.08 + _randomUnit(index + 17) * 0.84;
+    return switch (index % 4) {
+      0 => Offset(size.width * along, -8),
+      1 => Offset(size.width + 8, size.height * along),
+      2 => Offset(size.width * along, size.height + 8),
+      _ => Offset(-8, size.height * along),
+    };
+  }
+
+  Offset _quadratic(Offset start, Offset control, Offset end, double t) {
+    final inverse = 1 - t;
+    return Offset(
+      inverse * inverse * start.dx +
+          2 * inverse * t * control.dx +
+          t * t * end.dx,
+      inverse * inverse * start.dy +
+          2 * inverse * t * control.dy +
+          t * t * end.dy,
+    );
+  }
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = Offset(size.width / 2, size.height * 0.43);
+    final glowPaint = Paint()
+      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 7);
+    final corePaint = Paint();
+    for (var index = 0; index < 28; index++) {
+      final staggered = (animation.value + index / 28 * 0.82) % 1;
+      final pathProgress = Curves.easeInOut.transform(staggered);
+      final start = _startPoint(size, index);
+      final midpoint = Offset.lerp(start, center, 0.5)!;
+      final direction = center - start;
+      final length = math.max(direction.distance, 1);
+      final perpendicular = Offset(
+        -direction.dy / length,
+        direction.dx / length,
+      );
+      final bend =
+          (index.isEven ? 1 : -1) * (18 + _randomUnit(index + 81) * 46);
+      final control = midpoint + perpendicular * bend;
+      final settlingProgress = Curves.easeInOut.transform(settling.value);
+      final effectiveProgress =
+          pathProgress + (1 - pathProgress) * settlingProgress;
+      final point = _quadratic(start, control, center, effectiveProgress);
+      final pulse = math.sin(staggered * math.pi);
+      final opacity = (0.18 + pulse * 0.62) * (1 - settlingProgress * 0.72);
+      final radius = 1.2 + _randomUnit(index + 143) * 2.1;
+      glowPaint.color = AppColors.inversePrimary.withValues(
+        alpha: opacity * 0.52,
+      );
+      corePaint.color = const Color(0xFFB89A68).withValues(alpha: opacity);
+      canvas.drawCircle(point, radius * 3.2, glowPaint);
+      canvas.drawCircle(point, radius, corePaint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _EmberFieldPainter oldDelegate) =>
+      oldDelegate.animation != animation || oldDelegate.settling != settling;
+}
+
+class _ForgeRevealCard extends StatefulWidget {
+  final SavedArticle article;
+  final VoidCallback onStartReading;
+
+  const _ForgeRevealCard({
+    super.key,
+    required this.article,
+    required this.onStartReading,
+  });
+
+  @override
+  State<_ForgeRevealCard> createState() => _ForgeRevealCardState();
+}
+
+class _ForgeRevealCardState extends State<_ForgeRevealCard>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 1100),
+  );
+  bool _started = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_started) return;
+    _started = true;
+    if (MediaQuery.of(context).disableAnimations) {
+      _controller.value = 1;
+    } else {
+      _controller.forward();
+    }
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final words = widget.article.wordPool
+        .map((entry) => entry['word'] ?? '')
+        .where((word) => word.isNotEmpty)
+        .take(10)
+        .toList();
+    return LayoutBuilder(
+      builder: (context, constraints) => SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(
+          AppSpacing.x5,
+          AppSpacing.x5,
+          AppSpacing.x5,
+          AppSpacing.x8,
+        ),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minWidth: constraints.maxWidth - AppSpacing.x10,
+            minHeight: math.max(
+              0,
+              constraints.maxHeight - AppSpacing.x5 - AppSpacing.x8,
+            ),
+          ),
+          child: AnimatedBuilder(
+            animation: _controller,
+            builder: (context, child) {
+              final cardProgress = Curves.easeOut.transform(
+                (_controller.value / 0.58).clamp(0, 1),
+              );
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  for (var i = 0; i < words.length; i++)
-                    AnimatedContainer(
-                      duration: AppMotion.fast,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: AppSpacing.x3,
-                        vertical: AppSpacing.x2,
-                      ),
-                      decoration: BoxDecoration(
-                        color: i == highlightIndex
-                            ? AppColors.primary
-                            : const Color(0xFFE4F7EE),
-                        borderRadius: BorderRadius.circular(AppRadii.pill),
-                      ),
-                      child: Text(
-                        words[i].word,
-                        style: TextStyle(
-                          color: i == highlightIndex
-                              ? Colors.white
-                              : AppColors.primary,
-                          fontWeight: FontWeight.w700,
+                  Opacity(
+                    opacity: cardProgress,
+                    child: Transform.translate(
+                      offset: Offset(0, 18 * (1 - cardProgress)),
+                      child: Transform.scale(
+                        scale: 0.95 + cardProgress * 0.05,
+                        child: AppCard(
+                          onTap: widget.onStartReading,
+                          semanticLabel:
+                              '开始阅读 ${_articleTitle(widget.article)}',
+                          padding: const EdgeInsets.all(AppSpacing.x6),
+                          shadow: const [
+                            BoxShadow(
+                              color: Color(0x243A2E1E),
+                              blurRadius: 32,
+                              offset: Offset(0, 14),
+                            ),
+                            ...AppShadows.paper,
+                          ],
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      '书 成',
+                                      style:
+                                          AppTheme.sectionLabel(
+                                            context: context,
+                                          ).copyWith(
+                                            color: AppColors.primary,
+                                            letterSpacing: 5,
+                                          ),
+                                    ),
+                                  ),
+                                  _LevelBadge(
+                                    widget.article.level.isEmpty
+                                        ? 'B1'
+                                        : widget.article.level,
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: AppSpacing.x5),
+                              _ShimmeringTitle(
+                                title: _articleTitle(widget.article),
+                                progress: _controller.value,
+                              ),
+                              const SizedBox(height: AppSpacing.x3),
+                              Text(
+                                'AI 阅读 · ${_wordCount(widget.article.articleText)} 词',
+                                style: AppTheme.mutedCaption(
+                                  size: 13,
+                                  context: context,
+                                ),
+                              ),
+                              if (words.isNotEmpty) ...[
+                                const SizedBox(height: AppSpacing.x5),
+                                Wrap(
+                                  spacing: AppSpacing.x2,
+                                  runSpacing: AppSpacing.x2,
+                                  children: [
+                                    for (
+                                      var index = 0;
+                                      index < words.length;
+                                      index++
+                                    )
+                                      _StaggeredRevealWord(
+                                        word: words[index],
+                                        progress: _controller.value,
+                                        index: index,
+                                      ),
+                                  ],
+                                ),
+                              ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
+                  ),
+                  const SizedBox(height: AppSpacing.x6),
+                  IgnorePointer(
+                    ignoring: _controller.value < 0.58,
+                    child: Opacity(
+                      opacity: Curves.easeOut.transform(
+                        ((_controller.value - 0.58) / 0.42).clamp(0, 1),
+                      ),
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: EditorialPrimaryButton(
+                          onPressed: widget.onStartReading,
+                          icon: const Icon(
+                            Icons.auto_stories_rounded,
+                            size: 19,
+                          ),
+                          label: const Text('开始阅读'),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
-              ),
-              const SizedBox(height: AppSpacing.x6),
-              const SizedBox(
-                width: 22,
-                height: 22,
-                child: CircularProgressIndicator(strokeWidth: 2.5),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _ShimmeringTitle extends StatelessWidget {
+  final String title;
+  final double progress;
+
+  const _ShimmeringTitle({required this.title, required this.progress});
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = AppColors.of(context);
+    final sweep = -3 + progress * 6;
+    return ShaderMask(
+      blendMode: BlendMode.srcIn,
+      shaderCallback: (bounds) => LinearGradient(
+        begin: Alignment(sweep - 1, 0),
+        end: Alignment(sweep + 1, 0),
+        colors: [
+          palette.ink,
+          palette.ink,
+          AppColors.inversePrimary,
+          palette.ink,
+          palette.ink,
+        ],
+        stops: const [0, 0.36, 0.5, 0.64, 1],
+      ).createShader(bounds),
+      child: Text(
+        title,
+        style: AppTheme.editorial(size: 28, context: context, height: 1.28),
+      ),
+    );
+  }
+}
+
+class _StaggeredRevealWord extends StatelessWidget {
+  final String word;
+  final double progress;
+  final int index;
+
+  const _StaggeredRevealWord({
+    required this.word,
+    required this.progress,
+    required this.index,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final start = 0.42 + index * 0.035;
+    final reveal = Curves.easeOut.transform(
+      ((progress - start) / 0.22).clamp(0, 1),
+    );
+    return Opacity(
+      opacity: reveal,
+      child: Transform.translate(
+        offset: Offset(0, 6 * (1 - reveal)),
+        child: Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: AppSpacing.x3,
+            vertical: AppSpacing.x1_5,
+          ),
+          decoration: BoxDecoration(
+            gradient: Theme.of(context).brightness == Brightness.light
+                ? AppMaterials.paper
+                : null,
+            color: Theme.of(context).brightness == Brightness.dark
+                ? AppColors.primaryContainerOf(context)
+                : null,
+            borderRadius: BorderRadius.circular(AppRadii.pill),
+            border: Border.all(
+              color: AppColors.primary.withValues(alpha: 0.24),
+            ),
+            boxShadow: const [
+              BoxShadow(
+                color: Color(0x183A2E1E),
+                blurRadius: 8,
+                offset: Offset(0, 2),
               ),
             ],
+          ),
+          child: Text(
+            word,
+            style: AppTheme.editorial(
+              size: 13,
+              color: AppColors.primary,
+              context: context,
+            ),
           ),
         ),
       ),
@@ -1636,148 +2004,137 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
     final palette = AppColors.of(context);
     final translationAvailable = widget.article.translationText.isNotEmpty;
     return Scaffold(
-      backgroundColor: Theme.of(context).brightness == Brightness.dark
-          ? palette.background
-          : const Color(0xFFF7FAEA),
-      appBar: AppBar(
-        title: const Text('阅读'),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        surfaceTintColor: Colors.transparent,
+      backgroundColor: palette.background,
+      extendBodyBehindAppBar: true,
+      appBar: GlassAppBar(
+        title: '阅读',
+        leading: IconButton(
+          tooltip: '返回',
+          onPressed: () => Navigator.of(context).maybePop(),
+          icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 20),
+          color: AppColors.primary,
+        ),
       ),
-      body: CustomScrollView(
-        slivers: [
-          SliverPadding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.x5,
-              AppSpacing.x4,
-              AppSpacing.x5,
-              AppSpacing.x10,
-            ),
-            sliver: SliverList.list(
-              children: [
-                Text(
-                  _articleTitle(widget.article),
-                  style: AppTheme.screenHeader(
-                    context: context,
-                  ).copyWith(fontFamily: null, fontSize: 30, height: 1.15),
-                ),
-                const SizedBox(height: AppSpacing.x4),
-                Wrap(
-                  spacing: AppSpacing.x3,
-                  runSpacing: AppSpacing.x2,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: AppSpacing.x3,
-                        vertical: AppSpacing.x1,
-                      ),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF57A16),
-                        borderRadius: BorderRadius.circular(AppRadii.pill),
-                      ),
-                      child: Text(
-                        widget.article.level.isEmpty
-                            ? 'B1'
-                            : widget.article.level,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w800,
+      body: DecoratedBox(
+        decoration: AppMaterials.canvasDecoration(context),
+        child: Builder(
+          builder: (context) {
+            final topInset = MediaQuery.paddingOf(context).top;
+            return CustomScrollView(
+              slivers: [
+                SliverPadding(
+                  padding: EdgeInsets.fromLTRB(
+                    AppSpacing.x5,
+                    topInset + AppSpacing.x4,
+                    AppSpacing.x5,
+                    AppSpacing.x10,
+                  ),
+                  sliver: SliverList.list(
+                    children: [
+                      Text(
+                        _articleTitle(widget.article),
+                        style: AppTheme.screenHeader(context: context).copyWith(
+                          fontFamily: null,
+                          fontSize: 30,
+                          height: 1.15,
                         ),
                       ),
-                    ),
-                    Text(
-                      'AI 阅读 · ${_wordCount(widget.article.articleText)} 词',
-                      style: AppTheme.mutedCaption(size: 14, context: context),
-                    ),
-                  ],
+                      const SizedBox(height: AppSpacing.x4),
+                      Wrap(
+                        spacing: AppSpacing.x3,
+                        runSpacing: AppSpacing.x2,
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        children: [
+                          _LevelBadge(
+                            widget.article.level.isEmpty
+                                ? 'B1'
+                                : widget.article.level,
+                          ),
+                          Text(
+                            'AI 阅读 · ${_wordCount(widget.article.articleText)} 词',
+                            style: AppTheme.mutedCaption(
+                              size: 14,
+                              context: context,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: AppSpacing.x6),
+                      _ArticleCard(
+                        article: widget.article.articleText,
+                        pool: _pool,
+                      ),
+                      if (_showTranslation) ...[
+                        const SizedBox(height: AppSpacing.x5),
+                        AnimatedSwitcher(
+                          duration: AppMotion.medium,
+                          switchInCurve: AppMotion.easeOut,
+                          switchOutCurve: AppMotion.easeOut,
+                          child: Text(
+                            translationAvailable
+                                ? widget.article.translationText
+                                : '这篇历史文章没有保存译文。重新生成文章后可使用逐篇译文。',
+                            key: ValueKey(translationAvailable),
+                            style: AppTheme.mutedCaption(
+                              size: 15,
+                              context: context,
+                            ).copyWith(height: 1.8),
+                          ),
+                        ),
+                      ],
+                      if (_questions.isNotEmpty) ...[
+                        const SizedBox(height: AppSpacing.x6),
+                        _ComprehensionQuiz(
+                          questions: _questions,
+                          answers: _answers,
+                          onAnswer: (questionIndex, optionIndex) {
+                            HapticFeedback.selectionClick();
+                            setState(
+                              () => _answers[questionIndex] = optionIndex,
+                            );
+                          },
+                        ),
+                      ],
+                    ],
+                  ),
                 ),
-                const SizedBox(height: AppSpacing.x6),
-                _ArticleCard(article: widget.article.articleText, pool: _pool),
-                if (_showTranslation) ...[
-                  const SizedBox(height: AppSpacing.x5),
-                  AnimatedSwitcher(
-                    duration: AppMotion.medium,
-                    switchInCurve: AppMotion.easeOut,
-                    switchOutCurve: AppMotion.easeOut,
-                    child: Text(
-                      translationAvailable
-                          ? widget.article.translationText
-                          : '这篇历史文章没有保存译文。重新生成文章后可使用逐篇译文。',
-                      key: ValueKey(translationAvailable),
-                      style: AppTheme.mutedCaption(
-                        size: 15,
-                        context: context,
-                      ).copyWith(height: 1.8),
-                    ),
-                  ),
-                ],
-                if (_questions.isNotEmpty) ...[
-                  const SizedBox(height: AppSpacing.x6),
-                  _ComprehensionQuiz(
-                    questions: _questions,
-                    answers: _answers,
-                    onAnswer: (questionIndex, optionIndex) {
-                      HapticFeedback.selectionClick();
-                      setState(() => _answers[questionIndex] = optionIndex);
-                    },
-                  ),
-                ],
               ],
-            ),
-          ),
-        ],
-      ),
-      bottomNavigationBar: SafeArea(
-        top: false,
-        minimum: const EdgeInsets.fromLTRB(
-          AppSpacing.x5,
-          AppSpacing.x2,
-          AppSpacing.x5,
-          AppSpacing.x2,
+            );
+          },
         ),
-        child: Container(
-          padding: const EdgeInsets.all(AppSpacing.x2),
-          decoration: BoxDecoration(
-            color: palette.surface,
-            borderRadius: BorderRadius.circular(AppRadii.lg),
-            border: Border.all(color: palette.divider),
-            boxShadow: AppShadows.md,
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                child: _ReaderAction(
-                  icon: Icons.volume_up_outlined,
-                  label: '朗读',
-                  color: const Color(0xFF69B73F),
-                  onTap: () => TtsService.instance.speak(
-                    text: widget.article.articleText,
-                  ),
-                ),
+      ),
+      bottomNavigationBar: GlassBottomBar(
+        child: Row(
+          children: [
+            Expanded(
+              child: _ReaderAction(
+                icon: Icons.volume_up_outlined,
+                label: '朗读',
+                color: AppColors.primary,
+                onTap: () =>
+                    TtsService.instance.speak(text: widget.article.articleText),
               ),
-              Expanded(
-                child: _ReaderAction(
-                  icon: Icons.article_outlined,
-                  label: '生词表',
-                  color: const Color(0xFFF06D27),
-                  onTap: _showWordList,
-                ),
+            ),
+            Expanded(
+              child: _ReaderAction(
+                icon: Icons.article_outlined,
+                label: '生词表',
+                color: AppColors.sage,
+                onTap: _showWordList,
               ),
-              Expanded(
-                child: _ReaderAction(
-                  icon: _showTranslation
-                      ? Icons.visibility_off_outlined
-                      : Icons.visibility_outlined,
-                  label: '翻译',
-                  color: const Color(0xFF4E82DE),
-                  onTap: () =>
-                      setState(() => _showTranslation = !_showTranslation),
-                ),
+            ),
+            Expanded(
+              child: _ReaderAction(
+                icon: _showTranslation
+                    ? Icons.visibility_off_outlined
+                    : Icons.visibility_outlined,
+                label: '翻译',
+                color: _showTranslation ? AppColors.primary : palette.inkMuted,
+                onTap: () =>
+                    setState(() => _showTranslation = !_showTranslation),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -1826,6 +2183,42 @@ class _ReaderAction extends StatelessWidget {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+// ── Level badge ─────────────────────────────────────────────────────
+
+/// The single CEFR-level pill used by both the reading list and the
+/// article detail header, so the two never drift apart. A solid bronze
+/// pill (on-palette with the warm-paper system) that is width-capped and
+/// ellipsised — the article `level` field can be arbitrary text from a
+/// model response, so it must never overflow its row.
+class _LevelBadge extends StatelessWidget {
+  final String level;
+  const _LevelBadge(this.level);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      constraints: const BoxConstraints(maxWidth: 96),
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppSpacing.x3,
+        vertical: AppSpacing.x1,
+      ),
+      decoration: BoxDecoration(
+        color: AppColors.primary,
+        borderRadius: BorderRadius.circular(AppRadii.pill),
+      ),
+      child: Text(
+        level,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        style: const TextStyle(
+          color: AppColors.onPrimary,
+          fontWeight: FontWeight.w800,
         ),
       ),
     );
@@ -1986,9 +2379,9 @@ class _QuizOption extends StatelessWidget {
 
     if (showResult) {
       if (isSelected && isCorrect) {
-        bg = AppColors.primarySoft;
+        bg = AppColors.primaryContainerOf(context);
         border = AppColors.primary;
-        textColor = AppColors.primaryDark;
+        textColor = AppColors.onPrimaryContainerOf(context);
         icon = Icons.check_circle_rounded;
         iconColor = AppColors.primary;
       } else if (isSelected && !isCorrect) {
@@ -1998,9 +2391,9 @@ class _QuizOption extends StatelessWidget {
         icon = Icons.cancel_rounded;
         iconColor = AppColors.danger;
       } else if (isCorrect) {
-        bg = AppColors.primarySoft.withValues(alpha: 0.3);
+        bg = AppColors.primaryContainerOf(context).withValues(alpha: 0.3);
         border = AppColors.primary.withValues(alpha: 0.4);
-        textColor = AppColors.primaryDark;
+        textColor = AppColors.onPrimaryContainerOf(context);
       }
     }
 
@@ -2053,7 +2446,7 @@ class _ArticleCard extends StatelessWidget {
     HapticFeedback.selectionClick();
     showModalBottomSheet(
       context: context,
-      backgroundColor: Colors.transparent,
+      showDragHandle: true,
       isScrollControlled: true,
       builder: (_) => _WordDefinitionSheet(entry: entry),
     );
@@ -2124,12 +2517,11 @@ class _TargetWord extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
+      behavior: HitTestBehavior.opaque,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 1),
+        padding: const EdgeInsets.symmetric(horizontal: 3),
         decoration: const BoxDecoration(
-          border: Border(
-            bottom: BorderSide(color: Color(0xFFF4DF35), width: 5),
-          ),
+          border: Border(bottom: BorderSide(color: AppColors.target, width: 5)),
         ),
         child: Text(
           text,
@@ -2152,91 +2544,70 @@ class _WordDefinitionSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.of(context).surface,
-        borderRadius: const BorderRadius.vertical(
-          top: Radius.circular(AppRadii.lg),
+    return SafeArea(
+      top: false,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(
+          AppSpacing.x5,
+          0,
+          AppSpacing.x5,
+          AppSpacing.x5,
         ),
-      ),
-      child: SafeArea(
-        top: false,
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(
-            AppSpacing.x5,
-            AppSpacing.x4,
-            AppSpacing.x5,
-            AppSpacing.x5,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(
-                child: Container(
-                  width: 36,
-                  height: 4,
-                  decoration: BoxDecoration(
-                    color: AppColors.of(
-                      context,
-                    ).inkSubtle.withValues(alpha: 0.3),
-                    borderRadius: BorderRadius.circular(2),
-                  ),
-                ),
-              ),
-              const SizedBox(height: AppSpacing.x4),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Expanded(
-                    child: Text(
-                      entry.word,
-                      softWrap: true,
-                      style: AppTheme.wordDisplay(
-                        size: 28,
-                        weight: FontWeight.w700,
-                        context: context,
-                      ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Expanded(
+                  child: Text(
+                    entry.word,
+                    softWrap: true,
+                    style: AppTheme.wordDisplay(
+                      size: 28,
+                      weight: FontWeight.w700,
+                      context: context,
                     ),
                   ),
-                  const SizedBox(width: AppSpacing.x3),
-                  IconButton(
-                    tooltip: '播放发音',
-                    icon: const Icon(Icons.volume_up_outlined, size: 22),
-                    color: AppColors.of(context).inkMuted,
-                    onPressed: () {
-                      HapticFeedback.lightImpact();
-                      TtsService.instance.speak(text: entry.word);
-                    },
-                  ),
-                ],
+                ),
+                const SizedBox(width: AppSpacing.x3),
+                IconButton(
+                  tooltip: '播放发音',
+                  icon: const Icon(Icons.volume_up_outlined, size: 22),
+                  color: AppColors.of(context).inkMuted,
+                  onPressed: () {
+                    HapticFeedback.lightImpact();
+                    TtsService.instance.speak(text: entry.word);
+                  },
+                ),
+              ],
+            ),
+            if (entry.phonetic.isNotEmpty) ...[
+              const SizedBox(height: AppSpacing.x1_5),
+              Text(
+                entry.phonetic,
+                style: AppTheme.phonetic(fontSize: 15, context: context),
               ),
-              if (entry.phonetic.isNotEmpty) ...[
-                const SizedBox(height: AppSpacing.x1_5),
-                Text(
-                  entry.phonetic,
-                  style: AppTheme.phonetic(fontSize: 15, context: context),
-                ),
-              ],
-              if (entry.translation.isNotEmpty) ...[
-                const SizedBox(height: AppSpacing.x3),
-                Text(
-                  entry.translation,
-                  style: AppTheme.cardTitle(
-                    context: context,
-                  ).copyWith(fontSize: 17, height: 1.5),
-                ),
-              ],
-              if (entry.translation.isEmpty) ...[
-                const SizedBox(height: AppSpacing.x4),
-                Text(
-                  '暂无释义',
-                  style: AppTheme.mutedCaption(size: 14, context: context),
-                ),
-              ],
-              const SizedBox(height: AppSpacing.x3),
             ],
-          ),
+            if (entry.translation.isNotEmpty) ...[
+              const SizedBox(height: AppSpacing.x3),
+              Text(
+                entry.translation,
+                style: AppTheme.cardTitle(
+                  context: context,
+                ).copyWith(fontSize: 17, height: 1.5),
+              ),
+            ],
+            if (entry.translation.isEmpty) ...[
+              const SizedBox(height: AppSpacing.x4),
+              Text(
+                '暂无释义',
+                style: AppTheme.mutedCaption(size: 14, context: context),
+              ),
+            ],
+            const SizedBox(height: AppSpacing.x3),
+          ],
         ),
       ),
     );

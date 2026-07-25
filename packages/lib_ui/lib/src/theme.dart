@@ -424,10 +424,16 @@ class AppTheme {
       fontWeight: weight,
       color: color ?? _ink(context),
       height: 1.2,
-      letterSpacing: 0,
+      letterSpacing: _tracking(size),
     );
   }
 
+  /// General editorial serif style (history titles, book monograms,
+  /// large stat numerals). Tracking stays neutral: unlike [wordDisplay]
+  /// this style also renders CJK (e.g. book names) and is used across a
+  /// wide size range, where a baked-in Latin-display negative tracking
+  /// would be wrong. Size-aware tracking is reserved for [wordDisplay],
+  /// which only ever renders Latin words/numerals.
   static TextStyle editorial({
     double size = 24,
     FontWeight weight = FontWeight.w700,
@@ -460,6 +466,13 @@ class AppTheme {
   }
 
   /// Big screen header (e.g. "发现", "设置", "图表").
+  ///
+  /// Tracking stays at 0 here on purpose: this style is used for Chinese
+  /// UI headers (system font, CJK glyphs), and several callers override
+  /// [TextStyle.fontSize] via `.copyWith` down to 18–28px. Baking a
+  /// size-specific Latin tracking value in would be both wrong for CJK and
+  /// frozen at the wrong size. Size-aware tracking lives on [wordDisplay]
+  /// (the Latin serif hero style) where it belongs.
   static TextStyle screenHeader({Color? color, BuildContext? context}) {
     return TextStyle(
       fontSize: 34,
@@ -538,4 +551,21 @@ class AppTheme {
       context == null ? AppColors.ink : AppColors.of(context).ink;
   static Color _inkMuted(BuildContext? context) =>
       context == null ? AppColors.inkMuted : AppColors.of(context).inkMuted;
+
+  /// Size-specific tracking (letter-spacing), following Apple's rule that
+  /// tracking is *never* a single fixed value across sizes (WWDC 2020,
+  /// "The Details of UI Typography"): large display type reads too loose
+  /// as it grows, so it tightens (negative); small text opens up slightly
+  /// for legibility; body/subheads stay neutral.
+  ///
+  /// Flutter's `letterSpacing` is in logical pixels, so the display tier
+  /// scales with [size] to approximate an em-based `-0.021em`. The effect
+  /// is kept intentionally gentle so it stays invisible on CJK glyphs
+  /// (which don't want negative tracking) while pulling the big Latin
+  /// serif words — the app's hero elements — visibly tighter.
+  static double _tracking(double size) {
+    if (size >= 28) return size * -0.021; // display / headline: tighten
+    if (size <= 13) return 0.15; // captions / phonetic: nudge apart
+    return 0; // body & subheads: neutral
+  }
 }

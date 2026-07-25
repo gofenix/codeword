@@ -23,6 +23,17 @@ Rules:
 
 LIST_META_OVERRIDES patches category/emoji/domainColor for lists that
 don't fit the auto-derived scheme.
+
+Catalogue-cleanup rules (mirrored from tools/fix_catalog.py so a fresh
+upstream refresh reproduces the shipped catalogue):
+  - EXCLUDE_CATEGORIES: skip non-English source lists (日/德/印尼/哈萨克…).
+  - NAME_OVERRIDES: publisher/edition suffixes so duplicate-titled
+    textbook lists stay distinguishable.
+  - CATEGORY_MAP / LIST_META_OVERRIDES fold the singleton 专业词汇 / 词典
+    buckets into the shared 综合 category.
+NOTE: the upstream qwerty clone (tools/_qwerty_src) is gitignored and not
+present here, so this generator cannot be re-run/verified locally; these
+rules exist to keep a future refresh consistent with fix_catalog.py.
 """
 
 import json
@@ -54,8 +65,8 @@ CATEGORY_MAP = {
     '中国考试': '考试英语',
     '国际考试': '考试英语',
     '青少年英语': '青少年英语',
-    '专业词汇': '专业词汇',
-    '英语词典': '词典',
+    '专业词汇': '综合',
+    '英语词典': '综合',
     '程序员的英语': '编程',
     'code': '编程',
     '代码练习': '编程',
@@ -67,7 +78,10 @@ CATEGORY_MAP = {
     '其它': '其他',
     '其他': '其他',
     '影视': '其他',
-    '词典': '词典',
+    '词典': '综合',
+    # Hand-curated candidate bucket (not emitted by this generator, listed
+    # for parity with tools/fix_catalog.py).
+    '精选词书': '综合',
 }
 
 # Per-list overrides for emoji + domainColor + category.
@@ -117,13 +131,51 @@ LIST_META_OVERRIDES = {
     'csharp':          {'category': '编程', 'emoji': '#️⃣', 'color': '#7C2D12'},
 
     # specialty
-    'biomedical-terms':{'category': '专业词汇', 'emoji': '🧬', 'color': '#BE123C'},
+    'biomedical-terms':{'category': '综合', 'emoji': '🧬', 'color': '#BE123C'},
 
     # catch-alls
-    'oxford5000':      {'category': '词典', 'emoji': '📕', 'color': '#475569'},
-    'oxford3000':      {'category': '词典', 'emoji': '📗', 'color': '#64748B'},
-    'longman_communication_3000_words': {'category': '词典', 'emoji': '📙', 'color': '#94A3B8'},
-    'coca_20000':      {'category': '词典', 'emoji': '🗂️', 'color': '#1E293B'},
+    'oxford5000':      {'category': '综合', 'emoji': '📕', 'color': '#475569'},
+    'oxford3000':      {'category': '综合', 'emoji': '📗', 'color': '#64748B'},
+    'longman_communication_3000_words': {'category': '综合', 'emoji': '📙', 'color': '#94A3B8'},
+    'coca_20000':      {'category': '综合', 'emoji': '🗂️', 'color': '#1E293B'},
+}
+
+# Categories dropped wholesale (non-English source content). Mirrors
+# fix_catalog.py's EXCLUDE_CATEGORIES. Applied AFTER category resolution.
+EXCLUDE_CATEGORIES = {'语言'}
+
+# Display-name overrides so duplicate-titled lists stay distinguishable.
+# Keyed on the FINAL codeword id (`qwerty_<slug>`), matching fix_catalog.py.
+NAME_OVERRIDES = {
+    # Essential Words — meaning vs sentence editions.
+    'qwerty_4000_essential_english_words1': 'Essential Words（释义版）',
+    'qwerty_4000_essential_english_words2': 'Essential Words（例句版）',
+    # 高中必修 / 选修 — one entry per publisher, same title upstream.
+    'qwerty_renjiaogaozhong1': '高中必修1（人教版）',
+    'qwerty_renjiaogaozhong2': '高中必修2（人教版）',
+    'qwerty_renjiaogaozhong3': '高中必修3（人教版）',
+    'qwerty_renjiaogaozhong4': '高中必修4（人教版）',
+    'qwerty_renjiaogaozhong5': '高中必修5（人教版）',
+    'qwerty_renjiaogaozhong6': '高中选修6（人教版）',
+    'qwerty_renjiaogaozhong7': '高中选修7（人教版）',
+    'qwerty_renjiaogaozhong8': '高中选修8（人教版）',
+    'qwerty_renjiaogaozhong9': '高中选修9（人教版）',
+    'qwerty_renjiaogaozhong10': '高中选修10（人教版）',
+    'qwerty_renjiaogaozhong11': '高中选修11（人教版）',
+    'qwerty_yilin1': '高中必修1（译林版）',
+    'qwerty_yilin2': '高中必修2（译林版）',
+    'qwerty_yilin3': '高中必修3（译林版）',
+    'qwerty_beishi1': '高中必修1（北师大版）',
+    'qwerty_beishi2': '高中必修2（北师大版）',
+    'qwerty_beishi3': '高中必修3（北师大版）',
+    'qwerty_beishi4': '高中必修4（北师大版）',
+    'qwerty_beishi5': '高中必修5（北师大版）',
+    'qwerty_beishi6': '高中选修6（北师大版）',
+    'qwerty_beishi7': '高中选修7（北师大版）',
+    'qwerty_beishi8': '高中选修8（北师大版）',
+    'qwerty_beishi9': '高中选修9（北师大版）',
+    'qwerty_beishi10': '高中选修10（北师大版）',
+    'qwerty_beishi11': '高中选修11（北师大版）',
 }
 
 
@@ -301,6 +353,18 @@ def main() -> int:
 
             code_meta = build_meta(qw_meta)
             code_meta['id'] = f'qwerty_{slug}'
+
+            # Drop excluded categories (non-English source lists). Release the
+            # reserved slug so it doesn't perturb later collision suffixes.
+            if code_meta['category'] in EXCLUDE_CATEGORIES:
+                used_slugs.discard(slug)
+                print(f"  SKIP (excluded category {code_meta['category']}): {code_meta['id']}")
+                continue
+
+            # Publisher/edition display-name override for duplicate titles.
+            name_override = NAME_OVERRIDES.get(code_meta['id'])
+            if name_override:
+                code_meta['name'] = name_override
 
             code_words = [
                 to_codeword_word(w, slug, i + 1) for i, w in enumerate(words)

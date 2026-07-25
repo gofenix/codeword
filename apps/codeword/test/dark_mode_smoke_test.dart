@@ -161,7 +161,8 @@ void main() {
 
     await tester.tap(find.text('选择目标词并生成'));
     await tester.pumpAndSettle();
-    expect(find.text('选择要在文章中复现的词'), findsOneWidget);
+    expect(find.text('生成阅读'), findsOneWidget);
+    expect(find.text('选择目标词'), findsOneWidget);
     expect(find.text('生成阅读 · 3 词'), findsOneWidget);
   });
 
@@ -197,7 +198,8 @@ void main() {
 
     await tester.tap(find.text('选择目标词并生成'));
     await tester.pumpAndSettle();
-    expect(find.text('选择要在文章中复现的词'), findsOneWidget);
+    expect(find.text('生成阅读'), findsOneWidget);
+    expect(find.text('选择目标词'), findsOneWidget);
     expect(tester.takeException(), isNull);
 
     for (var i = 0; i < 3; i++) {
@@ -209,6 +211,127 @@ void main() {
     }
     expect(find.textContaining('生成阅读 ·'), findsOneWidget);
     expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('immersive reading forge reveals before opening the article', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(393, 852));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    final generation = Completer<ReadingGenerationResult>();
+    final article = SavedArticle(
+      id: 'forge-preview',
+      createdAt: DateTime(2026, 7, 24),
+      title: 'The Queue Beneath the Lantern',
+      articleText:
+          'A cache protected the queue while the team measured latency.',
+      translationText: '缓存保护了队列，同时团队测量了延迟。',
+      level: 'B1',
+      vocabId: kDefaultVocabId,
+      vocabName: 'Coder Core',
+      wordPool: const [
+        {
+          'word': 'cache',
+          'translation': '缓存',
+          'phonetic': '/kæʃ/',
+          'level': 'B1',
+        },
+        {
+          'word': 'latency',
+          'translation': '延迟',
+          'phonetic': '/ˈleɪtənsi/',
+          'level': 'B1',
+        },
+        {
+          'word': 'queue',
+          'translation': '队列',
+          'phonetic': '/kjuː/',
+          'level': 'B1',
+        },
+      ],
+    );
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          llmConfiguredProvider.overrideWithValue(true),
+          qwertyCatalogProvider.overrideWithValue(const []),
+          reviewStateProvider.overrideWith(
+            (ref) => _ReadingSmokeReviewNotifier(),
+          ),
+        ],
+        child: MaterialApp(
+          theme: AppTheme.light(),
+          home: ReadingScreen(generationOverride: (_) => generation.future),
+        ),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.tap(find.text('选择目标词并生成'));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('生成阅读 · 3 词'));
+    await tester.pump();
+    expect(find.text('正在构思自然语境'), findsOneWidget);
+    expect(find.text('开始阅读'), findsNothing);
+
+    generation.complete(ReadingGenerationResult.success(article));
+    await tester.pump(const Duration(milliseconds: 901));
+    await tester.pump(const Duration(milliseconds: 361));
+    await tester.pumpAndSettle();
+
+    expect(find.text('书 成'), findsOneWidget);
+    expect(find.text('The Queue Beneath the Lantern'), findsOneWidget);
+    expect(find.text('开始阅读'), findsOneWidget);
+
+    await tester.tap(find.text('开始阅读'));
+    await tester.pumpAndSettle();
+    expect(find.byType(ArticleDetailScreen), findsOneWidget);
+    expect(find.text('The Queue Beneath the Lantern'), findsOneWidget);
+  });
+
+  testWidgets('immersive forge confirms before cancelling an active request', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(393, 852));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    final generation = Completer<ReadingGenerationResult>();
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          llmConfiguredProvider.overrideWithValue(true),
+          qwertyCatalogProvider.overrideWithValue(const []),
+          reviewStateProvider.overrideWith(
+            (ref) => _ReadingSmokeReviewNotifier(),
+          ),
+        ],
+        child: MaterialApp(
+          theme: AppTheme.light(),
+          home: ReadingScreen(generationOverride: (_) => generation.future),
+        ),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.tap(find.text('选择目标词并生成'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('生成阅读 · 3 词'));
+    await tester.pump();
+
+    await tester.tap(find.byTooltip('关闭'));
+    await tester.pump(const Duration(milliseconds: 300));
+    expect(find.text('停止等待？'), findsOneWidget);
+
+    await tester.tap(find.text('离开'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.text('今日阅读'), findsOneWidget);
+    expect(find.text('停止等待？'), findsNothing);
+
+    generation.complete(const ReadingGenerationResult.cancelled());
+    await tester.pump();
   });
 
   testWidgets('stale word-pool loads cannot overwrite a newer refresh', (

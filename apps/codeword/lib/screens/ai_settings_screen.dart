@@ -139,6 +139,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
     final selected = await showModalBottomSheet<AiProviderPreset>(
       context: context,
       useSafeArea: true,
+      showDragHandle: true,
       isScrollControlled: true,
       builder: (context) => _ProviderSheet(selected: _selectedProvider),
     );
@@ -241,7 +242,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
     if (!_dirty) return true;
     final result = await showDialog<bool>(
       context: context,
-      builder: (dialogContext) => AlertDialog(
+      builder: (dialogContext) => AlertDialog.adaptive(
         title: const Text('放弃未保存的更改？'),
         content: const Text('当前修改尚未验证和保存。'),
         actions: [
@@ -268,7 +269,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
   Future<void> _clearConfiguration() async {
     final confirmed = await showDialog<bool>(
       context: context,
-      builder: (dialogContext) => AlertDialog(
+      builder: (dialogContext) => AlertDialog.adaptive(
         title: const Text('清空 AI 配置？'),
         content: const Text('将移除服务地址、API Key 和模型，本地学习数据不受影响。'),
         actions: [
@@ -308,12 +309,16 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
       },
       child: Scaffold(
         backgroundColor: palette.background,
-        appBar: AppBar(
-          title: Text(
-            'AI 阅读',
-            style: AppTheme.screenHeader(
-              context: context,
-            ).copyWith(fontSize: 20),
+        appBar: GlassAppBar(
+          title: 'AI 阅读',
+          titleStyle: AppTheme.screenHeader(
+            context: context,
+          ).copyWith(fontSize: 20),
+          leading: IconButton(
+            tooltip: '返回',
+            onPressed: () => Navigator.of(context).maybePop(),
+            icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 20),
+            color: AppColors.primary,
           ),
           actions: [
             if (_savedConfig.isConfigured)
@@ -804,26 +809,18 @@ class _ProviderSheet extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(
               AppSpacing.x6,
-              AppSpacing.x5,
-              AppSpacing.x3,
+              AppSpacing.x2,
+              AppSpacing.x6,
               AppSpacing.x3,
             ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    '选择服务商',
-                    style: AppTheme.cardTitle(
-                      context: context,
-                    ).copyWith(fontSize: 20),
-                  ),
-                ),
-                IconButton(
-                  tooltip: '关闭',
-                  onPressed: () => Navigator.pop(context),
-                  icon: const Icon(Icons.close_rounded),
-                ),
-              ],
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                '选择服务商',
+                style: AppTheme.cardTitle(
+                  context: context,
+                ).copyWith(fontSize: 20),
+              ),
             ),
           ),
           Divider(height: 1, color: palette.divider),
