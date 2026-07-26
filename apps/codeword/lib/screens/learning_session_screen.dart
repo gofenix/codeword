@@ -1115,6 +1115,12 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   double _dwellProgress = 0;
   late final Ticker _dwellTicker;
 
+  /// When a flip is triggered by swipe, the next word's audio is spoken
+  /// immediately (in lockstep with the page flying in) instead of waiting
+  /// for the session state to propagate and _onQuestionChanged to fire.
+  /// This flag suppresses the duplicate speak in _onQuestionChanged.
+  bool _swipeSpeakPending = false;
+
   @override
   void initState() {
     super.initState();
@@ -1143,13 +1149,14 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     _controller.value = 0;
     _cardShownAt = DateTime.now();
     _rebuildPages();
-    if (id != null) {
+    if (id != null && !_swipeSpeakPending) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (!mounted) return;
         final text = widget.session.currentQuestion?.word.word;
         if (text != null) TtsService.instance.speak(text: text);
       });
     }
+    _swipeSpeakPending = false;
   }
 
   /// Rebuild cached page widgets — only called when the question changes,
@@ -1236,6 +1243,18 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   void _flipToNext(double velocity) {
     _animating = true;
     HapticFeedback.lightImpact();
+    // Speak the incoming word right away, in lockstep with the page
+    // flying in, instead of waiting for the session state to update
+    // and _onQuestionChanged to fire (which lagged a full animation
+    // duration behind the swipe).
+    final nextQ = widget.session.questions.length >
+            widget.session.currentIndex + 1
+        ? widget.session.questions[widget.session.currentIndex + 1]
+        : null;
+    if (nextQ != null) {
+      TtsService.instance.speak(text: nextQ.word.word);
+      _swipeSpeakPending = true;
+    }
     final dwell = _cardShownAt != null
         ? DateTime.now().difference(_cardShownAt!).inMilliseconds
         : 3000;
