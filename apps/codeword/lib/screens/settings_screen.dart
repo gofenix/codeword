@@ -132,7 +132,7 @@ class _SettingsHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('PREFERENCES', style: AppTheme.sectionLabel(context: context)),
+        Text('偏好设置', style: AppTheme.sectionLabel(context: context)),
         const SizedBox(height: AppSpacing.x3),
         Text(
           '只保留会影响学习体验的配置',

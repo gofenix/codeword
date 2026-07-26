@@ -32,7 +32,7 @@ class VocabWord {
         id: json['id'] as String,
         word: json['word'] as String,
         phonetic: (json['phonetic'] as String?) ?? '',
-        pos: (json['pos'] as String?) ?? 'n.',
+        pos: (json['pos'] as String?) ?? '',
         translation: json['translation'] as String,
         translations: ((json['translations'] as List?) ?? const [])
             .map((e) => e.toString())
@@ -40,7 +40,7 @@ class VocabWord {
         exampleEn: (json['exampleEn'] as String?) ?? '',
         exampleCn: (json['exampleCn'] as String?) ?? '',
         domain: json['domain'] as String,
-        level: (json['level'] as String?) ?? 'B2',
+        level: (json['level'] as String?) ?? '',
         synonyms: ((json['synonyms'] as List?) ?? const [])
             .map((e) => e.toString())
             .toList(),

@@ -905,6 +905,11 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   /// Lets swipe-mode users flip back to the previous word.
   final List<LearningQuestion> _history = [];
 
+  /// Word IDs already scored in this session. Prevents duplicate SM-2
+  /// writes when a swipe-mode user goes back to a previously-answered
+  /// card and swipes forward again — each exposure is scored once.
+  final Set<String> _scoredWordIds = {};
+
   LearningSessionNotifier(this.ref) : super(LearningSessionState.loading());
 
   /// Starts an endless, memory-curve-driven learning queue.
@@ -913,6 +918,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     _activeVocabId = vocabId;
     _refillingForGen = null;
     _history.clear();
+    _scoredWordIds.clear();
     _questionSerial = 0;
     _activeSeconds = 0;
     _lastInteractionAt = DateTime.now();
@@ -1234,12 +1240,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   }
 
   String _normalizedPos(VocabWord word) {
-    final explicit = word.pos.trim().toLowerCase();
-    if (explicit.isNotEmpty) return explicit;
-    final match = RegExp(
-      r'^(n|v|vt|vi|adj|adv|prep|conj|pron)\.',
-    ).firstMatch(word.translation.trim().toLowerCase());
-    return match?.group(0) ?? '';
+    return word.pos.trim().toLowerCase();
   }
 
   String _compactMeaning(String raw) {
@@ -1396,16 +1397,27 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   /// grades SM-2 quality: shorter dwell = better mastery. The UI shows
   /// this judgment to the user (see SwipeView) so it's not a hidden
   /// signal — the user sees "熟悉 / 再看看 / 不熟悉" and can learn from it.
+  ///
+  /// Thresholds are lenient: a normal review pace (reading the word,
+  /// phonetic, and glancing at the example) lands on "good". Only a
+  /// genuinely long pause (struggling to recall) drops to "hard" or
+  /// "again". The word's existing mastery state further calibrates the
+  /// bar — a word you already know can be marked "easy" on a quick
+  /// swipe, but a brand-new word needs more evidence before "easy".
   AnswerQuality answerSwipe({required int dwellMs}) {
     if (state.phase != SessionPhase.asking) return AnswerQuality.good;
     final q = state.currentQuestion;
     if (q == null) return AnswerQuality.good;
+    final reviewState = ref.read(reviewStateProvider)[q.word.id];
+    final isFamiliar = reviewState != null &&
+        (reviewState.repetitions >= 2 || reviewState.easiness >= 230);
+    final easyThreshold = isFamiliar ? 3000 : 5000;
     final AnswerQuality quality;
-    if (dwellMs < 2000) {
+    if (dwellMs < easyThreshold) {
       quality = AnswerQuality.easy;
-    } else if (dwellMs < 5000) {
+    } else if (dwellMs < 8000) {
       quality = AnswerQuality.good;
-    } else if (dwellMs < 10000) {
+    } else if (dwellMs < 18000) {
       quality = AnswerQuality.hard;
     } else {
       quality = AnswerQuality.again;
@@ -1428,13 +1440,30 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
 
   /// Swipe-mode: step back to the previous word. Returns false when there
   /// is no history to go back to (e.g. on the very first card).
+  ///
+  /// The returned question is marked [SessionQuestionSource.retry] so
+  /// re-answering it does not write to SM-2 again — the original swipe
+  /// already scheduled the word. Without this, going back and swiping
+  /// forward would double-count the same exposure and corrupt the
+  /// interval (the same failure mode the retry guard in
+  /// [_recordAnswerWithQuality] prevents for post-wrong retries).
   bool goBack() {
     if (state.phase != SessionPhase.asking) return false;
     if (_history.isEmpty) return false;
     final prev = _history.removeLast();
+    final revisited = LearningQuestion(
+      word: prev.word,
+      type: prev.type,
+      options: prev.options,
+      correctIndex: prev.correctIndex,
+      prompt: prev.prompt,
+      source: SessionQuestionSource.retry,
+      attemptNo: prev.attemptNo + 1,
+      retryOfType: prev.retryOfType,
+    );
     state = LearningSessionState(
       phase: SessionPhase.asking,
-      questions: [prev, ...state.questions],
+      questions: [revisited, ...state.questions],
       currentIndex: 0,
       correctCount: state.correctCount,
     );
@@ -1460,11 +1489,21 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     final q = state.currentQuestion;
     if (q == null) return;
     final correct = quality != AnswerQuality.again;
-    ref
-        .read(reviewStateProvider.notifier)
-        .recordAnswer(wordId: q.word.id, quality: quality.toSm2Quality());
-    _recordActiveStudyTime();
-    unawaited(_eagerFlush());
+    // Each word is scored once per session. Retry questions (same word,
+    // different type, after a wrong answer) and swipe-mode goBack
+    // re-answers must not re-write SM-2 or re-count — the first attempt
+    // already scheduled the word. Retries still count toward the
+    // session correct tally; goBack re-answers count for nothing.
+    final alreadyScored = _scoredWordIds.contains(q.word.id);
+    if (q.source != SessionQuestionSource.retry && !alreadyScored) {
+      _scoredWordIds.add(q.word.id);
+      ref
+          .read(reviewStateProvider.notifier)
+          .recordAnswer(wordId: q.word.id, quality: quality.toSm2Quality());
+      _recordActiveStudyTime();
+      unawaited(_eagerFlush());
+    }
+    final shouldCount = q.source == SessionQuestionSource.retry || !alreadyScored;
     if (correct || !showWrongDetail) {
       // Correct, or swipe mode (which always advances — the quality is
       // recorded for scheduling but never interrupts the browse flow).
@@ -1476,7 +1515,9 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
         questions: state.questions,
         currentIndex: nextIndex,
         correctCount:
-            correct ? state.correctCount + 1 : state.correctCount,
+            correct && shouldCount
+                ? state.correctCount + 1
+                : state.correctCount,
       );
       _compactConsumed();
       unawaited(_ensureBuffer(force: true));

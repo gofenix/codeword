@@ -193,7 +193,7 @@ class _HomeShellState extends ConsumerState<HomeShell>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
+      extendBody: false,
       backgroundColor: AppColors.of(context).background,
       body: DecoratedBox(
         decoration: AppMaterials.canvasDecoration(context),
@@ -211,7 +211,9 @@ class _HomeShellState extends ConsumerState<HomeShell>
   }
 }
 
-/// 5-tab bottom navigation with iOS-style frosted glass effect.
+/// 5-tab bottom navigation styled to read as a system Tab Bar:
+/// full-width, standard height, no floating glass pill, no clamped
+/// text scaling (so Dynamic Type can reach ~200%).
 class _PhoneBottomNav extends StatelessWidget {
   final int index;
   final ValueChanged<int> onTap;
@@ -220,71 +222,37 @@ class _PhoneBottomNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(
-        AppSpacing.x3,
-        0,
-        AppSpacing.x3,
-        AppSpacing.x2,
-      ),
-      child: AppGlassSurface(
-        borderRadius: BorderRadius.circular(AppRadii.xxl),
-        child: SafeArea(
-          top: false,
-          minimum: const EdgeInsets.symmetric(horizontal: 4),
-          child: MediaQuery.withClampedTextScaling(
-            minScaleFactor: 1,
-            maxScaleFactor: 1.3,
-            child: NavigationBar(
-              selectedIndex: index,
-              onDestinationSelected: onTap,
-              backgroundColor: Colors.transparent,
-              // Subtle bronze-tinted pill behind the active destination so
-              // selection reads as a spatial shift, not just a colour change
-              // (§1 — response; §8 — hint the state). Kept faint so it
-              // doesn't muddy the liquid-glass bar.
-              indicatorColor: AppColors.primary.withValues(alpha: 0.12),
-              surfaceTintColor: Colors.transparent,
-              elevation: 0,
-              height: 60,
-              labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-              destinations: const [
-                NavigationDestination(
-                  icon: Icon(Icons.style_outlined),
-                  selectedIcon: Icon(Icons.style, color: AppColors.primary),
-                  label: '单词',
-                ),
-                NavigationDestination(
-                  icon: Icon(Icons.menu_book_outlined),
-                  selectedIcon: Icon(Icons.menu_book, color: AppColors.primary),
-                  label: '阅读',
-                ),
-                NavigationDestination(
-                  icon: Icon(Icons.insert_chart_outlined),
-                  selectedIcon: Icon(
-                    Icons.insert_chart,
-                    color: AppColors.primary,
-                  ),
-                  label: '图表',
-                ),
-                NavigationDestination(
-                  icon: Icon(Icons.library_books_outlined),
-                  selectedIcon: Icon(
-                    Icons.library_books,
-                    color: AppColors.primary,
-                  ),
-                  label: '词书',
-                ),
-                NavigationDestination(
-                  icon: Icon(Icons.settings_outlined),
-                  selectedIcon: Icon(Icons.settings, color: AppColors.primary),
-                  label: '设置',
-                ),
-              ],
-            ),
-          ),
+    return NavigationBar(
+      selectedIndex: index,
+      onDestinationSelected: onTap,
+      labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+      destinations: const [
+        NavigationDestination(
+          icon: Icon(Icons.style_outlined),
+          selectedIcon: Icon(Icons.style),
+          label: '单词',
         ),
-      ),
+        NavigationDestination(
+          icon: Icon(Icons.menu_book_outlined),
+          selectedIcon: Icon(Icons.menu_book),
+          label: '阅读',
+        ),
+        NavigationDestination(
+          icon: Icon(Icons.insert_chart_outlined),
+          selectedIcon: Icon(Icons.insert_chart),
+          label: '图表',
+        ),
+        NavigationDestination(
+          icon: Icon(Icons.library_books_outlined),
+          selectedIcon: Icon(Icons.library_books),
+          label: '词书',
+        ),
+        NavigationDestination(
+          icon: Icon(Icons.settings_outlined),
+          selectedIcon: Icon(Icons.settings),
+          label: '设置',
+        ),
+      ],
     );
   }
 }
@@ -341,16 +309,13 @@ class _TodayPageState extends ConsumerState<TodayPage> {
     final reduceMotion =
         MediaQuery.maybeOf(context)?.disableAnimations ?? false;
 
-    return MediaQuery.withClampedTextScaling(
-      minScaleFactor: 1,
-      maxScaleFactor: 1.3,
-      child: SafeArea(
-        child: Column(
-          children: [
-            if (!ReviewRepository.isReady) ...[
-              const _PersistenceWarning(),
-              const SizedBox(height: AppSpacing.x2),
-            ],
+    return SafeArea(
+      child: Column(
+        children: [
+          if (!ReviewRepository.isReady) ...[
+            const _PersistenceWarning(),
+            const SizedBox(height: AppSpacing.x2),
+          ],
             Expanded(
               child: Stack(
                 // Full-size constraints so shrink-wrapping phase views
@@ -412,8 +377,7 @@ class _TodayPageState extends ConsumerState<TodayPage> {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }
 

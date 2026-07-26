@@ -70,10 +70,7 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
       backgroundColor: AppColors.of(context).background,
       body: DecoratedBox(
         decoration: AppMaterials.canvasDecoration(context),
-        child: MediaQuery.withClampedTextScaling(
-          minScaleFactor: 1,
-          maxScaleFactor: 1.3,
-          child: SafeArea(
+        child: SafeArea(
             child: Stack(
               // Full-size constraints so shrink-wrapping phase views
               // (loading spinner, swipe pager, empty state) stay
@@ -128,7 +125,6 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
             ),
           ),
         ),
-      ),
     );
   }
 }
@@ -304,55 +300,66 @@ class _AskingViewState extends ConsumerState<AskingView> {
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
         child: Column(
           children: [
+            // Same vertical rhythm as the choice questions: prompt band
+            // sits at 3/13 from the top so switching between typing and
+            // picking never moves the prompt.
+            const Spacer(flex: 3),
             Expanded(
-              child: Center(
-                child: _QuestionStage(
-                  type: q.type,
-                  prompt: q.prompt,
-                  word: q.word,
+              flex: 4,
+              child: SingleChildScrollView(
+                child: Center(
+                  child: _QuestionStage(
+                    type: q.type,
+                    prompt: q.prompt,
+                    word: q.word,
+                  ),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(
-                bottom: AppSpacing.x6 + MediaQuery.of(context).padding.bottom,
-              ),
-              child: Column(
-                children: [
-                  TextField(
-                    controller: _typingController,
-                    autofocus: true,
-                    enabled: !_locked,
-                    textAlign: TextAlign.center,
-                    textInputAction: TextInputAction.done,
-                    autocorrect: false,
-                    enableSuggestions: false,
-                    onSubmitted: (_) => _submitTyped(),
-                    decoration: InputDecoration(
-                      hintText: '输入英文单词',
-                      prefixIcon: const Icon(Icons.keyboard_rounded),
-                      suffixIcon: _typedCorrect == null
-                          ? null
-                          : Icon(
-                              _typedCorrect!
-                                  ? Icons.check_circle_rounded
-                                  : Icons.cancel_rounded,
-                              color: _typedCorrect!
-                                  ? AppColors.success
-                                  : AppColors.danger,
-                            ),
+            Expanded(
+              flex: 6,
+              child: Padding(
+                padding: EdgeInsets.only(
+                  bottom: AppSpacing.x6 + MediaQuery.of(context).padding.bottom,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextField(
+                      controller: _typingController,
+                      autofocus: true,
+                      enabled: !_locked,
+                      textAlign: TextAlign.center,
+                      textInputAction: TextInputAction.done,
+                      autocorrect: false,
+                      enableSuggestions: false,
+                      onSubmitted: (_) => _submitTyped(),
+                      decoration: InputDecoration(
+                        hintText: '输入英文单词',
+                        prefixIcon: const Icon(Icons.keyboard_rounded),
+                        suffixIcon: _typedCorrect == null
+                            ? null
+                            : Icon(
+                                _typedCorrect!
+                                    ? Icons.check_circle_rounded
+                                    : Icons.cancel_rounded,
+                                color: _typedCorrect!
+                                    ? AppColors.success
+                                    : AppColors.danger,
+                              ),
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: AppSpacing.x3),
-                  SizedBox(
-                    width: double.infinity,
-                    child: EditorialPrimaryButton(
-                      onPressed: _locked ? null : _submitTyped,
-                      minHeight: 52,
-                      label: const Text('确认'),
+                    const SizedBox(height: AppSpacing.x3),
+                    SizedBox(
+                      width: double.infinity,
+                      child: EditorialPrimaryButton(
+                        onPressed: _locked ? null : _submitTyped,
+                        minHeight: 52,
+                        label: const Text('确认'),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],
@@ -363,20 +370,32 @@ class _AskingViewState extends ConsumerState<AskingView> {
       padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
       child: Column(
         children: [
+          // Mirror the swipe page's vertical rhythm: the word hero sits
+          // at ~35% from the top (Spacer flex 3 of 7) so switching modes
+          // doesn't make the word jump.
+          const Spacer(flex: 3),
           // The word / meaning — the only thing the user should look at.
+          // Expanded (not Flexible) locks this region to a fixed 4/13 of
+          // the viewport so the option list below never shifts up when a
+          // shorter prompt (e.g. a meaning) takes less vertical space.
+          // Center keeps the prompt vertically centred inside that fixed
+          // band, so question types with different intrinsic heights share
+          // one stable visual anchor.
           Expanded(
-            flex: 5,
-            child: Center(
-              child: _QuestionStage(
-                type: q.type,
-                prompt: q.prompt,
-                word: q.word,
+            flex: 4,
+            child: SingleChildScrollView(
+              child: Center(
+                child: _QuestionStage(
+                  type: q.type,
+                  prompt: q.prompt,
+                  word: q.word,
+                ),
               ),
             ),
           ),
           // Options sit right below, no gap.
-          Flexible(
-            flex: 5,
+          Expanded(
+            flex: 6,
             child: Padding(
               padding: EdgeInsets.only(
                 bottom: AppSpacing.x6 + MediaQuery.of(context).padding.bottom,
@@ -479,13 +498,34 @@ class _WrongDetailViewState extends ConsumerState<WrongDetailView> {
   Future<void> _markRemoved() async {
     final q = widget.session.currentQuestion;
     if (q == null) return;
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('移除该词？'),
+        content: Text(
+          '「${q.word.word}」将不再出现在学习队列中，可在设置中恢复。',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext, false),
+            child: const Text('取消'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext, true),
+            child: Text(
+              '移除',
+              style: TextStyle(color: AppColors.danger),
+            ),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true || !mounted) return;
     final wordId = q.word.id;
     try {
       await ReviewRepository.instance.markRemoved(wordId);
     } catch (_) {}
     if (mounted) {
-      // Quiet acknowledgment. The user just removed a word — no need
-      // to explain what 'removed' means in the toast.
       ref.read(learningSessionProvider.notifier).next(skipRetry: true);
     }
   }
@@ -500,6 +540,11 @@ class _WrongDetailViewState extends ConsumerState<WrongDetailView> {
     }
     final w = q.word;
     final hasExample = w.exampleEn.trim().isNotEmpty;
+    // Match the quiz-mode word hero exactly (see [_WordStage]) so the
+    // word does not visibly shrink when a wrong answer flips the phase
+    // from asking → wrongDetail on the same word.
+    final wordSize = fitFontSize(w.word, 56);
+    final phoneticSize = (wordSize * 0.28).clamp(12.0, 16.0);
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
@@ -528,7 +573,7 @@ class _WrongDetailViewState extends ConsumerState<WrongDetailView> {
                                   maxLines: 1,
                                   softWrap: false,
                                   style: AppTheme.wordDisplay(
-                                    size: 40,
+                                    size: wordSize,
                                     weight: FontWeight.w700,
                                     context: context,
                                   ),
@@ -537,9 +582,11 @@ class _WrongDetailViewState extends ConsumerState<WrongDetailView> {
                             ),
                             const SizedBox(height: AppSpacing.x2),
                             Text(
-                              '${w.phonetic}  ${w.pos}',
+                              [w.phonetic, w.pos]
+                                  .where((e) => e.trim().isNotEmpty)
+                                  .join('  ·  '),
                               style: AppTheme.phonetic(
-                                fontSize: 15,
+                                fontSize: phoneticSize,
                                 context: context,
                               ),
                             ),
@@ -555,6 +602,15 @@ class _WrongDetailViewState extends ConsumerState<WrongDetailView> {
                               color: AppColors.primary,
                             ),
                             const SizedBox(height: AppSpacing.x6),
+                            Text(
+                              '正确答案',
+                              style: AppTheme.mutedCaption(
+                                size: 12,
+                                color: AppColors.success,
+                                context: context,
+                              ).copyWith(letterSpacing: 1),
+                            ),
+                            const SizedBox(height: AppSpacing.x2),
                             Text(
                               w.translation,
                               textAlign: TextAlign.center,
@@ -1185,7 +1241,10 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   void _onDwellTick(Duration elapsed) {
     if (!mounted || _cardShownAt == null) return;
     final ms = DateTime.now().difference(_cardShownAt!).inMilliseconds;
-    final p = (ms / 15000).clamp(0.0, 1.0);
+    // Match the grading window in LearningSessionNotifier.answerSwipe:
+    // the bar reaches full at the hard→again boundary (18s) so the
+    // visual fill and the quality judgment stay in lockstep.
+    final p = (ms / 18000).clamp(0.0, 1.0);
     if (p != _dwellProgress) {
       _dwellProgress = p;
       _rebuildPages();
@@ -1389,35 +1448,42 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     final nextPage = _nextPage;
     final prevPage = _prevPage;
 
-    return SizedBox.expand(
-      child: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onVerticalDragUpdate: _onVerticalDragUpdate,
-        onVerticalDragEnd: _onVerticalDragEnd,
-        child: AnimatedBuilder(
-          animation: _controller,
-          builder: (context, child) {
-            return Stack(
-              fit: StackFit.expand,
-              children: [
-                if (prevPage != null)
-                  Transform.translate(
-                    offset: offset - Offset(0, screenH),
-                    child: prevPage,
-                  ),
-                if (nextPage != null)
-                  Transform.translate(
-                    offset: offset + Offset(0, screenH),
-                    child: nextPage,
-                  ),
-                if (currentPage != null)
-                  Transform.translate(
-                    offset: offset,
-                    child: currentPage,
-                  ),
-              ],
-            );
-          },
+    return Semantics(
+      label: '单词卡片，上下滑动切换',
+      onIncrease: () => _submitSwipe(dwellMs: 5000),
+      onDecrease: ref.read(learningSessionProvider.notifier).canGoBack
+          ? () => ref.read(learningSessionProvider.notifier).goBack()
+          : null,
+      child: SizedBox.expand(
+        child: GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onVerticalDragUpdate: _onVerticalDragUpdate,
+          onVerticalDragEnd: _onVerticalDragEnd,
+          child: AnimatedBuilder(
+            animation: _controller,
+            builder: (context, child) {
+              return Stack(
+                fit: StackFit.expand,
+                children: [
+                  if (prevPage != null)
+                    Transform.translate(
+                      offset: offset - Offset(0, screenH),
+                      child: prevPage,
+                    ),
+                  if (nextPage != null)
+                    Transform.translate(
+                      offset: offset + Offset(0, screenH),
+                      child: nextPage,
+                    ),
+                  if (currentPage != null)
+                    Transform.translate(
+                      offset: offset,
+                      child: currentPage,
+                    ),
+                ],
+              );
+            },
+          ),
         ),
       ),
     );
@@ -1443,7 +1509,6 @@ class _SwipePage extends ConsumerWidget {
     final phoneticSize = (wordSize * 0.28).clamp(12.0, 16.0);
     final reviewState = ref.watch(reviewStateProvider)[word.id];
     final hasExample = word.exampleEn.trim().isNotEmpty;
-    final hasLevel = word.level.trim().isNotEmpty;
 
     return SafeArea(
       child: Padding(
@@ -1496,12 +1561,13 @@ class _SwipePage extends ConsumerWidget {
               size: 20,
               color: AppColors.primary,
             ),
-            if (word.pos.trim().isNotEmpty || hasLevel) ...[
+            // Only show part-of-speech when present. `level` is never
+            // real per-word CEFR data (uniform placeholder or empty),
+            // so it is hidden to avoid displaying fake grades.
+            if (word.pos.trim().isNotEmpty) ...[
               const SizedBox(height: AppSpacing.x2),
               Text(
-                [word.pos, word.level]
-                    .where((e) => e.trim().isNotEmpty)
-                    .join('  ·  '),
+                word.pos,
                 style: AppTheme.mutedCaption(
                   size: 13,
                   color: palette.inkMuted,
@@ -1557,7 +1623,7 @@ class _ExampleCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           PillTag(
-            label: 'example',
+            label: '例句',
             color: palette.inkMuted,
             padding: const EdgeInsets.symmetric(
               horizontal: AppSpacing.x2,
@@ -1619,11 +1685,11 @@ class _ExampleCard extends StatelessWidget {
 }
 
 /// A thin, full-width accent line at the bottom of the swipe page.
-/// The fill starts at the word's baseline mastery (a familiar word
-/// begins nearly full, a new word begins near empty) and slowly
-/// fills the remaining space as dwell time accumulates — so the
-/// bar communicates both "how well you knew this" and "how long
-/// you've studied it" without ever feeling tense.
+/// Shows the word's existing SM-2 mastery only — a familiar word
+/// begins nearly full, a new word begins near empty. Dwell time is
+/// used for scoring but deliberately NOT shown here, so the bar's
+/// direction (more = better) never contradicts the scoring logic
+/// (longer dwell = worse).
 class _MasteryIndicator extends StatelessWidget {
   final ReviewState? reviewState;
   final double dwellProgress;
@@ -1636,17 +1702,44 @@ class _MasteryIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final color = _classify(reviewState);
-    final base = _baseline(reviewState);
-    final value = (base + dwellProgress * (1 - base)).clamp(0.0, 1.0);
-    return SizedBox(
-      width: double.infinity,
-      child: LinearProgressIndicator(
-        value: value,
-        minHeight: 2,
-        backgroundColor: color.withValues(alpha: 0.08),
-        valueColor: AlwaysStoppedAnimation<Color>(color),
+    final value = _baseline(reviewState);
+    final label = _label(reviewState);
+    return Semantics(
+      label: '掌握程度：$label',
+      value: '${(value * 100).round()}%',
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            label,
+            style: AppTheme.mutedCaption(
+              size: 11,
+              color: color,
+              context: context,
+            ).copyWith(fontWeight: FontWeight.w600, letterSpacing: 0.5),
+          ),
+          const SizedBox(height: AppSpacing.x1),
+          SizedBox(
+            width: double.infinity,
+            child: LinearProgressIndicator(
+              value: value,
+              minHeight: 2,
+              backgroundColor: color.withValues(alpha: 0.08),
+              valueColor: AlwaysStoppedAnimation<Color>(color),
+            ),
+          ),
+        ],
       ),
     );
+  }
+
+  String _label(ReviewState? s) {
+    if (s == null) return '待学习';
+    final ef = s.easiness / 100.0;
+    if (s.repetitions == 0) return '陌生';
+    if (ef >= 2.5 && s.repetitions >= 3) return '熟悉';
+    if (ef >= 2.3 && s.repetitions >= 2) return '认识';
+    return '模糊';
   }
 
   /// Baseline fill from the existing SM-2 state, before any dwell

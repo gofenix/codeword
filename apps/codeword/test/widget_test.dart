@@ -258,7 +258,7 @@ void main() {
     await tester.tap(find.text('设置'));
     await tester.pump();
     expect(find.byType(SettingsScreen), findsOneWidget);
-    expect(find.text('PREFERENCES'), findsOneWidget);
+    expect(find.text('偏好设置'), findsOneWidget);
     final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
     expect(stack.index, 4);
   });
@@ -2743,14 +2743,14 @@ void main() {
       await tester.pump();
 
       await tester.tap(find.text('皮肤，真皮'));
-      await tester.pump(const Duration(milliseconds: 400));
+      await tester.pump(const Duration(milliseconds: 800));
       expect(find.text('cache'), findsOneWidget);
 
       await tester.tap(find.text('缓存'));
       // The phase change now crossfades (AppMotion.medium). The fade only
-      // starts on the frame *after* the 180ms answer delay fires, so the
-      // outgoing question clears across two frames, not one 400ms pump.
-      await tester.pump(const Duration(milliseconds: 200));
+      // starts on the frame *after* the 500ms answer delay fires, so the
+      // outgoing question clears across two frames.
+      await tester.pump(const Duration(milliseconds: 500));
       await tester.pump(const Duration(milliseconds: 300));
 
       expect(tester.takeException(), isNull);
@@ -2780,7 +2780,7 @@ void main() {
       await tester.tap(find.text('皮肤，真皮'));
       notifier.replaceWithCacheQuestion();
       await tester.pump();
-      await tester.pump(const Duration(milliseconds: 400));
+      await tester.pump(const Duration(milliseconds: 600));
 
       expect(notifier.state.currentQuestion?.word.word, 'cache');
       expect(notifier.state.correctCount, 0);

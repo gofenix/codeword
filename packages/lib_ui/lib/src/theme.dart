@@ -162,9 +162,9 @@ class AppTheme {
         ),
       ),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: Colors.transparent,
-        surfaceTintColor: Colors.transparent,
-        indicatorColor: Colors.transparent,
+        backgroundColor: AppColors.surface,
+        surfaceTintColor: AppColors.surface,
+        indicatorColor: AppColors.primary.withValues(alpha: 0.12),
         elevation: 0,
         labelTextStyle: WidgetStatePropertyAll(
           TextStyle(
@@ -325,9 +325,9 @@ class AppTheme {
         ),
       ),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: Colors.transparent,
-        surfaceTintColor: Colors.transparent,
-        indicatorColor: Colors.transparent,
+        backgroundColor: AppColors.surfaceDark,
+        surfaceTintColor: AppColors.surfaceDark,
+        indicatorColor: AppColors.primary.withValues(alpha: 0.18),
         elevation: 0,
         labelTextStyle: WidgetStatePropertyAll(
           TextStyle(

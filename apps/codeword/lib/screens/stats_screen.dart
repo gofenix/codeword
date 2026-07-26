@@ -72,7 +72,7 @@ class _StatsScreenState extends ConsumerState<StatsScreen> {
         SliverList.list(
           children: [
             Text(
-              'LEARNING LEDGER',
+              '学习统计',
               key: const ValueKey('stats-first-content'),
               style: AppTheme.sectionLabel(context: context),
             ),

@@ -48,7 +48,7 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
         SliverList.list(
           children: [
             Text(
-              'CURRENT COLLECTION',
+              '当前词书',
               key: const ValueKey('library-first-content'),
               style: AppTheme.sectionLabel(context: context),
             ),

@@ -776,8 +776,6 @@ class _ReadingHistoryList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('READING ARCHIVE', style: AppTheme.sectionLabel(context: context)),
-        const SizedBox(height: AppSpacing.x2),
         Text('阅读记录', style: AppTheme.cardTitle(context: context)),
         const SizedBox(height: AppSpacing.x4),
         if (articles.isEmpty)
