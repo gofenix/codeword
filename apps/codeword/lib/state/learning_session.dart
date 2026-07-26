@@ -901,6 +901,10 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   /// Full owning-vocabulary pools for mixed cross-book review questions.
   final Map<String, List<VocabWord>> _vocabPools = {};
 
+  /// Questions consumed by [_compactConsumed], most-recently-seen last.
+  /// Lets swipe-mode users flip back to the previous word.
+  final List<LearningQuestion> _history = [];
+
   LearningSessionNotifier(this.ref) : super(LearningSessionState.loading());
 
   /// Starts an endless, memory-curve-driven learning queue.
@@ -908,6 +912,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     final gen = ++_startGen;
     _activeVocabId = vocabId;
     _refillingForGen = null;
+    _history.clear();
     _questionSerial = 0;
     _activeSeconds = 0;
     _lastInteractionAt = DateTime.now();
@@ -1063,7 +1068,9 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     if (state.currentIndex == 0 || state.phase == SessionPhase.wrongDetail) {
       return;
     }
+    final consumed = state.questions.sublist(0, state.currentIndex);
     final remaining = state.questions.sublist(state.currentIndex);
+    _history.addAll(consumed);
     state = LearningSessionState(
       phase: remaining.isEmpty ? SessionPhase.loading : state.phase,
       questions: remaining,
@@ -1409,6 +1416,29 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       showWrongDetail: false,
     );
     return quality;
+  }
+
+  /// Whether [goBack] has a previous word to return to.
+  bool get canGoBack =>
+      state.phase == SessionPhase.asking && _history.isNotEmpty;
+
+  /// The question that [goBack] would return to, or null.
+  LearningQuestion? get previousQuestion =>
+      _history.isNotEmpty ? _history.last : null;
+
+  /// Swipe-mode: step back to the previous word. Returns false when there
+  /// is no history to go back to (e.g. on the very first card).
+  bool goBack() {
+    if (state.phase != SessionPhase.asking) return false;
+    if (_history.isEmpty) return false;
+    final prev = _history.removeLast();
+    state = LearningSessionState(
+      phase: SessionPhase.asking,
+      questions: [prev, ...state.questions],
+      currentIndex: 0,
+      correctCount: state.correctCount,
+    );
+    return true;
   }
 
   void _recordAnswer({required bool correct, required int? selectedIndex}) {

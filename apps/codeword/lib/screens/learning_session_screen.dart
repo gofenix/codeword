@@ -1109,6 +1109,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   /// transform instead of rebuilding the entire subtree (§11).
   Widget? _currentPage;
   Widget? _nextPage;
+  Widget? _prevPage;
 
   /// Real-time dwell progress (0.0 → 1.0 over 15s) driving the bottom
   /// mastery bar so the user sees the card "filling up" as they study.
@@ -1167,11 +1168,15 @@ class _SwipeViewState extends ConsumerState<SwipeView>
             widget.session.currentIndex + 1
         ? widget.session.questions[widget.session.currentIndex + 1]
         : null;
+    final prevQ = ref.read(learningSessionProvider.notifier).previousQuestion;
     _currentPage = q != null
         ? _SwipePage(word: q.word, dwellProgress: _dwellProgress)
         : null;
     _nextPage = nextQ != null
         ? _SwipePage(word: nextQ.word, dwellProgress: 0)
+        : null;
+    _prevPage = prevQ != null
+        ? _SwipePage(word: prevQ.word, dwellProgress: 0)
         : null;
   }
 
@@ -1216,10 +1221,12 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     final screenH = MediaQuery.of(context).size.height;
     // Accumulate the true finger position, then apply rubber-band only
     // for display — never feed the rubber-banded value back into the
-    // accumulator (§9).
+    // accumulator (§9). Rubber-band on the downward edge only when
+    // there is no previous word to flip back to.
     _rawDragDy += d.delta.dy;
     var display = _rawDragDy;
-    if (display > 0) {
+    if (display > 0 &&
+        !ref.read(learningSessionProvider.notifier).canGoBack) {
       display = _rubberBand(display, screenH);
     }
     setState(() => _dragDy = display);
@@ -1232,9 +1239,14 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     // Project where the page would land if the finger kept moving,
     // using Apple's exponential-decay flick projection (§6).
     final projected = _dragDy + AppMotion.projectMomentum(velocity);
-    // Only swiping UP (negative dy) flips to the next word.
+    final canGoBack = ref.read(learningSessionProvider.notifier).canGoBack;
+    // Swiping UP (negative dy) flips to the next word.
     if (projected < -screenH * _flipThreshold || velocity < -_flickVelocity) {
       _flipToNext(velocity);
+    } else if (canGoBack &&
+        (projected > screenH * _flipThreshold || velocity > _flickVelocity)) {
+      // Swiping DOWN past the threshold flips back to the previous word.
+      _flipToPrev(velocity);
     } else {
       _springBack(velocity);
     }
@@ -1289,6 +1301,44 @@ class _SwipeViewState extends ConsumerState<SwipeView>
         });
   }
 
+  void _flipToPrev(double velocity) {
+    _animating = true;
+    HapticFeedback.lightImpact();
+    // Speak the word we're returning to, in lockstep with it flying
+    // down from the top of the screen.
+    final prevQ = ref.read(learningSessionProvider.notifier).previousQuestion;
+    if (prevQ != null) {
+      TtsService.instance.speak(text: prevQ.word.word);
+      _swipeSpeakPending = true;
+    }
+    final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    if (reduceMotion) {
+      ref.read(learningSessionProvider.notifier).goBack();
+      _animating = false;
+      _anim = null;
+      return;
+    }
+    final screenH = MediaQuery.of(context).size.height;
+    final begin = _dragDy;
+    final end = screenH;
+    _anim = Tween<Offset>(
+      begin: Offset(0, begin),
+      end: Offset(0, end),
+    ).animate(_controller);
+    final distance = end - begin;
+    final relVelocity = distance != 0 ? velocity / distance : 0.0;
+    _controller
+        .animateWith(
+          SpringSimulation(AppMotion.springDefault(), 0, 1, relVelocity),
+        )
+        .then((_) {
+          if (!mounted) return;
+          ref.read(learningSessionProvider.notifier).goBack();
+          _animating = false;
+          _anim = null;
+        });
+  }
+
   void _springBack(double velocity) {
     _animating = true;
     final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
@@ -1337,6 +1387,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     final offset = _anim?.value ?? Offset(0, _dragDy);
     final currentPage = _currentPage;
     final nextPage = _nextPage;
+    final prevPage = _prevPage;
 
     return SizedBox.expand(
       child: GestureDetector(
@@ -1349,6 +1400,11 @@ class _SwipeViewState extends ConsumerState<SwipeView>
             return Stack(
               fit: StackFit.expand,
               children: [
+                if (prevPage != null)
+                  Transform.translate(
+                    offset: offset - Offset(0, screenH),
+                    child: prevPage,
+                  ),
                 if (nextPage != null)
                   Transform.translate(
                     offset: offset + Offset(0, screenH),
