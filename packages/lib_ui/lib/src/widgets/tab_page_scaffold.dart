@@ -58,11 +58,10 @@ class TabPageScaffold extends StatelessWidget {
       extendBodyBehindAppBar: true,
       appBar: GlassAppBar(
         title: title,
-        titleStyle: TextStyle(
-          fontSize: 22,
-          fontWeight: FontWeight.w700,
-          color: AppColors.of(context).ink,
-        ),
+        // Use the frosted bar's default compact iOS title (17px / w600
+        // centered). The tabs previously overrode this with a heavy 22px
+        // band which, stacked on the status-bar inset and bar height, made
+        // the top chrome feel oversized for two-character labels like "阅读".
         actions: trailing == null ? null : [trailing!],
       ),
       body: DecoratedBox(
@@ -88,7 +87,9 @@ class TabPageScaffold extends StatelessWidget {
                       AppSpacing.x6,
                       insets.top + AppSpacing.x4,
                       AppSpacing.x6,
-                      insets.bottom + AppSpacing.x8,
+                      insets.bottom +
+                          AppSpacing.x8 +
+                          AppSpacing.floatingNavClearance,
                     ),
                     sliver: SliverMainAxisGroup(slivers: slivers),
                   ),

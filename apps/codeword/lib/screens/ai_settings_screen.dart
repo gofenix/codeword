@@ -311,9 +311,6 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
         backgroundColor: palette.background,
         appBar: GlassAppBar(
           title: 'AI 阅读',
-          titleStyle: AppTheme.screenHeader(
-            context: context,
-          ).copyWith(fontSize: 20),
           leading: IconButton(
             tooltip: '返回',
             onPressed: () => Navigator.of(context).maybePop(),
@@ -324,7 +321,10 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
             if (_savedConfig.isConfigured)
               PopupMenuButton<String>(
                 tooltip: '更多',
-                icon: const Icon(Icons.more_vert_rounded),
+                icon: const Icon(
+                  Icons.more_vert_rounded,
+                  color: AppColors.primary,
+                ),
                 onSelected: (value) {
                   if (value == 'clear') _clearConfiguration();
                 },
@@ -412,8 +412,7 @@ class _AiSettingsScreenState extends ConsumerState<AiSettingsScreen> {
                         suffixIcon: const Icon(Icons.edit_outlined, size: 19),
                         errorText: _modelError,
                       ),
-                      const SizedBox(height: AppSpacing.x6),
-                      Divider(color: palette.divider, height: 1),
+                      const SizedBox(height: AppSpacing.x8),
                       _AdvancedSettings(
                         expanded: _advancedExpanded,
                         onToggle: () => setState(
@@ -672,7 +671,7 @@ class _AdvancedSettings extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('高级设置', style: AppTheme.rowTitle(context: context)),
-                      const SizedBox(height: 2),
+                      const SizedBox(height: AppSpacing.x1),
                       Text(
                         'Base URL',
                         style: AppTheme.mutedCaption(
@@ -694,7 +693,9 @@ class _AdvancedSettings extends StatelessWidget {
           ),
         ),
         AnimatedSize(
-          duration: AppMotion.medium,
+          duration: MediaQuery.of(context).disableAnimations
+              ? Duration.zero
+              : AppMotion.medium,
           curve: AppMotion.easeOut,
           alignment: Alignment.topCenter,
           child: expanded
@@ -722,72 +723,61 @@ class _SubmitArea extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final palette = AppColors.of(context);
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        color: palette.background,
-        border: Border(top: BorderSide(color: palette.divider)),
+    // Same floating-glass bottom chrome as the reading composer and the
+    // article detail toolbar — one bottom-chrome treatment app-wide.
+    return GlassBottomBar(
+      margin: const EdgeInsets.fromLTRB(
+        AppSpacing.x6,
+        AppSpacing.x2,
+        AppSpacing.x6,
+        AppSpacing.x2,
       ),
-      child: SafeArea(
-        top: false,
-        minimum: const EdgeInsets.fromLTRB(
-          AppSpacing.x6,
-          AppSpacing.x3,
-          AppSpacing.x6,
-          AppSpacing.x4,
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            if (error != null) ...[
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(
-                    Icons.error_outline,
-                    color: AppColors.danger,
-                    size: 18,
-                  ),
-                  const SizedBox(width: AppSpacing.x2),
-                  Expanded(
-                    child: Text(
-                      error!,
-                      style: AppTheme.mutedCaption(
-                        size: 12,
-                        color: AppColors.danger,
-                      ).copyWith(height: 1.4),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: AppSpacing.x3),
-            ],
-            SizedBox(
-              width: double.infinity,
-              child: FilledButton.icon(
-                key: const ValueKey('ai-verify-save'),
-                onPressed: submitting ? null : onPressed,
-                icon: submitting
-                    ? const SizedBox(
-                        width: 18,
-                        height: 18,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2,
-                          color: AppColors.onPrimary,
-                        ),
-                      )
-                    : const Icon(Icons.verified_user_outlined, size: 19),
-                label: Text(submitting ? '正在验证' : '验证并保存'),
-                style: FilledButton.styleFrom(
-                  minimumSize: const Size.fromHeight(54),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(AppRadii.sm),
+      padding: const EdgeInsets.all(AppSpacing.x2),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (error != null) ...[
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Icon(
+                  Icons.error_outline,
+                  color: AppColors.danger,
+                  size: 18,
+                ),
+                const SizedBox(width: AppSpacing.x2),
+                Expanded(
+                  child: Text(
+                    error!,
+                    style: AppTheme.mutedCaption(
+                      size: 12,
+                      color: AppColors.danger,
+                    ).copyWith(height: 1.4),
                   ),
                 ),
-              ),
+              ],
             ),
+            const SizedBox(height: AppSpacing.x3),
           ],
-        ),
+          SizedBox(
+            width: double.infinity,
+            child: EditorialPrimaryButton(
+              key: const ValueKey('ai-verify-save'),
+              onPressed: submitting ? null : onPressed,
+              icon: submitting
+                  ? const SizedBox(
+                      width: 18,
+                      height: 18,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        color: AppColors.onPrimary,
+                      ),
+                    )
+                  : const Icon(Icons.verified_user_outlined, size: 19),
+              label: Text(submitting ? '正在验证' : '验证并保存'),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -802,10 +792,20 @@ class _ProviderSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     final palette = AppColors.of(context);
     final providers = [...aiProviderPresets, customAiProviderPreset];
-    return FractionallySizedBox(
-      heightFactor: 0.78,
-      child: Column(
+    // DraggableScrollableSheet gives 1:1 drag tracking, rubber-banding at
+    // the edges, and flick-to-dismiss — the fluid-interaction pattern
+    // Apple uses for sheets instead of a fixed-height modal.
+    return DraggableScrollableSheet(
+      initialChildSize: 0.78,
+      minChildSize: 0.4,
+      maxChildSize: 0.95,
+      expand: false,
+      snap: true,
+      snapSizes: const [0.4, 0.78],
+      builder: (context, scrollController) => Column(
         children: [
+          // The system drag handle comes from showDragHandle: true —
+          // drawing a second one here stacked two handles.
           Padding(
             padding: const EdgeInsets.fromLTRB(
               AppSpacing.x6,
@@ -823,16 +823,14 @@ class _ProviderSheet extends StatelessWidget {
               ),
             ),
           ),
-          Divider(height: 1, color: palette.divider),
+          const SizedBox(height: AppSpacing.x2),
           Expanded(
             child: ListView.separated(
+              controller: scrollController,
               padding: const EdgeInsets.symmetric(vertical: AppSpacing.x2),
               itemCount: providers.length,
-              separatorBuilder: (context, index) => Divider(
-                height: 1,
-                indent: AppSpacing.x6,
-                color: palette.divider,
-              ),
+              separatorBuilder: (context, index) =>
+                  const SizedBox(height: AppSpacing.x1),
               itemBuilder: (context, index) {
                 final provider = providers[index];
                 final isSelected = provider.id == selected.id;
@@ -856,7 +854,10 @@ class _ProviderSheet extends StatelessWidget {
                   trailing: isSelected
                       ? const Icon(Icons.check_circle, color: AppColors.primary)
                       : null,
-                  onTap: () => Navigator.pop(context, provider),
+                  onTap: () {
+                    HapticFeedback.selectionClick();
+                    Navigator.pop(context, provider);
+                  },
                 );
               },
             ),

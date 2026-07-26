@@ -39,3 +39,51 @@
 - Light and dark themes explicitly preserve readable system status-bar foregrounds.
 
 final result: passed
+
+---
+
+# Design QA: Apple-design polish pass (65+ findings)
+
+- Scope: highlights, shadows, materials, liquid glass, interaction flows, motion — app-wide.
+- Verification: `flutter analyze` clean on all 4 packages; 118 app tests + 17 lib_ui tests green.
+
+## Root-cause fixes
+
+- AppCard and AppGlassSurface/GlassAppBar now host a transparent Material, so every
+  descendant InkWell (settings rows, book rows, history cards, mastery header, metric
+  switch, reader actions, glass icon buttons) renders a visible ripple instead of
+  painting behind the opaque surface.
+- New tokens close the duplication classes: `sageSoftDark` + `sageContainerOf`,
+  `AppShadows.glass/bronze/hero`, `AppRadii.xxl`, `AppBorders.hairline`, category
+  monogram tints. One blur sigma constant drives all glass chrome.
+- Card radius unified at 12 (AppCard == CardTheme); glass pills at 28.
+
+## Materials & dark mode
+
+- Words correct-answer wash uses `sageContainerOf` (no more pale-green glow in dark).
+- Section labels resolve bronze per-brightness; dark snackbar is inverse; light and
+  dark surface ramps are monotonic and hue-consistent; PillTag soft variant lightens
+  in dark; option-tile success/danger accents lift toward white in dark.
+- Primary CTAs unified to the bronze gradient command surface (确认 / 继续 / 验证并保存 /
+  选择词书); secondary buttons guarantee ≥44px via the new outlined/text button themes.
+- Bottom chrome unified to floating glass (article toolbar, reading composer, AI submit);
+  composer hairline shelf removed; AI provider sheet no longer stacks two drag handles.
+- The large pronunciation control is now a floating glass disc (sanctioned interactive
+  glass); all three 播放发音 call sites share one size/color treatment.
+
+## Motion & interaction
+
+- Session phases (loading → asking → wrongDetail → finished) crossfade with
+  AppMotion.medium + reduced-motion collapse — no more hard cuts in the learning loop.
+- Swipe cards use AppMotion.slow/easeOut, Apple's exponential flick projection, and the
+  under-damped momentum spring for spring-back (replacing elasticOut).
+- Trend bars animate on AppMotion.easeOut; the metric switch lifts its selected segment
+  with AppShadows.sm; quiz options gained a visible pressed state and ≥44px rows;
+  inline target words dip opacity on press; all reader/provider/refresh actions haptic.
+
+## Dead code removed
+
+- `stats_widgets.dart` (six drifted duplicate chart widgets), `QuoteMark`, `MobileFrame`,
+  `FavoriteStar`, and the orphan tokens (`starIdle*`, `bezel`, `desktopWall*`).
+
+final result: passed

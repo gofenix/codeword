@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 /// CodeWord editorial design tokens.
@@ -15,17 +17,11 @@ class AppColors {
   static const Color background = Color(0xFFF4F0E7);
   static const Color surface = Color(0xFFFBF9F3);
   static const Color surfaceMuted = Color(0xFFEEE8DC);
-  // Dark bezel painted around the phone-shaped column when the app
-  // runs in a desktop window. Reads as a phone sitting on a desk.
-  static const Color bezel = Color(0xFF1A1A1F);
-  // Light cream wall behind the phone bezel on desktop.
-  static const Color desktopWall = Color(0xFFE4DED2);
 
   // Dark-mode surfaces
   static const Color backgroundDark = Color(0xFF181714);
   static const Color surfaceDark = Color(0xFF22201C);
   static const Color surfaceMutedDark = Color(0xFF2D2A25);
-  static const Color desktopWallDark = Color(0xFF100F0D);
 
   // Text (light)
   static const Color ink = Color(0xFF20211E);
@@ -44,15 +40,16 @@ class AppColors {
   static const Color divider = Color(0xFFD8D0C2);
   static const Color dividerDark = Color(0xFF484238);
 
-  // Idle state for the favorite star (replaces Colors.amber default).
-  static const Color starIdle = Color(0xFFE5E7EB);
-
   // Accent — muted bronze. Sage remains a distinct semantic learning colour.
   static const Color primary = Color(0xFF806A46);
   static const Color primaryDark = Color(0xFF604D31);
   static const Color primarySoft = Color(0xFFEEE6D8);
   static const Color sage = Color(0xFF65775F);
   static const Color sageSoft = Color(0xFFE5ECE1);
+  // Dark-mode counterpart to [sageSoft]: a muted deep-sage container that
+  // keeps the "correct answer" wash readable on the dark card instead of
+  // glowing like a pale green block. Same role as [primarySoftDark].
+  static const Color sageSoftDark = Color(0xFF3A4636);
   static const Color target = Color(0xFFF2D96B);
   // Tertiary — sage, used for mastery and learning progress.
   static const Color tertiary = sage;
@@ -68,6 +65,12 @@ class AppColors {
   static const Color warning = Color(0xFFC28A2C);
   static const Color danger = Color(0xFFB95745);
   static const Color info = Color(0xFF2563EB);
+
+  // Category monogram tints (library): warm editorial hues that pair
+  // with bronze/sage on the paper surfaces. Rendered as an alpha-0.14
+  // fill under the letter drawn in the full colour.
+  static const Color categoryClay = Color(0xFFB4693A);
+  static const Color categoryGold = Color(0xFFB08A3E);
 
   // 8-color palette for vocab tags & per-vocab progress chips.
   // Used by hash-based coloring across the app, indexed by vocabId/domain.
@@ -109,9 +112,6 @@ class AppColors {
   static const Color masteryUnfamiliar = Color(0xFFEA580C);
   static const Color masteryUnseen = Color(0xFFD1D5DB);
 
-  // Idle star for the dark theme (paired with [starIdle]).
-  static const Color starIdleDark = Color(0xFF3A4042);
-
   // ── Brightness-aware resolution ──────────────────────────────────
   //
   // Widgets historically referenced the light constants directly
@@ -129,7 +129,6 @@ class AppColors {
     surfaceMuted: surfaceMuted,
     background: background,
     divider: divider,
-    starIdle: starIdle,
   );
 
   static const AppPalette _dark = AppPalette(
@@ -140,7 +139,6 @@ class AppColors {
     surfaceMuted: surfaceMutedDark,
     background: backgroundDark,
     divider: dividerDark,
-    starIdle: starIdleDark,
   );
 
   /// Resolve the brightness-dependent surface/text palette for [context].
@@ -173,6 +171,14 @@ class AppColors {
       Theme.of(context).brightness == Brightness.dark
       ? onPrimaryContainerDark
       : primaryDark;
+
+  /// Brightness-aware sage container fill (light: [sageSoft], dark:
+  /// [sageSoftDark]). Use for the "correct answer" / learning-progress
+  /// wash so the pale green never leaks into dark mode.
+  static Color sageContainerOf(BuildContext context) =>
+      Theme.of(context).brightness == Brightness.dark
+      ? sageSoftDark
+      : sageSoft;
 }
 
 /// Brightness-resolved surface/text tokens returned by [AppColors.of].
@@ -187,7 +193,6 @@ class AppPalette {
   final Color surfaceMuted;
   final Color background;
   final Color divider;
-  final Color starIdle;
 
   const AppPalette({
     required this.ink,
@@ -197,7 +202,6 @@ class AppPalette {
     required this.surfaceMuted,
     required this.background,
     required this.divider,
-    required this.starIdle,
   });
 }
 
@@ -209,7 +213,17 @@ class AppRadii {
   static const double md = 12;
   static const double lg = 16;
   static const double xl = 24;
+  // Large glass pills (navigation chrome, floating toolbars).
+  static const double xxl = 28;
   static const double pill = 999;
+}
+
+/// Border-width tokens. The 0.8px "hairline" is the editorial system's
+/// single edge treatment: visible enough to define a paper edge on light
+/// backgrounds, thin enough to read as precision rather than a rule.
+class AppBorders {
+  AppBorders._();
+  static const double hairline = 0.8;
 }
 
 class AppSpacing {
@@ -224,6 +238,17 @@ class AppSpacing {
   static const double x8 = 32;
   static const double x10 = 40;
   static const double x12 = 48;
+
+  /// Height a scrolling content tab must reserve below its last item so
+  /// nothing hides behind the app's *floating* glass bottom nav.
+  ///
+  /// The shell renders the nav with `extendBody: true`, so the body's
+  /// `MediaQuery.padding.bottom` only reports the home-indicator safe-area
+  /// inset — NOT the nav's own row + outer gap that float above it. This is
+  /// that extra clearance: the 60px NavigationBar row plus the 8px outer
+  /// margin the shell wraps it in. Callers add it *on top of*
+  /// `padding.bottom` so the last card always clears the glass.
+  static const double floatingNavClearance = 60 + x2;
 }
 
 class AppShadows {
@@ -277,6 +302,60 @@ class AppShadows {
       offset: Offset(0, -1),
     ),
   ];
+
+  /// Dark-mode paper shadow: a warm-tinted lift so dark cards separate
+  /// from the dark scaffold instead of flattening into it (§12).
+  static const List<BoxShadow> paperDark = [
+    BoxShadow(
+      color: Color(0x663A2E1E),
+      blurRadius: 16,
+      offset: Offset(0, 6),
+    ),
+    BoxShadow(
+      color: Color(0x14FFFFFF),
+      blurRadius: 1,
+      offset: Offset(0, -1),
+    ),
+  ];
+
+  /// Floating glass chrome (navigation bar, floating toolbars): a deeper,
+  /// warm-tinted lift than [paper] so the layer reads as hovering above
+  /// the content it blurs. Dark mode keeps the warm tint (matching the
+  /// editorial palette) rather than falling back to a neutral black shadow.
+  static List<BoxShadow> glass({required bool isDark}) => [
+        BoxShadow(
+          color: isDark ? const Color(0x663A2E1E) : const Color(0x26362D20),
+          blurRadius: 22,
+          offset: const Offset(0, 8),
+        ),
+      ];
+
+  /// Bronze command surface (primary CTA): a colored drop shadow that
+  /// grounds the gradient, plus a white top-edge inner highlight that
+  /// keeps the metal "lit from above" like every other lit surface.
+  static const List<BoxShadow> bronze = [
+    BoxShadow(
+      color: Color(0x3D3A2E1E),
+      blurRadius: 12,
+      offset: Offset(0, 5),
+    ),
+    BoxShadow(
+      color: Color(0x52FFFFFF),
+      blurRadius: 1,
+      offset: Offset(0, -1),
+    ),
+  ];
+
+  /// Hero lift for the single celebratory surface on screen (e.g. the
+  /// forge-reveal card): deeper and warmer than [paper], used on top of
+  /// [paper] so the highlight edge is preserved.
+  static const List<BoxShadow> hero = [
+    BoxShadow(
+      color: Color(0x243A2E1E),
+      blurRadius: 32,
+      offset: Offset(0, 14),
+    ),
+  ];
 }
 
 class AppMaterials {
@@ -293,6 +372,16 @@ class AppMaterials {
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
     colors: [Color(0xFFFFFDF8), Color(0xFFF8F3E9)],
+    stops: [0, 1],
+  );
+
+  /// Dark-mode paper: a subtle warm diagonal shift so dark surfaces read
+  /// as material rather than flat fills (§12 — bigger surfaces should
+  /// read as thicker, with a top highlight catching light).
+  static const LinearGradient paperDark = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Color(0xFF26231E), Color(0xFF1F1D19)],
     stops: [0, 1],
   );
 
@@ -338,6 +427,68 @@ class AppMotion {
   static const Cubic easeInOut = Cubic(0.77, 0, 0.175, 1);
   // iOS-like drawer/sheet curve — cubic-bezier(0.32, 0.72, 0, 1).
   static const Cubic emphasized = Cubic(0.32, 0.72, 0, 1);
+  // Time-reversed mirror of [emphasized] so enter and exit follow the
+  // same path in reverse (§7 — spatial consistency, symmetric easing).
+  static const Cubic emphasizedReverse = Cubic(1, 0, 0.68, 0.28);
+
+  // ── Springs (fluid-interaction motion) ──────────────────────────────
+  //
+  // Springs replace fixed-duration [Duration] + [Cubic] animations for
+  // gesture-driven UI. Unlike a timed tween, a spring:
+  //   * is inherently interruptible — grab the element mid-flight and it
+  //     continues from its current value, no jump;
+  //   * accepts an initial velocity — the finger's release speed is handed
+  //     off so drag → animation has no seam;
+  //   * has no fixed duration — it settles when the physics says so.
+  //
+  // Apple parameterises springs with "damping ratio" + "response"
+  // (Designing Fluid Interfaces, WWDC 2018). We map those to Flutter's
+  // mass/stiffness/damping triplet:
+  //   stiffness = (2π / response)² × mass
+  //   damping   = 2 × dampingRatio × √(mass × stiffness)
+  //
+  // [springDefault] — critically damped (damping ratio 1.0), no overshoot.
+  //   The safe default for most UI: buttons, enter/exit, anything a user
+  //   can tap but not throw.
+  // [springMomentum] — under-damped (damping ratio ~0.8), slight bounce.
+  //   Use ONLY when the gesture itself carried momentum (a flick, a drag
+  //   release). Overshoot on a menu that just faded in feels wrong;
+  //   overshoot on a card you flicked feels right.
+  static const double _springMass = 1.0;
+
+  static SpringDescription springDefault({double response = 0.35}) {
+    final stiffness =
+        (2 * math.pi / response) * (2 * math.pi / response) * _springMass;
+    final damping = 2 * math.sqrt(_springMass * stiffness); // ratio 1.0
+    return SpringDescription(
+      mass: _springMass,
+      stiffness: stiffness,
+      damping: damping,
+    );
+  }
+
+  static SpringDescription springMomentum({double response = 0.35}) {
+    final stiffness =
+        (2 * math.pi / response) * (2 * math.pi / response) * _springMass;
+    final damping = 2 * 0.8 * math.sqrt(_springMass * stiffness); // ratio 0.8
+    return SpringDescription(
+      mass: _springMass,
+      stiffness: stiffness,
+      damping: damping,
+    );
+  }
+
+  // Project a flick's resting position from its release velocity, using
+  // Apple's exponential-decay form (not the textbook v²/2a). decelerationRate
+  // ≈ 0.998 for normal scroll feel; 0.99 for snappier.
+  static double projectMomentum(
+    double velocityPxPerSecond, {
+    double decelerationRate = 0.998,
+  }) {
+    return (velocityPxPerSecond / 1000) *
+        decelerationRate /
+        (1 - decelerationRate);
+  }
 
   // Press feedback: 100-160ms. Snappy confirmation the tap was heard.
   static const Duration press = Duration(milliseconds: 140);

@@ -12,6 +12,12 @@ import 'pressable_scale.dart';
 /// The container is `antiAlias`-clipped to its rounded border so any
 /// child content (images, colored rows, etc.) that exceeds the corners
 /// is properly masked instead of bleeding outside the rounded radius.
+///
+/// A transparent [Material] sits between the decoration and [child] so
+/// descendant [InkWell]s (settings rows, list rows, segmented controls)
+/// paint their ripple *on the card* instead of on a distant ancestor
+/// Material behind the card's opaque paper fill — where it would be
+/// invisible.
 class AppCard extends StatelessWidget {
   final Widget child;
   final EdgeInsets padding;
@@ -33,32 +39,35 @@ class AppCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final palette = AppColors.of(context);
-    final usePaperMaterial = Theme.of(context).brightness == Brightness.light &&
+    final brightness = Theme.of(context).brightness;
+    final isLight = brightness == Brightness.light;
+    final usePaperMaterial =
         (color == null || color == palette.surface);
     final card = Container(
-      padding: padding,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: usePaperMaterial ? null : color ?? palette.surface,
-        gradient: usePaperMaterial ? AppMaterials.paper : null,
-        borderRadius: BorderRadius.circular(AppRadii.sm),
+        gradient: usePaperMaterial
+            ? (isLight ? AppMaterials.paper : AppMaterials.paperDark)
+            : null,
+        borderRadius: BorderRadius.circular(AppRadii.md),
         border: Border.all(
           color: palette.divider.withValues(alpha: 0.82),
-          width: 0.8,
+          width: AppBorders.hairline,
         ),
         boxShadow: shadow ??
-            (Theme.of(context).brightness == Brightness.light
-                ? AppShadows.paper
-                : AppShadows.none),
+            (isLight ? AppShadows.paper : AppShadows.paperDark),
       ),
-      child: child,
+      child: Material(
+        type: MaterialType.transparency,
+        child: Padding(padding: padding, child: child),
+      ),
     );
 
     if (onTap == null) return card;
 
     // Wrap the tappable card with a button semantics node so screen
-    // readers announce it as interactive. [excludeSemantics: true]
-    // prevents duplicate "button" semantics from the PressableScale.
+    // readers announce it as interactive.
     return Semantics(
       button: true,
       label: semanticLabel,

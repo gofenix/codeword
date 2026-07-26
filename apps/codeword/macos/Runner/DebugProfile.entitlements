@@ -8,6 +8,8 @@
 	<true/>
 	<key>com.apple.security.network.client</key>
 	<true/>
+	<key>com.apple.security.network.server</key>
+	<true/>
 	<!-- Allow reading/writing user-selected files (import vocabularies,
 	     export learning data) via the standard NSOpenPanel / NSSavePanel.
 	     Without this entitlement, the file picker returns URLs that our

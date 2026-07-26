@@ -35,6 +35,10 @@ LinearGradient _glassTint(bool isDark, AppPalette palette, Color tint) {
 /// from above-left (the classic iOS "liquid glass" specular). Painted as an
 /// [IgnorePointer] overlay so it never intercepts taps and only tints the
 /// edge, keeping content underneath legible.
+///
+/// The gradient is compressed into the first ~12% of the diagonal so it
+/// reads as a sharp corner catch rather than a wash over the content —
+/// on small 44px buttons this keeps the icon from being bleached out (§12).
 Widget _specularHighlight(bool isDark) {
   return Positioned.fill(
     child: IgnorePointer(
@@ -44,10 +48,10 @@ Widget _specularHighlight(bool isDark) {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Colors.white.withValues(alpha: isDark ? 0.24 : 0.46),
+              Colors.white.withValues(alpha: isDark ? 0.14 : 0.30),
               Colors.transparent,
             ],
-            stops: const [0, 0.18],
+            stops: const [0, 0.12],
           ),
         ),
       ),
@@ -59,7 +63,21 @@ Widget _specularHighlight(bool isDark) {
 ///
 /// Keep this on navigation and floating controls. Content surfaces should
 /// remain opaque enough for sustained reading.
+///
+/// A transparent [Material] sits above the tint so descendant buttons and
+/// [InkWell]s paint their ripple on the glass itself — otherwise the
+/// ripple lands on a distant ancestor Material *behind* the blur and is
+/// invisible.
 class AppGlassSurface extends StatelessWidget {
+  /// Shared blur radius for all glass chrome (surfaces, nav bar). Kept as
+  /// a single constant so the whole chrome layer frosts identically.
+  static const double kBlurSigma = 24;
+
+  /// Tighter blur for small glass controls (icon buttons, chips) where a
+  /// full 24px frost would swallow the icon. Still reads as glass, just
+  /// less diffused — the same material, a different weight (§12).
+  static const double kBlurSigmaCompact = 16;
+
   final Widget child;
   final BorderRadius borderRadius;
   final Color? tint;
@@ -68,9 +86,9 @@ class AppGlassSurface extends StatelessWidget {
   const AppGlassSurface({
     super.key,
     required this.child,
-    this.borderRadius = const BorderRadius.all(Radius.circular(28)),
+    this.borderRadius = const BorderRadius.all(Radius.circular(AppRadii.xxl)),
     this.tint,
-    this.blurSigma = 24,
+    this.blurSigma = kBlurSigma,
   });
 
   @override
@@ -94,28 +112,22 @@ class AppGlassSurface extends StatelessWidget {
             color: palette.ink.withValues(alpha: isDark ? 0.55 : 0.45),
             width: 1,
           ),
-          boxShadow: [
-            BoxShadow(
-              color: isDark ? const Color(0x52000000) : const Color(0x26362D20),
-              blurRadius: 22,
-              offset: const Offset(0, 8),
-            ),
-          ],
+          boxShadow: AppShadows.glass(isDark: isDark),
         ),
-        child: ClipRRect(borderRadius: borderRadius, child: child),
+        child: ClipRRect(
+          borderRadius: borderRadius,
+          child: Material(
+            type: MaterialType.transparency,
+            child: child,
+          ),
+        ),
       );
     }
 
     return DecoratedBox(
       decoration: BoxDecoration(
         borderRadius: borderRadius,
-        boxShadow: [
-          BoxShadow(
-            color: isDark ? const Color(0x52000000) : const Color(0x26362D20),
-            blurRadius: 22,
-            offset: const Offset(0, 8),
-          ),
-        ],
+        boxShadow: AppShadows.glass(isDark: isDark),
       ),
       child: ClipRRect(
         borderRadius: borderRadius,
@@ -131,13 +143,16 @@ class AppGlassSurface extends StatelessWidget {
               gradient: _glassTint(isDark, palette, resolvedTint),
               border: Border.all(
                 color: Colors.white.withValues(alpha: isDark ? 0.22 : 0.72),
-                width: 0.8,
+                width: AppBorders.hairline,
               ),
             ),
             // Stack the specular rim over the child. Non-positioned [child]
             // sizes the stack; the rim fills it without intercepting taps.
             child: Stack(
-              children: [child, _specularHighlight(isDark)],
+              children: [
+                Material(type: MaterialType.transparency, child: child),
+                _specularHighlight(isDark),
+              ],
             ),
           ),
         ),
@@ -191,44 +206,48 @@ class GlassAppBar extends StatelessWidget implements PreferredSizeWidget {
     final highContrast = MediaQuery.maybeOf(context)?.highContrast ?? false;
     final topInset = MediaQuery.paddingOf(context).top;
 
-    final row = SizedBox(
-      height: barHeight,
-      child: Stack(
-        children: [
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 56),
-              child: Text(
-                title,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.center,
-                style: titleStyle ??
-                    TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w600,
-                      color: palette.ink,
-                    ),
-              ),
-            ),
-          ),
-          if (leading != null)
-            Align(
-              alignment: Alignment.centerLeft,
+    final row = Material(
+      type: MaterialType.transparency,
+      child: SizedBox(
+        height: barHeight,
+        child: Stack(
+          children: [
+            Center(
               child: Padding(
-                padding: const EdgeInsets.only(left: 4),
-                child: leading,
+                padding: const EdgeInsets.symmetric(horizontal: 56),
+                child: Text(
+                  title,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: titleStyle ??
+                      TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600,
+                        color: palette.ink,
+                      ),
+                ),
               ),
             ),
-          if (actions != null && actions!.isNotEmpty)
-            Align(
-              alignment: Alignment.centerRight,
-              child: Padding(
-                padding: const EdgeInsets.only(right: 4),
-                child: Row(mainAxisSize: MainAxisSize.min, children: actions!),
+            if (leading != null)
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 4),
+                  child: leading,
+                ),
               ),
-            ),
-        ],
+            if (actions != null && actions!.isNotEmpty)
+              Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 4),
+                  child:
+                      Row(mainAxisSize: MainAxisSize.min, children: actions!),
+                ),
+              ),
+          ],
+        ),
       ),
     );
 
@@ -238,7 +257,7 @@ class GlassAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: palette.surface,
           border: Border(
             bottom: BorderSide(
-              color: palette.ink.withValues(alpha: isDark ? 0.4 : 0.3),
+              color: palette.ink.withValues(alpha: isDark ? 0.55 : 0.45),
             ),
           ),
         ),
@@ -251,7 +270,10 @@ class GlassAppBar extends StatelessWidget implements PreferredSizeWidget {
 
     return ClipRect(
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 24, sigmaY: 24),
+        filter: ImageFilter.blur(
+          sigmaX: AppGlassSurface.kBlurSigma,
+          sigmaY: AppGlassSurface.kBlurSigma,
+        ),
         child: DecoratedBox(
           decoration: BoxDecoration(
             gradient: _glassTint(isDark, palette, AppColors.primary),
@@ -333,7 +355,7 @@ class AppGlassIconButton extends StatelessWidget {
       dimension: 44,
       child: AppGlassSurface(
         borderRadius: BorderRadius.circular(22),
-        blurSigma: 18,
+        blurSigma: AppGlassSurface.kBlurSigmaCompact,
         child: IconButton(
           tooltip: tooltip,
           onPressed: onPressed,

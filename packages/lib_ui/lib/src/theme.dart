@@ -23,11 +23,12 @@ class AppTheme {
     return base.copyWith(
       textTheme: _uiTextTheme(base.textTheme, Brightness.light),
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.background.withValues(alpha: 0.7),
+        backgroundColor: Colors.transparent,
         foregroundColor: AppColors.ink,
         elevation: 0,
-        scrolledUnderElevation: 0,
+        scrolledUnderElevation: 4,
         surfaceTintColor: Colors.transparent,
+        shadowColor: const Color(0x14000000),
         centerTitle: true,
         titleTextStyle: TextStyle(
           fontSize: 17,
@@ -37,7 +38,8 @@ class AppTheme {
       ),
       cardTheme: CardThemeData(
         color: AppColors.surface,
-        elevation: 0,
+        elevation: 1,
+        shadowColor: const Color(0x14000000),
         surfaceTintColor: Colors.transparent,
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
@@ -48,15 +50,15 @@ class AppTheme {
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.surface,
           foregroundColor: AppColors.ink,
-          elevation: 0,
+          elevation: 1,
+          shadowColor: const Color(0x14000000),
           surfaceTintColor: Colors.transparent,
-          shadowColor: Colors.transparent,
           padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.sm),
+            borderRadius: BorderRadius.circular(AppRadii.md),
           ),
           textStyle: TextStyle(
             fontSize: 16,
@@ -77,7 +79,28 @@ class AppTheme {
           ),
           minimumSize: const Size.fromHeight(50),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.sm),
+            borderRadius: BorderRadius.circular(AppRadii.md),
+          ),
+        ),
+      ),
+      // Secondary actions keep the HIG 44px minimum touch target that the
+      // Material default (40px) misses.
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppColors.primary,
+          minimumSize: const Size(64, 44),
+          side: const BorderSide(color: AppColors.divider),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppRadii.md),
+          ),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: AppColors.primary,
+          minimumSize: const Size(64, 44),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppRadii.md),
           ),
         ),
       ),
@@ -88,14 +111,17 @@ class AppTheme {
           TargetPlatform.android: CupertinoPageTransitionsBuilder(),
         },
       ),
+      // No hard dividers: Apple-style interfaces use scroll-edge fade
+      // (blur/elevation) rather than hairline rules between grouped rows.
       dividerTheme: const DividerThemeData(
-        color: AppColors.divider,
-        thickness: 0.5,
-        space: 0.5,
+        color: Colors.transparent,
+        thickness: 0,
+        space: 0,
       ),
       bottomSheetTheme: BottomSheetThemeData(
         backgroundColor: AppColors.surface,
-        elevation: 0,
+        elevation: 8,
+        shadowColor: const Color(0x33000000),
         surfaceTintColor: Colors.transparent,
         constraints: const BoxConstraints(maxWidth: 640),
         shape: const RoundedRectangleBorder(
@@ -114,11 +140,12 @@ class AppTheme {
           borderRadius: BorderRadius.circular(AppRadii.pill),
         ),
         behavior: SnackBarBehavior.floating,
-        elevation: 0,
+        elevation: 6,
       ),
       dialogTheme: DialogThemeData(
         backgroundColor: AppColors.surface,
-        elevation: 0,
+        elevation: 12,
+        shadowColor: const Color(0x40000000),
         surfaceTintColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppRadii.lg),
@@ -135,9 +162,10 @@ class AppTheme {
         ),
       ),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: AppColors.surface.withValues(alpha: 0.7),
+        backgroundColor: Colors.transparent,
         surfaceTintColor: Colors.transparent,
         indicatorColor: Colors.transparent,
+        elevation: 0,
         labelTextStyle: WidgetStatePropertyAll(
           TextStyle(
             fontSize: 10,
@@ -162,11 +190,12 @@ class AppTheme {
     return base.copyWith(
       textTheme: _uiTextTheme(base.textTheme, Brightness.dark),
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.backgroundDark.withValues(alpha: 0.7),
+        backgroundColor: Colors.transparent,
         foregroundColor: AppColors.inkDark,
         elevation: 0,
-        scrolledUnderElevation: 0,
+        scrolledUnderElevation: 4,
         surfaceTintColor: Colors.transparent,
+        shadowColor: const Color(0x66000000),
         centerTitle: true,
         titleTextStyle: TextStyle(
           fontSize: 17,
@@ -176,7 +205,8 @@ class AppTheme {
       ),
       cardTheme: CardThemeData(
         color: AppColors.surfaceDark,
-        elevation: 0,
+        elevation: 1,
+        shadowColor: const Color(0x66000000),
         surfaceTintColor: Colors.transparent,
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
@@ -187,15 +217,15 @@ class AppTheme {
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.surfaceDark,
           foregroundColor: AppColors.inkDark,
-          elevation: 0,
-          shadowColor: Colors.transparent,
+          elevation: 1,
+          shadowColor: const Color(0x66000000),
           surfaceTintColor: Colors.transparent,
           padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.x6,
             vertical: AppSpacing.x4,
           ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.sm),
+            borderRadius: BorderRadius.circular(AppRadii.md),
           ),
           textStyle: TextStyle(
             fontSize: 16,
@@ -216,7 +246,26 @@ class AppTheme {
           ),
           minimumSize: const Size.fromHeight(50),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppRadii.sm),
+            borderRadius: BorderRadius.circular(AppRadii.md),
+          ),
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppColors.inversePrimary,
+          minimumSize: const Size(64, 44),
+          side: const BorderSide(color: AppColors.dividerDark),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppRadii.md),
+          ),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: AppColors.inversePrimary,
+          minimumSize: const Size(64, 44),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppRadii.md),
           ),
         ),
       ),
@@ -228,13 +277,14 @@ class AppTheme {
         },
       ),
       dividerTheme: const DividerThemeData(
-        color: AppColors.dividerDark,
-        thickness: 0.5,
-        space: 0.5,
+        color: Colors.transparent,
+        thickness: 0,
+        space: 0,
       ),
       bottomSheetTheme: BottomSheetThemeData(
         backgroundColor: AppColors.surfaceDark,
-        elevation: 0,
+        elevation: 8,
+        shadowColor: const Color(0x66000000),
         surfaceTintColor: Colors.transparent,
         constraints: const BoxConstraints(maxWidth: 640),
         shape: const RoundedRectangleBorder(
@@ -253,11 +303,12 @@ class AppTheme {
           borderRadius: BorderRadius.circular(AppRadii.pill),
         ),
         behavior: SnackBarBehavior.floating,
-        elevation: 0,
+        elevation: 6,
       ),
       dialogTheme: DialogThemeData(
         backgroundColor: AppColors.surfaceDark,
-        elevation: 0,
+        elevation: 12,
+        shadowColor: const Color(0x66000000),
         surfaceTintColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppRadii.lg),
@@ -274,9 +325,10 @@ class AppTheme {
         ),
       ),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: AppColors.surfaceDark.withValues(alpha: 0.7),
+        backgroundColor: Colors.transparent,
         surfaceTintColor: Colors.transparent,
         indicatorColor: Colors.transparent,
+        elevation: 0,
         labelTextStyle: WidgetStatePropertyAll(
           TextStyle(
             fontSize: 10,
@@ -298,7 +350,7 @@ class AppTheme {
       onPrimary: AppColors.onPrimary,
       primaryContainer: AppColors.primarySoft,
       onPrimaryContainer: AppColors.primaryDark,
-      // Secondary: an indigo distinct from primary to break up the green.
+      // Secondary mirrors the sage tertiary: mastery/learning accents.
       secondary: AppColors.tertiary,
       onSecondary: AppColors.onTertiary,
       secondaryContainer: AppColors.tertiarySoft,
@@ -317,8 +369,8 @@ class AppTheme {
       surfaceBright: AppColors.surface,
       surfaceContainerLowest: Color(0xFFFFFFFF),
       surfaceContainerLow: Color(0xFFF8F7F0),
-      surfaceContainer: AppColors.surfaceMuted,
-      surfaceContainerHigh: Color(0xFFEFECDF),
+      surfaceContainer: Color(0xFFEFECDF),
+      surfaceContainerHigh: AppColors.surfaceMuted,
       surfaceContainerHighest: Color(0xFFE7E4D5),
       onSurfaceVariant: AppColors.inkMuted,
       outline: AppColors.divider,
@@ -335,10 +387,10 @@ class AppTheme {
   static ColorScheme _darkScheme() {
     return const ColorScheme.dark(
       brightness: Brightness.dark,
-      primary: Color(0xFFD8C39E),
+      primary: AppColors.inversePrimary,
       onPrimary: Color(0xFF342A1D),
-      primaryContainer: Color(0xFF59492F),
-      onPrimaryContainer: Color(0xFFF2E4CB),
+      primaryContainer: AppColors.primarySoftDark,
+      onPrimaryContainer: AppColors.onPrimaryContainerDark,
       secondary: Color(0xFFAFC1A6),
       onSecondary: Color(0xFF20301D),
       secondaryContainer: Color(0xFF394A35),
@@ -353,13 +405,15 @@ class AppTheme {
       onErrorContainer: Color(0xFFFFDAD6),
       surface: AppColors.surfaceDark,
       onSurface: AppColors.inkDark,
-      surfaceDim: Color(0xFF101314),
-      surfaceBright: Color(0xFF36393B),
-      surfaceContainerLowest: Color(0xFF0B0D0E),
-      surfaceContainerLow: Color(0xFF181B1C),
+      // Warm-tinted ramp matching the editorial dark palette (the M3
+      // default blue-greys clash with the warm paper/ink tokens).
+      surfaceDim: Color(0xFF121110),
+      surfaceBright: Color(0xFF3A3630),
+      surfaceContainerLowest: Color(0xFF0D0C0A),
+      surfaceContainerLow: Color(0xFF1C1A17),
       surfaceContainer: AppColors.surfaceMutedDark,
-      surfaceContainerHigh: Color(0xFF323637),
-      surfaceContainerHighest: Color(0xFF3D4142),
+      surfaceContainerHigh: Color(0xFF35312B),
+      surfaceContainerHighest: Color(0xFF403B34),
       onSurfaceVariant: AppColors.inkMutedDark,
       outline: AppColors.dividerDark,
       outlineVariant: Color(0x33EDECE6),
@@ -368,7 +422,7 @@ class AppTheme {
       inverseSurface: AppColors.surface,
       onInverseSurface: AppColors.ink,
       inversePrimary: AppColors.primaryDark,
-      surfaceTint: Color(0xFFD8C39E),
+      surfaceTint: AppColors.inversePrimary,
     );
   }
 
@@ -493,12 +547,21 @@ class AppTheme {
   }
 
   /// Small uppercase section label (e.g. "PROFILE", "AI").
+  ///
+  /// The bronze [AppColors.primary] reads well on cream but is too dark
+  /// against the dark scaffold, so when [context] is supplied the colour
+  /// resolves per-brightness (light: bronze, dark: the lighter inverse
+  /// bronze) — same rule as the ink helpers above.
   static TextStyle sectionLabel({Color? color, BuildContext? context}) {
+    final resolved = color ??
+        (context != null && Theme.of(context).brightness == Brightness.dark
+            ? AppColors.inversePrimary
+            : AppColors.primary);
     return TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.w600,
       letterSpacing: 2.4,
-      color: color ?? AppColors.primary,
+      color: resolved,
     );
   }
 

@@ -10,82 +10,63 @@ import '../state/learning_preferences.dart';
 import '../state/llm_config.dart';
 import 'ai_settings_screen.dart';
 
-/// 设置 — only configuration that changes the learning experience.
+/// 设置 — a top-level bottom-nav tab. Only configuration that changes the
+/// learning experience. Shares the [TabPageScaffold] chrome with the other
+/// content tabs so switching in/out of it doesn't shift the header.
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final palette = AppColors.of(context);
-    return Scaffold(
-      backgroundColor: palette.background,
-      body: DecoratedBox(
-        decoration: AppMaterials.canvasDecoration(context),
-        child: CustomScrollView(
-          slivers: [
-            SliverSafeArea(
-              sliver: SliverPadding(
-                padding: const EdgeInsets.fromLTRB(
-                  AppSpacing.x6,
-                  AppSpacing.x3,
-                  AppSpacing.x6,
-                  AppSpacing.x8,
+    return TabPageScaffold(
+      title: '设置',
+      scrollKey: const PageStorageKey('settings-scroll'),
+      slivers: [
+        SliverList.list(
+          children: [
+            const _SettingsHeader(),
+            const SizedBox(height: AppSpacing.x5),
+            const _SectionLabel('高级题型'),
+            const SizedBox(height: AppSpacing.x2),
+            const _SettingsGroup(
+              children: [
+                _AdvancedQuestionTypeRow(
+                  type: _AdvancedQuestionType.spelling,
                 ),
-                sliver: SliverList.list(
-                  children: [
-                    const _SettingsHeader(),
-                    const SizedBox(height: AppSpacing.x5),
-                    const _SectionLabel('高级题型'),
-                    const SizedBox(height: AppSpacing.x2),
-                    const _SettingsGroup(
-                      children: [
-                        _AdvancedQuestionTypeRow(
-                          type: _AdvancedQuestionType.spelling,
-                        ),
-                        _AdvancedQuestionTypeRow(
-                          type: _AdvancedQuestionType.listening,
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: AppSpacing.x5),
-                    const _SectionLabel('AI'),
-                    const SizedBox(height: AppSpacing.x2),
-                    const _SettingsGroup(children: [_AiSettingsRow()]),
-                    const SizedBox(height: AppSpacing.x5),
-                    const _SectionLabel('数据'),
-                    const SizedBox(height: AppSpacing.x2),
-                    const _SettingsGroup(
-                      children: [_LocalDataRow(), _ClearLearningDataRow()],
-                    ),
-                    const SizedBox(height: AppSpacing.x12),
-                    Center(
-                      child: Column(
-                        children: [
-                          Text(
-                            'CodeWord · 本地优先背单词',
-                            style: AppTheme.mutedCaption(
-                              size: 12,
-                              context: context,
-                            ),
-                          ),
-                          const SizedBox(height: AppSpacing.x1),
-                          Text(
-                            '1.1.1',
-                            style: AppTheme.mutedCaption(
-                              size: 11,
-                              context: context,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                _AdvancedQuestionTypeRow(
+                  type: _AdvancedQuestionType.listening,
                 ),
+              ],
+            ),
+            const SizedBox(height: AppSpacing.x5),
+            const _SectionLabel('AI'),
+            const SizedBox(height: AppSpacing.x2),
+            const _SettingsGroup(children: [_AiSettingsRow()]),
+            const SizedBox(height: AppSpacing.x5),
+            const _SectionLabel('数据'),
+            const SizedBox(height: AppSpacing.x2),
+            const _SettingsGroup(
+              children: [_LocalDataRow(), _ClearLearningDataRow()],
+            ),
+            const SizedBox(height: AppSpacing.x12),
+            Center(
+              child: Column(
+                children: [
+                  Text(
+                    '墨书 · 本地优先背单词',
+                    style: AppTheme.mutedCaption(size: 12, context: context),
+                  ),
+                  const SizedBox(height: AppSpacing.x1),
+                  Text(
+                    '1.1.1',
+                    style: AppTheme.mutedCaption(size: 11, context: context),
+                  ),
+                ],
               ),
             ),
           ],
         ),
-      ),
+      ],
     );
   }
 }
@@ -146,34 +127,11 @@ class _SettingsHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // The screen title now lives in the shared frosted [GlassAppBar], so this
+    // header only carries the editorial section label + description.
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
-          height: 48,
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: AppGlassIconButton(
-                  tooltip: '返回',
-                  onPressed: () => Navigator.of(context).maybePop(),
-                  icon: Icons.arrow_back_ios_new_rounded,
-                  size: 21,
-                  color: AppColors.primary,
-                ),
-              ),
-              Text(
-                '设置',
-                style: AppTheme.cardTitle(
-                  context: context,
-                ).copyWith(fontSize: 22),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: AppSpacing.x8),
         Text('PREFERENCES', style: AppTheme.sectionLabel(context: context)),
         const SizedBox(height: AppSpacing.x3),
         Text(
@@ -192,14 +150,9 @@ class _SectionLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      label,
-      style: AppTheme.mutedCaption(
-        size: 13,
-        color: AppColors.primary,
-        context: context,
-      ).copyWith(fontWeight: FontWeight.w600),
-    );
+    // Shared section-label system (same as the other tabs), so the CJK
+    // group titles pick up the same scale + brightness-aware bronze.
+    return Text(label, style: AppTheme.sectionLabel(context: context));
   }
 }
 
@@ -216,13 +169,10 @@ class _SettingsGroup extends StatelessWidget {
         children: [
           for (var i = 0; i < children.length; i++) ...[
             children[i],
+            // No hard dividers between grouped rows — Apple-style interfaces
+            // use spacing and scroll-edge fade instead of hairline rules.
             if (i != children.length - 1)
-              Divider(
-                height: 0.5,
-                thickness: 0.5,
-                indent: AppSpacing.x4,
-                color: AppColors.of(context).divider.withValues(alpha: 0.7),
-              ),
+              const SizedBox(height: AppSpacing.x2),
           ],
         ],
       ),
@@ -264,9 +214,12 @@ class _AiSettingsRow extends ConsumerWidget {
           ),
         ],
       ),
-      onTap: () => Navigator.of(
-        context,
-      ).push(MaterialPageRoute(builder: (_) => const AiSettingsScreen())),
+      onTap: () {
+        HapticFeedback.selectionClick();
+        Navigator.of(
+          context,
+        ).push(MaterialPageRoute(builder: (_) => const AiSettingsScreen()));
+      },
     );
   }
 }
@@ -401,7 +354,7 @@ class _SettingsTile extends StatelessWidget {
                   title,
                   style: AppTheme.rowTitle(color: titleColor, context: context),
                 ),
-                const SizedBox(height: 2),
+                const SizedBox(height: AppSpacing.x1),
                 Text(
                   subtitle,
                   style: AppTheme.mutedCaption(size: 12, context: context),
@@ -419,7 +372,16 @@ class _SettingsTile extends StatelessWidget {
       ),
     );
     if (onTap == null) return content;
-    return InkWell(onTap: onTap, child: content);
+    return Semantics(
+      button: true,
+      child: PressableScale(
+        onTap: () {
+          HapticFeedback.selectionClick();
+          onTap!();
+        },
+        child: content,
+      ),
+    );
   }
 }
 
@@ -431,10 +393,19 @@ class _SettingIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 40,
-      height: 40,
-      child: Icon(icon, color: color, size: 27),
+    // Same tinted rounded-square recipe as the stats/discovery icon
+    // blocks; deep hues lift toward white in dark mode for legibility.
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final resolved = isDark ? Color.lerp(color, Colors.white, 0.35)! : color;
+    return Container(
+      width: 44,
+      height: 44,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: resolved.withValues(alpha: isDark ? 0.2 : 0.14),
+        borderRadius: BorderRadius.circular(AppRadii.md),
+      ),
+      child: Icon(icon, color: resolved, size: 24),
     );
   }
 }

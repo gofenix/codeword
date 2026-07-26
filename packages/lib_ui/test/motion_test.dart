@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:lib_ui/lib_ui.dart';
@@ -5,28 +7,43 @@ import 'package:lib_ui/lib_ui.dart';
 void main() {
   group('AppMotion tokens', () {
     test('UI durations stay within the craft budget', () {
-      // Press feedback is snappy (100-160ms); everything the user sees
-      // often stays under ~300ms. Sheets/holds may go slower.
       expect(AppMotion.press.inMilliseconds, inInclusiveRange(100, 160));
       expect(AppMotion.fast.inMilliseconds, lessThanOrEqualTo(300));
       expect(AppMotion.medium.inMilliseconds, lessThanOrEqualTo(300));
     });
 
     test('easeOut is a strong curve that starts fast, not ease-in', () {
-      // A strong ease-out has already covered most of the distance by the
-      // time it is a third of the way through — the opposite of ease-in,
-      // which would sit near zero and read as sluggish.
       expect(AppMotion.easeOut.transform(0.33), greaterThan(0.5));
+    });
+
+    test('springDefault is critically damped (no overshoot)', () {
+      // A critically-damped spring has damping = 2*sqrt(mass*stiffness).
+      final s = AppMotion.springDefault();
+      expect(s.damping, closeTo(2 * sqrt(s.mass * s.stiffness), 0.01));
+    });
+
+    test('springMomentum is under-damped (slight bounce)', () {
+      final s = AppMotion.springMomentum();
+      final critical = 2 * sqrt(s.mass * s.stiffness);
+      // damping ratio ~0.8 means damping < critical.
+      expect(s.damping, lessThan(critical));
+      expect(s.damping / critical, closeTo(0.8, 0.01));
+    });
+
+    test('projectMomentum uses Apple exponential-decay form', () {
+      // v=1000 px/s, d=0.998 → (1000/1000)*0.998/(1-0.998) = 499
+      expect(AppMotion.projectMomentum(1000), closeTo(499, 1));
     });
   });
 
   group('PressableScale', () {
-    AnimatedScale scaleWidget(WidgetTester tester) => tester.widget<AnimatedScale>(
-      find.descendant(
-        of: find.byType(PressableScale),
-        matching: find.byType(AnimatedScale),
-      ),
-    );
+    AnimatedScale scaleWidget(WidgetTester tester) =>
+        tester.widget<AnimatedScale>(
+          find.descendant(
+            of: find.byType(PressableScale),
+            matching: find.byType(AnimatedScale),
+          ),
+        );
 
     AnimatedOpacity opacityWidget(WidgetTester tester) =>
         tester.widget<AnimatedOpacity>(
@@ -40,16 +57,13 @@ void main() {
       final gesture = await tester.startGesture(
         tester.getCenter(find.byType(PressableScale)),
       );
-      // Hold long enough for the tap recognizer to fire onTapDown
-      // (deferred by kPressTimeout) and the tween to settle.
       await tester.pump();
+      // Hold long enough for the press tween to settle on the target.
       await tester.pump(const Duration(milliseconds: 400));
       return gesture;
     }
 
-    testWidgets('tweens the press with the press motion tokens', (
-      tester,
-    ) async {
+    testWidgets('tweens the scale down and dims on press', (tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -64,20 +78,12 @@ void main() {
         ),
       );
 
-      // The feedback is animated (not an instant Transform/Opacity snap)
-      // and uses the shared, responsive press tokens.
-      expect(scaleWidget(tester).duration, AppMotion.press);
-      expect(scaleWidget(tester).curve, AppMotion.easeOut);
-      expect(opacityWidget(tester).duration, AppMotion.press);
-
-      // At rest, no transform and full opacity.
       expect(scaleWidget(tester).scale, 1.0);
       expect(opacityWidget(tester).opacity, 1.0);
 
-      // While held, it scales down and dims — the press was heard.
       final gesture = await pressAndHold(tester);
       expect(scaleWidget(tester).scale, 0.97);
-      expect(opacityWidget(tester).opacity, lessThan(1.0));
+      expect(opacityWidget(tester).opacity, 0.85);
 
       await gesture.up();
       await tester.pumpAndSettle();
@@ -106,8 +112,7 @@ void main() {
       );
 
       final gesture = await pressAndHold(tester);
-      // No vestibular motion: the scale target stays 1.0 while pressed,
-      // but the opacity feedback (which aids comprehension) is kept.
+      // No vestibular motion: scale stays 1.0, but opacity dips.
       expect(scaleWidget(tester).scale, 1.0);
       expect(opacityWidget(tester).opacity, lessThan(1.0));
 

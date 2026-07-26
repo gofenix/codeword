@@ -41,31 +41,21 @@ class EditorialPrimaryButton extends StatelessWidget {
           decoration: BoxDecoration(
             color: enabled ? null : palette.surfaceMuted,
             gradient: enabled ? AppMaterials.bronze : null,
-            borderRadius: BorderRadius.circular(AppRadii.sm),
+            borderRadius: BorderRadius.circular(AppRadii.md),
             border: Border.all(
               color: enabled ? const Color(0x70E8DBC4) : palette.divider,
-              width: 0.8,
+              width: AppBorders.hairline,
             ),
-            boxShadow: enabled
-                ? const [
-                    BoxShadow(
-                      color: Color(0x3D3A2E1E),
-                      blurRadius: 12,
-                      offset: Offset(0, 5),
-                    ),
-                    BoxShadow(
-                      color: Color(0x52FFFFFF),
-                      blurRadius: 1,
-                      offset: Offset(0, -1),
-                    ),
-                  ]
-                : null,
+            boxShadow: enabled ? AppShadows.bronze : null,
           ),
           child: DefaultTextStyle.merge(
             style: TextStyle(
               color: foreground,
               fontSize: 16,
               fontWeight: FontWeight.w600,
+              // Slight negative tracking tightens the w600 label so it
+              // reads as deliberate rather than default-spaced.
+              letterSpacing: -0.16,
             ),
             child: IconTheme(
               data: IconThemeData(color: foreground, size: 19),

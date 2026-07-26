@@ -52,14 +52,15 @@ void main() {
     }
   });
 
-  testWidgets('App boots into 4-tab home with Words selected', (tester) async {
+  testWidgets('App boots into 5-tab home with Words selected', (tester) async {
     await tester.pumpWidget(testApp());
     await tester.pump();
     expect(find.text('单词'), findsWidgets);
     expect(find.text('阅读'), findsOneWidget);
     expect(find.text('图表'), findsOneWidget);
     expect(find.text('词书'), findsOneWidget);
-    expect(find.text('设置'), findsNothing);
+    // 设置 is now its own bottom-nav tab (was a gear in the 词书 header).
+    expect(find.text('设置'), findsOneWidget);
   });
 
   testWidgets('HomeShell keeps tab state mounted while switching tabs', (
@@ -69,7 +70,7 @@ void main() {
     await tester.pump();
 
     final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
-    expect(stack.children.length, 4);
+    expect(stack.children.length, 5);
     expect(stack.index, 0);
 
     await tester.tap(find.text('阅读'));
@@ -88,9 +89,16 @@ void main() {
       find.byType(IndexedStack),
     );
     expect(discoveryStack.index, 3);
+
+    await tester.tap(find.text('设置'));
+    await tester.pump();
+    final settingsStack = tester.widget<IndexedStack>(
+      find.byType(IndexedStack),
+    );
+    expect(settingsStack.index, 4);
   });
 
-  testWidgets('four-tab shell survives 200% accessibility text', (
+  testWidgets('five-tab shell survives 200% accessibility text', (
     tester,
   ) async {
     await tester.binding.setSurfaceSize(const Size(320, 568));
@@ -128,6 +136,13 @@ void main() {
       await tester.pump();
       expect(tester.takeException(), isNull, reason: icon.toString());
     }
+
+    // The 设置 tab shares the settings_outlined glyph with the Reading
+    // BYOK card, so switch to it via its unique bottom-nav label instead of
+    // the (now ambiguous) icon.
+    await tester.tap(find.text('设置'));
+    await tester.pump();
+    expect(tester.takeException(), isNull, reason: '设置');
   });
 
   testWidgets('Charts tab prioritizes today, mastery, trends and rhythm', (
@@ -227,19 +242,25 @@ void main() {
     expect(find.textContaining('今日新学 1'), findsOneWidget);
   });
 
-  testWidgets('Library tab opens Settings as a secondary page', (tester) async {
+  testWidgets('Settings is reachable as its own bottom-nav tab', (
+    tester,
+  ) async {
     await tester.pumpWidget(testApp());
     await tester.pump();
 
+    // 词书 no longer carries a settings gear — the header is clean.
     await tester.tap(find.text('词书'));
     await tester.pump();
     expect(find.text('词书'), findsWidgets);
-    expect(find.text('发现'), findsNothing);
+    expect(find.byIcon(Icons.settings_outlined), findsOneWidget);
 
-    await tester.tap(find.byIcon(Icons.settings_outlined));
-    await tester.pumpAndSettle();
+    // Tapping the 设置 tab shows the settings page in-place (no push).
+    await tester.tap(find.text('设置'));
+    await tester.pump();
     expect(find.byType(SettingsScreen), findsOneWidget);
-    expect(find.text('设置'), findsWidgets);
+    expect(find.text('PREFERENCES'), findsOneWidget);
+    final stack = tester.widget<IndexedStack>(find.byType(IndexedStack));
+    expect(stack.index, 4);
   });
 
   testWidgets('Empty learning state opens the Library tab', (tester) async {
@@ -2492,11 +2513,16 @@ void main() {
       expect(libraryCenter.dy, closeTo(readingCenter.dy, 0.5));
     });
 
-    testWidgets('render the title at a single 22px w700 style', (tester) async {
+    testWidgets('render the title at the compact 17px w600 style', (
+      tester,
+    ) async {
+      // The tabs use the frosted bar's default iOS title now — a compact
+      // 17px/w600 centered label rather than the old heavy 22px band that
+      // made the top chrome feel oversized.
       await pumpTab(tester, const StatsScreen());
       final title = tester.widget<Text>(find.text('图表'));
-      expect(title.style?.fontSize, 22);
-      expect(title.style?.fontWeight, FontWeight.w700);
+      expect(title.style?.fontSize, 17);
+      expect(title.style?.fontWeight, FontWeight.w600);
     });
 
     testWidgets('align content to a unified 24px horizontal margin', (
@@ -2721,7 +2747,11 @@ void main() {
       expect(find.text('cache'), findsOneWidget);
 
       await tester.tap(find.text('缓存'));
-      await tester.pump(const Duration(milliseconds: 400));
+      // The phase change now crossfades (AppMotion.medium). The fade only
+      // starts on the frame *after* the 180ms answer delay fires, so the
+      // outgoing question clears across two frames, not one 400ms pump.
+      await tester.pump(const Duration(milliseconds: 200));
+      await tester.pump(const Duration(milliseconds: 300));
 
       expect(tester.takeException(), isNull);
       expect(find.text('cache'), findsNothing);
@@ -2755,6 +2785,44 @@ void main() {
       expect(notifier.state.currentQuestion?.word.word, 'cache');
       expect(notifier.state.correctCount, 0);
       expect(find.text('cache'), findsOneWidget);
+    });
+
+    testWidgets('swipe pager centers the word on the screen axis', (
+      tester,
+    ) async {
+      // Regression: the pager's loose-fit Stack let the page Column
+      // shrink-wrap its widest child, shifting every centered element
+      // ~36pt toward the leading edge.
+      final prefs = LearningPreferencesNotifier(
+        LearningPreferencesStore(_MemoryLearningPreferencesBackend()),
+      );
+      await prefs.ready;
+      prefs.state = const LearningPreferences(
+        learningMode: LearningMode.swipe,
+      );
+
+      await tester.pumpWidget(
+        testApp(
+          overrides: [
+            learningSessionProvider.overrideWith(
+              (ref) => _AskingLearningSessionNotifier(ref),
+            ),
+            learningPreferencesProvider.overrideWith((ref) => prefs),
+          ],
+        ),
+      );
+      await tester.pump();
+
+      final word = find.text('dermis');
+      expect(word, findsOneWidget);
+      final wordCenter = tester.getCenter(word);
+      final screenWidth = tester.getSize(find.byType(Scaffold).first).width;
+      expect(
+        (wordCenter.dx - screenWidth / 2).abs(),
+        lessThan(8),
+        reason: 'swipe word must center on the screen, not on a '
+            'shrink-wrapped pager column',
+      );
     });
   });
 }

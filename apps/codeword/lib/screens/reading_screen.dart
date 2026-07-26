@@ -86,28 +86,33 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
     }
   }
 
-  void _initializeContent() {
+  Future<void> _initializeContent() async {
     if (_contentInitialized) return;
     _contentInitialized = true;
-    _loadPool();
-    _loadHistory();
+    final poolOk = await _loadPool();
+    final historyOk = await _loadHistory();
+    if (!poolOk || !historyOk) {
+      _contentInitialized = false;
+    }
   }
 
-  Future<void> _loadHistory() async {
+  Future<bool> _loadHistory() async {
     try {
       final h = await ArticleRepository.instance.load();
-      if (!mounted) return;
+      if (!mounted) return false;
       setState(() {
         _history = h;
         _loadedRepositoryRevision = ArticleRepository.instance.revision;
       });
+      return true;
     } catch (_) {
-      if (!mounted) return;
+      if (!mounted) return false;
       setState(() => _error = '读取历史文章失败，请稍后重试');
+      return false;
     }
   }
 
-  Future<void> _loadPool({bool rotate = false}) async {
+  Future<bool> _loadPool({bool rotate = false}) async {
     final loadGeneration = ++_poolLoadGeneration;
     final previousSelection = _selection.map(_readingWordKey).toList();
     if (rotate) _rotation++;
@@ -115,7 +120,7 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
     try {
       final notifier = ref.read(reviewStateProvider.notifier);
       final candidates = await notifier.readingCandidateWords(limit: 24);
-      if (!mounted || loadGeneration != _poolLoadGeneration) return;
+      if (!mounted || loadGeneration != _poolLoadGeneration) return false;
       final selection = selectReadingWords(candidates, rotation: _rotation);
       setState(() {
         _candidates = candidates;
@@ -133,12 +138,14 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
           context,
         ).showSnackBar(const SnackBar(content: Text('已经是当前最适合复现的词')));
       }
+      return true;
     } catch (e) {
-      if (!mounted || loadGeneration != _poolLoadGeneration) return;
+      if (!mounted || loadGeneration != _poolLoadGeneration) return false;
       setState(() {
         _loading = false;
         _error = '加载词表失败: $e';
       });
+      return false;
     }
   }
 
@@ -310,7 +317,7 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
           final curved = CurvedAnimation(
             parent: animation,
             curve: AppMotion.emphasized,
-            reverseCurve: AppMotion.easeOut,
+            reverseCurve: AppMotion.emphasizedReverse,
           );
           return FadeTransition(
             opacity: curved,
@@ -630,125 +637,130 @@ class _ReadingHero extends StatelessWidget {
   Widget build(BuildContext context) {
     final words = pool.take(5).map((entry) => entry.word).toList();
     final remaining = pool.length - words.length;
-    return Container(
-      key: const ValueKey('reading-first-content'),
+    return ConstrainedBox(
       constraints: const BoxConstraints(minHeight: 190),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppRadii.sm),
-        gradient: Theme.of(context).brightness == Brightness.light
-            ? AppMaterials.paper
-            : null,
-        color: Theme.of(context).brightness == Brightness.light
-            ? null
-            : AppColors.of(context).surface,
-        border: Border.all(color: AppColors.of(context).divider),
-        boxShadow: Theme.of(context).brightness == Brightness.light
-            ? AppShadows.paper
-            : AppShadows.none,
-      ),
-      padding: const EdgeInsets.all(AppSpacing.x4),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('今日阅读', style: AppTheme.cardTitle(context: context)),
-                    const SizedBox(height: AppSpacing.x2),
-                    Text(
-                      '把今天的词放进一篇值得读完的文章',
-                      style: AppTheme.mutedCaption(size: 12, context: context),
-                    ),
-                  ],
-                ),
-              ),
-              IconButton(
-                tooltip: '换一批目标词',
-                onPressed: loading || generating ? null : onRefresh,
-                icon: const Icon(Icons.refresh_rounded, size: 20),
-                color: AppColors.of(context).inkMuted,
-                constraints: const BoxConstraints(minWidth: 44, minHeight: 44),
-              ),
-            ],
-          ),
-          const SizedBox(height: AppSpacing.x3),
-          Text(
-            loading
-                ? '正在整理适合今天复现的词…'
-                : pool.isEmpty
-                ? '先学习至少 3 个词，再把它们放进语境'
-                : pool.length < 3
-                ? '还差 ${3 - pool.length} 个词即可生成今日阅读'
-                : '优先复现到期词和最近学过的词',
-            style: AppTheme.mutedCaption(size: 12, context: context),
-          ),
-          const SizedBox(height: AppSpacing.x3),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
+      child: AppCard(
+        key: const ValueKey('reading-first-content'),
+        padding: const EdgeInsets.all(AppSpacing.x4),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
               children: [
-                for (var i = 0; i < words.length; i++) ...[
-                  if (i > 0) const SizedBox(width: AppSpacing.x2),
-                  PillTag(
-                    label: words[i],
-                    color: AppColors.warning,
-                    variant: PillVariant.soft,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '今日阅读',
+                        style: AppTheme.cardTitle(context: context),
+                      ),
+                      const SizedBox(height: AppSpacing.x2),
+                      Text(
+                        '把今天的词放进一篇值得读完的文章',
+                        style: AppTheme.mutedCaption(
+                          size: 12,
+                          context: context,
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-                if (remaining > 0) ...[
-                  const SizedBox(width: AppSpacing.x2),
-                  PillTag(
-                    label: '+$remaining',
-                    color: AppColors.of(context).inkMuted,
-                    variant: PillVariant.soft,
+                ),
+                IconButton(
+                  tooltip: '换一批目标词',
+                  onPressed: loading || generating
+                      ? null
+                      : () {
+                          HapticFeedback.lightImpact();
+                          onRefresh();
+                        },
+                  icon: const Icon(Icons.refresh_rounded, size: 20),
+                  color: AppColors.of(context).inkMuted,
+                  constraints: const BoxConstraints(
+                    minWidth: 44,
+                    minHeight: 44,
                   ),
-                ],
+                ),
               ],
             ),
-          ),
-          const SizedBox(height: AppSpacing.x4),
-          SizedBox(
-            width: double.infinity,
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(minHeight: 46),
-              child: EditorialPrimaryButton(
-                onPressed: loading || generating
-                    ? null
-                    : pool.length < 3
-                    ? onGoWords
-                    : onGenerate,
-                icon: AnimatedSwitcher(
-                  duration: AppMotion.fast,
-                  child: generating
-                      ? const SizedBox(
-                          key: ValueKey('reading-loading'),
-                          width: 17,
-                          height: 17,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                            color: Colors.white,
-                          ),
-                        )
-                      : const Icon(
-                          Icons.auto_stories_outlined,
-                          key: ValueKey('reading-ready'),
-                          size: 18,
-                        ),
-                ),
-                label: Text(
-                  generating
-                      ? '正在生成'
+            const SizedBox(height: AppSpacing.x3),
+            Text(
+              loading
+                  ? '正在整理适合今天复现的词…'
+                  : pool.isEmpty
+                  ? '先学习至少 3 个词，再把它们放进语境'
+                  : pool.length < 3
+                  ? '还差 ${3 - pool.length} 个词即可生成今日阅读'
+                  : '优先复现到期词和最近学过的词',
+              style: AppTheme.mutedCaption(size: 12, context: context),
+            ),
+            const SizedBox(height: AppSpacing.x3),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  for (var i = 0; i < words.length; i++) ...[
+                    if (i > 0) const SizedBox(width: AppSpacing.x2),
+                    PillTag(
+                      label: words[i],
+                      color: AppColors.warning,
+                      variant: PillVariant.soft,
+                    ),
+                  ],
+                  if (remaining > 0) ...[
+                    const SizedBox(width: AppSpacing.x2),
+                    PillTag(
+                      label: '+$remaining',
+                      color: AppColors.of(context).inkMuted,
+                      variant: PillVariant.soft,
+                    ),
+                  ],
+                ],
+              ),
+            ),
+            const SizedBox(height: AppSpacing.x4),
+            SizedBox(
+              width: double.infinity,
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(minHeight: 46),
+                child: EditorialPrimaryButton(
+                  onPressed: loading || generating
+                      ? null
                       : pool.length < 3
-                      ? '继续背词'
-                      : '选择目标词并生成',
+                      ? onGoWords
+                      : onGenerate,
+                  icon: AnimatedSwitcher(
+                    duration: MediaQuery.of(context).disableAnimations
+                        ? Duration.zero
+                        : AppMotion.fast,
+                    child: generating
+                        ? const SizedBox(
+                            key: ValueKey('reading-loading'),
+                            width: 17,
+                            height: 17,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              color: AppColors.onPrimary,
+                            ),
+                          )
+                        : const Icon(
+                            Icons.auto_stories_outlined,
+                            key: ValueKey('reading-ready'),
+                            size: 18,
+                          ),
+                  ),
+                  label: Text(
+                    generating
+                        ? '正在生成'
+                        : pool.length < 3
+                        ? '继续背词'
+                        : '选择目标词并生成',
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -767,7 +779,7 @@ class _ReadingHistoryList extends StatelessWidget {
         Text('READING ARCHIVE', style: AppTheme.sectionLabel(context: context)),
         const SizedBox(height: AppSpacing.x2),
         Text('阅读记录', style: AppTheme.cardTitle(context: context)),
-        const SizedBox(height: AppSpacing.x3),
+        const SizedBox(height: AppSpacing.x4),
         if (articles.isEmpty)
           const EmptyHint(
             icon: Icons.auto_stories_outlined,
@@ -781,12 +793,7 @@ class _ReadingHistoryList extends StatelessWidget {
                 for (var i = 0; i < articles.length; i++) ...[
                   _ReadingHistoryCard(article: articles[i], onTap: onTap),
                   if (i != articles.length - 1)
-                    Divider(
-                      height: 1,
-                      indent: AppSpacing.x4,
-                      endIndent: AppSpacing.x4,
-                      color: AppColors.of(context).divider,
-                    ),
+                    const SizedBox(height: AppSpacing.x2),
                 ],
               ],
             ),
@@ -842,30 +849,17 @@ class _ReadingHistoryCard extends StatelessWidget {
                 spacing: AppSpacing.x1_5,
                 runSpacing: AppSpacing.x1_5,
                 children: [
+                  // Same target-word pill as the hero, so the archive card
+                  // and the hero never drift into separate chip systems.
                   for (final word in words)
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: AppSpacing.x2,
-                        vertical: AppSpacing.x1,
-                      ),
-                      decoration: BoxDecoration(
-                        color: AppColors.target.withValues(alpha: 0.62),
-                        borderRadius: BorderRadius.circular(AppRadii.pill),
-                      ),
-                      child: Text(
-                        word['word'] ?? '',
-                        style: AppTheme.editorial(
-                          size: 12,
-                          weight: FontWeight.w700,
-                          color: AppColors.of(context).ink,
-                        ),
-                      ),
+                    PillTag(
+                      label: word['word'] ?? '',
+                      color: AppColors.warning,
+                      variant: PillVariant.soft,
                     ),
                 ],
               ),
-              const SizedBox(height: AppSpacing.x3),
-              Divider(color: AppColors.of(context).divider, height: 1),
-              const SizedBox(height: AppSpacing.x3),
+              const SizedBox(height: AppSpacing.x4),
               Row(
                 children: [
                   Expanded(
@@ -1102,7 +1096,7 @@ class _ImmersiveReadingComposerState extends State<_ImmersiveReadingComposer> {
                   ? Duration.zero
                   : AppMotion.slow,
               switchInCurve: AppMotion.emphasized,
-              switchOutCurve: AppMotion.easeOut,
+              switchOutCurve: AppMotion.emphasizedReverse,
               transitionBuilder: (child, animation) => FadeTransition(
                 opacity: animation,
                 child: ScaleTransition(
@@ -1135,31 +1129,16 @@ class _ImmersiveReadingComposerState extends State<_ImmersiveReadingComposer> {
           ),
         ),
         bottomNavigationBar: _phase == _ReadingComposerPhase.selecting
-            ? DecoratedBox(
-                decoration: BoxDecoration(
-                  color: AppColors.of(context).background,
-                  border: Border(
-                    top: BorderSide(color: AppColors.of(context).divider),
-                  ),
-                ),
-                child: SafeArea(
-                  top: false,
-                  minimum: const EdgeInsets.fromLTRB(
-                    AppSpacing.x5,
-                    AppSpacing.x3,
-                    AppSpacing.x5,
-                    AppSpacing.x3,
-                  ),
-                  child: SizedBox(
-                    width: double.infinity,
-                    child: EditorialPrimaryButton(
-                      onPressed: selectedWords.length >= 3 ? _generate : null,
-                      icon: const Icon(Icons.auto_awesome_rounded, size: 18),
-                      label: Text(
-                        selectedWords.length >= 3
-                            ? '生成阅读 · ${selectedWords.length} 词'
-                            : '至少选择 3 个词',
-                      ),
+            ? GlassBottomBar(
+                child: SizedBox(
+                  width: double.infinity,
+                  child: EditorialPrimaryButton(
+                    onPressed: selectedWords.length >= 3 ? _generate : null,
+                    icon: const Icon(Icons.auto_awesome_rounded, size: 18),
+                    label: Text(
+                      selectedWords.length >= 3
+                          ? '生成阅读 · ${selectedWords.length} 词'
+                          : '至少选择 3 个词',
                     ),
                   ),
                 ),
@@ -1341,7 +1320,7 @@ class _InkLightForgeState extends State<_InkLightForge>
   );
   late final AnimationController _settleController = AnimationController(
     vsync: this,
-    duration: const Duration(milliseconds: 320),
+    duration: AppMotion.slow,
   );
   bool _motionConfigured = false;
 
@@ -1602,7 +1581,7 @@ class _EmberFieldPainter extends CustomPainter {
     final corePaint = Paint();
     for (var index = 0; index < 28; index++) {
       final staggered = (animation.value + index / 28 * 0.82) % 1;
-      final pathProgress = Curves.easeInOut.transform(staggered);
+      final pathProgress = AppMotion.easeInOut.transform(staggered);
       final start = _startPoint(size, index);
       final midpoint = Offset.lerp(start, center, 0.5)!;
       final direction = center - start;
@@ -1614,7 +1593,7 @@ class _EmberFieldPainter extends CustomPainter {
       final bend =
           (index.isEven ? 1 : -1) * (18 + _randomUnit(index + 81) * 46);
       final control = midpoint + perpendicular * bend;
-      final settlingProgress = Curves.easeInOut.transform(settling.value);
+      final settlingProgress = AppMotion.easeInOut.transform(settling.value);
       final effectiveProgress =
           pathProgress + (1 - pathProgress) * settlingProgress;
       final point = _quadratic(start, control, center, effectiveProgress);
@@ -1624,7 +1603,12 @@ class _EmberFieldPainter extends CustomPainter {
       glowPaint.color = AppColors.inversePrimary.withValues(
         alpha: opacity * 0.52,
       );
-      corePaint.color = const Color(0xFFB89A68).withValues(alpha: opacity);
+      // Ember core: mid-bronze derived from the token pair (no magic hex).
+      corePaint.color = Color.lerp(
+        AppColors.primary,
+        AppColors.inversePrimary,
+        0.45,
+      )!.withValues(alpha: opacity);
       canvas.drawCircle(point, radius * 3.2, glowPaint);
       canvas.drawCircle(point, radius, corePaint);
     }
@@ -1701,7 +1685,7 @@ class _ForgeRevealCardState extends State<_ForgeRevealCard>
           child: AnimatedBuilder(
             animation: _controller,
             builder: (context, child) {
-              final cardProgress = Curves.easeOut.transform(
+              final cardProgress = AppMotion.easeOut.transform(
                 (_controller.value / 0.58).clamp(0, 1),
               );
               return Column(
@@ -1719,11 +1703,7 @@ class _ForgeRevealCardState extends State<_ForgeRevealCard>
                               '开始阅读 ${_articleTitle(widget.article)}',
                           padding: const EdgeInsets.all(AppSpacing.x6),
                           shadow: const [
-                            BoxShadow(
-                              color: Color(0x243A2E1E),
-                              blurRadius: 32,
-                              offset: Offset(0, 14),
-                            ),
+                            ...AppShadows.hero,
                             ...AppShadows.paper,
                           ],
                           child: Column(
@@ -1792,7 +1772,7 @@ class _ForgeRevealCardState extends State<_ForgeRevealCard>
                   IgnorePointer(
                     ignoring: _controller.value < 0.58,
                     child: Opacity(
-                      opacity: Curves.easeOut.transform(
+                      opacity: AppMotion.easeOut.transform(
                         ((_controller.value - 0.58) / 0.42).clamp(0, 1),
                       ),
                       child: SizedBox(
@@ -1864,7 +1844,7 @@ class _StaggeredRevealWord extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final start = 0.42 + index * 0.035;
-    final reveal = Curves.easeOut.transform(
+    final reveal = AppMotion.easeOut.transform(
       ((progress - start) / 0.22).clamp(0, 1),
     );
     return Opacity(
@@ -1887,13 +1867,7 @@ class _StaggeredRevealWord extends StatelessWidget {
             border: Border.all(
               color: AppColors.primary.withValues(alpha: 0.24),
             ),
-            boxShadow: const [
-              BoxShadow(
-                color: Color(0x183A2E1E),
-                blurRadius: 8,
-                offset: Offset(0, 2),
-              ),
-            ],
+            boxShadow: AppShadows.sm,
           ),
           child: Text(
             word,
@@ -1983,8 +1957,10 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
                         ),
                         trailing: IconButton(
                           tooltip: '播放发音',
-                          onPressed: () =>
-                              TtsService.instance.speak(text: word.word),
+                          onPressed: () {
+                            HapticFeedback.lightImpact();
+                            TtsService.instance.speak(text: word.word);
+                          },
                           icon: const Icon(Icons.volume_up_outlined),
                         ),
                       );
@@ -2024,9 +2000,9 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
               slivers: [
                 SliverPadding(
                   padding: EdgeInsets.fromLTRB(
-                    AppSpacing.x5,
+                    AppSpacing.x6,
                     topInset + AppSpacing.x4,
-                    AppSpacing.x5,
+                    AppSpacing.x6,
                     AppSpacing.x10,
                   ),
                   sliver: SliverList.list(
@@ -2067,7 +2043,9 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
                       if (_showTranslation) ...[
                         const SizedBox(height: AppSpacing.x5),
                         AnimatedSwitcher(
-                          duration: AppMotion.medium,
+                          duration: MediaQuery.of(context).disableAnimations
+                              ? Duration.zero
+                              : AppMotion.medium,
                           switchInCurve: AppMotion.easeOut,
                           switchOutCurve: AppMotion.easeOut,
                           child: Text(
@@ -2111,8 +2089,12 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
                 icon: Icons.volume_up_outlined,
                 label: '朗读',
                 color: AppColors.primary,
-                onTap: () =>
-                    TtsService.instance.speak(text: widget.article.articleText),
+                onTap: () {
+                  HapticFeedback.lightImpact();
+                  TtsService.instance.speak(
+                    text: widget.article.articleText,
+                  );
+                },
               ),
             ),
             Expanded(
@@ -2120,7 +2102,10 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
                 icon: Icons.article_outlined,
                 label: '生词表',
                 color: AppColors.sage,
-                onTap: _showWordList,
+                onTap: () {
+                  HapticFeedback.lightImpact();
+                  _showWordList();
+                },
               ),
             ),
             Expanded(
@@ -2130,8 +2115,10 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
                     : Icons.visibility_outlined,
                 label: '翻译',
                 color: _showTranslation ? AppColors.primary : palette.inkMuted,
-                onTap: () =>
-                    setState(() => _showTranslation = !_showTranslation),
+                onTap: () {
+                  HapticFeedback.lightImpact();
+                  setState(() => _showTranslation = !_showTranslation);
+                },
               ),
             ),
           ],
@@ -2397,11 +2384,17 @@ class _QuizOption extends StatelessWidget {
       }
     }
 
-    return GestureDetector(
+    // InkWell (not a bare GestureDetector) so the tap has a visible
+    // pressed state; the enclosing AppCard provides the Material.
+    return InkWell(
       onTap: onTap,
+      borderRadius: BorderRadius.circular(AppRadii.md),
       child: AnimatedContainer(
-        duration: AppMotion.fast,
+        duration: MediaQuery.of(context).disableAnimations
+            ? Duration.zero
+            : AppMotion.fast,
         curve: AppMotion.easeOut,
+        constraints: const BoxConstraints(minHeight: 44),
         padding: const EdgeInsets.symmetric(
           horizontal: AppSpacing.x3,
           vertical: AppSpacing.x2,
@@ -2409,7 +2402,10 @@ class _QuizOption extends StatelessWidget {
         decoration: BoxDecoration(
           color: bg,
           borderRadius: BorderRadius.circular(AppRadii.md),
-          border: Border.all(color: border, width: 1),
+          border: Border.all(
+            color: border,
+            width: AppBorders.hairline,
+          ),
         ),
         child: Row(
           children: [
@@ -2502,7 +2498,7 @@ class _ArticleCard extends StatelessWidget {
   }
 }
 
-class _TargetWord extends StatelessWidget {
+class _TargetWord extends StatefulWidget {
   final String text;
   final TextStyle style;
   final VoidCallback onTap;
@@ -2514,20 +2510,50 @@ class _TargetWord extends StatelessWidget {
   });
 
   @override
+  State<_TargetWord> createState() => _TargetWordState();
+}
+
+class _TargetWordState extends State<_TargetWord> {
+  bool _pressed = false;
+
+  void _setPressed(bool value) {
+    if (_pressed == value) return;
+    setState(() => _pressed = value);
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      behavior: HitTestBehavior.opaque,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 3),
-        decoration: const BoxDecoration(
-          border: Border(bottom: BorderSide(color: AppColors.target, width: 5)),
-        ),
-        child: Text(
-          text,
-          style: style.copyWith(
-            color: AppColors.of(context).ink,
-            fontWeight: FontWeight.w700,
+    return Semantics(
+      button: true,
+      label: widget.text,
+      hint: '查看释义',
+      child: GestureDetector(
+        onTap: () {
+          HapticFeedback.selectionClick();
+          widget.onTap();
+        },
+        onTapDown: (_) => _setPressed(true),
+        onTapUp: (_) => _setPressed(false),
+        onTapCancel: () => _setPressed(false),
+        behavior: HitTestBehavior.opaque,
+        child: AnimatedOpacity(
+          opacity: _pressed ? 0.5 : 1,
+          duration: AppMotion.press,
+          curve: AppMotion.easeOut,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 3),
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(color: AppColors.target, width: 5),
+              ),
+            ),
+            child: Text(
+              widget.text,
+              style: widget.style.copyWith(
+                color: AppColors.of(context).ink,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
           ),
         ),
       ),

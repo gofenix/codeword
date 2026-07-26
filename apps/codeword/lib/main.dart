@@ -10,8 +10,10 @@ import 'package:lib_ui/lib_ui.dart';
 import 'screens/discovery_screen.dart';
 import 'screens/learning_session_screen.dart';
 import 'screens/reading_screen.dart';
+import 'screens/settings_screen.dart';
 import 'screens/stats_screen.dart';
 import 'services/article_repository.dart';
+import 'state/learning_preferences.dart';
 import 'state/learning_session.dart';
 
 void main() async {
@@ -95,7 +97,7 @@ class CodewordApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CodeWord · 码词',
+      title: '墨书',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
@@ -148,7 +150,7 @@ class _HomeShellState extends ConsumerState<HomeShell>
   }
 
   void _goToTab(int index) {
-    if (index < 0 || index >= 4) return;
+    if (index < 0 || index >= 5) return;
     if (index == _index) return;
     HapticFeedback.selectionClick();
     setState(() => _index = index);
@@ -161,9 +163,8 @@ class _HomeShellState extends ConsumerState<HomeShell>
     }
   }
 
-  // 4 tabs: 单词 (today/learning) | 阅读 (AI articles, BYOK) |
-  // 图表 (stats) | 词书 (library search + catalog).
-  // Settings is a secondary page opened from the 词书 tab.
+  // 5 tabs: 单词 (today/learning) | 阅读 (AI articles, BYOK) |
+  // 图表 (stats) | 词书 (library search + catalog) | 设置 (preferences).
   // 复习 is intentionally removed — due-for-review words are folded
   // into the learning flow itself.
   //
@@ -186,6 +187,7 @@ class _HomeShellState extends ConsumerState<HomeShell>
       key: const PageStorageKey('tab-library'),
       onGoWords: () => _goToTab(0),
     ),
+    const SettingsScreen(key: PageStorageKey('tab-settings')),
   ];
 
   @override
@@ -209,7 +211,7 @@ class _HomeShellState extends ConsumerState<HomeShell>
   }
 }
 
-/// 4-tab bottom navigation with iOS-style frosted glass effect.
+/// 5-tab bottom navigation with iOS-style frosted glass effect.
 class _PhoneBottomNav extends StatelessWidget {
   final int index;
   final ValueChanged<int> onTap;
@@ -219,9 +221,14 @@ class _PhoneBottomNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+      padding: const EdgeInsets.fromLTRB(
+        AppSpacing.x3,
+        0,
+        AppSpacing.x3,
+        AppSpacing.x2,
+      ),
       child: AppGlassSurface(
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(AppRadii.xxl),
         child: SafeArea(
           top: false,
           minimum: const EdgeInsets.symmetric(horizontal: 4),
@@ -232,10 +239,11 @@ class _PhoneBottomNav extends StatelessWidget {
               selectedIndex: index,
               onDestinationSelected: onTap,
               backgroundColor: Colors.transparent,
-              // iOS tint-only selection: no filled pill behind the active
-              // destination — the bronze icon + label carry the selected
-              // state, which reads cleaner over the liquid-glass bar.
-              indicatorColor: Colors.transparent,
+              // Subtle bronze-tinted pill behind the active destination so
+              // selection reads as a spatial shift, not just a colour change
+              // (§1 — response; §8 — hint the state). Kept faint so it
+              // doesn't muddy the liquid-glass bar.
+              indicatorColor: AppColors.primary.withValues(alpha: 0.12),
               surfaceTintColor: Colors.transparent,
               elevation: 0,
               height: 60,
@@ -267,41 +275,12 @@ class _PhoneBottomNav extends StatelessWidget {
                   ),
                   label: '词书',
                 ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-/// Placeholder for tabs that aren't built yet. Kept for future use
-/// when we add a 5th tab and want to gate it before content lands.
-/// (Currently unused — all 4 tabs have real content.)
-// ignore: unused_element
-class _ComingSoonPage extends StatelessWidget {
-  final String title;
-  final IconData icon;
-  const _ComingSoonPage({required this.title, required this.icon});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.of(context).background,
-      body: SafeArea(
-        child: Center(
-          child: AppCard(
-            child: SizedBox(
-              width: 240,
-              height: 180,
-              child: Center(
-                child: Icon(
-                  icon,
-                  size: 56,
-                  color: AppColors.of(context).inkSubtle,
+                NavigationDestination(
+                  icon: Icon(Icons.settings_outlined),
+                  selectedIcon: Icon(Icons.settings, color: AppColors.primary),
+                  label: '设置',
                 ),
-              ),
+              ],
             ),
           ),
         ),
@@ -358,6 +337,9 @@ class _TodayPageState extends ConsumerState<TodayPage> {
   Widget build(BuildContext context) {
     final session = ref.watch(learningSessionProvider);
     final clearingLearningData = ref.watch(learningDataClearInProgressProvider);
+    final mode = ref.watch(learningPreferencesProvider).learningMode;
+    final reduceMotion =
+        MediaQuery.maybeOf(context)?.disableAnimations ?? false;
 
     return MediaQuery.withClampedTextScaling(
       minScaleFactor: 1,
@@ -370,23 +352,63 @@ class _TodayPageState extends ConsumerState<TodayPage> {
               const SizedBox(height: AppSpacing.x2),
             ],
             Expanded(
-              child: clearingLearningData
-                  ? const _LearningDataClearView()
-                  : switch (session.phase) {
-                      SessionPhase.loading => const Center(
-                        child: CircularProgressIndicator(
-                          color: AppColors.primary,
+              child: Stack(
+                // Full-size constraints so shrink-wrapping phase views
+                // (loading spinner, swipe pager, empty state) stay
+                // centered instead of hugging the leading edge.
+                fit: StackFit.expand,
+                children: [
+                  clearingLearningData
+                      ? const _LearningDataClearView()
+                      // Crossfade session phases (loading → asking →
+                      // wrongDetail → finished) so the learning loop
+                      // never hard-cuts. Reduced-motion skips the fade.
+                      : AnimatedSwitcher(
+                          duration: reduceMotion
+                              ? Duration.zero
+                              : AppMotion.medium,
+                          switchInCurve: AppMotion.easeOut,
+                          switchOutCurve: AppMotion.easeOut,
+                          transitionBuilder: (child, animation) =>
+                              FadeTransition(opacity: animation, child: child),
+                          child: switch (session.phase) {
+                            SessionPhase.loading => const Center(
+                              key: ValueKey('loading'),
+                              child: CircularProgressIndicator(
+                                color: AppColors.primary,
+                              ),
+                            ),
+                            SessionPhase.asking =>
+                              mode == LearningMode.swipe
+                                  ? SwipeView(
+                                      key: const ValueKey('swipe'),
+                                      session: session,
+                                    )
+                                  : AskingView(
+                                      key: const ValueKey('asking'),
+                                      session: session,
+                                    ),
+                            SessionPhase.wrongDetail => WrongDetailView(
+                              key: const ValueKey('wrong'),
+                              session: session,
+                            ),
+                            SessionPhase.finished => _NoLearningContent(
+                              key: const ValueKey('finished'),
+                              onGoReading: _goReading,
+                              onGoLibrary: _goLibrary,
+                            ),
+                          },
                         ),
-                      ),
-                      SessionPhase.asking => AskingView(session: session),
-                      SessionPhase.wrongDetail => WrongDetailView(
-                        session: session,
-                      ),
-                      SessionPhase.finished => _NoLearningContent(
-                        onGoReading: _goReading,
-                        onGoLibrary: _goLibrary,
-                      ),
-                    },
+                  if (!clearingLearningData &&
+                      (session.phase == SessionPhase.asking ||
+                          session.phase == SessionPhase.wrongDetail))
+                    Positioned(
+                      top: AppSpacing.x2,
+                      right: AppSpacing.x3,
+                      child: ModeToggleButton(current: mode),
+                    ),
+                ],
+              ),
             ),
           ],
         ),
@@ -421,6 +443,7 @@ class _NoLearningContent extends StatelessWidget {
   final VoidCallback onGoLibrary;
 
   const _NoLearningContent({
+    super.key,
     required this.onGoReading,
     required this.onGoLibrary,
   });
@@ -455,13 +478,16 @@ class _NoLearningContent extends StatelessWidget {
               Expanded(
                 child: OutlinedButton.icon(
                   onPressed: onGoReading,
+                  style: OutlinedButton.styleFrom(
+                    minimumSize: const Size.fromHeight(50),
+                  ),
                   icon: const Icon(Icons.menu_book_outlined, size: 18),
                   label: const Text('去阅读'),
                 ),
               ),
               const SizedBox(width: AppSpacing.x3),
               Expanded(
-                child: FilledButton.icon(
+                child: EditorialPrimaryButton(
                   onPressed: onGoLibrary,
                   icon: const Icon(Icons.library_books_outlined, size: 18),
                   label: const Text('选择词书'),

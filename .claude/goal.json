@@ -1,0 +1,12 @@
+{
+  "goalId": "c0e8e4ab-95b6-4b6b-96bc-af85c011a715",
+  "objective": "完整实现这个plan",
+  "status": "active",
+  "createdAt": 1784949082672,
+  "updatedAt": 1784979992351,
+  "turns": 0,
+  "maxTurns": 50,
+  "tokenBudget": null,
+  "tokensUsed": 94139,
+  "tokensAtStart": 0
+}

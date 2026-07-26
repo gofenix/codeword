@@ -37,7 +37,8 @@ class EmptyHint extends StatelessWidget {
               const SizedBox(height: AppSpacing.x3),
               Text(
                 message,
-                style: AppTheme.mutedCaption(size: 14).copyWith(height: 1.4),
+                style: AppTheme.mutedCaption(size: 14, context: context)
+                    .copyWith(height: 1.4),
                 textAlign: TextAlign.center,
               ),
               if (showAction) ...[

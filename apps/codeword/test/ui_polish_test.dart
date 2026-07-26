@@ -62,7 +62,7 @@ void main() {
     );
     await tester.pump();
 
-    // Exactly one persistent IndexedStack backs all four tabs (its state is
+    // Exactly one persistent IndexedStack backs all five tabs (its state is
     // preserved across switches — the reason it is not wrapped in an
     // AnimatedSwitcher, which would rebuild and drop that state).
     expect(find.byType(IndexedStack), findsOneWidget);

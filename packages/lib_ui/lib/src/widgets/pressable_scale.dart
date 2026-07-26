@@ -7,14 +7,18 @@ import '../tokens.dart';
 /// Wraps a child with a subtle press interaction:
 ///   - scale to [scaleFactor] (default 0.97) on tap down
 ///   - opacity to [pressedOpacity] (default 0.85) on tap down
-///   - light haptic impact on tap release
+///   - light haptic impact on pointer-down
 ///
 /// The scale/opacity animate over [AppMotion.press] with [AppMotion.easeOut]
 /// so a press gives instant, responsive feedback and the release settles
-/// smoothly (a hard snap reads as cheap). When the platform requests
-/// reduced motion, the transform is dropped and only the opacity dip
-/// remains — feedback stays, vestibular motion goes.
-/// Use this anywhere a tap should *feel* tappable without being noisy.
+/// smoothly. [AnimatedScale]/[AnimatedOpacity] retarget on every value
+/// change, so a mid-flight re-press (press → release → press) stays
+/// continuous with no jump — the interruptibility Apple's fluid
+/// interfaces call for.
+///
+/// When the platform requests reduced motion, the scale transform is
+/// dropped and only the opacity dip remains — feedback stays, vestibular
+/// motion goes.
 ///
 /// The default [behavior] is [HitTestBehavior.translucent] so children with
 /// their own gesture detectors (buttons inside a tappable card) still
@@ -47,23 +51,22 @@ class _PressableScaleState extends State<PressableScale> {
   bool _down = false;
 
   void _setDown(bool v) {
-    // Only call setState if the widget is still mounted AND the value
-    // actually changed. The "mounted" check is critical because
-    // onTap?.call() below can push a new route that disposes this
-    // widget — if a pointer event (cancel/up) arrives right after, we
-    // must not call setState on an unmounted state.
     if (mounted && _down != v) setState(() => _down = v);
   }
 
-  void _onTap() {
+  void _onTapDown() {
+    // Haptic on pointer-down, not release, so the tactile confirmation
+    // coincides with the visual press — the instant the user acts.
     if (widget.haptic && _isMobilePlatform) {
       HapticFeedback.lightImpact();
     }
+  }
+
+  void _onTap() {
     widget.onTap?.call();
   }
 
-  /// Haptic feedback only on mobile platforms. On desktop HapticFeedback
-  /// is a no-op but on some platforms prints warnings.
+  /// Haptic feedback only on mobile platforms.
   static bool get _isMobilePlatform {
     switch (defaultTargetPlatform) {
       case TargetPlatform.iOS:
@@ -80,22 +83,21 @@ class _PressableScaleState extends State<PressableScale> {
   @override
   Widget build(BuildContext context) {
     final hasOnTap = widget.onTap != null;
-    // Honor the OS "reduce motion" setting: keep the opacity feedback (it
-    // aids comprehension) but drop the scale transform (vestibular motion).
     final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     final scale = _down && !reduceMotion ? widget.scaleFactor : 1.0;
     final opacity = _down ? widget.pressedOpacity : 1.0;
     return GestureDetector(
       behavior: widget.behavior,
-      onTapDown: hasOnTap ? (_) => _setDown(true) : null,
-      onTapUp: hasOnTap
+      onTapDown: hasOnTap
           ? (_) {
-              _setDown(false);
-              // _onTap is called via the onTap handler so Flutter's
-              // built-in tap-semantics semantics are preserved (tap
-              // cancel after drag still works correctly).
+              _setDown(true);
+              _onTapDown();
             }
           : null,
+      onTapUp: hasOnTap ? (_) => _setDown(false) : null,
+      // Reset press state when the gesture is cancelled (e.g. the user
+      // drags to scroll and the scrollable wins the arena). Without this
+      // the widget stays visually pressed until the next rebuild.
       onTapCancel: hasOnTap ? () => _setDown(false) : null,
       onTap: hasOnTap ? _onTap : null,
       child: AnimatedScale(

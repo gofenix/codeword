@@ -5,22 +5,28 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
+enum LearningMode { quiz, swipe }
+
 class LearningPreferences {
   final bool spellingEnabled;
   final bool listeningEnabled;
+  final LearningMode learningMode;
 
   const LearningPreferences({
     this.spellingEnabled = false,
     this.listeningEnabled = false,
+    this.learningMode = LearningMode.quiz,
   });
 
   LearningPreferences copyWith({
     bool? spellingEnabled,
     bool? listeningEnabled,
+    LearningMode? learningMode,
   }) {
     return LearningPreferences(
       spellingEnabled: spellingEnabled ?? this.spellingEnabled,
       listeningEnabled: listeningEnabled ?? this.listeningEnabled,
+      learningMode: learningMode ?? this.learningMode,
     );
   }
 
@@ -28,23 +34,29 @@ class LearningPreferences {
     return LearningPreferences(
       spellingEnabled: json['spellingEnabled'] == true,
       listeningEnabled: json['listeningEnabled'] == true,
+      learningMode: json['learningMode'] == 'swipe'
+          ? LearningMode.swipe
+          : LearningMode.quiz,
     );
   }
 
   Map<String, dynamic> toJson() => {
     'spellingEnabled': spellingEnabled,
     'listeningEnabled': listeningEnabled,
+    'learningMode': learningMode.name,
   };
 
   @override
   bool operator ==(Object other) {
     return other is LearningPreferences &&
         other.spellingEnabled == spellingEnabled &&
-        other.listeningEnabled == listeningEnabled;
+        other.listeningEnabled == listeningEnabled &&
+        other.learningMode == learningMode;
   }
 
   @override
-  int get hashCode => Object.hash(spellingEnabled, listeningEnabled);
+  int get hashCode =>
+      Object.hash(spellingEnabled, listeningEnabled, learningMode);
 }
 
 abstract class LearningPreferencesBackend {
@@ -128,6 +140,11 @@ class LearningPreferencesNotifier extends StateNotifier<LearningPreferences> {
   Future<void> setListeningEnabled(bool enabled) async {
     await ready;
     await _persist(state.copyWith(listeningEnabled: enabled));
+  }
+
+  Future<void> setLearningMode(LearningMode mode) async {
+    await ready;
+    await _persist(state.copyWith(learningMode: mode));
   }
 
   Future<void> _persist(LearningPreferences next) async {

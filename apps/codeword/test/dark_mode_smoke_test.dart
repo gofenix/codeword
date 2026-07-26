@@ -75,7 +75,10 @@ void main() {
           .first,
     );
     final decoration = container.decoration as BoxDecoration;
-    expect(decoration.color, AppColors.surfaceDark);
+    // Dark mode paints a subtle warm paper gradient (§12) instead of a
+    // flat fill — verify the gradient resolves to the dark surface ramp.
+    expect(decoration.color, isNull);
+    expect(decoration.gradient, AppMaterials.paperDark);
   });
 
   testWidgets('compact icon buttons keep a >=44px tap target', (tester) async {

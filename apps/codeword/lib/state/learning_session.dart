@@ -1385,6 +1385,32 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     );
   }
 
+  /// Swipe-mode answer. [dwellMs] is how long the card was visible, which
+  /// grades SM-2 quality: shorter dwell = better mastery. The UI shows
+  /// this judgment to the user (see SwipeView) so it's not a hidden
+  /// signal — the user sees "熟悉 / 再看看 / 不熟悉" and can learn from it.
+  AnswerQuality answerSwipe({required int dwellMs}) {
+    if (state.phase != SessionPhase.asking) return AnswerQuality.good;
+    final q = state.currentQuestion;
+    if (q == null) return AnswerQuality.good;
+    final AnswerQuality quality;
+    if (dwellMs < 2000) {
+      quality = AnswerQuality.easy;
+    } else if (dwellMs < 5000) {
+      quality = AnswerQuality.good;
+    } else if (dwellMs < 10000) {
+      quality = AnswerQuality.hard;
+    } else {
+      quality = AnswerQuality.again;
+    }
+    _recordAnswerWithQuality(
+      quality: quality,
+      selectedIndex: null,
+      showWrongDetail: false,
+    );
+    return quality;
+  }
+
   void _recordAnswer({required bool correct, required int? selectedIndex}) {
     final q = state.currentQuestion;
     if (q == null) return;
@@ -1393,12 +1419,25 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
               ? AnswerQuality.hard
               : AnswerQuality.good)
         : AnswerQuality.again;
+    _recordAnswerWithQuality(quality: quality, selectedIndex: selectedIndex);
+  }
+
+  void _recordAnswerWithQuality({
+    required AnswerQuality quality,
+    required int? selectedIndex,
+    bool showWrongDetail = true,
+  }) {
+    final q = state.currentQuestion;
+    if (q == null) return;
+    final correct = quality != AnswerQuality.again;
     ref
         .read(reviewStateProvider.notifier)
         .recordAnswer(wordId: q.word.id, quality: quality.toSm2Quality());
     _recordActiveStudyTime();
     unawaited(_eagerFlush());
-    if (correct) {
+    if (correct || !showWrongDetail) {
+      // Correct, or swipe mode (which always advances — the quality is
+      // recorded for scheduling but never interrupts the browse flow).
       final nextIndex = state.currentIndex + 1;
       state = LearningSessionState(
         phase: nextIndex >= state.questions.length
@@ -1406,7 +1445,8 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
             : SessionPhase.asking,
         questions: state.questions,
         currentIndex: nextIndex,
-        correctCount: state.correctCount + 1,
+        correctCount:
+            correct ? state.correctCount + 1 : state.correctCount,
       );
       _compactConsumed();
       unawaited(_ensureBuffer(force: state.questions.isEmpty));

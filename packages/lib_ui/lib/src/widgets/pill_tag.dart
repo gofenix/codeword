@@ -10,7 +10,9 @@ import '../tokens.dart';
 ///   * [PillVariant.soft] → `color.withValues(alpha: 0.15)` background,
 ///     `color` as foreground. The base `color` MUST be dark enough to
 ///     hit WCAG AA against the card surface, which is guaranteed by the
-///     values in [AppColors] level/qwerty palettes.
+///     values in [AppColors] level/qwerty palettes. In dark mode the
+///     foreground is lightened toward white so the deep base colours
+///     stay readable on the dark card.
 ///   * [PillVariant.solid] → `color` as background, foreground is
 ///     chosen between white and ink based on the background's luminance
 ///     so a pastel-colored solid pill never has invisible white text.
@@ -64,8 +66,9 @@ class PillTag extends StatelessWidget {
       final lum = base.computeLuminance();
       lightBg = lum > 0.5;
     }
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     final fg = variant == PillVariant.soft
-        ? base
+        ? (isDark ? Color.lerp(base, Colors.white, 0.45)! : base)
         : (lightBg ? AppColors.ink : AppColors.onPrimary);
 
     return Container(

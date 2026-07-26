@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "goals": [
+    {
+      "goalId": "32572fc4-50b2-4020-8fce-4020809d5fea",
+      "runId": "8ea79b06-ac43-4dec-af1c-c67241172b4f",
+      "condition": "发现bug，并修复",
+      "successCriteria": "",
+      "constraints": "",
+      "mode": "normal",
+      "sessionID": "ses_063bc7731ffeZDvjtEUZPHEofU",
+      "turnCount": 0,
+      "startedAt": 1785033099496,
+      "pausedAt": 0,
+      "totalTokens": 101173,
+      "usage": {
+        "input": 112782,
+        "output": 61629,
+        "reasoning": 0,
+        "cacheRead": 3291893,
+        "cacheWrite": 0,
+        "cost": 0,
+        "costKnown": true
+      },
+      "options": {
+        "maxTurns": 10,
+        "maxDurationMs": 900000,
+        "maxTokens": 200000,
+        "minDelayMs": 1500,
+        "maxRecentMessages": 50,
+        "noProgressTokenThreshold": 50,
+        "noProgressTurnsBeforePause": 2,
+        "noToolCallTurnsBeforePause": 2,
+        "budgetWrapupRatio": 0.8,
+        "warnTurnsRemaining": 3,
+        "warnDurationMsRemaining": 60000,
+        "warnTokensRemaining": 25000,
+        "maxPromptFailures": 3,
+        "resultRetentionMs": 604800000,
+        "maxStoredResults": 200
+      },
+      "lastStatus": "Goal paused after user interruption. Run /goal resume to continue.",
+      "lastAssistantText": "",
+      "lastAssistantMessageID": "",
+      "lastContinueAt": 0,
+      "lastProgressAt": 1785034188753,
+      "noProgressTurns": 0,
+      "noToolCallTurns": 0,
+      "blockedReason": "",
+      "budgetWrapupSent": false,
+      "stopped": true,
+      "stopReason": "user interrupted",
+      "promptFailures": 0,
+      "formatFailures": 0,
+      "executionContext": null,
+      "continuationClaim": null,
+      "messageIDs": [
+        "msg_f9c4388fd0010W6G9Af6CH9Aig",
+        "msg_f9c4397ab001ggys64HR39l7cm",
+        "msg_f9c43a63a001niouV6WMF4SW3R",
+        "msg_f9c43b18d001F3b7EG3twUpeYV",
+        "msg_f9c4428a3001PKjBmyH31ixGfd",
+        "msg_f9c4455d2001glSSSa3r67k3ud",
+        "msg_f9c447c69001bbsmSLpNgnW4h5",
+        "msg_f9c4485a600128ggEX49nuY74T",
+        "msg_f9c4494ef0013ysk792gAZPN4J",
+        "msg_f9c449d7b001HKHR7phoaXMNRx",
+        "msg_f9c44a7d1001hvsJzWHke03BbH",
+        "msg_f9c44bc87001cm2o00wo662ali",
+        "msg_f9c45736c001rxtDFlw3L5Ka6H",
+        "msg_f9c45886e001sc7NLD3TNj0ubt",
+        "msg_f9c4592eb001CEnrU1XKkRn8sZ",
+        "msg_f9c459de4001InINkY1mTeMsvh",
+        "msg_f9c45aab0001Ofs72phYFm8wuH",
+        "msg_f9c4607c5001sy0iuew3hlxaDg",
+        "msg_f9c463d03001rbA04TWDewTZt0",
+        "msg_f9c46c106001atRZLIgfo1pNPH",
+        "msg_f9c47104c001YxqhjB5UrG932Z",
+        "msg_f9c4729280014qkQ1lXjaMbWTt",
+        "msg_f9c47331e001d18NuRsccXr6EE",
+        "msg_f9c473c26001Dsfea0MsJFx7fX",
+        "msg_f9c47bbd90010kcN8zn436tqsp",
+        "msg_f9c480fa8001alTLuXzGDyLUWo",
+        "msg_f9c48c6fc001t5htXa7LGC7cQA",
+        "msg_f9c48eea1001TDTx7YYqMIYbCM",
+        "msg_f9c48f816001172E57w9tEas5P",
+        "msg_f9c490370001Kq6Klltm0k3ij3",
+        "msg_f9c498af1001M1hB1PlckAnHFc",
+        "msg_f9c4a29e4001hcGN6o4HQ3MTxJ",
+        "msg_f9c4ae3c9001E3kV4OYY8LKl8Y",
+        "msg_f9c4b967e0013cMpbfM3387DAD",
+        "msg_f9c4bece6001F5nAfKAcRYybRf",
+        "msg_f9c4cd1eb001nlJDMzCnrU7Fkh",
+        "msg_f9c4d6c73001LtBase4np7Rzwq",
+        "msg_f9c4eef7a001EfGRfD8PovNut5",
+        "msg_f9c501574001oVEPfgzZNZ2oKP",
+        "msg_f9c507fe9001LSZR3rIVZxsfyJ",
+        "msg_f9c50cbde001xiNL0O5CW31zHB",
+        "msg_f9c51f67f001gNBynZjcf5VEM5",
+        "msg_f9c52d335001iwQm5MoV7YhBAu",
+        "msg_f9c5334be001d1yArhO5C5H6ha",
+        "msg_f9c533f76001UPWHso2zRu6f9p",
+        "msg_f9c53509d001GjU6hKs2Cq3AsW",
+        "msg_f9c535bb7001HmXVpMQh8xp1g9",
+        "msg_f9c540b350018XjnNuioHSTdTK",
+        "msg_f9c541af8001NDTxH6U8KUV4yM"
+      ],
+      "history": [
+        {
+          "type": "set",
+          "detail": "Goal created with limits: 10 auto-continues, 900s, 200,000 context tokens.",
+          "timestamp": 1785033099497
+        },
+        {
+          "type": "paused",
+          "detail": "Paused immediately when a new human message arrived; latest instruction wins.",
+          "timestamp": 1785033099506
+        },
+        {
+          "type": "paused",
+          "detail": "Paused after OpenCode reported a terminal provider error: UnknownError: {\"type\":\"api_error\",\"message\":\"upstream stream error: rpc error: code = 1 desc = Cancelled by backend: kv_cache_allocate_failed [biz error]\"}",
+          "timestamp": 1785034142740
+        },
+        {
+          "type": "paused",
+          "detail": "Paused after OpenCode reported a terminal provider error: UnknownError: {\"type\":\"api_error\",\"message\":\"upstream stream error: rpc error: code = 1 desc = Cancelled by backend: kv_cache_allocate_failed [biz error]\"}",
+          "timestamp": 1785034142871
+        },
+        {
+          "type": "paused",
+          "detail": "Paused after OpenCode reported that the active turn was aborted.",
+          "timestamp": 1785034175682
+        },
+        {
+          "type": "paused",
+          "detail": "Paused after OpenCode reported that the active turn was aborted.",
+          "timestamp": 1785034175817
+        },
+        {
+          "type": "paused",
+          "detail": "Paused after OpenCode reported that the active turn was aborted.",
+          "timestamp": 1785034190949
+        },
+        {
+          "type": "paused",
+          "detail": "Paused after OpenCode reported that the active turn was aborted.",
+          "timestamp": 1785034191068
+        }
+      ],
+      "checkpoints": [],
+      "lastCheckpoint": null,
+      "skipNextTerminalCheck": false,
+      "focused": true
+    }
+  ],
+  "results": [],
+  "archives": [],
+  "orderedSessions": []
+}

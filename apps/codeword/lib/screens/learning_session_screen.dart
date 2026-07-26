@@ -1,12 +1,15 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/physics.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
 import '../services/tts_service.dart';
+import '../state/learning_preferences.dart';
 import '../state/learning_session.dart';
 
 /// Compute a font size for [text] that fits within a phone-width budget.
@@ -58,32 +61,96 @@ class _LearningSessionScreenState extends ConsumerState<LearningSessionScreen> {
   @override
   Widget build(BuildContext context) {
     final session = ref.watch(learningSessionProvider);
+    final mode = ref.watch(learningPreferencesProvider).learningMode;
     ref.watch(vocabMetaProvider)[widget.vocabId];
 
+    final reduceMotion =
+        MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     return Scaffold(
       backgroundColor: AppColors.of(context).background,
-      body: MediaQuery.withClampedTextScaling(
-        minScaleFactor: 1,
-        maxScaleFactor: 1.3,
-        child: SafeArea(
-          child: switch (session.phase) {
-            SessionPhase.loading => const Center(
-              child: CircularProgressIndicator(color: AppColors.primary),
+      body: DecoratedBox(
+        decoration: AppMaterials.canvasDecoration(context),
+        child: MediaQuery.withClampedTextScaling(
+          minScaleFactor: 1,
+          maxScaleFactor: 1.3,
+          child: SafeArea(
+            child: Stack(
+              // Full-size constraints so shrink-wrapping phase views
+              // (loading spinner, swipe pager, empty state) stay
+              // centered instead of hugging the leading edge.
+              fit: StackFit.expand,
+              children: [
+                // Crossfade between session phases (loading → asking →
+                // wrongDetail → finished) so the high-frequency learning
+                // loop never hard-cuts. Reduced-motion skips the fade.
+                AnimatedSwitcher(
+                  duration:
+                      reduceMotion ? Duration.zero : AppMotion.medium,
+                  switchInCurve: AppMotion.easeOut,
+                  switchOutCurve: AppMotion.easeOut,
+                  transitionBuilder: (child, animation) => FadeTransition(
+                    opacity: animation,
+                    child: child,
+                  ),
+                  child: switch (session.phase) {
+                    SessionPhase.loading => const Center(
+                      key: ValueKey('loading'),
+                      child: CircularProgressIndicator(
+                        color: AppColors.primary,
+                      ),
+                    ),
+                    SessionPhase.asking => mode == LearningMode.swipe
+                        ? SwipeView(
+                            session: session,
+                            key: const ValueKey('swipe'),
+                          )
+                        : AskingView(
+                            session: session,
+                            key: const ValueKey('asking'),
+                          ),
+                    SessionPhase.wrongDetail => WrongDetailView(
+                      session: session,
+                      key: const ValueKey('wrong'),
+                    ),
+                    SessionPhase.finished => const _FinishedView(
+                      key: ValueKey('finished'),
+                    ),
+                  },
+                ),
+                if (session.phase == SessionPhase.asking ||
+                    session.phase == SessionPhase.wrongDetail)
+                  Positioned(
+                    top: AppSpacing.x2,
+                    right: AppSpacing.x3,
+                    child: ModeToggleButton(current: mode),
+                  ),
+              ],
             ),
-            SessionPhase.asking => AskingView(
-              session: session,
-              key: const ValueKey('asking'),
-            ),
-            SessionPhase.wrongDetail => WrongDetailView(
-              session: session,
-              key: const ValueKey('wrong'),
-            ),
-            SessionPhase.finished => const _FinishedView(
-              key: ValueKey('finished'),
-            ),
-          },
+          ),
         ),
       ),
+    );
+  }
+}
+
+class ModeToggleButton extends ConsumerWidget {
+  final LearningMode current;
+  const ModeToggleButton({required this.current, super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isSwipe = current == LearningMode.swipe;
+    return AppGlassIconButton(
+      tooltip: isSwipe ? '切换到选择题' : '切换到卡片',
+      icon: isSwipe ? Icons.quiz_outlined : Icons.swipe_vertical_rounded,
+      size: 20,
+      color: AppColors.of(context).inkMuted,
+      onPressed: () {
+        HapticFeedback.selectionClick();
+        ref
+            .read(learningPreferencesProvider.notifier)
+            .setLearningMode(isSwipe ? LearningMode.quiz : LearningMode.swipe);
+      },
     );
   }
 }
@@ -165,24 +232,25 @@ class _AskingViewState extends ConsumerState<AskingView> {
     });
     if (correct) {
       HapticFeedback.lightImpact();
-      // No auto-play on correct — the user already knows the word.
-      // Audio is reserved for: (1) listening questions where audio IS
-      // the prompt, (2) the wrong-answer detail card where hearing the
-      // correct pronunciation helps learning. Playing here just makes
-      // the flow feel laggy.
-      Future.delayed(AppMotion.answerCorrect, () {
+      Future.delayed(_answerDelay(correct), () {
         if (!mounted || !_isCurrentQuestion(questionIdentity)) return;
         ref.read(learningSessionProvider.notifier).answer(i);
       });
     } else {
       HapticFeedback.heavyImpact();
-      // Brief pause so the user sees the red highlight before the
-      // immersive wrong-answer card takes over.
-      Future.delayed(AppMotion.answerWrong, () {
+      Future.delayed(_answerDelay(correct), () {
         if (!mounted || !_isCurrentQuestion(questionIdentity)) return;
         ref.read(learningSessionProvider.notifier).answer(i);
       });
     }
+  }
+
+  /// Answer-feedback delay, collapsed under reduced motion so the
+  /// high-frequency loop never waits on vestibular motion (§14).
+  Duration _answerDelay(bool correct) {
+    final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    if (reduceMotion) return Duration.zero;
+    return correct ? AppMotion.answerCorrect : AppMotion.answerWrong;
   }
 
   void _submitTyped() {
@@ -199,7 +267,7 @@ class _AskingViewState extends ConsumerState<AskingView> {
     });
     correct ? HapticFeedback.lightImpact() : HapticFeedback.heavyImpact();
     Future.delayed(
-      correct ? AppMotion.answerCorrect : AppMotion.answerWrong,
+      _answerDelay(correct),
       () {
         if (!mounted || !_isCurrentQuestion(questionIdentity)) return;
         ref.read(learningSessionProvider.notifier).answerTyped(submitted);
@@ -247,8 +315,7 @@ class _AskingViewState extends ConsumerState<AskingView> {
             ),
             Padding(
               padding: EdgeInsets.only(
-                bottom:
-                    AppSpacing.x6 + MediaQuery.of(context).viewPadding.bottom,
+                bottom: AppSpacing.x6 + MediaQuery.of(context).padding.bottom,
               ),
               child: Column(
                 children: [
@@ -271,7 +338,7 @@ class _AskingViewState extends ConsumerState<AskingView> {
                                   ? Icons.check_circle_rounded
                                   : Icons.cancel_rounded,
                               color: _typedCorrect!
-                                  ? AppColors.primary
+                                  ? AppColors.success
                                   : AppColors.danger,
                             ),
                     ),
@@ -279,9 +346,10 @@ class _AskingViewState extends ConsumerState<AskingView> {
                   const SizedBox(height: AppSpacing.x3),
                   SizedBox(
                     width: double.infinity,
-                    child: FilledButton(
+                    child: EditorialPrimaryButton(
                       onPressed: _locked ? null : _submitTyped,
-                      child: const Text('确认'),
+                      minHeight: 52,
+                      label: const Text('确认'),
                     ),
                   ),
                 ],
@@ -317,7 +385,7 @@ class _AskingViewState extends ConsumerState<AskingView> {
                 child: Column(
                   children: [
                     for (var i = 0; i < q.options.length; i++) ...[
-                      if (i > 0) const SizedBox(height: AppSpacing.x2),
+                      if (i > 0) const SizedBox(height: AppSpacing.x3),
                       _OptionTile(
                         label: String.fromCharCode(65 + i),
                         text: q.options[i],
@@ -476,17 +544,15 @@ class _WrongDetailViewState extends ConsumerState<WrongDetailView> {
                               ),
                             ),
                             const SizedBox(height: AppSpacing.x2),
-                            IconButton(
+                            AppGlassIconButton(
                               tooltip: '播放发音',
-                              icon: const Icon(
-                                Icons.volume_up_outlined,
-                                size: 22,
-                              ),
-                              color: AppColors.of(context).inkMuted,
                               onPressed: () {
                                 HapticFeedback.lightImpact();
                                 TtsService.instance.speak(text: w.word);
                               },
+                              icon: Icons.volume_up_outlined,
+                              size: 20,
+                              color: AppColors.primary,
                             ),
                             const SizedBox(height: AppSpacing.x6),
                             Text(
@@ -700,7 +766,7 @@ class _WordStage extends StatelessWidget {
             TtsService.instance.speak(text: word.word);
           },
           icon: Icons.volume_up_outlined,
-          size: 18,
+          size: 20,
           color: AppColors.primary,
         ),
         const SizedBox(height: AppSpacing.x2),
@@ -779,23 +845,24 @@ class _LargePlayButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // The pronunciation control is one of the sanctioned interactive-glass
+    // surfaces (design-qa): a floating glass disc, not a flat filled circle.
     return PressableScale(
       scaleFactor: 0.95,
       onTap: () {
         HapticFeedback.lightImpact();
         TtsService.instance.speak(text: word.word);
       },
-      child: Container(
-        width: 120,
-        height: 120,
-        decoration: BoxDecoration(
-          color: AppColors.primaryContainerOf(context),
-          shape: BoxShape.circle,
-        ),
-        child: const Icon(
-          Icons.volume_up_rounded,
-          size: 48,
-          color: AppColors.primary,
+      child: AppGlassSurface(
+        borderRadius: BorderRadius.circular(AppRadii.pill),
+        child: const SizedBox(
+          width: 120,
+          height: 120,
+          child: Icon(
+            Icons.volume_up_rounded,
+            size: 48,
+            color: AppColors.primary,
+          ),
         ),
       ),
     );
@@ -832,7 +899,9 @@ class _OptionTile extends StatelessWidget {
         child: ConstrainedBox(
           constraints: const BoxConstraints(minHeight: 60),
           child: AnimatedContainer(
-            duration: AppMotion.fast,
+            duration: MediaQuery.of(context).disableAnimations
+                ? Duration.zero
+                : AppMotion.fast,
             curve: AppMotion.easeOut,
             padding: const EdgeInsets.symmetric(
               horizontal: AppSpacing.x5,
@@ -849,8 +918,11 @@ class _OptionTile extends StatelessWidget {
                       Theme.of(context).brightness == Brightness.light
                   ? AppMaterials.paper
                   : null,
-              borderRadius: BorderRadius.circular(AppRadii.sm),
-              border: Border.all(color: colors.border, width: 1),
+              borderRadius: BorderRadius.circular(AppRadii.md),
+              border: Border.all(
+                color: colors.border,
+                width: AppBorders.hairline,
+              ),
               boxShadow:
                   state == _OptionState.normal &&
                       Theme.of(context).brightness == Brightness.light
@@ -860,7 +932,9 @@ class _OptionTile extends StatelessWidget {
             child: Row(
               children: [
                 AnimatedContainer(
-                  duration: AppMotion.fast,
+                  duration: MediaQuery.of(context).disableAnimations
+                      ? Duration.zero
+                      : AppMotion.fast,
                   curve: AppMotion.easeOut,
                   width: 30,
                   height: 30,
@@ -904,22 +978,32 @@ class _OptionTile extends StatelessWidget {
 
   _OptionColors _colors(BuildContext context) {
     final palette = AppColors.of(context);
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    // Deep status colours sink into the dark card; brighten them toward
+    // white so the correct/wrong wash keeps the same legibility it has
+    // on the light paper surface.
+    final success = isDark
+        ? Color.lerp(AppColors.success, AppColors.surfaceDark, 0.4)!
+        : AppColors.success;
+    final danger = isDark
+        ? Color.lerp(AppColors.danger, AppColors.surfaceDark, 0.4)!
+        : AppColors.danger;
     switch (state) {
       case _OptionState.correct:
         return _OptionColors(
-          background: AppColors.sageSoft,
-          border: AppColors.success,
-          text: AppColors.success,
-          badgeBackground: AppColors.success,
-          badgeText: AppColors.onPrimary,
+          background: AppColors.sageContainerOf(context),
+          border: success,
+          text: success,
+          badgeBackground: success,
+          badgeText: isDark ? AppColors.ink : AppColors.onPrimary,
         );
       case _OptionState.wrong:
         return _OptionColors(
-          background: AppColors.danger.withValues(alpha: 0.08),
-          border: AppColors.danger,
-          text: AppColors.danger,
-          badgeBackground: AppColors.danger,
-          badgeText: AppColors.onPrimary,
+          background: danger.withValues(alpha: isDark ? 0.16 : 0.08),
+          border: danger,
+          text: danger,
+          badgeBackground: danger,
+          badgeText: isDark ? AppColors.ink : AppColors.onPrimary,
         );
       case _OptionState.dimmed:
         return _OptionColors(
@@ -981,3 +1065,512 @@ class _FinishedView extends StatelessWidget {
     );
   }
 }
+
+/// Douyin/TikTok-style full-screen vertical pager. Each word fills the
+/// whole screen; the next word sits one screen-height below and slides
+/// up as you drag. A fast flick (or dragging past 30% of the screen)
+/// flips to the next word; otherwise the page springs back. Only
+/// swiping up advances — swiping down does nothing (no going back).
+/// Dwell time grades SM-2 mastery, and the result is shown to the user
+/// as a brief "已掌握 / 记住了 / 再看看 / 不熟悉" pill so the judgment
+/// is visible, not hidden.
+class SwipeView extends ConsumerStatefulWidget {
+  final LearningSessionState session;
+  const SwipeView({required this.session, super.key});
+
+  @override
+  ConsumerState<SwipeView> createState() => _SwipeViewState();
+}
+
+class _SwipeViewState extends ConsumerState<SwipeView>
+    with TickerProviderStateMixin {
+  /// Fraction of screen height you must drag past to flip the page.
+  static const _flipThreshold = 0.3;
+
+  /// Velocity (px/s) above which a flick flips regardless of distance.
+  static const _flickVelocity = 500.0;
+
+  /// Rubber-band constant (Designing Fluid Interfaces sample code).
+  static const _rubberBandConstant = 0.55;
+
+  double _dragDy = 0;
+  /// True finger position (1:1 with the pointer). [_dragDy] is the
+  /// rubber-banded display value derived from this — keeping them
+  /// separate prevents the rubber-band from being compounded across
+  /// frames (which would make the page drift opposite the finger).
+  double _rawDragDy = 0;
+  DateTime? _cardShownAt;
+  String? _activeWordId;
+  late final AnimationController _controller;
+  Animation<Offset>? _anim;
+  bool _animating = false;
+
+  /// Cached page widgets so a drag/animation frame only re-applies the
+  /// transform instead of rebuilding the entire subtree (§11).
+  Widget? _currentPage;
+  Widget? _nextPage;
+
+  /// Real-time dwell progress (0.0 → 1.0 over 15s) driving the bottom
+  /// mastery bar so the user sees the card "filling up" as they study.
+  double _dwellProgress = 0;
+  late final Ticker _dwellTicker;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(vsync: this);
+    _dwellTicker = createTicker(_onDwellTick)..start();
+    _onQuestionChanged();
+  }
+
+  @override
+  void didUpdateWidget(covariant SwipeView old) {
+    super.didUpdateWidget(old);
+    if (widget.session.currentQuestion?.word.id !=
+        old.session.currentQuestion?.word.id) {
+      _onQuestionChanged();
+    }
+  }
+
+  void _onQuestionChanged() {
+    final id = widget.session.currentQuestion?.word.id;
+    if (id == _activeWordId) return;
+    _activeWordId = id;
+    _dragDy = 0;
+    _rawDragDy = 0;
+    _anim = null;
+    _animating = false;
+    _controller.value = 0;
+    _cardShownAt = DateTime.now();
+    _rebuildPages();
+    if (id != null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        final text = widget.session.currentQuestion?.word.word;
+        if (text != null) TtsService.instance.speak(text: text);
+      });
+    }
+  }
+
+  /// Rebuild cached page widgets — only called when the question changes,
+  /// not on every drag/animation frame.
+  void _rebuildPages() {
+    final q = widget.session.currentQuestion;
+    final nextQ = widget.session.questions.length >
+            widget.session.currentIndex + 1
+        ? widget.session.questions[widget.session.currentIndex + 1]
+        : null;
+    _currentPage = q != null
+        ? _SwipePage(word: q.word, dwellProgress: _dwellProgress)
+        : null;
+    _nextPage = nextQ != null
+        ? _SwipePage(word: nextQ.word, dwellProgress: 0)
+        : null;
+  }
+
+  /// Display-synced dwell tick — replaces the old 50ms Timer so the
+  /// progress bar updates in lockstep with the frame clock (§11).
+  void _onDwellTick(Duration elapsed) {
+    if (!mounted || _cardShownAt == null) return;
+    final ms = DateTime.now().difference(_cardShownAt!).inMilliseconds;
+    final p = (ms / 15000).clamp(0.0, 1.0);
+    if (p != _dwellProgress) {
+      _dwellProgress = p;
+      _rebuildPages();
+      setState(() {});
+    }
+  }
+
+  @override
+  void dispose() {
+    _dwellTicker.dispose();
+    _controller.dispose();
+    super.dispose();
+  }
+
+  /// Apple's rubber-band: the further past the boundary, the less the
+  /// element follows — real things slow before they stop (§9).
+  double _rubberBand(double overshoot, double dimension) {
+    if (overshoot == 0) return 0;
+    return (overshoot * dimension * _rubberBandConstant) /
+        (dimension + _rubberBandConstant * overshoot.abs());
+  }
+
+  void _onVerticalDragUpdate(DragUpdateDetails d) {
+    // Mid-drag catch: grab the page back while it's animating.
+    // Read the live on-screen value so there's no jump (§3).
+    if (_animating) {
+      _dragDy = _anim?.value.dy ?? _dragDy;
+      _rawDragDy = _dragDy;
+      _controller.stop();
+      _animating = false;
+      _anim = null;
+    }
+    final screenH = MediaQuery.of(context).size.height;
+    // Accumulate the true finger position, then apply rubber-band only
+    // for display — never feed the rubber-banded value back into the
+    // accumulator (§9).
+    _rawDragDy += d.delta.dy;
+    var display = _rawDragDy;
+    if (display > 0) {
+      display = _rubberBand(display, screenH);
+    }
+    setState(() => _dragDy = display);
+  }
+
+  void _onVerticalDragEnd(DragEndDetails d) {
+    if (_animating) return;
+    final velocity = d.velocity.pixelsPerSecond.dy;
+    final screenH = MediaQuery.of(context).size.height;
+    // Project where the page would land if the finger kept moving,
+    // using Apple's exponential-decay flick projection (§6).
+    final projected = _dragDy + AppMotion.projectMomentum(velocity);
+    // Only swiping UP (negative dy) flips to the next word.
+    if (projected < -screenH * _flipThreshold || velocity < -_flickVelocity) {
+      _flipToNext(velocity);
+    } else {
+      _springBack(velocity);
+    }
+  }
+
+  void _flipToNext(double velocity) {
+    _animating = true;
+    HapticFeedback.lightImpact();
+    final dwell = _cardShownAt != null
+        ? DateTime.now().difference(_cardShownAt!).inMilliseconds
+        : 3000;
+    final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    if (reduceMotion) {
+      _submitSwipe(dwellMs: dwell);
+      return;
+    }
+    final screenH = MediaQuery.of(context).size.height;
+    final begin = _dragDy;
+    final end = -screenH;
+    _anim = Tween<Offset>(
+      begin: Offset(0, begin),
+      end: Offset(0, end),
+    ).animate(_controller);
+    // Hand off the finger's release velocity so the page keeps moving
+    // at the same speed — no seam between drag and animation (§5).
+    // Normalize px/s velocity into the 0→1 simulation space.
+    final distance = end - begin;
+    final relVelocity = distance != 0 ? velocity / distance : 0.0;
+    _controller
+        .animateWith(
+          SpringSimulation(AppMotion.springDefault(), 0, 1, relVelocity),
+        )
+        .then((_) {
+          if (!mounted) return;
+          _submitSwipe(dwellMs: dwell);
+        });
+  }
+
+  void _springBack(double velocity) {
+    _animating = true;
+    final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    if (reduceMotion) {
+      _dragDy = 0;
+      _animating = false;
+      setState(() {});
+      return;
+    }
+    final begin = _dragDy;
+    const end = 0.0;
+    _anim = Tween<Offset>(
+      begin: Offset(0, begin),
+      end: Offset.zero,
+    ).animate(_controller);
+    // Under-damped momentum spring with the finger's velocity handed off
+    // — interruptible, no fixed duration, slight overshoot (§4, §5).
+    final distance = end - begin;
+    final relVelocity = distance != 0 ? velocity / distance : 0.0;
+    _controller
+        .animateWith(
+          SpringSimulation(AppMotion.springMomentum(), 0, 1, relVelocity),
+        )
+        .then((_) {
+          if (!mounted) return;
+          _dragDy = 0;
+          _anim = null;
+          _animating = false;
+          setState(() {});
+        });
+  }
+
+  void _submitSwipe({required int dwellMs}) {
+    ref.read(learningSessionProvider.notifier).answerSwipe(dwellMs: dwellMs);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final q = widget.session.currentQuestion;
+    if (q == null) {
+      return const Center(
+        child: CircularProgressIndicator(color: AppColors.primary),
+      );
+    }
+    final screenH = MediaQuery.of(context).size.height;
+    final offset = _anim?.value ?? Offset(0, _dragDy);
+    final currentPage = _currentPage;
+    final nextPage = _nextPage;
+
+    return SizedBox.expand(
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onVerticalDragUpdate: _onVerticalDragUpdate,
+        onVerticalDragEnd: _onVerticalDragEnd,
+        child: AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) {
+            return Stack(
+              fit: StackFit.expand,
+              children: [
+                if (nextPage != null)
+                  Transform.translate(
+                    offset: offset + Offset(0, screenH),
+                    child: nextPage,
+                  ),
+                if (currentPage != null)
+                  Transform.translate(
+                    offset: offset,
+                    child: currentPage,
+                  ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+/// One full-screen word page laid out like a dictionary entry: word at
+/// the top, then phonetic, audio, meaning, example, and a memory
+/// mastery indicator pinned to the bottom.
+class _SwipePage extends ConsumerWidget {
+  final VocabWord word;
+  final double dwellProgress;
+
+  const _SwipePage({required this.word, this.dwellProgress = 0});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final palette = AppColors.of(context);
+    final wordSize = fitFontSize(word.word, 48, referenceChars: 9);
+    final reviewState = ref.watch(reviewStateProvider)[word.id];
+    final hasExample = word.exampleEn.trim().isNotEmpty;
+    final hasLevel = word.level.trim().isNotEmpty;
+
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // Content flows from the top — same vertical anchor as
+            // the quiz-mode question. A Spacer pushes the progress
+            // bar to the bottom so the rhythm matches quiz mode
+            // without forcing a 50/50 split that leaves the lower
+            // half empty (quiz fills it with options; swipe doesn't).
+            const SizedBox(height: AppSpacing.x8),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                word.word,
+                textAlign: TextAlign.center,
+                style: AppTheme.wordDisplay(
+                  size: wordSize,
+                  weight: FontWeight.w700,
+                  context: context,
+                ),
+              ),
+            ),
+            const SizedBox(height: AppSpacing.x3),
+            if (word.phonetic.trim().isNotEmpty)
+              Text(
+                word.phonetic,
+                style: AppTheme.phonetic(fontSize: 16, context: context),
+              ),
+            const SizedBox(height: AppSpacing.x3),
+            AppGlassIconButton(
+              tooltip: '播放发音',
+              onPressed: () {
+                HapticFeedback.lightImpact();
+                TtsService.instance.speak(text: word.word);
+              },
+              icon: Icons.volume_up_outlined,
+              size: 20,
+              color: AppColors.primary,
+            ),
+            const SizedBox(height: AppSpacing.x3),
+            if (word.pos.trim().isNotEmpty || hasLevel)
+              Text(
+                [word.pos, word.level]
+                    .where((e) => e.trim().isNotEmpty)
+                    .join('  ·  '),
+                style: AppTheme.mutedCaption(
+                  size: 13,
+                  color: palette.inkMuted,
+                  context: context,
+                ).copyWith(fontWeight: FontWeight.w600, letterSpacing: 0.5),
+              ),
+            const SizedBox(height: AppSpacing.x4),
+            ...word.translations.map(
+              (t) => Padding(
+                padding: const EdgeInsets.symmetric(vertical: AppSpacing.x1),
+                child: Text(
+                  t,
+                  textAlign: TextAlign.center,
+                  style: AppTheme.screenHeader(context: context)
+                      .copyWith(fontSize: 18, height: 1.5),
+                ),
+              ),
+            ),
+            if (hasExample) ...[
+              const SizedBox(height: AppSpacing.x5),
+              _ExampleCard(word: word),
+            ],
+            const Spacer(),
+            _MasteryIndicator(
+              reviewState: reviewState,
+              dwellProgress: dwellProgress,
+            ),
+            const SizedBox(height: AppSpacing.x3),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Example sentence card. The target word is bolded inside the
+/// sentence so the eye lands on it, mirroring the reference app's
+/// "highlight the headword" pattern.
+class _ExampleCard extends StatelessWidget {
+  final VocabWord word;
+  const _ExampleCard({required this.word});
+
+  @override
+  Widget build(BuildContext context) {
+    final palette = AppColors.of(context);
+    return AppCard(
+      padding: const EdgeInsets.all(AppSpacing.x4),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          PillTag(
+            label: 'example',
+            color: palette.inkMuted,
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppSpacing.x2,
+              vertical: AppSpacing.x1,
+            ),
+          ),
+          const SizedBox(height: AppSpacing.x3),
+          _buildHighlightedExample(context),
+          if (word.exampleCn.trim().isNotEmpty) ...[
+            const SizedBox(height: AppSpacing.x2),
+            Text(
+              word.exampleCn,
+              style: AppTheme.mutedCaption(
+                size: 13,
+                context: context,
+              ).copyWith(height: 1.5),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _buildHighlightedExample(BuildContext context) {
+    final text = word.exampleEn;
+    final target = word.word;
+    final spans = <TextSpan>[];
+    var cursor = 0;
+    final lower = text.toLowerCase();
+    final targetLower = target.toLowerCase();
+    while (cursor < text.length) {
+      final idx = lower.indexOf(targetLower, cursor);
+      if (idx == -1) {
+        spans.add(TextSpan(text: text.substring(cursor)));
+        break;
+      }
+      if (idx > cursor) {
+        spans.add(TextSpan(text: text.substring(cursor, idx)));
+      }
+      spans.add(
+        TextSpan(
+          text: text.substring(idx, idx + target.length),
+          style: const TextStyle(fontWeight: FontWeight.w700),
+        ),
+      );
+      cursor = idx + target.length;
+    }
+    return RichText(
+      text: TextSpan(
+        style: AppTheme.mutedCaption(
+          size: 15,
+          color: AppColors.of(context).ink,
+          context: context,
+        ).copyWith(height: 1.6),
+        children: spans,
+      ),
+    );
+  }
+}
+
+/// A thin, full-width accent line at the bottom of the swipe page.
+/// The fill starts at the word's baseline mastery (a familiar word
+/// begins nearly full, a new word begins near empty) and slowly
+/// fills the remaining space as dwell time accumulates — so the
+/// bar communicates both "how well you knew this" and "how long
+/// you've studied it" without ever feeling tense.
+class _MasteryIndicator extends StatelessWidget {
+  final ReviewState? reviewState;
+  final double dwellProgress;
+
+  const _MasteryIndicator({
+    required this.reviewState,
+    this.dwellProgress = 0,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final color = _classify(reviewState);
+    final base = _baseline(reviewState);
+    final value = (base + dwellProgress * (1 - base)).clamp(0.0, 1.0);
+    return SizedBox(
+      width: double.infinity,
+      child: LinearProgressIndicator(
+        value: value,
+        minHeight: 2,
+        backgroundColor: color.withValues(alpha: 0.08),
+        valueColor: AlwaysStoppedAnimation<Color>(color),
+      ),
+    );
+  }
+
+  /// Baseline fill from the existing SM-2 state, before any dwell
+  /// time is added. A brand-new word starts at 0.15; a word you've
+  /// already mastered starts at 0.85.
+  double _baseline(ReviewState? s) {
+    if (s == null) return 0.15;
+    final ef = s.easiness / 100.0;
+    if (s.repetitions == 0) return 0.2;
+    if (ef >= 2.5 && s.repetitions >= 3) return 0.85;
+    if (ef >= 2.3 && s.repetitions >= 2) return 0.65;
+    return 0.4;
+  }
+
+  Color _classify(ReviewState? s) {
+    if (s == null) return AppColors.danger;
+    final ef = s.easiness / 100.0;
+    if (s.repetitions == 0) return AppColors.danger;
+    if (ef >= 2.5 && s.repetitions >= 3) return AppColors.success;
+    if (ef >= 2.3 && s.repetitions >= 2) return AppColors.success;
+    return AppColors.warning;
+  }
+}
+

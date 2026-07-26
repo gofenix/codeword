@@ -5,7 +5,6 @@ import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
 import '../state/learning_session.dart';
-import 'settings_screen.dart';
 
 class DiscoveryScreen extends ConsumerStatefulWidget {
   final VoidCallback onGoWords;
@@ -45,17 +44,6 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
     return TabPageScaffold(
       title: '词书',
       scrollKey: const PageStorageKey('library-scroll'),
-      trailing: AppGlassIconButton(
-        tooltip: '设置',
-        onPressed: () {
-          HapticFeedback.selectionClick();
-          Navigator.of(
-            context,
-          ).push(MaterialPageRoute(builder: (_) => const SettingsScreen()));
-        },
-        icon: Icons.settings_outlined,
-        color: AppColors.of(context).inkMuted,
-      ),
       slivers: [
         SliverList.list(
           children: [
@@ -186,11 +174,11 @@ class _SearchField extends StatelessWidget {
         filled: true,
         fillColor: AppColors.of(context).surface,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(AppRadii.sm),
+          borderRadius: BorderRadius.circular(AppRadii.md),
           borderSide: BorderSide(color: AppColors.of(context).divider),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(AppRadii.sm),
+          borderRadius: BorderRadius.circular(AppRadii.md),
           borderSide: BorderSide(color: AppColors.of(context).divider),
         ),
       ),
@@ -265,101 +253,82 @@ class _CurrentBookBand extends StatelessWidget {
     final description = rawDescription.isEmpty || rawDescription == name
         ? null
         : rawDescription;
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Container(
-      decoration: BoxDecoration(
-        gradient: isDark ? null : AppMaterials.paper,
-        color: isDark ? AppColors.of(context).surface : null,
-        borderRadius: BorderRadius.circular(AppRadii.sm),
-        border: Border.all(color: AppColors.of(context).divider),
-        boxShadow: isDark ? null : AppShadows.paper,
-      ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: onTap,
-          borderRadius: BorderRadius.circular(AppRadii.sm),
-          child: Padding(
-            padding: const EdgeInsets.all(AppSpacing.x4),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
+    return AppCard(
+      onTap: onTap,
+      padding: const EdgeInsets.all(AppSpacing.x4),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 48,
+                height: 58,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: AppColors.primaryContainerOf(context),
+                  borderRadius: BorderRadius.circular(AppRadii.xs),
+                ),
+                child: Text(
+                  name.characters.isEmpty ? 'C' : name.characters.first,
+                  style: AppTheme.editorial(
+                    size: 22,
+                    color: AppColors.onPrimaryContainerOf(context),
+                    context: context,
+                  ),
+                ),
+              ),
+              const SizedBox(width: AppSpacing.x3),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      width: 48,
-                      height: 58,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryContainerOf(context),
-                        borderRadius: BorderRadius.circular(AppRadii.xs),
-                      ),
-                      child: Text(
-                        name.characters.isEmpty ? 'C' : name.characters.first,
-                        style: AppTheme.editorial(
-                          size: 22,
-                          color: AppColors.primary,
+                    Text(
+                      list?.name ?? '尚未选择词书',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTheme.editorial(size: 20, context: context),
+                    ),
+                    if (description != null) ...[
+                      const SizedBox(height: AppSpacing.x1),
+                      Text(
+                        description,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTheme.mutedCaption(
+                          size: 12,
                           context: context,
                         ),
                       ),
-                    ),
-                    const SizedBox(width: AppSpacing.x3),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            list?.name ?? '尚未选择词书',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: AppTheme.editorial(
-                              size: 20,
-                              context: context,
-                            ),
-                          ),
-                          if (description != null) ...[
-                            const SizedBox(height: 3),
-                            Text(
-                              description,
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: AppTheme.mutedCaption(
-                                size: 12,
-                                context: context,
-                              ),
-                            ),
-                          ],
-                          const SizedBox(height: 3),
-                          Text(
-                            '当前词书 · 已学 $learned / $total',
-                            style: AppTheme.mutedCaption(
-                              size: 12,
-                              context: context,
-                            ),
-                          ),
-                        ],
+                    ],
+                    const SizedBox(height: AppSpacing.x1),
+                    Text(
+                      '当前词书 · 已学 $learned / $total',
+                      style: AppTheme.mutedCaption(
+                        size: 12,
+                        context: context,
                       ),
-                    ),
-                    const Icon(
-                      Icons.arrow_forward_rounded,
-                      color: AppColors.primary,
                     ),
                   ],
                 ),
-                const SizedBox(height: AppSpacing.x3),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(AppRadii.pill),
-                  child: LinearProgressIndicator(
-                    value: ratio,
-                    minHeight: 6,
-                    backgroundColor: AppColors.of(context).surfaceMuted,
-                    valueColor: const AlwaysStoppedAnimation(AppColors.sage),
-                  ),
-                ),
-              ],
+              ),
+              const Icon(
+                Icons.arrow_forward_rounded,
+                color: AppColors.primary,
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.x3),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(AppRadii.pill),
+            child: LinearProgressIndicator(
+              value: ratio,
+              minHeight: AppSpacing.x1_5,
+              backgroundColor: AppColors.of(context).surfaceMuted,
+              valueColor: const AlwaysStoppedAnimation(AppColors.sage),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
@@ -387,11 +356,7 @@ class _BookSection extends StatelessWidget {
       children: [
         Text(
           '$category · ${books.length}',
-          style: AppTheme.mutedCaption(
-            size: 13,
-            color: AppColors.primary,
-            context: context,
-          ).copyWith(fontWeight: FontWeight.w600),
+          style: AppTheme.sectionLabel(context: context),
         ),
         const SizedBox(height: AppSpacing.x2),
         AppCard(
@@ -406,12 +371,7 @@ class _BookSection extends StatelessWidget {
                   onTap: () => onTap(books[i].id),
                 ),
                 if (i != books.length - 1)
-                  Divider(
-                    height: 1,
-                    indent: AppSpacing.x4,
-                    endIndent: AppSpacing.x4,
-                    color: AppColors.of(context).divider,
-                  ),
+                  const SizedBox(height: AppSpacing.x2),
               ],
             ],
           ),
@@ -439,9 +399,16 @@ class _BookRow extends StatelessWidget {
     final learned = progress?.learned ?? 0;
     final total = progress?.availableWords ?? list.wordCount;
     final due = progress?.due ?? 0;
-    return InkWell(
-      onTap: onTap,
-      child: Padding(
+    final categoryTint = _categoryColor(context, list.category);
+    return Semantics(
+      button: true,
+      label: list.name,
+      child: PressableScale(
+        onTap: () {
+          HapticFeedback.selectionClick();
+          onTap();
+        },
+        child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: AppSpacing.x4,
           vertical: AppSpacing.x3,
@@ -453,14 +420,14 @@ class _BookRow extends StatelessWidget {
               height: 46,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: _categoryColor(list.category).withValues(alpha: 0.14),
-                borderRadius: BorderRadius.circular(AppRadii.sm),
+                color: categoryTint.withValues(alpha: 0.14),
+                borderRadius: BorderRadius.circular(AppRadii.xs),
               ),
               child: Text(
                 list.name.characters.isEmpty ? '·' : list.name.characters.first,
                 style: AppTheme.editorial(
                   size: 16,
-                  color: _categoryColor(list.category),
+                  color: categoryTint,
                   context: context,
                 ),
               ),
@@ -494,7 +461,7 @@ class _BookRow extends StatelessWidget {
                       ],
                     ],
                   ),
-                  const SizedBox(height: 3),
+                  const SizedBox(height: AppSpacing.x1),
                   Text(
                     due > 0
                         ? '待复习 $due · 已学 $learned / $total'
@@ -514,7 +481,8 @@ class _BookRow extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ),
+  );
   }
 }
 
@@ -522,10 +490,15 @@ class _BookRow extends StatelessWidget {
 /// bronze/clay/sage/gold family so the first-letter blocks read as part of the
 /// editorial theme instead of the old cold-blue defaults. Rendered as an
 /// alpha-0.14 fill under the letter drawn in the full colour (see [_BookRow]).
-Color _categoryColor(String category) => switch (category) {
-  '编程' => AppColors.primary, // 青铜
-  '考试英语' => const Color(0xFFB4693A), // 陶土暖橙
-  '青少年英语' => AppColors.sage, // 苔绿
-  '综合' => const Color(0xFFB08A3E), // 暖金
-  _ => AppColors.inkMuted, // 暖灰
-};
+/// Deep hues are lightened in dark mode so the letter stays readable.
+Color _categoryColor(BuildContext context, String category) {
+  final base = switch (category) {
+    '编程' => AppColors.primary, // 青铜
+    '考试英语' => AppColors.categoryClay, // 陶土暖橙
+    '青少年英语' => AppColors.sage, // 苔绿
+    '综合' => AppColors.categoryGold, // 暖金
+    _ => AppColors.of(context).inkMuted, // 暖灰
+  };
+  final isDark = Theme.of(context).brightness == Brightness.dark;
+  return isDark ? Color.lerp(base, AppColors.surfaceDark, 0.4)! : base;
+}
