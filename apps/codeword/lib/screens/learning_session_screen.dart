@@ -1242,6 +1242,8 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     if (reduceMotion) {
       _submitSwipe(dwellMs: dwell);
+      _animating = false;
+      _anim = null;
       return;
     }
     final screenH = MediaQuery.of(context).size.height;
@@ -1263,6 +1265,8 @@ class _SwipeViewState extends ConsumerState<SwipeView>
         .then((_) {
           if (!mounted) return;
           _submitSwipe(dwellMs: dwell);
+          _animating = false;
+          _anim = null;
         });
   }
 
@@ -1357,7 +1361,11 @@ class _SwipePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final palette = AppColors.of(context);
-    final wordSize = fitFontSize(word.word, 48, referenceChars: 9);
+    // Match the quiz-mode word hero exactly (see [_WordStage]): same
+    // fit budget (56) and the same phonetic size derived from it, so the
+    // word reads at one weight across both modes.
+    final wordSize = fitFontSize(word.word, 56);
+    final phoneticSize = (wordSize * 0.28).clamp(12.0, 16.0);
     final reviewState = ref.watch(reviewStateProvider)[word.id];
     final hasExample = word.exampleEn.trim().isNotEmpty;
     final hasLevel = word.level.trim().isNotEmpty;
@@ -1365,15 +1373,22 @@ class _SwipePage extends ConsumerWidget {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.x6),
+        // Mirror the quiz layout skeleton (see [AskingView]): the word
+        // hero is centred in the top 5/10 of the screen and the rest of
+        // the entry fills the lower 5/10. This keeps the optical centre
+        // and vertical rhythm identical between the two learning modes,
+        // instead of the old top-stacked content that left the whole
+        // lower half empty.
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Content flows from the top — same vertical anchor as
-            // the quiz-mode question. A Spacer pushes the progress
-            // bar to the bottom so the rhythm matches quiz mode
-            // without forcing a 50/50 split that leaves the lower
-            // half empty (quiz fills it with options; swipe doesn't).
-            const SizedBox(height: AppSpacing.x8),
+            // Position the whole entry (word + meaning) as one group in the
+            // upper-middle of the screen, where the quiz-mode word hero sits
+            // (~35% of the height). The top spacer is smaller than the bottom
+            // one so the group sits above the geometric centre — the eye
+            // lands on the word first, then drops to the meaning, mirroring
+            // the quiz rhythm of "prompt on top, answer below".
+            const Spacer(flex: 3),
             FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
@@ -1390,9 +1405,12 @@ class _SwipePage extends ConsumerWidget {
             if (word.phonetic.trim().isNotEmpty)
               Text(
                 word.phonetic,
-                style: AppTheme.phonetic(fontSize: 16, context: context),
+                style: AppTheme.phonetic(
+                  fontSize: phoneticSize,
+                  context: context,
+                ),
               ),
-            const SizedBox(height: AppSpacing.x3),
+            const SizedBox(height: AppSpacing.x2),
             AppGlassIconButton(
               tooltip: '播放发音',
               onPressed: () {
@@ -1403,8 +1421,8 @@ class _SwipePage extends ConsumerWidget {
               size: 20,
               color: AppColors.primary,
             ),
-            const SizedBox(height: AppSpacing.x3),
-            if (word.pos.trim().isNotEmpty || hasLevel)
+            if (word.pos.trim().isNotEmpty || hasLevel) ...[
+              const SizedBox(height: AppSpacing.x2),
               Text(
                 [word.pos, word.level]
                     .where((e) => e.trim().isNotEmpty)
@@ -1413,9 +1431,13 @@ class _SwipePage extends ConsumerWidget {
                   size: 13,
                   color: palette.inkMuted,
                   context: context,
-                ).copyWith(fontWeight: FontWeight.w600, letterSpacing: 0.5),
+                ).copyWith(
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.5,
+                ),
               ),
-            const SizedBox(height: AppSpacing.x4),
+            ],
+            const SizedBox(height: AppSpacing.x6),
             ...word.translations.map(
               (t) => Padding(
                 padding: const EdgeInsets.symmetric(vertical: AppSpacing.x1),
@@ -1431,7 +1453,7 @@ class _SwipePage extends ConsumerWidget {
               const SizedBox(height: AppSpacing.x5),
               _ExampleCard(word: word),
             ],
-            const Spacer(),
+            const Spacer(flex: 4),
             _MasteryIndicator(
               reviewState: reviewState,
               dwellProgress: dwellProgress,
