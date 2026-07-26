@@ -1449,7 +1449,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
             correct ? state.correctCount + 1 : state.correctCount,
       );
       _compactConsumed();
-      unawaited(_ensureBuffer(force: state.questions.isEmpty));
+      unawaited(_ensureBuffer(force: true));
     } else {
       state = LearningSessionState(
         phase: SessionPhase.wrongDetail,
@@ -1489,7 +1489,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       correctCount: state.correctCount,
     );
     _compactConsumed();
-    unawaited(_ensureBuffer(force: state.questions.isEmpty));
+    unawaited(_ensureBuffer(force: true));
     unawaited(_eagerFlush());
   }
 
