@@ -8,7 +8,7 @@ import 'package:lib_content/lib_content.dart';
 import 'learning_preferences.dart';
 
 /// Curated first-run list. Existing users keep their persisted selection.
-const String kDefaultVocabId = 'qwerty_coder_core';
+const String kDefaultVocabId = 'qwerty_coder';
 
 /// Extract the full vocab id (matching `VocabList.id` in the manifest)
 /// from a qwerty word id.
@@ -441,7 +441,6 @@ class ReviewStateNotifier extends StateNotifier<Map<String, ReviewState>> {
           );
     return _hydrate(entries: entries.take(limit).toList(), at: at);
   }
-
   /// Learned words eligible for contextual reading. Due words come first,
   /// followed by words reviewed today and then the most recently reviewed
   /// history. Unseen words are intentionally excluded.

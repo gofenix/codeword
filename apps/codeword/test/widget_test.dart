@@ -31,23 +31,20 @@ void main() {
     child: const CodewordApp(),
   );
 
-  test('Coder Core contains 500 concise unique candidates', () async {
+  test('Coder contains unique candidates with Chinese meanings', () async {
     final raw = await File(
-      'assets/vocab/qwerty_coder_core.json',
+      'assets/vocab/qwerty_coder.json',
     ).readAsString();
     final words = (jsonDecode(raw) as List).cast<Map<String, dynamic>>();
-    expect(words, hasLength(500));
-    expect(words.map((word) => word['word']).toSet(), hasLength(500));
+    expect(words, hasLength(2371));
+    expect(words.map((word) => word['word']).toSet(), hasLength(2371));
     final chineseMeaning = RegExp(r'[\u4e00-\u9fff]');
     for (final word in words) {
-      expect((word['translation'] as String).length, lessThanOrEqualTo(36));
       expect(
         word['translation'],
         matches(chineseMeaning),
         reason: '${word['word']} must have a Chinese meaning',
       );
-      expect((word['exampleEn'] as String).trim(), isNotEmpty);
-      expect((word['exampleCn'] as String).trim(), isNotEmpty);
       expect(word['domain'], kDefaultVocabId);
     }
   });
@@ -666,8 +663,8 @@ void main() {
     () async {
       final now = DateTime(2026, 7, 23, 10);
       final notifier = ReviewStateNotifier({
-        'qwerty_coder_core_00001': ReviewState(
-          wordId: 'qwerty_coder_core_00001',
+        'qwerty_coder_00001': ReviewState(
+          wordId: 'qwerty_coder_00001',
           easiness: 220,
           interval: 0,
           repetitions: 0,
@@ -675,8 +672,8 @@ void main() {
           lastReviewedAt: now.subtract(const Duration(hours: 2)),
           firstReviewedAt: now.subtract(const Duration(days: 2)),
         ),
-        'qwerty_coder_core_00002': ReviewState(
-          wordId: 'qwerty_coder_core_00002',
+        'qwerty_coder_00002': ReviewState(
+          wordId: 'qwerty_coder_00002',
           easiness: 250,
           interval: 1,
           repetitions: 1,
@@ -684,7 +681,7 @@ void main() {
           lastReviewedAt: now.subtract(const Duration(minutes: 5)),
           firstReviewedAt: now,
         ),
-        'qwerty_coder_core_00003': ReviewState.fresh('qwerty_coder_core_00003'),
+        'qwerty_coder_00003': ReviewState.fresh('qwerty_coder_00003'),
       });
 
       final candidates = await notifier.readingCandidateWords(now: now);
