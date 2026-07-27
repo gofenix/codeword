@@ -5,10 +5,12 @@ import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
 
 import '../services/article_repository.dart';
+import '../services/update_service.dart';
 import '../state/learning_session.dart';
 import '../state/learning_preferences.dart';
 import '../state/llm_config.dart';
 import 'ai_settings_screen.dart';
+import 'update_dialog.dart';
 
 /// 设置 — a top-level bottom-nav tab. Only configuration that changes the
 /// learning experience. Shares the [TabPageScaffold] chrome with the other
@@ -48,6 +50,10 @@ class SettingsScreen extends ConsumerWidget {
             const _SettingsGroup(
               children: [_LocalDataRow(), _ClearLearningDataRow()],
             ),
+            const SizedBox(height: AppSpacing.x5),
+            const _SectionLabel('关于'),
+            const SizedBox(height: AppSpacing.x2),
+            const _SettingsGroup(children: [_CheckUpdateRow()]),
             const SizedBox(height: AppSpacing.x12),
             Center(
               child: Column(
@@ -57,10 +63,7 @@ class SettingsScreen extends ConsumerWidget {
                     style: AppTheme.mutedCaption(size: 12, context: context),
                   ),
                   const SizedBox(height: AppSpacing.x1),
-                  Text(
-                    '1.1.1',
-                    style: AppTheme.mutedCaption(size: 11, context: context),
-                  ),
+                  _VersionLabel(),
                 ],
               ),
             ),
@@ -406,6 +409,91 @@ class _SettingIcon extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppRadii.md),
       ),
       child: Icon(icon, color: resolved, size: 24),
+    );
+  }
+}
+
+/// Shows the currently installed app version, loaded at runtime.
+class _VersionLabel extends StatefulWidget {
+  const _VersionLabel();
+
+  @override
+  State<_VersionLabel> createState() => _VersionLabelState();
+}
+
+class _VersionLabelState extends State<_VersionLabel> {
+  String _version = '...';
+
+  @override
+  void initState() {
+    super.initState();
+    UpdateService.currentVersion().then((v) {
+      if (mounted) setState(() => _version = v);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      'v$_version',
+      style: AppTheme.mutedCaption(size: 11, context: context),
+    );
+  }
+}
+
+/// Settings row that checks GitHub for a newer release and, if one
+/// exists, opens the in-app update dialog.
+class _CheckUpdateRow extends ConsumerStatefulWidget {
+  const _CheckUpdateRow();
+
+  @override
+  ConsumerState<_CheckUpdateRow> createState() => _CheckUpdateRowState();
+}
+
+class _CheckUpdateRowState extends ConsumerState<_CheckUpdateRow> {
+  bool _checking = false;
+
+  Future<void> _check() async {
+    if (_checking) return;
+    setState(() => _checking = true);
+    final info = await UpdateService.checkForUpdate();
+    if (!mounted) return;
+    setState(() => _checking = false);
+    if (info == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('检查更新失败，请稍后重试')),
+      );
+      return;
+    }
+    final current = await UpdateService.currentVersion();
+    if (await UpdateService.hasUpdate(info)) {
+      if (!mounted) return;
+      UpdateDialog.show(
+        context,
+        info: info,
+        currentVersion: current,
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('已是最新版本 v$current')),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return _SettingsTile(
+      icon: Icons.system_update,
+      title: '检查更新',
+      subtitle: _checking ? '正在检查…' : '发现新版本可在应用内直接更新',
+      onTap: _check,
+      trailing: _checking
+          ? const SizedBox(
+              width: 20,
+              height: 20,
+              child: CircularProgressIndicator(strokeWidth: 2),
+            )
+          : const Icon(Icons.chevron_right),
     );
   }
 }

@@ -12,7 +12,9 @@ import 'screens/learning_session_screen.dart';
 import 'screens/reading_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/stats_screen.dart';
+import 'screens/update_dialog.dart';
 import 'services/article_repository.dart';
+import 'services/update_service.dart';
 import 'state/learning_preferences.dart';
 import 'state/learning_session.dart';
 
@@ -267,10 +269,20 @@ class TodayPage extends ConsumerStatefulWidget {
 class _TodayPageState extends ConsumerState<TodayPage> {
   bool _starting = false;
 
-  @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) => _maybeStart());
+    WidgetsBinding.instance.addPostFrameCallback((_) => _checkUpdate());
+  }
+
+  Future<void> _checkUpdate() async {
+    final info = await UpdateService.checkForUpdate();
+    if (!mounted || info == null) return;
+    if (await UpdateService.hasUpdate(info)) {
+      final current = await UpdateService.currentVersion();
+      if (!mounted) return;
+      UpdateDialog.show(context, info: info, currentVersion: current);
+    }
   }
 
   Future<void> _maybeStart() async {
