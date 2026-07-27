@@ -1,0 +1,1972 @@
+[
+  {
+    "id": "qwerty_python_builtin_00001",
+    "word": "abs",
+    "phonetic": "/ˈeɪbˈiˈɛs/",
+    "translation": "返回一个数的绝对值",
+    "translations": [
+      "返回一个数的绝对值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00002",
+    "word": "add()",
+    "phonetic": "",
+    "translation": "用于给集合添加元素，如果添加的元素在集合中已存在，则不执行任何操作",
+    "translations": [
+      "用于给集合添加元素，如果添加的元素在集合中已存在，则不执行任何操作"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_builtin_00002",
+    "word": "all",
+    "phonetic": "/ˈɔl/",
+    "translation": "如果 iterable对象 的所有元素均为真值则返回 True",
+    "translations": [
+      "如果 iterable对象 的所有元素均为真值则返回 True"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_system_00001",
+    "word": "altsep",
+    "phonetic": "",
+    "translation": "另一种可以替代使用的文件路径分隔符，如果所在的系统支持其他的分隔符，那么可以使用os.altsep来使用系统支持的其他类型的分隔符，如果系统不支持，那么该值为None，如在Windows中，os.altsep为‘/’。",
+    "translations": [
+      "另一种可以替代使用的文件路径分隔符，如果所在的系统支持其他的分隔符，那么可以使用os.altsep来使用系统支持的其他类型的分隔符，如果系统不支持，那么该值为None，如在Windows中，os.altsep为‘/’。"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_date_00001",
+    "word": "altzone",
+    "phonetic": "",
+    "translation": "返回格林威治西部的夏令时地区的偏移秒数。如果该地区在格林威治东部会返回负值（如西欧，包括英国）。对夏令时启用地区才能使用。",
+    "translations": [
+      "返回格林威治西部的夏令时地区的偏移秒数。如果该地区在格林威治东部会返回负值（如西欧，包括英国）。对夏令时启用地区才能使用。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_builtin_00003",
+    "word": "any",
+    "phonetic": "/ˈɛni/",
+    "translation": "如果 iterable对象 的任一元素为真值则返回 True",
+    "translations": [
+      "如果 iterable对象 的任一元素为真值则返回 True"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_array_00001",
+    "word": "append()",
+    "phonetic": "",
+    "translation": "用于在列表末尾添加新的对象。",
+    "translations": [
+      "用于在列表末尾添加新的对象。"
+    ],
+    "domain": "qwerty_python_array"
+  },
+  {
+    "id": "qwerty_python_system_00010",
+    "word": "argv",
+    "phonetic": "",
+    "translation": "命令行参数",
+    "translations": [
+      "命令行参数"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_builtin_00004",
+    "word": "ascii",
+    "phonetic": "/ˈæski/",
+    "translation": "返回一个包含对象的可打印表示形式的字符串",
+    "translations": [
+      "返回一个包含对象的可打印表示形式的字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_date_00002",
+    "word": "asctime()",
+    "phonetic": "",
+    "translation": "接受时间元组并返回一个可读的形式为'Tue Dec 11 18:07:14 2008'（2008年12月11日 周二18时07分14秒）的 24 个字符的字符串",
+    "translations": [
+      "接受时间元组并返回一个可读的形式为'Tue Dec 11 18:07:14 2008'（2008年12月11日 周二18时07分14秒）的 24 个字符的字符串"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_date_00016",
+    "word": "astimezone()",
+    "phonetic": "",
+    "translation": "返回一个带有新的tzinfo属性tz的日期时间对象，调整日期和时间数据，使结果与自己的UTC时间相同，但以tz的当地时间为准。",
+    "translations": [
+      "返回一个带有新的tzinfo属性tz的日期时间对象，调整日期和时间数据，使结果与自己的UTC时间相同，但以tz的当地时间为准。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_builtin_00005",
+    "word": "bin",
+    "phonetic": "/bˈɪn/",
+    "translation": "将一个整数转变为二进制字符串",
+    "translations": [
+      "将一个整数转变为二进制字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00006",
+    "word": "bool",
+    "phonetic": "",
+    "translation": "布尔",
+    "translations": [
+      "布尔"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00007",
+    "word": "breakpoint",
+    "phonetic": "",
+    "translation": "此函数会在调用时将你陷入调试器中",
+    "translations": [
+      "此函数会在调用时将你陷入调试器中"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00008",
+    "word": "bytearray",
+    "phonetic": "",
+    "translation": "返回一个新的 bytes 数组",
+    "translations": [
+      "返回一个新的 bytes 数组"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_system_00012",
+    "word": "byteorder",
+    "phonetic": "",
+    "translation": "返回本机字节顺序",
+    "translations": [
+      "返回本机字节顺序"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_builtin_00009",
+    "word": "bytes",
+    "phonetic": "/bˈaɪts/",
+    "translation": "返回一个新的 bytes 对象",
+    "translations": [
+      "返回一个新的 bytes 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_array_00003",
+    "word": "byteswap()",
+    "phonetic": "",
+    "translation": "更改基础数据的字节顺序",
+    "translations": [
+      "更改基础数据的字节顺序"
+    ],
+    "domain": "qwerty_python_array"
+  },
+  {
+    "id": "qwerty_python_builtin_00010",
+    "word": "callable",
+    "phonetic": "/kˈɔlʌbʌl/",
+    "translation": "检测对象是否可调用",
+    "translations": [
+      "检测对象是否可调用"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_string_00001",
+    "word": "capitalize()",
+    "phonetic": "",
+    "translation": "将字符串的第一个字母变成大写,其他字母变小写。对于 8 位字节编码需要根据本地环境。",
+    "translations": [
+      "将字符串的第一个字母变成大写,其他字母变小写。对于 8 位字节编码需要根据本地环境。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00002",
+    "word": "center()",
+    "phonetic": "",
+    "translation": "返回一个原字符串居中,并使用空格填充至长度 width 的新字符串。默认填充字符为空格。",
+    "translations": [
+      "返回一个原字符串居中,并使用空格填充至长度 width 的新字符串。默认填充字符为空格。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_builtin_00011",
+    "word": "chr",
+    "phonetic": "",
+    "translation": "返回 Unicode 码位为整数 i 的字符的字符串格式",
+    "translations": [
+      "返回 Unicode 码位为整数 i 的字符的字符串格式"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00003",
+    "word": "clear()",
+    "phonetic": "",
+    "translation": "用于移除集合中的所有元素",
+    "translations": [
+      "用于移除集合中的所有元素"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_date_00003",
+    "word": "clock()",
+    "phonetic": "",
+    "translation": "用以浮点数计算的秒数返回当前的 CPU 时间。用来衡量不同程序的耗时，比 time.time() 更有用。",
+    "translations": [
+      "用以浮点数计算的秒数返回当前的 CPU 时间。用来衡量不同程序的耗时，比 time.time() 更有用。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_file_00001",
+    "word": "close()",
+    "phonetic": "",
+    "translation": "close() 方法用于关闭一个已打开的文件。关闭后的文件不能再进行读写操作， 否则会触发 ValueError 错误。 close() 方法允许调用多次。当 file 对象，被引用到操作另外一个文件时，Python 会自动关闭之前的 file 对象。 使用 close() 方法关闭文件是一个好的习惯。",
+    "translations": [
+      "close() 方法用于关闭一个已打开的文件。关闭后的文件不能再进行读写操作， 否则会触发 ValueError 错误。 close() 方法允许调用多次。当 file 对象，被引用到操作另外一个文件时，Python 会自动关闭之前的 file 对象。 使用 close() 方法关闭文件是一个好的习惯。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_file_00015",
+    "word": "closed",
+    "phonetic": "/klˈoʊzd/",
+    "translation": "如果文件已被关闭返回 True，否则返回 False。",
+    "translations": [
+      "如果文件已被关闭返回 True，否则返回 False。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_builtin_00012",
+    "word": "complex",
+    "phonetic": "/kˈɑmplɛks/",
+    "translation": "返回值为 real + imag*1j 的复数",
+    "translations": [
+      "返回值为 real + imag*1j 的复数"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00004",
+    "word": "copy()",
+    "phonetic": "",
+    "translation": "用于拷贝一个集合",
+    "translations": [
+      "用于拷贝一个集合"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_array_00004",
+    "word": "count()",
+    "phonetic": "",
+    "translation": "用于统计某个元素在列表中出现的次数。",
+    "translations": [
+      "用于统计某个元素在列表中出现的次数。"
+    ],
+    "domain": "qwerty_python_array"
+  },
+  {
+    "id": "qwerty_python_date_00004",
+    "word": "ctime()",
+    "phonetic": "",
+    "translation": "Python time ctime() 函数把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。 如果参数未给或者为None的时候，将会默认time.time()为参数。它的作用相当于 asctime(localtime(secs))。",
+    "translations": [
+      "Python time ctime() 函数把一个时间戳（按秒计算的浮点数）转化为time.asctime()的形式。 如果参数未给或者为None的时候，将会默认time.time()为参数。它的作用相当于 asctime(localtime(secs))。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_system_00002",
+    "word": "curdir",
+    "phonetic": "",
+    "translation": "返回当前目录: ('.')。",
+    "translations": [
+      "返回当前目录: ('.')。"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_date_00017",
+    "word": "date()",
+    "phonetic": "",
+    "translation": "返回具有相同年份、月份和日期的日期对象。",
+    "translations": [
+      "返回具有相同年份、月份和日期的日期对象。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_string_00004",
+    "word": "decode()",
+    "phonetic": "",
+    "translation": "以 encoding 指定的编码格式解码字符串。默认编码为字符串编码。",
+    "translations": [
+      "以 encoding 指定的编码格式解码字符串。默认编码为字符串编码。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_system_00003",
+    "word": "defpath",
+    "phonetic": "",
+    "translation": "当使用exec函数族的时候，如果没有制定PATH环境变量，则默认会查找os.defpath中的值作为子进程PATH的值。",
+    "translations": [
+      "当使用exec函数族的时候，如果没有制定PATH环境变量，则默认会查找os.defpath中的值作为子进程PATH的值。"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_builtin_00013",
+    "word": "delattr",
+    "phonetic": "",
+    "translation": "删除对象指定的属性",
+    "translations": [
+      "删除对象指定的属性"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_system_00004",
+    "word": "devnull",
+    "phonetic": "",
+    "translation": "在不同的系统上null设备的路径，在Windows下为‘nul’，在POSIX下为‘/dev/null’",
+    "translations": [
+      "在不同的系统上null设备的路径，在Windows下为‘nul’，在POSIX下为‘/dev/null’"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_builtin_00014",
+    "word": "dict",
+    "phonetic": "",
+    "translation": "创建一个新的字典",
+    "translations": [
+      "创建一个新的字典"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00006",
+    "word": "difference()",
+    "phonetic": "",
+    "translation": "返回一个移除相同元素的新集合",
+    "translations": [
+      "返回一个移除相同元素的新集合"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_builtin_00015",
+    "word": "dir",
+    "phonetic": "/dˈi/",
+    "translation": "如果没有实参，则返回当前本地作用域中的名称列表。如果有实参，它会尝试返回该对象的有效属性列表。",
+    "translations": [
+      "如果没有实参，则返回当前本地作用域中的名称列表。如果有实参，它会尝试返回该对象的有效属性列表。"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00007",
+    "word": "discard()",
+    "phonetic": "",
+    "translation": "用于移除指定的集合元素",
+    "translations": [
+      "用于移除指定的集合元素"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_builtin_00016",
+    "word": "divmod",
+    "phonetic": "",
+    "translation": "执行整数除法时返回一对商和余数",
+    "translations": [
+      "执行整数除法时返回一对商和余数"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_date_00018",
+    "word": "dst()",
+    "phonetic": "",
+    "translation": "判断是否是夏令时",
+    "translations": [
+      "判断是否是夏令时"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_string_00005",
+    "word": "encode()",
+    "phonetic": "",
+    "translation": "以 encoding 指定的编码格式编码字符串。errors参数可以指定不同的错误处理方案。",
+    "translations": [
+      "以 encoding 指定的编码格式编码字符串。errors参数可以指定不同的错误处理方案。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_file_00016",
+    "word": "encoding()",
+    "phonetic": "",
+    "translation": "encoding 指定的编码格式编码字符串。errors参数可以指定不同的错误处理方案。",
+    "translations": [
+      "encoding 指定的编码格式编码字符串。errors参数可以指定不同的错误处理方案。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_string_00006",
+    "word": "endswith()",
+    "phonetic": "",
+    "translation": "用于判断字符串是否以指定后缀结尾，如果以指定后缀结尾返回True，否则返回False。可选参数'start'与'end'为检索字符串的开始与结束位置。",
+    "translations": [
+      "用于判断字符串是否以指定后缀结尾，如果以指定后缀结尾返回True，否则返回False。可选参数'start'与'end'为检索字符串的开始与结束位置。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_builtin_00017",
+    "word": "enumerate",
+    "phonetic": "/ɪnˈumɝˌeɪt/",
+    "translation": "返回一个枚举对象",
+    "translations": [
+      "返回一个枚举对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_file_00017",
+    "word": "errors",
+    "phonetic": "/ˈɛrɝz/",
+    "translation": "如果该文件无法被打开，会被抛出",
+    "translations": [
+      "如果该文件无法被打开，会被抛出"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_builtin_00018",
+    "word": "eval",
+    "phonetic": "",
+    "translation": "解析并求值一个 Python 表达式",
+    "translations": [
+      "解析并求值一个 Python 表达式"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00019",
+    "word": "exec",
+    "phonetic": "/ˌɛɡzˈɛk/",
+    "translation": "执行 Python 代码",
+    "translations": [
+      "执行 Python 代码"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_system_00015",
+    "word": "executable",
+    "phonetic": "",
+    "translation": "可执行文件的名称",
+    "translations": [
+      "可执行文件的名称"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_system_00016",
+    "word": "exitfunc",
+    "phonetic": "",
+    "translation": "退出函数名",
+    "translations": [
+      "退出函数名"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_string_00007",
+    "word": "expandtabs()",
+    "phonetic": "",
+    "translation": "把字符串中的 tab 符号('\t')转为空格，默认的空格数 tabsize 是 8。",
+    "translations": [
+      "把字符串中的 tab 符号('\t')转为空格，默认的空格数 tabsize 是 8。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_array_00005",
+    "word": "extend()",
+    "phonetic": "",
+    "translation": "用于在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）",
+    "translations": [
+      "用于在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）"
+    ],
+    "domain": "qwerty_python_array"
+  },
+  {
+    "id": "qwerty_python_system_00005",
+    "word": "extsep",
+    "phonetic": "",
+    "translation": "文件名和文件扩展名之间分隔的符号，在Windows下为‘.’",
+    "translations": [
+      "文件名和文件扩展名之间分隔的符号，在Windows下为‘.’"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_file_00002",
+    "word": "fileno()",
+    "phonetic": "",
+    "translation": "fileno() 方法返回一个整型的文件描述符(file descriptor FD 整型)，可用于底层操作系统的 I/O 操作。",
+    "translations": [
+      "fileno() 方法返回一个整型的文件描述符(file descriptor FD 整型)，可用于底层操作系统的 I/O 操作。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_builtin_00020",
+    "word": "filter",
+    "phonetic": "/fˈɪltɝ/",
+    "translation": "用 iterable 中函数 function 返回真的那些元素",
+    "translations": [
+      "用 iterable 中函数 function 返回真的那些元素"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_string_00008",
+    "word": "find()",
+    "phonetic": "",
+    "translation": "检测字符串中是否包含子字符串 str ，如果指定 beg（开始） 和 end（结束） 范围，则检查是否包含在指定范围内，如果包含子字符串返回开始的索引值，否则返回-1。",
+    "translations": [
+      "检测字符串中是否包含子字符串 str ，如果指定 beg（开始） 和 end（结束） 范围，则检查是否包含在指定范围内，如果包含子字符串返回开始的索引值，否则返回-1。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_builtin_00021",
+    "word": "float",
+    "phonetic": "/flˈoʊt/",
+    "translation": "返回从数字或字符串 x 生成的浮点数",
+    "translations": [
+      "返回从数字或字符串 x 生成的浮点数"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_file_00003",
+    "word": "flush()",
+    "phonetic": "",
+    "translation": "flush() 方法是用来刷新缓冲区的，即将缓冲区中的数据立刻写入文件，同时清空缓冲区，不需要是被动的等待输出缓冲区写入。一般情况下，文件关闭后会自动刷新缓冲区，但有时你需要在关闭前刷新它，这时就可以使用 flush() 方法。",
+    "translations": [
+      "flush() 方法是用来刷新缓冲区的，即将缓冲区中的数据立刻写入文件，同时清空缓冲区，不需要是被动的等待输出缓冲区写入。一般情况下，文件关闭后会自动刷新缓冲区，但有时你需要在关闭前刷新它，这时就可以使用 flush() 方法。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_builtin_00022",
+    "word": "format",
+    "phonetic": "/fˈɔrmˌæt/",
+    "translation": "将 value 转换为 format_spec 控制的 格式化 表示",
+    "translations": [
+      "将 value 转换为 format_spec 控制的 格式化 表示"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_string_00009",
+    "word": "format()",
+    "phonetic": "",
+    "translation": "调用此方法的字符串可以包含文字文本或用大括号{}分隔的替换字段。每个替换字段包含位置参数的数字索引，或关键字参数的名称。",
+    "translations": [
+      "调用此方法的字符串可以包含文字文本或用大括号{}分隔的替换字段。每个替换字段包含位置参数的数字索引，或关键字参数的名称。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_array_00006",
+    "word": "fromfile()",
+    "phonetic": "",
+    "translation": "用于从列表中找出某个值第一个匹配项的索引位置",
+    "translations": [
+      "用于从列表中找出某个值第一个匹配项的索引位置"
+    ],
+    "domain": "qwerty_python_array"
+  },
+  {
+    "id": "qwerty_python_set_00020",
+    "word": "fromkeys()",
+    "phonetic": "",
+    "translation": "创建一个新字典，以序列 seq 中元素做字典的键，value 为字典所有键对应的初始值",
+    "translations": [
+      "创建一个新字典，以序列 seq 中元素做字典的键，value 为字典所有键对应的初始值"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_builtin_00023",
+    "word": "frozenset",
+    "phonetic": "",
+    "translation": "返回一个新的 不可变集合 对象",
+    "translations": [
+      "返回一个新的 不可变集合 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00021",
+    "word": "get()",
+    "phonetic": "",
+    "translation": "返回指定键的值",
+    "translations": [
+      "返回指定键的值"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_builtin_00024",
+    "word": "getattr",
+    "phonetic": "",
+    "translation": "返回对象命名属性的值",
+    "translations": [
+      "返回对象命名属性的值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00025",
+    "word": "globals",
+    "phonetic": "/ɡlˈoʊbʌl/",
+    "translation": "返回表示当前全局符号表的字典",
+    "translations": [
+      "返回表示当前全局符号表的字典"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_date_00005",
+    "word": "gmtime()",
+    "phonetic": "",
+    "translation": "接收时间辍（1970 纪元后经过的浮点秒数）并返回格林威治天文时间下的时间元组 t。注：t.tm_isdst 始终为 0",
+    "translations": [
+      "接收时间辍（1970 纪元后经过的浮点秒数）并返回格林威治天文时间下的时间元组 t。注：t.tm_isdst 始终为 0"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_builtin_00026",
+    "word": "hasattr",
+    "phonetic": "",
+    "translation": "检测对象是否含有指定属性",
+    "translations": [
+      "检测对象是否含有指定属性"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00027",
+    "word": "hash",
+    "phonetic": "/hˈæʃ/",
+    "translation": "返回该对象的哈希值",
+    "translations": [
+      "返回该对象的哈希值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00028",
+    "word": "help",
+    "phonetic": "/hˈɛlp/",
+    "translation": "启动内置的帮助系统",
+    "translations": [
+      "启动内置的帮助系统"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00029",
+    "word": "hex",
+    "phonetic": "/hˈɛks/",
+    "translation": "将整数转换为以 0x 为前缀的小写十六进制字符串",
+    "translations": [
+      "将整数转换为以 0x 为前缀的小写十六进制字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00030",
+    "word": "id",
+    "phonetic": "/ˈɪd/",
+    "translation": "返回对象的 标识值",
+    "translations": [
+      "返回对象的 标识值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_array_00007",
+    "word": "index()",
+    "phonetic": "",
+    "translation": "用于从列表中找出某个值第一个匹配项的索引位置",
+    "translations": [
+      "用于从列表中找出某个值第一个匹配项的索引位置"
+    ],
+    "domain": "qwerty_python_array"
+  },
+  {
+    "id": "qwerty_python_builtin_00031",
+    "word": "input",
+    "phonetic": "/ˈɪnpˌʊt/",
+    "translation": "从输入中读取一行",
+    "translations": [
+      "从输入中读取一行"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_array_00008",
+    "word": "insert()",
+    "phonetic": "",
+    "translation": "用于将指定对象插入列表的指定位置",
+    "translations": [
+      "用于将指定对象插入列表的指定位置"
+    ],
+    "domain": "qwerty_python_array"
+  },
+  {
+    "id": "qwerty_python_builtin_00032",
+    "word": "int",
+    "phonetic": "",
+    "translation": "返回一个基于数字或字符串 x 构造的整数对象",
+    "translations": [
+      "返回一个基于数字或字符串 x 构造的整数对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00009",
+    "word": "intersection()",
+    "phonetic": "",
+    "translation": "返回两个或更多集合中都包含的元素，即交集，返回一个新的集合",
+    "translations": [
+      "返回两个或更多集合中都包含的元素，即交集，返回一个新的集合"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_string_00011",
+    "word": "isalnum()",
+    "phonetic": "",
+    "translation": "检测字符串是否由字母和数字组成",
+    "translations": [
+      "检测字符串是否由字母和数字组成"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00012",
+    "word": "isalpha()",
+    "phonetic": "",
+    "translation": "检测字符串是否只由字母组成",
+    "translations": [
+      "检测字符串是否只由字母组成"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_file_00004",
+    "word": "isatty()",
+    "phonetic": "",
+    "translation": "isatty() 方法检测文件是否连接到一个终端设备，如果是返回 True，否则返回 False。",
+    "translations": [
+      "isatty() 方法检测文件是否连接到一个终端设备，如果是返回 True，否则返回 False。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_string_00013",
+    "word": "isdecimal()",
+    "phonetic": "",
+    "translation": "检查字符串是否只包含十进制字符。这种方法只存在于unicode对象",
+    "translations": [
+      "检查字符串是否只包含十进制字符。这种方法只存在于unicode对象"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00014",
+    "word": "isdigit()",
+    "phonetic": "",
+    "translation": "检测字符串是否只由数字组成",
+    "translations": [
+      "检测字符串是否只由数字组成"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_set_00013",
+    "word": "isdisjoint()",
+    "phonetic": "",
+    "translation": "判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False。",
+    "translations": [
+      "判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False。"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_builtin_00033",
+    "word": "isinstance",
+    "phonetic": "",
+    "translation": "检测对象是否为类的实例",
+    "translations": [
+      "检测对象是否为类的实例"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_string_00015",
+    "word": "islower()",
+    "phonetic": "",
+    "translation": "检测字符串是否由小写字母组成。",
+    "translations": [
+      "检测字符串是否由小写字母组成。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00016",
+    "word": "isnumeric()",
+    "phonetic": "",
+    "translation": "检测字符串是否只由数字组成。这种方法是只针对unicode对象",
+    "translations": [
+      "检测字符串是否只由数字组成。这种方法是只针对unicode对象"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_date_00009",
+    "word": "isocalendar()",
+    "phonetic": "",
+    "translation": "isocalendar()返回指定日期的年，第几周，周几这三个值。",
+    "translations": [
+      "isocalendar()返回指定日期的年，第几周，周几这三个值。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_date_00010",
+    "word": "isoformat()",
+    "phonetic": "",
+    "translation": "返回一个字符串，代表ISO 8601格式的日期，YYY-MM-DD。",
+    "translations": [
+      "返回一个字符串，代表ISO 8601格式的日期，YYY-MM-DD。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_date_00011",
+    "word": "isoweekday()",
+    "phonetic": "",
+    "translation": "返回一周的整数",
+    "translations": [
+      "返回一周的整数"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_string_00017",
+    "word": "isspace()",
+    "phonetic": "",
+    "translation": "检测字符串是否只由空格组成",
+    "translations": [
+      "检测字符串是否只由空格组成"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_builtin_00034",
+    "word": "issubclass",
+    "phonetic": "",
+    "translation": "检测类是否为类的子类",
+    "translations": [
+      "检测类是否为类的子类"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00014",
+    "word": "issubset()",
+    "phonetic": "",
+    "translation": "判断集合的所有元素是否都包含在指定集合中，如果是则返回 True，否则返回 False",
+    "translations": [
+      "判断集合的所有元素是否都包含在指定集合中，如果是则返回 True，否则返回 False"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_set_00015",
+    "word": "issuperset()",
+    "phonetic": "",
+    "translation": "判断指定集合的所有元素是否都包含在原始的集合中，如果是则返回 True，否则返回 False",
+    "translations": [
+      "判断指定集合的所有元素是否都包含在原始的集合中，如果是则返回 True，否则返回 False"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_string_00018",
+    "word": "istitle()",
+    "phonetic": "",
+    "translation": "检测字符串中所有的单词拼写首字母是否为大写，且其他字母为小写",
+    "translations": [
+      "检测字符串中所有的单词拼写首字母是否为大写，且其他字母为小写"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00019",
+    "word": "isupper()",
+    "phonetic": "",
+    "translation": "检测字符串中所有的字母是否都为大写",
+    "translations": [
+      "检测字符串中所有的字母是否都为大写"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_set_00023",
+    "word": "items()",
+    "phonetic": "",
+    "translation": "以列表返回可遍历的(键, 值) 元组数组",
+    "translations": [
+      "以列表返回可遍历的(键, 值) 元组数组"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_builtin_00035",
+    "word": "iter",
+    "phonetic": "/ˈɪt/",
+    "translation": "返回一个 iterable 对象",
+    "translations": [
+      "返回一个 iterable 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00024",
+    "word": "iteritems()",
+    "phonetic": "",
+    "translation": "将一个字典以列表的形式返回，因为字典是无序的，所以返回的列表也是无序的",
+    "translations": [
+      "将一个字典以列表的形式返回，因为字典是无序的，所以返回的列表也是无序的"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_set_00025",
+    "word": "iterkeys()",
+    "phonetic": "",
+    "translation": "返回一个迭代器",
+    "translations": [
+      "返回一个迭代器"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_string_00020",
+    "word": "join()",
+    "phonetic": "",
+    "translation": "用于将序列中的元素以指定的字符连接生成一个新的字符串",
+    "translations": [
+      "用于将序列中的元素以指定的字符连接生成一个新的字符串"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_set_00026",
+    "word": "keys()",
+    "phonetic": "",
+    "translation": "返回一个视图对象",
+    "translations": [
+      "返回一个视图对象"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_builtin_00036",
+    "word": "len",
+    "phonetic": "/lˈɛn/",
+    "translation": "返回对象的长度（元素个数）",
+    "translations": [
+      "返回对象的长度（元素个数）"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00010",
+    "word": "len()",
+    "phonetic": "",
+    "translation": "返回对象（字符、列表、元组等）长度或项目个数",
+    "translations": [
+      "返回对象（字符、列表、元组等）长度或项目个数"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_system_00006",
+    "word": "linesep",
+    "phonetic": "",
+    "translation": "输出当前平台使用的行终止符，win下为'\t\n',Linux下为'\n'。",
+    "translations": [
+      "输出当前平台使用的行终止符，win下为'\t\n',Linux下为'\n'。"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_builtin_00037",
+    "word": "list",
+    "phonetic": "/lˈɪst/",
+    "translation": "创建一个新的列表",
+    "translations": [
+      "创建一个新的列表"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_string_00021",
+    "word": "ljust()",
+    "phonetic": "",
+    "translation": "返回一个原字符串左对齐,并使用空格填充至指定长度的新字符串。如果指定的长度小于原字符串的长度则返回原字符串",
+    "translations": [
+      "返回一个原字符串左对齐,并使用空格填充至指定长度的新字符串。如果指定的长度小于原字符串的长度则返回原字符串"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_builtin_00038",
+    "word": "locals",
+    "phonetic": "/lˈoʊkʌlz/",
+    "translation": "更新并返回表示当前本地符号表的字典",
+    "translations": [
+      "更新并返回表示当前本地符号表的字典"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_date_00006",
+    "word": "localtime()",
+    "phonetic": "",
+    "translation": "接收时间辍（1970 纪元后经过的浮点秒数）并返回当地时间下的时间元组 t（t.tm_isdst 可取 0 或 1，取决于当地当时是不是夏令时）。",
+    "translations": [
+      "接收时间辍（1970 纪元后经过的浮点秒数）并返回当地时间下的时间元组 t（t.tm_isdst 可取 0 或 1，取决于当地当时是不是夏令时）。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_string_00022",
+    "word": "lower()",
+    "phonetic": "",
+    "translation": "转换字符串中所有大写字符为小写",
+    "translations": [
+      "转换字符串中所有大写字符为小写"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00023",
+    "word": "lstrip()",
+    "phonetic": "",
+    "translation": "用于截掉字符串左边的空格或指定字符",
+    "translations": [
+      "用于截掉字符串左边的空格或指定字符"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_builtin_00039",
+    "word": "map",
+    "phonetic": "/mˈæp/",
+    "translation": "返回一个将 function 应用于 iterable 中每一项并输出其结果的迭代器",
+    "translations": [
+      "返回一个将 function 应用于 iterable 中每一项并输出其结果的迭代器"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00040",
+    "word": "max",
+    "phonetic": "/mˈæks/",
+    "translation": "返回可迭代对象中最大的元素",
+    "translations": [
+      "返回可迭代对象中最大的元素"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00041",
+    "word": "memoryview",
+    "phonetic": "",
+    "translation": "返回由给定实参创建的 内存视图 对象",
+    "translations": [
+      "返回由给定实参创建的 内存视图 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00042",
+    "word": "min",
+    "phonetic": "/mˈɪn/",
+    "translation": "返回可迭代对象中最小的元素",
+    "translations": [
+      "返回可迭代对象中最小的元素"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_date_00007",
+    "word": "mktime()",
+    "phonetic": "",
+    "translation": "接受时间元组并返回时间辍（1970 纪元后经过的浮点秒数）。",
+    "translations": [
+      "接受时间元组并返回时间辍（1970 纪元后经过的浮点秒数）。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_file_00019",
+    "word": "mode",
+    "phonetic": "/mˈoʊd/",
+    "translation": "文件打开模式",
+    "translations": [
+      "文件打开模式"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_system_00017",
+    "word": "modules",
+    "phonetic": "/mˈɑdʒulz/",
+    "translation": "加载模块",
+    "translations": [
+      "加载模块"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_file_00018",
+    "word": "name",
+    "phonetic": "/nˈeɪm/",
+    "translation": "文件名",
+    "translations": [
+      "文件名"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_file_00020",
+    "word": "newlines",
+    "phonetic": "/nˈulɪn/",
+    "translation": "表示文件所采用的分隔符",
+    "translations": [
+      "表示文件所采用的分隔符"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_builtin_00043",
+    "word": "next",
+    "phonetic": "/nˈɛkst/",
+    "translation": "通过调用 iterator 的 __next__() 方法获取下一个元素",
+    "translations": [
+      "通过调用 iterator 的 __next__() 方法获取下一个元素"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_file_00005",
+    "word": "next()",
+    "phonetic": "",
+    "translation": "next() 方法在文件使用迭代器时会使用到，在循环中，next()方法会在每次循环中调用，该方法返回文件的下一行，如果到达结尾(EOF)，则触发 StopIteration。",
+    "translations": [
+      "next() 方法在文件使用迭代器时会使用到，在循环中，next()方法会在每次循环中调用，该方法返回文件的下一行，如果到达结尾(EOF)，则触发 StopIteration。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_builtin_00044",
+    "word": "object",
+    "phonetic": "/ˈɑbdʒɛkt/",
+    "translation": "返回一个没有特征的新对象",
+    "translations": [
+      "返回一个没有特征的新对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00045",
+    "word": "oct",
+    "phonetic": "/ˈɔkt/",
+    "translation": "将一个整数转变为一个前缀为 0o 的八进制字符串",
+    "translations": [
+      "将一个整数转变为一个前缀为 0o 的八进制字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00046",
+    "word": "open",
+    "phonetic": "/ˈoʊpʌn/",
+    "translation": "打开 file 并返回对应的 file object",
+    "translations": [
+      "打开 file 并返回对应的 file object"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00047",
+    "word": "ord",
+    "phonetic": "/ˈɔrd/",
+    "translation": "对表示单个 Unicode 字符的字符串",
+    "translations": [
+      "对表示单个 Unicode 字符的字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_system_00007",
+    "word": "pardir",
+    "phonetic": "/pˈɑrdi/",
+    "translation": "获取当前目录的父目录字符串名：('..')",
+    "translations": [
+      "获取当前目录的父目录字符串名：('..')"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_string_00024",
+    "word": "partition()",
+    "phonetic": "",
+    "translation": "用来根据指定的分隔符将字符串进行分割",
+    "translations": [
+      "用来根据指定的分隔符将字符串进行分割"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_system_00018",
+    "word": "path",
+    "phonetic": "/pˈæθ/",
+    "translation": "搜索路径",
+    "translations": [
+      "搜索路径"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_system_00008",
+    "word": "pathsep",
+    "phonetic": "",
+    "translation": "PATH环境变量中的分隔符，在POSIX系统中为‘:’，在Windows中为‘;’",
+    "translations": [
+      "PATH环境变量中的分隔符，在POSIX系统中为‘:’，在Windows中为‘;’"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_system_00019",
+    "word": "platform",
+    "phonetic": "/plˈætfˌɔrm/",
+    "translation": "查看当前操作系统的信息,来采集系统版本位数计算机类型名称内核等一系列信息",
+    "translations": [
+      "查看当前操作系统的信息,来采集系统版本位数计算机类型名称内核等一系列信息"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_array_00009",
+    "word": "pop()",
+    "phonetic": "",
+    "translation": "用于移除列表中的一个元素(默认最后一个元素),并且返回该元素的值",
+    "translations": [
+      "用于移除列表中的一个元素(默认最后一个元素),并且返回该元素的值"
+    ],
+    "domain": "qwerty_python_array"
+  },
+  {
+    "id": "qwerty_python_set_00027",
+    "word": "popitem()",
+    "phonetic": "",
+    "translation": "返回并删除字典中的最后一对键和值",
+    "translations": [
+      "返回并删除字典中的最后一对键和值"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_builtin_00048",
+    "word": "pow",
+    "phonetic": "/pˈaʊ/",
+    "translation": "返回 base 的 exp 次幂",
+    "translations": [
+      "返回 base 的 exp 次幂"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00049",
+    "word": "print",
+    "phonetic": "/prˈɪnt/",
+    "translation": "将 objects 打印到 file 指定的文本流",
+    "translations": [
+      "将 objects 打印到 file 指定的文本流"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00050",
+    "word": "property",
+    "phonetic": "/prˈɑpɝti/",
+    "translation": "返回 property 属性",
+    "translations": [
+      "返回 property 属性"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00051",
+    "word": "range",
+    "phonetic": "/rˈeɪndʒ/",
+    "translation": "创建一个整数列表",
+    "translations": [
+      "创建一个整数列表"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_file_00006",
+    "word": "read()",
+    "phonetic": "",
+    "translation": "read() 方法用于从文件读取指定的字节数，如果未给定或为负则读取所有。",
+    "translations": [
+      "read() 方法用于从文件读取指定的字节数，如果未给定或为负则读取所有。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_file_00007",
+    "word": "readline()",
+    "phonetic": "",
+    "translation": "readline() 方法用于从文件读取整行，包括 '\n' 字符。如果指定了一个非负数的参数，则返回指定大小的字节数，包括 '\n' 字符。",
+    "translations": [
+      "readline() 方法用于从文件读取整行，包括 '\n' 字符。如果指定了一个非负数的参数，则返回指定大小的字节数，包括 '\n' 字符。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_file_00008",
+    "word": "readlines()",
+    "phonetic": "",
+    "translation": "readlines() 方法用于读取所有行(直到结束符 EOF)并返回列表，若给定sizeint>0，返回总和大约为sizeint字节的行, 实际读取值可能比sizhint较大, 因为需要填充缓冲区。如果碰到结束符 EOF 则返回空字符串。",
+    "translations": [
+      "readlines() 方法用于读取所有行(直到结束符 EOF)并返回列表，若给定sizeint>0，返回总和大约为sizeint字节的行, 实际读取值可能比sizhint较大, 因为需要填充缓冲区。如果碰到结束符 EOF 则返回空字符串。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_array_00010",
+    "word": "remove()",
+    "phonetic": "",
+    "translation": "用于移除列表中某个值的第一个匹配项",
+    "translations": [
+      "用于移除列表中某个值的第一个匹配项"
+    ],
+    "domain": "qwerty_python_array"
+  },
+  {
+    "id": "qwerty_python_string_00025",
+    "word": "replace()",
+    "phonetic": "",
+    "translation": "把字符串中的 old（旧字符串） 替换成 new(新字符串)，如果指定第三个参数max，则替换不超过 max 次",
+    "translations": [
+      "把字符串中的 old（旧字符串） 替换成 new(新字符串)，如果指定第三个参数max，则替换不超过 max 次"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_builtin_00052",
+    "word": "repr",
+    "phonetic": "/rˈɛpɝ/",
+    "translation": "返回包含一个对象的可打印表示形式的字符串",
+    "translations": [
+      "返回包含一个对象的可打印表示形式的字符串"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_array_00011",
+    "word": "reverse()",
+    "phonetic": "",
+    "translation": "用于反向列表中元素。",
+    "translations": [
+      "用于反向列表中元素。"
+    ],
+    "domain": "qwerty_python_array"
+  },
+  {
+    "id": "qwerty_python_builtin_00053",
+    "word": "reversed",
+    "phonetic": "/rɪvˈɝst/",
+    "translation": "返回一个反向的 iterator",
+    "translations": [
+      "返回一个反向的 iterator"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_string_00026",
+    "word": "rfind()",
+    "phonetic": "",
+    "translation": "返回字符串最后一次出现的位置，如果没有匹配项则返回-1",
+    "translations": [
+      "返回字符串最后一次出现的位置，如果没有匹配项则返回-1"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00027",
+    "word": "rindex()",
+    "phonetic": "",
+    "translation": "返回子字符串 str 在字符串中最后出现的位置，如果没有匹配的字符串会报异常，你可以指定可选参数[beg:end]设置查找的区间",
+    "translations": [
+      "返回子字符串 str 在字符串中最后出现的位置，如果没有匹配的字符串会报异常，你可以指定可选参数[beg:end]设置查找的区间"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00028",
+    "word": "rjust()",
+    "phonetic": "",
+    "translation": "返回一个原字符串右对齐,并使用空格填充至长度 width 的新字符串。如果指定的长度小于字符串的长度则返回原字符串。",
+    "translations": [
+      "返回一个原字符串右对齐,并使用空格填充至长度 width 的新字符串。如果指定的长度小于字符串的长度则返回原字符串。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_builtin_00054",
+    "word": "round",
+    "phonetic": "/rˈaʊnd/",
+    "translation": "回 number 舍入到小数点后 ndigits 位精度的值",
+    "translations": [
+      "回 number 舍入到小数点后 ndigits 位精度的值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_string_00029",
+    "word": "rpartition()",
+    "phonetic": "",
+    "translation": "从目标字符串的末尾也就是右边开始搜索分割符",
+    "translations": [
+      "从目标字符串的末尾也就是右边开始搜索分割符"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00030",
+    "word": "rsplit()",
+    "phonetic": "",
+    "translation": "通过指定分隔符对字符串进行分割并返回一个列表,默认分隔符为所有空字符",
+    "translations": [
+      "通过指定分隔符对字符串进行分割并返回一个列表,默认分隔符为所有空字符"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00031",
+    "word": "rstrip()",
+    "phonetic": "",
+    "translation": "删除 string 字符串末尾的指定字符（默认为空格）.",
+    "translations": [
+      "删除 string 字符串末尾的指定字符（默认为空格）."
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_file_00009",
+    "word": "seek()",
+    "phonetic": "",
+    "translation": "seek() 方法用于移动文件读取指针到指定位置。",
+    "translations": [
+      "seek() 方法用于移动文件读取指针到指定位置。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_system_00009",
+    "word": "sep",
+    "phonetic": "/sˈɛp/",
+    "translation": "不同的平台有不同的路径表示方法，为了在编写代码的时候方便处理，增加可移植性，可以使用os.sep作为路径的分隔符",
+    "translations": [
+      "不同的平台有不同的路径表示方法，为了在编写代码的时候方便处理，增加可移植性，可以使用os.sep作为路径的分隔符"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_builtin_00055",
+    "word": "set",
+    "phonetic": "/sˈɛt/",
+    "translation": "返回一个新的 set 对象",
+    "translations": [
+      "返回一个新的 set 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00056",
+    "word": "setattr",
+    "phonetic": "",
+    "translation": "设置对象属性",
+    "translations": [
+      "设置对象属性"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_set_00028",
+    "word": "setdefault()",
+    "phonetic": "",
+    "translation": "如果键不存在于字典中，将会添加键并将值设为默认值",
+    "translations": [
+      "如果键不存在于字典中，将会添加键并将值设为默认值"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_date_00008",
+    "word": "sleep()",
+    "phonetic": "",
+    "translation": "推迟调用线程的运行",
+    "translations": [
+      "推迟调用线程的运行"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_builtin_00057",
+    "word": "slice",
+    "phonetic": "/slˈaɪs/",
+    "translation": "返回一个指定索引集的 slice 对象",
+    "translations": [
+      "返回一个指定索引集的 slice 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_file_00021",
+    "word": "softspace",
+    "phonetic": "",
+    "translation": "文件末尾强制加空格标志,为0表示在输出一数据后，要再加上一个空格符，为1表示不加，这个属性一般用不到",
+    "translations": [
+      "文件末尾强制加空格标志,为0表示在输出一数据后，要再加上一个空格符，为1表示不加，这个属性一般用不到"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_builtin_00058",
+    "word": "sorted",
+    "phonetic": "/sˈɔrtɪd/",
+    "translation": "根据 iterable 中的项返回一个新的已排序列表",
+    "translations": [
+      "根据 iterable 中的项返回一个新的已排序列表"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_string_00032",
+    "word": "split()",
+    "phonetic": "",
+    "translation": "通过指定分隔符对字符串进行切片，如果参数num 有指定值，则仅分隔 num 个子字符串。",
+    "translations": [
+      "通过指定分隔符对字符串进行切片，如果参数num 有指定值，则仅分隔 num 个子字符串。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00033",
+    "word": "splitlines()",
+    "phonetic": "",
+    "translation": "按照行分隔，返回一个包含各行作为元素的列表，如果 num 指定则仅切片 num 个行.",
+    "translations": [
+      "按照行分隔，返回一个包含各行作为元素的列表，如果 num 指定则仅切片 num 个行."
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_string_00034",
+    "word": "startswith()",
+    "phonetic": "",
+    "translation": "用于检查字符串是否是以指定子字符串开头，如果是则返回 True，否则返回 False。如果参数 beg 和 end 指定值，则在指定范围内检查。",
+    "translations": [
+      "用于检查字符串是否是以指定子字符串开头，如果是则返回 True，否则返回 False。如果参数 beg 和 end 指定值，则在指定范围内检查。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_system_00022",
+    "word": "stderr",
+    "phonetic": "",
+    "translation": "错误输出",
+    "translations": [
+      "错误输出"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_system_00020",
+    "word": "stdin",
+    "phonetic": "",
+    "translation": "标准输入，stdin提供了read()和readline()函数，如果想按一行行来读取，可以考虑使用它",
+    "translations": [
+      "标准输入，stdin提供了read()和readline()函数，如果想按一行行来读取，可以考虑使用它"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_system_00021",
+    "word": "stdout",
+    "phonetic": "",
+    "translation": "标准输出",
+    "translations": [
+      "标准输出"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_builtin_00059",
+    "word": "str",
+    "phonetic": "/strˈit/",
+    "translation": "返回一个 str 版本的 object",
+    "translations": [
+      "返回一个 str 版本的 object"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_date_00012",
+    "word": "strftime()",
+    "phonetic": "",
+    "translation": "strftime() 函数接收以时间元组，并返回以可读字符串表示的当地时间，格式由参数format决定",
+    "translations": [
+      "strftime() 函数接收以时间元组，并返回以可读字符串表示的当地时间，格式由参数format决定"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_string_00035",
+    "word": "strip()",
+    "phonetic": "",
+    "translation": "用于移除字符串头尾指定的字符（默认为空格）",
+    "translations": [
+      "用于移除字符串头尾指定的字符（默认为空格）"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_builtin_00060",
+    "word": "sum",
+    "phonetic": "/sˈʌm/",
+    "translation": "自左向右对 iterable 的项求和并返回总计值",
+    "translations": [
+      "自左向右对 iterable 的项求和并返回总计值"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00061",
+    "word": "super",
+    "phonetic": "/sˈupɝ/",
+    "translation": "返回一个代理对象",
+    "translations": [
+      "返回一个代理对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_string_00036",
+    "word": "swapcase",
+    "phonetic": "",
+    "translation": "用于对字符串的大小写字母进行转换",
+    "translations": [
+      "用于对字符串的大小写字母进行转换"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_file_00010",
+    "word": "tell()",
+    "phonetic": "",
+    "translation": "tell() 方法返回文件的当前位置，即文件指针当前位置。",
+    "translations": [
+      "tell() 方法返回文件的当前位置，即文件指针当前位置。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_date_00021",
+    "word": "time()",
+    "phonetic": "",
+    "translation": "返回具有相同时、分、秒、微秒和折线的时间对象",
+    "translations": [
+      "返回具有相同时、分、秒、微秒和折线的时间对象"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_date_00013",
+    "word": "timetuple()",
+    "phonetic": "",
+    "translation": "timetuple()等同于time.struct_time((d.year, d.month, d.day, 0, 0, 0, d.weekday(), yday, -1))",
+    "translations": [
+      "timetuple()等同于time.struct_time((d.year, d.month, d.day, 0, 0, 0, d.weekday(), yday, -1))"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_date_00022",
+    "word": "timetz()",
+    "phonetic": "",
+    "translation": "此方法的返回类型是具有相同时，分，秒，微秒，倍数和tzinfo的时间对象。",
+    "translations": [
+      "此方法的返回类型是具有相同时，分，秒，微秒，倍数和tzinfo的时间对象。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_string_00037",
+    "word": "title()",
+    "phonetic": "",
+    "translation": "返回‘标题化’的字符串,就是说所有单词都是以大写开始，其余字母均为小写(见 istitle())",
+    "translations": [
+      "返回‘标题化’的字符串,就是说所有单词都是以大写开始，其余字母均为小写(见 istitle())"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_date_00014",
+    "word": "toordinal()",
+    "phonetic": "",
+    "translation": "返回该日期的公历序数",
+    "translations": [
+      "返回该日期的公历序数"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_string_00038",
+    "word": "translate()",
+    "phonetic": "",
+    "translation": "根据参数table给出的表(包含 256 个字符)转换字符串的字符, 要过滤掉的字符放到 del 参数中",
+    "translations": [
+      "根据参数table给出的表(包含 256 个字符)转换字符串的字符, 要过滤掉的字符放到 del 参数中"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_file_00011",
+    "word": "truncate()",
+    "phonetic": "",
+    "translation": "truncate() 方法用于截断文件，如果指定了可选参数 size，则表示截断文件为 size 个字符。 如果没有指定 size，则从当前位置起截断；截断之后 size 后面的所有字符被删除。",
+    "translations": [
+      "truncate() 方法用于截断文件，如果指定了可选参数 size，则表示截断文件为 size 个字符。 如果没有指定 size，则从当前位置起截断；截断之后 size 后面的所有字符被删除。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_builtin_00062",
+    "word": "tuple",
+    "phonetic": "",
+    "translation": "返回一个新的 元组 对象",
+    "translations": [
+      "返回一个新的 元组 对象"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_builtin_00063",
+    "word": "type",
+    "phonetic": "/tˈaɪp/",
+    "translation": "返回 object 的类型",
+    "translations": [
+      "返回 object 的类型"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_date_00023",
+    "word": "tzname()",
+    "phonetic": "",
+    "translation": "包含一对根据情况的不同而不同的字符串，分别是带夏令时的本地时区名称，和不带的。",
+    "translations": [
+      "包含一对根据情况的不同而不同的字符串，分别是带夏令时的本地时区名称，和不带的。"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_set_00018",
+    "word": "union()",
+    "phonetic": "",
+    "translation": "返回两个集合的并集，即包含了所有集合的元素，重复的元素只会出现一次",
+    "translations": [
+      "返回两个集合的并集，即包含了所有集合的元素，重复的元素只会出现一次"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_set_00019",
+    "word": "update()",
+    "phonetic": "",
+    "translation": "修改当前集合，可以添加新的元素或集合到当前集合中，如果添加的元素在集合中已存在，则该元素只会出现一次，重复的会忽略",
+    "translations": [
+      "修改当前集合，可以添加新的元素或集合到当前集合中，如果添加的元素在集合中已存在，则该元素只会出现一次，重复的会忽略"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_string_00039",
+    "word": "upper()",
+    "phonetic": "",
+    "translation": "将字符串中的小写字母转为大写字母",
+    "translations": [
+      "将字符串中的小写字母转为大写字母"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_set_00029",
+    "word": "values()",
+    "phonetic": "",
+    "translation": "返回一个视图对象",
+    "translations": [
+      "返回一个视图对象"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_builtin_00064",
+    "word": "vars",
+    "phonetic": "/vˈɑrz/",
+    "translation": "返回模块、类、实例或任何其它具有 __dict__ 属性的对象的 __dict__ 属性",
+    "translations": [
+      "返回模块、类、实例或任何其它具有 __dict__ 属性的对象的 __dict__ 属性"
+    ],
+    "domain": "qwerty_python_builtin"
+  },
+  {
+    "id": "qwerty_python_date_00015",
+    "word": "weekday()",
+    "phonetic": "",
+    "translation": "将星期几作为一个整数返回，其中星期一为0，星期日为6",
+    "translations": [
+      "将星期几作为一个整数返回，其中星期一为0，星期日为6"
+    ],
+    "domain": "qwerty_python_date"
+  },
+  {
+    "id": "qwerty_python_system_00024",
+    "word": "winver",
+    "phonetic": "",
+    "translation": "版本号",
+    "translations": [
+      "版本号"
+    ],
+    "domain": "qwerty_python_system"
+  },
+  {
+    "id": "qwerty_python_file_00012",
+    "word": "write()",
+    "phonetic": "",
+    "translation": "write() 方法用于向文件中写入指定字符串。在文件关闭前或缓冲区刷新前，字符串内容存储在缓冲区中，这时你在文件中是看不到写入的内容的。",
+    "translations": [
+      "write() 方法用于向文件中写入指定字符串。在文件关闭前或缓冲区刷新前，字符串内容存储在缓冲区中，这时你在文件中是看不到写入的内容的。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_file_00013",
+    "word": "writelines()",
+    "phonetic": "",
+    "translation": "writelines() 方法用于向文件中写入一序列的字符串。这一序列字符串可以是由迭代对象产生的，如一个字符串列表。 换行需要制定换行符\n。",
+    "translations": [
+      "writelines() 方法用于向文件中写入一序列的字符串。这一序列字符串可以是由迭代对象产生的，如一个字符串列表。 换行需要制定换行符\n。"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_set_00001",
+    "word": "x in s",
+    "phonetic": "",
+    "translation": "判断键是否存在于字典中，如果键在字典 dict 里返回 true，否则返回 false",
+    "translations": [
+      "判断键是否存在于字典中，如果键在字典 dict 里返回 true，否则返回 false"
+    ],
+    "domain": "qwerty_python_set"
+  },
+  {
+    "id": "qwerty_python_file_00014",
+    "word": "xreadlines()",
+    "phonetic": "",
+    "translation": "返回一个生成器，来循环操作文件的每一行。循环使用时和readlines基本一样，但是直接打印就不同",
+    "translations": [
+      "返回一个生成器，来循环操作文件的每一行。循环使用时和readlines基本一样，但是直接打印就不同"
+    ],
+    "domain": "qwerty_python_file"
+  },
+  {
+    "id": "qwerty_python_string_00040",
+    "word": "zfill()",
+    "phonetic": "",
+    "translation": "返回指定长度的字符串，原字符串右对齐，前面填充0。",
+    "translations": [
+      "返回指定长度的字符串，原字符串右对齐，前面填充0。"
+    ],
+    "domain": "qwerty_python_string"
+  },
+  {
+    "id": "qwerty_python_builtin_00065",
+    "word": "zip",
+    "phonetic": "/zˈɪp/",
+    "translation": "创建一个聚合了来自每个可迭代对象中的元素的迭代器",
+    "translations": [
+      "创建一个聚合了来自每个可迭代对象中的元素的迭代器"
+    ],
+    "domain": "qwerty_python_builtin"
+  }
+]

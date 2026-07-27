@@ -1,0 +1,812 @@
+[
+  {
+    "id": "qwerty_rustkeyword_00001",
+    "word": "as",
+    "phonetic": "/ˈæz/",
+    "translation": "`as` 用于进行类型转换（类型别名），将一种类型转换为另一种类型，通常用于强制类型转换或者是简化泛型。",
+    "translations": [
+      "`as` 用于进行类型转换（类型别名），将一种类型转换为另一种类型，通常用于强制类型转换或者是简化泛型。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00002",
+    "word": "async",
+    "phonetic": "",
+    "translation": "`async` 用于定义异步函数或闭包，表示该函数将返回一个 `Future`，可以通过 `await` 来等待其执行结果。",
+    "translations": [
+      "`async` 用于定义异步函数或闭包，表示该函数将返回一个 `Future`，可以通过 `await` 来等待其执行结果。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00003",
+    "word": "await",
+    "phonetic": "/ʌwˈeɪt/",
+    "translation": "`await` 用于在异步上下文中等待异步操作的完成。它只能在 `async` 函数中使用。",
+    "translations": [
+      "`await` 用于在异步上下文中等待异步操作的完成。它只能在 `async` 函数中使用。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00004",
+    "word": "break",
+    "phonetic": "/brˈeɪk/",
+    "translation": "`break` 用于跳出当前的循环或 `match` 语句，终止循环或匹配。",
+    "translations": [
+      "`break` 用于跳出当前的循环或 `match` 语句，终止循环或匹配。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00005",
+    "word": "const",
+    "phonetic": "",
+    "translation": "`const` 用于定义常量，其值在编译时就已经确定，并且值不可变。常量的类型必须显式指定。",
+    "translations": [
+      "`const` 用于定义常量，其值在编译时就已经确定，并且值不可变。常量的类型必须显式指定。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00006",
+    "word": "continue",
+    "phonetic": "/kʌntˈɪnju/",
+    "translation": "`continue` 用于跳过当前循环的剩余部分，继续执行下一次循环。",
+    "translations": [
+      "`continue` 用于跳过当前循环的剩余部分，继续执行下一次循环。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00007",
+    "word": "crate",
+    "phonetic": "/krˈeɪt/",
+    "translation": "`crate` 表示当前包（crate），用于标识模块或外部 crate 的路径。",
+    "translations": [
+      "`crate` 表示当前包（crate），用于标识模块或外部 crate 的路径。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00008",
+    "word": "dyn",
+    "phonetic": "",
+    "translation": "`dyn` 用于创建 trait 对象，允许在运行时动态调用 trait 中定义的方法。",
+    "translations": [
+      "`dyn` 用于创建 trait 对象，允许在运行时动态调用 trait 中定义的方法。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00009",
+    "word": "else",
+    "phonetic": "/ˈɛls/",
+    "translation": "`else` 用于与 `if` 语句配合，指定条件不成立时执行的代码块。",
+    "translations": [
+      "`else` 用于与 `if` 语句配合，指定条件不成立时执行的代码块。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00010",
+    "word": "enum",
+    "phonetic": "",
+    "translation": "`enum` 用于定义枚举类型，枚举可以有多个变体，每个变体可以包含不同类型的数据。",
+    "translations": [
+      "`enum` 用于定义枚举类型，枚举可以有多个变体，每个变体可以包含不同类型的数据。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00011",
+    "word": "extern",
+    "phonetic": "",
+    "translation": "`extern` 用于声明外部函数或外部库（通常是 C 或其他语言），以便可以在 Rust 代码中调用。",
+    "translations": [
+      "`extern` 用于声明外部函数或外部库（通常是 C 或其他语言），以便可以在 Rust 代码中调用。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00012",
+    "word": "fn",
+    "phonetic": "",
+    "translation": "`fn` 用于定义函数。函数有一个明确的返回类型（如果有的话），并且可以接受参数。",
+    "translations": [
+      "`fn` 用于定义函数。函数有一个明确的返回类型（如果有的话），并且可以接受参数。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00013",
+    "word": "for",
+    "phonetic": "/fˈɔr/",
+    "translation": "`for` 用于创建一个迭代循环，通常用来遍历集合、范围或其他可迭代的类型。",
+    "translations": [
+      "`for` 用于创建一个迭代循环，通常用来遍历集合、范围或其他可迭代的类型。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rusthashmap_00023",
+    "word": "HashMap::capacity()",
+    "phonetic": "",
+    "translation": "`HashMap::capacity()` 方法返回 `HashMap` 当前的容量，即它可以容纳的键值对的最大数量。",
+    "translations": [
+      "`HashMap::capacity()` 方法返回 `HashMap` 当前的容量，即它可以容纳的键值对的最大数量。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00009",
+    "word": "HashMap::clear()",
+    "phonetic": "",
+    "translation": "`HashMap::clear()` 方法移除 `HashMap` 中的所有键值对，但不释放内存。",
+    "translations": [
+      "`HashMap::clear()` 方法移除 `HashMap` 中的所有键值对，但不释放内存。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00015",
+    "word": "HashMap::clone()",
+    "phonetic": "",
+    "translation": "`HashMap::clone()` 方法创建并返回 `HashMap` 的一个深拷贝。",
+    "translations": [
+      "`HashMap::clone()` 方法创建并返回 `HashMap` 的一个深拷贝。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00014",
+    "word": "HashMap::entry()",
+    "phonetic": "",
+    "translation": "`HashMap::entry()` 方法返回一个 `Entry` 类型，允许对指定的键执行插入或修改操作。如果键不存在，可以插入新值。",
+    "translations": [
+      "`HashMap::entry()` 方法返回一个 `Entry` 类型，允许对指定的键执行插入或修改操作。如果键不存在，可以插入新值。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00016",
+    "word": "HashMap::extend()",
+    "phonetic": "",
+    "translation": "`HashMap::extend()` 方法将另一个 `HashMap` 或可迭代的键值对添加到当前的 `HashMap` 中。",
+    "translations": [
+      "`HashMap::extend()` 方法将另一个 `HashMap` 或可迭代的键值对添加到当前的 `HashMap` 中。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00004",
+    "word": "HashMap::get()",
+    "phonetic": "",
+    "translation": "`HashMap::get()` 方法根据给定的键查询并返回其对应的值。如果键不存在，则返回 `None`。",
+    "translations": [
+      "`HashMap::get()` 方法根据给定的键查询并返回其对应的值。如果键不存在，则返回 `None`。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00003",
+    "word": "HashMap::insert()",
+    "phonetic": "",
+    "translation": "`HashMap::insert()` 方法将指定的键值对插入到 `HashMap` 中。如果该键已存在，则会更新其对应的值。",
+    "translations": [
+      "`HashMap::insert()` 方法将指定的键值对插入到 `HashMap` 中。如果该键已存在，则会更新其对应的值。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00010",
+    "word": "HashMap::iter()",
+    "phonetic": "",
+    "translation": "`HashMap::iter()` 方法返回一个迭代器，可以遍历 `HashMap` 中的所有键值对。",
+    "translations": [
+      "`HashMap::iter()` 方法返回一个迭代器，可以遍历 `HashMap` 中的所有键值对。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00011",
+    "word": "HashMap::keys()",
+    "phonetic": "",
+    "translation": "`HashMap::keys()` 方法返回一个包含所有键的迭代器，允许遍历所有键。",
+    "translations": [
+      "`HashMap::keys()` 方法返回一个包含所有键的迭代器，允许遍历所有键。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00007",
+    "word": "HashMap::len()",
+    "phonetic": "",
+    "translation": "`HashMap::len()` 方法返回 `HashMap` 中键值对的个数。",
+    "translations": [
+      "`HashMap::len()` 方法返回 `HashMap` 中键值对的个数。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00001",
+    "word": "HashMap::new()",
+    "phonetic": "",
+    "translation": "`HashMap::new()` 方法创建并返回一个新的空 `HashMap`，其键和值的类型由泛型指定。",
+    "translations": [
+      "`HashMap::new()` 方法创建并返回一个新的空 `HashMap`，其键和值的类型由泛型指定。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00005",
+    "word": "HashMap::remove()",
+    "phonetic": "",
+    "translation": "`HashMap::remove()` 方法移除并返回指定键对应的值，如果该键不存在，返回 `None`。",
+    "translations": [
+      "`HashMap::remove()` 方法移除并返回指定键对应的值，如果该键不存在，返回 `None`。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00017",
+    "word": "HashMap::retain()",
+    "phonetic": "",
+    "translation": "`HashMap::retain()` 方法保留满足给定条件的键值对，移除不符合条件的键值对。",
+    "translations": [
+      "`HashMap::retain()` 方法保留满足给定条件的键值对，移除不符合条件的键值对。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rusthashmap_00012",
+    "word": "HashMap::values()",
+    "phonetic": "",
+    "translation": "`HashMap::values()` 方法返回一个包含所有值的迭代器，允许遍历所有值。",
+    "translations": [
+      "`HashMap::values()` 方法返回一个包含所有值的迭代器，允许遍历所有值。"
+    ],
+    "domain": "qwerty_rusthashmap"
+  },
+  {
+    "id": "qwerty_rustkeyword_00014",
+    "word": "if",
+    "phonetic": "/ˈɪf/",
+    "translation": "`if` 用于执行条件判断语句，如果条件为真，则执行对应代码块。",
+    "translations": [
+      "`if` 用于执行条件判断语句，如果条件为真，则执行对应代码块。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00015",
+    "word": "impl",
+    "phonetic": "",
+    "translation": "`impl` 用于为类型（如结构体、枚举或 trait）实现方法，或者为类型实现某个 trait。",
+    "translations": [
+      "`impl` 用于为类型（如结构体、枚举或 trait）实现方法，或者为类型实现某个 trait。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00016",
+    "word": "in",
+    "phonetic": "/ɪn/",
+    "translation": "`in` 用于模式匹配中，表示模式的匹配条件。通常与 `for` 循环一起使用。",
+    "translations": [
+      "`in` 用于模式匹配中，表示模式的匹配条件。通常与 `for` 循环一起使用。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00017",
+    "word": "let",
+    "phonetic": "/lˈɛt/",
+    "translation": "`let` 用于声明变量或常量，常用来进行值绑定，支持可变和不可变绑定。",
+    "translations": [
+      "`let` 用于声明变量或常量，常用来进行值绑定，支持可变和不可变绑定。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00018",
+    "word": "loop",
+    "phonetic": "/lˈup/",
+    "translation": "`loop` 用于创建一个无限循环，直到使用 `break` 或其他控制流语句终止。",
+    "translations": [
+      "`loop` 用于创建一个无限循环，直到使用 `break` 或其他控制流语句终止。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00019",
+    "word": "match",
+    "phonetic": "/mˈætʃ/",
+    "translation": "`match` 用于模式匹配，根据给定的值匹配多个可能的情况并执行相应的代码块。",
+    "translations": [
+      "`match` 用于模式匹配，根据给定的值匹配多个可能的情况并执行相应的代码块。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00020",
+    "word": "mod",
+    "phonetic": "/mˈɔd/",
+    "translation": "`mod` 用于定义模块，模块是组织代码的基本单元，包含函数、结构体、枚举等内容。",
+    "translations": [
+      "`mod` 用于定义模块，模块是组织代码的基本单元，包含函数、结构体、枚举等内容。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00021",
+    "word": "move",
+    "phonetic": "/mˈuv/",
+    "translation": "`move` 用于捕获闭包中的值时，强制将其所有权转移给闭包，而非通过引用传递。",
+    "translations": [
+      "`move` 用于捕获闭包中的值时，强制将其所有权转移给闭包，而非通过引用传递。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00022",
+    "word": "mut",
+    "phonetic": "",
+    "translation": "`mut` 用于声明一个可变变量或可变引用，表示该变量的值可以被修改。",
+    "translations": [
+      "`mut` 用于声明一个可变变量或可变引用，表示该变量的值可以被修改。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00023",
+    "word": "pub",
+    "phonetic": "/pˈʌb/",
+    "translation": "`pub` 用于将项（如结构体、函数或模块）标记为公有，使得它们可以在模块外部访问。",
+    "translations": [
+      "`pub` 用于将项（如结构体、函数或模块）标记为公有，使得它们可以在模块外部访问。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00024",
+    "word": "ref",
+    "phonetic": "/rˈɛf/",
+    "translation": "`ref` 用于通过引用模式匹配值，避免值的所有权转移，而是获取一个引用。",
+    "translations": [
+      "`ref` 用于通过引用模式匹配值，避免值的所有权转移，而是获取一个引用。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00025",
+    "word": "return",
+    "phonetic": "/rɪtˈɝn/",
+    "translation": "`return` 用于从函数中返回值，终止函数执行并返回控制权给调用者。",
+    "translations": [
+      "`return` 用于从函数中返回值，终止函数执行并返回控制权给调用者。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00026",
+    "word": "self",
+    "phonetic": "/sˈɛlf/",
+    "translation": "`self` 表示当前实例，在方法定义中引用调用该方法的对象。",
+    "translations": [
+      "`self` 表示当前实例，在方法定义中引用调用该方法的对象。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00027",
+    "word": "static",
+    "phonetic": "/stˈætɪk/",
+    "translation": "`static` 用于声明具有静态生命周期的变量，这些变量在程序的整个生命周期中都存在。",
+    "translations": [
+      "`static` 用于声明具有静态生命周期的变量，这些变量在程序的整个生命周期中都存在。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_ruststring_00014",
+    "word": "String::clear()",
+    "phonetic": "",
+    "translation": "String::clear() 方法清空字符串的内容，移除所有字符，但不会改变分配的内存。",
+    "translations": [
+      "String::clear() 方法清空字符串的内容，移除所有字符，但不会改变分配的内存。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00013",
+    "word": "String::find()",
+    "phonetic": "",
+    "translation": "String::find() 方法返回指定子字符串首次出现的起始索引，如果未找到，返回 `None`。",
+    "translations": [
+      "String::find() 方法返回指定子字符串首次出现的起始索引，如果未找到，返回 `None`。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00002",
+    "word": "String::from()",
+    "phonetic": "",
+    "translation": "String::from() 方法从一个字符串字面量或字符串切片创建一个新的 `String`。",
+    "translations": [
+      "String::from() 方法从一个字符串字面量或字符串切片创建一个新的 `String`。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00009",
+    "word": "String::insert()",
+    "phonetic": "",
+    "translation": "String::insert() 方法在指定位置插入一个字符。如果索引超出范围，会引发 panic。",
+    "translations": [
+      "String::insert() 方法在指定位置插入一个字符。如果索引超出范围，会引发 panic。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00012",
+    "word": "String::len()",
+    "phonetic": "",
+    "translation": "String::len() 方法返回字符串的字节长度，而不是字符数。对于 UTF-8 编码的字符串，字符数和字节数可能不同。",
+    "translations": [
+      "String::len() 方法返回字符串的字节长度，而不是字符数。对于 UTF-8 编码的字符串，字符数和字节数可能不同。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00001",
+    "word": "String::new()",
+    "phonetic": "",
+    "translation": "String::new() 方法创建并返回一个新的空字符串。",
+    "translations": [
+      "String::new() 方法创建并返回一个新的空字符串。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00006",
+    "word": "String::pop()",
+    "phonetic": "",
+    "translation": "String::pop() 方法移除并返回字符串末尾的一个字符。如果字符串为空，则返回 `None`。",
+    "translations": [
+      "String::pop() 方法移除并返回字符串末尾的一个字符。如果字符串为空，则返回 `None`。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00004",
+    "word": "String::push()",
+    "phonetic": "",
+    "translation": "String::push() 方法将一个单个字符追加到字符串的末尾。",
+    "translations": [
+      "String::push() 方法将一个单个字符追加到字符串的末尾。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00008",
+    "word": "String::remove()",
+    "phonetic": "",
+    "translation": "String 并没有 `remove()` 方法。这个方法的描述是错误的。移除字符的方法通常使用索引或切片的方式。",
+    "translations": [
+      "String 并没有 `remove()` 方法。这个方法的描述是错误的。移除字符的方法通常使用索引或切片的方式。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00007",
+    "word": "String::replace()",
+    "phonetic": "",
+    "translation": "String::replace() 方法返回一个新字符串，其中所有匹配的子字符串被另一个子字符串替换。原始字符串不变。",
+    "translations": [
+      "String::replace() 方法返回一个新字符串，其中所有匹配的子字符串被另一个子字符串替换。原始字符串不变。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00022",
+    "word": "String::replacen()",
+    "phonetic": "",
+    "translation": "String::replacen() 方法替换字符串中最多 `n` 次匹配的子字符串，并返回一个新字符串。",
+    "translations": [
+      "String::replacen() 方法替换字符串中最多 `n` 次匹配的子字符串，并返回一个新字符串。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00021",
+    "word": "String::retain()",
+    "phonetic": "",
+    "translation": "String::retain() 方法通过给定的闭包函数保留符合条件的字符，移除不符合的字符。",
+    "translations": [
+      "String::retain() 方法通过给定的闭包函数保留符合条件的字符，移除不符合的字符。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00020",
+    "word": "String::split()",
+    "phonetic": "",
+    "translation": "String::split() 方法根据指定的分隔符分割字符串，返回一个迭代器。",
+    "translations": [
+      "String::split() 方法根据指定的分隔符分割字符串，返回一个迭代器。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00019",
+    "word": "String::trim()",
+    "phonetic": "",
+    "translation": "String::trim() 方法返回一个新字符串，去除两端的空白字符。",
+    "translations": [
+      "String::trim() 方法返回一个新字符串，去除两端的空白字符。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_ruststring_00011",
+    "word": "String::truncate()",
+    "phonetic": "",
+    "translation": "String::truncate() 方法将字符串截断到指定的长度，丢弃超出部分。",
+    "translations": [
+      "String::truncate() 方法将字符串截断到指定的长度，丢弃超出部分。"
+    ],
+    "domain": "qwerty_ruststring"
+  },
+  {
+    "id": "qwerty_rustkeyword_00028",
+    "word": "struct",
+    "phonetic": "",
+    "translation": "`struct` 用于定义结构体类型，它是一种自定义的数据类型，可以包含多个字段。",
+    "translations": [
+      "`struct` 用于定义结构体类型，它是一种自定义的数据类型，可以包含多个字段。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00029",
+    "word": "super",
+    "phonetic": "/sˈupɝ/",
+    "translation": "`super` 用于引用父模块，通常用于访问父模块中的函数或类型。",
+    "translations": [
+      "`super` 用于引用父模块，通常用于访问父模块中的函数或类型。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00030",
+    "word": "trait",
+    "phonetic": "/trˈeɪt/",
+    "translation": "`trait` 用于定义 trait，它是一组方法签名，可以被不同的类型实现以提供共享功能。",
+    "translations": [
+      "`trait` 用于定义 trait，它是一组方法签名，可以被不同的类型实现以提供共享功能。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00031",
+    "word": "type",
+    "phonetic": "/tˈaɪp/",
+    "translation": "`type` 用于定义类型别名，或者在泛型中为类型参数指定约束条件。",
+    "translations": [
+      "`type` 用于定义类型别名，或者在泛型中为类型参数指定约束条件。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00032",
+    "word": "unsafe",
+    "phonetic": "/ʌnsˈeɪf/",
+    "translation": "`unsafe` 用于标记不安全的代码块，允许进行一些编译器不检查的操作，如直接操作指针等。",
+    "translations": [
+      "`unsafe` 用于标记不安全的代码块，允许进行一些编译器不检查的操作，如直接操作指针等。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00033",
+    "word": "use",
+    "phonetic": "/jˈus/",
+    "translation": "`use` 用于将模块、函数、类型等引入当前作用域，减少代码冗余并简化访问路径。",
+    "translations": [
+      "`use` 用于将模块、函数、类型等引入当前作用域，减少代码冗余并简化访问路径。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustvector_00007",
+    "word": "Vec::clear()",
+    "phonetic": "",
+    "translation": "`Vec::clear()` 方法移除 `Vec` 中的所有元素，但不改变其容量。",
+    "translations": [
+      "`Vec::clear()` 方法移除 `Vec` 中的所有元素，但不改变其容量。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00016",
+    "word": "Vec::clone()",
+    "phonetic": "",
+    "translation": "`Vec::clone()` 方法返回一个 `Vec` 的克隆，包含相同的元素。",
+    "translations": [
+      "`Vec::clone()` 方法返回一个 `Vec` 的克隆，包含相同的元素。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00008",
+    "word": "Vec::contains()",
+    "phonetic": "",
+    "translation": "`Vec::contains()` 方法检查 `Vec` 中是否包含指定的元素。返回一个布尔值。",
+    "translations": [
+      "`Vec::contains()` 方法检查 `Vec` 中是否包含指定的元素。返回一个布尔值。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00026",
+    "word": "Vec::dedup()",
+    "phonetic": "",
+    "translation": "`Vec::dedup()` 方法移除 `Vec` 中的相邻重复元素。",
+    "translations": [
+      "`Vec::dedup()` 方法移除 `Vec` 中的相邻重复元素。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00017",
+    "word": "Vec::extend()",
+    "phonetic": "",
+    "translation": "`Vec::extend()` 方法将另一个可迭代对象的元素追加到当前 `Vec` 的末尾。",
+    "translations": [
+      "`Vec::extend()` 方法将另一个可迭代对象的元素追加到当前 `Vec` 的末尾。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00014",
+    "word": "Vec::get()",
+    "phonetic": "",
+    "translation": "`Vec::get()` 方法通过索引获取 `Vec` 中的元素，返回一个 `Option`，如果索引越界，则返回 `None`。",
+    "translations": [
+      "`Vec::get()` 方法通过索引获取 `Vec` 中的元素，返回一个 `Option`，如果索引越界，则返回 `None`。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00015",
+    "word": "Vec::index()",
+    "phonetic": "",
+    "translation": "`Vec::index()` 方法与 `get()` 类似，但在越界时会引发 `panic`。",
+    "translations": [
+      "`Vec::index()` 方法与 `get()` 类似，但在越界时会引发 `panic`。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00018",
+    "word": "Vec::insert()",
+    "phonetic": "",
+    "translation": "`Vec::insert()` 方法在指定位置插入一个元素，后续元素会右移。",
+    "translations": [
+      "`Vec::insert()` 方法在指定位置插入一个元素，后续元素会右移。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00005",
+    "word": "Vec::len()",
+    "phonetic": "",
+    "translation": "`Vec::len()` 方法返回 `Vec` 中元素的个数。",
+    "translations": [
+      "`Vec::len()` 方法返回 `Vec` 中元素的个数。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00001",
+    "word": "Vec::new()",
+    "phonetic": "",
+    "translation": "`Vec::new()` 方法创建并返回一个新的空 `Vec`，它没有任何元素。",
+    "translations": [
+      "`Vec::new()` 方法创建并返回一个新的空 `Vec`，它没有任何元素。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00004",
+    "word": "Vec::pop()",
+    "phonetic": "",
+    "translation": "`Vec::pop()` 方法移除并返回 `Vec` 中的最后一个元素。如果 `Vec` 是空的，返回 `None`。",
+    "translations": [
+      "`Vec::pop()` 方法移除并返回 `Vec` 中的最后一个元素。如果 `Vec` 是空的，返回 `None`。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00003",
+    "word": "Vec::push()",
+    "phonetic": "",
+    "translation": "`Vec::push()` 方法将一个元素追加到 `Vec` 的末尾。",
+    "translations": [
+      "`Vec::push()` 方法将一个元素追加到 `Vec` 的末尾。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00009",
+    "word": "Vec::remove()",
+    "phonetic": "",
+    "translation": "`Vec::remove()` 方法移除并返回 `Vec` 中指定索引处的元素，其他元素会左移。",
+    "translations": [
+      "`Vec::remove()` 方法移除并返回 `Vec` 中指定索引处的元素，其他元素会左移。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00012",
+    "word": "Vec::resize()",
+    "phonetic": "",
+    "translation": "`Vec::resize()` 方法调整 `Vec` 的大小。如果新大小大于原大小，元素将会按指定值填充。",
+    "translations": [
+      "`Vec::resize()` 方法调整 `Vec` 的大小。如果新大小大于原大小，元素将会按指定值填充。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00010",
+    "word": "Vec::retain()",
+    "phonetic": "",
+    "translation": "`Vec::retain()` 方法保留符合指定条件的元素，移除不符合条件的元素。",
+    "translations": [
+      "`Vec::retain()` 方法保留符合指定条件的元素，移除不符合条件的元素。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00022",
+    "word": "Vec::sort()",
+    "phonetic": "",
+    "translation": "`Vec::sort()` 方法对 `Vec` 中的元素进行排序，默认按升序排列。",
+    "translations": [
+      "`Vec::sort()` 方法对 `Vec` 中的元素进行排序，默认按升序排列。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustvector_00013",
+    "word": "Vec::truncate()",
+    "phonetic": "",
+    "translation": "`Vec::truncate()` 方法将 `Vec` 截断到指定的长度，多余的元素会被丢弃。",
+    "translations": [
+      "`Vec::truncate()` 方法将 `Vec` 截断到指定的长度，多余的元素会被丢弃。"
+    ],
+    "domain": "qwerty_rustvector"
+  },
+  {
+    "id": "qwerty_rustkeyword_00034",
+    "word": "where",
+    "phonetic": "/wˈɛr/",
+    "translation": "`where` 用于在泛型约束中指定类型约束，通常用于定义函数或结构体时的类型参数约束。",
+    "translations": [
+      "`where` 用于在泛型约束中指定类型约束，通常用于定义函数或结构体时的类型参数约束。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  },
+  {
+    "id": "qwerty_rustkeyword_00035",
+    "word": "while",
+    "phonetic": "/wˈaɪl/",
+    "translation": "`while` 用于创建一个基于条件判断的循环，只要条件为真，循环就会继续执行。",
+    "translations": [
+      "`while` 用于创建一个基于条件判断的循环，只要条件为真，循环就会继续执行。"
+    ],
+    "domain": "qwerty_rustkeyword"
+  }
+]

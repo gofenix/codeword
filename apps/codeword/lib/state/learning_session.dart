@@ -1286,6 +1286,13 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   }
 
   List<QuestionType> _enabledQuestionTypes(LearningPreferences preferences) {
+    // Swipe mode never shows options — it only flips word cards. Generating
+    // distractor options requires sorting the entire vocab pool (17k+ words
+    // for IELTS) per question, which made the buffer-refill loading state
+    // visibly stall. Use typeWord (no distractor sorting) for swipe mode.
+    if (preferences.learningMode == LearningMode.swipe) {
+      return const [QuestionType.typeWord];
+    }
     return [
       QuestionType.seeWordPickMeaning,
       QuestionType.seeMeaningPickWord,
@@ -1293,7 +1300,6 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       if (preferences.spellingEnabled) QuestionType.typeWord,
     ];
   }
-
   QuestionType _nextQuestionType(
     LearningPreferences preferences, {
     QuestionType? excluded,

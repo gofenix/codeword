@@ -36,8 +36,8 @@ void main() {
       'assets/vocab/qwerty_coder.json',
     ).readAsString();
     final words = (jsonDecode(raw) as List).cast<Map<String, dynamic>>();
-    expect(words, hasLength(2371));
-    expect(words.map((word) => word['word']).toSet(), hasLength(2371));
+    expect(words, hasLength(2343));
+    expect(words.map((word) => word['word']).toSet(), hasLength(2343));
     final chineseMeaning = RegExp(r'[\u4e00-\u9fff]');
     for (final word in words) {
       expect(

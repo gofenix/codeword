@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "qwerty_jsmapset_00010",
+    "word": "add()",
+    "phonetic": "",
+    "translation": "add() 方法用来向一个 Set 对象的末尾添加一个指定的值。",
+    "translations": [
+      "add() 方法用来向一个 Set 对象的末尾添加一个指定的值。"
+    ],
+    "domain": "qwerty_jsmapset"
+  },
+  {
+    "id": "qwerty_jsobject_00034",
+    "word": "apply()",
+    "phonetic": "",
+    "translation": "apply() 方法调用一个函数, 其具有一个指定的this值，以及作为一个数组（或类似数组的对象）提供的参数。",
+    "translations": [
+      "apply() 方法调用一个函数, 其具有一个指定的this值，以及作为一个数组（或类似数组的对象）提供的参数。"
+    ],
+    "domain": "qwerty_jsobject"
+  },
+  {
+    "id": "qwerty_jsobject_00035",
+    "word": "bind()",
+    "phonetic": "",
+    "translation": "bind()方法创建一个新的函数, 当被调用时，将其this关键字设置为提供的值，在调用新函数时，在任何提供之前提供一个给定的参数序列。",
+    "translations": [
+      "bind()方法创建一个新的函数, 当被调用时，将其this关键字设置为提供的值，在调用新函数时，在任何提供之前提供一个给定的参数序列。"
+    ],
+    "domain": "qwerty_jsobject"
+  },
+  {
+    "id": "qwerty_jsobject_00036",
+    "word": "call()",
+    "phonetic": "",
+    "translation": "call() 方法调用一个函数, 其具有一个指定的this值和分别地提供的参数(参数的列表)。",
+    "translations": [
+      "call() 方法调用一个函数, 其具有一个指定的this值和分别地提供的参数(参数的列表)。"
+    ],
+    "domain": "qwerty_jsobject"
+  },
+  {
+    "id": "qwerty_jsstring_00003",
+    "word": "charAt()",
+    "phonetic": "",
+    "translation": "charAt() 方法从一个字符串中返回指定的字符。",
+    "translations": [
+      "charAt() 方法从一个字符串中返回指定的字符。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00004",
+    "word": "charCodeAt()",
+    "phonetic": "",
+    "translation": "charCodeAt() 方法返回0到65535之间的整数，表示给定索引处的UTF-16代码单元 (在 Unicode 编码单元表示一个单一的 UTF-16 编码单元的情况下，UTF-16 编码单元匹配 Unicode 编码单元。但在——例如 Unicode 编码单元 > 0x10000 的这种——不能被一个 UTF-16 编码单元单独表示的情况下，只能匹配 Unicode 代理对的第一个编码单元) 。如果你想要整个代码点的值，使用 codePointAt()。",
+    "translations": [
+      "charCodeAt() 方法返回0到65535之间的整数，表示给定索引处的UTF-16代码单元 (在 Unicode 编码单元表示一个单一的 UTF-16 编码单元的情况下，UTF-16 编码单元匹配 Unicode 编码单元。但在——例如 Unicode 编码单元 > 0x10000 的这种——不能被一个 UTF-16 编码单元单独表示的情况下，只能匹配 Unicode 代理对的第一个编码单元) 。如果你想要整个代码点的值，使用 codePointAt()。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsmapset_00001",
+    "word": "clear()",
+    "phonetic": "",
+    "translation": "clear()方法会移除Map对象中的所有元素。",
+    "translations": [
+      "clear()方法会移除Map对象中的所有元素。"
+    ],
+    "domain": "qwerty_jsmapset"
+  },
+  {
+    "id": "qwerty_jsstring_00005",
+    "word": "codePointAt()",
+    "phonetic": "",
+    "translation": "codePointAt() 方法返回 一个 Unicode 编码点值的非负整数。",
+    "translations": [
+      "codePointAt() 方法返回 一个 Unicode 编码点值的非负整数。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsarray_00005",
+    "word": "concat()",
+    "phonetic": "",
+    "translation": "concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。",
+    "translations": [
+      "concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00006",
+    "word": "copyWithin()",
+    "phonetic": "",
+    "translation": "改变了的数组。",
+    "translations": [
+      "改变了的数组。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsglobal_00006",
+    "word": "decodeURI()",
+    "phonetic": "",
+    "translation": "decodeURI() 函数解码一个由encodeURI 先前创建的统一资源标识符（URI）或类似的例程。",
+    "translations": [
+      "decodeURI() 函数解码一个由encodeURI 先前创建的统一资源标识符（URI）或类似的例程。"
+    ],
+    "domain": "qwerty_jsglobal"
+  },
+  {
+    "id": "qwerty_jsglobal_00007",
+    "word": "decodeURIComponent()",
+    "phonetic": "",
+    "translation": "decodeURIComponent() 方法用于解码由 encodeURIComponent 方法或者其它类似方法编码的部分统一资源标识符（URI）。",
+    "translations": [
+      "decodeURIComponent() 方法用于解码由 encodeURIComponent 方法或者其它类似方法编码的部分统一资源标识符（URI）。"
+    ],
+    "domain": "qwerty_jsglobal"
+  },
+  {
+    "id": "qwerty_jsmapset_00002",
+    "word": "delete()",
+    "phonetic": "",
+    "translation": "delete() 方法用于移除 Map 对象中指定的元素。",
+    "translations": [
+      "delete() 方法用于移除 Map 对象中指定的元素。"
+    ],
+    "domain": "qwerty_jsmapset"
+  },
+  {
+    "id": "qwerty_jsglobal_00008",
+    "word": "encodeURI()",
+    "phonetic": "",
+    "translation": "encodeURI() 函数通过将特定字符的每个实例替换为一个、两个、三或四转义序列来对统一资源标识符 (URI) 进行编码 (该字符的 UTF-8 编码仅为四转义序列)由两个 \"代理\" 字符组成)。",
+    "translations": [
+      "encodeURI()  函数通过将特定字符的每个实例替换为一个、两个、三或四转义序列来对统一资源标识符 (URI) 进行编码 (该字符的 UTF-8 编码仅为四转义序列)由两个 \"代理\" 字符组成)。"
+    ],
+    "domain": "qwerty_jsglobal"
+  },
+  {
+    "id": "qwerty_jsglobal_00009",
+    "word": "encodeURIComponent()",
+    "phonetic": "",
+    "translation": "encodeURIComponent()是对统一资源标识符（URI）的组成部分进行编码的方法。它使用一到四个转义序列来表示字符串中的每个字符的UTF-8编码（只有由两个Unicode代理区字符组成的字符才用四个转义字符编码）。",
+    "translations": [
+      "encodeURIComponent()是对统一资源标识符（URI）的组成部分进行编码的方法。它使用一到四个转义序列来表示字符串中的每个字符的UTF-8编码（只有由两个Unicode代理区字符组成的字符才用四个转义字符编码）。"
+    ],
+    "domain": "qwerty_jsglobal"
+  },
+  {
+    "id": "qwerty_jsstring_00007",
+    "word": "endsWith()",
+    "phonetic": "",
+    "translation": "endsWith()方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的，根据判断结果返回 true 或 false。",
+    "translations": [
+      "endsWith()方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的，根据判断结果返回 true 或 false。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsarray_00007",
+    "word": "entries()",
+    "phonetic": "",
+    "translation": "entries() 方法返回一个新的Array Iterator对象，该对象包含数组中每个索引的键/值对。",
+    "translations": [
+      "entries() 方法返回一个新的Array Iterator对象，该对象包含数组中每个索引的键/值对。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsglobal_00001",
+    "word": "eval()",
+    "phonetic": "",
+    "translation": "eval() 函数会将传入的字符串当做 JavaScript 代码进行执行。",
+    "translations": [
+      "eval() 函数会将传入的字符串当做 JavaScript 代码进行执行。"
+    ],
+    "domain": "qwerty_jsglobal"
+  },
+  {
+    "id": "qwerty_jsarray_00008",
+    "word": "every()",
+    "phonetic": "",
+    "translation": "every() 方法测试数组的所有元素是否都通过了指定函数的测试。",
+    "translations": [
+      "every() 方法测试数组的所有元素是否都通过了指定函数的测试。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00009",
+    "word": "fill()",
+    "phonetic": "",
+    "translation": "fill() 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。",
+    "translations": [
+      "fill() 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00010",
+    "word": "filter()",
+    "phonetic": "",
+    "translation": "filter() 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。",
+    "translations": [
+      "filter() 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00011",
+    "word": "find()",
+    "phonetic": "",
+    "translation": "find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。",
+    "translations": [
+      "find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00012",
+    "word": "findIndex()",
+    "phonetic": "",
+    "translation": "findIndex()方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。",
+    "translations": [
+      "findIndex()方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00013",
+    "word": "flat()",
+    "phonetic": "",
+    "translation": "flat() 方法会递归到指定深度将所有子数组连接，并返回一个新数组。",
+    "translations": [
+      "flat() 方法会递归到指定深度将所有子数组连接，并返回一个新数组。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00014",
+    "word": "flatMap()",
+    "phonetic": "",
+    "translation": "flatMap()方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。它与 map 和 深度值1的 flatten 几乎相同，但flatMap通常在合并成一种方法的效率稍微高一些。",
+    "translations": [
+      "flatMap()方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。它与 map 和 深度值1的 flatten 几乎相同，但flatMap通常在合并成一种方法的效率稍微高一些。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00015",
+    "word": "forEach()",
+    "phonetic": "",
+    "translation": "forEach() 方法对数组的每个元素执行一次提供的函数。",
+    "translations": [
+      "forEach() 方法对数组的每个元素执行一次提供的函数。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsmapset_00005",
+    "word": "get()",
+    "phonetic": "",
+    "translation": "get() 方法返回某个 Map 对象中的一个指定元素。",
+    "translations": [
+      "get() 方法返回某个 Map 对象中的一个指定元素。"
+    ],
+    "domain": "qwerty_jsmapset"
+  },
+  {
+    "id": "qwerty_jsdate_00004",
+    "word": "getDate()",
+    "phonetic": "",
+    "translation": "根据本地时间，返回一个指定的日期对象为一个月中的第几天。",
+    "translations": [
+      "根据本地时间，返回一个指定的日期对象为一个月中的第几天。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00005",
+    "word": "getDay()",
+    "phonetic": "",
+    "translation": "getDay() 方法根据本地时间，返回一个具体日期中一周的第几天，0 表示星期天。",
+    "translations": [
+      "getDay() 方法根据本地时间，返回一个具体日期中一周的第几天，0 表示星期天。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00006",
+    "word": "getFullYear()",
+    "phonetic": "",
+    "translation": "getFullYear() 方法根据本地时间返回指定日期的年份。",
+    "translations": [
+      "getFullYear() 方法根据本地时间返回指定日期的年份。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00007",
+    "word": "getHours()",
+    "phonetic": "",
+    "translation": "getHours() 方法根据本地时间，返回一个指定的日期对象的小时。",
+    "translations": [
+      "getHours() 方法根据本地时间，返回一个指定的日期对象的小时。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00008",
+    "word": "getMilliseconds()",
+    "phonetic": "",
+    "translation": "getMilliseconds() 方法，根据本地时间，返回一个指定的日期对象的毫秒数。",
+    "translations": [
+      "getMilliseconds() 方法，根据本地时间，返回一个指定的日期对象的毫秒数。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00009",
+    "word": "getMinutes()",
+    "phonetic": "",
+    "translation": "getMinutes() 方法根据本地时间，返回一个指定的日期对象的分钟数。",
+    "translations": [
+      "getMinutes() 方法根据本地时间，返回一个指定的日期对象的分钟数。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00010",
+    "word": "getMonth()",
+    "phonetic": "",
+    "translation": "根据本地时间，返回一个指定的日期对象的月份，为基于0的值（0表示一年中的第一月）。",
+    "translations": [
+      "根据本地时间，返回一个指定的日期对象的月份，为基于0的值（0表示一年中的第一月）。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00011",
+    "word": "getSeconds()",
+    "phonetic": "",
+    "translation": "getSeconds() 方法根据本地时间，返回一个指定的日期对象的秒数。",
+    "translations": [
+      "getSeconds() 方法根据本地时间，返回一个指定的日期对象的秒数。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00012",
+    "word": "getTime()",
+    "phonetic": "",
+    "translation": "getTime() 方法返回一个时间的格林威治时间数值。",
+    "translations": [
+      "getTime() 方法返回一个时间的格林威治时间数值。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00013",
+    "word": "getTimezoneOffset()",
+    "phonetic": "",
+    "translation": "getTimezoneOffset() 方法返回协调世界时（UTC）相对于当前时区的时间差值，单位为分钟。",
+    "translations": [
+      "getTimezoneOffset() 方法返回协调世界时（UTC）相对于当前时区的时间差值，单位为分钟。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00014",
+    "word": "getYear()",
+    "phonetic": "",
+    "translation": "getYear() 方法返回指定的本地日期的年份。因为 getYear 不返回千禧年[full years] ('year 2000 problem')，所以这个方法不再被使用，现在替换为 getFullYear .",
+    "translations": [
+      "getYear() 方法返回指定的本地日期的年份。因为 getYear 不返回千禧年[full years] ('year 2000 problem')，所以这个方法不再被使用，现在替换为 getFullYear ."
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsmapset_00006",
+    "word": "has()",
+    "phonetic": "",
+    "translation": "方法has() 返回一个bool值，用来表明map 中是否存在指定元素.",
+    "translations": [
+      "方法has() 返回一个bool值，用来表明map 中是否存在指定元素."
+    ],
+    "domain": "qwerty_jsmapset"
+  },
+  {
+    "id": "qwerty_jsobject_00021",
+    "word": "hasOwnProperty()",
+    "phonetic": "",
+    "translation": "hasOwnProperty() 方法会返回一个布尔值，指示对象自身属性中是否具有指定的属性",
+    "translations": [
+      "hasOwnProperty() 方法会返回一个布尔值，指示对象自身属性中是否具有指定的属性"
+    ],
+    "domain": "qwerty_jsobject"
+  },
+  {
+    "id": "qwerty_jsarray_00016",
+    "word": "includes()",
+    "phonetic": "",
+    "translation": "includes() 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回false。",
+    "translations": [
+      "includes() 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回false。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00017",
+    "word": "indexOf()",
+    "phonetic": "",
+    "translation": "indexOf()方法返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。",
+    "translations": [
+      "indexOf()方法返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsglobal_00002",
+    "word": "isFinite()",
+    "phonetic": "",
+    "translation": "该全局 isFinite() 函数用来判断被传入的参数值是否为一个有限数值（finite number）。在必要情况下，参数会首先转为一个数值。",
+    "translations": [
+      "该全局 isFinite() 函数用来判断被传入的参数值是否为一个有限数值（finite number）。在必要情况下，参数会首先转为一个数值。"
+    ],
+    "domain": "qwerty_jsglobal"
+  },
+  {
+    "id": "qwerty_jsobject_00037",
+    "word": "isGenerator()",
+    "phonetic": "",
+    "translation": "判断一个函数是否是一个生成器.",
+    "translations": [
+      "判断一个函数是否是一个生成器."
+    ],
+    "domain": "qwerty_jsobject"
+  },
+  {
+    "id": "qwerty_jsglobal_00003",
+    "word": "isNaN()",
+    "phonetic": "",
+    "translation": "isNaN() 函数用来确定一个值是否为NaN 。注：isNaN函数内包含一些非常有趣的规则；你也可以使用 ECMAScript 2015 中定义的 Number.isNaN() 来判断。",
+    "translations": [
+      "isNaN() 函数用来确定一个值是否为NaN 。注：isNaN函数内包含一些非常有趣的规则；你也可以使用 ECMAScript 2015 中定义的 Number.isNaN() 来判断。"
+    ],
+    "domain": "qwerty_jsglobal"
+  },
+  {
+    "id": "qwerty_jsobject_00022",
+    "word": "isPrototypeOf()",
+    "phonetic": "",
+    "translation": "isPrototypeOf() 方法用于测试一个对象是否存在于另一个对象的原型链上。",
+    "translations": [
+      "isPrototypeOf() 方法用于测试一个对象是否存在于另一个对象的原型链上。"
+    ],
+    "domain": "qwerty_jsobject"
+  },
+  {
+    "id": "qwerty_jsarray_00018",
+    "word": "join()",
+    "phonetic": "",
+    "translation": "join() 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。",
+    "translations": [
+      "join() 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00019",
+    "word": "keys()",
+    "phonetic": "",
+    "translation": "keys() 方法返回一个新的Array迭代器，它包含数组中每个索引的键。",
+    "translations": [
+      "keys() 方法返回一个新的Array迭代器，它包含数组中每个索引的键。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00020",
+    "word": "lastIndexOf()",
+    "phonetic": "",
+    "translation": "lastIndexOf() 方法返回指定元素（也即有效的 JavaScript 值或变量）在数组中的最后一个的索引，如果不存在则返回 -1。从数组的后面向前查找，从 fromIndex 处开始。",
+    "translations": [
+      "lastIndexOf() 方法返回指定元素（也即有效的 JavaScript 值或变量）在数组中的最后一个的索引，如果不存在则返回 -1。从数组的后面向前查找，从 fromIndex 处开始。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsstring_00011",
+    "word": "localeCompare()",
+    "phonetic": "",
+    "translation": "localeCompare() 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。",
+    "translations": [
+      "localeCompare() 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsarray_00021",
+    "word": "map()",
+    "phonetic": "",
+    "translation": "map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。",
+    "translations": [
+      "map() 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsstring_00012",
+    "word": "match()",
+    "phonetic": "",
+    "translation": "match() 方法检索返回一个字符串匹配正则表达式的的结果。",
+    "translations": [
+      "match() 方法检索返回一个字符串匹配正则表达式的的结果。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00013",
+    "word": "matchAll()",
+    "phonetic": "",
+    "translation": "matchAll() 方法返回一个包含所有匹配正则表达式及分组捕获结果的迭代器。",
+    "translations": [
+      "matchAll() 方法返回一个包含所有匹配正则表达式及分组捕获结果的迭代器。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00014",
+    "word": "normalize()",
+    "phonetic": "",
+    "translation": "normalize() 方法会按照指定的一种 Unicode 正规形式将当前字符串正规化.",
+    "translations": [
+      "normalize() 方法会按照指定的一种 Unicode 正规形式将当前字符串正规化."
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00015",
+    "word": "padEnd()",
+    "phonetic": "",
+    "translation": "padEnd() 方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。",
+    "translations": [
+      "padEnd()  方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00016",
+    "word": "padStart()",
+    "phonetic": "",
+    "translation": "padStart() 方法用另一个字符串填充当前字符串(重复，如果需要的话)，以便产生的字符串达到给定的长度。填充从当前字符串的开始(左侧)应用的。",
+    "translations": [
+      "padStart() 方法用另一个字符串填充当前字符串(重复，如果需要的话)，以便产生的字符串达到给定的长度。填充从当前字符串的开始(左侧)应用的。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsglobal_00004",
+    "word": "parseFloat()",
+    "phonetic": "",
+    "translation": "parseFloat() 函数解析一个参数（必要时先转换为字符串）并返回一个浮点数。",
+    "translations": [
+      "parseFloat() 函数解析一个参数（必要时先转换为字符串）并返回一个浮点数。"
+    ],
+    "domain": "qwerty_jsglobal"
+  },
+  {
+    "id": "qwerty_jsglobal_00005",
+    "word": "parseInt()",
+    "phonetic": "",
+    "translation": "parseInt(string, radix) 将一个字符串 string 转换为 radix 进制的整数， radix 为介于2-36之间的数。",
+    "translations": [
+      "parseInt(string, radix)   将一个字符串 string 转换为 radix 进制的整数， radix 为介于2-36之间的数。"
+    ],
+    "domain": "qwerty_jsglobal"
+  },
+  {
+    "id": "qwerty_jsarray_00022",
+    "word": "pop()",
+    "phonetic": "",
+    "translation": "pop()方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。",
+    "translations": [
+      "pop()方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsobject_00023",
+    "word": "propertyIsEnumerable()",
+    "phonetic": "",
+    "translation": "propertyIsEnumerable() 方法返回一个布尔值，表示指定的属性是否可枚举。",
+    "translations": [
+      "propertyIsEnumerable() 方法返回一个布尔值，表示指定的属性是否可枚举。"
+    ],
+    "domain": "qwerty_jsobject"
+  },
+  {
+    "id": "qwerty_jsarray_00023",
+    "word": "push()",
+    "phonetic": "",
+    "translation": "push() 方法将一个或多个元素添加到数组的末尾，并返回新数组的长度。",
+    "translations": [
+      "push() 方法将一个或多个元素添加到数组的末尾，并返回新数组的长度。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00024",
+    "word": "reduce()",
+    "phonetic": "",
+    "translation": "reduce() 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。",
+    "translations": [
+      "reduce() 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00025",
+    "word": "reduceRight()",
+    "phonetic": "",
+    "translation": "reduceRight() 方法接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值。",
+    "translations": [
+      "reduceRight() 方法接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsstring_00017",
+    "word": "repeat()",
+    "phonetic": "",
+    "translation": "repeat() 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。",
+    "translations": [
+      "repeat() 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00018",
+    "word": "replace()",
+    "phonetic": "",
+    "translation": "replace() 方法返回一个由替换值（replacement）替换一些或所有匹配的模式（pattern）后的新字符串。模式可以是一个字符串或者一个正则表达式，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。",
+    "translations": [
+      "replace() 方法返回一个由替换值（replacement）替换一些或所有匹配的模式（pattern）后的新字符串。模式可以是一个字符串或者一个正则表达式，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsarray_00026",
+    "word": "reverse()",
+    "phonetic": "",
+    "translation": "reverse() 方法将数组中元素的位置颠倒。",
+    "translations": [
+      "reverse() 方法将数组中元素的位置颠倒。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsstring_00019",
+    "word": "search()",
+    "phonetic": "",
+    "translation": "search() 方法执行正则表达式和 String 对象之间的一个搜索匹配。",
+    "translations": [
+      "search() 方法执行正则表达式和 String 对象之间的一个搜索匹配。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsmapset_00008",
+    "word": "set()",
+    "phonetic": "",
+    "translation": "set() 方法为 Map 对象添加或更新一个指定了键（key）和值（value）的（新）键值对。",
+    "translations": [
+      "set() 方法为 Map 对象添加或更新一个指定了键（key）和值（value）的（新）键值对。"
+    ],
+    "domain": "qwerty_jsmapset"
+  },
+  {
+    "id": "qwerty_jsdate_00015",
+    "word": "setDate()",
+    "phonetic": "",
+    "translation": "setDate() 方法根据本地时间来指定一个日期对象的天数。",
+    "translations": [
+      "setDate() 方法根据本地时间来指定一个日期对象的天数。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00016",
+    "word": "setFullYear()",
+    "phonetic": "",
+    "translation": "setFullYear() 方法根据本地时间为一个日期对象设置年份。",
+    "translations": [
+      "setFullYear() 方法根据本地时间为一个日期对象设置年份。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00017",
+    "word": "setHours()",
+    "phonetic": "",
+    "translation": "setHours() 方法根据本地时间为一个日期对象设置小时数，返回从1970-01-01 00:00:00 UTC 到更新后的 日期 对象实例所表示时间的毫秒数。",
+    "translations": [
+      "setHours() 方法根据本地时间为一个日期对象设置小时数，返回从1970-01-01 00:00:00 UTC 到更新后的 日期 对象实例所表示时间的毫秒数。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00018",
+    "word": "setMilliseconds()",
+    "phonetic": "",
+    "translation": "setMilliseconds() 方法会根据本地时间设置一个日期对象的豪秒数。",
+    "translations": [
+      "setMilliseconds() 方法会根据本地时间设置一个日期对象的豪秒数。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00019",
+    "word": "setMinutes()",
+    "phonetic": "",
+    "translation": "setMinutes() 方法根据本地时间为一个日期对象设置分钟数。",
+    "translations": [
+      "setMinutes() 方法根据本地时间为一个日期对象设置分钟数。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00020",
+    "word": "setMonth()",
+    "phonetic": "",
+    "translation": "setMonth() 方法根据本地时间为一个设置年份的日期对象设置月份。",
+    "translations": [
+      "setMonth() 方法根据本地时间为一个设置年份的日期对象设置月份。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00021",
+    "word": "setSeconds()",
+    "phonetic": "",
+    "translation": "setSeconds() 方法根据本地时间设置一个日期对象的秒数。",
+    "translations": [
+      "setSeconds() 方法根据本地时间设置一个日期对象的秒数。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00022",
+    "word": "setTime()",
+    "phonetic": "",
+    "translation": "setTime() 方法以一个表示从1970-1-1 00:00:00 UTC计时的毫秒数为来为 Date 对象设置时间。",
+    "translations": [
+      "setTime() 方法以一个表示从1970-1-1 00:00:00 UTC计时的毫秒数为来为 Date 对象设置时间。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsarray_00027",
+    "word": "shift()",
+    "phonetic": "",
+    "translation": "shift() 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。",
+    "translations": [
+      "shift() 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00028",
+    "word": "slice()",
+    "phonetic": "",
+    "translation": "slice() 方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象。且原始数组不会被修改。",
+    "translations": [
+      "slice() 方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象。且原始数组不会被修改。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00029",
+    "word": "some()",
+    "phonetic": "",
+    "translation": "some() 方法测试数组中的某些元素是否通过由提供的函数实现的测试。",
+    "translations": [
+      "some() 方法测试数组中的某些元素是否通过由提供的函数实现的测试。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00030",
+    "word": "sort()",
+    "phonetic": "",
+    "translation": "sort() 方法用就地（ in-place ）的算法对数组的元素进行排序，并返回数组。 sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode码点。",
+    "translations": [
+      "sort() 方法用就地（ in-place ）的算法对数组的元素进行排序，并返回数组。 sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode码点。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00031",
+    "word": "splice()",
+    "phonetic": "",
+    "translation": "splice() 方法通过删除现有元素和/或添加新元素来更改一个数组的内容。",
+    "translations": [
+      "splice() 方法通过删除现有元素和/或添加新元素来更改一个数组的内容。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsstring_00021",
+    "word": "split()",
+    "phonetic": "",
+    "translation": "split() 方法使用指定的分隔符字符串将一个String对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。",
+    "translations": [
+      "split() 方法使用指定的分隔符字符串将一个String对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00022",
+    "word": "startsWith()",
+    "phonetic": "",
+    "translation": "startsWith() 方法用来判断当前字符串是否以另外一个给定的子字符串开头，并根据判断结果返回 true 或 false。",
+    "translations": [
+      "startsWith() 方法用来判断当前字符串是否以另外一个给定的子字符串开头，并根据判断结果返回 true 或 false。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00023",
+    "word": "substring()",
+    "phonetic": "",
+    "translation": "substring() 方法返回一个字符串在开始索引到结束索引之间的一个子集, 或从开始索引直到字符串的末尾的一个子集。",
+    "translations": [
+      "substring() 方法返回一个字符串在开始索引到结束索引之间的一个子集, 或从开始索引直到字符串的末尾的一个子集。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsdate_00024",
+    "word": "toDateString()",
+    "phonetic": "",
+    "translation": "toDateString() 方法以美式英语和人类易读的形式返回一个日期对象日期部分的字符串。",
+    "translations": [
+      "toDateString() 方法以美式英语和人类易读的形式返回一个日期对象日期部分的字符串。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsnumber_00015",
+    "word": "toExponential()",
+    "phonetic": "",
+    "translation": "toExponential() 方法以指数表示法返回该数值字符串表示形式。",
+    "translations": [
+      "toExponential() 方法以指数表示法返回该数值字符串表示形式。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsnumber_00016",
+    "word": "toFixed()",
+    "phonetic": "",
+    "translation": "toFixed() 方法使用定点表示法来格式化一个数。",
+    "translations": [
+      "toFixed() 方法使用定点表示法来格式化一个数。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsdate_00026",
+    "word": "toISOString()",
+    "phonetic": "",
+    "translation": "toISOString() 方法返回一个 ISO（ISO 8601 Extended Format）格式的字符串： YYYY-MM-DDTHH:mm:ss.sssZ。时区总是UTC（协调世界时），加一个后缀“Z”标识。",
+    "translations": [
+      "toISOString() 方法返回一个 ISO（ISO 8601 Extended Format）格式的字符串： YYYY-MM-DDTHH:mm:ss.sssZ。时区总是UTC（协调世界时），加一个后缀“Z”标识。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00027",
+    "word": "toJSON()",
+    "phonetic": "",
+    "translation": "toJSON() 方法返回 Date 对象的字符串形式。",
+    "translations": [
+      "toJSON() 方法返回 Date 对象的字符串形式。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00028",
+    "word": "toLocaleDateString()",
+    "phonetic": "",
+    "translation": "toLocaleDateString() 方法返回该日期对象日期部分的字符串，该字符串格式因不同语言而不同。新增的参数 locales 和 options 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， locales 和 options 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。",
+    "translations": [
+      "toLocaleDateString() 方法返回该日期对象日期部分的字符串，该字符串格式因不同语言而不同。新增的参数 locales 和 options 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， locales 和 options 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsdate_00029",
+    "word": "toLocaleFormat()",
+    "phonetic": "",
+    "translation": "非标准方法 toLocaleFormat() 按特定的格式将一个日期转换成一个字符串。 Intl.DateTimeFormat 是符合标准的格式化日期的替代方法。另见更新的(newer)版本的 toLocaleDateString()方法.",
+    "translations": [
+      "非标准方法 toLocaleFormat() 按特定的格式将一个日期转换成一个字符串。 Intl.DateTimeFormat 是符合标准的格式化日期的替代方法。另见更新的(newer)版本的 toLocaleDateString()方法."
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsstring_00024",
+    "word": "toLocaleLowerCase()",
+    "phonetic": "",
+    "translation": "toLocaleLowerCase()方法根据任何特定于语言环境的案例映射，返回调用字符串值转换为小写的值。",
+    "translations": [
+      "toLocaleLowerCase()方法根据任何特定于语言环境的案例映射，返回调用字符串值转换为小写的值。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsarray_00032",
+    "word": "toLocaleString()",
+    "phonetic": "",
+    "translation": "toLocaleString() 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 toLocaleString 方法转成字符串，这些字符串将使用一个特定语言环境的字符串（例如一个逗号 ','）隔开。",
+    "translations": [
+      "toLocaleString() 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 toLocaleString 方法转成字符串，这些字符串将使用一个特定语言环境的字符串（例如一个逗号 ','）隔开。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsdate_00031",
+    "word": "toLocaleTimeString()",
+    "phonetic": "",
+    "translation": "The toLocaleTimeString() 方法返回该日期对象时间部分的字符串，该字符串格式因不同语言而不同。新增的参数 locales 和 options 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， locales 和 options 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。",
+    "translations": [
+      "The toLocaleTimeString() 方法返回该日期对象时间部分的字符串，该字符串格式因不同语言而不同。新增的参数 locales 和 options 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， locales 和 options 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsstring_00025",
+    "word": "toLocaleUpperCase()",
+    "phonetic": "",
+    "translation": "toLocaleUpperCase() 使用本地化（locale-specific）的大小写映射规则将输入的字符串转化成大写形式并返回结果字符串。",
+    "translations": [
+      "toLocaleUpperCase() 使用本地化（locale-specific）的大小写映射规则将输入的字符串转化成大写形式并返回结果字符串。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00026",
+    "word": "toLowerCase()",
+    "phonetic": "",
+    "translation": "toLowerCase() 会将调用该方法的字符串值转为小写形式，并返回。",
+    "translations": [
+      "toLowerCase() 会将调用该方法的字符串值转为小写形式，并返回。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsnumber_00018",
+    "word": "toPrecision()",
+    "phonetic": "",
+    "translation": "toPrecision() 方法以指定的精度返回该数值对象的字符串表示。",
+    "translations": [
+      "toPrecision() 方法以指定的精度返回该数值对象的字符串表示。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsarray_00033",
+    "word": "toSource()",
+    "phonetic": "",
+    "translation": "返回一个字符串,代表该数组的源代码.",
+    "translations": [
+      "返回一个字符串,代表该数组的源代码."
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsarray_00034",
+    "word": "toString()",
+    "phonetic": "",
+    "translation": "toString() 返回一个字符串，表示指定的数组及其元素。",
+    "translations": [
+      "toString() 返回一个字符串，表示指定的数组及其元素。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsdate_00034",
+    "word": "toTimeString()",
+    "phonetic": "",
+    "translation": "toTimeString() 方法以人类易读形式返回一个日期对象时间部分的字符串，该字符串以美式英语格式化。",
+    "translations": [
+      "toTimeString() 方法以人类易读形式返回一个日期对象时间部分的字符串，该字符串以美式英语格式化。"
+    ],
+    "domain": "qwerty_jsdate"
+  },
+  {
+    "id": "qwerty_jsstring_00028",
+    "word": "toUpperCase()",
+    "phonetic": "",
+    "translation": "toUpperCase() 将调用该方法的字符串值转换为大写形式，并返回。",
+    "translations": [
+      "toUpperCase() 将调用该方法的字符串值转换为大写形式，并返回。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00029",
+    "word": "trim()",
+    "phonetic": "",
+    "translation": "trim() 方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR）。",
+    "translations": [
+      "trim() 方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR）。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00031",
+    "word": "trimLeft()",
+    "phonetic": "",
+    "translation": "一个新字符串，表示从其开头（左端）剥离空格的调用字符串。",
+    "translations": [
+      "一个新字符串，表示从其开头（左端）剥离空格的调用字符串。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsstring_00030",
+    "word": "trimRight()",
+    "phonetic": "",
+    "translation": "trimRight() 方法从一个字符串的右端移除空白字符。",
+    "translations": [
+      "trimRight() 方法从一个字符串的右端移除空白字符。"
+    ],
+    "domain": "qwerty_jsstring"
+  },
+  {
+    "id": "qwerty_jsarray_00035",
+    "word": "unshift()",
+    "phonetic": "",
+    "translation": "unshift() 方法将一个或多个元素添加到数组的开头，并返回新数组的长度。",
+    "translations": [
+      "unshift() 方法将一个或多个元素添加到数组的开头，并返回新数组的长度。"
+    ],
+    "domain": "qwerty_jsarray"
+  },
+  {
+    "id": "qwerty_jsobject_00027",
+    "word": "unwatch()",
+    "phonetic": "",
+    "translation": "unwatch() 删除一个 watch() 设置的 watchpoint.",
+    "translations": [
+      "unwatch() 删除一个 watch() 设置的 watchpoint."
+    ],
+    "domain": "qwerty_jsobject"
+  },
+  {
+    "id": "qwerty_jsnumber_00021",
+    "word": "valueOf()",
+    "phonetic": "",
+    "translation": "valueOf() 方法返回一个被 Number 对象包装的原始值。",
+    "translations": [
+      "valueOf() 方法返回一个被 Number 对象包装的原始值。"
+    ],
+    "domain": "qwerty_jsnumber"
+  },
+  {
+    "id": "qwerty_jsarray_00036",
+    "word": "values()",
+    "phonetic": "",
+    "translation": "values() 方法返回一个新的 Array Iterator 对象，该对象包含数组每个索引的值",
+    "translations": [
+      "values() 方法返回一个新的 Array Iterator 对象，该对象包含数组每个索引的值"
+    ],
+    "domain": "qwerty_jsarray"
+  }
+]

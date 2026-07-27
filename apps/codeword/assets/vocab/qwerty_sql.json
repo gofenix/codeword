@@ -1,0 +1,122 @@
+[
+  {
+    "id": "qwerty_sql_lower_case_00001",
+    "word": "alter table",
+    "phonetic": "",
+    "translation": "alter table 用来更新现存表的模式。可以用 create table 来创建一个新表。",
+    "translations": [
+      "alter table 用来更新现存表的模式。可以用 create table 来创建一个新表。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00002",
+    "word": "commit",
+    "phonetic": "/kʌmˈɪt/",
+    "translation": "commit 用来将事务写入数据库。",
+    "translations": [
+      "commit 用来将事务写入数据库。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00003",
+    "word": "create index",
+    "phonetic": "",
+    "translation": "create index 用来为一列或多列创建索引。",
+    "translations": [
+      "create index 用来为一列或多列创建索引。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00004",
+    "word": "create table",
+    "phonetic": "",
+    "translation": "create table 用来创建新的数据库表。可以用 alter table 来更新一个现存表的模式。",
+    "translations": [
+      "create table 用来创建新的数据库表。可以用 alter table 来更新一个现存表的模式。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00005",
+    "word": "create view",
+    "phonetic": "",
+    "translation": "create view 用来创建一个或多个表的视图。",
+    "translations": [
+      "create view 用来创建一个或多个表的视图。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00006",
+    "word": "delete",
+    "phonetic": "/dɪlˈit/",
+    "translation": "delete 用来从表中删除一行或多行。",
+    "translations": [
+      "delete 用来从表中删除一行或多行。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00007",
+    "word": "drop",
+    "phonetic": "/drˈɑp/",
+    "translation": "drop 用来永久性地删除数据库对象（表、视图和索引等）",
+    "translations": [
+      "drop 用来永久性地删除数据库对象（表、视图和索引等）"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00008",
+    "word": "insert",
+    "phonetic": "/ˌɪnsˈɝt/",
+    "translation": "insert 用来对表添加一个新行。",
+    "translations": [
+      "insert 用来对表添加一个新行。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00009",
+    "word": "insert select",
+    "phonetic": "",
+    "translation": "insert select 用来将 select 的结果插入到表中。",
+    "translations": [
+      "insert select 用来将 select 的结果插入到表中。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00010",
+    "word": "rollback",
+    "phonetic": "/rˈoʊlbˌæk/",
+    "translation": "rollback 用来撤销事务块。",
+    "translations": [
+      "rollback 用来撤销事务块。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00011",
+    "word": "select",
+    "phonetic": "/sʌlˈɛkt/",
+    "translation": "select 用来从一个或多个表（或视图）中检索数据。",
+    "translations": [
+      "select 用来从一个或多个表（或视图）中检索数据。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  },
+  {
+    "id": "qwerty_sql_lower_case_00012",
+    "word": "update",
+    "phonetic": "/ʌpdˈeɪt/",
+    "translation": "update 用来对表中的一行或多行进行更新。",
+    "translations": [
+      "update 用来对表中的一行或多行进行更新。"
+    ],
+    "domain": "qwerty_sql_lower_case"
+  }
+]

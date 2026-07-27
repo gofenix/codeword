@@ -144,6 +144,24 @@ LIST_META_OVERRIDES = {
 # fix_catalog.py's EXCLUDE_CATEGORIES. Applied AFTER category resolution.
 EXCLUDE_CATEGORIES = {'语言'}
 
+# Individual lists dropped as duplicate/equivalent copies of another kept list
+# (same word set, only ordering / casing / edition differs), plus the two
+# 4000-Essential lists whose translations are 100% English gloss (unusable in
+# the Chinese multiple-choice / listening modes). Keyed on the FINAL codeword
+# id. Mirrors the one-off prune applied to the bundled assets; keep in sync so
+# an upstream refresh does not resurrect them.
+EXCLUDE_IDS = {
+    'qwerty_ielts_disorder',                        # ≡ qwerty_ielts_order (仅乱序)
+    'qwerty_pte_advanced_apeuni_json',              # ≡ qwerty_pte_senior
+    'qwerty_zaiyaoniming_gre3000',                  # ≡ qwerty_gre3000 (别名)
+    'qwerty_pte_basic_apeuni',                      # ≡ qwerty_pte_junior
+    'qwerty_nce1',                                  # ≡ qwerty_nce_new_1 (新版)
+    'qwerty_ielts_listening_neworientaldirect_task4',  # ≡ task3
+    'qwerty_sql_lower_case',                        # ≡ qwerty_sql_upper_case
+    'qwerty_4000_essential_english_words1',         # 纯英文释义, 四选一不可用
+    'qwerty_4000_essential_english_words2',         # 纯英文释义, 四选一不可用
+}
+
 # Display-name overrides so duplicate-titled lists stay distinguishable.
 # Keyed on the FINAL codeword id (`qwerty_<slug>`), matching fix_catalog.py.
 NAME_OVERRIDES = {
@@ -359,6 +377,12 @@ def main() -> int:
             if code_meta['category'] in EXCLUDE_CATEGORIES:
                 used_slugs.discard(slug)
                 print(f"  SKIP (excluded category {code_meta['category']}): {code_meta['id']}")
+                continue
+
+            # Drop individually-excluded duplicate/unusable lists.
+            if code_meta['id'] in EXCLUDE_IDS:
+                used_slugs.discard(slug)
+                print(f"  SKIP (excluded id): {code_meta['id']}")
                 continue
 
             # Publisher/edition display-name override for duplicate titles.

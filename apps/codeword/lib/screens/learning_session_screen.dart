@@ -1236,20 +1236,13 @@ class _SwipeViewState extends ConsumerState<SwipeView>
         : null;
   }
 
-  /// Display-synced dwell tick — replaces the old 50ms Timer so the
-  /// progress bar updates in lockstep with the frame clock (§11).
+  /// Dwell tick — tracks dwell time for scoring only. Does NOT rebuild
+  /// the page tree: the mastery bar fill comes from SM-2 review state,
+  /// not dwell time, so per-frame setState() was pure waste (swipe jank).
   void _onDwellTick(Duration elapsed) {
     if (!mounted || _cardShownAt == null) return;
     final ms = DateTime.now().difference(_cardShownAt!).inMilliseconds;
-    // Match the grading window in LearningSessionNotifier.answerSwipe:
-    // the bar reaches full at the hard→again boundary (18s) so the
-    // visual fill and the quality judgment stay in lockstep.
-    final p = (ms / 18000).clamp(0.0, 1.0);
-    if (p != _dwellProgress) {
-      _dwellProgress = p;
-      _rebuildPages();
-      setState(() {});
-    }
+    _dwellProgress = (ms / 18000).clamp(0.0, 1.0);
   }
 
   @override
@@ -1443,7 +1436,6 @@ class _SwipeViewState extends ConsumerState<SwipeView>
       );
     }
     final screenH = MediaQuery.of(context).size.height;
-    final offset = _anim?.value ?? Offset(0, _dragDy);
     final currentPage = _currentPage;
     final nextPage = _nextPage;
     final prevPage = _prevPage;
@@ -1462,6 +1454,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
           child: AnimatedBuilder(
             animation: _controller,
             builder: (context, child) {
+              final offset = _anim?.value ?? Offset(0, _dragDy);
               return Stack(
                 fit: StackFit.expand,
                 children: [
