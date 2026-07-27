@@ -1285,23 +1285,55 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   }
 
   void _onVerticalDragEnd(DragEndDetails d) {
-    if (_animating) return;
     final velocity = d.velocity.pixelsPerSecond.dy;
     final screenH = MediaQuery.of(context).size.height;
-    // Project where the page would land if the finger kept moving,
-    // using Apple's exponential-decay flick projection (§6).
-    final projected = _dragDy + AppMotion.projectMomentum(velocity);
     final canGoBack = ref.read(learningSessionProvider.notifier).canGoBack;
-    // Swiping UP (negative dy) flips to the next word.
-    if (projected < -screenH * _flipThreshold || velocity < -_flickVelocity) {
+
+    // Fast flick: switch instantly, even mid-animation (TikTok-style).
+    // A flick must never be gated behind the previous flip's spring
+    // animation — that's what made rapid swipes feel "stuck".
+    if (velocity < -_flickVelocity) {
+      HapticFeedback.lightImpact();
+      _interruptAnimation();
+      _submitSwipe(dwellMs: _dwellMs());
+      return;
+    }
+    if (canGoBack && velocity > _flickVelocity) {
+      HapticFeedback.lightImpact();
+      _interruptAnimation();
+      ref.read(learningSessionProvider.notifier).goBack();
+      return;
+    }
+
+    // Slow, deliberate drag: respect the animation lock so two drags
+    // don't collide, and play the spring for a polished feel.
+    if (_animating) return;
+    final projected = _dragDy + AppMotion.projectMomentum(velocity);
+    if (projected < -screenH * _flipThreshold) {
       _flipToNext(velocity);
-    } else if (canGoBack &&
-        (projected > screenH * _flipThreshold || velocity > _flickVelocity)) {
-      // Swiping DOWN past the threshold flips back to the previous word.
+    } else if (canGoBack && projected > screenH * _flipThreshold) {
       _flipToPrev(velocity);
     } else {
       _springBack(velocity);
     }
+  }
+
+  /// Stop any in-flight spring animation and reset drag state so the
+  /// next interaction starts from a clean slate.
+  void _interruptAnimation() {
+    if (_animating) {
+      _controller.stop();
+      _animating = false;
+      _anim = null;
+    }
+    _dragDy = 0;
+    _rawDragDy = 0;
+  }
+
+  int _dwellMs() {
+    return _cardShownAt != null
+        ? DateTime.now().difference(_cardShownAt!).inMilliseconds
+        : 3000;
   }
 
   void _flipToNext(double velocity) {
