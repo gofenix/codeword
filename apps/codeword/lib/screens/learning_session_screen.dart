@@ -1161,6 +1161,12 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   Animation<Offset>? _anim;
   bool _animating = false;
 
+  /// When a fast flick triggers an instant content switch, the new page
+  /// should slide in from the bottom (TikTok-style) instead of hard-cutting.
+  /// This flag is checked in [_onQuestionChanged] to kick off the slide-in.
+  bool _pendingFastFlipIn = false;
+  bool _pendingFastFlipBack = false;
+
   /// Cached page widgets so a drag/animation frame only re-applies the
   /// transform instead of rebuilding the entire subtree (§11).
   Widget? _currentPage;
@@ -1206,6 +1212,16 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     _controller.value = 0;
     _cardShownAt = DateTime.now();
     _rebuildPages();
+    // Fast flick: content just switched — slide the new page in from
+    // the edge instead of it popping in at centre (TikTok-style).
+    if (_pendingFastFlipIn || _pendingFastFlipBack) {
+      final screenH = MediaQuery.of(context).size.height;
+      _dragDy = _pendingFastFlipIn ? screenH : -screenH;
+      _rawDragDy = _dragDy;
+      _pendingFastFlipIn = false;
+      _pendingFastFlipBack = false;
+      _animateIn();
+    }
     if (id != null && !_swipeSpeakPending) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (!mounted) return;
@@ -1289,18 +1305,21 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     final screenH = MediaQuery.of(context).size.height;
     final canGoBack = ref.read(learningSessionProvider.notifier).canGoBack;
 
-    // Fast flick: switch instantly, even mid-animation (TikTok-style).
-    // A flick must never be gated behind the previous flip's spring
-    // animation — that's what made rapid swipes feel "stuck".
+    // Fast flick — TikTok-style: switch content instantly, then slide
+    // the new page in from the bottom. The content switch and the
+    // animation happen together; the animation never blocks the next
+    // flick (that's what made rapid swipes feel "stuck" before).
     if (velocity < -_flickVelocity) {
       HapticFeedback.lightImpact();
       _interruptAnimation();
+      _pendingFastFlipIn = true;
       _submitSwipe(dwellMs: _dwellMs());
       return;
     }
     if (canGoBack && velocity > _flickVelocity) {
       HapticFeedback.lightImpact();
       _interruptAnimation();
+      _pendingFastFlipBack = true;
       ref.read(learningSessionProvider.notifier).goBack();
       return;
     }
@@ -1334,6 +1353,31 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     return _cardShownAt != null
         ? DateTime.now().difference(_cardShownAt!).inMilliseconds
         : 3000;
+  }
+
+  /// Fast slide-in for the new page after a TikTok-style flick.
+  /// The content has already switched; this just glides the page from
+  /// the edge (screenH or -screenH) to centre (0) so it doesn't pop.
+  /// Uses a snappy spring (~180ms) and is interruptible by the next flick.
+  void _animateIn() {
+    _animating = true;
+    final begin = _dragDy;
+    const end = 0.0;
+    _anim = Tween<Offset>(
+      begin: Offset(0, begin),
+      end: Offset.zero,
+    ).animate(_controller);
+    _controller
+        .animateWith(
+          SpringSimulation(AppMotion.springDefault(response: 0.18), 0, 1, 0),
+        )
+        .then((_) {
+          if (!mounted) return;
+          _dragDy = 0;
+          _rawDragDy = 0;
+          _anim = null;
+          _animating = false;
+        });
   }
 
   void _flipToNext(double velocity) {
