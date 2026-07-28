@@ -34,9 +34,14 @@ class UpdateService {
   /// Returns the latest release info, or null if the check failed.
   static Future<AppUpdateInfo?> checkForUpdate() async {
     try {
+      // Append a timestamp to bust any intermediate (CDN / carrier) cache
+      // that might serve a stale "latest" release.
+      final uri = Uri.parse('$_apiBase/releases/latest').replace(
+        queryParameters: {'t': '${DateTime.now().millisecondsSinceEpoch}'},
+      );
       final resp = await http
           .get(
-            Uri.parse('$_apiBase/releases/latest'),
+            uri,
             headers: {'Cache-Control': 'no-cache', 'Pragma': 'no-cache'},
           )
           .timeout(const Duration(seconds: 10));
@@ -102,10 +107,12 @@ class UpdateService {
       // a previous (possibly failed / cached) download is never reused.
       final file = File('${dir.path}/codeword-${info.version}.apk');
       if (file.existsSync()) file.deleteSync();
-      // Download via browser_download_url. Each version's APK has a unique
-      // filename (codeword-v<version>.apk), so the CDN URL is unique per
-      // release and never serves a stale cached build.
-      final req = http.Request('GET', Uri.parse(url));
+      // Append a timestamp to the download URL to bust any intermediate
+      // (CDN / carrier) cache that might serve a stale APK.
+      final downloadUri = Uri.parse(url).replace(
+        queryParameters: {'t': '${DateTime.now().millisecondsSinceEpoch}'},
+      );
+      final req = http.Request('GET', downloadUri);
       req.headers['Cache-Control'] = 'no-cache';
       final resp = await req.send();
       if (resp.statusCode != 200) {
@@ -123,15 +130,15 @@ class UpdateService {
         onProgress?.call(received, total);
       }).asFuture();
       await sink.close();
-      // Verify the downloaded file matches the expected size from GitHub.
-      // This catches stale CDN caches that serve an older APK with the same name.
+      // Verify the downloaded file matches the expected size EXACTLY.
+      // Previous 2% tolerance allowed a stale (older) APK of nearly-identical
+      // size to pass, which is why users saw "已安装更新版本".
       final actualSize = file.lengthSync();
       if (info.apkSize != null) {
-        final diff = (actualSize - info.apkSize!).abs();
-        if (diff > info.apkSize! * 0.02) {
-          return const DownloadResult(
+        if (actualSize != info.apkSize) {
+          return DownloadResult(
             success: false,
-            error: '下载的文件不完整，可能是网络缓存问题，请重试',
+            error: '下载的文件大小不符（期望 ${info.apkSize}，实际 $actualSize），可能是网络缓存，请重试',
           );
         }
       } else if (actualSize < 10 * 1024 * 1024) {
