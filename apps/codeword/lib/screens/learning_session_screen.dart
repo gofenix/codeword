@@ -1344,9 +1344,11 @@ class _SwipeViewState extends ConsumerState<SwipeView>
 
   void _flipToNext(double velocity) {
     HapticFeedback.lightImpact();
-    final nextQ = widget.session.questions.length >
-            widget.session.currentIndex + 1
-        ? widget.session.questions[widget.session.currentIndex + 1]
+    // Use the latest state, not the stale widget.session snapshot, so
+    // rapid consecutive swipes don't compute nextQ from an old index.
+    final session = ref.read(learningSessionProvider);
+    final nextQ = session.questions.length > session.currentIndex + 1
+        ? session.questions[session.currentIndex + 1]
         : null;
     if (nextQ != null) {
       TtsService.instance.speak(text: nextQ.word.word);
@@ -1364,9 +1366,8 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     if (nextQ != null) {
       _activeWordId = nextQ.word.id;
       _cardShownAt = DateTime.now();
-      final afterNextQ = widget.session.questions.length >
-              widget.session.currentIndex + 2
-          ? widget.session.questions[widget.session.currentIndex + 2]
+      final afterNextQ = session.questions.length > session.currentIndex + 2
+          ? session.questions[session.currentIndex + 2]
           : null;
       _prevPage = _currentPage;
       _currentPage = _nextPage;
@@ -1380,9 +1381,9 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     _submitSwipe(dwellMs: dwell);
     _animateFlip(end: 0, onComplete: () {});
   }
-
   void _flipToPrev(double velocity) {
     HapticFeedback.lightImpact();
+    final session = ref.read(learningSessionProvider);
     final prevQ = ref.read(learningSessionProvider.notifier).previousQuestion;
     if (prevQ != null) {
       TtsService.instance.speak(text: prevQ.word.word);
@@ -1397,8 +1398,8 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     if (prevQ != null) {
       _activeWordId = prevQ.word.id;
       _cardShownAt = DateTime.now();
-      final prevPrevQ = widget.session.currentIndex >= 2
-          ? widget.session.questions[widget.session.currentIndex - 2]
+      final prevPrevQ = session.currentIndex >= 2
+          ? session.questions[session.currentIndex - 2]
           : null;
       _nextPage = _currentPage;
       _currentPage = _prevPage;
