@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/physics.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -1320,25 +1319,19 @@ class _SwipeViewState extends ConsumerState<SwipeView>
         : 3000;
   }
 
-  /// 统一的平移动画：纯位置移动，无弹簧过冲，无渐隐渐现。
-  /// 时长只看释放速度——越快越短（70ms），最慢 160ms，像刷短视频那样干脆。
-  /// 用 easeOutCubic 比默认 easeOut 更陡，末尾不拖尾、不"刹车"。
+  /// 松手后让页面从当前位置快速线性滑到目标位置。
+  /// 固定 50ms + linear 曲线——没有任何减速/弹簧/刹车感，
+  /// 像刷短视频那样"唰"地一下到位。
   void _animateFlip({
     required double end,
-    required double velocity,
     required VoidCallback onComplete,
   }) {
     _animating = true;
-    final begin = _dragDy;
-    final speed = velocity.abs();
-    final durationMs = speed > 0
-        ? (1200 / speed * 1000).clamp(70.0, 160.0).toInt()
-        : 150;
-    _controller.duration = Duration(milliseconds: durationMs);
+    _controller.duration = const Duration(milliseconds: 50);
     _anim = Tween<Offset>(
-      begin: Offset(0, begin),
+      begin: Offset(0, _dragDy),
       end: Offset(0, end),
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOutCubic));
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.linear));
     _controller.forward(from: 0).then((_) {
       if (!mounted) return;
       _dragDy = 0;
@@ -1365,29 +1358,27 @@ class _SwipeViewState extends ConsumerState<SwipeView>
       _submitSwipe(dwellMs: dwell);
       return;
     }
-    final screenH = MediaQuery.of(context).size.height;
-    _animateFlip(
-      end: -screenH,
-      velocity: velocity,
-      onComplete: () {
-        // 动画结束立即手动提升 nextPage → currentPage，
-        // 不等 Riverpod 状态更新触发 _onQuestionChanged（会有一帧延迟）。
-        if (nextQ != null) {
-          _activeWordId = nextQ.word.id;
-          _cardShownAt = DateTime.now();
-          final afterNextQ = widget.session.questions.length >
-                  widget.session.currentIndex + 2
-              ? widget.session.questions[widget.session.currentIndex + 2]
-              : null;
-          _prevPage = _currentPage;
-          _currentPage = _nextPage;
-          _nextPage = afterNextQ != null
-              ? _SwipePage(word: afterNextQ.word, dwellProgress: 0)
-              : null;
-        }
-        _submitSwipe(dwellMs: dwell);
-      },
-    );
+    // 立即切换内容：把 nextPage 提升为 currentPage，预取下一个。
+    // 不等动画结束，不等 Riverpod rebuild——内容先换，动画只是
+    // 让新页面从底部一小段距离快速归位。
+    if (nextQ != null) {
+      _activeWordId = nextQ.word.id;
+      _cardShownAt = DateTime.now();
+      final afterNextQ = widget.session.questions.length >
+              widget.session.currentIndex + 2
+          ? widget.session.questions[widget.session.currentIndex + 2]
+          : null;
+      _prevPage = _currentPage;
+      _currentPage = _nextPage;
+      _nextPage = afterNextQ != null
+          ? _SwipePage(word: afterNextQ.word, dwellProgress: 0)
+          : null;
+    }
+    // 新页面从底部 80px 快速滑入到位（50ms linear）。
+    _dragDy = 80;
+    _rawDragDy = 80;
+    _submitSwipe(dwellMs: dwell);
+    _animateFlip(end: 0, onComplete: () {});
   }
 
   void _flipToPrev(double velocity) {
@@ -1402,28 +1393,26 @@ class _SwipeViewState extends ConsumerState<SwipeView>
       ref.read(learningSessionProvider.notifier).goBack();
       return;
     }
-    final screenH = MediaQuery.of(context).size.height;
-    _animateFlip(
-      end: screenH,
-      velocity: velocity,
-      onComplete: () {
-        // 动画结束立即手动提升 prevPage → currentPage。
-        if (prevQ != null) {
-          _activeWordId = prevQ.word.id;
-          _cardShownAt = DateTime.now();
-          final prevPrevQ = widget.session.currentIndex >= 2
-              ? widget.session.questions[widget.session.currentIndex - 2]
-              : null;
-          _nextPage = _currentPage;
-          _currentPage = _prevPage;
-          _prevPage = prevPrevQ != null
-              ? _SwipePage(word: prevPrevQ.word, dwellProgress: 0)
-              : null;
-        }
-        ref.read(learningSessionProvider.notifier).goBack();
-      },
-    );
+    // 立即切换内容：prevPage → currentPage。
+    if (prevQ != null) {
+      _activeWordId = prevQ.word.id;
+      _cardShownAt = DateTime.now();
+      final prevPrevQ = widget.session.currentIndex >= 2
+          ? widget.session.questions[widget.session.currentIndex - 2]
+          : null;
+      _nextPage = _currentPage;
+      _currentPage = _prevPage;
+      _prevPage = prevPrevQ != null
+          ? _SwipePage(word: prevPrevQ.word, dwellProgress: 0)
+          : null;
+    }
+    // 新页面从顶部 80px 快速滑入到位。
+    _dragDy = -80;
+    _rawDragDy = -80;
+    ref.read(learningSessionProvider.notifier).goBack();
+    _animateFlip(end: 0, onComplete: () {});
   }
+
   void _springBack(double velocity) {
     final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     if (reduceMotion) {
@@ -1431,11 +1420,8 @@ class _SwipeViewState extends ConsumerState<SwipeView>
       setState(() {});
       return;
     }
-    _animateFlip(
-      end: 0,
-      velocity: velocity,
-      onComplete: () => setState(() {}),
-    );
+    // 50ms 线性弹回，干脆不拖泥带水。
+    _animateFlip(end: 0, onComplete: () => setState(() {}));
   }
 
   void _submitSwipe({required int dwellMs}) {
