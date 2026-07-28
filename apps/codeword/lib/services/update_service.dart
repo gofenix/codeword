@@ -9,12 +9,14 @@ import 'package:open_filex/open_filex.dart';
 class AppUpdateInfo {
   final String version;
   final String? apkUrl;
+  final int? apkSize;
   final String? releaseNotes;
   final String? htmlUrl;
 
   const AppUpdateInfo({
     required this.version,
     this.apkUrl,
+    this.apkSize,
     this.releaseNotes,
     this.htmlUrl,
   });
@@ -46,16 +48,19 @@ class UpdateService {
       final body = json['body'] as String?;
       final assets = (json['assets'] as List?) ?? const [];
       String? apkUrl;
+      int? apkSize;
       for (final a in assets) {
         final name = (a['name'] as String?) ?? '';
         if (name.endsWith('.apk')) {
           apkUrl = a['browser_download_url'] as String?;
+          apkSize = (a['size'] as num?)?.toInt();
           break;
         }
       }
       return AppUpdateInfo(
         version: version,
         apkUrl: apkUrl,
+        apkSize: apkSize,
         releaseNotes: body,
         htmlUrl: htmlUrl,
       );
@@ -105,8 +110,15 @@ class UpdateService {
         onProgress?.call(received, total);
       }).asFuture();
       await sink.close();
-      // Guard against truncated / cached responses: a real APK is ~60MB.
-      if (file.lengthSync() < 10 * 1024 * 1024) return false;
+      // Verify the downloaded file matches the expected size from GitHub.
+      // This catches stale CDN caches that serve an older APK with the same name.
+      final actualSize = file.lengthSync();
+      if (info.apkSize != null) {
+        final diff = (actualSize - info.apkSize!).abs();
+        if (diff > info.apkSize! * 0.02) return false; // >2% mismatch
+      } else if (actualSize < 10 * 1024 * 1024) {
+        return false;
+      }
       final result = await OpenFilex.open(file.path);
       return result.type == ResultType.done;
     } catch (_) {

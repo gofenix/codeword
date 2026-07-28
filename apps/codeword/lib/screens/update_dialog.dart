@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
 import '../services/update_service.dart';
@@ -55,7 +56,7 @@ class _UpdateDialogState extends State<UpdateDialog> {
     if (!ok) {
       setState(() {
         _downloading = false;
-        _error = '下载失败，请稍后重试或前往 GitHub 手动下载';
+        _error = '下载校验失败，可能是网络缓存问题。\n请点"复制链接"在浏览器中手动下载安装。';
       });
     }
   }
@@ -179,6 +180,7 @@ class _UpdateDialogState extends State<UpdateDialog> {
   }
 
   Widget _buildActions(Color dividerColor, Color iosBlue) {
+    final hasError = _error != null;
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -190,7 +192,7 @@ class _UpdateDialogState extends State<UpdateDialog> {
                 padding: const EdgeInsets.symmetric(vertical: 12),
                 onPressed: () => Navigator.of(context).pop(),
                 child: Text(
-                  '稍后',
+                  hasError ? '关闭' : '稍后',
                   style: TextStyle(
                     color: iosBlue,
                     fontSize: 17,
@@ -203,9 +205,9 @@ class _UpdateDialogState extends State<UpdateDialog> {
             Expanded(
               child: CupertinoButton(
                 padding: const EdgeInsets.symmetric(vertical: 12),
-                onPressed: _download,
+                onPressed: hasError ? _copyDownloadLink : _download,
                 child: Text(
-                  '更新',
+                  hasError ? '复制链接' : '更新',
                   style: TextStyle(
                     color: iosBlue,
                     fontSize: 17,
@@ -218,6 +220,16 @@ class _UpdateDialogState extends State<UpdateDialog> {
         ),
       ],
     );
+  }
+
+  Future<void> _copyDownloadLink() async {
+    final url = widget.info.apkUrl;
+    if (url == null) return;
+    await Clipboard.setData(ClipboardData(text: url));
+    if (!mounted) return;
+    setState(() {
+      _error = '下载链接已复制，请在浏览器中打开下载安装。';
+    });
   }
 }
 
