@@ -44,7 +44,7 @@ class _UpdateDialogState extends State<UpdateDialog> {
       _progress = 0;
       _error = null;
     });
-    final ok = await UpdateService.downloadAndInstall(
+    final result = await UpdateService.downloadAndInstall(
       widget.info,
       onProgress: (received, total) {
         if (total > 0 && mounted) {
@@ -53,10 +53,10 @@ class _UpdateDialogState extends State<UpdateDialog> {
       },
     );
     if (!mounted) return;
-    if (!ok) {
+    if (!result.success) {
       setState(() {
         _downloading = false;
-        _error = '下载校验失败，可能是网络缓存问题。\n请点"复制链接"在浏览器中手动下载安装。';
+        _error = result.error ?? '下载失败，请重试';
       });
     }
   }

@@ -86,16 +86,21 @@ class UpdateService {
   }
 
   /// Downloads the APK to the app support directory and triggers the
-  /// install intent. Returns true on success.
-  static Future<bool> downloadAndInstall(
+  /// install intent. Returns a [DownloadResult] with a specific error
+  /// message on failure so the UI can give actionable guidance.
+  static Future<DownloadResult> downloadAndInstall(
     AppUpdateInfo info, {
     void Function(int received, int total)? onProgress,
   }) async {
     final url = info.apkUrl;
-    if (url == null) return false;
+    if (url == null) {
+      return const DownloadResult(success: false, error: '未找到下载链接');
+    }
     try {
       final dir = await getApplicationSupportDirectory();
-      final file = File('${dir.path}/codeword-update.apk');
+      // Name the temp file per version so a stale codeword-update.apk from
+      // a previous (possibly failed / cached) download is never reused.
+      final file = File('${dir.path}/codeword-${info.version}.apk');
       if (file.existsSync()) file.deleteSync();
       // Download via browser_download_url. Each version's APK has a unique
       // filename (codeword-v<version>.apk), so the CDN URL is unique per
@@ -103,7 +108,12 @@ class UpdateService {
       final req = http.Request('GET', Uri.parse(url));
       req.headers['Cache-Control'] = 'no-cache';
       final resp = await req.send();
-      if (resp.statusCode != 200) return false;
+      if (resp.statusCode != 200) {
+        return DownloadResult(
+          success: false,
+          error: '下载失败（HTTP ${resp.statusCode}），请检查网络后重试',
+        );
+      }
       final total = resp.contentLength ?? 0;
       var received = 0;
       final sink = file.openWrite();
@@ -118,14 +128,30 @@ class UpdateService {
       final actualSize = file.lengthSync();
       if (info.apkSize != null) {
         final diff = (actualSize - info.apkSize!).abs();
-        if (diff > info.apkSize! * 0.02) return false; // >2% mismatch
+        if (diff > info.apkSize! * 0.02) {
+          return const DownloadResult(
+            success: false,
+            error: '下载的文件不完整，可能是网络缓存问题，请重试',
+          );
+        }
       } else if (actualSize < 10 * 1024 * 1024) {
-        return false;
+        return const DownloadResult(
+          success: false,
+          error: '下载的文件过小，可能是网络缓存问题，请重试',
+        );
       }
       final result = await OpenFilex.open(file.path);
-      return result.type == ResultType.done;
-    } catch (_) {
-      return false;
+      if (result.type == ResultType.done) {
+        return DownloadResult.ok;
+      }
+      // Install intent didn't launch — most often because the installed
+      // app is signed with a different key and Android refuses to upgrade.
+      return const DownloadResult(
+        success: false,
+        error: '无法自动安装。请先卸载旧版本，再点击"复制链接"在浏览器中下载安装',
+      );
+    } catch (e) {
+      return DownloadResult(success: false, error: '下载出错：$e');
     }
   }
 
@@ -141,4 +167,12 @@ class UpdateService {
     }
     return 0;
   }
+}
+
+/// Result of a download-and-install attempt.
+class DownloadResult {
+  final bool success;
+  final String? error; // null when success
+  const DownloadResult({required this.success, this.error});
+  static const ok = DownloadResult(success: true);
 }
