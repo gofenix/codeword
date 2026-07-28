@@ -33,7 +33,10 @@ class UpdateService {
   static Future<AppUpdateInfo?> checkForUpdate() async {
     try {
       final resp = await http
-          .get(Uri.parse('$_apiBase/releases/latest'))
+          .get(
+            Uri.parse('$_apiBase/releases/latest'),
+            headers: {'Cache-Control': 'no-cache', 'Pragma': 'no-cache'},
+          )
           .timeout(const Duration(seconds: 10));
       if (resp.statusCode != 200) return null;
       final json = jsonDecode(resp.body) as Map<String, dynamic>;
@@ -85,7 +88,12 @@ class UpdateService {
       final dir = await getApplicationSupportDirectory();
       final file = File('${dir.path}/codeword-update.apk');
       if (file.existsSync()) file.deleteSync();
-      final req = http.Request('GET', Uri.parse(url));
+      // Append timestamp to bypass any CDN / network cache that may serve
+      // a stale APK (e.g. an older version with the same filename).
+      final sep = url.contains('?') ? '&' : '?';
+      final cacheBustUrl = '$url${sep}t=${DateTime.now().millisecondsSinceEpoch}';
+      final req = http.Request('GET', Uri.parse(cacheBustUrl));
+      req.headers['Cache-Control'] = 'no-cache';
       final resp = await req.send();
       if (resp.statusCode != 200) return false;
       final total = resp.contentLength ?? 0;
@@ -97,6 +105,8 @@ class UpdateService {
         onProgress?.call(received, total);
       }).asFuture();
       await sink.close();
+      // Guard against truncated / cached responses: a real APK is ~60MB.
+      if (file.lengthSync() < 10 * 1024 * 1024) return false;
       final result = await OpenFilex.open(file.path);
       return result.type == ResultType.done;
     } catch (_) {
