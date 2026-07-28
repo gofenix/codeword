@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -1167,7 +1168,9 @@ class _SwipeViewState extends ConsumerState<SwipeView>
 
   /// Real-time dwell progress (0.0 → 1.0 over 15s) driving the bottom
   /// mastery bar so the user sees the card "filling up" as they study.
-  double _dwellProgress = 0;
+  /// Driven via ValueNotifier so the bar animates without per-frame
+  /// setState() that would jank swipes.
+  final ValueNotifier<double> _dwellProgress = ValueNotifier(0);
   late final Ticker _dwellTicker;
 
   /// When a flip is triggered by swipe, the next word's audio is spoken
@@ -1238,21 +1241,15 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     _currentPage = q != null
         ? _SwipePage(word: q.word, dwellProgress: _dwellProgress)
         : null;
-    _nextPage = nextQ != null
-        ? _SwipePage(word: nextQ.word, dwellProgress: 0)
-        : null;
-    _prevPage = prevQ != null
-        ? _SwipePage(word: prevQ.word, dwellProgress: 0)
-        : null;
+    _nextPage = nextQ != null ? _SwipePage(word: nextQ.word) : null;
+    _prevPage = prevQ != null ? _SwipePage(word: prevQ.word) : null;
   }
 
   /// Dwell tick — tracks dwell time for scoring only. Does NOT rebuild
-  /// the page tree: the mastery bar fill comes from SM-2 review state,
-  /// not dwell time, so per-frame setState() was pure waste (swipe jank).
   void _onDwellTick(Duration elapsed) {
     if (!mounted || _cardShownAt == null) return;
     final ms = DateTime.now().difference(_cardShownAt!).inMilliseconds;
-    _dwellProgress = (ms / 18000).clamp(0.0, 1.0);
+    _dwellProgress.value = (ms / 18000).clamp(0.0, 1.0);
   }
 
   @override
@@ -1260,6 +1257,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     _dwellTicker.dispose();
     _controller.dispose();
     _feedbackController.dispose();
+    _dwellProgress.dispose();
     super.dispose();
   }
 
@@ -1386,10 +1384,9 @@ class _SwipeViewState extends ConsumerState<SwipeView>
       // Build currentPage directly from nextQ instead of promoting _nextPage,
       // so a stale _nextPage (from _rebuildPages with old widget.session)
       // can never turn _currentPage null and blank the screen.
-      _currentPage = _SwipePage(word: nextQ.word, dwellProgress: 0);
-      _nextPage = afterNextQ != null
-          ? _SwipePage(word: afterNextQ.word, dwellProgress: 0)
-          : null;
+      _dwellProgress.value = 0;
+      _currentPage = _SwipePage(word: nextQ.word, dwellProgress: _dwellProgress);
+      _nextPage = afterNextQ != null ? _SwipePage(word: afterNextQ.word) : null;
     }
     // 新页面从底部 80px 快速滑入到位（50ms linear）。
     _dragDy = 80;
@@ -1418,10 +1415,10 @@ class _SwipeViewState extends ConsumerState<SwipeView>
           ? session.questions[session.currentIndex - 2]
           : null;
       _nextPage = _currentPage;
-      _currentPage = _SwipePage(word: prevQ.word, dwellProgress: 0);
-      _prevPage = prevPrevQ != null
-          ? _SwipePage(word: prevPrevQ.word, dwellProgress: 0)
-          : null;
+      _dwellProgress.value = 0;
+      _currentPage = _SwipePage(word: prevQ.word, dwellProgress: _dwellProgress);
+      _prevPage =
+          prevPrevQ != null ? _SwipePage(word: prevPrevQ.word) : null;
     }
     // 新页面从顶部 80px 快速滑入到位。
     _dragDy = -80;
@@ -1575,9 +1572,9 @@ class _SwipeViewState extends ConsumerState<SwipeView>
 /// mastery indicator pinned to the bottom.
 class _SwipePage extends ConsumerWidget {
   final VocabWord word;
-  final double dwellProgress;
+  final ValueListenable<double>? dwellProgress;
 
-  const _SwipePage({required this.word, this.dwellProgress = 0});
+  const _SwipePage({required this.word, this.dwellProgress});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -1772,21 +1769,21 @@ class _ExampleCard extends StatelessWidget {
 /// (longer dwell = worse).
 class _MasteryIndicator extends StatelessWidget {
   final ReviewState? reviewState;
-  final double dwellProgress;
+  final ValueListenable<double>? dwellProgress;
 
   const _MasteryIndicator({
     required this.reviewState,
-    this.dwellProgress = 0,
+    this.dwellProgress,
   });
 
   @override
   Widget build(BuildContext context) {
     final color = _classify(reviewState);
-    final value = _baseline(reviewState);
+    final baseline = _baseline(reviewState);
     final label = _label(reviewState);
+    final listenable = dwellProgress;
     return Semantics(
       label: '掌握程度：$label',
-      value: '${(value * 100).round()}%',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -1801,17 +1798,30 @@ class _MasteryIndicator extends StatelessWidget {
           const SizedBox(height: AppSpacing.x1),
           SizedBox(
             width: double.infinity,
-            child: LinearProgressIndicator(
-              value: value,
-              minHeight: 2,
-              backgroundColor: color.withValues(alpha: 0.08),
-              valueColor: AlwaysStoppedAnimation<Color>(color),
-            ),
+            child: listenable == null
+                ? _bar(baseline, color)
+                : ValueListenableBuilder<double>(
+                    valueListenable: listenable,
+                    builder: (context, dwell, _) {
+                      // The bar starts at the word's SM-2 baseline and fills
+                      // toward full as the user dwells on the card, giving
+                      // real-time "I'm studying this" feedback.
+                      final value = baseline + dwell * (1 - baseline);
+                      return _bar(value, color);
+                    },
+                  ),
           ),
         ],
       ),
     );
   }
+
+  Widget _bar(double value, Color color) => LinearProgressIndicator(
+        value: value.clamp(0.0, 1.0),
+        minHeight: 2,
+        backgroundColor: color.withValues(alpha: 0.08),
+        valueColor: AlwaysStoppedAnimation<Color>(color),
+      );
 
   String _label(ReviewState? s) {
     if (s == null) return '新词';

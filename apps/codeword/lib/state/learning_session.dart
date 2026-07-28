@@ -1416,16 +1416,30 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     final reviewState = ref.read(reviewStateProvider)[q.word.id];
     final isFamiliar = reviewState != null &&
         (reviewState.repetitions >= 2 || reviewState.easiness >= 230);
-    final easyThreshold = isFamiliar ? 3000 : 5000;
     final AnswerQuality quality;
-    if (dwellMs < easyThreshold) {
-      quality = AnswerQuality.easy;
-    } else if (dwellMs < 8000) {
-      quality = AnswerQuality.good;
-    } else if (dwellMs < 18000) {
-      quality = AnswerQuality.hard;
+    if (isFamiliar) {
+      // Already-known word: a quick swipe confirms mastery.
+      if (dwellMs < 3000) {
+        quality = AnswerQuality.easy;
+      } else if (dwellMs < 8000) {
+        quality = AnswerQuality.good;
+      } else if (dwellMs < 18000) {
+        quality = AnswerQuality.hard;
+      } else {
+        quality = AnswerQuality.again;
+      }
     } else {
-      quality = AnswerQuality.again;
+      // Brand-new / unfamiliar word: a fast swipe means "skip", NOT
+      // "mastered". You cannot have mastered a word you glanced at for
+      // two seconds, so "已掌握" is never awarded here — the best a new
+      // word earns is "记住了".
+      if (dwellMs < 8000) {
+        quality = AnswerQuality.good;
+      } else if (dwellMs < 18000) {
+        quality = AnswerQuality.hard;
+      } else {
+        quality = AnswerQuality.again;
+      }
     }
     _recordAnswerWithQuality(
       quality: quality,
