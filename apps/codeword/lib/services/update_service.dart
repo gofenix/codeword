@@ -52,12 +52,11 @@ class UpdateService {
       for (final a in assets) {
         final name = (a['name'] as String?) ?? '';
         if (name.endsWith('.apk')) {
-          // Use the API asset URL instead of browser_download_url.
-          // browser_download_url redirects to a CDN URL that drops our
-          // cache-busting query params, so stale cached APKs get served.
-          // The API asset URL returns a fresh redirect every time.
-          final assetId = a['id'];
-          apkUrl = '$_apiBase/releases/assets/$assetId';
+          // Use browser_download_url (not the API asset URL) so downloads
+          // are not subject to GitHub API rate limits (60/hr unauthenticated).
+          // Each release's APK is named codeword-v<version>.apk, so the URL
+          // differs per version and the CDN never serves a stale build.
+          apkUrl = a['browser_download_url'] as String?;
           apkSize = (a['size'] as num?)?.toInt();
           break;
         }
@@ -98,11 +97,10 @@ class UpdateService {
       final dir = await getApplicationSupportDirectory();
       final file = File('${dir.path}/codeword-update.apk');
       if (file.existsSync()) file.deleteSync();
-      // Download via the API asset URL with Accept: application/octet-stream.
-      // This forces GitHub to issue a fresh CDN redirect every time, bypassing
-      // any stale cache that would otherwise serve an older APK.
+      // Download via browser_download_url. Each version's APK has a unique
+      // filename (codeword-v<version>.apk), so the CDN URL is unique per
+      // release and never serves a stale cached build.
       final req = http.Request('GET', Uri.parse(url));
-      req.headers['Accept'] = 'application/octet-stream';
       req.headers['Cache-Control'] = 'no-cache';
       final resp = await req.send();
       if (resp.statusCode != 200) return false;
