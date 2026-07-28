@@ -1,11 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:lib_ui/lib_ui.dart';
 
 import '../services/update_service.dart';
 
-/// Shows the latest release notes and lets the user download + install
-/// the APK in-place. Call [show] to present it.
+/// iOS 风格的更新弹窗：毛玻璃白底、居中、圆角 14、扁平按钮，
+/// 符合 Apple Human Interface Guidelines。
 class UpdateDialog extends StatefulWidget {
   final AppUpdateInfo info;
   final String currentVersion;
@@ -21,7 +21,7 @@ class UpdateDialog extends StatefulWidget {
     required AppUpdateInfo info,
     required String currentVersion,
   }) {
-    return showDialog(
+    return showCupertinoDialog(
       context: context,
       barrierDismissible: false,
       builder: (_) => UpdateDialog(info: info, currentVersion: currentVersion),
@@ -62,197 +62,207 @@ class _UpdateDialogState extends State<UpdateDialog> {
 
   @override
   Widget build(BuildContext context) {
-    final palette = AppColors.of(context);
     final notes = widget.info.releaseNotes?.trim();
+    final isDark =
+        MediaQuery.of(context).platformBrightness == Brightness.dark;
 
-    return Dialog(
-      backgroundColor: palette.surface,
-      insetPadding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.x6,
-        vertical: AppSpacing.x8,
-      ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(AppRadii.xl),
-      ),
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 400),
+    final bgColor =
+        isDark ? const Color(0xFF2C2C2E) : const Color(0xFFF2F2F7);
+    const iosBlue = Color(0xFF007AFF);
+    const dividerColor = Color(0x338E8E93);
+
+    return Center(
+      child: Container(
+        width: 270,
+        margin: const EdgeInsets.symmetric(horizontal: 16),
+        decoration: BoxDecoration(
+          color: bgColor,
+          borderRadius: BorderRadius.circular(14),
+        ),
+        clipBehavior: Clip.antiAlias,
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            _header(context, palette),
-            Flexible(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.fromLTRB(
-                  AppSpacing.x6,
-                  AppSpacing.x4,
-                  AppSpacing.x6,
-                  AppSpacing.x2,
-                ),
-                child: (notes != null && notes.isNotEmpty)
-                    ? _MarkdownNotes(data: notes)
-                    : Text(
-                        '本次更新包含若干改进与修复。',
-                        style: AppTheme.mutedCaption(size: 14, context: context),
-                      ),
-              ),
-            ),
-            _footer(context, palette),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _header(BuildContext context, AppPalette palette) {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(
-        AppSpacing.x6,
-        AppSpacing.x6,
-        AppSpacing.x6,
-        AppSpacing.x4,
-      ),
-      decoration: BoxDecoration(
-        gradient: AppMaterials.bronze,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(AppRadii.xl),
-          topRight: Radius.circular(AppRadii.xl),
-        ),
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Icon(Icons.rocket_launch_rounded,
-              color: AppColors.onPrimary, size: 26),
-          const SizedBox(width: AppSpacing.x3),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  '发现新版本',
-                  style: TextStyle(
-                    color: AppColors.onPrimary,
-                    fontSize: 19,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: -0.2,
-                  ),
-                ),
-                const SizedBox(height: AppSpacing.x1),
-                Text(
-                  'v${widget.currentVersion}  →  v${widget.info.version}',
-                  style: TextStyle(
-                    color: AppColors.onPrimary.withValues(alpha: 0.85),
-                    fontSize: 13,
-                    fontFeatures: const [FontFeature.tabularFigures()],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _footer(BuildContext context, AppPalette palette) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(
-        AppSpacing.x6,
-        AppSpacing.x3,
-        AppSpacing.x6,
-        AppSpacing.x6,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          if (_downloading) ...[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(AppRadii.pill),
-              child: LinearProgressIndicator(
-                value: _progress,
-                minHeight: 6,
-                backgroundColor: palette.surfaceMuted,
-                valueColor:
-                    const AlwaysStoppedAnimation(AppColors.primary),
-              ),
-            ),
-            const SizedBox(height: AppSpacing.x2),
-            Text(
-              '下载中… ${(_progress * 100).toStringAsFixed(0)}%',
-              textAlign: TextAlign.center,
-              style: AppTheme.mutedCaption(size: 12, context: context),
-            ),
-          ] else ...[
-            if (_error != null) ...[
-              Text(
-                _error!,
-                style: const TextStyle(color: AppColors.danger, fontSize: 13),
-              ),
-              const SizedBox(height: AppSpacing.x3),
-            ],
-            EditorialPrimaryButton(
-              onPressed: _download,
-              icon: const Icon(Icons.system_update_rounded),
-              label: const Text('立即更新'),
-            ),
-            const SizedBox(height: AppSpacing.x2),
-            TextButton(
-              onPressed: () => Navigator.of(context).pop(),
+            // 标题
+            const Padding(
+              padding: EdgeInsets.fromLTRB(16, 18, 16, 6),
               child: Text(
-                '稍后再说',
-                style: TextStyle(color: palette.inkMuted),
+                '发现新版本',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            // 版本号
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+              child: Text(
+                'v${widget.currentVersion}  →  v${widget.info.version}',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: isDark ? Colors.white60 : Colors.black54,
+                  fontSize: 13,
+                ),
+              ),
+            ),
+            // release notes
+            if (notes != null && notes.isNotEmpty)
+              Flexible(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                  child: _MarkdownNotes(data: notes, isDark: isDark),
+                ),
+              )
+            else
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                child: Text(
+                  '本次更新包含若干改进与修复。',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: isDark ? Colors.white60 : Colors.black54,
+                    fontSize: 13,
+                  ),
+                ),
+              ),
+            // 错误
+            if (_error != null)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                child: Text(
+                  _error!,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Color(0xFFFF3B30),
+                    fontSize: 13,
+                  ),
+                ),
+              ),
+            // 下载进度
+            if (_downloading)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 4, 16, 14),
+                child: Column(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(2),
+                      child: LinearProgressIndicator(
+                        value: _progress,
+                        minHeight: 3,
+                        backgroundColor:
+                            isDark ? Colors.white12 : Colors.black12,
+                        valueColor:
+                            const AlwaysStoppedAnimation(iosBlue),
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      '下载中… ${(_progress * 100).toStringAsFixed(0)}%',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: isDark ? Colors.white60 : Colors.black54,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            // 按钮区
+            if (!_downloading)
+              _buildActions(dividerColor, iosBlue),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildActions(Color dividerColor, Color iosBlue) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(height: 0.5, color: dividerColor),
+        Row(
+          children: [
+            Expanded(
+              child: CupertinoButton(
+                padding: const EdgeInsets.symmetric(vertical: 12),
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text(
+                  '稍后',
+                  style: TextStyle(
+                    color: iosBlue,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+            ),
+            Container(width: 0.5, height: 44, color: dividerColor),
+            Expanded(
+              child: CupertinoButton(
+                padding: const EdgeInsets.symmetric(vertical: 12),
+                onPressed: _download,
+                child: Text(
+                  '更新',
+                  style: TextStyle(
+                    color: iosBlue,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ),
             ),
           ],
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
 
-/// Renders GitHub release notes (Markdown) with the app's editorial
-/// typography so headings, lists and inline code read cleanly instead
-/// of showing raw `#`/`-`/`*` markers.
+/// 渲染 GitHub release notes（Markdown），配色适配 iOS 弹窗。
 class _MarkdownNotes extends StatelessWidget {
   final String data;
+  final bool isDark;
 
-  const _MarkdownNotes({required this.data});
+  const _MarkdownNotes({required this.data, required this.isDark});
 
   @override
   Widget build(BuildContext context) {
-    final palette = AppColors.of(context);
-    final body = AppTheme.mutedCaption(size: 14, context: context)
-        .copyWith(height: 1.5, color: palette.ink);
+    final textColor = isDark ? Colors.white : Colors.black;
+    final body = TextStyle(color: textColor, fontSize: 13, height: 1.5);
     return MarkdownBody(
       data: data,
       shrinkWrap: true,
       styleSheet: MarkdownStyleSheet(
         p: body,
-        h1: AppTheme.cardTitle(context: context).copyWith(fontSize: 18),
-        h2: AppTheme.cardTitle(context: context).copyWith(fontSize: 16),
-        h3: AppTheme.cardTitle(context: context).copyWith(fontSize: 15),
+        h1: body.copyWith(fontSize: 15, fontWeight: FontWeight.w600),
+        h2: body.copyWith(fontSize: 14, fontWeight: FontWeight.w600),
+        h3: body.copyWith(fontSize: 13, fontWeight: FontWeight.w600),
         listBullet: body,
-        strong: body.copyWith(fontWeight: FontWeight.w700),
+        strong: body.copyWith(fontWeight: FontWeight.w600),
         em: body.copyWith(fontStyle: FontStyle.italic),
         a: body.copyWith(
-          color: AppColors.primary,
+          color: const Color(0xFF007AFF),
           decoration: TextDecoration.underline,
         ),
-        code: AppTheme.code(size: 13, context: context).copyWith(
-          backgroundColor: palette.surfaceMuted,
+        code: body.copyWith(
+          fontFamily: 'monospace',
+          fontSize: 12,
+          backgroundColor: isDark ? Colors.white12 : Colors.black12,
         ),
         codeblockDecoration: BoxDecoration(
-          color: palette.surfaceMuted,
-          borderRadius: BorderRadius.circular(AppRadii.sm),
+          color: isDark ? Colors.white12 : Colors.black12,
+          borderRadius: BorderRadius.circular(4),
         ),
         blockquoteDecoration: BoxDecoration(
-          color: palette.surfaceMuted,
-          borderRadius: BorderRadius.circular(AppRadii.sm),
+          color: isDark ? Colors.white12 : Colors.black12,
+          borderRadius: BorderRadius.circular(4),
         ),
-        h1Padding: const EdgeInsets.only(top: AppSpacing.x3, bottom: AppSpacing.x1),
-        h2Padding: const EdgeInsets.only(top: AppSpacing.x3, bottom: AppSpacing.x1),
-        blockSpacing: AppSpacing.x2,
+        h1Padding: const EdgeInsets.only(top: 8, bottom: 4),
+        h2Padding: const EdgeInsets.only(top: 8, bottom: 4),
+        blockSpacing: 6,
       ),
     );
   }
