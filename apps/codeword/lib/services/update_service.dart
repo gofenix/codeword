@@ -73,8 +73,8 @@ class UpdateService {
     return _compareVersions(latest.version, current) > 0;
   }
 
-  /// Downloads the APK to the cache directory and triggers the install
-  /// intent. Returns true on success.
+  /// Downloads the APK to the app support directory and triggers the
+  /// install intent. Returns true on success.
   static Future<bool> downloadAndInstall(
     AppUpdateInfo info, {
     void Function(int received, int total)? onProgress,
@@ -82,8 +82,9 @@ class UpdateService {
     final url = info.apkUrl;
     if (url == null) return false;
     try {
-      final dir = await getTemporaryDirectory();
+      final dir = await getApplicationSupportDirectory();
       final file = File('${dir.path}/codeword-update.apk');
+      if (file.existsSync()) file.deleteSync();
       final req = http.Request('GET', Uri.parse(url));
       final resp = await req.send();
       if (resp.statusCode != 200) return false;
@@ -96,7 +97,7 @@ class UpdateService {
         onProgress?.call(received, total);
       }).asFuture();
       await sink.close();
-      final result = await OpenFilex.open(file.path, type: 'application/vnd.android.package-archive');
+      final result = await OpenFilex.open(file.path);
       return result.type == ResultType.done;
     } catch (_) {
       return false;
