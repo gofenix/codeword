@@ -69,6 +69,7 @@ dependencies:
   web: ^1.1.1
   package_info_plus: ^9.0.1
   open_filex: ^4.7.0
+  flutter_markdown: ^0.7.6+2
 
 dev_dependencies:
   flutter_test:

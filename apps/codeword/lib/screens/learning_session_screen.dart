@@ -1160,13 +1160,6 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   late final AnimationController _controller;
   Animation<Offset>? _anim;
   bool _animating = false;
-
-  /// When a fast flick triggers an instant content switch, the new page
-  /// should slide in from the bottom (TikTok-style) instead of hard-cutting.
-  /// This flag is checked in [_onQuestionChanged] to kick off the slide-in.
-  bool _pendingFastFlipIn = false;
-  bool _pendingFastFlipBack = false;
-
   /// Cached page widgets so a drag/animation frame only re-applies the
   /// transform instead of rebuilding the entire subtree (§11).
   Widget? _currentPage;
@@ -1212,16 +1205,6 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     _controller.value = 0;
     _cardShownAt = DateTime.now();
     _rebuildPages();
-    // Fast flick: content just switched — slide the new page in from
-    // the edge instead of it popping in at centre (TikTok-style).
-    if (_pendingFastFlipIn || _pendingFastFlipBack) {
-      final screenH = MediaQuery.of(context).size.height;
-      _dragDy = _pendingFastFlipIn ? screenH : -screenH;
-      _rawDragDy = _dragDy;
-      _pendingFastFlipIn = false;
-      _pendingFastFlipBack = false;
-      _animateIn();
-    }
     if (id != null && !_swipeSpeakPending) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (!mounted) return;
@@ -1301,44 +1284,26 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   }
 
   void _onVerticalDragEnd(DragEndDetails d) {
+    if (_animating) return;
     final velocity = d.velocity.pixelsPerSecond.dy;
     final screenH = MediaQuery.of(context).size.height;
     final canGoBack = ref.read(learningSessionProvider.notifier).canGoBack;
 
-    // Fast flick — TikTok-style: switch content instantly, then slide
-    // the new page in from the bottom. The content switch and the
-    // animation happen together; the animation never blocks the next
-    // flick (that's what made rapid swipes feel "stuck" before).
-    if (velocity < -_flickVelocity) {
-      HapticFeedback.lightImpact();
-      _interruptAnimation();
-      _pendingFastFlipIn = true;
-      _submitSwipe(dwellMs: _dwellMs());
-      return;
-    }
-    if (canGoBack && velocity > _flickVelocity) {
-      HapticFeedback.lightImpact();
-      _interruptAnimation();
-      _pendingFastFlipBack = true;
-      ref.read(learningSessionProvider.notifier).goBack();
-      return;
-    }
-
-    // Slow, deliberate drag: respect the animation lock so two drags
-    // don't collide, and play the spring for a polished feel.
-    if (_animating) return;
+    // 统一判断：速度超过阈值 或 拖动距离超过阈值 即翻转。
+    // 快速和慢速走同一条路径，只是速度不同导致动画时长不同。
     final projected = _dragDy + AppMotion.projectMomentum(velocity);
-    if (projected < -screenH * _flipThreshold) {
+    if (projected < -screenH * _flipThreshold || velocity < -_flickVelocity) {
       _flipToNext(velocity);
-    } else if (canGoBack && projected > screenH * _flipThreshold) {
+    } else if (canGoBack &&
+        (projected > screenH * _flipThreshold || velocity > _flickVelocity)) {
       _flipToPrev(velocity);
     } else {
       _springBack(velocity);
     }
   }
 
-  /// Stop any in-flight spring animation and reset drag state so the
-  /// next interaction starts from a clean slate.
+  /// Stop any in-flight animation and reset drag state so the next
+  /// interaction starts from a clean slate.
   void _interruptAnimation() {
     if (_animating) {
       _controller.stop();
@@ -1355,38 +1320,39 @@ class _SwipeViewState extends ConsumerState<SwipeView>
         : 3000;
   }
 
-  /// Fast slide-in for the new page after a TikTok-style flick.
-  /// The content has already switched; this just glides the page from
-  /// the edge (screenH or -screenH) to centre (0) so it doesn't pop.
-  /// Uses a snappy spring (~180ms) and is interruptible by the next flick.
-  void _animateIn() {
+  /// 统一的平移动画：用 easeOut 曲线从当前位置滑到目标位置。
+  /// 动画时长基于释放速度动态计算——速度越快越短（更脆），范围 150-300ms。
+  /// 无弹簧过冲，无渐隐渐现，纯粹的位置移动，像刷短视频那样干净利落。
+  void _animateFlip({
+    required double end,
+    required double velocity,
+    required VoidCallback onComplete,
+  }) {
     _animating = true;
     final begin = _dragDy;
-    const end = 0.0;
+    final distance = (end - begin).abs();
+    final speed = velocity.abs();
+    final durationMs = speed > 0
+        ? (distance / speed * 1000).clamp(150.0, 300.0).toInt()
+        : 250;
+    _controller.duration = Duration(milliseconds: durationMs);
     _anim = Tween<Offset>(
       begin: Offset(0, begin),
-      end: Offset.zero,
-    ).animate(_controller);
-    _controller
-        .animateWith(
-          SpringSimulation(AppMotion.springDefault(response: 0.18), 0, 1, 0),
-        )
-        .then((_) {
-          if (!mounted) return;
-          _dragDy = 0;
-          _rawDragDy = 0;
-          _anim = null;
-          _animating = false;
-        });
+      end: Offset(0, end),
+    ).animate(CurvedAnimation(parent: _controller, curve: AppMotion.easeOut));
+    _controller.forward(from: 0).then((_) {
+      if (!mounted) return;
+      _dragDy = 0;
+      _rawDragDy = 0;
+      _anim = null;
+      _animating = false;
+      onComplete();
+    });
   }
 
   void _flipToNext(double velocity) {
-    _animating = true;
     HapticFeedback.lightImpact();
-    // Speak the incoming word right away, in lockstep with the page
-    // flying in, instead of waiting for the session state to update
-    // and _onQuestionChanged to fire (which lagged a full animation
-    // duration behind the swipe).
+    // 立即播报下一个单词，与页面滑出同步，不等状态更新。
     final nextQ = widget.session.questions.length >
             widget.session.currentIndex + 1
         ? widget.session.questions[widget.session.currentIndex + 1]
@@ -1395,45 +1361,22 @@ class _SwipeViewState extends ConsumerState<SwipeView>
       TtsService.instance.speak(text: nextQ.word.word);
       _swipeSpeakPending = true;
     }
-    final dwell = _cardShownAt != null
-        ? DateTime.now().difference(_cardShownAt!).inMilliseconds
-        : 3000;
+    final dwell = _dwellMs();
     final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     if (reduceMotion) {
       _submitSwipe(dwellMs: dwell);
-      _animating = false;
-      _anim = null;
       return;
     }
     final screenH = MediaQuery.of(context).size.height;
-    final begin = _dragDy;
-    final end = -screenH;
-    _anim = Tween<Offset>(
-      begin: Offset(0, begin),
-      end: Offset(0, end),
-    ).animate(_controller);
-    // Hand off the finger's release velocity so the page keeps moving
-    // at the same speed — no seam between drag and animation (§5).
-    // Normalize px/s velocity into the 0→1 simulation space.
-    final distance = end - begin;
-    final relVelocity = distance != 0 ? velocity / distance : 0.0;
-    _controller
-        .animateWith(
-          SpringSimulation(AppMotion.springDefault(), 0, 1, relVelocity),
-        )
-        .then((_) {
-          if (!mounted) return;
-          _submitSwipe(dwellMs: dwell);
-          _animating = false;
-          _anim = null;
-        });
+    _animateFlip(
+      end: -screenH,
+      velocity: velocity,
+      onComplete: () => _submitSwipe(dwellMs: dwell),
+    );
   }
 
   void _flipToPrev(double velocity) {
-    _animating = true;
     HapticFeedback.lightImpact();
-    // Speak the word we're returning to, in lockstep with it flying
-    // down from the top of the screen.
     final prevQ = ref.read(learningSessionProvider.notifier).previousQuestion;
     if (prevQ != null) {
       TtsService.instance.speak(text: prevQ.word.word);
@@ -1442,61 +1385,28 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     if (reduceMotion) {
       ref.read(learningSessionProvider.notifier).goBack();
-      _animating = false;
-      _anim = null;
       return;
     }
     final screenH = MediaQuery.of(context).size.height;
-    final begin = _dragDy;
-    final end = screenH;
-    _anim = Tween<Offset>(
-      begin: Offset(0, begin),
-      end: Offset(0, end),
-    ).animate(_controller);
-    final distance = end - begin;
-    final relVelocity = distance != 0 ? velocity / distance : 0.0;
-    _controller
-        .animateWith(
-          SpringSimulation(AppMotion.springDefault(), 0, 1, relVelocity),
-        )
-        .then((_) {
-          if (!mounted) return;
-          ref.read(learningSessionProvider.notifier).goBack();
-          _animating = false;
-          _anim = null;
-        });
+    _animateFlip(
+      end: screenH,
+      velocity: velocity,
+      onComplete: () => ref.read(learningSessionProvider.notifier).goBack(),
+    );
   }
 
   void _springBack(double velocity) {
-    _animating = true;
     final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     if (reduceMotion) {
       _dragDy = 0;
-      _animating = false;
       setState(() {});
       return;
     }
-    final begin = _dragDy;
-    const end = 0.0;
-    _anim = Tween<Offset>(
-      begin: Offset(0, begin),
-      end: Offset.zero,
-    ).animate(_controller);
-    // Under-damped momentum spring with the finger's velocity handed off
-    // — interruptible, no fixed duration, slight overshoot (§4, §5).
-    final distance = end - begin;
-    final relVelocity = distance != 0 ? velocity / distance : 0.0;
-    _controller
-        .animateWith(
-          SpringSimulation(AppMotion.springMomentum(), 0, 1, relVelocity),
-        )
-        .then((_) {
-          if (!mounted) return;
-          _dragDy = 0;
-          _anim = null;
-          _animating = false;
-          setState(() {});
-        });
+    _animateFlip(
+      end: 0,
+      velocity: velocity,
+      onComplete: () => setState(() {}),
+    );
   }
 
   void _submitSwipe({required int dwellMs}) {
