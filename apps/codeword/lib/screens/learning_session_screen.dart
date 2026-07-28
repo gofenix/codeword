@@ -1370,7 +1370,10 @@ class _SwipeViewState extends ConsumerState<SwipeView>
           ? session.questions[session.currentIndex + 2]
           : null;
       _prevPage = _currentPage;
-      _currentPage = _nextPage;
+      // Build currentPage directly from nextQ instead of promoting _nextPage,
+      // so a stale _nextPage (from _rebuildPages with old widget.session)
+      // can never turn _currentPage null and blank the screen.
+      _currentPage = _SwipePage(word: nextQ.word, dwellProgress: 0);
       _nextPage = afterNextQ != null
           ? _SwipePage(word: afterNextQ.word, dwellProgress: 0)
           : null;
@@ -1394,7 +1397,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
       ref.read(learningSessionProvider.notifier).goBack();
       return;
     }
-    // 立即切换内容：prevPage → currentPage。
+    // 立即切换内容：直接用 prevQ 构建 currentPage。
     if (prevQ != null) {
       _activeWordId = prevQ.word.id;
       _cardShownAt = DateTime.now();
@@ -1402,7 +1405,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
           ? session.questions[session.currentIndex - 2]
           : null;
       _nextPage = _currentPage;
-      _currentPage = _prevPage;
+      _currentPage = _SwipePage(word: prevQ.word, dwellProgress: 0);
       _prevPage = prevPrevQ != null
           ? _SwipePage(word: prevPrevQ.word, dwellProgress: 0)
           : null;
