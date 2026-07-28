@@ -1182,8 +1182,6 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   @override
   void initState() {
     super.initState();
-    // 沉浸式：隐藏状态栏和导航栏，像刷短视频那样全屏。
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     _controller = AnimationController(vsync: this);
     _dwellTicker = createTicker(_onDwellTick)..start();
     _onQuestionChanged();
@@ -1243,14 +1241,11 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   }
   @override
   void dispose() {
-    // 退出滑动学习时恢复系统UI显示。
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     _dwellTicker.dispose();
     _controller.dispose();
     _dwellProgress.dispose();
     super.dispose();
   }
-
   /// Apple's rubber-band: the further past the boundary, the less the
   /// element follows — real things slow before they stop (§9).
   double _rubberBand(double overshoot, double dimension) {
