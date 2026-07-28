@@ -1176,6 +1176,18 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   /// This flag suppresses the duplicate speak in _onQuestionChanged.
   bool _swipeSpeakPending = false;
 
+  /// Brief swipe-score feedback pill ("已掌握 / 记住了 / 再看看 / 不熟悉")
+  /// shown right after a flip so the user sees the dwell-time judgment
+  /// instead of every card reading "新词".
+  AnswerQuality? _feedback;
+  late final AnimationController _feedbackController = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 1200),
+  )..addStatusListener((s) {
+      if (s == AnimationStatus.completed && mounted) {
+        setState(() => _feedback = null);
+      }
+    });
   @override
   void initState() {
     super.initState();
@@ -1247,6 +1259,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   void dispose() {
     _dwellTicker.dispose();
     _controller.dispose();
+    _feedbackController.dispose();
     super.dispose();
   }
 
@@ -1357,7 +1370,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     final dwell = _dwellMs();
     final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     if (reduceMotion) {
-      _submitSwipe(dwellMs: dwell);
+      _showFeedback(_submitSwipe(dwellMs: dwell));
       return;
     }
     // 立即切换内容：把 nextPage 提升为 currentPage，预取下一个。
@@ -1381,7 +1394,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     // 新页面从底部 80px 快速滑入到位（50ms linear）。
     _dragDy = 80;
     _rawDragDy = 80;
-    _submitSwipe(dwellMs: dwell);
+    _showFeedback(_submitSwipe(dwellMs: dwell));
     _animateFlip(end: 0, onComplete: () {});
   }
   void _flipToPrev(double velocity) {
@@ -1428,9 +1441,31 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     _animateFlip(end: 0, onComplete: () => setState(() {}));
   }
 
-  void _submitSwipe({required int dwellMs}) {
-    ref.read(learningSessionProvider.notifier).answerSwipe(dwellMs: dwellMs);
+  AnswerQuality _submitSwipe({required int dwellMs}) {
+    return ref
+        .read(learningSessionProvider.notifier)
+        .answerSwipe(dwellMs: dwellMs);
   }
+
+  /// Show a brief swipe-score pill that fades out over 1.2s.
+  void _showFeedback(AnswerQuality quality) {
+    setState(() => _feedback = quality);
+    _feedbackController.forward(from: 0);
+  }
+
+  static const _feedbackLabels = {
+    AnswerQuality.easy: '已掌握',
+    AnswerQuality.good: '记住了',
+    AnswerQuality.hard: '再看看',
+    AnswerQuality.again: '不熟悉',
+  };
+
+  static const _feedbackColors = {
+    AnswerQuality.easy: AppColors.success,
+    AnswerQuality.good: AppColors.primary,
+    AnswerQuality.hard: AppColors.warning,
+    AnswerQuality.again: AppColors.danger,
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -1477,6 +1512,53 @@ class _SwipeViewState extends ConsumerState<SwipeView>
                     Transform.translate(
                       offset: offset,
                       child: currentPage,
+                    ),
+                  if (_feedback != null)
+                    IgnorePointer(
+                      child: AnimatedBuilder(
+                        animation: _feedbackController,
+                        builder: (context, _) {
+                          final t = _feedbackController.value;
+                          // Fade in fast (0→0.15), hold, fade out (0.6→1.0).
+                          final opacity = t < 0.15
+                              ? t / 0.15
+                              : t < 0.6
+                                  ? 1.0
+                                  : 1.0 - (t - 0.6) / 0.4;
+                          final color = _feedbackColors[_feedback!]!;
+                          return Align(
+                            alignment: const Alignment(0, -0.55),
+                            child: Opacity(
+                              opacity: opacity.clamp(0.0, 1.0),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                  vertical: 10,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: color.withValues(alpha: 0.92),
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: color.withValues(alpha: 0.3),
+                                      blurRadius: 12,
+                                      offset: const Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Text(
+                                  _feedbackLabels[_feedback!]!,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
                     ),
                 ],
               );
@@ -1732,7 +1814,7 @@ class _MasteryIndicator extends StatelessWidget {
   }
 
   String _label(ReviewState? s) {
-    if (s == null) return '待学习';
+    if (s == null) return '新词';
     final ef = s.easiness / 100.0;
     if (s.repetitions == 0) return '陌生';
     if (ef >= 2.5 && s.repetitions >= 3) return '熟悉';
