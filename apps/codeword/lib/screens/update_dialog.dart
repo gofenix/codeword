@@ -64,138 +64,141 @@ class _UpdateDialogState extends State<UpdateDialog> {
   @override
   Widget build(BuildContext context) {
     final notes = widget.info.releaseNotes?.trim();
-    final isDark =
-        MediaQuery.of(context).platformBrightness == Brightness.dark;
+    final isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
 
-    final bgColor =
-        isDark ? const Color(0xFF2C2C2E) : const Color(0xFFF2F2F7);
+    final bgColor = isDark ? const Color(0xFF2C2C2E) : const Color(0xFFF2F2F7);
     const iosBlue = Color(0xFF007AFF);
     const dividerColor = Color(0x338E8E93);
 
     return Center(
-      child: Container(
-        width: 300,
-        margin: const EdgeInsets.symmetric(horizontal: 16),
-        decoration: BoxDecoration(
-          color: bgColor,
-          borderRadius: BorderRadius.circular(18),
-        ),
-        clipBehavior: Clip.antiAlias,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            // 顶部：图标 + 标题 + 版本号
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 22, 20, 4),
-              child: Column(
-                children: [
-                  Container(
-                    width: 44,
-                    height: 44,
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [Color(0xFF007AFF), Color(0xFF5856D6)],
-                      ),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: const Icon(
-                      CupertinoIcons.arrow_down_circle_fill,
-                      color: Colors.white,
-                      size: 26,
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  const Text(
-                    '发现新版本',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    'v${widget.currentVersion}  →  v${widget.info.version}',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: isDark ? Colors.white54 : Colors.black45,
-                      fontSize: 13,
-                      letterSpacing: 0.2,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 12),
-            // release notes（只渲染更新内容，不含标题/版本/链接）
-            if (notes != null && notes.isNotEmpty)
-              Flexible(
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 4),
-                  child: _MarkdownNotes(data: notes, isDark: isDark),
-                ),
-              )
-            else
+      child: Material(
+        // Provide a Material ancestor so bare Text widgets don't render
+        // with the yellow "missing Material" double-underline.
+        type: MaterialType.transparency,
+        child: Container(
+          width: 300,
+          margin: const EdgeInsets.symmetric(horizontal: 16),
+          decoration: BoxDecoration(
+            color: bgColor,
+            borderRadius: BorderRadius.circular(18),
+          ),
+          clipBehavior: Clip.antiAlias,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // 顶部：图标 + 标题 + 版本号
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 4),
-                child: Text(
-                  '本次更新包含若干改进与修复。',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: isDark ? Colors.white54 : Colors.black45,
-                    fontSize: 13,
-                  ),
-                ),
-              ),
-            // 错误提示
-            if (_error != null)
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 8, 20, 4),
-                child: Text(
-                  _error!,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Color(0xFFFF3B30),
-                    fontSize: 12,
-                    height: 1.4,
-                  ),
-                ),
-              ),
-            const SizedBox(height: 16),
-            // 下载进度 / 按钮区
-            if (_downloading)
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 18),
+                padding: const EdgeInsets.fromLTRB(20, 22, 20, 4),
                 child: Column(
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(3),
-                      child: LinearProgressIndicator(
-                        value: _progress,
-                        minHeight: 4,
-                        backgroundColor:
-                            isDark ? Colors.white12 : Colors.black12,
-                        valueColor:
-                            const AlwaysStoppedAnimation(iosBlue),
+                    Container(
+                      width: 44,
+                      height: 44,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [Color(0xFF007AFF), Color(0xFF5856D6)],
+                        ),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: const Icon(
+                        CupertinoIcons.arrow_down_circle_fill,
+                        color: Colors.white,
+                        size: 26,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 12),
+                    const Text(
+                      '发现新版本',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
                     Text(
-                      '正在下载… ${(_progress * 100).toStringAsFixed(0)}%',
+                      'v${widget.currentVersion}  →  v${widget.info.version}',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: isDark ? Colors.white54 : Colors.black45,
-                        fontSize: 12,
+                        fontSize: 13,
+                        letterSpacing: 0.2,
                       ),
                     ),
                   ],
                 ),
-              )
-            else
-              _buildActions(dividerColor, iosBlue),
-          ],
+              ),
+              const SizedBox(height: 12),
+              // release notes（只渲染更新内容，不含标题/版本/链接）
+              if (notes != null && notes.isNotEmpty)
+                Flexible(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 4),
+                    child: _MarkdownNotes(data: notes, isDark: isDark),
+                  ),
+                )
+              else
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 4),
+                  child: Text(
+                    '本次更新包含若干改进与修复。',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: isDark ? Colors.white54 : Colors.black45,
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+              // 错误提示
+              if (_error != null)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 8, 20, 4),
+                  child: Text(
+                    _error!,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Color(0xFFFF3B30),
+                      fontSize: 12,
+                      height: 1.4,
+                    ),
+                  ),
+                ),
+              const SizedBox(height: 16),
+              // 下载进度 / 按钮区
+              if (_downloading)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 18),
+                  child: Column(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(3),
+                        child: LinearProgressIndicator(
+                          value: _progress,
+                          minHeight: 4,
+                          backgroundColor: isDark
+                              ? Colors.white12
+                              : Colors.black12,
+                          valueColor: const AlwaysStoppedAnimation(iosBlue),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        '正在下载… ${(_progress * 100).toStringAsFixed(0)}%',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: isDark ? Colors.white54 : Colors.black45,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              else
+                _buildActions(dividerColor, iosBlue),
+            ],
+          ),
         ),
       ),
     );

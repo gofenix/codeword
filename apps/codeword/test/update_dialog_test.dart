@@ -44,7 +44,7 @@ void main() {
     expect(find.byType(MarkdownBody), findsOneWidget);
     // Header + primary action are present.
     expect(find.text('发现新版本'), findsOneWidget);
-    expect(find.text('更新'), findsOneWidget);
+    expect(find.text('立即更新'), findsOneWidget);
     // The raw markdown string is never dumped verbatim into a Text widget.
     expect(find.text('## 更新内容\n\n- 修复了 `安装` 问题\n- 优化滑动动画'),
         findsNothing);
