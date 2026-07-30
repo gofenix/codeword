@@ -161,7 +161,6 @@ class AskingView extends ConsumerStatefulWidget {
 
 class _AskingViewState extends ConsumerState<AskingView> {
   String? _lastAutoPlayedQuestion;
-  int? _selectedIndex;
   bool _locked = false;
   bool? _typedCorrect;
   final _typingController = TextEditingController();
@@ -181,7 +180,6 @@ class _AskingViewState extends ConsumerState<AskingView> {
     if (_questionIdentity(widget.session.currentQuestion) !=
         _questionIdentity(old.session.currentQuestion)) {
       // New question — reset feedback state.
-      _selectedIndex = null;
       _locked = false;
       _typedCorrect = null;
       _typingController.clear();
@@ -216,30 +214,6 @@ class _AskingViewState extends ConsumerState<AskingView> {
     return '${question.word.id}:${question.type.name}:${question.attemptNo}';
   }
 
-  void _onOptionTap(int i) {
-    if (_locked) return;
-    final q = widget.session.currentQuestion;
-    if (q == null) return;
-    final questionIdentity = _questionIdentity(q);
-    final correct = i == q.correctIndex;
-    setState(() {
-      _selectedIndex = i;
-      _locked = true;
-    });
-    if (correct) {
-      HapticFeedback.lightImpact();
-      Future.delayed(_answerDelay(correct), () {
-        if (!mounted || !_isCurrentQuestion(questionIdentity)) return;
-        ref.read(learningSessionProvider.notifier).answer(i);
-      });
-    } else {
-      HapticFeedback.heavyImpact();
-      Future.delayed(_answerDelay(correct), () {
-        if (!mounted || !_isCurrentQuestion(questionIdentity)) return;
-        ref.read(learningSessionProvider.notifier).answer(i);
-      });
-    }
-  }
 
   /// Answer-feedback delay, collapsed under reduced motion so the
   /// high-frequency loop never waits on vestibular motion (§14).
@@ -278,13 +252,6 @@ class _AskingViewState extends ConsumerState<AskingView> {
         identity;
   }
 
-  _OptionState _optionState(int i, int correctIndex) {
-    if (_selectedIndex == null) return _OptionState.normal;
-    if (i == _selectedIndex) {
-      return i == correctIndex ? _OptionState.correct : _OptionState.wrong;
-    }
-    return _OptionState.dimmed;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -401,18 +368,14 @@ class _AskingViewState extends ConsumerState<AskingView> {
                 bottom: AppSpacing.x6 + MediaQuery.of(context).padding.bottom,
               ),
               child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    for (var i = 0; i < q.options.length; i++) ...[
-                      if (i > 0) const SizedBox(height: AppSpacing.x3),
-                      _OptionTile(
-                        label: String.fromCharCode(65 + i),
-                        text: q.options[i],
-                        state: _optionState(i, q.correctIndex),
-                        onTap: () => _onOptionTap(i),
-                      ),
-                    ],
-                  ],
+                child: _OptionsList(
+                  options: q.options,
+                  correctIndex: q.correctIndex,
+                  onAnswer: (i) {
+                    final identity = _questionIdentity(q);
+                    if (!_isCurrentQuestion(identity)) return;
+                    ref.read(learningSessionProvider.notifier).answer(i);
+                  },
                 ),
               ),
             ),
@@ -925,6 +888,83 @@ class _LargePlayButton extends StatelessWidget {
   }
 }
 
+/// Option list for choice questions. Holds its own selection/lock state so
+/// tapping an option only rebuilds the options, not the question stage above.
+class _OptionsList extends StatefulWidget {
+  final List<String> options;
+  final int correctIndex;
+  final void Function(int index) onAnswer;
+
+  const _OptionsList({
+    required this.options,
+    required this.correctIndex,
+    required this.onAnswer,
+  });
+
+  @override
+  State<_OptionsList> createState() => _OptionsListState();
+}
+
+class _OptionsListState extends State<_OptionsList> {
+  int? _selectedIndex;
+  bool _locked = false;
+
+  @override
+  void didUpdateWidget(covariant _OptionsList old) {
+    super.didUpdateWidget(old);
+    // New question (options changed) → reset selection state.
+    if (widget.options != old.options) {
+      _selectedIndex = null;
+      _locked = false;
+    }
+  }
+
+  void _onTap(int i) {
+    if (_locked) return;
+    final correct = i == widget.correctIndex;
+    setState(() {
+      _selectedIndex = i;
+      _locked = true;
+    });
+    correct ? HapticFeedback.lightImpact() : HapticFeedback.heavyImpact();
+    final reduceMotion = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    final delay = reduceMotion
+        ? Duration.zero
+        : correct
+            ? AppMotion.answerCorrect
+            : AppMotion.answerWrong;
+    Future.delayed(delay, () {
+      if (!mounted) return;
+      widget.onAnswer(i);
+    });
+  }
+
+  _OptionState _optionState(int i) {
+    if (_selectedIndex == null) return _OptionState.normal;
+    if (i == _selectedIndex) {
+      return i == widget.correctIndex ? _OptionState.correct : _OptionState.wrong;
+    }
+    return _OptionState.dimmed;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        for (var i = 0; i < widget.options.length; i++) ...[
+          if (i > 0) const SizedBox(height: AppSpacing.x3),
+          _OptionTile(
+            label: String.fromCharCode(65 + i),
+            text: widget.options[i],
+            state: _optionState(i),
+            onTap: () => _onTap(i),
+          ),
+        ],
+      ],
+    );
+  }
+}
+
 enum _OptionState { normal, correct, wrong, dimmed }
 
 class _OptionTile extends StatelessWidget {
@@ -944,6 +984,9 @@ class _OptionTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = _colors(context);
     final enabled = state == _OptionState.normal && onTap != null;
+    final disableAnimations = MediaQuery.of(context).disableAnimations;
+    final isLight = Theme.of(context).brightness == Brightness.light;
+    final isNormal = state == _OptionState.normal;
     return Semantics(
       button: true,
       enabled: enabled,
@@ -955,43 +998,25 @@ class _OptionTile extends StatelessWidget {
         child: ConstrainedBox(
           constraints: const BoxConstraints(minHeight: 60),
           child: AnimatedContainer(
-            duration: MediaQuery.of(context).disableAnimations
-                ? Duration.zero
-                : AppMotion.fast,
+            duration: disableAnimations ? Duration.zero : AppMotion.fast,
             curve: AppMotion.easeOut,
             padding: const EdgeInsets.symmetric(
               horizontal: AppSpacing.x5,
               vertical: AppSpacing.x3,
             ),
             decoration: BoxDecoration(
-              color:
-                  state == _OptionState.normal &&
-                      Theme.of(context).brightness == Brightness.light
-                  ? null
-                  : colors.background,
-              gradient:
-                  state == _OptionState.normal &&
-                      Theme.of(context).brightness == Brightness.light
-                  ? AppMaterials.paper
-                  : null,
+              color: isNormal && isLight ? null : colors.background,
+              gradient: isNormal && isLight ? AppMaterials.paper : null,
               borderRadius: BorderRadius.circular(AppRadii.md),
               border: Border.all(
                 color: colors.border,
                 width: AppBorders.hairline,
               ),
-              boxShadow:
-                  state == _OptionState.normal &&
-                      Theme.of(context).brightness == Brightness.light
-                  ? AppShadows.paper
-                  : AppShadows.none,
+              boxShadow: isNormal && isLight ? AppShadows.paper : AppShadows.none,
             ),
             child: Row(
               children: [
-                AnimatedContainer(
-                  duration: MediaQuery.of(context).disableAnimations
-                      ? Duration.zero
-                      : AppMotion.fast,
-                  curve: AppMotion.easeOut,
+                Container(
                   width: 30,
                   height: 30,
                   alignment: Alignment.center,
