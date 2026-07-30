@@ -1559,15 +1559,11 @@ class _SwipePage extends ConsumerWidget {
                 ),
               ),
             const SizedBox(height: AppSpacing.x2),
-            AppGlassIconButton(
-              tooltip: '播放发音',
+            _PlainPlayButton(
               onPressed: () {
                 HapticFeedback.lightImpact();
                 TtsService.instance.speak(text: word.word);
               },
-              icon: Icons.volume_up_outlined,
-              size: 20,
-              color: AppColors.primary,
             ),
             // Only show part-of-speech when present. `level` is never
             // real per-word CEFR data (uniform placeholder or empty),
@@ -1606,6 +1602,36 @@ class _SwipePage extends ConsumerWidget {
             _MasteryIndicator(reviewState: reviewState, animated: animated),
             const SizedBox(height: AppSpacing.x3),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Lightweight circular play button for swipe cards. Deliberately avoids
+/// the frosted-glass [AppGlassIconButton]: a BackdropFilter recomputes the
+/// blurred backdrop every frame, and with three pages (prev/current/next)
+/// crossfading through AnimatedSwitcher on a mode switch, stacking multiple
+/// live blurs is what janks the transition. A flat tinted circle reads the
+/// same at this size and costs nothing to composite.
+class _PlainPlayButton extends StatelessWidget {
+  final VoidCallback onPressed;
+  const _PlainPlayButton({required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox.square(
+      dimension: 44,
+      child: Material(
+        color: AppColors.primary.withValues(alpha: 0.10),
+        shape: const CircleBorder(),
+        clipBehavior: Clip.antiAlias,
+        child: IconButton(
+          tooltip: '播放发音',
+          onPressed: onPressed,
+          icon: const Icon(Icons.volume_up_outlined, size: 20),
+          color: AppColors.primary,
+          padding: EdgeInsets.zero,
         ),
       ),
     );
