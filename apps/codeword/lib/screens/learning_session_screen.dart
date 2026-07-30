@@ -1246,7 +1246,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
         ? widget.session.questions[widget.session.currentIndex + 1]
         : null;
     final prevQ = ref.read(learningSessionProvider.notifier).previousQuestion;
-    _currentPage = q != null ? _SwipePage(word: q.word) : null;
+    _currentPage = q != null ? _SwipePage(word: q.word, animated: true) : null;
     _nextPage = nextQ != null ? _SwipePage(word: nextQ.word) : null;
     _prevPage = prevQ != null ? _SwipePage(word: prevQ.word) : null;
   }
@@ -1379,7 +1379,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
       // Build currentPage directly from nextQ instead of promoting _nextPage,
       // so a stale _nextPage (from _rebuildPages with old widget.session)
       // can never turn _currentPage null and blank the screen.
-      _currentPage = _SwipePage(word: nextQ.word);
+      _currentPage = _SwipePage(word: nextQ.word, animated: true);
       _nextPage = afterNextQ != null ? _SwipePage(word: afterNextQ.word) : null;
     }
     // 新页面从底部 80px 快速滑入到位（50ms linear）。
@@ -1409,7 +1409,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
           ? session.questions[session.currentIndex - 2]
           : null;
       _nextPage = _currentPage;
-      _currentPage = _SwipePage(word: prevQ.word);
+      _currentPage = _SwipePage(word: prevQ.word, animated: true);
       _prevPage =
           prevPrevQ != null ? _SwipePage(word: prevPrevQ.word) : null;
     }
@@ -1500,7 +1500,12 @@ class _SwipeViewState extends ConsumerState<SwipeView>
 class _SwipePage extends ConsumerWidget {
   final VocabWord word;
 
-  const _SwipePage({required this.word});
+  /// Only the on-screen page animates its mastery bar. Off-screen
+  /// prev/next pages pass false so they don't run a redundant 18s
+  /// animation while invisible.
+  final bool animated;
+
+  const _SwipePage({required this.word, this.animated = false});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -1598,7 +1603,7 @@ class _SwipePage extends ConsumerWidget {
               _ExampleCard(word: word),
             ],
             const Spacer(flex: 4),
-            _MasteryIndicator(reviewState: reviewState),
+            _MasteryIndicator(reviewState: reviewState, animated: animated),
             const SizedBox(height: AppSpacing.x3),
           ],
         ),
@@ -1692,8 +1697,9 @@ class _ExampleCard extends StatelessWidget {
 /// (longer dwell = worse).
 class _MasteryIndicator extends StatelessWidget {
   final ReviewState? reviewState;
+  final bool animated;
 
-  const _MasteryIndicator({required this.reviewState});
+  const _MasteryIndicator({required this.reviewState, this.animated = true});
 
   @override
   Widget build(BuildContext context) {
@@ -1718,11 +1724,11 @@ class _MasteryIndicator extends StatelessWidget {
           const SizedBox(height: AppSpacing.x1),
           SizedBox(
             width: double.infinity,
-            // One-shot fill from baseline toward full over 18s. Unlike a
-            // per-frame ticker, TweenAnimationBuilder runs a single bounded
-            // animation that settles and releases the frame scheduler — it
-            // never pins the app at 60fps (the freeze bug).
-            child: reduceMotion
+            // One-shot fill from baseline toward full over 18s, ONLY for the
+            // on-screen page. Off-screen prev/next pages (animated=false) and
+            // reduced-motion render a static bar — no redundant background
+            // animation, no perpetual frame loop.
+            child: (!animated || reduceMotion)
                 ? _bar(baseline, color)
                 : TweenAnimationBuilder<double>(
                     tween: Tween(begin: baseline, end: 1.0),
