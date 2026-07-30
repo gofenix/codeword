@@ -2821,6 +2821,48 @@ void main() {
             'shrink-wrapped pager column',
       );
     });
+
+    testWidgets('toggling from quiz to swipe mode does not hang', (
+      tester,
+    ) async {
+      final prefs = LearningPreferencesNotifier(
+        LearningPreferencesStore(_MemoryLearningPreferencesBackend()),
+      );
+      await prefs.ready;
+      // Start in quiz (multiple choice) mode.
+      prefs.state = const LearningPreferences(
+        learningMode: LearningMode.quiz,
+      );
+
+      await tester.pumpWidget(
+        testApp(
+          overrides: [
+            learningSessionProvider.overrideWith(
+              (ref) => _AskingLearningSessionNotifier(ref),
+            ),
+            learningPreferencesProvider.overrideWith((ref) => prefs),
+          ],
+        ),
+      );
+      await tester.pump();
+      expect(find.text('dermis'), findsOneWidget);
+      expect(find.text('A'), findsOneWidget);
+
+      // Tap the mode toggle to switch to the swipe card view. A build /
+      // animation loop here (e.g. an always-running ticker that never lets
+      // the frame scheduler idle) makes pumpAndSettle time out — the
+      // in-app symptom of the "switch mode freezes the app" report.
+      await tester.tap(find.byType(ModeToggleButton));
+      await tester.pumpAndSettle();
+
+      // The swipe card is now showing the word; the app is responsive.
+      expect(find.text('dermis'), findsOneWidget);
+
+      // Toggle back to quiz mode — also must settle without hanging.
+      await tester.tap(find.byType(ModeToggleButton));
+      await tester.pumpAndSettle();
+      expect(find.text('A'), findsOneWidget);
+    });
   });
 }
 

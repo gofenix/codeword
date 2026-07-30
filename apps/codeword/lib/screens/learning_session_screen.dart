@@ -1,8 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_core/lib_core.dart';
@@ -933,9 +931,14 @@ class _OptionsListState extends State<_OptionsList> {
         : correct
             ? AppMotion.answerCorrect
             : AppMotion.answerWrong;
+    // Capture the current onAnswer closure NOW. If the question is replaced
+    // before the delay fires, widget.onAnswer would point at the new
+    // question's closure — firing it would answer the replacement. The
+    // captured closure still carries the original question's identity guard.
+    final onAnswer = widget.onAnswer;
     Future.delayed(delay, () {
       if (!mounted) return;
-      widget.onAnswer(i);
+      onAnswer(i);
     });
   }
 
@@ -1191,13 +1194,6 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   Widget? _nextPage;
   Widget? _prevPage;
 
-  /// Real-time dwell progress (0.0 → 1.0 over 15s) driving the bottom
-  /// mastery bar so the user sees the card "filling up" as they study.
-  /// Driven via ValueNotifier so the bar animates without per-frame
-  /// setState() that would jank swipes.
-  final ValueNotifier<double> _dwellProgress = ValueNotifier(0);
-  late final Ticker _dwellTicker;
-
   /// When a flip is triggered by swipe, the next word's audio is spoken
   /// immediately (in lockstep with the page flying in) instead of waiting
   /// for the session state to propagate and _onQuestionChanged to fire.
@@ -1208,7 +1204,6 @@ class _SwipeViewState extends ConsumerState<SwipeView>
   void initState() {
     super.initState();
     _controller = AnimationController(vsync: this);
-    _dwellTicker = createTicker(_onDwellTick)..start();
     _onQuestionChanged();
   }
 
@@ -1251,24 +1246,14 @@ class _SwipeViewState extends ConsumerState<SwipeView>
         ? widget.session.questions[widget.session.currentIndex + 1]
         : null;
     final prevQ = ref.read(learningSessionProvider.notifier).previousQuestion;
-    _currentPage = q != null
-        ? _SwipePage(word: q.word, dwellProgress: _dwellProgress)
-        : null;
+    _currentPage = q != null ? _SwipePage(word: q.word) : null;
     _nextPage = nextQ != null ? _SwipePage(word: nextQ.word) : null;
     _prevPage = prevQ != null ? _SwipePage(word: prevQ.word) : null;
   }
 
-  /// Dwell tick — tracks dwell time for scoring only. Does NOT rebuild
-  void _onDwellTick(Duration elapsed) {
-    if (!mounted || _cardShownAt == null) return;
-    final ms = DateTime.now().difference(_cardShownAt!).inMilliseconds;
-    _dwellProgress.value = (ms / 18000).clamp(0.0, 1.0);
-  }
   @override
   void dispose() {
-    _dwellTicker.dispose();
     _controller.dispose();
-    _dwellProgress.dispose();
     super.dispose();
   }
   /// Apple's rubber-band: the further past the boundary, the less the
@@ -1394,8 +1379,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
       // Build currentPage directly from nextQ instead of promoting _nextPage,
       // so a stale _nextPage (from _rebuildPages with old widget.session)
       // can never turn _currentPage null and blank the screen.
-      _dwellProgress.value = 0;
-      _currentPage = _SwipePage(word: nextQ.word, dwellProgress: _dwellProgress);
+      _currentPage = _SwipePage(word: nextQ.word);
       _nextPage = afterNextQ != null ? _SwipePage(word: afterNextQ.word) : null;
     }
     // 新页面从底部 80px 快速滑入到位（50ms linear）。
@@ -1425,8 +1409,7 @@ class _SwipeViewState extends ConsumerState<SwipeView>
           ? session.questions[session.currentIndex - 2]
           : null;
       _nextPage = _currentPage;
-      _dwellProgress.value = 0;
-      _currentPage = _SwipePage(word: prevQ.word, dwellProgress: _dwellProgress);
+      _currentPage = _SwipePage(word: prevQ.word);
       _prevPage =
           prevPrevQ != null ? _SwipePage(word: prevPrevQ.word) : null;
     }
@@ -1516,9 +1499,8 @@ class _SwipeViewState extends ConsumerState<SwipeView>
 /// mastery indicator pinned to the bottom.
 class _SwipePage extends ConsumerWidget {
   final VocabWord word;
-  final ValueListenable<double>? dwellProgress;
 
-  const _SwipePage({required this.word, this.dwellProgress});
+  const _SwipePage({required this.word});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -1616,10 +1598,7 @@ class _SwipePage extends ConsumerWidget {
               _ExampleCard(word: word),
             ],
             const Spacer(flex: 4),
-            _MasteryIndicator(
-              reviewState: reviewState,
-              dwellProgress: dwellProgress,
-            ),
+            _MasteryIndicator(reviewState: reviewState),
             const SizedBox(height: AppSpacing.x3),
           ],
         ),
@@ -1713,19 +1692,16 @@ class _ExampleCard extends StatelessWidget {
 /// (longer dwell = worse).
 class _MasteryIndicator extends StatelessWidget {
   final ReviewState? reviewState;
-  final ValueListenable<double>? dwellProgress;
 
-  const _MasteryIndicator({
-    required this.reviewState,
-    this.dwellProgress,
-  });
+  const _MasteryIndicator({required this.reviewState});
 
   @override
   Widget build(BuildContext context) {
     final color = _classify(reviewState);
     final baseline = _baseline(reviewState);
     final label = _label(reviewState);
-    final listenable = dwellProgress;
+    final reduceMotion =
+        MediaQuery.maybeOf(context)?.disableAnimations ?? false;
     return Semantics(
       label: '掌握程度：$label',
       child: Column(
@@ -1742,17 +1718,17 @@ class _MasteryIndicator extends StatelessWidget {
           const SizedBox(height: AppSpacing.x1),
           SizedBox(
             width: double.infinity,
-            child: listenable == null
+            // One-shot fill from baseline toward full over 18s. Unlike a
+            // per-frame ticker, TweenAnimationBuilder runs a single bounded
+            // animation that settles and releases the frame scheduler — it
+            // never pins the app at 60fps (the freeze bug).
+            child: reduceMotion
                 ? _bar(baseline, color)
-                : ValueListenableBuilder<double>(
-                    valueListenable: listenable,
-                    builder: (context, dwell, _) {
-                      // The bar starts at the word's SM-2 baseline and fills
-                      // toward full as the user dwells on the card, giving
-                      // real-time "I'm studying this" feedback.
-                      final value = baseline + dwell * (1 - baseline);
-                      return _bar(value, color);
-                    },
+                : TweenAnimationBuilder<double>(
+                    tween: Tween(begin: baseline, end: 1.0),
+                    duration: const Duration(seconds: 18),
+                    curve: Curves.linear,
+                    builder: (context, value, _) => _bar(value, color),
                   ),
           ),
         ],
