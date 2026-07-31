@@ -884,6 +884,7 @@ class LearningSessionState {
 class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
   static const _bufferSize = 16;
   static const _refillThreshold = 5;
+  static const _historyLimit = 64;
 
   final Ref ref;
   final Random _rng = Random();
@@ -929,7 +930,7 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     // finishing the session instead of leaving the home stuck on a spinner.
     final List<VocabWord> raw;
     try {
-      raw = await ref.read(vocabCacheProvider(vocabId).future);
+      raw = await _loadVocab(vocabId);
     } catch (_) {
       if (gen != _startGen) return;
       _vocabPools.clear();
@@ -1024,8 +1025,8 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       try {
         final words =
             _vocabPools[entry.key] ??
-            (await ref.read(
-              vocabCacheProvider(entry.key).future,
+            (await _loadVocab(
+              entry.key,
             )).where((word) => !removed.contains(word.id)).toList();
         if (gen != _startGen) return const [];
         _vocabPools[entry.key] = words;
@@ -1069,6 +1070,17 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     }).toList();
   }
 
+  Future<List<VocabWord>> _loadVocab(String vocabId) async {
+    final provider = vocabCacheProvider(vocabId);
+    final words = await ref.read(provider.future);
+    // The session keeps only its active vocabulary pools in [_vocabPools].
+    // Releasing the provider copy prevents every previously opened book from
+    // remaining cached for the lifetime of the app. Failed loads retain only
+    // a small error state and avoid scheduling redundant refresh work.
+    ref.invalidate(provider);
+    return words;
+  }
+
   void _compactConsumed() {
     if (state.currentIndex == 0 || state.phase == SessionPhase.wrongDetail) {
       return;
@@ -1076,6 +1088,9 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     final consumed = state.questions.sublist(0, state.currentIndex);
     final remaining = state.questions.sublist(state.currentIndex);
     _history.addAll(consumed);
+    if (_history.length > _historyLimit) {
+      _history.removeRange(0, _history.length - _historyLimit);
+    }
     state = LearningSessionState(
       phase: remaining.isEmpty ? SessionPhase.loading : state.phase,
       questions: remaining,
@@ -1100,15 +1115,17 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     int attemptNo = 0,
     QuestionType? retryOfType,
   }) {
-    final pool = all.where((o) => o.id != w.id).toList();
     switch (type) {
       case QuestionType.seeWordPickMeaning:
         final correct = _compactMeaning(w.translation);
-        final ranked = [...pool]
-          ..sort((a, b) => _meaningScore(w, a).compareTo(_meaningScore(w, b)));
-        final distractors = _uniqueOptions(
-          ranked.map((word) => _compactMeaning(word.translation)),
+        final distractors = _bestUniqueOptions(
           correct,
+          target: w,
+          candidates: all,
+          valueOf: (word) => _compactMeaning(word.translation),
+          scoreOf: (word, value) =>
+              (_normalizedPos(w) == _normalizedPos(word) ? 0 : 80) +
+              (correct.length - value.length).abs(),
           fallbacks: _fallbackMeanings,
         );
         final allOptions = <String>[...distractors, correct]..shuffle(_rng);
@@ -1124,17 +1141,13 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
           retryOfType: retryOfType,
         );
       case QuestionType.seeMeaningPickWord:
-        final ranked = [...pool]
-          ..sort(
-            (a, b) => _wordScore(
-              w.word,
-              a.word,
-            ).compareTo(_wordScore(w.word, b.word)),
-          );
         final correctW = w.word;
-        final distractorsW = _uniqueOptions(
-          ranked.map((word) => word.word),
+        final distractorsW = _bestUniqueOptions(
           correctW,
+          target: w,
+          candidates: all,
+          valueOf: (word) => word.word,
+          scoreOf: (_, value) => _wordScore(correctW, value),
           fallbacks: _fallbackWords,
         );
         final optsW = <String>[...distractorsW, correctW]..shuffle(_rng);
@@ -1151,11 +1164,14 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
         );
       case QuestionType.listenPickMeaning:
         final correctL = _compactMeaning(w.translation);
-        final ranked = [...pool]
-          ..sort((a, b) => _meaningScore(w, a).compareTo(_meaningScore(w, b)));
-        final distractorsL = _uniqueOptions(
-          ranked.map((word) => _compactMeaning(word.translation)),
+        final distractorsL = _bestUniqueOptions(
           correctL,
+          target: w,
+          candidates: all,
+          valueOf: (word) => _compactMeaning(word.translation),
+          scoreOf: (word, value) =>
+              (_normalizedPos(w) == _normalizedPos(word) ? 0 : 80) +
+              (correctL.length - value.length).abs(),
           fallbacks: _fallbackMeanings,
         );
         final optsL = <String>[...distractorsL, correctL]..shuffle(_rng);
@@ -1182,6 +1198,65 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
           retryOfType: retryOfType,
         );
     }
+  }
+
+  /// Keeps only the three closest unique distractors while scanning the
+  /// vocabulary once. This avoids copying and repeatedly sorting large books
+  /// (17k+ entries) for every buffered question while preserving option
+  /// quality and the existing shuffle animation/interaction behavior.
+  List<String> _bestUniqueOptions(
+    String correct, {
+    required VocabWord target,
+    required Iterable<VocabWord> candidates,
+    required String Function(VocabWord word) valueOf,
+    required int Function(VocabWord word, String value) scoreOf,
+    required List<String> fallbacks,
+  }) {
+    final normalizedCorrect = correct.trim().toLowerCase();
+    final best = <_ScoredOption>[];
+    var order = 0;
+    for (final candidate in candidates) {
+      if (candidate.id == target.id) continue;
+      final value = valueOf(candidate).trim();
+      final normalized = value.toLowerCase();
+      if (value.isEmpty || normalized == normalizedCorrect) continue;
+
+      final score = scoreOf(candidate, value);
+      final existing = best.indexWhere(
+        (option) => option.normalized == normalized,
+      );
+      if (existing >= 0) {
+        if (score < best[existing].score) {
+          best[existing] = _ScoredOption(value, normalized, score, order);
+        }
+        order++;
+        continue;
+      }
+
+      final option = _ScoredOption(value, normalized, score, order++);
+      if (best.length < 3) {
+        best.add(option);
+        continue;
+      }
+      var worst = 0;
+      for (var i = 1; i < best.length; i++) {
+        if (best[i].score > best[worst].score ||
+            (best[i].score == best[worst].score &&
+                best[i].order > best[worst].order)) {
+          worst = i;
+        }
+      }
+      if (score < best[worst].score) best[worst] = option;
+    }
+    best.sort((a, b) {
+      final byScore = a.score.compareTo(b.score);
+      return byScore != 0 ? byScore : a.order.compareTo(b.order);
+    });
+    return _uniqueOptions(
+      best.map((option) => option.value),
+      correct,
+      fallbacks: fallbacks,
+    );
   }
 
   List<VocabWord> _candidatePool(VocabWord word) {
@@ -1227,15 +1302,6 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
       if (seen.add(normalized)) result.add(fallback);
     }
     return result;
-  }
-
-  int _meaningScore(VocabWord target, VocabWord candidate) {
-    final targetMeaning = _compactMeaning(target.translation);
-    final candidateMeaning = _compactMeaning(candidate.translation);
-    final posPenalty = _normalizedPos(target) == _normalizedPos(candidate)
-        ? 0
-        : 80;
-    return posPenalty + (targetMeaning.length - candidateMeaning.length).abs();
   }
 
   String _normalizedPos(VocabWord word) {
@@ -1312,15 +1378,34 @@ class LearningSessionNotifier extends StateNotifier<LearningSessionState> {
     return pool[_questionSerial++ % pool.length];
   }
 
-  void applyPreferences(LearningPreferences preferences) {
+  void applyPreferences(
+    LearningPreferences previous,
+    LearningPreferences preferences,
+  ) {
     if (state.questions.isEmpty ||
         state.currentIndex >= state.questions.length) {
       return;
     }
+    if (preferences.learningMode == LearningMode.swipe) {
+      // SwipeView only reads each question's word. Preserve the existing
+      // queue so card-mode preference changes do not allocate a replacement
+      // set of questions and options; future refills still use swipe types.
+      return;
+    }
+    final returningToQuiz =
+        previous.learningMode == LearningMode.swipe &&
+        preferences.learningMode == LearningMode.quiz;
+    final enabledTypes = returningToQuiz
+        ? _enabledQuestionTypes(preferences).toSet()
+        : const <QuestionType>{};
     final questions = <LearningQuestion>[];
     for (var i = 0; i < state.questions.length; i++) {
       final question = state.questions[i];
-      if (i <= state.currentIndex) {
+      final reusableAfterSwipe =
+          returningToQuiz && enabledTypes.contains(question.type);
+      if (i < state.currentIndex ||
+          reusableAfterSwipe ||
+          (i == state.currentIndex && !returningToQuiz)) {
         questions.add(question);
         continue;
       }
@@ -1607,6 +1692,15 @@ class _PickedWord {
   const _PickedWord(this.word, this.source);
 }
 
+class _ScoredOption {
+  final String value;
+  final String normalized;
+  final int score;
+  final int order;
+
+  const _ScoredOption(this.value, this.normalized, this.score, this.order);
+}
+
 final learningSessionProvider =
     StateNotifierProvider<LearningSessionNotifier, LearningSessionState>((ref) {
       final notifier = LearningSessionNotifier(ref);
@@ -1615,7 +1709,7 @@ final learningSessionProvider =
         next,
       ) {
         if (previous != null && previous != next) {
-          notifier.applyPreferences(next);
+          notifier.applyPreferences(previous, next);
         }
       });
       return notifier;
