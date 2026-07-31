@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
@@ -31,8 +32,13 @@ class UpdateService {
   static const String _repo = 'gofenix/codeword';
   static const String _apiBase = 'https://api.github.com/repos/$_repo';
 
+  /// GitHub APK updates are an Android-only distribution path.
+  static bool get supportsInAppUpdate =>
+      !kIsWeb && defaultTargetPlatform == TargetPlatform.android;
+
   /// Returns the latest release info, or null if the check failed.
   static Future<AppUpdateInfo?> checkForUpdate() async {
+    if (!supportsInAppUpdate) return null;
     try {
       // Append a timestamp to bust any intermediate (CDN / carrier) cache
       // that might serve a stale "latest" release.
@@ -97,6 +103,9 @@ class UpdateService {
     AppUpdateInfo info, {
     void Function(int received, int total)? onProgress,
   }) async {
+    if (!supportsInAppUpdate) {
+      return const DownloadResult(success: false, error: '当前平台不支持应用内安装更新');
+    }
     final url = info.apkUrl;
     if (url == null) {
       return const DownloadResult(success: false, error: '未找到下载链接');

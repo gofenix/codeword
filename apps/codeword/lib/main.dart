@@ -269,6 +269,7 @@ class TodayPage extends ConsumerStatefulWidget {
 class _TodayPageState extends ConsumerState<TodayPage> {
   bool _starting = false;
 
+  @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) => _maybeStart());
@@ -276,6 +277,7 @@ class _TodayPageState extends ConsumerState<TodayPage> {
   }
 
   Future<void> _checkUpdate() async {
+    if (!UpdateService.supportsInAppUpdate) return;
     final info = await UpdateService.checkForUpdate();
     if (!mounted || info == null) return;
     if (await UpdateService.hasUpdate(info)) {

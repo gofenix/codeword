@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -16,6 +17,7 @@ import 'package:codeword/screens/learning_session_screen.dart';
 import 'package:codeword/screens/reading_screen.dart';
 import 'package:codeword/screens/stats_screen.dart';
 import 'package:codeword/screens/settings_screen.dart';
+import 'package:codeword/services/update_service.dart';
 import 'package:codeword/state/learning_session.dart';
 import 'package:codeword/state/learning_preferences.dart';
 import 'package:codeword/state/llm_config.dart';
@@ -32,9 +34,7 @@ void main() {
   );
 
   test('Coder contains unique candidates with Chinese meanings', () async {
-    final raw = await File(
-      'assets/vocab/qwerty_coder.json',
-    ).readAsString();
+    final raw = await File('assets/vocab/qwerty_coder.json').readAsString();
     final words = (jsonDecode(raw) as List).cast<Map<String, dynamic>>();
     expect(words, hasLength(2343));
     expect(words.map((word) => word['word']).toSet(), hasLength(2343));
@@ -365,6 +365,62 @@ void main() {
     expect(find.textContaining('新词上限'), findsNothing);
   });
 
+  testWidgets(
+    'iOS hides APK updates and exposes release information links',
+    (tester) async {
+      await tester.pumpWidget(
+        const ProviderScope(child: MaterialApp(home: SettingsScreen())),
+      );
+      await tester.pump();
+      await tester.scrollUntilVisible(
+        find.text('隐私政策'),
+        300,
+        scrollable: find.byType(Scrollable).first,
+      );
+
+      expect(find.text('检查更新'), findsNothing);
+      expect(find.text('隐私政策'), findsOneWidget);
+      expect(find.text('技术支持'), findsOneWidget);
+      expect(find.text('数据与开源来源'), findsOneWidget);
+    },
+    variant: TargetPlatformVariant.only(TargetPlatform.iOS),
+  );
+
+  testWidgets(
+    'Android keeps its APK update entry',
+    (tester) async {
+      await tester.pumpWidget(
+        const ProviderScope(child: MaterialApp(home: SettingsScreen())),
+      );
+      await tester.pump();
+      await tester.scrollUntilVisible(
+        find.text('检查更新'),
+        300,
+        scrollable: find.byType(Scrollable).first,
+      );
+
+      expect(find.text('检查更新'), findsOneWidget);
+    },
+    variant: TargetPlatformVariant.only(TargetPlatform.android),
+  );
+
+  test('iOS update service refuses APK checks and installs', () async {
+    debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
+    addTearDown(() => debugDefaultTargetPlatformOverride = null);
+
+    expect(UpdateService.supportsInAppUpdate, isFalse);
+    expect(await UpdateService.checkForUpdate(), isNull);
+    final result = await UpdateService.downloadAndInstall(
+      const AppUpdateInfo(
+        version: '9.9.9',
+        apkUrl: 'https://example.com/codeword.apk',
+      ),
+    );
+    expect(result.success, isFalse);
+    expect(result.error, '当前平台不支持应用内安装更新');
+    debugDefaultTargetPlatformOverride = null;
+  });
+
   testWidgets('Settings exposes two independent advanced question toggles', (
     tester,
   ) async {
@@ -594,6 +650,25 @@ void main() {
   test('ReviewStateNotifier can hydrate from an existing state map', () {
     final notifier = ReviewStateNotifier({'w1': ReviewState.fresh('w1')});
     expect(notifier.state.keys, contains('w1'));
+  });
+
+  test('Session releases vocabulary provider cache after loading', () async {
+    var loads = 0;
+    final provider = vocabCacheProvider('qwerty_ephemeral');
+    final container = ProviderContainer(
+      overrides: [
+        provider.overrideWith((ref) async {
+          loads++;
+          return [_word('qwerty_ephemeral_00001', 'cache', '缓存')];
+        }),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    final notifier = container.read(learningSessionProvider.notifier);
+    await notifier.start(vocabId: 'qwerty_ephemeral');
+    await notifier.start(vocabId: 'qwerty_ephemeral');
+    expect(loads, 2);
   });
 
   test('Empty stats are zero across the board', () {
@@ -1454,6 +1529,91 @@ void main() {
     );
   });
 
+  test('Switching from swipe to quiz rebuilds the current question', () async {
+    final words = List.generate(
+      8,
+      (index) => _word(
+        'qwerty_mode_${(index + 1).toString().padLeft(5, '0')}',
+        'mode$index',
+        '模式$index',
+      ),
+    );
+    final preferences = LearningPreferencesNotifier(
+      LearningPreferencesStore(
+        _MemoryLearningPreferencesBackend(
+          value: jsonEncode({'learningMode': 'swipe'}),
+        ),
+      ),
+    );
+    final container = ProviderContainer(
+      overrides: [
+        learningPreferencesProvider.overrideWith((ref) => preferences),
+        vocabCacheProvider('qwerty_mode').overrideWith((ref) async => words),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    await container
+        .read(learningSessionProvider.notifier)
+        .start(vocabId: 'qwerty_mode');
+    expect(
+      container.read(learningSessionProvider).currentQuestion!.type,
+      QuestionType.typeWord,
+    );
+
+    await preferences.setLearningMode(LearningMode.quiz);
+    final types = container
+        .read(learningSessionProvider)
+        .questions
+        .map((question) => question.type)
+        .toSet();
+    expect(
+      types,
+      equals({
+        QuestionType.seeWordPickMeaning,
+        QuestionType.seeMeaningPickWord,
+      }),
+    );
+  });
+
+  test('Quiz-card round trip reuses already valid questions', () async {
+    final words = List.generate(
+      8,
+      (index) => _word(
+        'qwerty_mode_reuse_${(index + 1).toString().padLeft(5, '0')}',
+        'reuse$index',
+        '复用$index',
+      ),
+    );
+    final preferences = LearningPreferencesNotifier(
+      LearningPreferencesStore(_MemoryLearningPreferencesBackend()),
+    );
+    final container = ProviderContainer(
+      overrides: [
+        learningPreferencesProvider.overrideWith((ref) => preferences),
+        vocabCacheProvider(
+          'qwerty_mode_reuse',
+        ).overrideWith((ref) async => words),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    await container
+        .read(learningSessionProvider.notifier)
+        .start(vocabId: 'qwerty_mode_reuse');
+    final original = container.read(learningSessionProvider).questions;
+
+    await preferences.setLearningMode(LearningMode.swipe);
+    final swipe = container.read(learningSessionProvider).questions;
+    await preferences.setLearningMode(LearningMode.quiz);
+    final quizAgain = container.read(learningSessionProvider).questions;
+
+    for (var i = 0; i < original.length; i++) {
+      expect(swipe[i], same(original[i]));
+      expect(quizAgain[i], same(original[i]));
+    }
+  });
+
   test('Enabled advanced types apply equally to due and new words', () async {
     final now = DateTime.now();
     final words = List.generate(
@@ -1703,6 +1863,56 @@ void main() {
       expect(options.where((option) => option.contains('—')), isEmpty);
     },
   );
+
+  test('Swipe history remains bounded during long sessions', () async {
+    final words = List.generate(
+      96,
+      (index) => _word(
+        'qwerty_history_${(index + 1).toString().padLeft(5, '0')}',
+        'history$index',
+        '历史$index',
+      ),
+    );
+    final preferences = LearningPreferencesNotifier(
+      LearningPreferencesStore(
+        _MemoryLearningPreferencesBackend(
+          value: jsonEncode({'learningMode': 'swipe'}),
+        ),
+      ),
+    );
+    final container = ProviderContainer(
+      overrides: [
+        learningPreferencesProvider.overrideWith((ref) => preferences),
+        vocabCacheProvider('qwerty_history').overrideWith((ref) async => words),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    final notifier = container.read(learningSessionProvider.notifier);
+    await notifier.start(vocabId: 'qwerty_history');
+    for (var i = 0; i < 80; i++) {
+      for (
+        var retry = 0;
+        container.read(learningSessionProvider).currentQuestion == null &&
+            retry < 20;
+        retry++
+      ) {
+        await Future<void>.delayed(const Duration(milliseconds: 1));
+      }
+      expect(
+        container.read(learningSessionProvider).currentQuestion,
+        isNotNull,
+      );
+      notifier.answerSwipe(dwellMs: 1000);
+      await Future<void>.delayed(Duration.zero);
+    }
+
+    var availableHistory = 0;
+    while (notifier.goBack()) {
+      availableHistory++;
+    }
+    expect(availableHistory, 64);
+  });
 
   test(
     'Overlapping flush and clear complete with empty durable state',
@@ -2794,9 +3004,7 @@ void main() {
         LearningPreferencesStore(_MemoryLearningPreferencesBackend()),
       );
       await prefs.ready;
-      prefs.state = const LearningPreferences(
-        learningMode: LearningMode.swipe,
-      );
+      prefs.state = const LearningPreferences(learningMode: LearningMode.swipe);
 
       await tester.pumpWidget(
         testApp(
@@ -2817,7 +3025,8 @@ void main() {
       expect(
         (wordCenter.dx - screenWidth / 2).abs(),
         lessThan(8),
-        reason: 'swipe word must center on the screen, not on a '
+        reason:
+            'swipe word must center on the screen, not on a '
             'shrink-wrapped pager column',
       );
     });
@@ -2830,9 +3039,7 @@ void main() {
       );
       await prefs.ready;
       // Start in quiz (multiple choice) mode.
-      prefs.state = const LearningPreferences(
-        learningMode: LearningMode.quiz,
-      );
+      prefs.state = const LearningPreferences(learningMode: LearningMode.quiz);
 
       await tester.pumpWidget(
         testApp(

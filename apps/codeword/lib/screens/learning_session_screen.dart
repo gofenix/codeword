@@ -1307,18 +1307,6 @@ class _SwipeViewState extends ConsumerState<SwipeView>
     }
   }
 
-  /// Stop any in-flight animation and reset drag state so the next
-  /// interaction starts from a clean slate.
-  void _interruptAnimation() {
-    if (_animating) {
-      _controller.stop();
-      _animating = false;
-      _anim = null;
-    }
-    _dragDy = 0;
-    _rawDragDy = 0;
-  }
-
   int _dwellMs() {
     return _cardShownAt != null
         ? DateTime.now().difference(_cardShownAt!).inMilliseconds
@@ -1805,4 +1793,3 @@ class _MasteryIndicator extends StatelessWidget {
     return AppColors.warning;
   }
 }
-

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lib_core/lib_core.dart';
 import 'package:lib_ui/lib_ui.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../services/article_repository.dart';
 import '../services/update_service.dart';
@@ -11,6 +12,11 @@ import '../state/learning_preferences.dart';
 import '../state/llm_config.dart';
 import 'ai_settings_screen.dart';
 import 'update_dialog.dart';
+
+final _privacyPolicyUri = Uri.parse(
+  'https://gofenix.github.io/codeword/privacy/',
+);
+final _supportUri = Uri.parse('https://gofenix.github.io/codeword/support/');
 
 /// 设置 — a top-level bottom-nav tab. Only configuration that changes the
 /// learning experience. Shares the [TabPageScaffold] chrome with the other
@@ -32,12 +38,8 @@ class SettingsScreen extends ConsumerWidget {
             const SizedBox(height: AppSpacing.x2),
             const _SettingsGroup(
               children: [
-                _AdvancedQuestionTypeRow(
-                  type: _AdvancedQuestionType.spelling,
-                ),
-                _AdvancedQuestionTypeRow(
-                  type: _AdvancedQuestionType.listening,
-                ),
+                _AdvancedQuestionTypeRow(type: _AdvancedQuestionType.spelling),
+                _AdvancedQuestionTypeRow(type: _AdvancedQuestionType.listening),
               ],
             ),
             const SizedBox(height: AppSpacing.x5),
@@ -53,7 +55,29 @@ class SettingsScreen extends ConsumerWidget {
             const SizedBox(height: AppSpacing.x5),
             const _SectionLabel('关于'),
             const SizedBox(height: AppSpacing.x2),
-            const _SettingsGroup(children: [_CheckUpdateRow()]),
+            _SettingsGroup(
+              children: [
+                if (UpdateService.supportsInAppUpdate) const _CheckUpdateRow(),
+                _ExternalLinkRow(
+                  icon: Icons.privacy_tip_outlined,
+                  title: '隐私政策',
+                  subtitle: '了解数据处理和删除方式',
+                  uri: _privacyPolicyUri,
+                ),
+                _ExternalLinkRow(
+                  icon: Icons.support_agent_rounded,
+                  title: '技术支持',
+                  subtitle: '问题反馈与联系方式',
+                  uri: _supportUri,
+                ),
+                _ExternalLinkRow(
+                  icon: Icons.source_outlined,
+                  title: '数据与开源来源',
+                  subtitle: '查看词书和开源组件说明',
+                  uri: _supportUri,
+                ),
+              ],
+            ),
             const SizedBox(height: AppSpacing.x12),
             Center(
               child: Column(
@@ -174,8 +198,7 @@ class _SettingsGroup extends StatelessWidget {
             children[i],
             // No hard dividers between grouped rows — Apple-style interfaces
             // use spacing and scroll-edge fade instead of hairline rules.
-            if (i != children.length - 1)
-              const SizedBox(height: AppSpacing.x2),
+            if (i != children.length - 1) const SizedBox(height: AppSpacing.x2),
           ],
         ],
       ),
@@ -460,23 +483,20 @@ class _CheckUpdateRowState extends ConsumerState<_CheckUpdateRow> {
     if (!mounted) return;
     setState(() => _checking = false);
     if (info == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('检查更新失败，请稍后重试')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('检查更新失败，请稍后重试')));
       return;
     }
     final current = await UpdateService.currentVersion();
-    if (await UpdateService.hasUpdate(info)) {
-      if (!mounted) return;
-      UpdateDialog.show(
-        context,
-        info: info,
-        currentVersion: current,
-      );
+    final hasUpdate = await UpdateService.hasUpdate(info);
+    if (!mounted) return;
+    if (hasUpdate) {
+      UpdateDialog.show(context, info: info, currentVersion: current);
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('已是最新版本 v$current')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('已是最新版本 v$current')));
     }
   }
 
@@ -494,6 +514,39 @@ class _CheckUpdateRowState extends ConsumerState<_CheckUpdateRow> {
               child: CircularProgressIndicator(strokeWidth: 2),
             )
           : const Icon(Icons.chevron_right),
+    );
+  }
+}
+
+class _ExternalLinkRow extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final Uri uri;
+
+  const _ExternalLinkRow({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.uri,
+  });
+
+  Future<void> _open(BuildContext context) async {
+    final opened = await launchUrl(uri, mode: LaunchMode.externalApplication);
+    if (opened || !context.mounted) return;
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('暂时无法打开链接，请稍后重试')));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return _SettingsTile(
+      icon: icon,
+      title: title,
+      subtitle: subtitle,
+      trailing: const Icon(Icons.open_in_new_rounded),
+      onTap: () => _open(context),
     );
   }
 }
