@@ -14,6 +14,35 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 }
 
+val requestedReleaseBuild = gradle.startParameter.taskNames.any {
+    it.contains("release", ignoreCase = true)
+}
+
+fun requiredSigningProperty(name: String): String {
+    val value = keystoreProperties.getProperty(name)?.trim()
+    if (value.isNullOrEmpty() || value == "CHANGE_ME") {
+        throw GradleException("Missing Android release signing property: $name")
+    }
+    return value
+}
+
+if (requestedReleaseBuild && !keystorePropertiesFile.exists()) {
+    throw GradleException(
+        "Android release signing is not configured. Run tools/configure_android_upload_key.sh first."
+    )
+}
+
+if (requestedReleaseBuild && keystorePropertiesFile.exists()) {
+    val configuredAlias = requiredSigningProperty("keyAlias")
+    val configuredStore = requiredSigningProperty("storeFile")
+    if (configuredAlias.equals("androiddebugkey", ignoreCase = true) ||
+        configuredStore.endsWith("debug.keystore")) {
+        throw GradleException(
+            "Android release builds must use the dedicated upload key, not the debug keystore."
+        )
+    }
+}
+
 android {
     namespace = "com.codeword.codeword"
     compileSdk = flutter.compileSdkVersion
@@ -36,13 +65,27 @@ android {
         versionName = flutter.versionName
     }
 
+    flavorDimensions += "distribution"
+    productFlavors {
+        create("github") {
+            dimension = "distribution"
+        }
+        create("play") {
+            dimension = "distribution"
+        }
+    }
+
     signingConfigs {
         if (keystorePropertiesFile.exists()) {
             create("release") {
-                keyAlias = keystoreProperties["keyAlias"] as String
-                keyPassword = keystoreProperties["keyPassword"] as String
-                storeFile = file(keystoreProperties["storeFile"] as String)
-                storePassword = keystoreProperties["storePassword"] as String
+                keyAlias = requiredSigningProperty("keyAlias")
+                keyPassword = requiredSigningProperty("keyPassword")
+                storeFile = file(requiredSigningProperty("storeFile")).also {
+                    if (requestedReleaseBuild && !it.isFile) {
+                        throw GradleException("Android release keystore does not exist: $it")
+                    }
+                }
+                storePassword = requiredSigningProperty("storePassword")
             }
         }
     }

@@ -22,7 +22,7 @@ fi
 
 TMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$TMP_DIR"' EXIT
-unzip -qq "$ARTIFACT" -d "$TMP_DIR"
+unzip -oqq "$ARTIFACT" -d "$TMP_DIR"
 
 if find "$TMP_DIR" -type f -print0 | xargs -0 strings 2>/dev/null | \
   rg -n 'llm_key\.txt|assets/local|sk-[A-Za-z0-9_-]{24,}'; then

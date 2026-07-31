@@ -387,7 +387,7 @@ void main() {
   );
 
   testWidgets(
-    'Android keeps its APK update entry',
+    'unflavoured Android keeps its APK update entry',
     (tester) async {
       await tester.pumpWidget(
         const ProviderScope(child: MaterialApp(home: SettingsScreen())),
@@ -403,6 +403,25 @@ void main() {
     },
     variant: TargetPlatformVariant.only(TargetPlatform.android),
   );
+
+  test('Google Play flavor refuses GitHub APK updates', () {
+    expect(
+      UpdateService.isInAppUpdateSupported(
+        isWeb: false,
+        platform: TargetPlatform.android,
+        flavor: 'play',
+      ),
+      isFalse,
+    );
+    expect(
+      UpdateService.isInAppUpdateSupported(
+        isWeb: false,
+        platform: TargetPlatform.android,
+        flavor: 'github',
+      ),
+      isTrue,
+    );
+  });
 
   test('iOS update service refuses APK checks and installs', () async {
     debugDefaultTargetPlatformOverride = TargetPlatform.iOS;

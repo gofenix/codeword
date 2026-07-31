@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart' show appFlavor;
 import 'package:http/http.dart' as http;
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
@@ -32,9 +33,26 @@ class UpdateService {
   static const String _repo = 'gofenix/codeword';
   static const String _apiBase = 'https://api.github.com/repos/$_repo';
 
-  /// GitHub APK updates are an Android-only distribution path.
-  static bool get supportsInAppUpdate =>
-      !kIsWeb && defaultTargetPlatform == TargetPlatform.android;
+  /// GitHub APK updates are only available in the Android `github` channel.
+  ///
+  /// Unflavoured Android builds keep the historical GitHub behaviour so local
+  /// debug/test builds remain backwards compatible. Google Play builds always
+  /// use the explicit `play` flavour and are denied here as a second line of
+  /// defence in addition to their stripped Android manifest.
+  static bool get supportsInAppUpdate => isInAppUpdateSupported(
+    isWeb: kIsWeb,
+    platform: defaultTargetPlatform,
+    flavor: appFlavor,
+  );
+
+  @visibleForTesting
+  static bool isInAppUpdateSupported({
+    required bool isWeb,
+    required TargetPlatform platform,
+    required String? flavor,
+  }) {
+    return !isWeb && platform == TargetPlatform.android && flavor != 'play';
+  }
 
   /// Returns the latest release info, or null if the check failed.
   static Future<AppUpdateInfo?> checkForUpdate() async {

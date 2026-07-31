@@ -20,7 +20,7 @@ AI 阅读是可选的 BYOK（用户自备 API Key）功能。API Key 保存在�
 
 ## 应用更新
 
-Android 版本可在用户主动检查或应用启动时查询墨书 GitHub Release，并下载 Android 安装包。iOS 版本不使用应用内安装更新，更新统一通过 App Store 或 TestFlight 提供。
+从 GitHub 下载的 Android 侧载版本可在用户主动检查或应用启动时查询墨书 GitHub Release，并下载 Android 安装包。Google Play 版本不包含外部安装包下载或安装能力，更新统一通过 Google Play 提供。iOS 版本同样只通过 App Store 或 TestFlight 更新。
 
 ## 数据保存与删除
 
