@@ -6,6 +6,7 @@
 - [ ] `flutter test`
 - [ ] iPhone 17 Pro Max / iOS 26.5 核心流程验收
 - [ ] 签名 Release IPA 构建与 Xcode Validate App
+- [ ] `tools/check_ios_release_version.sh <ipa>` 确认 IPA 版本与 `pubspec.yaml` 一致
 - [ ] `tools/check_release_secrets.sh <ipa>`
 - [ ] `playRelease` AAB 和 `githubRelease` APK 均通过凭据扫描
 

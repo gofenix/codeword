@@ -29,6 +29,7 @@ only to the provider selected by the user. No developer API key is bundled.
 cd apps/codeword
 flutter analyze
 flutter test
+../../tools/check_ios_release_version.sh build/ios/ipa/codeword.ipa
 ../../tools/check_release_secrets.sh
 ```
 
