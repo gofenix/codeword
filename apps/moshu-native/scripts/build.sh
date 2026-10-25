@@ -1,0 +1,20 @@
+#!/bin/bash
+set -euo pipefail
+native_dir="$(cd "$(dirname "$0")/.." && pwd)"
+repo_dir="$(cd "$native_dir/../.." && pwd)"
+resource_dir="$native_dir/Sources/MoshuCore/Resources"
+mkdir -p "$resource_dir/vocab"
+cp "$repo_dir/apps/codeword/assets/vocab/"*.json "$resource_dir/vocab/"
+swift build --package-path "$native_dir" -c release
+binary_dir="$(swift build --package-path "$native_dir" -c release --show-bin-path)"
+app_dir="$native_dir/dist/Moshu.app"
+mkdir -p "$app_dir/Contents/MacOS" "$app_dir/Contents/Resources"
+cp "$binary_dir/Moshu" "$app_dir/Contents/MacOS/Moshu"
+ditto "$binary_dir/MoshuNative_MoshuCore.bundle" "$app_dir/Contents/Resources/MoshuNative_MoshuCore.bundle"
+cp "$native_dir/Resources/Info.plist" "$app_dir/Contents/Info.plist"
+swift "$native_dir/scripts/icon.swift" "$native_dir/dist"
+iconutil -c icns "$native_dir/dist/Moshu.iconset" -o "$app_dir/Contents/Resources/Moshu.icns"
+codesign --force --sign - --identifier com.codeword.moshu.native "$app_dir"
+codesign --verify --deep --strict "$app_dir"
+ditto -c -k --sequesterRsrc --keepParent "$app_dir" "$native_dir/dist/Moshu-macOS-arm64.zip"
+echo "Built: $app_dir"

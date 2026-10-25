@@ -1,0 +1,18 @@
+墨书 · SwiftUI 原生版
+
+词书资源来自墨书 gofenix/codeword 当前发布词库，保持全部单词 ID 和合并目录。
+原始来源：Qwerty Learner https://github.com/RealKai42/qwerty-learner
+Qwerty Learner 上游许可证：GNU GPL v3，随包附 GPL-3.0.txt。
+各词书内容原始来源见上述上游项目的 public/dicts 与 dictionary.ts。
+本移植的原生代码亦按 GPL-3.0-or-later 提供，源码随交付包一同提供。
+
+网络词音：有道词典 https://dict.youdao.com/dictvoice
+播放时仅向此服务发送单词和英/美发音选项；首次获取后本地缓存。
+系统离线朗读：Apple AVSpeechSynthesizer（用户可选择）。
+
+AI 阅读：仅在用户点击“生成阅读”或“测试连接”后请求用户配置的服务。
+AI 费用与数据处理由用户选择的服务商决定。API Key 存入 macOS 钥匙串，
+不写入进度文件、导出文件、日志、旧版迁移或源码。
+
+界面 API 参考：Apple “Build a SwiftUI app with the new design”, WWDC25
+https://developer.apple.com/videos/play/wwdc2025/323/
